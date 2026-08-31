@@ -102,3 +102,6 @@ button { font: inherit; }
 .static-chart .vlcc { stroke:#1bd5c0; }.static-chart .suez { stroke:#6ea8d7; }.static-chart .afra { stroke:#f5b942; }
 .static-chart polyline { fill:none; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
 .hidden-risk { display:none!important; }
+.data-message { padding:12px 28px; background:#dff6f1; color:#155e56; border-bottom:1px solid #acd9d0; font-size:11px; text-align:center; }
+.data-message[hidden] { display:none; }
+.data-message.data-error { background:#fff0f0; color:#9d3030; border-color:#efb4b4; }
