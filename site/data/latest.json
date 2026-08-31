@@ -1,0 +1,53 @@
+{
+  "generatedAt": "2026-08-31T15:00:00Z",
+  "timezone": "UTC",
+  "status": "public-sources",
+  "market": {
+    "benchmarks": [
+      { "segment": "VLCC", "route": "12m time charter", "value": 99250, "unit": "USD/day", "trend": "flat", "confidence": "medium" },
+      { "segment": "Suezmax", "route": "12m time charter", "value": 68500, "unit": "USD/day", "trend": "flat", "confidence": "medium" },
+      { "segment": "Aframax", "route": "12m time charter", "value": 53750, "unit": "USD/day", "trend": "flat", "confidence": "medium" }
+    ],
+    "headline": "VLCC segue forte; retornos spot reportados próximos de US$ 200 mil/dia",
+    "indices": { "bdti": 2777, "bdtiPrevious": 3004, "bcti": 1387, "bctiPrevious": 1348 }
+  },
+  "bunker": [
+    { "port": "Singapore", "code": "SGSIN", "vlsfo": 784.5, "change": 14.0 },
+    { "port": "Rotterdam", "code": "NLRTM", "vlsfo": 663.0, "change": 6.5 },
+    { "port": "Fujairah", "code": "AEFJR", "vlsfo": 795.0, "change": 9.5 },
+    { "port": "Santos", "code": "BRSSZ", "vlsfo": 780.5, "change": 2.5 }
+  ],
+  "petrobras": {
+    "adr": { "ticker": "PBR", "price": 19.045, "currency": "USD", "changePercent": 2.779 },
+    "exportsBpd": 1000000,
+    "quarter": "2T26",
+    "netIncomeBrlBn": 52.4,
+    "fleetPlan": { "caboteurs": 20, "barges": 18, "investmentUsdBn": 2, "offshoreCharters": 40 }
+  },
+  "psc": {
+    "campaign": "Cargo Securing of Cargo Units and Cargo Transport Units",
+    "mous": ["Paris MoU", "Tokyo MoU"],
+    "start": "2026-09-01",
+    "end": "2026-11-30",
+    "status": "starts-tomorrow"
+  },
+  "risks": [
+    { "region": "Strait of Hormuz / Gulf of Oman", "level": "critical", "driver": "Conflict, navigation disruption and bunker availability", "action": "Verify routing, war-risk cover, security notices and bunker alternatives." },
+    { "region": "US Gulf", "level": "high", "driver": "Invest 97L; heavy rain, gusts and possible tropical development", "action": "Recheck port status, pilotage and latest NHC advisories before arrival." },
+    { "region": "Eastern North Pacific", "level": "high", "driver": "Hurricane Karina; dangerous swell although far from land", "action": "Review swell forecast and heavy-weather route margins." },
+    { "region": "Yellow Sea / Korea", "level": "medium", "driver": "Severe rainfall and convective activity", "action": "Anticipate visibility, berth and cargo-operation disruption." },
+    { "region": "Brazil / Santos Basin", "level": "low", "driver": "No major public route disruption captured in this snapshot", "action": "Maintain NAVAREA, terminal and local weather monitoring." }
+  ],
+  "sources": [
+    { "name": "Baltic Exchange", "url": "https://www.balticexchange.com/en/data-services/market-information0/tankers-services.html", "scope": "Tanker routes and methodology", "type": "official" },
+    { "name": "Fearnleys / Fearnpulse", "url": "https://new.fearnpulse.com/", "scope": "Weekly tanker narrative", "type": "industry" },
+    { "name": "Compass Maritime Weekly", "url": "https://compassmar.com/market-report-download/", "scope": "Time-charter rates and indices", "type": "industry" },
+    { "name": "Ship & Bunker", "url": "https://shipandbunker.com/prices", "scope": "Indicative VLSFO prices", "type": "industry" },
+    { "name": "Paris MoU", "url": "https://parismou.org/paris-and-tokyo-mous-launch-2026-concentrated-inspection-campaign-on-cargo-securing/", "scope": "2026 CIC", "type": "official" },
+    { "name": "Tokyo MoU", "url": "https://www.tokyo-mou.org/press-releases/2026/08/03/joint-press-release-on-the-concentrated-inspection-campaign-on-cargo-securing/", "scope": "2026 CIC", "type": "official" },
+    { "name": "NHC / NOAA", "url": "https://www.nhc.noaa.gov/", "scope": "Tropical weather", "type": "official" },
+    { "name": "Petrobras News Agency", "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-lucra-r-52-4-bilh%C3%B5es-no-segundo-trimestre-de-2026", "scope": "2Q26 results and exports", "type": "official" },
+    { "name": "Petrobras IR", "url": "https://petrobras.com.br/ir", "scope": "Corporate and market releases", "type": "official" },
+    { "name": "Transpetro", "url": "https://transpetro.com.br/transpetro-institucional/quem-somos/plano-estrategico.htm", "scope": "2026-2030 plan", "type": "official" }
+  ]
+}
