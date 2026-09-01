@@ -28,11 +28,11 @@ const fullDate = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeZone:
 const shortDate = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
 
 function assertData(data) {
-  const required = ['schemaVersion', 'generatedAt', 'status', 'dailyWatch', 'market', 'alertGroups', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+  const required = ['schemaVersion', 'generatedAt', 'status', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
   const missing = required.filter((key) => data?.[key] === undefined);
   if (missing.length) throw new Error(`Campos ausentes: ${missing.join(', ')}`);
-  if (data.schemaVersion !== 4) throw new Error('Versão do esquema de dados incompatível.');
-  if (!Array.isArray(data.market.benchmarks) || !Array.isArray(data.alertGroups) || !Array.isArray(data.sources)) throw new Error('Listas de dados inválidas.');
+  if (data.schemaVersion !== 5) throw new Error('Versão do esquema de dados incompatível.');
+  if (!Array.isArray(data.market.benchmarks) || !Array.isArray(data.alertGroups) || !Array.isArray(data.strategicPassages) || !Array.isArray(data.reportingSystems) || !Array.isArray(data.psc.regimes) || !Array.isArray(data.sources)) throw new Error('Listas de dados inválidas.');
 }
 
 function renderDailyWatch(dailyWatch) {
@@ -302,6 +302,103 @@ function renderPsc(psc) {
   const readiness = byId('psc-readiness');
   clear(readiness);
   psc.readiness.forEach((item) => readiness.append(element('li', '', `✓ ${item}`)));
+
+  const regimes = byId('psc-regime-grid');
+  clear(regimes);
+  const statusLabels = { active: 'CIC ATIVA', announced: 'ANUNCIADA', unconfirmed: 'NÃO LOCALIZADA', national: 'REGIME NACIONAL' };
+  const counts = psc.regimes.reduce((acc, item) => { acc[item.status] = (acc[item.status] || 0) + 1; return acc; }, {});
+  const summary = byId('psc-summary');
+  clear(summary);
+  [
+    ['Cobertura', `${psc.regimes.length} regimes`, '9 MoUs + USCG'],
+    ['Confirmadas', `${counts.active || 0} ativas`, 'publicação oficial localizada'],
+    ['Anunciadas', `${counts.announced || 0}`, 'aguardando detalhes completos'],
+    ['Sem confirmação', `${counts.unconfirmed || 0}`, 'não presumir campanha']
+  ].forEach(([label, value, note]) => {
+    const card = element('article');
+    card.append(element('small', '', label), element('b', '', value), element('span', '', note));
+    summary.append(card);
+  });
+  psc.regimes.forEach((item) => {
+    const card = element('article', `psc-regime status-${item.status}`);
+    const head = element('header');
+    const title = element('div');
+    title.append(element('small', '', item.region), element('h3', '', item.name));
+    head.append(title, element('b', 'status-badge', statusLabels[item.status] || item.status));
+    const tanker = element('div', 'tanker-impact');
+    tanker.append(element('small', '', 'IMPACTO NO PETROLEIRO'), element('p', '', item.tankerFocus));
+    const source = element('a', '', `${item.source.name} ↗`);
+    source.href = safeUrl(item.source.url);
+    source.target = '_blank';
+    source.rel = 'noreferrer';
+    card.append(head, element('strong', '', item.campaign), element('p', 'campaign-window', item.window), tanker, source);
+    regimes.append(card);
+  });
+}
+
+function renderPassages(passages) {
+  const grid = byId('passage-grid');
+  clear(grid);
+  const risks = { critical: 'CRÍTICO', high: 'ALTO', medium: 'ATENÇÃO', low: 'ESTÁVEL' };
+  passages.forEach((item, index) => {
+    const details = element('details', `passage-card risk-${item.risk}`);
+    if (index < 2) details.open = true;
+    const summary = element('summary');
+    const title = element('div', 'passage-title');
+    title.append(element('small', '', item.region), element('h3', '', item.name));
+    const pulse = element('div', 'passage-pulse');
+    pulse.append(element('span', 'status-badge', risks[item.risk]), element('b', '', item.trafficLabel), element('small', '', item.trafficTrend));
+    summary.append(title, pulse, element('i', 'expand-mark', '+'));
+    const body = element('div', 'passage-body');
+    const metric = element('div', 'passage-metric');
+    metric.append(element('small', '', 'BASE DO TRÁFEGO'), element('p', '', item.trafficBasis));
+    const market = element('div');
+    market.append(element('small', '', 'GEOECONOMIA / MERCADO'), element('p', '', item.market));
+    const geopolitics = element('div');
+    geopolitics.append(element('small', '', 'GEOPOLÍTICA / SEGURANÇA'), element('p', '', item.geopolitics));
+    const authority = element('div');
+    authority.append(element('small', '', 'AUTORIDADE / REPORTE'), element('p', '', `${item.authority} · ${item.reporting}`));
+    const focus = element('ul');
+    item.masterFocus.forEach((note) => focus.append(element('li', '', note)));
+    const source = element('a', '', `${item.source.name} ↗`);
+    source.href = safeUrl(item.source.url);
+    source.target = '_blank';
+    source.rel = 'noreferrer';
+    body.append(metric, market, geopolitics, authority, element('small', 'focus-label', 'MASTER FOCUS'), focus, source);
+    details.append(summary, body);
+    grid.append(details);
+  });
+}
+
+function renderReporting(systems) {
+  const grid = byId('reporting-grid');
+  const summary = byId('reporting-summary');
+  clear(grid);
+  clear(summary);
+  const labels = { mandatory: 'OBRIGATÓRIO', voluntary: 'VOLUNTÁRIO', conditional: 'CONDICIONAL' };
+  const counts = systems.reduce((acc, item) => { acc[item.type] = (acc[item.type] || 0) + 1; return acc; }, {});
+  [['mandatory', 'Obrigatórios'], ['voluntary', 'Voluntários'], ['conditional', 'Condicionais']].forEach(([key, label]) => {
+    const card = element('article', `type-${key}`);
+    card.append(element('b', '', String(counts[key] || 0)), element('span', '', label));
+    summary.append(card);
+  });
+  systems.forEach((item) => {
+    const card = element('article', `report-card type-${item.type}`);
+    const head = element('header');
+    const title = element('div');
+    title.append(element('small', '', item.region), element('h3', '', item.name));
+    head.append(title, element('b', 'status-badge', labels[item.type]));
+    const rows = element('dl');
+    [['Aplica-se', item.appliesTo], ['Quando', item.when], ['Reporte', item.report], ['Autoridade', item.authority]].forEach(([term, value]) => {
+      rows.append(element('dt', '', term), element('dd', '', value));
+    });
+    const source = element('a', '', `${item.source.name} ↗`);
+    source.href = safeUrl(item.source.url);
+    source.target = '_blank';
+    source.rel = 'noreferrer';
+    card.append(head, rows, source);
+    grid.append(card);
+  });
 }
 
 function renderPetrobras(data) {
@@ -442,6 +539,8 @@ function render(data) {
   renderDailyWatch(data.dailyWatch);
   renderMarket(data.market);
   renderAlerts(data.alertGroups);
+  renderPassages(data.strategicPassages);
+  renderReporting(data.reportingSystems);
   renderPsc(data.psc);
   renderPetrobras(data.petrobras);
   renderBunker(data.bunker);

@@ -3,10 +3,10 @@ import { readFile } from 'node:fs/promises';
 const path = new URL('../site/data/latest.json', import.meta.url);
 const data = JSON.parse(await readFile(path, 'utf8'));
 const errors = [];
-const required = ['schemaVersion', 'generatedAt', 'status', 'dailyWatch', 'market', 'alertGroups', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+const required = ['schemaVersion', 'generatedAt', 'status', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
 
 for (const key of required) if (data[key] === undefined) errors.push(`campo obrigatório ausente: ${key}`);
-if (data.schemaVersion !== 4) errors.push('schemaVersion deve ser 4');
+if (data.schemaVersion !== 5) errors.push('schemaVersion deve ser 5');
 if (Number.isNaN(Date.parse(data.generatedAt))) errors.push('generatedAt deve ser uma data ISO válida');
 
 const lists = [
@@ -17,7 +17,10 @@ const lists = [
   ['market.history.series', data.market?.history?.series],
   ['market.indices', data.market?.indices],
   ['alertGroups', data.alertGroups],
+  ['strategicPassages', data.strategicPassages],
+  ['reportingSystems', data.reportingSystems],
   ['psc.mous', data.psc?.mous],
+  ['psc.regimes', data.psc?.regimes],
   ['psc.readiness', data.psc?.readiness],
   ['petrobras.metrics', data.petrobras?.metrics],
   ['petrobras.markets', data.petrobras?.markets],
@@ -35,6 +38,18 @@ for (const [name, value] of lists) if (!Array.isArray(value) || value.length ===
 
 for (const [index, benchmark] of (data.market?.benchmarks || []).entries()) {
   if (!benchmark.segment || !Number.isFinite(benchmark.value)) errors.push(`market.benchmarks[${index}] inválido`);
+}
+for (const [index, passage] of (data.strategicPassages || []).entries()) {
+  if (!passage.id || !passage.name || !['critical', 'high', 'medium', 'low'].includes(passage.risk) || !passage.trafficLabel || !passage.reporting || !Array.isArray(passage.masterFocus) || passage.masterFocus.length === 0) errors.push(`strategicPassages[${index}] inválida`);
+  try { new URL(passage.source?.url); } catch { errors.push(`strategicPassages[${index}].source.url inválida`); }
+}
+for (const [index, system] of (data.reportingSystems || []).entries()) {
+  if (!system.id || !system.name || !['mandatory', 'voluntary', 'conditional'].includes(system.type) || !system.when || !system.report) errors.push(`reportingSystems[${index}] inválido`);
+  try { new URL(system.source?.url); } catch { errors.push(`reportingSystems[${index}].source.url inválida`); }
+}
+for (const [index, regime] of (data.psc?.regimes || []).entries()) {
+  if (!regime.name || !['active', 'announced', 'unconfirmed', 'national'].includes(regime.status) || !regime.campaign || !regime.tankerFocus) errors.push(`psc.regimes[${index}] inválido`);
+  try { new URL(regime.source?.url); } catch { errors.push(`psc.regimes[${index}].source.url inválida`); }
 }
 for (const [groupIndex, group] of (data.alertGroups || []).entries()) {
   if (!group.id || !group.title || !Array.isArray(group.items) || group.items.length < 3) errors.push(`alertGroups[${groupIndex}] deve ter identificação e pelo menos 3 itens`);
@@ -60,4 +75,4 @@ if (errors.length) {
 }
 
 const alertCount = data.alertGroups.reduce((sum, group) => sum + group.items.length, 0);
-console.log(`latest.json válido: ${data.generatedAt}; ${data.sources.length} fontes; ${alertCount} alertas em ${data.alertGroups.length} grupos.`);
+console.log(`latest.json válido: ${data.generatedAt}; ${data.sources.length} fontes; ${alertCount} alertas; ${data.strategicPassages.length} passagens; ${data.reportingSystems.length} sistemas de reporte; ${data.psc.regimes.length} regimes PSC.`);

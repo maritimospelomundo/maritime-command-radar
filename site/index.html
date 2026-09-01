@@ -10,7 +10,7 @@
   <meta property="og:image" content="og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260901-3">
+  <link rel="stylesheet" href="styles.css?v=20260901-4">
 </head>
 <body>
 <main id="portal" aria-busy="true">
@@ -20,7 +20,7 @@
       <span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span>
     </a>
     <nav aria-label="Navegação principal">
-      <a href="#overview">Comando</a><a href="#alerts-detail">Alertas</a><a href="#market-detail">Mercado</a><a href="#psc-detail">PSC</a><a href="#petrobras-detail">Energia</a><a href="#sources-detail">Fontes</a>
+      <a href="#overview">Comando</a><a href="#passages-detail">Passagens</a><a href="#reporting-detail">Reportes</a><a href="#psc-detail">PSC</a><a href="#market-detail">Mercado</a><a href="#sources-detail">Fontes</a>
     </nav>
     <div class="header-status"><span class="live-dot"></span><span><b id="snapshot-status">Carregando radar</b><small id="snapshot-time">Consultando dados públicos…</small></span></div>
     <button class="menu-button" type="button" aria-label="Abrir menu">☰</button>
@@ -90,9 +90,24 @@
     <div id="risk-map-points" hidden></div><span id="risk-map-scale" hidden></span>
   </section>
 
+  <section class="deep-dive" id="passages-detail">
+    <div class="section-heading"><p>GLOBAL PASSAGES</p><div><h2>Passagens estratégicas para o Comandante</h2><span>Tráfego, tendência, risco, mercado, reporte e cuidados de navegação — com a base de cada indicador declarada.</span></div></div>
+    <div class="passage-legend"><span><i class="dot-red"></i> Guerra / ameaça crítica</span><span><i class="dot-orange"></i> Exposição alta</span><span><i class="dot-amber"></i> Atenção reforçada</span><small>“Sem série consolidada” evita comparar estimativas incompatíveis de AIS.</small></div>
+    <div class="passage-grid" id="passage-grid"></div>
+  </section>
+
+  <section class="deep-dive" id="reporting-detail">
+    <div class="section-heading"><p>SHIP REPORTING</p><div><h2>Reportes voluntários e obrigatórios</h2><span>Referência mundial de planejamento. Confirme formato, limites, frequência e destinatário na publicação oficial vigente da viagem.</span></div></div>
+    <div class="reporting-summary" id="reporting-summary"></div>
+    <div class="reporting-grid" id="reporting-grid"></div>
+    <p class="coverage-note">Cobertura operacional dos principais esquemas internacionais; não é uma lista de todos os VTS e reportes portuários locais. Antes da entrada, conferir ECDIS/ENC, ALRS, Sailing Directions, port information, agente e autoridade competente.</p>
+  </section>
+
   <section class="deep-dive" id="psc-detail">
-    <div class="section-heading"><p>PSC INTELLIGENCE</p><div><h2>Campanhas e readiness</h2><span>Aplicabilidade deve ser confirmada para cada MoU e próximo porto.</span></div></div>
-    <div class="psc-grid"><article class="campaign-card"><div class="campaign-date"><span><small>MOU</small><b id="psc-mous">—</b><small id="psc-window-detail">—</small></span></div><div class="campaign-body"><p id="psc-description">—</p></div><a id="psc-link" href="#" target="_blank" rel="noreferrer">Questionário oficial ↗</a></article><article class="readiness-card"><div class="panel-head"><span>Readiness focus</span><small>Pré-chegada</small></div><ul id="psc-readiness"></ul><p id="psc-note">—</p></article></div>
+    <div class="section-heading"><p>PSC WORLD WATCH</p><div><h2>Todos os regimes e campanhas localizadas</h2><span>Nove acordos regionais reconhecidos pela IMO + USCG. O estado de publicação é mostrado sem presumir campanha ativa.</span></div></div>
+    <div class="psc-summary" id="psc-summary"></div>
+    <div class="psc-regime-grid" id="psc-regime-grid"></div>
+    <div class="psc-grid psc-readiness-grid"><article class="campaign-card"><div class="campaign-date"><span><small>FOCO GLOBAL 2026</small><b id="psc-mous">—</b><small id="psc-window-detail">—</small></span></div><div class="campaign-body"><p id="psc-description">—</p></div><a id="psc-link" href="#" target="_blank" rel="noreferrer">Questionário oficial ↗</a></article><article class="readiness-card"><div class="panel-head"><span>Readiness do petroleiro</span><small>Pré-chegada</small></div><ul id="psc-readiness"></ul><p id="psc-note">—</p></article></div>
   </section>
 
   <section class="deep-dive" id="market-detail">
@@ -120,6 +135,6 @@
 
   <footer class="site-footer"><div class="brand"><span class="brand-mark">⌁</span><span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p></footer>
 </main>
-<script src="script.js?v=20260901-3"></script>
+<script src="script.js?v=20260901-4"></script>
 </body>
 </html>
