@@ -3,13 +3,15 @@ import { readFile } from 'node:fs/promises';
 const path = new URL('../site/data/latest.json', import.meta.url);
 const data = JSON.parse(await readFile(path, 'utf8'));
 const errors = [];
-const required = ['schemaVersion', 'generatedAt', 'status', 'market', 'alertGroups', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+const required = ['schemaVersion', 'generatedAt', 'status', 'dailyWatch', 'market', 'alertGroups', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
 
 for (const key of required) if (data[key] === undefined) errors.push(`campo obrigatório ausente: ${key}`);
-if (data.schemaVersion !== 3) errors.push('schemaVersion deve ser 3');
+if (data.schemaVersion !== 4) errors.push('schemaVersion deve ser 4');
 if (Number.isNaN(Date.parse(data.generatedAt))) errors.push('generatedAt deve ser uma data ISO válida');
 
 const lists = [
+  ['dailyWatch.horizons', data.dailyWatch?.horizons],
+  ['dailyWatch.modules', data.dailyWatch?.modules],
   ['market.benchmarks', data.market?.benchmarks],
   ['market.history.weeks', data.market?.history?.weeks],
   ['market.history.series', data.market?.history?.series],

@@ -1,4 +1,4 @@
-name: Deploy Maritime Command Radar
+name: Deploy Maritime Master Radar
 
 on:
   push:

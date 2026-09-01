@@ -28,11 +28,50 @@ const fullDate = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeZone:
 const shortDate = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
 
 function assertData(data) {
-  const required = ['schemaVersion', 'generatedAt', 'status', 'market', 'alertGroups', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+  const required = ['schemaVersion', 'generatedAt', 'status', 'dailyWatch', 'market', 'alertGroups', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
   const missing = required.filter((key) => data?.[key] === undefined);
   if (missing.length) throw new Error(`Campos ausentes: ${missing.join(', ')}`);
-  if (data.schemaVersion !== 3) throw new Error('Versão do esquema de dados incompatível.');
+  if (data.schemaVersion !== 4) throw new Error('Versão do esquema de dados incompatível.');
   if (!Array.isArray(data.market.benchmarks) || !Array.isArray(data.alertGroups) || !Array.isArray(data.sources)) throw new Error('Listas de dados inválidas.');
+}
+
+function renderDailyWatch(dailyWatch) {
+  const horizons = byId('horizon-grid');
+  clear(horizons);
+  dailyWatch.horizons.forEach((item) => {
+    const card = element('article', `horizon-card ${item.level}`);
+    const head = element('header');
+    head.append(element('small', '', item.label), element('b', '', item.value));
+    card.append(head, element('p', '', item.summary));
+    horizons.append(card);
+  });
+
+  const compact = byId('watch-modules');
+  const detail = byId('watch-detail-grid');
+  clear(compact);
+  clear(detail);
+  dailyWatch.modules.forEach((item) => {
+    const card = element('a', `watch-card status-${item.status}`);
+    card.href = safeUrl(item.source.url);
+    card.target = '_blank';
+    card.rel = 'noreferrer';
+    const copy = element('div');
+    copy.append(element('small', '', item.label), element('b', '', item.value), element('p', '', item.summary));
+    card.append(element('i', '', item.icon), copy);
+    compact.append(card);
+
+    const full = element('article');
+    const head = element('header');
+    const labels = element('div');
+    labels.append(element('small', '', item.label), element('h3', '', item.value));
+    head.append(element('i', '', item.icon), labels);
+    const source = element('a', '', `${item.source.name} ↗`);
+    source.href = safeUrl(item.source.url);
+    source.target = '_blank';
+    source.rel = 'noreferrer';
+    full.append(head, element('p', '', item.summary), source);
+    detail.append(full);
+  });
 }
 
 function safeUrl(value) {
@@ -55,7 +94,6 @@ function renderHeader(data) {
   const highCount = alerts.filter(({ level }) => level === 'high' || level === 'critical').length;
   setText('snapshot-status', data.status.snapshotLabel);
   setText('snapshot-time', `${stamp} UTC`);
-  setText('radar-alert-count', highCount);
   setText('radar-market-week', data.market.week);
   setText('pulse-status', data.status.label);
   setText('pulse-alerts', `${highCount} ${highCount === 1 ? 'registro' : 'registros'}`);
@@ -67,6 +105,8 @@ function renderHeader(data) {
 function renderMarket(data) {
   const cards = byId('market-cards');
   clear(cards);
+  const compact = byId('market-compact');
+  clear(compact);
   data.benchmarks.forEach((item, index) => {
     const card = element('article', 'market-card');
     const top = element('div', 'card-topline');
@@ -82,6 +122,10 @@ function renderMarket(data) {
     footer.append(element('span', 'confidence', confidenceLabel(item.confidence)), element('span', '', data.sourceLabel));
     card.append(top, element('h3', '', item.segment), element('p', '', item.route), value, trend, footer);
     cards.append(card);
+
+    const compactCard = element('article');
+    compactCard.append(element('small', '', item.segment), element('b', '', `$ ${number.format(item.value)}`));
+    compact.append(compactCard);
   });
 
   const spot = data.spotSignal;
@@ -93,6 +137,9 @@ function renderMarket(data) {
   footer.append(element('span', 'confidence', spot.confidenceLabel), element('span', '', spot.sourceLabel));
   highlight.append(top, element('h3', '', spot.segment), element('p', '', spot.label), spotValue, element('p', 'highlight-copy', spot.summary), footer);
   cards.append(highlight);
+  const spotCompact = element('article');
+  spotCompact.append(element('small', '', 'SPOT VLCC'), element('b', '', spot.valueLabel.replace('US$', '$')));
+  compact.append(spotCompact);
 
   setText('index-week', data.week);
   const indices = byId('market-indices');
@@ -141,9 +188,11 @@ function renderAlerts(groups) {
   const list = byId('risk-list');
   const points = byId('risk-map-points');
   const filters = byId('alert-filters');
+  const rail = byId('risk-rail');
   clear(list);
   clear(points);
   clear(filters);
+  clear(rail);
 
   const allButton = element('button', 'active', 'Todos');
   allButton.dataset.alertGroup = 'all';
@@ -202,6 +251,15 @@ function renderAlerts(groups) {
       points.append(point);
     });
     list.append(section);
+
+    const severe = group.items.filter(({ level }) => level === 'critical' || level === 'high').length;
+    const railItem = element('a');
+    railItem.href = `#alerts-detail`;
+    railItem.append(element('small', '', `${group.icon} ${group.shortTitle}`));
+    const railValue = element('b', '', `${group.items.length}`);
+    if (severe) railValue.append(element('em', '', `${severe} ↑`));
+    railItem.append(railValue);
+    rail.append(railItem);
   });
   const filterGroups = (id) => {
     filters.querySelectorAll('button').forEach((button) => button.classList.toggle('active', button.dataset.alertGroup === id));
@@ -217,6 +275,7 @@ function renderPsc(psc) {
   const start = shortDate.format(new Date(`${psc.start}T00:00:00Z`)).toUpperCase();
   const end = shortDate.format(new Date(`${psc.end}T00:00:00Z`)).toUpperCase();
   setText('psc-window', `${start} — ${end}`);
+  setText('psc-window-detail', `${start} — ${end}`);
   setText('psc-status', psc.statusLabel);
   setText('psc-mous', psc.mous.join(' + '));
   setText('psc-campaign', psc.campaign);
@@ -233,6 +292,20 @@ function renderPetrobras(data) {
   setText('energy-period', data.periodLabel);
   setText('energy-headline', data.headline);
   setText('energy-summary', data.summary);
+  const compact = byId('energy-compact');
+  clear(compact);
+  const compactItems = [
+    data.metrics[0],
+    data.metrics[1],
+    { label: 'Navios cabotagem', value: data.fleetPlan.metrics.find(({ label }) => label.includes('navios'))?.value || '—' },
+    { label: 'PETR4', value: `${data.markets.find(({ ticker }) => ticker === 'PETR4')?.currencySymbol || 'R$'} ${money.format(data.markets.find(({ ticker }) => ticker === 'PETR4')?.price || 0)}` },
+    { label: 'PBR', value: `${data.markets.find(({ ticker }) => ticker === 'PBR')?.currencySymbol || 'US$'} ${money.format(data.markets.find(({ ticker }) => ticker === 'PBR')?.price || 0)}` }
+  ];
+  compactItems.forEach((item) => {
+    const card = element('article');
+    card.append(element('small', '', item.label), element('b', '', item.value));
+    compact.append(card);
+  });
   const metrics = byId('energy-metrics');
   clear(metrics);
   data.metrics.forEach((item) => { const wrap = element('div'); wrap.append(element('small', '', item.label), element('b', '', item.value)); metrics.append(wrap); });
@@ -308,27 +381,29 @@ function renderPetrobras(data) {
 
 function renderBunker(items) {
   const grid = byId('bunker-grid');
+  const compact = byId('bunker-compact');
   clear(grid);
+  clear(compact);
   items.forEach((item) => {
     const card = element('article');
     const info = element('div');
     info.append(element('small', '', item.code), element('h3', '', item.port));
     card.append(element('i', 'icon', '◆'), info, element('b', '', `$${money.format(item.vlsfo)}`), element('span', item.change >= 0 ? 'negative' : 'positive', `${item.change >= 0 ? '+' : '−'}${money.format(Math.abs(item.change))}`));
     grid.append(card);
+    const price = element('span');
+    price.append(document.createTextNode(item.code), element('b', '', `$${number.format(item.vlsfo)}`));
+    compact.append(price);
   });
 }
 
 function renderBriefing(briefing) {
   setText('brief-date', fullDate.format(new Date(`${briefing.date}T00:00:00Z`)));
-  setText('brief-reading-time', briefing.readingTime);
   setText('brief-caution', briefing.caution);
-  const grid = byId('brief-grid');
+  const grid = byId('brief-compact');
   clear(grid);
-  briefing.items.forEach((item, index) => {
+  briefing.items.forEach((item) => {
     const card = element('article');
-    const content = element('div');
-    content.append(element('small', '', item.category), element('h3', '', item.title), element('p', '', item.summary));
-    card.append(element('span', '', String(index + 1).padStart(2, '0')), content);
+    card.append(element('small', '', item.category), element('h3', '', item.title), element('p', '', item.summary));
     grid.append(card);
   });
 }
@@ -348,6 +423,7 @@ function renderSources(sources) {
 
 function render(data) {
   renderHeader(data);
+  renderDailyWatch(data.dailyWatch);
   renderMarket(data.market);
   renderAlerts(data.alertGroups);
   renderPsc(data.psc);

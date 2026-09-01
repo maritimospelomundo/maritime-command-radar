@@ -1,12 +1,14 @@
-# Maritime Command Radar
+# Maritime Master Radar
 
-Painel público de inteligência marítima operacional voltado a comandantes, operadores, DPA, vetting e QHSE.
+Painel público de inteligência marítima operacional criado por Captain Ponzi e voltado a comandantes, operadores, DPA, vetting e QHSE.
 
 ## Conteúdo
 
 - mercado VLCC, Suezmax e Aframax;
 - referências de bunker;
-- mapa interativo e alertas agrupados (pirataria, meteorologia, costa do Brasil, segurança e navegação eletrônica), com três registros recentes por grupo;
+- tela de comando compacta para notebooks, com rolagem natural no celular;
+- mapa mundial público NautoShark para NAVAREA/METAREA e alertas agrupados (pirataria, meteorologia, costa do Brasil, segurança e navegação eletrônica), com três registros recentes por grupo;
+- módulos gratuitos de apoio à decisão: MSI, ECA/MARPOL, GNSS, bunker quality, tanker readiness e próximo porto;
 - PSC Intelligence e campanhas CIC;
 - Petrobras e Transpetro na seção final, com ações, produção, comércio exterior, rotas, bacias e novas fronteiras;
 - Commander’s Brief;
@@ -18,7 +20,7 @@ Os dados publicados ficam separados da interface em `site/data/latest.json`.
 
 Edite os dados públicos em `site/data/latest.json`. A versão publicada é estática e não exige compilação.
 
-Todos os números, grupos de alertas, campanhas, notícias, indicadores, fontes e textos do Commander’s Brief são carregados desse arquivo. O esquema atual é a versão 3. Antes de publicar, valide-o com:
+Todos os números, grupos de alertas, campanhas, notícias, indicadores, fontes e textos do Commander’s Brief são carregados desse arquivo. O esquema atual é a versão 4. Antes de publicar, valide-o com:
 
 ```bash
 node scripts/validate-data.mjs

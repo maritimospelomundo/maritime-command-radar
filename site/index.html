@@ -3,68 +3,118 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Maritime Command Radar | Inteligência marítima operacional</title>
-  <meta name="description" content="Mercado de petroleiros, riscos de rota, PSC Intelligence, Petrobras, Transpetro e Commander’s Brief em um único radar público.">
-  <meta property="og:title" content="Maritime Command Radar">
-  <meta property="og:description" content="Inteligência marítima para decisão operacional.">
+  <title>Maritime Master Radar | By Captain Ponzi</title>
+  <meta name="description" content="Radar mundial de decisão diária para comandantes de navios petroleiros: segurança, meteorologia, MSI, PSC, bunker, mercado e energia.">
+  <meta property="og:title" content="Maritime Master Radar">
+  <meta property="og:description" content="Inteligência marítima mundial para decisão do Comandante — By Captain Ponzi.">
   <meta property="og:image" content="og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260901-1">
+  <link rel="stylesheet" href="styles.css?v=20260901-2">
 </head>
 <body>
 <main id="portal" aria-busy="true">
   <header class="topbar">
-    <a class="brand" href="#overview"><span class="brand-mark">⌁</span><span><strong>MARITIME</strong><small>COMMAND RADAR</small></span></a>
-    <nav aria-label="Navegação principal"><a href="#overview">Visão geral</a><a href="#market">Mercado</a><a href="#risk">Alertas</a><a href="#psc">PSC</a><a href="#briefing">Briefing</a><a href="#sources">Fontes</a><a href="#petrobras">Petrobras</a></nav>
+    <a class="brand" href="#overview" aria-label="Maritime Master Radar — início">
+      <span class="brand-mark">⌁</span>
+      <span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="#overview">Comando</a><a href="#alerts-detail">Alertas</a><a href="#market-detail">Mercado</a><a href="#psc-detail">PSC</a><a href="#petrobras-detail">Energia</a><a href="#sources-detail">Fontes</a>
+    </nav>
     <div class="header-status"><span class="live-dot"></span><span><b id="snapshot-status">Carregando radar</b><small id="snapshot-time">Consultando dados públicos…</small></span></div>
-    <button class="menu-button" aria-label="Abrir menu">☰</button>
+    <button class="menu-button" type="button" aria-label="Abrir menu">☰</button>
   </header>
 
   <div id="data-message" class="data-message" role="status">Carregando a atualização mais recente…</div>
 
-  <section class="command-hero" id="overview">
-    <div class="hero-grid"></div>
-    <div class="hero-copy"><div class="overline"><span></span> INTELIGÊNCIA MARÍTIMA OPERACIONAL</div><h1>MARITIME COMMAND RADAR</h1><p>Sistema público de monitoramento para comandantes de navios petroleiros</p><div class="hero-actions"><a href="#briefing" class="primary-button">Commander’s Brief</a><a href="#sources" class="secondary-button">Fontes e metodologia</a></div></div>
-    <div class="radar-visual" aria-hidden="true"><div class="radar-ring ring-1"></div><div class="radar-ring ring-2"></div><div class="radar-ring ring-3"></div><div class="radar-axis axis-x"></div><div class="radar-axis axis-y"></div><div class="radar-sweep"></div><span class="blip blip-1"></span><span class="blip blip-2"></span><span class="blip blip-3"></span><div class="radar-center">⚓</div><div class="radar-label label-a"><b id="radar-alert-count">—</b><small>alertas altos</small></div><div class="radar-label label-b"><b id="radar-market-week">—</b><small>mercado</small></div></div>
-  </section>
+  <section class="command-screen" id="overview">
+    <header class="command-strip">
+      <div><small>STATUS</small><b id="pulse-status">Carregando</b></div>
+      <div class="strip-critical"><small>ALTO / CRÍTICO</small><b id="pulse-alerts">—</b></div>
+      <div><small>PSC / CIC</small><b id="pulse-psc">—</b></div>
+      <div><small>MERCADO</small><b id="radar-market-week">—</b></div>
+      <div><small>PRÓXIMA REVISÃO</small><b id="pulse-next-review">—</b></div>
+    </header>
 
-  <section class="pulse-strip"><div><i class="icon">◉</i><span><small>STATUS DO RADAR</small><b id="pulse-status">Carregando</b></span></div><div><i class="icon">▲</i><span><small>ALERTAS ALTO/CRÍTICO</small><b id="pulse-alerts">—</b></span></div><div><i class="icon">✓</i><span><small>PSC / CIC</small><b id="pulse-psc">—</b></span></div><div><i class="icon">◷</i><span><small>PRÓXIMA REVISÃO</small><b id="pulse-next-review">—</b></span></div></section>
+    <div class="command-grid">
+      <aside class="command-panel priority-panel" aria-labelledby="priority-title">
+        <div class="panel-title"><div><span>01</span><h1 id="priority-title">Prioridade do Comandante</h1></div><a href="#alerts-detail">Todos os alertas ↓</a></div>
+        <div class="horizon-grid" id="horizon-grid"></div>
+        <div class="subhead"><span>COMMANDER'S BRIEF</span><small id="brief-date">—</small></div>
+        <div class="brief-compact" id="brief-compact"></div>
+        <div class="command-caution" id="brief-caution">—</div>
+      </aside>
 
-  <section class="content-section" id="market">
-    <div class="section-heading"><p>01 / TANKER MARKET</p><div><h2>Pulso do mercado</h2><span>Referências públicas; USD/dia, salvo indicação contrária.</span></div></div>
-    <div class="market-cards" id="market-cards"></div>
-    <div class="chart-grid">
-      <article class="panel chart-panel"><div class="panel-head"><span>⌁ Curva de referência — 12m TC</span><small>US$ mil/dia</small></div><svg id="market-chart" class="static-chart" viewBox="0 0 700 250" role="img" aria-label="Evolução semanal das referências VLCC, Suezmax e Aframax"></svg><div class="chart-legend" id="chart-legend"></div></article>
-      <article class="panel index-panel"><div class="panel-head"><span>◉ Baltic dirty / clean</span><small id="index-week">—</small></div><div class="index-row" id="market-indices"></div><p class="panel-note">Índices são referências agregadas. Não substituem fixture, Worldscale ou avaliação de rota específica.</p></article>
+      <section class="command-panel map-panel" aria-labelledby="map-title">
+        <div class="panel-title"><div><span>02</span><h2 id="map-title">NAVAREA & METAREA mundial</h2></div><a href="https://www.nautoshark.com/" target="_blank" rel="noreferrer">Abrir mapa ↗</a></div>
+        <div class="nautoshark-frame">
+          <iframe src="https://www.nautoshark.com/" title="NautoShark — mapa mundial de avisos NAVAREA e METAREA" loading="eager" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+          <noscript><a href="https://www.nautoshark.com/" target="_blank" rel="noreferrer">Abrir mapa mundial NautoShark</a></noscript>
+        </div>
+        <div class="map-disclaimer"><span>MSI público</span><p>Visualização complementar. EGC, SafetyNET e NAVTEX permanecem as fontes operacionais obrigatórias a bordo.</p></div>
+        <div class="risk-rail" id="risk-rail" aria-label="Resumo mundial dos alertas"></div>
+      </section>
+
+      <aside class="command-panel watch-panel" aria-labelledby="watch-title">
+        <div class="panel-title"><div><span>03</span><h2 id="watch-title">Daily operational watch</h2></div><a href="#operations-detail">Detalhar ↓</a></div>
+        <div class="watch-modules" id="watch-modules"></div>
+        <div class="ops-split">
+          <article class="mini-module psc-mini"><header><span>PSC</span><b id="psc-status">—</b></header><strong id="psc-campaign">—</strong><p id="psc-window">—</p></article>
+          <article class="mini-module bunker-mini"><header><span>BUNKER</span><b>VLSFO US$/t</b></header><div id="bunker-compact"></div></article>
+        </div>
+      </aside>
     </div>
+
+    <footer class="context-deck">
+      <section class="context-market"><div class="context-title"><span>MARKET</span><small>USD/dia · 12m TC</small></div><div id="market-compact" class="market-compact"></div></section>
+      <section class="context-energy"><div class="context-title"><span>PETROBRAS & TRANSPETRO</span><small id="energy-period">—</small></div><div id="energy-compact" class="energy-compact"></div></section>
+      <section class="context-freshness"><small>SNAPSHOT</small><b id="footer-snapshot">—</b><span>Dados observados, proxies e estimativas identificados nos detalhes.</span></section>
+    </footer>
   </section>
 
-  <section class="content-section alt-section" id="risk">
-    <div class="section-heading"><p>02 / ROUTE RISK</p><div><h2>Mapa operacional de risco</h2><span>Triagem pública para orientar a checagem — não substitui NAVAREA, CSO, segurador ou serviço meteorológico contratado.</span></div></div>
+  <section class="deep-dive" id="operations-detail">
+    <div class="section-heading"><p>DECISION SUPPORT</p><div><h2>Informações universais para decisão diária</h2><span>Conteúdo mundial, gratuito e atualizável no snapshot público do portal.</span></div></div>
+    <div class="watch-detail-grid" id="watch-detail-grid"></div>
+  </section>
+
+  <section class="deep-dive" id="alerts-detail">
+    <div class="section-heading"><p>ROUTE RISK</p><div><h2>Alertas mundiais por domínio</h2><span>Três registros recentes por grupo; selecione para ver contexto, ação e fonte.</span></div></div>
     <div class="filter-row" id="alert-filters" aria-label="Filtrar alertas"></div>
-    <div class="risk-layout"><div class="risk-map" aria-label="Mapa interativo de alertas"><div class="map-grid"></div><span class="ocean-label atlantic">ATLÂNTICO</span><span class="ocean-label pacific">PACÍFICO</span><span class="ocean-label indian">ÍNDICO</span><div class="route-line route-a"></div><div class="route-line route-b"></div><div class="route-line route-c"></div><div id="risk-map-points"></div><div class="map-hint">Selecione um ponto para abrir o registro</div><div class="map-scale" id="risk-map-scale">◎ — registros monitorados</div></div><div class="risk-list" id="risk-list"></div></div>
+    <div class="risk-list" id="risk-list"></div>
+    <div id="risk-map-points" hidden></div><span id="risk-map-scale" hidden></span>
   </section>
 
-  <section class="content-section" id="psc"><div class="section-heading"><p>03 / PSC INTELLIGENCE</p><div><h2>Campanhas concentradas</h2><span>O que deve estar no radar antes da próxima inspeção.</span></div></div><div class="psc-grid"><article class="campaign-card"><div class="campaign-date"><i class="icon">▣</i><span><small>JANELA DA CAMPANHA</small><b id="psc-window">—</b></span></div><div class="campaign-body"><span class="campaign-status" id="psc-status">—</span><p id="psc-mous">—</p><h3 id="psc-campaign">—</h3><p id="psc-description">—</p></div><a id="psc-link" href="#" target="_blank" rel="noreferrer">Questionário oficial ↗</a></article><article class="readiness-card"><div class="panel-head"><span>✓ Readiness focus</span><small>Pré-chegada</small></div><ul id="psc-readiness"></ul><p id="psc-note">—</p></article></div></section>
-
-  <section class="bunker-section"><div class="content-section"><div class="section-heading"><p>04 / BUNKER WATCH</p><div><h2>VLSFO nos principais hubs</h2><span>Preço indicativo em US$/t; confirmar cotação, qualidade, prazo e disponibilidade.</span></div></div><div class="bunker-grid" id="bunker-grid"></div></div></section>
-
-  <section class="content-section brief-section" id="briefing"><div class="brief-title"><span>⌁ COMMANDER’S BRIEF</span><h2 id="brief-date">—</h2><p id="brief-reading-time">—</p></div><div class="brief-grid" id="brief-grid"></div><div class="brief-footer"><span>▲</span><p id="brief-caution">—</p></div></section>
-
-  <section class="content-section source-section" id="sources"><div class="section-heading"><p>05 / DATA PROVENANCE</p><div><h2>Fontes e transparência</h2><span>Cada bloco identifica origem e horário. A publicação prioriza fontes oficiais e gratuitas.</span></div></div><div class="source-table" id="source-table"><div class="source-head"><span>Fonte</span><span>Escopo</span><span>Tipo</span><span>Acesso</span></div></div><div class="method-note"><i class="icon">↻</i><div><b>Política de atualização</b><p id="update-policy">—</p></div></div></section>
-
-  <section class="content-section petrobras-section" id="petrobras">
-    <div class="section-heading"><p>06 / PETROBRAS & TRANSPETRO</p><div><h2>Energia, produção e rotas</h2><span>Cotações, produção, comércio exterior, bacias, novas fronteiras e logística marítima.</span></div></div>
-    <div class="energy-grid"><article class="energy-feature"><span id="energy-period">—</span><h3 id="energy-headline">—</h3><p id="energy-summary">—</p><div class="energy-metrics" id="energy-metrics"></div></article><article class="fleet-card"><div class="panel-head"><span id="fleet-title">⚓ Plano da frota</span><small>Transpetro</small></div><div class="fleet-numbers" id="fleet-numbers"></div><p id="fleet-summary">—</p></article></div>
-    <div class="energy-block"><div class="block-title"><span>01</span><div><h3>Ações no Brasil e exterior</h3><p>Último fechamento público e tendência diária; conteúdo informativo, não recomendação financeira.</p></div></div><div class="stock-grid" id="stock-grid"></div></div>
-    <div class="energy-block"><div class="block-title"><span>02</span><div><h3>Produção, exportação e importação</h3><p>Indicadores operacionais consolidados mais recentes.</p></div></div><div class="operations-grid" id="operations-grid"></div></div>
-    <div class="energy-split"><div class="energy-block"><div class="block-title"><span>03</span><div><h3>Rotas marítimas</h3><p>Corredores relevantes para o escoamento e abastecimento.</p></div></div><div class="route-cards" id="energy-routes"></div></div><div class="energy-block"><div class="block-title"><span>04</span><div><h3>Bacias e novas fronteiras</h3><p>Produção consolidada e áreas exploratórias.</p></div></div><div class="basin-grid" id="basin-grid"></div></div></div>
-    <div class="energy-block"><div class="block-title"><span>05</span><div><h3>Informações relevantes</h3><p>Resumo visível; selecione um item para consultar contexto, impacto marítimo e fonte.</p></div></div><div class="development-list" id="energy-developments"></div></div>
+  <section class="deep-dive" id="psc-detail">
+    <div class="section-heading"><p>PSC INTELLIGENCE</p><div><h2>Campanhas e readiness</h2><span>Aplicabilidade deve ser confirmada para cada MoU e próximo porto.</span></div></div>
+    <div class="psc-grid"><article class="campaign-card"><div class="campaign-date"><span><small>MOU</small><b id="psc-mous">—</b><small id="psc-window-detail">—</small></span></div><div class="campaign-body"><p id="psc-description">—</p></div><a id="psc-link" href="#" target="_blank" rel="noreferrer">Questionário oficial ↗</a></article><article class="readiness-card"><div class="panel-head"><span>Readiness focus</span><small>Pré-chegada</small></div><ul id="psc-readiness"></ul><p id="psc-note">—</p></article></div>
   </section>
 
-  <footer class="site-footer"><div class="brand"><span class="brand-mark">⌁</span><span><strong>MARITIME</strong><small>COMMAND RADAR</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p><span id="footer-snapshot">Snapshot · —</span></footer>
+  <section class="deep-dive" id="market-detail">
+    <div class="section-heading"><p>TANKER MARKET</p><div><h2>Pulso do mercado</h2><span>Contexto comercial; não substitui fixture, Worldscale ou avaliação de rota.</span></div></div>
+    <div class="market-cards" id="market-cards"></div>
+    <div class="chart-grid"><article class="panel chart-panel"><div class="panel-head"><span>Curva de referência — 12m TC</span><small>US$ mil/dia</small></div><svg id="market-chart" class="static-chart" viewBox="0 0 700 250" role="img" aria-label="Evolução semanal das referências VLCC, Suezmax e Aframax"></svg><div class="chart-legend" id="chart-legend"></div></article><article class="panel index-panel"><div class="panel-head"><span>Baltic dirty / clean</span><small id="index-week">—</small></div><div class="index-row" id="market-indices"></div><p class="panel-note">Referências agregadas de mercado.</p></article></div>
+  </section>
+
+  <section class="deep-dive" id="bunker-detail">
+    <div class="section-heading"><p>BUNKER WATCH</p><div><h2>VLSFO nos principais hubs</h2><span>Preço indicativo; confirmar qualidade, disponibilidade, lead time e compatibilidade.</span></div></div><div class="bunker-grid" id="bunker-grid"></div>
+  </section>
+
+  <section class="deep-dive petrobras-section" id="petrobras-detail">
+    <div class="section-heading"><p>PETROBRAS & TRANSPETRO</p><div><h2>Energia, produção e rotas</h2><span>Cotações, produção, comércio exterior, bacias, novas fronteiras e logística marítima.</span></div></div>
+    <div class="energy-grid"><article class="energy-feature"><h3 id="energy-headline">—</h3><p id="energy-summary">—</p><div class="energy-metrics" id="energy-metrics"></div></article><article class="fleet-card"><div class="panel-head"><span id="fleet-title">Plano da frota</span><small>Transpetro</small></div><div class="fleet-numbers" id="fleet-numbers"></div><p id="fleet-summary">—</p></article></div>
+    <div class="energy-block"><div class="block-title"><span>01</span><div><h3>Ações no Brasil e exterior</h3><p>Último fechamento público; conteúdo informativo.</p></div></div><div class="stock-grid" id="stock-grid"></div></div>
+    <div class="energy-block"><div class="block-title"><span>02</span><div><h3>Produção, exportação e importação</h3></div></div><div class="operations-grid" id="operations-grid"></div></div>
+    <div class="energy-split"><div class="energy-block"><div class="block-title"><span>03</span><div><h3>Rotas marítimas</h3></div></div><div class="route-cards" id="energy-routes"></div></div><div class="energy-block"><div class="block-title"><span>04</span><div><h3>Bacias e novas fronteiras</h3></div></div><div class="basin-grid" id="basin-grid"></div></div></div>
+    <div class="energy-block"><div class="block-title"><span>05</span><div><h3>Informações relevantes</h3></div></div><div class="development-list" id="energy-developments"></div></div>
+  </section>
+
+  <section class="deep-dive" id="sources-detail">
+    <div class="section-heading"><p>DATA PROVENANCE</p><div><h2>Fontes e transparência</h2><span>Fontes oficiais e gratuitas priorizadas; indústria quando não existe alternativa pública equivalente.</span></div></div><div class="source-table" id="source-table"><div class="source-head"><span>Fonte</span><span>Escopo</span><span>Tipo</span><span>Acesso</span></div></div><div class="method-note"><div><b>Política de atualização</b><p id="update-policy">—</p></div></div>
+  </section>
+
+  <footer class="site-footer"><div class="brand"><span class="brand-mark">⌁</span><span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p></footer>
 </main>
-<script src="script.js"></script>
+<script src="script.js?v=20260901-2"></script>
 </body>
 </html>

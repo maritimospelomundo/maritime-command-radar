@@ -1,8 +1,25 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "generatedAt": "2026-09-01T09:00:00Z",
   "timezone": "UTC",
   "status": { "code": "operational", "label": "Operacional", "snapshotLabel": "Snapshot público", "nextReview": "Semanal + alertas" },
+  "dailyWatch": {
+    "horizons": [
+      { "label": "AÇÃO AGORA", "level": "critical", "value": "4 críticos", "summary": "Golfo de Omã, Mar Vermelho, Golfo de Áden e costa somali exigem revalidação operacional." },
+      { "label": "PRÓXIMAS 72 H", "level": "high", "value": "8 alertas altos", "summary": "Mar de 3–5 m, vento força 7/8 e ressaca no Sudeste do Brasil; swell perigoso no Pacífico NE." },
+      { "label": "PREPARAR", "level": "medium", "value": "CIC ativa", "summary": "Paris e Tokyo MoU: cargo securing até 30 de novembro de 2026." }
+    ],
+    "modules": [
+      { "id": "msi", "icon": "⌁", "label": "NAVAREA / METAREA", "value": "Mapa mundial ao vivo", "status": "live", "summary": "Avisos georreferenciados no NautoShark; confirmar sempre por EGC/NAVTEX.", "source": { "name": "NautoShark", "url": "https://www.nautoshark.com/" } },
+      { "id": "environment", "icon": "◉", "label": "MARPOL / ECA", "value": "7 ECAs em vigor", "status": "watch", "summary": "Mediterrâneo, Ártico canadense e Mar da Noruega integram as áreas com limites mais estritos.", "source": { "name": "IMO", "url": "https://www.imo.org/en/OurWork/Environment/Pages/Emission-Control-Areas-%28ECAs%29-designated-under-regulation-13-of-MARPOL-Annex-VI-%28NOx-emission-control%29.aspx" } },
+      { "id": "gnss", "icon": "◎", "label": "GNSS", "value": "Interferência monitorada", "status": "high", "summary": "Yanbu permanece no radar; há relatos recentes também em Los Angeles e Savannah.", "source": { "name": "USCG NAVCEN", "url": "https://www.navcen.uscg.gov/guide-tool" } },
+      { "id": "ocean", "icon": "◒", "label": "OCEAN / WAVES", "value": "Modelo global · 10 dias", "status": "live", "summary": "Ondas, swell e correntes em dados abertos; usar como apoio e confirmar no weather routing de bordo.", "source": { "name": "Copernicus Marine", "url": "https://data.marine.copernicus.eu/" } },
+      { "id": "chokepoints", "icon": "▲", "label": "CHOKEPOINTS", "value": "Omã + Mar Vermelho críticos", "status": "high", "summary": "Golfo de Omã, Bab el-Mandeb e Golfo de Áden concentram a maior exposição atual.", "source": { "name": "UKMTO / JMIC", "url": "https://www.ukmto.org/" } },
+      { "id": "bunker-quality", "icon": "◆", "label": "BUNKER QUALITY", "value": "Verificar antes do stem", "status": "watch", "summary": "Preço não substitui confirmação de disponibilidade, origem, ISO 8217, compatibilidade e alertas off-spec.", "source": { "name": "Ship & Bunker", "url": "https://shipandbunker.com/prices" } },
+      { "id": "tanker", "icon": "⚓", "label": "TANKER READINESS", "value": "Carga + terminal", "status": "ready", "summary": "Revalidar H₂S/benzeno, static accumulator, aquecimento, IG/COW, ESD, MAWP e compatibilidade de manifold.", "source": { "name": "IMO Tanker Safety", "url": "https://www.imo.org/en/ourwork/safety/pages/oil-tankers.aspx" } },
+      { "id": "arrival", "icon": "▣", "label": "PRÓXIMO PORTO", "value": "Checklist universal", "status": "ready", "summary": "Confirmar calado/UKC, maré, praticagem, rebocadores, vento limite, berço, manifold e documentação.", "source": { "name": "IMO Port Safety", "url": "https://www.imo.org/en/ourwork/safety/pages/default.aspx" } }
+    ]
+  },
   "market": {
     "week": "W35", "sourceLabel": "Compass W35",
     "benchmarks": [
@@ -113,6 +130,7 @@
     { "category": "PSC", "title": "CIC de cargo securing está ativa", "summary": "Paris e Tokyo MoU iniciaram a campanha em 1º de setembro; use o questionário oficial no briefing." }
   ], "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes." },
   "sources": [
+    { "name": "NautoShark", "url": "https://www.nautoshark.com/", "scope": "Mapa público NAVAREA e METAREA", "typeLabel": "Complementar" }, { "name": "IMO — ECAs", "url": "https://www.imo.org/en/OurWork/Environment/Pages/Emission-Control-Areas-%28ECAs%29-designated-under-regulation-13-of-MARPOL-Annex-VI-%28NOx-emission-control%29.aspx", "scope": "Áreas de controle de emissões", "typeLabel": "Oficial" }, { "name": "Copernicus Marine", "url": "https://data.marine.copernicus.eu/", "scope": "Ondas, swell e correntes oceânicas", "typeLabel": "Oficial / aberto" },
     { "name": "IMB Piracy Reporting Centre", "url": "https://icc-ccs.org/map/", "scope": "Pirataria e roubo armado", "typeLabel": "Oficial" }, { "name": "UKMTO / JMIC", "url": "https://www.ukmto.org/", "scope": "Segurança marítima regional", "typeLabel": "Oficial" },
     { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo", "scope": "Meteorologia e costa brasileira", "typeLabel": "Oficial" }, { "name": "NHC / NOAA", "url": "https://www.nhc.noaa.gov/", "scope": "Meteorologia tropical", "typeLabel": "Oficial" },
     { "name": "USCG NAVCEN", "url": "https://www.navcen.uscg.gov/guide-tool", "scope": "Relatos de interferência GNSS", "typeLabel": "Oficial" }, { "name": "Baltic Exchange", "url": "https://www.balticexchange.com/en/data-services/market-information0/tankers-services.html", "scope": "Rotas e metodologia tanker", "typeLabel": "Oficial" },
@@ -121,5 +139,5 @@
     { "name": "Petrobras RI", "url": "https://www.petrobras.com.br/ri/", "scope": "Ações e informações ao mercado", "typeLabel": "Oficial" }, { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-lucra-r-52-4-bilh%C3%B5es-no-segundo-trimestre-de-2026", "scope": "Produção, comércio e resultados 2T26", "typeLabel": "Oficial" },
     { "name": "Transpetro", "url": "https://transpetro.com.br/transpetro-institucional/quem-somos/plano-estrategico.htm", "scope": "Plano 2026–2030", "typeLabel": "Oficial" }
   ],
-  "updatePolicy": "Mercado, bunker e cotações: semanal. Pirataria, meteorologia, costa do Brasil, conflito e navegação eletrônica: revisar os três registros mais recentes de cada grupo e atualizar quando houver alerta material. PSC, Petrobras e Transpetro: quando houver publicação oficial relevante. O arquivo data/latest.json é a fonte única dos dados variáveis exibidos nesta página."
+  "updatePolicy": "Mercado, bunker e cotações: semanal. Pirataria, meteorologia, costa do Brasil, conflito, navegação eletrônica e Daily Operational Watch: revisar os registros recentes e atualizar quando houver alerta material. PSC, Petrobras, Transpetro e regras ambientais: quando houver publicação oficial relevante. O mapa NautoShark é exibido diretamente do serviço público externo; os demais dados variáveis usam data/latest.json como fonte única."
 }
