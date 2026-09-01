@@ -6,9 +6,9 @@ Painel público de inteligência marítima operacional voltado a comandantes, op
 
 - mercado VLCC, Suezmax e Aframax;
 - referências de bunker;
-- riscos de rota e meteorologia;
+- mapa interativo e alertas agrupados (pirataria, meteorologia, costa do Brasil, segurança e navegação eletrônica), com três registros recentes por grupo;
 - PSC Intelligence e campanhas CIC;
-- Petrobras e Transpetro;
+- Petrobras e Transpetro na seção final, com ações, produção, comércio exterior, rotas, bacias e novas fronteiras;
 - Commander’s Brief;
 - fontes, horário e nível de confiança.
 
@@ -18,7 +18,7 @@ Os dados publicados ficam separados da interface em `site/data/latest.json`.
 
 Edite os dados públicos em `site/data/latest.json`. A versão publicada é estática e não exige compilação.
 
-Todos os números, alertas, campanhas, notícias, indicadores, fontes e textos do Commander’s Brief são carregados desse arquivo. Antes de publicar, valide-o com:
+Todos os números, grupos de alertas, campanhas, notícias, indicadores, fontes e textos do Commander’s Brief são carregados desse arquivo. O esquema atual é a versão 3. Antes de publicar, valide-o com:
 
 ```bash
 node scripts/validate-data.mjs

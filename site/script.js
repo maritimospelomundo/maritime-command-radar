@@ -28,11 +28,11 @@ const fullDate = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeZone:
 const shortDate = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
 
 function assertData(data) {
-  const required = ['schemaVersion', 'generatedAt', 'status', 'market', 'risks', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+  const required = ['schemaVersion', 'generatedAt', 'status', 'market', 'alertGroups', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
   const missing = required.filter((key) => data?.[key] === undefined);
   if (missing.length) throw new Error(`Campos ausentes: ${missing.join(', ')}`);
-  if (data.schemaVersion !== 2) throw new Error('Versão do esquema de dados incompatível.');
-  if (!Array.isArray(data.market.benchmarks) || !Array.isArray(data.risks) || !Array.isArray(data.sources)) throw new Error('Listas de dados inválidas.');
+  if (data.schemaVersion !== 3) throw new Error('Versão do esquema de dados incompatível.');
+  if (!Array.isArray(data.market.benchmarks) || !Array.isArray(data.alertGroups) || !Array.isArray(data.sources)) throw new Error('Listas de dados inválidas.');
 }
 
 function safeUrl(value) {
@@ -51,13 +51,14 @@ function confidenceLabel(value) {
 function renderHeader(data) {
   const generated = new Date(data.generatedAt);
   const stamp = dateTime.format(generated).replace(',', ' ·');
-  const highCount = data.risks.filter(({ level }) => level === 'high' || level === 'critical').length;
+  const alerts = data.alertGroups.flatMap(({ items }) => items);
+  const highCount = alerts.filter(({ level }) => level === 'high' || level === 'critical').length;
   setText('snapshot-status', data.status.snapshotLabel);
   setText('snapshot-time', `${stamp} UTC`);
   setText('radar-alert-count', highCount);
   setText('radar-market-week', data.market.week);
   setText('pulse-status', data.status.label);
-  setText('pulse-alerts', `${highCount} ${highCount === 1 ? 'região' : 'regiões'}`);
+  setText('pulse-alerts', `${highCount} ${highCount === 1 ? 'registro' : 'registros'}`);
   setText('pulse-psc', data.psc.pulseLabel);
   setText('pulse-next-review', data.status.nextReview);
   setText('footer-snapshot', `Snapshot · ${stamp} UTC`);
@@ -134,38 +135,82 @@ function renderChart(history) {
   });
 }
 
-function bindRiskFilters() {
-  document.querySelectorAll('[data-risk-filter]').forEach((button) => {
-    button.addEventListener('click', () => {
-      document.querySelectorAll('[data-risk-filter]').forEach((item) => item.classList.remove('active'));
-      button.classList.add('active');
-      const level = button.dataset.riskFilter;
-      document.querySelectorAll('[data-risk]').forEach((card) => card.classList.toggle('hidden-risk', level !== 'all' && card.dataset.risk !== level));
-    });
-  });
-}
-
-function renderRisks(risks) {
+function renderAlerts(groups) {
   const labels = { critical: 'Crítico', high: 'Alto', medium: 'Moderado', low: 'Baixo' };
   const dotClasses = { critical: 'dot-red', high: 'dot-orange', medium: 'dot-amber', low: 'dot-green' };
   const list = byId('risk-list');
   const points = byId('risk-map-points');
+  const filters = byId('alert-filters');
   clear(list);
   clear(points);
-  risks.forEach((risk) => {
-    const point = element('span', `map-point ${risk.mapClass} ${risk.level}`);
-    point.append(element('i'), element('b', '', risk.mapLabel));
-    points.append(point);
-    const card = element('article');
-    card.dataset.risk = risk.level;
-    const heading = element('div');
-    const pill = element('span', `risk-pill risk-${risk.level}`);
-    pill.append(element('i', dotClasses[risk.level]), document.createTextNode(labels[risk.level] || risk.level));
-    heading.append(pill, element('small', '', risk.region));
-    card.append(heading, element('p', '', risk.driver), element('span', '', `› ${risk.action}`));
-    list.append(card);
+  clear(filters);
+
+  const allButton = element('button', 'active', 'Todos');
+  allButton.dataset.alertGroup = 'all';
+  filters.append(allButton);
+  groups.forEach((group) => {
+    const button = element('button', '', `${group.icon} ${group.shortTitle}`);
+    button.dataset.alertGroup = group.id;
+    filters.append(button);
+    const section = element('section', 'alert-group');
+    section.dataset.alertGroupPanel = group.id;
+    const heading = element('header');
+    const titleWrap = element('div');
+    titleWrap.append(element('span', 'group-icon', group.icon), element('h3', '', group.title));
+    heading.append(titleWrap, element('small', '', `${group.items.length} últimos registros`));
+    const description = element('p', 'group-description', group.description);
+    section.append(heading, description);
+
+    group.items.forEach((alert, index) => {
+      const details = element('details', 'alert-item');
+      details.id = `alert-${alert.id}`;
+      details.dataset.group = group.id;
+      const summary = element('summary');
+      const meta = element('span', 'alert-meta');
+      const pill = element('span', `risk-pill risk-${alert.level}`);
+      pill.append(element('i', dotClasses[alert.level]), document.createTextNode(labels[alert.level] || alert.level));
+      meta.append(pill, element('time', '', shortDate.format(new Date(`${alert.date}T00:00:00Z`))), element('small', '', alert.region));
+      const copy = element('span', 'alert-summary-copy');
+      copy.append(element('b', '', alert.headline), element('span', '', alert.summary));
+      summary.append(meta, copy, element('i', 'expand-mark', '+'));
+      const body = element('div', 'alert-detail');
+      body.append(element('p', '', alert.details), element('strong', '', `Ação do comandante: ${alert.action}`));
+      const source = element('a', '', `${alert.source.name} ↗`);
+      source.href = safeUrl(alert.source.url);
+      source.target = '_blank';
+      source.rel = 'noreferrer';
+      body.append(source);
+      details.append(summary, body);
+      section.append(details);
+
+      const point = element('button', `map-point ${alert.level}`);
+      point.type = 'button';
+      point.style.left = `${alert.map.x}%`;
+      point.style.top = `${alert.map.y}%`;
+      point.setAttribute('aria-label', `${group.title}: ${alert.headline}`);
+      point.title = `${alert.region} — ${alert.headline}`;
+      point.dataset.target = details.id;
+      point.dataset.group = group.id;
+      point.append(element('i'), element('b', '', index === 0 ? alert.map.label : ''));
+      point.addEventListener('click', () => {
+        filterGroups(group.id);
+        details.open = true;
+        details.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        details.classList.add('map-selected');
+        window.setTimeout(() => details.classList.remove('map-selected'), 1800);
+      });
+      points.append(point);
+    });
+    list.append(section);
   });
-  setText('risk-map-scale', `◎ ${risks.length} corredores monitorados`);
+  const filterGroups = (id) => {
+    filters.querySelectorAll('button').forEach((button) => button.classList.toggle('active', button.dataset.alertGroup === id));
+    list.querySelectorAll('[data-alert-group-panel]').forEach((panel) => panel.hidden = id !== 'all' && panel.dataset.alertGroupPanel !== id);
+    points.querySelectorAll('.map-point').forEach((point) => point.hidden = id !== 'all' && point.dataset.group !== id);
+  };
+  filters.querySelectorAll('button').forEach((button) => button.addEventListener('click', () => filterGroups(button.dataset.alertGroup)));
+  const total = groups.reduce((sum, group) => sum + group.items.length, 0);
+  setText('risk-map-scale', `◎ ${total} registros em ${groups.length} grupos`);
 }
 
 function renderPsc(psc) {
@@ -191,17 +236,74 @@ function renderPetrobras(data) {
   const metrics = byId('energy-metrics');
   clear(metrics);
   data.metrics.forEach((item) => { const wrap = element('div'); wrap.append(element('small', '', item.label), element('b', '', item.value)); metrics.append(wrap); });
-  setText('stock-ticker', data.adr.tickerLabel);
-  setText('stock-price', `US$ ${money.format(data.adr.price)}`);
-  const stockChange = byId('stock-change');
-  stockChange.className = data.adr.changePercent >= 0 ? 'positive' : 'negative';
-  stockChange.textContent = `${data.adr.changePercent >= 0 ? '↗' : '↘'} ${money.format(Math.abs(data.adr.changePercent))}%`;
-  setText('stock-note', data.adr.note);
   setText('fleet-title', data.fleetPlan.title);
   setText('fleet-summary', data.fleetPlan.summary);
   const fleet = byId('fleet-numbers');
   clear(fleet);
   data.fleetPlan.metrics.forEach((item) => { const wrap = element('div'); wrap.append(element('b', '', item.value), element('span', '', item.label)); fleet.append(wrap); });
+
+  const stocks = byId('stock-grid');
+  clear(stocks);
+  data.markets.forEach((item) => {
+    const card = element('a', 'stock-tile');
+    card.href = safeUrl(item.sourceUrl);
+    card.target = '_blank';
+    card.rel = 'noreferrer';
+    const top = element('div');
+    top.append(element('b', '', item.ticker), element('small', '', item.market));
+    const trend = element('span', item.changePercent >= 0 ? 'positive' : 'negative', `${item.changePercent >= 0 ? '↗' : '↘'} ${money.format(Math.abs(item.changePercent))}%`);
+    card.append(top, element('strong', '', `${item.currencySymbol} ${money.format(item.price)}`), trend, element('small', '', `${item.trend} · ${item.capturedAtLabel}`));
+    stocks.append(card);
+  });
+
+  const operations = byId('operations-grid');
+  clear(operations);
+  data.operations.forEach((item) => {
+    const card = element('article');
+    card.append(element('small', '', item.label), element('b', '', item.value), element('span', '', item.comparison));
+    operations.append(card);
+  });
+
+  const routes = byId('energy-routes');
+  clear(routes);
+  data.routes.forEach((item) => {
+    const details = element('details');
+    const summary = element('summary');
+    summary.append(element('span', '', `${item.origin} → ${item.destination}`), element('b', '', item.cargo), element('i', 'expand-mark', '+'));
+    const body = element('div');
+    body.append(element('p', '', item.summary), element('strong', '', item.operationalNote));
+    details.append(summary, body);
+    routes.append(details);
+  });
+
+  const basins = byId('basin-grid');
+  clear(basins);
+  data.basins.forEach((item) => {
+    const details = element('details');
+    const summary = element('summary');
+    summary.append(element('span', '', item.name), element('small', '', item.status), element('i', 'expand-mark', '+'));
+    const body = element('div');
+    body.append(element('p', '', item.summary), element('strong', '', item.maritimeImpact));
+    details.append(summary, body);
+    basins.append(details);
+  });
+
+  const developments = byId('energy-developments');
+  clear(developments);
+  data.developments.forEach((item) => {
+    const details = element('details');
+    const summary = element('summary');
+    summary.append(element('time', '', shortDate.format(new Date(`${item.date}T00:00:00Z`))), element('span', '', item.title), element('i', 'expand-mark', '+'));
+    const body = element('div');
+    body.append(element('p', '', item.summary), element('strong', '', `Impacto marítimo: ${item.maritimeImpact}`));
+    const link = element('a', '', `${item.source.name} ↗`);
+    link.href = safeUrl(item.source.url);
+    link.target = '_blank';
+    link.rel = 'noreferrer';
+    body.append(link);
+    details.append(summary, body);
+    developments.append(details);
+  });
 }
 
 function renderBunker(items) {
@@ -247,14 +349,13 @@ function renderSources(sources) {
 function render(data) {
   renderHeader(data);
   renderMarket(data.market);
-  renderRisks(data.risks);
+  renderAlerts(data.alertGroups);
   renderPsc(data.psc);
   renderPetrobras(data.petrobras);
   renderBunker(data.bunker);
   renderBriefing(data.briefing);
   renderSources(data.sources);
   setText('update-policy', data.updatePolicy);
-  bindRiskFilters();
 }
 
 async function loadRadar() {

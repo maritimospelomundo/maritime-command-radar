@@ -1,121 +1,125 @@
 {
-  "schemaVersion": 2,
-  "generatedAt": "2026-08-31T15:00:00Z",
+  "schemaVersion": 3,
+  "generatedAt": "2026-09-01T09:00:00Z",
   "timezone": "UTC",
-  "status": {
-    "code": "operational",
-    "label": "Operacional",
-    "snapshotLabel": "Snapshot público",
-    "nextReview": "Semanal + alertas"
-  },
+  "status": { "code": "operational", "label": "Operacional", "snapshotLabel": "Snapshot público", "nextReview": "Semanal + alertas" },
   "market": {
-    "week": "W35",
-    "sourceLabel": "Compass W35",
+    "week": "W35", "sourceLabel": "Compass W35",
     "benchmarks": [
       { "segment": "VLCC", "route": "12m time charter", "value": 99250, "unit": "USD/day", "confidence": "medium", "trendWidth": 72 },
       { "segment": "Suezmax", "route": "12m time charter", "value": 68500, "unit": "USD/day", "confidence": "medium", "trendWidth": 69 },
       { "segment": "Aframax", "route": "12m time charter", "value": 53750, "unit": "USD/day", "confidence": "medium", "trendWidth": 66 }
     ],
-    "spotSignal": {
-      "segment": "VLCC",
-      "label": "retornos reportados até",
-      "valueLabel": "~US$ 200 mil/dia",
-      "summary": "Mercado ainda forte, sem mudança material na semana.",
-      "confidenceLabel": "Narrativa semanal",
-      "sourceLabel": "Fearnleys"
-    },
-    "history": {
-      "weeks": ["W30", "W31", "W32", "W33", "W34", "W35"],
-      "series": [
-        { "name": "VLCC", "className": "vlcc", "values": [94, 96, 98, 98.5, 99, 99.25] },
-        { "name": "Suezmax", "className": "suez", "values": [65, 66, 68, 68.5, 69, 68.5] },
-        { "name": "Aframax", "className": "afra", "values": [51, 52, 52.5, 53, 54, 53.75] }
+    "spotSignal": { "segment": "VLCC", "label": "retornos reportados até", "valueLabel": "~US$ 200 mil/dia", "summary": "Mercado ainda forte, sem mudança material na semana.", "confidenceLabel": "Narrativa semanal", "sourceLabel": "Fearnleys" },
+    "history": { "weeks": ["W30", "W31", "W32", "W33", "W34", "W35"], "series": [
+      { "name": "VLCC", "className": "vlcc", "values": [94, 96, 98, 98.5, 99, 99.25] },
+      { "name": "Suezmax", "className": "suez", "values": [65, 66, 68, 68.5, 69, 68.5] },
+      { "name": "Aframax", "className": "afra", "values": [51, 52, 52.5, 53, 54, 53.75] }
+    ] },
+    "indices": [{ "name": "BDTI", "value": 2777, "previous": 3004 }, { "name": "BCTI", "value": 1387, "previous": 1348 }]
+  },
+  "alertGroups": [
+    {
+      "id": "piracy", "title": "Pirataria e roubo armado", "shortTitle": "Pirataria", "icon": "☠",
+      "description": "Últimos registros públicos localizados no mapa do IMB Piracy Reporting Centre.",
+      "items": [
+        { "id": "imb-049-26", "date": "2026-08-22", "region": "Vung Tau, Vietnã", "level": "high", "headline": "Bulk carrier abordado no fundeadouro", "summary": "Pessoas não autorizadas embarcaram em um graneleiro fundeado.", "details": "O incidente 049-26 foi registrado às 1806 UTC, na posição aproximada 10°16.15'N 107°02'E. O fundeio e os acessos ao convés exigem vigilância reforçada.", "action": "Rever iluminação, rondas, pontos de acesso, comunicações com o terminal e medidas anti-intrusão.", "map": { "x": 88, "y": 43, "label": "Vung Tau" }, "source": { "name": "IMB PRC", "url": "https://icc-ccs.org/map/" } },
+        { "id": "imb-048-26", "date": "2026-08-20", "region": "Golfo de Áden", "level": "critical", "headline": "Tanker abordado e desviado por homens armados", "summary": "Seis piratas armados abordaram um petroleiro em navegação a leste de Mukalla.", "details": "O IMB registrou o caso a cerca de 136 milhas náuticas a leste de Mukalla. A ocorrência confirma capacidade de abordagem longe da costa.", "action": "Aplicar BMP Maritime Security, reforçar lookout, testar citadel/SSAS e manter reporte no VRA/UKMTO.", "map": { "x": 67, "y": 48, "label": "Golfo de Áden" }, "source": { "name": "IMB PRC", "url": "https://icc-ccs.org/map/" } },
+        { "id": "imb-047-26", "date": "2026-08-17", "region": "Eyl, Somália", "level": "critical", "headline": "Cargo vessel sequestrado ao largo de Eyl", "summary": "Oito piratas abordaram e desviaram um navio de carga em navegação.", "details": "O registro ocorreu a cerca de 24 milhas náuticas a nordeste de Eyl, na posição 08°11.76'N 050°10.76'E.", "action": "Evitar aproximação desnecessária da costa, elevar prontidão e alinhar plano de contingência com CSO e forças navais.", "map": { "x": 66, "y": 53, "label": "Somália" }, "source": { "name": "IMB PRC", "url": "https://icc-ccs.org/map/" } }
       ]
     },
-    "indices": [
-      { "name": "BDTI", "value": 2777, "previous": 3004 },
-      { "name": "BCTI", "value": 1387, "previous": 1348 }
-    ]
-  },
-  "risks": [
-    { "region": "Strait of Hormuz / Gulf of Oman", "mapLabel": "Hormuz", "mapClass": "p-hormuz", "level": "critical", "driver": "Conflito, interrupção da navegação e disponibilidade de bunker.", "action": "Verificar rota, war-risk cover, avisos de segurança e alternativas de bunker." },
-    { "region": "US Gulf", "mapLabel": "US Gulf", "mapClass": "p-usg", "level": "high", "driver": "Invest 97L; chuva forte, rajadas e possível desenvolvimento tropical.", "action": "Revalidar porto, praticagem e últimos avisos do NHC." },
-    { "region": "Eastern North Pacific", "mapLabel": "Karina", "mapClass": "p-pacific", "level": "high", "driver": "Hurricane Karina; swell perigoso embora distante de terra.", "action": "Rever previsão de swell e margens de mau tempo." },
-    { "region": "Yellow Sea / Korea", "mapLabel": "Yellow Sea", "mapClass": "p-korea", "level": "medium", "driver": "Chuva severa e atividade convectiva.", "action": "Antecipar impactos em visibilidade, berço e operações." },
-    { "region": "Brazil / Santos Basin", "mapLabel": "Santos", "mapClass": "p-brazil", "level": "low", "driver": "Nenhuma grande interrupção pública capturada.", "action": "Manter NAVAREA, terminal e meteorologia local sob acompanhamento." }
+    {
+      "id": "weather", "title": "Condições meteorológicas extremas", "shortTitle": "Meteo", "icon": "◒",
+      "description": "Eventos com potencial de gerar vento, mar e swell perigosos para operações oceânicas.",
+      "items": [
+        { "id": "chm-607-2026", "date": "2026-08-31", "region": "Atlântico Sul / SE do Brasil", "level": "high", "headline": "Ondas de 3 a 5 metros em área oceânica", "summary": "Aviso de mar grosso a muito grosso válido até 3 de setembro, 0000Z.", "details": "O CHM prevê ondas de NE passando a SW/S entre 23°S–31°S e 42°W–49°W, com altura de 3,0 a 5,0 metros.", "action": "Recalcular velocidade segura, ETA, esforço estrutural e limites para convés/operação de carga.", "map": { "x": 39, "y": 72, "label": "Atlântico Sul" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } },
+        { "id": "chm-605-2026", "date": "2026-08-31", "region": "Atlântico Sul / offshore", "level": "high", "headline": "Vento força 7/8 com rajadas 9", "summary": "Vento E/NE rondando para SW em ampla área oceânica do Sudeste.", "details": "Aviso válido de 1º de setembro, 0000Z, a 3 de setembro, 0000Z, abrangendo área oceânica entre 23°S e 31°S.", "action": "Confirmar weather routing, condição de lastro, exposição do convés e restrições do terminal de destino.", "map": { "x": 43, "y": 67, "label": "SE Brasil" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } },
+        { "id": "nhc-karina-18", "date": "2026-08-31", "region": "Pacífico Nordeste", "level": "high", "headline": "Furacão Karina mantém swell perigoso", "summary": "O sistema permanece longe de terra, mas produz mar perigoso na área de influência.", "details": "O NHC publicou o aviso público 18 em 31 de agosto. A posição e o campo de ondas devem ser confirmados no aviso mais recente antes de qualquer aproximação.", "action": "Rever rota e margens de afastamento pelo quadrante de ondas, não apenas pela trajetória do centro.", "map": { "x": 10, "y": 47, "label": "Karina" }, "source": { "name": "NHC / NOAA", "url": "https://www.nhc.noaa.gov/mobile/text/refresh/MIATCPEP1%2Bhtml/312039.shtml" } }
+      ]
+    },
+    {
+      "id": "brazil-coast", "title": "Costa do Brasil", "shortTitle": "Costa BR", "icon": "◆",
+      "description": "Avisos costeiros e alterações hidrográficas com efeito potencial em praticagem, aproximação e operações.",
+      "items": [
+        { "id": "chm-618-2026", "date": "2026-08-31", "region": "Santos/SP a Campos/RJ", "level": "high", "headline": "Ressaca com ondas de 2,5 a 3 metros", "summary": "Aviso costeiro válido de 2 de setembro, 0300Z, a 3 de setembro, 1200Z.", "details": "Ondas de SW/S podem afetar aproximações, fundeio, praticagem, transferência de pessoal e limites de terminais no corredor Santos–Campos.", "action": "Confirmar janela com agente, praticagem e terminal; reavaliar fundeio e lee disponível.", "map": { "x": 37, "y": 68, "label": "Santos–Campos" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } },
+        { "id": "chm-609-2026", "date": "2026-08-31", "region": "Arraial do Cabo/RJ a Vitória/ES", "level": "high", "headline": "Vento forte a muito forte até 320 MN", "summary": "Vento força 7 com rajadas 8, rondando de NE/N para NW/SW.", "details": "A condição cobre a área costeira e oceânica adjacente e permanece válida até 3 de setembro, 0000Z.", "action": "Considerar deriva, carregamento de vento, manobra em baixa velocidade e eventual suspensão de apoio offshore.", "map": { "x": 39, "y": 65, "label": "RJ–ES" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } },
+        { "id": "chart-1623-2026", "date": "2026-08-27", "region": "Porto de Itaguaí/RJ", "level": "medium", "headline": "Carta 1623 possui atualização publicada", "summary": "Carta raster e GeoTIFF do Porto de Itaguaí foram disponibilizados com referência de 2026.", "details": "O catálogo do CHM indica atualização da carta 1623 e Aviso 2026-53. A bordo, a validade deve ser confirmada no sistema oficial de cartas e publicações.", "action": "Verificar correções, edição e atualização do portfólio antes da aproximação; não usar o portal como carta náutica.", "map": { "x": 37, "y": 66, "label": "Itaguaí" }, "source": { "name": "CHM / Carta 1623", "url": "https://www.marinha.mil.br/chm/dados-do-segnav-cartas-raster/porto-de-itaguai" } }
+      ]
+    },
+    {
+      "id": "security", "title": "Conflito e segurança de rota", "shortTitle": "Segurança", "icon": "▲",
+      "description": "Mudanças no ambiente de ameaça, interferência estatal e ataques contra navegação comercial.",
+      "items": [
+        { "id": "ukmto-096-26", "date": "2026-08-31", "region": "Golfo de Omã", "level": "critical", "headline": "Incidente entre tanker e forças militares", "summary": "O UKMTO recebeu relato envolvendo um petroleiro e forças militares na região.", "details": "O aviso 096-26 recomenda cautela e acompanhamento dos comunicados subsequentes. A situação regional evolui rapidamente.", "action": "Revalidar rota, regras de reporte, war-risk cover, orientação do CSO e capacidade de resposta a hailing/interdição.", "map": { "x": 64, "y": 43, "label": "Golfo de Omã" }, "source": { "name": "UKMTO", "url": "https://www.ukmto.org/" } },
+        { "id": "jmic-091-26", "date": "2026-08-30", "region": "Golfo de Áden / costa somali", "level": "high", "headline": "Nível SUBSTANTIAL e risco de sequestro oportunista", "summary": "Grupos continuam capazes de abordar e desviar mercantes mesmo durante a monção.", "details": "A nota JMIC 091 mantém a possibilidade de skiffs e ações agressivas no IRTC, aproximações e zonas costeiras adjacentes.", "action": "Implementar BMP, registrar no UKMTO, revisar citadel, drills, watchkeeping e plano de resposta da companhia.", "map": { "x": 68, "y": 48, "label": "IRTC" }, "source": { "name": "JMIC / UKMTO", "url": "https://www.ukmto.org/-/media/ukmto/products/update-091-jmic-advisory-note-30-august.pdf" } },
+        { "id": "imo-red-sea-2026", "date": "2026-08-12", "region": "Mar Vermelho / Bab el-Mandeb", "level": "critical", "headline": "IMO condena ataque mortal à navegação", "summary": "Novo ataque reforçou a ameaça a tripulantes e cadeias logísticas internacionais.", "details": "A IMO pediu que armadores e operadores façam avaliação completa de risco e sigam as melhores práticas antes de transitar a região.", "action": "Não tratar o trânsito como rotina: exigir avaliação atualizada, medidas mitigadoras e autorização conforme SMS/companhia.", "map": { "x": 65, "y": 38, "label": "Mar Vermelho" }, "source": { "name": "IMO", "url": "https://www.imo.org/en/mediacentre/pressbriefings/pages/statement-on-deadly-ship-attack-in-the-red-sea.aspx" } }
+      ]
+    },
+    {
+      "id": "navigation", "title": "Navegação eletrônica e portos", "shortTitle": "Nav/Portos", "icon": "⌁",
+      "description": "Interferência GNSS e sinais que exigem redundância de posição e conferência das informações portuárias.",
+      "items": [
+        { "id": "gnss-yanbu-2026", "date": "2026-08-04", "region": "Yanbu / norte do Mar Vermelho", "level": "high", "headline": "Interferência GNSS continua reportada", "summary": "JMIC registrou interferência elevada nas proximidades de Yanbu.", "details": "A interferência eletrônica permanece preocupação operacional, embora o boletim não tenha registrado impacto direto no fluxo do período.", "action": "Comparar GNSS com radar, visual, eco-sonda e celestial quando possível; monitorar coerência de AIS e alarmes ECDIS.", "map": { "x": 63, "y": 34, "label": "Yanbu" }, "source": { "name": "JMIC / UKMTO", "url": "https://www.ukmto.org/-/media/ukmto/products/update-080-jmic-advisory-note-04-august.pdf" } },
+        { "id": "gps-la-1002", "date": "2026-08-10", "region": "Los Angeles, EUA", "level": "medium", "headline": "Perda intermitente de satélites GPS reportada", "summary": "Relato descreveu jamming a cada quatro horas, com duração aproximada de quatro minutos.", "details": "O NAVCEN não encontrou anomalia de constelação, clima espacial ou teste autorizado correlacionado ao registro 1002.", "action": "Registrar hora/posição, verificar receptores independentes e reportar degradação ao serviço competente.", "map": { "x": 8, "y": 39, "label": "Los Angeles" }, "source": { "name": "USCG NAVCEN", "url": "https://www.navcen.uscg.gov/guide-tool" } },
+        { "id": "gps-savannah-1001", "date": "2026-08-03", "region": "Savannah, EUA", "level": "medium", "headline": "Degradação GPS reproduzida em múltiplos equipamentos", "summary": "Usuário reportou recepção de 0–3 satélites em área onde normalmente obtinha cerca de 23.", "details": "O NAVCEN classificou o caso como interferência desconhecida e não identificou falha da constelação no período.", "action": "Não depender de um único sensor; validar posição e rumo por meios independentes durante aproximações e canais.", "map": { "x": 23, "y": 43, "label": "Savannah" }, "source": { "name": "USCG NAVCEN", "url": "https://www.navcen.uscg.gov/guide-tool" } }
+      ]
+    }
   ],
   "psc": {
-    "campaign": "Cargo Securing of Cargo Units and Cargo Transport Units",
-    "mous": ["Paris MoU", "Tokyo MoU"],
-    "start": "2026-09-01",
-    "end": "2026-11-30",
-    "statusLabel": "INÍCIO IMINENTE",
-    "pulseLabel": "Início em 1º set.",
-    "description": "Verificação coordenada do atendimento aos requisitos SOLAS para carregamento, estivagem e peação de unidades de carga.",
-    "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
-    "readiness": [
-      "Cargo Securing Manual aprovado, atualizado e disponível.",
-      "Equipamentos de peação identificados, mantidos e certificados.",
-      "Registros de inspeção e manutenção rastreáveis.",
-      "Tripulação familiarizada com responsabilidades e limitações.",
-      "Condição real coerente com procedimentos e registros."
-    ],
+    "campaign": "Cargo Securing of Cargo Units and Cargo Transport Units", "mous": ["Paris MoU", "Tokyo MoU"], "start": "2026-09-01", "end": "2026-11-30", "statusLabel": "EM ANDAMENTO", "pulseLabel": "CIC ativa",
+    "description": "Verificação coordenada do atendimento aos requisitos SOLAS para carregamento, estivagem e peação de unidades de carga.", "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
+    "readiness": ["Cargo Securing Manual aprovado, atualizado e disponível.", "Equipamentos de peação identificados, mantidos e certificados.", "Registros de inspeção e manutenção rastreáveis.", "Tripulação familiarizada com responsabilidades e limitações.", "Condição real coerente com procedimentos e registros."],
     "note": "Para petroleiros sem unidades de carga convencionais, confirmar a aplicabilidade de cada pergunta e manter evidência objetiva para itens não aplicáveis."
   },
   "petrobras": {
-    "periodLabel": "RESULTADOS 2T26",
-    "headline": "Exportações próximas de 1 milhão bpd",
-    "summary": "O crescimento da produção ampliou as exportações no trimestre e reforça a relevância de rotas de longo curso para escoamento do pré-sal.",
-    "metrics": [
-      { "label": "Lucro líquido", "value": "R$ 52,4 bi" },
-      { "label": "Derivados produzidos", "value": "1,9 mi bpd" },
-      { "label": "Diesel S10", "value": "509 mil bpd" }
+    "periodLabel": "RESULTADOS CONSOLIDADOS 2T26", "headline": "Produção recorde amplia exportação e atividade marítima", "summary": "A produção própria alcançou 3,34 milhões de boed e as exportações se aproximaram de 1 milhão de barris por dia, reforçando o escoamento de longo curso do pré-sal.",
+    "metrics": [{ "label": "Produção própria", "value": "3,34 mi boed" }, { "label": "Exportações", "value": "~1 mi bpd" }, { "label": "Produção operada", "value": "4,87 mi boed" }],
+    "markets": [
+      { "ticker": "PETR3", "market": "B3 · ON", "price": 50.29, "currencySymbol": "R$", "changePercent": 4.23, "trend": "Alta no dia", "capturedAtLabel": "31 ago. 2026", "sourceUrl": "https://www.infomoney.com.br/cotacoes/b3/acao/petrobras-petr3/" },
+      { "ticker": "PETR4", "market": "B3 · PN", "price": 44.89, "currencySymbol": "R$", "changePercent": 3.08, "trend": "Alta no dia", "capturedAtLabel": "31 ago. 2026", "sourceUrl": "https://www.investidorpetrobras.com.br/petr4/" },
+      { "ticker": "PBR", "market": "NYSE · ADR ON", "price": 19.35, "currencySymbol": "US$", "changePercent": 4.43, "trend": "Alta no dia", "capturedAtLabel": "31 ago. 2026", "sourceUrl": "https://www.marketwatch.com/investing/stock/pbr" },
+      { "ticker": "PBR.A", "market": "NYSE · ADR PN", "price": 17.41, "currencySymbol": "US$", "changePercent": 3.82, "trend": "Alta no dia", "capturedAtLabel": "31 ago. 2026", "sourceUrl": "https://markets.businessinsider.com/stocks/pbr-a-stock" }
     ],
-    "adr": {
-      "tickerLabel": "NYSE · PBR",
-      "price": 19.045,
-      "currency": "USD",
-      "changePercent": 2.779,
-      "note": "Última cotação pública capturada em 31 ago. 2026. Consulte a bolsa antes de qualquer decisão financeira."
-    },
-    "fleetPlan": {
-      "title": "⚓ Plano 2026–2030",
-      "metrics": [
-        { "label": "navios de cabotagem", "value": "20" },
-        { "label": "barcaças", "value": "18" },
-        { "label": "investimento previsto", "value": "US$ 2 bi" },
-        { "label": "apoios offshore", "value": "40" }
-      ],
-      "summary": "O movimento reduz exposição ao afretamento em classes de baixa liquidez e amplia a demanda futura por tripulação, docagem, treinamento e suporte."
-    }
-  },
-  "bunker": [
-    { "port": "Singapore", "code": "SGSIN", "vlsfo": 784.5, "change": 14.0 },
-    { "port": "Rotterdam", "code": "NLRTM", "vlsfo": 663.0, "change": 6.5 },
-    { "port": "Fujairah", "code": "AEFJR", "vlsfo": 795.0, "change": 9.5 },
-    { "port": "Santos", "code": "BRSSZ", "vlsfo": 780.5, "change": 2.5 }
-  ],
-  "briefing": {
-    "date": "2026-08-31",
-    "readingTime": "Leitura sugerida: 90 segundos",
-    "items": [
-      { "category": "MERCADO", "title": "VLCC permanece muito forte", "summary": "O sinal spot segue excepcional, enquanto referências de 12 meses mostram VLCC acima de Suezmax e Aframax." },
-      { "category": "ROTA", "title": "Hormuz continua sendo o risco dominante", "summary": "Revalidar cobertura de guerra, rota, portos alternativos e autonomia antes de compromissos no Golfo." },
-      { "category": "PSC", "title": "CIC começa amanhã", "summary": "Paris e Tokyo MoU iniciam a campanha em 1º de setembro. Usar o questionário oficial em briefing e inspeção dirigida." },
-      { "category": "BRASIL", "title": "Exportações sustentam demanda de longo curso", "summary": "Petrobras reportou exportações próximas de 1 milhão bpd no 2T26; acompanhar a distribuição entre mercados." }
+    "operations": [
+      { "label": "Petróleo próprio no Brasil", "value": "2,70 mi bpd", "comparison": "+15% versus 2T25" }, { "label": "Óleo e gás próprios", "value": "3,34 mi boed", "comparison": "+14% em 12 meses" },
+      { "label": "Pré-sal próprio", "value": "2,78 mi boed", "comparison": "83% da produção própria" }, { "label": "Produção operada", "value": "4,87 mi boed", "comparison": "total dos ativos operados" },
+      { "label": "Exportação de petróleo", "value": "~1,00 mi bpd", "comparison": "recorde no 2T26" }, { "label": "Importação de petróleo", "value": "89 mil bpd", "comparison": "último consolidado 2T26" },
+      { "label": "Importação de derivados", "value": "67 mil bpd", "comparison": "queda de 40% ante 1T26" }, { "label": "Produção de derivados", "value": "1,90 mi bpd", "comparison": "inclui 509 mil bpd de S10" }
     ],
-    "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
+    "routes": [
+      { "origin": "Santos / pré-sal", "destination": "Ásia", "cargo": "Petróleo cru", "summary": "Corredor de longo curso associado ao crescimento das exportações e à demanda asiática.", "operationalNote": "Monitorar VLCC, disponibilidade de berço/STS, Cabo da Boa Esperança e riscos no Índico." },
+      { "origin": "Campos e Santos", "destination": "Europa", "cargo": "Petróleo cru", "summary": "Fluxo atlântico relevante para diversificação de destinos do óleo brasileiro.", "operationalNote": "Acompanhar clima no Atlântico Norte, restrições de terminais e vetting." },
+      { "origin": "Costa brasileira", "destination": "Refinarias nacionais", "cargo": "Cru / derivados", "summary": "Cabotagem conecta plataformas, terminais e refinarias e sustenta o abastecimento doméstico.", "operationalNote": "Priorizar janelas costeiras, praticagem, calado, tábua de marés e disponibilidade da frota Transpetro." },
+      { "origin": "Hubs internacionais", "destination": "Brasil", "cargo": "Cru / derivados", "summary": "Importações complementares atendem mistura, qualidade e equilíbrio de oferta do sistema de refino.", "operationalNote": "Validar origem contratual a cada período; o portal indica corredores, não fixtures individuais." }
+    ],
+    "basins": [
+      { "name": "Bacia de Santos", "status": "Produção / expansão", "summary": "Búzios tem capacidade instalada próxima de 1,33 milhão bpd; Mero produziu cerca de 740 mil bpd no 2T26.", "maritimeImpact": "Grande concentração de FPSOs, aliviadores e exportações de longo curso." },
+      { "name": "Bacia de Campos", "status": "Produção / revitalização", "summary": "A produção de petróleo atingiu 559 mil bpd no 2T26, com ativos maduros e novos projetos.", "maritimeImpact": "Mantém demanda por shuttle tankers, apoio offshore e logística entre RJ/ES." },
+      { "name": "Foz do Amazonas", "status": "Nova fronteira", "summary": "Petrobras adquiriu participação em 10 blocos na 5ª Oferta Permanente da ANP, em parceria com a ExxonMobil.", "maritimeImpact": "Se avançar, exigirá planejamento ambiental, bases logísticas, apoio offshore e resposta a emergência no Amapá/Pará." },
+      { "name": "Bacia de Pelotas", "status": "Exploração", "summary": "Três blocos foram adquiridos com Petrobras operadora (70%) e Petrogal (30%).", "maritimeImpact": "Pode criar nova frente logística no extremo sul, sujeita a mar severo e longa distância de apoio." }
+    ],
+    "developments": [
+      { "date": "2026-08-06", "title": "Lucro líquido de R$ 52,4 bilhões no 2T26", "summary": "O desempenho financeiro acompanhou recordes operacionais, crescimento das exportações e maior produção de derivados.", "maritimeImpact": "Sustenta capacidade de investimento em produção, escoamento, terminais e frota.", "source": { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-lucra-r-52-4-bilh%C3%B5es-no-segundo-trimestre-de-2026" } },
+      { "date": "2026-07-28", "title": "P-79 inicia produção em Búzios", "summary": "A unidade possui capacidade para produzir até 180 mil barris de petróleo por dia.", "maritimeImpact": "Aumenta o potencial de offloading e movimentação por navios aliviadores na Bacia de Santos.", "source": { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/w/negocio/produ%C3%A7%C3%A3o-pr%C3%B3pria-de-petr%C3%B3leo-e-g%C3%A1s-da-petrobras-cresce-14-em-12-meses-e-atinge-3-34-milh%C3%B5es-de-barris-de-%C3%B3leo-equivalente-por-dia-no-2%C2%BA-trimestre-de-2026" } },
+      { "date": "2025-06-17", "title": "Blocos na Foz do Amazonas e em Pelotas", "summary": "A companhia arrematou 13 blocos exploratórios, incorporando cerca de 9,6 mil km².", "maritimeImpact": "Novas campanhas podem ampliar demanda futura por sísmica, perfuração, OSVs, bases e suporte ambiental.", "source": { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/en/w/petrobras-informa-sobre-resultado-de-leilao-da-anp-1" } }
+    ],
+    "fleetPlan": { "title": "⚓ Plano Transpetro 2026–2030", "metrics": [{ "label": "navios de cabotagem", "value": "20" }, { "label": "barcaças", "value": "18" }, { "label": "investimento previsto", "value": "US$ 2 bi" }, { "label": "apoios offshore", "value": "40" }], "summary": "O plano amplia a capacidade logística própria e pode elevar demanda por tripulação, docagem, treinamento, estaleiros e suporte operacional." }
   },
+  "bunker": [{ "port": "Singapore", "code": "SGSIN", "vlsfo": 784.5, "change": 14.0 }, { "port": "Rotterdam", "code": "NLRTM", "vlsfo": 663.0, "change": 6.5 }, { "port": "Fujairah", "code": "AEFJR", "vlsfo": 795.0, "change": 9.5 }, { "port": "Santos", "code": "BRSSZ", "vlsfo": 780.5, "change": 2.5 }],
+  "briefing": { "date": "2026-09-01", "readingTime": "Leitura sugerida: 90 segundos", "items": [
+    { "category": "SEGURANÇA", "title": "Golfo de Omã exige revalidação imediata", "summary": "O UKMTO publicou aviso envolvendo tanker e forças militares; confirme orientação do CSO antes do trânsito." },
+    { "category": "PIRATARIA", "title": "Três abordagens recentes no radar", "summary": "Vung Tau, Golfo de Áden e costa somali concentram os últimos registros públicos localizados no IMB." },
+    { "category": "COSTA BR", "title": "Ressaca e vento forte no Sudeste", "summary": "Avisos do CHM alcançam o corredor Santos–Campos e áreas offshore até 3 de setembro." },
+    { "category": "PSC", "title": "CIC de cargo securing está ativa", "summary": "Paris e Tokyo MoU iniciaram a campanha em 1º de setembro; use o questionário oficial no briefing." }
+  ], "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes." },
   "sources": [
-    { "name": "Baltic Exchange", "url": "https://www.balticexchange.com/en/data-services/market-information0/tankers-services.html", "scope": "Rotas e metodologia tanker", "typeLabel": "Oficial" },
-    { "name": "Fearnleys / Fearnpulse", "url": "https://new.fearnpulse.com/", "scope": "Narrativa semanal tanker", "typeLabel": "Indústria" },
-    { "name": "Compass Maritime", "url": "https://compassmar.com/market-report-download/", "scope": "Time-charter rates e índices", "typeLabel": "Indústria" },
-    { "name": "Ship & Bunker", "url": "https://shipandbunker.com/prices", "scope": "Preços indicativos VLSFO", "typeLabel": "Indústria" },
-    { "name": "Paris MoU", "url": "https://parismou.org/paris-and-tokyo-mous-launch-2026-concentrated-inspection-campaign-on-cargo-securing/", "scope": "CIC 2026", "typeLabel": "Oficial" },
-    { "name": "Tokyo MoU", "url": "https://www.tokyo-mou.org/", "scope": "CIC 2026", "typeLabel": "Oficial" },
-    { "name": "NHC / NOAA", "url": "https://www.nhc.noaa.gov/", "scope": "Meteorologia tropical", "typeLabel": "Oficial" },
-    { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-lucra-r-52-4-bilh%C3%B5es-no-segundo-trimestre-de-2026", "scope": "Resultados e exportações 2T26", "typeLabel": "Oficial" },
+    { "name": "IMB Piracy Reporting Centre", "url": "https://icc-ccs.org/map/", "scope": "Pirataria e roubo armado", "typeLabel": "Oficial" }, { "name": "UKMTO / JMIC", "url": "https://www.ukmto.org/", "scope": "Segurança marítima regional", "typeLabel": "Oficial" },
+    { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo", "scope": "Meteorologia e costa brasileira", "typeLabel": "Oficial" }, { "name": "NHC / NOAA", "url": "https://www.nhc.noaa.gov/", "scope": "Meteorologia tropical", "typeLabel": "Oficial" },
+    { "name": "USCG NAVCEN", "url": "https://www.navcen.uscg.gov/guide-tool", "scope": "Relatos de interferência GNSS", "typeLabel": "Oficial" }, { "name": "Baltic Exchange", "url": "https://www.balticexchange.com/en/data-services/market-information0/tankers-services.html", "scope": "Rotas e metodologia tanker", "typeLabel": "Oficial" },
+    { "name": "Fearnleys / Fearnpulse", "url": "https://new.fearnpulse.com/", "scope": "Narrativa semanal tanker", "typeLabel": "Indústria" }, { "name": "Compass Maritime", "url": "https://compassmar.com/market-report-download/", "scope": "Time-charter rates e índices", "typeLabel": "Indústria" },
+    { "name": "Ship & Bunker", "url": "https://shipandbunker.com/prices", "scope": "Preços indicativos VLSFO", "typeLabel": "Indústria" }, { "name": "Paris MoU", "url": "https://parismou.org/paris-and-tokyo-mous-launch-2026-concentrated-inspection-campaign-on-cargo-securing/", "scope": "CIC 2026", "typeLabel": "Oficial" },
+    { "name": "Petrobras RI", "url": "https://www.petrobras.com.br/ri/", "scope": "Ações e informações ao mercado", "typeLabel": "Oficial" }, { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-lucra-r-52-4-bilh%C3%B5es-no-segundo-trimestre-de-2026", "scope": "Produção, comércio e resultados 2T26", "typeLabel": "Oficial" },
     { "name": "Transpetro", "url": "https://transpetro.com.br/transpetro-institucional/quem-somos/plano-estrategico.htm", "scope": "Plano 2026–2030", "typeLabel": "Oficial" }
   ],
-  "updatePolicy": "Mercado e bunker: semanal. Meteorologia e segurança: quando houver alerta material. PSC, Petrobras e Transpetro: quando houver publicação oficial relevante. O arquivo data/latest.json é a única fonte dos dados variáveis exibidos nesta página."
+  "updatePolicy": "Mercado, bunker e cotações: semanal. Pirataria, meteorologia, costa do Brasil, conflito e navegação eletrônica: revisar os três registros mais recentes de cada grupo e atualizar quando houver alerta material. PSC, Petrobras e Transpetro: quando houver publicação oficial relevante. O arquivo data/latest.json é a fonte única dos dados variáveis exibidos nesta página."
 }
