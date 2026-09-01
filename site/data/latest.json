@@ -1,12 +1,12 @@
 {
   "schemaVersion": 4,
-  "generatedAt": "2026-09-01T09:00:00Z",
+  "generatedAt": "2026-09-01T14:31:11Z",
   "timezone": "UTC",
   "status": { "code": "operational", "label": "Operacional", "snapshotLabel": "Snapshot público", "nextReview": "Semanal + alertas" },
   "dailyWatch": {
     "horizons": [
       { "label": "AÇÃO AGORA", "level": "critical", "value": "4 críticos", "summary": "Golfo de Omã, Mar Vermelho, Golfo de Áden e costa somali exigem revalidação operacional." },
-      { "label": "PRÓXIMAS 72 H", "level": "high", "value": "8 alertas altos", "summary": "Mar de 3–5 m, vento força 7/8 e ressaca no Sudeste do Brasil; swell perigoso no Pacífico NE." },
+      { "label": "PRÓXIMAS 72 H", "level": "high", "value": "8 alertas altos", "summary": "Mar de 4–6 m e vento força 8/9 no Atlântico Sul; Edouard afeta o noroeste do Golfo do México." },
       { "label": "PREPARAR", "level": "medium", "value": "CIC ativa", "summary": "Paris e Tokyo MoU: cargo securing até 30 de novembro de 2026." }
     ],
     "modules": [
@@ -49,9 +49,9 @@
       "id": "weather", "title": "Condições meteorológicas extremas", "shortTitle": "Meteo", "icon": "◒",
       "description": "Eventos com potencial de gerar vento, mar e swell perigosos para operações oceânicas.",
       "items": [
-        { "id": "chm-607-2026", "date": "2026-08-31", "region": "Atlântico Sul / SE do Brasil", "level": "high", "headline": "Ondas de 3 a 5 metros em área oceânica", "summary": "Aviso de mar grosso a muito grosso válido até 3 de setembro, 0000Z.", "details": "O CHM prevê ondas de NE passando a SW/S entre 23°S–31°S e 42°W–49°W, com altura de 3,0 a 5,0 metros.", "action": "Recalcular velocidade segura, ETA, esforço estrutural e limites para convés/operação de carga.", "map": { "x": 39, "y": 72, "label": "Atlântico Sul" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } },
-        { "id": "chm-605-2026", "date": "2026-08-31", "region": "Atlântico Sul / offshore", "level": "high", "headline": "Vento força 7/8 com rajadas 9", "summary": "Vento E/NE rondando para SW em ampla área oceânica do Sudeste.", "details": "Aviso válido de 1º de setembro, 0000Z, a 3 de setembro, 0000Z, abrangendo área oceânica entre 23°S e 31°S.", "action": "Confirmar weather routing, condição de lastro, exposição do convés e restrições do terminal de destino.", "map": { "x": 43, "y": 67, "label": "SE Brasil" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } },
-        { "id": "nhc-karina-18", "date": "2026-08-31", "region": "Pacífico Nordeste", "level": "high", "headline": "Furacão Karina mantém swell perigoso", "summary": "O sistema permanece longe de terra, mas produz mar perigoso na área de influência.", "details": "O NHC publicou o aviso público 18 em 31 de agosto. A posição e o campo de ondas devem ser confirmados no aviso mais recente antes de qualquer aproximação.", "action": "Rever rota e margens de afastamento pelo quadrante de ondas, não apenas pela trajetória do centro.", "map": { "x": 10, "y": 47, "label": "Karina" }, "source": { "name": "NHC / NOAA", "url": "https://www.nhc.noaa.gov/mobile/text/refresh/MIATCPEP1%2Bhtml/312039.shtml" } }
+        { "id": "nhc-edouard-2026-09-01", "date": "2026-09-01", "region": "Noroeste do Golfo do México", "level": "high", "headline": "Tempestade Tropical Edouard aproxima-se da costa", "summary": "Avisos de tempestade tropical e maré de tempestade alcançam trechos entre Texas e Louisiana.", "details": "O NHC mantém aviso de tempestade tropical de Port Bolivar/Texas até Vermilion–Iberia Parish/Louisiana, com risco de maré de tempestade e chuva intensa antes da entrada do sistema em terra.", "action": "Revalidar posição, ETA e limitações de porto/terminal; evitar aproximação baseada apenas na trajetória do centro e acompanhar os avisos mais recentes do NHC.", "map": { "x": 24, "y": 44, "label": "Edouard" }, "source": { "name": "NHC / NOAA", "url": "https://www.nhc.noaa.gov/archive/2026/al05/al052026.public_a.002.shtml" } },
+        { "id": "chm-619-2026", "date": "2026-08-31", "region": "Atlântico Sul / 30°S–36°S", "level": "high", "headline": "Ondas de 4 a 6 metros no Atlântico Sul", "summary": "Aviso de mar muito grosso válido de 2 de setembro, 1200Z, até 4 de setembro, 0000Z.", "details": "O CHM prevê ondas de NW/SW de 4,0 a 6,0 metros na área oceânica entre 30°S–36°S e 20°W–40°W.", "action": "Recalcular velocidade segura, ETA, esforço estrutural e exposição do convés antes de cruzar a área.", "map": { "x": 45, "y": 78, "label": "4–6 m" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } },
+        { "id": "chm-614-2026", "date": "2026-08-31", "region": "Atlântico Sul / offshore", "level": "high", "headline": "Vento força 8/9 em área oceânica", "summary": "Vento NE/N rondando para NW/SW; aviso válido até 4 de setembro, 1200Z.", "details": "O aviso do CHM cobre a área oceânica entre 30°S–36°S e 20°W–30°W, com vento muito forte a duro, força 8/9.", "action": "Confirmar weather routing, condição de lastro, carregamento de vento e restrições para trabalho no convés.", "map": { "x": 48, "y": 77, "label": "F8/9" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } }
       ]
     },
     {
