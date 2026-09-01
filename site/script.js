@@ -189,10 +189,12 @@ function renderAlerts(groups) {
   const points = byId('risk-map-points');
   const filters = byId('alert-filters');
   const rail = byId('risk-rail');
+  const globalSituation = byId('global-situation');
   clear(list);
   clear(points);
   clear(filters);
   clear(rail);
+  clear(globalSituation);
 
   const allButton = element('button', 'active', 'Todos');
   allButton.dataset.alertGroup = 'all';
@@ -260,6 +262,20 @@ function renderAlerts(groups) {
     if (severe) railValue.append(element('em', '', `${severe} ↑`));
     railItem.append(railValue);
     rail.append(railItem);
+
+    const priority = [...group.items].sort((a, b) => {
+      const rank = { critical: 4, high: 3, medium: 2, low: 1 };
+      return (rank[b.level] - rank[a.level]) || b.date.localeCompare(a.date);
+    })[0];
+    if (priority) {
+      const globalItem = element('a', `global-alert risk-${priority.level}`);
+      globalItem.href = `#alert-${priority.id}`;
+      globalItem.append(element('small', '', `${group.icon} ${group.shortTitle}`));
+      const copy = element('div');
+      copy.append(element('b', '', priority.headline), element('span', '', priority.region));
+      globalItem.append(copy, element('time', '', shortDate.format(new Date(`${priority.date}T00:00:00Z`))));
+      globalSituation.append(globalItem);
+    }
   });
   const filterGroups = (id) => {
     filters.querySelectorAll('button').forEach((button) => button.classList.toggle('active', button.dataset.alertGroup === id));

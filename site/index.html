@@ -10,7 +10,7 @@
   <meta property="og:image" content="og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260901-2">
+  <link rel="stylesheet" href="styles.css?v=20260901-3">
 </head>
 <body>
 <main id="portal" aria-busy="true">
@@ -46,14 +46,19 @@
         <div class="command-caution" id="brief-caution">—</div>
       </aside>
 
-      <section class="command-panel map-panel" aria-labelledby="map-title">
-        <div class="panel-title"><div><span>02</span><h2 id="map-title">NAVAREA & METAREA mundial</h2></div><a href="https://www.nautoshark.com/" target="_blank" rel="noreferrer">Abrir mapa ↗</a></div>
-        <div class="nautoshark-frame">
-          <iframe src="https://www.nautoshark.com/" title="NautoShark — mapa mundial de avisos NAVAREA e METAREA" loading="eager" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
-          <noscript><a href="https://www.nautoshark.com/" target="_blank" rel="noreferrer">Abrir mapa mundial NautoShark</a></noscript>
-        </div>
-        <div class="map-disclaimer"><span>MSI público</span><p>Visualização complementar. EGC, SafetyNET e NAVTEX permanecem as fontes operacionais obrigatórias a bordo.</p></div>
+      <section class="command-panel global-panel" aria-labelledby="global-title">
+        <div class="panel-title"><div><span>02</span><h2 id="global-title">Panorama mundial</h2></div><a href="#alerts-detail">Todos os alertas ↓</a></div>
         <div class="risk-rail" id="risk-rail" aria-label="Resumo mundial dos alertas"></div>
+        <div class="global-situation" id="global-situation" aria-label="Alertas prioritários por domínio"></div>
+        <div class="service-zone">
+          <div class="service-zone-head"><span>ACESSO OPERACIONAL</span><small>Abre em nova guia · use sua conta quando aplicável</small></div>
+          <div class="service-links">
+            <a href="https://www.nautoshark.com/" target="_blank" rel="noreferrer"><small>NAVAREA / METAREA</small><b>NautoShark ↗</b><span>Avisos mundiais</span></a>
+            <a href="https://www.windy.com/" target="_blank" rel="noreferrer"><small>METEOROLOGIA</small><b>Windy Premium ↗</b><span>Vento, ondas e modelos</span></a>
+            <a href="https://www.marinetraffic.com/" target="_blank" rel="noreferrer"><small>AIS / TRÁFEGO</small><b>MarineTraffic ↗</b><span>Frota, ETA e port calls</span></a>
+          </div>
+          <p class="msi-note">NautoShark é apoio visual. EGC, SafetyNET e NAVTEX permanecem as fontes operacionais obrigatórias a bordo.</p>
+        </div>
       </section>
 
       <aside class="command-panel watch-panel" aria-labelledby="watch-title">
@@ -115,6 +120,6 @@
 
   <footer class="site-footer"><div class="brand"><span class="brand-mark">⌁</span><span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p></footer>
 </main>
-<script src="script.js?v=20260901-2"></script>
+<script src="script.js?v=20260901-3"></script>
 </body>
 </html>
