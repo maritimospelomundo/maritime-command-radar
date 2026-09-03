@@ -19,7 +19,7 @@
   "marineTrafficPosition": {
     "label": "MarineTraffic",
     "mapUrl": "https://www.marinetraffic.com/",
-    "acceptedEvents": ["Noon Position", "Midnight Position"],
+    "acceptedEvents": ["Noon Position", "Midnight Position", "Arrival", "Departure", "AIS Destination Changed"],
     "lastKnown": null
   },
   "dailyWatch": {

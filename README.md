@@ -29,7 +29,7 @@ node scripts/validate-data.mjs
 
 O workflow em `.github/workflows/deploy-pages.yml` publica automaticamente no GitHub Pages quando houver um `push` na branch `main`.
 
-O bloco `spotPosition` mantém a posição do rastreador e a condição da bateria. O bloco `marineTrafficPosition` recebe os registros de Noon/Midnight Position extraídos das notificações por e-mail. O portal compara o horário efetivo de cada posição, mostra as duas fontes e usa a mais recente no cálculo de proximidade.
+O bloco `spotPosition` mantém a posição do rastreador e a condição da bateria. O bloco `marineTrafficPosition` recebe os registros de Noon/Midnight Position e demais notificações com coordenadas válidas extraídas dos e-mails. O portal compara o horário efetivo de cada posição, mostra as duas fontes e usa a mais recente no cálculo de proximidade.
 
 ## Rotina editorial
 

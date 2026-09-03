@@ -718,7 +718,7 @@ function renderPositionPriority(data) {
   renderSource('spot', sourceStates.spot);
   renderSource('marineTraffic', sourceStates.marineTraffic);
   setText('spot-source-battery', `Bateria: ${batteryLabel(sourceStates.spot.current?.batteryState)}`);
-  setText('marine-source-event', sourceStates.marineTraffic.current?.eventType || sourceStates.marineTraffic.current?.messageType || 'Noon / Midnight Position');
+  setText('marine-source-event', sourceStates.marineTraffic.current?.eventType || sourceStates.marineTraffic.current?.messageType || 'Posição / chegada / saída');
 
   const candidates = data.alertGroups.flatMap((group) => group.items.map((item) => ({
     type: group.shortTitle,
