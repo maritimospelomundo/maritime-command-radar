@@ -52,7 +52,7 @@ main { min-height: 100vh; padding: 6px; }
 .command-strip .strip-critical b { color: #ff9ca8; }
 
 .position-priority { overflow: hidden; padding: 8px; background: linear-gradient(135deg, rgba(18, 54, 66, .98), rgba(14, 32, 47, .98)); border: 1px solid rgba(50, 212, 196, .34); border-radius: 9px; box-shadow: inset 0 1px 0 rgba(255,255,255,.03); }
-.position-summary { display: grid; grid-template-columns: minmax(220px, 1.15fr) repeat(3, minmax(145px, .7fr)) auto; gap: 12px; align-items: center; }
+.position-summary { display: grid; grid-template-columns: minmax(220px, 1.05fr) minmax(145px, .6fr) minmax(250px, 1fr) minmax(145px, .65fr) auto; gap: 12px; align-items: center; }
 .position-summary > div { min-width: 0; display: flex; flex-direction: column; }
 .position-summary small { color: var(--cyan); font-size: 9px; font-weight: 800; letter-spacing: .09em; }
 .position-summary h2 { margin: 2px 0 0; overflow: hidden; font-size: 16px; text-overflow: ellipsis; white-space: nowrap; }
@@ -60,6 +60,13 @@ main { min-height: 100vh; padding: 6px; }
 .position-vessel { flex-direction: row !important; align-items: center; gap: 10px; }
 .position-vessel .live-dot { flex: 0 0 9px; }
 .position-summary > a { padding: 7px 9px; color: var(--cyan); border: 1px solid rgba(50, 212, 196, .25); border-radius: 6px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+.position-sources { margin-top: 7px; display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.position-source-card { min-width: 0; padding: 7px 9px; display: grid; grid-template-columns: minmax(150px, .8fr) minmax(220px, 1fr) minmax(150px, .8fr) auto; gap: 8px; align-items: center; background: rgba(7, 20, 31, .42); border: 1px solid var(--line-soft); border-radius: 6px; }
+.position-source-card.is-current { border-color: rgba(50, 212, 196, .65); box-shadow: inset 3px 0 0 var(--cyan); }
+.position-source-card header { min-width: 0; display: flex; align-items: center; gap: 7px; }
+.position-source-card header b { font-size: 12px; }.position-source-card header span { padding: 2px 5px; color: var(--muted); border: 1px solid var(--line-soft); border-radius: 999px; font-size: 8px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.position-source-card.is-current header span { color: var(--cyan); border-color: rgba(50, 212, 196, .4); }
+.position-source-card strong { overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }.position-source-card small { color: var(--muted); font-size: 10px; }.position-source-card em { color: var(--cyan); font-size: 10px; font-style: normal; font-weight: 700; text-align: right; }
 .local-priority-head { margin: 8px 0 5px; padding-top: 6px; display: flex; align-items: end; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line-soft); }
 .local-priority-head > div { display: flex; align-items: baseline; gap: 8px; }.local-priority-head small { color: var(--cyan); font-size: 9px; font-weight: 800; letter-spacing: .08em; }.local-priority-head b { font-size: 12px; }.local-priority-head > span { color: var(--muted); font-size: 9px; }
 .local-priority-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
@@ -288,6 +295,7 @@ details[open] > summary .expand-mark { transform: rotate(45deg); }
   .command-strip { grid-template-columns: 1fr 1fr; }
   .position-summary { grid-template-columns: 1fr 1fr; }
   .position-vessel, .position-summary > a { grid-column: 1 / -1; }
+  .position-source-card { grid-template-columns: 1fr 1fr; }.position-source-card em { text-align: left; }
   .local-priority-grid { grid-template-columns: 1fr 1fr; }
   .command-strip > div:last-child { grid-column: 1 / -1; }
   .command-grid, .context-deck { grid-template-columns: 1fr; }
@@ -320,8 +328,9 @@ details[open] > summary .expand-mark { transform: rotate(45deg); }
 @media (max-width: 520px) {
   .command-strip { grid-template-columns: 1fr; }
   .command-strip > div:last-child { grid-column: auto; }
-  .position-summary, .local-priority-grid { grid-template-columns: 1fr; }
+  .position-summary, .position-sources, .local-priority-grid { grid-template-columns: 1fr; }
   .position-vessel, .position-summary > a { grid-column: auto; }
+  .position-source-card { grid-template-columns: 1fr; gap: 3px; }
   .local-priority-head { align-items: flex-start; flex-direction: column; }
   .horizon-card { grid-template-columns: 1fr; gap: 3px; }
   .risk-rail, .market-compact, .energy-compact, .market-cards, .bunker-grid, .stock-grid, .operations-grid { grid-template-columns: 1fr; }

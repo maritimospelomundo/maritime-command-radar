@@ -70,9 +70,23 @@ function positionAgeLabel(dateTime) {
 }
 
 function coordinatesLabel(point) {
-  const lat = `${Math.abs(point.latitude).toFixed(4)}°${point.latitude >= 0 ? 'N' : 'S'}`;
-  const lon = `${Math.abs(point.longitude).toFixed(4)}°${point.longitude >= 0 ? 'E' : 'W'}`;
-  return `${lat} · ${lon}`;
+  const formatDdm = (value, degreeDigits, positive, negative) => {
+    const absolute = Math.abs(value);
+    const degrees = Math.floor(absolute);
+    const minutes = ((absolute - degrees) * 60).toFixed(2).replace('.', ',');
+    return `${String(degrees).padStart(degreeDigits, '0')}º${minutes.padStart(5, '0')}' ${value >= 0 ? positive : negative}`;
+  };
+  return `Lat: ${formatDdm(point.latitude, 2, 'N', 'S')}  Long: ${formatDdm(point.longitude, 3, 'E', 'W')}`;
+}
+
+function pointTimestamp(point) {
+  const unix = Number(point?.unixTime);
+  if (Number.isFinite(unix)) return unix > 1e12 ? unix : unix * 1000;
+  return Date.parse(point?.dateTime);
+}
+
+function batteryLabel(state) {
+  return ({ GOOD: 'Boa', OK: 'Boa', LOW: 'Baixa', CRITICAL: 'Crítica' }[String(state || '').toUpperCase()] || 'Não informada');
 }
 
 function relevanceFor(point, level = 'low') {
@@ -94,7 +108,7 @@ function distanceBand(distance) {
   return `Global · ${number.format(distance)} MN`;
 }
 
-async function resolvePosition(config) {
+async function resolveSourcePosition(config, sourceKey, sourceLabel) {
   let points = [];
   if (config?.endpoint) {
     try {
@@ -102,10 +116,23 @@ async function resolvePosition(config) {
       if (response.ok) points = (await response.json()).points || [];
     } catch { /* usa o último snapshot publicado */ }
   }
+  if (!points.length && Array.isArray(config?.history)) points = config.history;
   if (!points.length && config?.lastKnown) points = [config.lastKnown];
   points = points.filter((point) => validCoordinate(Number(point.latitude), Number(point.longitude)))
-    .map((point) => ({ ...point, latitude: Number(point.latitude), longitude: Number(point.longitude) }))
-    .sort((a, b) => (a.unixTime || Date.parse(a.dateTime)) - (b.unixTime || Date.parse(b.dateTime)));
+    .map((point) => ({ ...point, latitude: Number(point.latitude), longitude: Number(point.longitude), sourceKey, sourceLabel }))
+    .filter((point) => Number.isFinite(pointTimestamp(point)))
+    .sort((a, b) => pointTimestamp(a) - pointTimestamp(b));
+  return { current: points.at(-1) || null, points, isLive: Boolean(config?.endpoint && points.length > 1), mapUrl: config?.mapUrl };
+}
+
+async function resolvePosition(spotConfig, marineTrafficConfig) {
+  const [spot, marineTraffic] = await Promise.all([
+    resolveSourcePosition(spotConfig, 'spot', 'SPOT'),
+    resolveSourcePosition(marineTrafficConfig, 'marineTraffic', 'MarineTraffic')
+  ]);
+  const points = [...spot.points, ...marineTraffic.points]
+    .sort((a, b) => pointTimestamp(a) - pointTimestamp(b))
+    .filter((point, index, list) => index === 0 || pointTimestamp(point) !== pointTimestamp(list[index - 1]) || point.latitude !== list[index - 1].latitude || point.longitude !== list[index - 1].longitude);
   if (!points.length) return null;
   const current = points.at(-1);
   const previous = points.at(-2);
@@ -113,18 +140,18 @@ async function resolvePosition(config) {
   let speed = null;
   let projected = null;
   if (previous) {
-    const hours = (Date.parse(current.dateTime) - Date.parse(previous.dateTime)) / 3600000;
+    const hours = (pointTimestamp(current) - pointTimestamp(previous)) / 3600000;
     if (hours > 0) {
       speed = distanceNm(previous, current) / hours;
       course = bearingDegrees(previous, current);
       if (speed <= 30) projected = projectPoint(current, course, speed * 24);
     }
   }
-  return { current, previous, course, speed, projected, source: points.length > 1 ? 'live' : 'snapshot' };
+  return { current, previous, course, speed, projected, sourceStates: { spot, marineTraffic } };
 }
 
 function assertData(data) {
-  const required = ['schemaVersion', 'generatedAt', 'status', 'spotPosition', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+  const required = ['schemaVersion', 'generatedAt', 'status', 'spotPosition', 'marineTrafficPosition', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
   const missing = required.filter((key) => data?.[key] === undefined);
   if (missing.length) throw new Error(`Campos ausentes: ${missing.join(', ')}`);
   if (data.schemaVersion !== 5) throw new Error('Versão do esquema de dados incompatível.');
@@ -664,18 +691,34 @@ function renderPositionPriority(data) {
   const grid = byId('local-priority-grid');
   clear(grid);
   if (!positionContext) {
-    setText('position-priority-title', 'Posição SPOT indisponível');
+    setText('position-priority-title', 'Posição indisponível');
     setText('local-priority-note', 'O panorama global permanece disponível');
     return;
   }
-  const { current, course, speed, projected, source } = positionContext;
+  const { current, course, speed, projected, sourceStates } = positionContext;
   setText('position-priority-title', data.spotPosition?.vesselName || 'Meu navio');
-  setText('spot-position-time', `${positionAgeLabel(current.dateTime)} · UTC`);
+  setText('position-source-label', `POSIÇÃO MAIS RECENTE · ${current.sourceLabel.toUpperCase()}`);
+  setText('spot-position-time', `${dateTime.format(new Date(pointTimestamp(current)))} UTC · ${positionAgeLabel(current.dateTime)}`);
   setText('spot-position-coordinates', coordinatesLabel(current));
   setText('spot-position-projection', projected ? `24 h · ${String(Math.round(course)).padStart(3, '0')}° · ${money.format(speed)} kn` : 'Aguardando 2 posições');
   const mapLink = byId('spot-map-link');
-  mapLink.href = safeUrl(data.spotPosition?.mapUrl || mapLink.href);
-  setText('local-priority-note', source === 'live' ? 'SPOT ao vivo · distância, severidade e derrota estimada' : 'Último snapshot SPOT · distância e severidade');
+  mapLink.href = safeUrl(sourceStates[current.sourceKey]?.mapUrl || data.spotPosition?.mapUrl || mapLink.href);
+  mapLink.textContent = current.sourceKey === 'spot' ? 'Abrir SPOT ↗' : 'Abrir MarineTraffic ↗';
+  setText('local-priority-note', `Base: ${current.sourceLabel} · distância, severidade${projected ? ' e derrota estimada' : ''}`);
+
+  const renderSource = (key, state) => {
+    const prefix = key === 'spot' ? 'spot' : 'marine';
+    const card = byId(`${prefix}-source-card`);
+    const isCurrent = current.sourceKey === key;
+    card?.classList.toggle('is-current', isCurrent);
+    setText(`${prefix}-source-status`, state.current ? (isCurrent ? 'Mais recente' : 'Disponível') : 'Aguardando');
+    setText(`${prefix}-source-coordinates`, state.current ? coordinatesLabel(state.current) : 'Nenhuma posição recebida');
+    setText(`${prefix}-source-time`, state.current ? `${dateTime.format(new Date(pointTimestamp(state.current)))} UTC · ${positionAgeLabel(state.current.dateTime)}` : 'Aguardando o primeiro registro válido');
+  };
+  renderSource('spot', sourceStates.spot);
+  renderSource('marineTraffic', sourceStates.marineTraffic);
+  setText('spot-source-battery', `Bateria: ${batteryLabel(sourceStates.spot.current?.batteryState)}`);
+  setText('marine-source-event', sourceStates.marineTraffic.current?.eventType || sourceStates.marineTraffic.current?.messageType || 'Noon / Midnight Position');
 
   const candidates = data.alertGroups.flatMap((group) => group.items.map((item) => ({
     type: group.shortTitle,
@@ -704,7 +747,7 @@ async function loadRadar() {
     if (!response.ok) throw new Error(`Falha HTTP ${response.status}`);
     const data = await response.json();
     assertData(data);
-    positionContext = await resolvePosition(data.spotPosition);
+    positionContext = await resolvePosition(data.spotPosition, data.marineTrafficPosition);
     renderPositionPriority(data);
     render(data);
     message.hidden = true;

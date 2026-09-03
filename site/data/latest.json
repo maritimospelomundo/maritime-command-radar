@@ -16,6 +16,12 @@
       "batteryState": "GOOD"
     }
   },
+  "marineTrafficPosition": {
+    "label": "MarineTraffic",
+    "mapUrl": "https://www.marinetraffic.com/",
+    "acceptedEvents": ["Noon Position", "Midnight Position"],
+    "lastKnown": null
+  },
   "dailyWatch": {
     "horizons": [
       { "label": "AÇÃO AGORA", "level": "critical", "value": "3 críticos", "summary": "Dois ataques recentes em Ormuz e um sequestro no Golfo de Áden exigem revalidação operacional e de segurança." },

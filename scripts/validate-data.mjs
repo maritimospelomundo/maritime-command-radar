@@ -3,12 +3,13 @@ import { readFile } from 'node:fs/promises';
 const path = new URL('../site/data/latest.json', import.meta.url);
 const data = JSON.parse(await readFile(path, 'utf8'));
 const errors = [];
-const required = ['schemaVersion', 'generatedAt', 'status', 'spotPosition', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+const required = ['schemaVersion', 'generatedAt', 'status', 'spotPosition', 'marineTrafficPosition', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
 
 for (const key of required) if (data[key] === undefined) errors.push(`campo obrigatório ausente: ${key}`);
 if (data.schemaVersion !== 5) errors.push('schemaVersion deve ser 5');
 if (Number.isNaN(Date.parse(data.generatedAt))) errors.push('generatedAt deve ser uma data ISO válida');
 if (!Number.isFinite(data.spotPosition?.lastKnown?.latitude) || !Number.isFinite(data.spotPosition?.lastKnown?.longitude) || Number.isNaN(Date.parse(data.spotPosition?.lastKnown?.dateTime))) errors.push('spotPosition.lastKnown deve conter posição e data válidas');
+if (data.marineTrafficPosition?.lastKnown !== null && (!Number.isFinite(data.marineTrafficPosition?.lastKnown?.latitude) || !Number.isFinite(data.marineTrafficPosition?.lastKnown?.longitude) || Number.isNaN(Date.parse(data.marineTrafficPosition?.lastKnown?.dateTime)))) errors.push('marineTrafficPosition.lastKnown deve ser nulo ou conter posição e data válidas');
 
 const lists = [
   ['dailyWatch.horizons', data.dailyWatch?.horizons],
