@@ -3,6 +3,19 @@
   "generatedAt": "2026-09-02T10:17:09Z",
   "timezone": "UTC",
   "status": { "code": "operational", "label": "Operacional", "snapshotLabel": "Snapshot público", "nextReview": "Seg · Qua · Sex" },
+  "spotPosition": {
+    "vesselName": "Meu navio",
+    "endpoint": "",
+    "mapUrl": "https://maps.findmespot.com/s/VGH1",
+    "lastKnown": {
+      "dateTime": "2026-09-02T13:25:02Z",
+      "unixTime": 1788355502,
+      "latitude": -7.12135,
+      "longitude": -34.82816,
+      "messageType": "UNLIMITED-TRACK",
+      "batteryState": "GOOD"
+    }
+  },
   "dailyWatch": {
     "horizons": [
       { "label": "AÇÃO AGORA", "level": "critical", "value": "3 críticos", "summary": "Dois ataques recentes em Ormuz e um sequestro no Golfo de Áden exigem revalidação operacional e de segurança." },

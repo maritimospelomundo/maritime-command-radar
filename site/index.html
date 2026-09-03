@@ -10,7 +10,7 @@
   <meta property="og:image" content="og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260901-4">
+  <link rel="stylesheet" href="styles.css?v=20260903-1">
 </head>
 <body>
 <main id="portal" aria-busy="true">
@@ -36,6 +36,18 @@
       <div><small>MERCADO</small><b id="radar-market-week">—</b></div>
       <div><small>PRÓXIMA REVISÃO</small><b id="pulse-next-review">—</b></div>
     </header>
+
+    <section class="position-priority" id="position-priority" aria-labelledby="position-priority-title">
+      <header class="position-summary">
+        <div class="position-vessel"><span class="live-dot"></span><div><small>POSIÇÃO SPOT</small><h2 id="position-priority-title">Carregando posição do navio…</h2></div></div>
+        <div><small>ÚLTIMO SINAL</small><b id="spot-position-time">—</b></div>
+        <div><small>COORDENADAS</small><b id="spot-position-coordinates">—</b></div>
+        <div><small>PROJEÇÃO</small><b id="spot-position-projection">—</b></div>
+        <a id="spot-map-link" href="https://maps.findmespot.com/s/VGH1" target="_blank" rel="noreferrer">Abrir rastreamento ↗</a>
+      </header>
+      <div class="local-priority-head"><div><small>RADAR LOCAL</small><b>O que mais pode afetar o navio nesta posição</b></div><span id="local-priority-note">Distância, severidade e atualidade</span></div>
+      <div class="local-priority-grid" id="local-priority-grid"></div>
+    </section>
 
     <div class="command-grid">
       <aside class="command-panel priority-panel" aria-labelledby="priority-title">
@@ -135,6 +147,6 @@
 
   <footer class="site-footer"><div class="brand"><span class="brand-mark">⌁</span><span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p></footer>
 </main>
-<script src="script.js?v=20260901-4"></script>
+<script src="script.js?v=20260903-1"></script>
 </body>
 </html>

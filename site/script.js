@@ -26,9 +26,105 @@ const money = new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 2, maximum
 const dateTime = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'UTC' });
 const fullDate = new Intl.DateTimeFormat('pt-BR', { dateStyle: 'long', timeZone: 'UTC' });
 const shortDate = new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'UTC' });
+let positionContext = null;
+
+const toRadians = (value) => value * Math.PI / 180;
+const toDegrees = (value) => value * 180 / Math.PI;
+const validCoordinate = (latitude, longitude) => Number.isFinite(latitude) && latitude >= -90 && latitude <= 90 && Number.isFinite(longitude) && longitude >= -180 && longitude <= 180;
+const mapToCoordinates = (map) => ({ latitude: 90 - (map.y * 1.8), longitude: (map.x * 3.6) - 180 });
+
+function distanceNm(a, b) {
+  const radiusNm = 3440.065;
+  const dLat = toRadians(b.latitude - a.latitude);
+  const dLon = toRadians(b.longitude - a.longitude);
+  const lat1 = toRadians(a.latitude);
+  const lat2 = toRadians(b.latitude);
+  const value = Math.sin(dLat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  return radiusNm * 2 * Math.atan2(Math.sqrt(value), Math.sqrt(1 - value));
+}
+
+function bearingDegrees(a, b) {
+  const lat1 = toRadians(a.latitude);
+  const lat2 = toRadians(b.latitude);
+  const dLon = toRadians(b.longitude - a.longitude);
+  const y = Math.sin(dLon) * Math.cos(lat2);
+  const x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
+  return (toDegrees(Math.atan2(y, x)) + 360) % 360;
+}
+
+function projectPoint(origin, course, distance) {
+  const angular = distance / 3440.065;
+  const bearing = toRadians(course);
+  const lat1 = toRadians(origin.latitude);
+  const lon1 = toRadians(origin.longitude);
+  const latitude = Math.asin(Math.sin(lat1) * Math.cos(angular) + Math.cos(lat1) * Math.sin(angular) * Math.cos(bearing));
+  const longitude = lon1 + Math.atan2(Math.sin(bearing) * Math.sin(angular) * Math.cos(lat1), Math.cos(angular) - Math.sin(lat1) * Math.sin(latitude));
+  return { latitude: toDegrees(latitude), longitude: ((toDegrees(longitude) + 540) % 360) - 180 };
+}
+
+function positionAgeLabel(dateTime) {
+  const minutes = Math.max(0, (Date.now() - Date.parse(dateTime)) / 60000);
+  if (minutes < 90) return `${Math.round(minutes)} min atrás`;
+  if (minutes < 1440) return `${Math.round(minutes / 60)} h atrás`;
+  return `${Math.round(minutes / 1440)} dias atrás`;
+}
+
+function coordinatesLabel(point) {
+  const lat = `${Math.abs(point.latitude).toFixed(4)}°${point.latitude >= 0 ? 'N' : 'S'}`;
+  const lon = `${Math.abs(point.longitude).toFixed(4)}°${point.longitude >= 0 ? 'E' : 'W'}`;
+  return `${lat} · ${lon}`;
+}
+
+function relevanceFor(point, level = 'low') {
+  if (!positionContext || !point) return { distance: Infinity, projectedDistance: Infinity, score: 0 };
+  const distance = distanceNm(positionContext.current, point);
+  const projectedDistance = positionContext.projected ? distanceNm(positionContext.projected, point) : distance;
+  const effectiveDistance = Math.min(distance, projectedDistance);
+  const levelWeight = { critical: 5200, high: 3600, medium: 2100, low: 900 }[level] || 900;
+  const proximity = Math.max(0, 6500 - effectiveDistance);
+  const routeBonus = projectedDistance + 40 < distance ? 900 : 0;
+  return { distance, projectedDistance, score: levelWeight + proximity + routeBonus };
+}
+
+function distanceBand(distance) {
+  if (!Number.isFinite(distance)) return 'Posição indisponível';
+  if (distance <= 250) return `Imediato · ${number.format(distance)} MN`;
+  if (distance <= 750) return `Próximo · ${number.format(distance)} MN`;
+  if (distance <= 1500) return `Regional · ${number.format(distance)} MN`;
+  return `Global · ${number.format(distance)} MN`;
+}
+
+async function resolvePosition(config) {
+  let points = [];
+  if (config?.endpoint) {
+    try {
+      const response = await fetch(config.endpoint, { cache: 'no-store' });
+      if (response.ok) points = (await response.json()).points || [];
+    } catch { /* usa o último snapshot publicado */ }
+  }
+  if (!points.length && config?.lastKnown) points = [config.lastKnown];
+  points = points.filter((point) => validCoordinate(Number(point.latitude), Number(point.longitude)))
+    .map((point) => ({ ...point, latitude: Number(point.latitude), longitude: Number(point.longitude) }))
+    .sort((a, b) => (a.unixTime || Date.parse(a.dateTime)) - (b.unixTime || Date.parse(b.dateTime)));
+  if (!points.length) return null;
+  const current = points.at(-1);
+  const previous = points.at(-2);
+  let course = null;
+  let speed = null;
+  let projected = null;
+  if (previous) {
+    const hours = (Date.parse(current.dateTime) - Date.parse(previous.dateTime)) / 3600000;
+    if (hours > 0) {
+      speed = distanceNm(previous, current) / hours;
+      course = bearingDegrees(previous, current);
+      if (speed <= 30) projected = projectPoint(current, course, speed * 24);
+    }
+  }
+  return { current, previous, course, speed, projected, source: points.length > 1 ? 'live' : 'snapshot' };
+}
 
 function assertData(data) {
-  const required = ['schemaVersion', 'generatedAt', 'status', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+  const required = ['schemaVersion', 'generatedAt', 'status', 'spotPosition', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
   const missing = required.filter((key) => data?.[key] === undefined);
   if (missing.length) throw new Error(`Campos ausentes: ${missing.join(', ')}`);
   if (data.schemaVersion !== 5) throw new Error('Versão do esquema de dados incompatível.');
@@ -199,7 +295,12 @@ function renderAlerts(groups) {
   const allButton = element('button', 'active', 'Todos');
   allButton.dataset.alertGroup = 'all';
   filters.append(allButton);
-  groups.forEach((group) => {
+  const orderedGroups = groups.map((group) => ({ ...group, items: [...group.items].sort((a, b) => {
+    const aGeo = a.geo || mapToCoordinates(a.map);
+    const bGeo = b.geo || mapToCoordinates(b.map);
+    return relevanceFor(bGeo, b.level).score - relevanceFor(aGeo, a.level).score;
+  }) })).sort((a, b) => relevanceFor(b.items[0]?.geo || mapToCoordinates(b.items[0]?.map), b.items[0]?.level).score - relevanceFor(a.items[0]?.geo || mapToCoordinates(a.items[0]?.map), a.items[0]?.level).score);
+  orderedGroups.forEach((group) => {
     const button = element('button', '', `${group.icon} ${group.shortTitle}`);
     button.dataset.alertGroup = group.id;
     filters.append(button);
@@ -220,7 +321,9 @@ function renderAlerts(groups) {
       const meta = element('span', 'alert-meta');
       const pill = element('span', `risk-pill risk-${alert.level}`);
       pill.append(element('i', dotClasses[alert.level]), document.createTextNode(labels[alert.level] || alert.level));
-      meta.append(pill, element('time', '', shortDate.format(new Date(`${alert.date}T00:00:00Z`))), element('small', '', alert.region));
+      const alertGeo = alert.geo || mapToCoordinates(alert.map);
+      const relevance = relevanceFor(alertGeo, alert.level);
+      meta.append(pill, element('time', '', shortDate.format(new Date(`${alert.date}T00:00:00Z`))), element('small', '', alert.region), element('small', 'distance-label', distanceBand(relevance.distance)));
       const copy = element('span', 'alert-summary-copy');
       copy.append(element('b', '', alert.headline), element('span', '', alert.summary));
       summary.append(meta, copy, element('i', 'expand-mark', '+'));
@@ -283,8 +386,8 @@ function renderAlerts(groups) {
     points.querySelectorAll('.map-point').forEach((point) => point.hidden = id !== 'all' && point.dataset.group !== id);
   };
   filters.querySelectorAll('button').forEach((button) => button.addEventListener('click', () => filterGroups(button.dataset.alertGroup)));
-  const total = groups.reduce((sum, group) => sum + group.items.length, 0);
-  setText('risk-map-scale', `◎ ${total} registros em ${groups.length} grupos`);
+  const total = orderedGroups.reduce((sum, group) => sum + group.items.length, 0);
+  setText('risk-map-scale', `◎ ${total} registros em ${orderedGroups.length} grupos`);
 }
 
 function renderPsc(psc) {
@@ -340,12 +443,20 @@ function renderPassages(passages) {
   const grid = byId('passage-grid');
   clear(grid);
   const risks = { critical: 'CRÍTICO', high: 'ALTO', medium: 'ATENÇÃO', low: 'ESTÁVEL' };
-  passages.forEach((item, index) => {
+  const passageGeo = {
+    magellan: { latitude: -52.7, longitude: -70.9 }, 'cape-horn': { latitude: -56.0, longitude: -67.3 },
+    sunda: { latitude: -5.9, longitude: 105.9 }, malacca: { latitude: 4.0, longitude: 99.5 }, singapore: { latitude: 1.2, longitude: 103.8 },
+    suez: { latitude: 30.3, longitude: 32.5 }, hormuz: { latitude: 26.6, longitude: 56.3 }, gibraltar: { latitude: 35.9, longitude: -5.6 },
+    'bab-el-mandeb': { latitude: 12.6, longitude: 43.4 }, panama: { latitude: 9.1, longitude: -79.7 }
+  };
+  const ordered = [...passages].sort((a, b) => relevanceFor(passageGeo[b.id], b.risk).score - relevanceFor(passageGeo[a.id], a.risk).score);
+  ordered.forEach((item, index) => {
     const details = element('details', `passage-card risk-${item.risk}`);
     if (index < 2) details.open = true;
     const summary = element('summary');
     const title = element('div', 'passage-title');
-    title.append(element('small', '', item.region), element('h3', '', item.name));
+    const relevance = relevanceFor(passageGeo[item.id], item.risk);
+    title.append(element('small', '', item.region), element('h3', '', item.name), element('span', 'distance-label', distanceBand(relevance.distance)));
     const pulse = element('div', 'passage-pulse');
     pulse.append(element('span', 'status-badge', risks[item.risk]), element('b', '', item.trafficLabel), element('small', '', item.trafficTrend));
     summary.append(title, pulse, element('i', 'expand-mark', '+'));
@@ -549,6 +660,43 @@ function render(data) {
   setText('update-policy', data.updatePolicy);
 }
 
+function renderPositionPriority(data) {
+  const grid = byId('local-priority-grid');
+  clear(grid);
+  if (!positionContext) {
+    setText('position-priority-title', 'Posição SPOT indisponível');
+    setText('local-priority-note', 'O panorama global permanece disponível');
+    return;
+  }
+  const { current, course, speed, projected, source } = positionContext;
+  setText('position-priority-title', data.spotPosition?.vesselName || 'Meu navio');
+  setText('spot-position-time', `${positionAgeLabel(current.dateTime)} · UTC`);
+  setText('spot-position-coordinates', coordinatesLabel(current));
+  setText('spot-position-projection', projected ? `24 h · ${String(Math.round(course)).padStart(3, '0')}° · ${money.format(speed)} kn` : 'Aguardando 2 posições');
+  const mapLink = byId('spot-map-link');
+  mapLink.href = safeUrl(data.spotPosition?.mapUrl || mapLink.href);
+  setText('local-priority-note', source === 'live' ? 'SPOT ao vivo · distância, severidade e derrota estimada' : 'Último snapshot SPOT · distância e severidade');
+
+  const candidates = data.alertGroups.flatMap((group) => group.items.map((item) => ({
+    type: group.shortTitle,
+    icon: group.icon,
+    id: item.id,
+    title: item.headline,
+    region: item.region,
+    level: item.level,
+    ...relevanceFor(item.geo || mapToCoordinates(item.map), item.level)
+  }))).sort((a, b) => b.score - a.score).slice(0, 5);
+  candidates.forEach((item, index) => {
+    const card = element('a', `local-priority-card risk-${item.level}`);
+    card.href = `#alert-${item.id}`;
+    card.append(element('span', 'local-rank', String(index + 1).padStart(2, '0')));
+    const copy = element('div');
+    copy.append(element('small', '', `${item.icon} ${item.type}`), element('b', '', item.title), element('span', '', item.region));
+    card.append(copy, element('em', '', distanceBand(item.distance)));
+    grid.append(card);
+  });
+}
+
 async function loadRadar() {
   const message = byId('data-message');
   try {
@@ -556,6 +704,8 @@ async function loadRadar() {
     if (!response.ok) throw new Error(`Falha HTTP ${response.status}`);
     const data = await response.json();
     assertData(data);
+    positionContext = await resolvePosition(data.spotPosition);
+    renderPositionPriority(data);
     render(data);
     message.hidden = true;
     portal.setAttribute('aria-busy', 'false');
