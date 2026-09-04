@@ -2,6 +2,20 @@ const portal = document.querySelector('#portal');
 const menuButton = document.querySelector('.menu-button');
 const nav = document.querySelector('.topbar nav');
 const svgNs = 'http://www.w3.org/2000/svg';
+const viewModeKey = 'maritime-radar-view-mode';
+
+function setViewMode(mode, persist = true) {
+  const selected = mode === 'complete' ? 'complete' : 'command';
+  document.body.classList.toggle('command-mode', selected === 'command');
+  document.body.classList.toggle('complete-mode', selected === 'complete');
+  byId('command-mode-button')?.setAttribute('aria-pressed', String(selected === 'command'));
+  byId('complete-mode-button')?.setAttribute('aria-pressed', String(selected === 'complete'));
+  const sourceDetails = byId('position-source-details');
+  if (sourceDetails) sourceDetails.open = selected === 'complete';
+  if (persist) {
+    try { localStorage.setItem(viewModeKey, selected); } catch { /* preferência local indisponível */ }
+  }
+}
 
 menuButton?.addEventListener('click', () => nav?.classList.toggle('nav-open'));
 nav?.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => nav.classList.remove('nav-open')));
@@ -15,6 +29,17 @@ const element = (tag, className, text) => {
   if (text !== undefined) node.textContent = text;
   return node;
 };
+
+byId('command-mode-button')?.addEventListener('click', () => setViewMode('command'));
+byId('complete-mode-button')?.addEventListener('click', () => setViewMode('complete'));
+document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener('click', () => {
+  const target = document.querySelector(link.getAttribute('href'));
+  if (target?.classList.contains('deep-dive') || target?.closest('.deep-dive')) setViewMode('complete');
+}));
+
+let initialViewMode = 'command';
+try { initialViewMode = localStorage.getItem(viewModeKey) || 'command'; } catch { /* usa o padrão */ }
+setViewMode(initialViewMode, false);
 const svgElement = (tag, attrs = {}) => {
   const node = document.createElementNS(svgNs, tag);
   Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, value));
@@ -173,7 +198,8 @@ function renderDailyWatch(dailyWatch) {
   const detail = byId('watch-detail-grid');
   clear(compact);
   clear(detail);
-  dailyWatch.modules.forEach((item) => {
+  const statusPriority = { high: 4, live: 3, watch: 2, ready: 1 };
+  [...dailyWatch.modules].sort((a, b) => (statusPriority[b.status] || 0) - (statusPriority[a.status] || 0)).forEach((item) => {
     const card = element('a', `watch-card status-${item.status}`);
     card.href = safeUrl(item.source.url);
     card.target = '_blank';
@@ -182,7 +208,9 @@ function renderDailyWatch(dailyWatch) {
     copy.append(element('small', '', item.label), element('b', '', item.value), element('p', '', item.summary));
     card.append(element('i', '', item.icon), copy);
     compact.append(card);
+  });
 
+  dailyWatch.modules.forEach((item) => {
     const full = element('article');
     const head = element('header');
     const labels = element('div');
@@ -765,6 +793,10 @@ function renderPositionPriority(data) {
   if (!positionContext) {
     setText('position-priority-title', 'Posição indisponível');
     setText('local-priority-note', 'O panorama global permanece disponível');
+    setText('position-source-summary', 'Nenhuma posição válida recebida');
+    setText('scope-local-title', 'Cenários disponíveis no Modo Completo');
+    setText('scope-local-impact', 'Sem posição válida para calcular proximidade');
+    setText('scope-local-distance', 'Ver SCOPE ↓');
     return;
   }
   const { current, course, speed, projected, sourceStates } = positionContext;
@@ -773,10 +805,11 @@ function renderPositionPriority(data) {
   setText('spot-position-time', `${dateTime.format(new Date(pointTimestamp(current)))} UTC · ${positionAgeLabel(current.dateTime)}`);
   setText('spot-position-coordinates', coordinatesLabel(current));
   setText('spot-position-projection', projected ? `24 h · ${String(Math.round(course)).padStart(3, '0')}° · ${money.format(speed)} kn` : 'Aguardando 2 posições');
+  setText('position-source-summary', `Fonte ativa: ${current.sourceLabel} · ${positionAgeLabel(current.dateTime)}`);
   const mapLink = byId('spot-map-link');
   mapLink.href = safeUrl(sourceStates[current.sourceKey]?.mapUrl || data.spotPosition?.mapUrl || mapLink.href);
   mapLink.textContent = current.sourceKey === 'spot' ? 'Abrir SPOT ↗' : 'Abrir MarineTraffic ↗';
-  setText('local-priority-note', `Base: ${current.sourceLabel} · distância, severidade${projected ? ' e derrota estimada' : ''}`);
+  setText('local-priority-note', `Base: ${current.sourceLabel} · distância, severidade${projected ? ' e derrota estimada' : ''} · 3 principais no Modo Comando`);
 
   const renderSource = (key, state) => {
     const prefix = key === 'spot' ? 'spot' : 'marine';
@@ -808,7 +841,7 @@ function renderPositionPriority(data) {
     level: item.modelRisk, href: '#scope-analysis',
     ...relevanceFor({ latitude: item.latitude, longitude: item.longitude }, item.modelRisk)
   }));
-  const candidates = [...alertCandidates, ...scopeCandidates].sort((a, b) => b.score - a.score).slice(0, 5);
+  const candidates = alertCandidates.sort((a, b) => b.score - a.score).slice(0, 5);
   candidates.forEach((item, index) => {
     const card = element('a', `local-priority-card risk-${item.level}`);
     card.href = item.href;
@@ -818,6 +851,13 @@ function renderPositionPriority(data) {
     card.append(copy, element('em', '', distanceBand(item.distance)));
     grid.append(card);
   });
+
+  const scopePrimary = scopeCandidates.sort((a, b) => b.score - a.score)[0];
+  if (scopePrimary) {
+    setText('scope-local-title', scopePrimary.title.replace('Interrupção simulada: ', 'Interrupção de '));
+    setText('scope-local-impact', `${scopePrimary.region} · simulação, não ocorrência real`);
+    setText('scope-local-distance', distanceBand(scopePrimary.distance));
+  }
 }
 
 async function loadRadar() {

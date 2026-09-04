@@ -10,9 +10,9 @@
   <meta property="og:image" content="og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260904-scope1">
+  <link rel="stylesheet" href="styles.css?v=20260904-command1">
 </head>
-<body>
+<body class="command-mode">
 <main id="portal" aria-busy="true">
   <header class="topbar">
     <a class="brand" href="#overview" aria-label="Maritime Master Radar — início">
@@ -35,6 +35,13 @@
       <div><small>PSC / CIC</small><b id="pulse-psc">—</b></div>
       <div><small>MERCADO</small><b id="radar-market-week">—</b></div>
       <div><small>PRÓXIMA REVISÃO</small><b id="pulse-next-review">—</b></div>
+      <div class="strip-mode">
+        <small>VISUALIZAÇÃO</small>
+        <span class="view-mode-switch" role="group" aria-label="Modo de visualização">
+          <button id="command-mode-button" type="button" aria-pressed="true">Comando</button>
+          <button id="complete-mode-button" type="button" aria-pressed="false">Completo</button>
+        </span>
+      </div>
     </header>
 
     <section class="position-priority" id="position-priority" aria-labelledby="position-priority-title">
@@ -45,22 +52,30 @@
         <div><small>PROJEÇÃO</small><b id="spot-position-projection">—</b></div>
         <a id="spot-map-link" href="https://maps.findmespot.com/s/VCV3" target="_blank" rel="noreferrer">Abrir rastreamento ↗</a>
       </header>
-      <div class="position-sources" aria-label="Comparação das fontes de posição">
-        <article class="position-source-card" id="spot-source-card">
-          <header><b>SPOT</b><span id="spot-source-status">—</span></header>
-          <strong id="spot-source-coordinates">—</strong>
-          <small id="spot-source-time">—</small>
-          <em id="spot-source-battery">Bateria: —</em>
-        </article>
-        <article class="position-source-card" id="marine-source-card">
-          <header><b>MarineTraffic</b><span id="marine-source-status">—</span></header>
-          <strong id="marine-source-coordinates">—</strong>
-          <small id="marine-source-time">—</small>
-          <em id="marine-source-event">Posição / chegada / saída</em>
-        </article>
-      </div>
-      <div class="local-priority-head"><div><small>RADAR LOCAL</small><b>O que mais pode afetar o navio nesta posição</b></div><span id="local-priority-note">Distância, severidade e atualidade</span></div>
+      <details class="position-source-details" id="position-source-details">
+        <summary><span>Comparar SPOT e MarineTraffic</span><small id="position-source-summary">Fonte ativa: —</small><i aria-hidden="true">+</i></summary>
+        <div class="position-sources" aria-label="Comparação das fontes de posição">
+          <article class="position-source-card" id="spot-source-card">
+            <header><b>SPOT</b><span id="spot-source-status">—</span></header>
+            <strong id="spot-source-coordinates">—</strong>
+            <small id="spot-source-time">—</small>
+            <em id="spot-source-battery">Bateria: —</em>
+          </article>
+          <article class="position-source-card" id="marine-source-card">
+            <header><b>MarineTraffic</b><span id="marine-source-status">—</span></header>
+            <strong id="marine-source-coordinates">—</strong>
+            <small id="marine-source-time">—</small>
+            <em id="marine-source-event">Posição / chegada / saída</em>
+          </article>
+        </div>
+      </details>
+      <div class="local-priority-head"><div><small>RADAR OPERACIONAL · FATOS REAIS</small><b>O que mais pode afetar o navio nesta posição</b></div><span id="local-priority-note">Distância, severidade e atualidade</span></div>
       <div class="local-priority-grid" id="local-priority-grid"></div>
+      <a class="scope-local-summary" href="#scope-analysis">
+        <span><small>SCOPE · CENÁRIO SIMULADO</small><b id="scope-local-title">Carregando cenário de estresse…</b></span>
+        <span id="scope-local-impact">Não representa uma ocorrência real</span>
+        <em id="scope-local-distance">Ver SCOPE ↓</em>
+      </a>
     </section>
 
     <div class="command-grid">
@@ -167,6 +182,6 @@
 
   <footer class="site-footer"><div class="brand"><span class="brand-mark">⌁</span><span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p></footer>
 </main>
-<script src="script.js?v=20260904-scope1"></script>
+<script src="script.js?v=20260904-command1"></script>
 </body>
 </html>
