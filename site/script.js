@@ -151,11 +151,11 @@ async function resolvePosition(spotConfig, marineTrafficConfig) {
 }
 
 function assertData(data) {
-  const required = ['schemaVersion', 'generatedAt', 'status', 'spotPosition', 'marineTrafficPosition', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+  const required = ['schemaVersion', 'generatedAt', 'status', 'spotPosition', 'marineTrafficPosition', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'scopeAnalysis', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
   const missing = required.filter((key) => data?.[key] === undefined);
   if (missing.length) throw new Error(`Campos ausentes: ${missing.join(', ')}`);
   if (data.schemaVersion !== 5) throw new Error('Versão do esquema de dados incompatível.');
-  if (!Array.isArray(data.market.benchmarks) || !Array.isArray(data.alertGroups) || !Array.isArray(data.strategicPassages) || !Array.isArray(data.reportingSystems) || !Array.isArray(data.psc.regimes) || !Array.isArray(data.sources)) throw new Error('Listas de dados inválidas.');
+  if (!Array.isArray(data.market.benchmarks) || !Array.isArray(data.alertGroups) || !Array.isArray(data.strategicPassages) || !Array.isArray(data.scopeAnalysis.scenarios) || !Array.isArray(data.reportingSystems) || !Array.isArray(data.psc.regimes) || !Array.isArray(data.sources)) throw new Error('Listas de dados inválidas.');
 }
 
 function renderDailyWatch(dailyWatch) {
@@ -479,6 +479,7 @@ function renderPassages(passages) {
   const ordered = [...passages].sort((a, b) => relevanceFor(passageGeo[b.id], b.risk).score - relevanceFor(passageGeo[a.id], a.risk).score);
   ordered.forEach((item, index) => {
     const details = element('details', `passage-card risk-${item.risk}`);
+    details.id = `passage-${item.id}`;
     if (index < 2) details.open = true;
     const summary = element('summary');
     const title = element('div', 'passage-title');
@@ -506,6 +507,76 @@ function renderPassages(passages) {
     details.append(summary, body);
     grid.append(details);
   });
+}
+
+function signedPercent(value) {
+  const numeric = Number(value) || 0;
+  return `${numeric > 0 ? '+' : ''}${money.format(numeric)}%`;
+}
+
+function scopeRelevance(item) {
+  return relevanceFor({ latitude: item.latitude, longitude: item.longitude }, item.modelRisk);
+}
+
+function renderScope(scope, passages) {
+  const spotlight = byId('scope-spotlight');
+  const grid = byId('scope-scenario-grid');
+  clear(spotlight);
+  clear(grid);
+  const ordered = [...scope.scenarios].sort((a, b) => scopeRelevance(b).score - scopeRelevance(a).score);
+  const passageIds = new Set(passages.map(({ id }) => id));
+  const primary = ordered[0];
+  const riskLabels = { critical: 'IMPACTO EXTREMO', high: 'IMPACTO ALTO', medium: 'IMPACTO MODERADO', low: 'IMPACTO LIMITADO' };
+
+  if (primary) {
+    const relevance = scopeRelevance(primary);
+    const copy = element('div', 'scope-spotlight-copy');
+    copy.append(
+      element('small', '', `CENÁRIO PRIORITÁRIO · ${distanceBand(relevance.distance)}`),
+      element('h4', '', primary.name),
+      element('p', '', `Fechamento simulado: pico de preço no dia ${primary.peakDay}; ${primary.recoveryLabel.toLowerCase()}.`)
+    );
+    const metrics = element('div', 'scope-metrics');
+    [
+      ['PREÇO MODELADO', signedPercent(primary.peakPriceChangePercent)],
+      ['OFERTA MÍNIMA', signedPercent(primary.minimumSupplyChangePercent)],
+      ['PROCESSAMENTO', signedPercent(primary.minimumThroughputChangePercent)]
+    ].forEach(([label, value]) => {
+      const metric = element('div');
+      metric.append(element('small', '', label), element('b', '', value));
+      metrics.append(metric);
+    });
+    spotlight.append(copy, metrics);
+  }
+
+  ordered.forEach((item) => {
+    const relevance = scopeRelevance(item);
+    const card = element('article', `scope-card risk-${item.modelRisk}`);
+    const head = element('header');
+    const title = element('div');
+    title.append(element('small', '', distanceBand(relevance.distance)), element('h4', '', item.name));
+    head.append(title, element('span', 'status-badge', riskLabels[item.modelRisk]));
+    const metrics = element('dl');
+    [['Preço', signedPercent(item.peakPriceChangePercent)], ['Oferta', signedPercent(item.minimumSupplyChangePercent)], ['Refino', signedPercent(item.minimumThroughputChangePercent)]].forEach(([label, value]) => {
+      const row = element('div');
+      row.append(element('dt', '', label), element('dd', '', value));
+      metrics.append(row);
+    });
+    const hasPassage = passageIds.has(item.passageId);
+    const passageLink = element('a', '', hasPassage ? 'Ver passagem ↓' : 'Abrir cenário ↗');
+    passageLink.href = hasPassage ? `#passage-${item.passageId}` : safeUrl(scope.sourceUrl);
+    if (!hasPassage) {
+      passageLink.target = '_blank';
+      passageLink.rel = 'noreferrer';
+    }
+    card.append(head, metrics, element('p', '', item.recoveryLabel), passageLink);
+    grid.append(card);
+  });
+
+  setText('scope-updated', `SCOPE consultado em ${dateTime.format(new Date(scope.updatedAt))} UTC · ${scope.scenarioWindow}`);
+  setText('scope-model-note', scope.modelNote);
+  const source = byId('scope-source-link');
+  if (source) source.href = safeUrl(scope.sourceUrl);
 }
 
 function renderReporting(systems) {
@@ -677,6 +748,7 @@ function render(data) {
   renderDailyWatch(data.dailyWatch);
   renderMarket(data.market);
   renderAlerts(data.alertGroups);
+  renderScope(data.scopeAnalysis, data.strategicPassages);
   renderPassages(data.strategicPassages);
   renderReporting(data.reportingSystems);
   renderPsc(data.psc);
@@ -720,18 +792,26 @@ function renderPositionPriority(data) {
   setText('spot-source-battery', `Bateria: ${batteryLabel(sourceStates.spot.current?.batteryState)}`);
   setText('marine-source-event', sourceStates.marineTraffic.current?.eventType || sourceStates.marineTraffic.current?.messageType || 'Posição / chegada / saída');
 
-  const candidates = data.alertGroups.flatMap((group) => group.items.map((item) => ({
+  const alertCandidates = data.alertGroups.flatMap((group) => group.items.map((item) => ({
     type: group.shortTitle,
     icon: group.icon,
     id: item.id,
     title: item.headline,
     region: item.region,
     level: item.level,
+    href: `#alert-${item.id}`,
     ...relevanceFor(item.geo || mapToCoordinates(item.map), item.level)
-  }))).sort((a, b) => b.score - a.score).slice(0, 5);
+  })));
+  const scopeCandidates = (data.scopeAnalysis?.scenarios || []).map((item) => ({
+    type: 'SCOPE · SIMULAÇÃO', icon: '◈', id: `scope-${item.id}`, title: `Interrupção simulada: ${item.name}`,
+    region: `Preço ${signedPercent(item.peakPriceChangePercent)} · oferta ${signedPercent(item.minimumSupplyChangePercent)}`,
+    level: item.modelRisk, href: '#scope-analysis',
+    ...relevanceFor({ latitude: item.latitude, longitude: item.longitude }, item.modelRisk)
+  }));
+  const candidates = [...alertCandidates, ...scopeCandidates].sort((a, b) => b.score - a.score).slice(0, 5);
   candidates.forEach((item, index) => {
     const card = element('a', `local-priority-card risk-${item.level}`);
-    card.href = `#alert-${item.id}`;
+    card.href = item.href;
     card.append(element('span', 'local-rank', String(index + 1).padStart(2, '0')));
     const copy = element('div');
     copy.append(element('small', '', `${item.icon} ${item.type}`), element('b', '', item.title), element('span', '', item.region));

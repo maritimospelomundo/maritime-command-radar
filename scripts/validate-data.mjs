@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises';
 const path = new URL('../site/data/latest.json', import.meta.url);
 const data = JSON.parse(await readFile(path, 'utf8'));
 const errors = [];
-const required = ['schemaVersion', 'generatedAt', 'status', 'spotPosition', 'marineTrafficPosition', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
+const required = ['schemaVersion', 'generatedAt', 'status', 'spotPosition', 'marineTrafficPosition', 'dailyWatch', 'market', 'alertGroups', 'strategicPassages', 'scopeAnalysis', 'reportingSystems', 'psc', 'petrobras', 'bunker', 'briefing', 'sources', 'updatePolicy'];
 
 for (const key of required) if (data[key] === undefined) errors.push(`campo obrigatório ausente: ${key}`);
 if (data.schemaVersion !== 5) errors.push('schemaVersion deve ser 5');
@@ -20,6 +20,7 @@ const lists = [
   ['market.indices', data.market?.indices],
   ['alertGroups', data.alertGroups],
   ['strategicPassages', data.strategicPassages],
+  ['scopeAnalysis.scenarios', data.scopeAnalysis?.scenarios],
   ['reportingSystems', data.reportingSystems],
   ['psc.mous', data.psc?.mous],
   ['psc.regimes', data.psc?.regimes],
@@ -45,6 +46,11 @@ for (const [index, passage] of (data.strategicPassages || []).entries()) {
   if (!passage.id || !passage.name || !['critical', 'high', 'medium', 'low'].includes(passage.risk) || !passage.trafficLabel || !passage.reporting || !Array.isArray(passage.masterFocus) || passage.masterFocus.length === 0) errors.push(`strategicPassages[${index}] inválida`);
   try { new URL(passage.source?.url); } catch { errors.push(`strategicPassages[${index}].source.url inválida`); }
 }
+for (const [index, scenario] of (data.scopeAnalysis?.scenarios || []).entries()) {
+  if (!scenario.id || !scenario.name || !scenario.passageId || !['critical', 'high', 'medium', 'low'].includes(scenario.modelRisk)) errors.push(`scopeAnalysis.scenarios[${index}] inválido`);
+  if (![scenario.latitude, scenario.longitude, scenario.peakPriceChangePercent, scenario.minimumSupplyChangePercent, scenario.minimumThroughputChangePercent].every(Number.isFinite)) errors.push(`scopeAnalysis.scenarios[${index}] deve conter coordenadas e variações numéricas`);
+}
+try { new URL(data.scopeAnalysis?.sourceUrl); } catch { errors.push('scopeAnalysis.sourceUrl inválida'); }
 for (const [index, system] of (data.reportingSystems || []).entries()) {
   if (!system.id || !system.name || !['mandatory', 'voluntary', 'conditional'].includes(system.type) || !system.when || !system.report) errors.push(`reportingSystems[${index}] inválido`);
   try { new URL(system.source?.url); } catch { errors.push(`reportingSystems[${index}].source.url inválida`); }

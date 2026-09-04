@@ -14,6 +14,7 @@ Painel público de inteligência marítima operacional criado por Captain Ponzi 
 - Commander’s Brief;
 - comparação da última posição recebida pelo SPOT e pelo MarineTraffic, usando automaticamente o registro mais recente para priorizar o radar local;
 - fontes, horário e nível de confiança.
+- stress tests SCOPE para interrupções em passagens do petróleo, sempre identificados como simulação e comparados ao cenário-base do próprio modelo.
 
 Os dados publicados ficam separados da interface em `site/data/latest.json`.
 
@@ -25,6 +26,12 @@ Todos os números, grupos de alertas, campanhas, notícias, indicadores, fontes,
 
 ```bash
 node scripts/validate-data.mjs
+```
+
+Os resumos dos cenários públicos do SCOPE podem ser renovados, sem baixar os arquivos cartográficos completos, com:
+
+```bash
+node scripts/update-scope.mjs
 ```
 
 O workflow em `.github/workflows/deploy-pages.yml` publica automaticamente no GitHub Pages quando houver um `push` na branch `main`.

@@ -2,7 +2,12 @@
   "schemaVersion": 5,
   "generatedAt": "2026-09-04T10:10:37Z",
   "timezone": "UTC",
-  "status": { "code": "operational", "label": "Operacional", "snapshotLabel": "Snapshot público", "nextReview": "Seg · Qua · Sex" },
+  "status": {
+    "code": "operational",
+    "label": "Operacional",
+    "snapshotLabel": "Snapshot público",
+    "nextReview": "Seg · Qua · Sex"
+  },
   "spotPosition": {
     "vesselName": "Meu navio",
     "endpoint": "",
@@ -19,7 +24,14 @@
   "marineTrafficPosition": {
     "label": "MarineTraffic",
     "mapUrl": "https://www.marinetraffic.com/",
-    "acceptedEvents": ["Noon Position", "Midnight Position", "Arrival", "Departure", "AIS Destination Changed", "Position Report"],
+    "acceptedEvents": [
+      "Noon Position",
+      "Midnight Position",
+      "Arrival",
+      "Departure",
+      "AIS Destination Changed",
+      "Position Report"
+    ],
     "lastKnown": {
       "dateTime": "2026-09-03T22:11:00Z",
       "unixTime": 1788473460,
@@ -30,186 +42,1697 @@
   },
   "dailyWatch": {
     "horizons": [
-      { "label": "AÇÃO AGORA", "level": "critical", "value": "4 críticos", "summary": "Novo ataque fatal ao tanker SIDR em Ormuz soma-se ao risco de projéteis, ao sequestro no Golfo de Áden e ao furacão Lowell." },
-      { "label": "PRÓXIMAS 72 H", "level": "high", "value": "Meteo severa", "summary": "Lowell mantém intensidade categoria 4; Karina e Marie são categoria 2, enquanto vento força 7–9 e mar de 4–6 m afetam áreas do Atlântico Sul." },
-      { "label": "PREPARAR", "level": "medium", "value": "PSC mundial", "summary": "Quatro CICs de cargo securing confirmadas; verificar o regime do próximo porto e a evidência para itens N/A." }
+      {
+        "label": "AÇÃO AGORA",
+        "level": "critical",
+        "value": "4 críticos",
+        "summary": "Novo ataque fatal ao tanker SIDR em Ormuz soma-se ao risco de projéteis, ao sequestro no Golfo de Áden e ao furacão Lowell."
+      },
+      {
+        "label": "PRÓXIMAS 72 H",
+        "level": "high",
+        "value": "Meteo severa",
+        "summary": "Lowell mantém intensidade categoria 4; Karina e Marie são categoria 2, enquanto vento força 7–9 e mar de 4–6 m afetam áreas do Atlântico Sul."
+      },
+      {
+        "label": "PREPARAR",
+        "level": "medium",
+        "value": "PSC mundial",
+        "summary": "Quatro CICs de cargo securing confirmadas; verificar o regime do próximo porto e a evidência para itens N/A."
+      }
     ],
     "modules": [
-      { "id": "msi", "icon": "⌁", "label": "NAVAREA / METAREA", "value": "Mapa mundial ao vivo", "status": "live", "summary": "Avisos georreferenciados no NautoShark; confirmar sempre por EGC/NAVTEX.", "source": { "name": "NautoShark", "url": "https://www.nautoshark.com/" } },
-      { "id": "environment", "icon": "◉", "label": "MARPOL / ECA", "value": "7 ECAs em vigor", "status": "watch", "summary": "Mediterrâneo, Ártico canadense e Mar da Noruega integram as áreas com limites mais estritos.", "source": { "name": "IMO", "url": "https://www.imo.org/en/OurWork/Environment/Pages/Emission-Control-Areas-%28ECAs%29-designated-under-regulation-13-of-MARPOL-Annex-VI-%28NOx-emission-control%29.aspx" } },
-      { "id": "gnss", "icon": "◎", "label": "GNSS", "value": "Interferência persistente", "status": "high", "summary": "JMIC mantém EMI/GNSS em Ormuz, Golfo de Omã, Golfo Pérsico e corredor do Mar Vermelho; validar posição por meios independentes.", "source": { "name": "JMIC / UKMTO", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } },
-      { "id": "ocean", "icon": "◒", "label": "OCEAN / WAVES", "value": "Modelo global · 10 dias", "status": "live", "summary": "Ondas, swell e correntes em dados abertos; usar como apoio e confirmar no weather routing de bordo.", "source": { "name": "Copernicus Marine", "url": "https://data.marine.copernicus.eu/" } },
-      { "id": "chokepoints", "icon": "▲", "label": "CHOKEPOINTS", "value": "Ormuz severo · fluxo reduzido", "status": "high", "summary": "O ataque ao SIDR causou duas mortes; os trânsitos facilitados seguem muito abaixo do basal de 2025.", "source": { "name": "JMIC Update 093", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } },
-      { "id": "bunker-quality", "icon": "◆", "label": "BUNKER QUALITY", "value": "Verificar antes do stem", "status": "watch", "summary": "Preço não substitui confirmação de disponibilidade, origem, ISO 8217, compatibilidade e alertas off-spec.", "source": { "name": "Ship & Bunker", "url": "https://shipandbunker.com/prices" } },
-      { "id": "tanker", "icon": "⚓", "label": "TANKER READINESS", "value": "Carga + terminal", "status": "ready", "summary": "Revalidar H₂S/benzeno, static accumulator, aquecimento, IG/COW, ESD, MAWP e compatibilidade de manifold.", "source": { "name": "IMO Tanker Safety", "url": "https://www.imo.org/en/ourwork/safety/pages/oil-tankers.aspx" } },
-      { "id": "arrival", "icon": "▣", "label": "PRÓXIMO PORTO", "value": "Checklist universal", "status": "ready", "summary": "Confirmar calado/UKC, maré, praticagem, rebocadores, vento limite, berço, manifold e documentação.", "source": { "name": "IMO Port Safety", "url": "https://www.imo.org/en/ourwork/safety/pages/default.aspx" } }
+      {
+        "id": "msi",
+        "icon": "⌁",
+        "label": "NAVAREA / METAREA",
+        "value": "Mapa mundial ao vivo",
+        "status": "live",
+        "summary": "Avisos georreferenciados no NautoShark; confirmar sempre por EGC/NAVTEX.",
+        "source": {
+          "name": "NautoShark",
+          "url": "https://www.nautoshark.com/"
+        }
+      },
+      {
+        "id": "environment",
+        "icon": "◉",
+        "label": "MARPOL / ECA",
+        "value": "7 ECAs em vigor",
+        "status": "watch",
+        "summary": "Mediterrâneo, Ártico canadense e Mar da Noruega integram as áreas com limites mais estritos.",
+        "source": {
+          "name": "IMO",
+          "url": "https://www.imo.org/en/OurWork/Environment/Pages/Emission-Control-Areas-%28ECAs%29-designated-under-regulation-13-of-MARPOL-Annex-VI-%28NOx-emission-control%29.aspx"
+        }
+      },
+      {
+        "id": "gnss",
+        "icon": "◎",
+        "label": "GNSS",
+        "value": "Interferência persistente",
+        "status": "high",
+        "summary": "JMIC mantém EMI/GNSS em Ormuz, Golfo de Omã, Golfo Pérsico e corredor do Mar Vermelho; validar posição por meios independentes.",
+        "source": {
+          "name": "JMIC / UKMTO",
+          "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+        }
+      },
+      {
+        "id": "ocean",
+        "icon": "◒",
+        "label": "OCEAN / WAVES",
+        "value": "Modelo global · 10 dias",
+        "status": "live",
+        "summary": "Ondas, swell e correntes em dados abertos; usar como apoio e confirmar no weather routing de bordo.",
+        "source": {
+          "name": "Copernicus Marine",
+          "url": "https://data.marine.copernicus.eu/"
+        }
+      },
+      {
+        "id": "chokepoints",
+        "icon": "▲",
+        "label": "CHOKEPOINTS",
+        "value": "Ormuz severo · fluxo reduzido",
+        "status": "high",
+        "summary": "O ataque ao SIDR causou duas mortes; os trânsitos facilitados seguem muito abaixo do basal de 2025.",
+        "source": {
+          "name": "JMIC Update 093",
+          "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+        }
+      },
+      {
+        "id": "bunker-quality",
+        "icon": "◆",
+        "label": "BUNKER QUALITY",
+        "value": "Verificar antes do stem",
+        "status": "watch",
+        "summary": "Preço não substitui confirmação de disponibilidade, origem, ISO 8217, compatibilidade e alertas off-spec.",
+        "source": {
+          "name": "Ship & Bunker",
+          "url": "https://shipandbunker.com/prices"
+        }
+      },
+      {
+        "id": "tanker",
+        "icon": "⚓",
+        "label": "TANKER READINESS",
+        "value": "Carga + terminal",
+        "status": "ready",
+        "summary": "Revalidar H₂S/benzeno, static accumulator, aquecimento, IG/COW, ESD, MAWP e compatibilidade de manifold.",
+        "source": {
+          "name": "IMO Tanker Safety",
+          "url": "https://www.imo.org/en/ourwork/safety/pages/oil-tankers.aspx"
+        }
+      },
+      {
+        "id": "arrival",
+        "icon": "▣",
+        "label": "PRÓXIMO PORTO",
+        "value": "Checklist universal",
+        "status": "ready",
+        "summary": "Confirmar calado/UKC, maré, praticagem, rebocadores, vento limite, berço, manifold e documentação.",
+        "source": {
+          "name": "IMO Port Safety",
+          "url": "https://www.imo.org/en/ourwork/safety/pages/default.aspx"
+        }
+      }
     ]
   },
   "market": {
-    "week": "W36", "sourceLabel": "Fearnleys W36 · eco/scrubber; índices e VLSFO Compass W35",
+    "week": "W36",
+    "sourceLabel": "Fearnleys W36 · eco/scrubber; índices e VLSFO Compass W35",
     "benchmarks": [
-      { "segment": "VLCC", "route": "1 ano TC · eco/scrubber", "value": 130000, "unit": "USD/day", "confidence": "medium", "trendWidth": 80 },
-      { "segment": "Suezmax", "route": "1 ano TC · eco/scrubber", "value": 82500, "unit": "USD/day", "confidence": "medium", "trendWidth": 72 },
-      { "segment": "Aframax", "route": "1 ano TC · eco/scrubber", "value": 58500, "unit": "USD/day", "confidence": "medium", "trendWidth": 66 }
+      {
+        "segment": "VLCC",
+        "route": "1 ano TC · eco/scrubber",
+        "value": 130000,
+        "unit": "USD/day",
+        "confidence": "medium",
+        "trendWidth": 80
+      },
+      {
+        "segment": "Suezmax",
+        "route": "1 ano TC · eco/scrubber",
+        "value": 82500,
+        "unit": "USD/day",
+        "confidence": "medium",
+        "trendWidth": 72
+      },
+      {
+        "segment": "Aframax",
+        "route": "1 ano TC · eco/scrubber",
+        "value": 58500,
+        "unit": "USD/day",
+        "confidence": "medium",
+        "trendWidth": 66
+      }
     ],
-    "spotSignal": { "segment": "VLCC", "label": "sinal semanal", "valueLabel": "posição atlântica curta", "summary": "Ormuz elevou falhas de fixtures; no Atlântico, listas curtas e pouca oferta para Brasil–China sustentam o mercado.", "confidenceLabel": "Narrativa semanal", "sourceLabel": "Fearnleys W36" },
-    "history": { "weeks": ["W30", "W31", "W32", "W33", "W34", "W35", "W36"], "series": [
-      { "name": "VLCC", "className": "vlcc", "values": [94, 96, 98, 98.5, 99, 99.25, 130] },
-      { "name": "Suezmax", "className": "suez", "values": [65, 66, 68, 68.5, 69, 68.5, 82.5] },
-      { "name": "Aframax", "className": "afra", "values": [51, 52, 52.5, 53, 54, 53.75, 58.5] }
-    ] },
-    "indices": [{ "name": "BDTI", "value": 2777, "previous": 3004 }, { "name": "BCTI", "value": 1387, "previous": 1348 }]
+    "spotSignal": {
+      "segment": "VLCC",
+      "label": "sinal semanal",
+      "valueLabel": "posição atlântica curta",
+      "summary": "Ormuz elevou falhas de fixtures; no Atlântico, listas curtas e pouca oferta para Brasil–China sustentam o mercado.",
+      "confidenceLabel": "Narrativa semanal",
+      "sourceLabel": "Fearnleys W36"
+    },
+    "history": {
+      "weeks": [
+        "W30",
+        "W31",
+        "W32",
+        "W33",
+        "W34",
+        "W35",
+        "W36"
+      ],
+      "series": [
+        {
+          "name": "VLCC",
+          "className": "vlcc",
+          "values": [
+            94,
+            96,
+            98,
+            98.5,
+            99,
+            99.25,
+            130
+          ]
+        },
+        {
+          "name": "Suezmax",
+          "className": "suez",
+          "values": [
+            65,
+            66,
+            68,
+            68.5,
+            69,
+            68.5,
+            82.5
+          ]
+        },
+        {
+          "name": "Aframax",
+          "className": "afra",
+          "values": [
+            51,
+            52,
+            52.5,
+            53,
+            54,
+            53.75,
+            58.5
+          ]
+        }
+      ]
+    },
+    "indices": [
+      {
+        "name": "BDTI",
+        "value": 2777,
+        "previous": 3004
+      },
+      {
+        "name": "BCTI",
+        "value": 1387,
+        "previous": 1348
+      }
+    ]
   },
   "alertGroups": [
     {
-      "id": "piracy", "title": "Pirataria e roubo armado", "shortTitle": "Pirataria", "icon": "☠",
+      "id": "piracy",
+      "title": "Pirataria e roubo armado",
+      "shortTitle": "Pirataria",
+      "icon": "☠",
       "description": "Últimos registros públicos localizados no mapa do IMB Piracy Reporting Centre.",
       "items": [
-        { "id": "imb-049-26", "date": "2026-08-22", "region": "Vung Tau, Vietnã", "level": "high", "headline": "Bulk carrier abordado no fundeadouro", "summary": "Pessoas não autorizadas embarcaram em um graneleiro fundeado e fugiram com itens roubados.", "details": "O IMB registrou o incidente 049-26 às 1806 UTC, na posição 10°16.15'N 107°02'E. O acesso ao convés durante fundeio exige vigilância e barreiras efetivas.", "action": "Reforçar iluminação, rondas, pontos de acesso, comunicações com o terminal e resposta a intrusão.", "map": { "x": 80, "y": 44, "label": "Vung Tau" }, "source": { "name": "IMB PRC", "url": "https://icc-ccs.org/map/" } },
-        { "id": "imb-048-26", "date": "2026-08-22", "region": "San Nicolás, Peru", "level": "high", "headline": "Dois ladrões armados abordam bulk carrier", "summary": "Tripulantes avistaram dois invasores armados com facas em graneleiro fundeado.", "details": "O incidente 048-26 ocorreu às 0630 UTC no fundeadouro de San Nicolás, posição 15°13.8'S 075°15.1'W. O risco predominante foi roubo armado em águas portuárias.", "action": "Reforçar ronda de convés, controle de acessos, iluminação, alarme e contato imediato com autoridade/terminal.", "map": { "x": 29, "y": 58, "label": "San Nicolás" }, "source": { "name": "IMB PRC", "url": "https://icc-ccs.org/map/" } },
-        { "id": "imb-047-26", "date": "2026-08-20", "region": "Golfo de Áden", "level": "critical", "headline": "Tanker abordado e sequestrado", "summary": "Seis piratas armados abordaram e desviaram um petroleiro a cerca de 136 MN a leste de Mukalla.", "details": "O IMB classifica o caso 047-26 como hijacking. A distância da costa confirma capacidade de ação contra navio em navegação no corredor regional.", "action": "Aplicar BMP Maritime Security, reforçar lookout, testar citadel/SSAS e manter registro/reporte UKMTO e MSCIO.", "map": { "x": 67, "y": 48, "label": "Golfo de Áden" }, "source": { "name": "IMB PRC", "url": "https://icc-ccs.org/map/" } }
+        {
+          "id": "imb-049-26",
+          "date": "2026-08-22",
+          "region": "Vung Tau, Vietnã",
+          "level": "high",
+          "headline": "Bulk carrier abordado no fundeadouro",
+          "summary": "Pessoas não autorizadas embarcaram em um graneleiro fundeado e fugiram com itens roubados.",
+          "details": "O IMB registrou o incidente 049-26 às 1806 UTC, na posição 10°16.15'N 107°02'E. O acesso ao convés durante fundeio exige vigilância e barreiras efetivas.",
+          "action": "Reforçar iluminação, rondas, pontos de acesso, comunicações com o terminal e resposta a intrusão.",
+          "map": {
+            "x": 80,
+            "y": 44,
+            "label": "Vung Tau"
+          },
+          "source": {
+            "name": "IMB PRC",
+            "url": "https://icc-ccs.org/map/"
+          }
+        },
+        {
+          "id": "imb-048-26",
+          "date": "2026-08-22",
+          "region": "San Nicolás, Peru",
+          "level": "high",
+          "headline": "Dois ladrões armados abordam bulk carrier",
+          "summary": "Tripulantes avistaram dois invasores armados com facas em graneleiro fundeado.",
+          "details": "O incidente 048-26 ocorreu às 0630 UTC no fundeadouro de San Nicolás, posição 15°13.8'S 075°15.1'W. O risco predominante foi roubo armado em águas portuárias.",
+          "action": "Reforçar ronda de convés, controle de acessos, iluminação, alarme e contato imediato com autoridade/terminal.",
+          "map": {
+            "x": 29,
+            "y": 58,
+            "label": "San Nicolás"
+          },
+          "source": {
+            "name": "IMB PRC",
+            "url": "https://icc-ccs.org/map/"
+          }
+        },
+        {
+          "id": "imb-047-26",
+          "date": "2026-08-20",
+          "region": "Golfo de Áden",
+          "level": "critical",
+          "headline": "Tanker abordado e sequestrado",
+          "summary": "Seis piratas armados abordaram e desviaram um petroleiro a cerca de 136 MN a leste de Mukalla.",
+          "details": "O IMB classifica o caso 047-26 como hijacking. A distância da costa confirma capacidade de ação contra navio em navegação no corredor regional.",
+          "action": "Aplicar BMP Maritime Security, reforçar lookout, testar citadel/SSAS e manter registro/reporte UKMTO e MSCIO.",
+          "map": {
+            "x": 67,
+            "y": 48,
+            "label": "Golfo de Áden"
+          },
+          "source": {
+            "name": "IMB PRC",
+            "url": "https://icc-ccs.org/map/"
+          }
+        }
       ]
     },
     {
-      "id": "weather", "title": "Condições meteorológicas extremas", "shortTitle": "Meteo", "icon": "◒",
+      "id": "weather",
+      "title": "Condições meteorológicas extremas",
+      "shortTitle": "Meteo",
+      "icon": "◒",
       "description": "Eventos com potencial de gerar vento, mar e swell perigosos para operações oceânicas.",
       "items": [
-        { "id": "nhc-lowell-2026-09-04", "date": "2026-09-04", "region": "Pacífico Central", "level": "critical", "headline": "Lowell permanece categoria 4", "summary": "O furacão mantém ventos máximos de 115 kt e gera swell perigoso no Pacífico Central.", "details": "No Forecast Advisory 32, às 0900 UTC, o centro estava próximo de 13,4°N 159,6°W. Não havia avisos costeiros, mas o swell produz surf e correntes de retorno potencialmente fatais.", "action": "Recalcular rota/ETA, evitar o campo de vento e swell e acompanhar NHC/CPHC e weather routing.", "map": { "x": 6, "y": 44, "label": "Lowell" }, "source": { "name": "NHC / CPHC Advisory 32", "url": "https://www.nhc.noaa.gov/text/refresh/HFOTCPCP4%2Bshtml/040244.shtml?text=" } },
-        { "id": "nhc-karina-2026-09-04", "date": "2026-09-04", "region": "Pacífico Nordeste", "level": "high", "headline": "Karina é furacão categoria 2", "summary": "Karina tinha ventos máximos de 90 kt e seguia para oeste-noroeste em mar aberto.", "details": "Às 0300 UTC, o centro estava próximo de 20,1°N 138,4°W, com deslocamento de 8 kt. O NHC previa enfraquecimento, sem ameaça costeira imediata.", "action": "Manter margem do cone e do swell, revisar weather routing e confirmar o advisory mais recente.", "map": { "x": 10, "y": 40, "label": "Karina" }, "source": { "name": "NHC / NOAA", "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPEP1%2Bshtml/040245.shtml?text=" } },
-        { "id": "nhc-marie-2026-09-04", "date": "2026-09-04", "region": "Pacífico Nordeste", "level": "high", "headline": "Marie alcança categoria 2", "summary": "Marie tinha ventos máximos de 85 kt, com rajadas de 105 kt, e seguia para oeste-noroeste.", "details": "No Advisory 12, às 0300 UTC, o centro estava próximo de 19,6°N 116,3°W, deslocando-se a 8 kt, sem avisos costeiros.", "action": "Evitar campo de vento e swell, revisar ETA e acompanhar boletins NHC e weather routing.", "map": { "x": 17, "y": 41, "label": "Marie" }, "source": { "name": "NHC / NOAA Advisory 12", "url": "https://www.nhc.noaa.gov/mobile/text/refresh/MIATCMEP3%2Bhtml/040255.shtml" } }
+        {
+          "id": "nhc-lowell-2026-09-04",
+          "date": "2026-09-04",
+          "region": "Pacífico Central",
+          "level": "critical",
+          "headline": "Lowell permanece categoria 4",
+          "summary": "O furacão mantém ventos máximos de 115 kt e gera swell perigoso no Pacífico Central.",
+          "details": "No Forecast Advisory 32, às 0900 UTC, o centro estava próximo de 13,4°N 159,6°W. Não havia avisos costeiros, mas o swell produz surf e correntes de retorno potencialmente fatais.",
+          "action": "Recalcular rota/ETA, evitar o campo de vento e swell e acompanhar NHC/CPHC e weather routing.",
+          "map": {
+            "x": 6,
+            "y": 44,
+            "label": "Lowell"
+          },
+          "source": {
+            "name": "NHC / CPHC Advisory 32",
+            "url": "https://www.nhc.noaa.gov/text/refresh/HFOTCPCP4%2Bshtml/040244.shtml?text="
+          }
+        },
+        {
+          "id": "nhc-karina-2026-09-04",
+          "date": "2026-09-04",
+          "region": "Pacífico Nordeste",
+          "level": "high",
+          "headline": "Karina é furacão categoria 2",
+          "summary": "Karina tinha ventos máximos de 90 kt e seguia para oeste-noroeste em mar aberto.",
+          "details": "Às 0300 UTC, o centro estava próximo de 20,1°N 138,4°W, com deslocamento de 8 kt. O NHC previa enfraquecimento, sem ameaça costeira imediata.",
+          "action": "Manter margem do cone e do swell, revisar weather routing e confirmar o advisory mais recente.",
+          "map": {
+            "x": 10,
+            "y": 40,
+            "label": "Karina"
+          },
+          "source": {
+            "name": "NHC / NOAA",
+            "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPEP1%2Bshtml/040245.shtml?text="
+          }
+        },
+        {
+          "id": "nhc-marie-2026-09-04",
+          "date": "2026-09-04",
+          "region": "Pacífico Nordeste",
+          "level": "high",
+          "headline": "Marie alcança categoria 2",
+          "summary": "Marie tinha ventos máximos de 85 kt, com rajadas de 105 kt, e seguia para oeste-noroeste.",
+          "details": "No Advisory 12, às 0300 UTC, o centro estava próximo de 19,6°N 116,3°W, deslocando-se a 8 kt, sem avisos costeiros.",
+          "action": "Evitar campo de vento e swell, revisar ETA e acompanhar boletins NHC e weather routing.",
+          "map": {
+            "x": 17,
+            "y": 41,
+            "label": "Marie"
+          },
+          "source": {
+            "name": "NHC / NOAA Advisory 12",
+            "url": "https://www.nhc.noaa.gov/mobile/text/refresh/MIATCMEP3%2Bhtml/040255.shtml"
+          }
+        }
       ]
     },
     {
-      "id": "brazil-coast", "title": "Costa do Brasil", "shortTitle": "Costa BR", "icon": "◆",
+      "id": "brazil-coast",
+      "title": "Costa do Brasil",
+      "shortTitle": "Costa BR",
+      "icon": "◆",
       "description": "Avisos costeiros e alterações hidrográficas com efeito potencial em praticagem, aproximação e operações.",
       "items": [
-        { "id": "chm-641-2026", "date": "2026-09-03", "region": "Torres/RS a Peruíbe/SP", "level": "high", "headline": "Vento força 7 com rajadas força 8", "summary": "Aviso 641 válido de 4 de setembro, 0300Z, até 5 de setembro, 0000Z, dentro de 80 MN da costa.", "details": "Vento de SW/S pode afetar aproximações, fundeio, praticagem, transferência de pessoal e limites operacionais de terminais.", "action": "Confirmar janela com agente, praticagem e terminal; reavaliar fundeio, condição de lastro e trabalho no convés.", "map": { "x": 36, "y": 71, "label": "Torres–Peruíbe" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } },
-        { "id": "chm-640-2026", "date": "2026-09-02", "region": "Atlântico Sul oceânico", "level": "high", "headline": "Mar grosso de 4 a 6 metros", "summary": "Aviso 640 permanece válido até 5 de setembro, 0600Z, em área oceânica ao sul de 32°S.", "details": "Mar de N/NW entre 32°S–36°S e 30°W–44°W pode elevar esforços, slamming e riscos de trabalho no convés.", "action": "Revalidar weather routing, velocidade segura, heading, estabilidade e critérios de heavy weather.", "map": { "x": 40, "y": 76, "label": "Mar 4–6 m" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } },
-        { "id": "chm-638-2026", "date": "2026-09-02", "region": "Atlântico Sul oceânico", "level": "high", "headline": "Vento força 8/9 em área oceânica", "summary": "Aviso 638 válido de 4 de setembro, 1200Z, até 5 de setembro, 1200Z.", "details": "Vento NE/NW entre 30°S–36°S e 20°W–30°W exige planejamento de rota e controle de esforços estruturais.", "action": "Revisar rota, ETA, condição de lastro, velocidade e restrições para operações externas.", "map": { "x": 43, "y": 75, "label": "F8/9" }, "source": { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo" } }
+        {
+          "id": "chm-641-2026",
+          "date": "2026-09-03",
+          "region": "Torres/RS a Peruíbe/SP",
+          "level": "high",
+          "headline": "Vento força 7 com rajadas força 8",
+          "summary": "Aviso 641 válido de 4 de setembro, 0300Z, até 5 de setembro, 0000Z, dentro de 80 MN da costa.",
+          "details": "Vento de SW/S pode afetar aproximações, fundeio, praticagem, transferência de pessoal e limites operacionais de terminais.",
+          "action": "Confirmar janela com agente, praticagem e terminal; reavaliar fundeio, condição de lastro e trabalho no convés.",
+          "map": {
+            "x": 36,
+            "y": 71,
+            "label": "Torres–Peruíbe"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
+        {
+          "id": "chm-640-2026",
+          "date": "2026-09-02",
+          "region": "Atlântico Sul oceânico",
+          "level": "high",
+          "headline": "Mar grosso de 4 a 6 metros",
+          "summary": "Aviso 640 permanece válido até 5 de setembro, 0600Z, em área oceânica ao sul de 32°S.",
+          "details": "Mar de N/NW entre 32°S–36°S e 30°W–44°W pode elevar esforços, slamming e riscos de trabalho no convés.",
+          "action": "Revalidar weather routing, velocidade segura, heading, estabilidade e critérios de heavy weather.",
+          "map": {
+            "x": 40,
+            "y": 76,
+            "label": "Mar 4–6 m"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
+        {
+          "id": "chm-638-2026",
+          "date": "2026-09-02",
+          "region": "Atlântico Sul oceânico",
+          "level": "high",
+          "headline": "Vento força 8/9 em área oceânica",
+          "summary": "Aviso 638 válido de 4 de setembro, 1200Z, até 5 de setembro, 1200Z.",
+          "details": "Vento NE/NW entre 30°S–36°S e 20°W–30°W exige planejamento de rota e controle de esforços estruturais.",
+          "action": "Revisar rota, ETA, condição de lastro, velocidade e restrições para operações externas.",
+          "map": {
+            "x": 43,
+            "y": 75,
+            "label": "F8/9"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        }
       ]
     },
     {
-      "id": "security", "title": "Conflito e segurança de rota", "shortTitle": "Segurança", "icon": "▲",
+      "id": "security",
+      "title": "Conflito e segurança de rota",
+      "shortTitle": "Segurança",
+      "icon": "▲",
       "description": "Mudanças no ambiente de ameaça, interferência estatal e ataques contra navegação comercial.",
       "items": [
-        { "id": "ukmto-126-26", "date": "2026-09-02", "region": "Estreito de Ormuz / Jazirat Tawakkul", "level": "critical", "headline": "Ataque ao tanker SIDR causa duas mortes", "summary": "Dois tripulantes morreram após ataque durante trânsito eastbound/outbound em Ormuz; o navio aguardava salvamento fundeado.", "details": "O evento ocorreu em 31 de agosto, 2050 UTC, e foi recebido pelo UKMTO em 2 de setembro. JMIC Update 093 e NAVAREA IX 306/26 confirmam duas fatalidades.", "action": "Revalidar autorização, war-risk, rota, resposta a projéteis/minas, damage control e comunicações UKMTO/CSO antes do trânsito.", "map": { "x": 65, "y": 42, "label": "Ormuz" }, "source": { "name": "JMIC Update 093 / UKMTO 126-26", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } },
-        { "id": "ukmto-123-26", "date": "2026-08-31", "region": "Golfo de Omã / 57 MN da costa", "level": "high", "headline": "Aeronave militar força tanker a parar", "summary": "O Master relatou contato no VHF 16, ordem para inverter rumo, sobrevoo baixo e disparo que caiu na água ao lado.", "details": "Às 1630 UTC, o tanker parou e permaneceu à deriva em 22°32'N 060°52'E. Às 1915 UTC, o Master confirmou tripulação segura e ausência de novo contato militar.", "action": "Alinhar com CSO as respostas a hailing/interdição, manter VHF 16, AIS conforme orientação oficial e registrar toda interação.", "map": { "x": 67, "y": 43, "label": "Golfo de Omã" }, "source": { "name": "JMIC Update 093 / UKMTO 123-26", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } },
-        { "id": "ukmto-124-26", "date": "2026-08-30", "region": "Estreito de Ormuz / costa de Omã", "level": "critical", "headline": "Tanker atingido por três projéteis", "summary": "SENEGAL PROSPERITY perdeu comunicações, ficou sem governo e com banda para bombordo; tripulação foi evacuada sem vítimas.", "details": "Segundo o JMIC, três projéteis atingiram o lado de bombordo, na região da praça de máquinas e tanque de lastro. O navio fundeou em 26°19'N 056°33'E e ficou not under command.", "action": "Revalidar autorização, war-risk cover, orientação do CSO, rota, damage control, evacuação e reporte UKMTO antes da aproximação.", "map": { "x": 65, "y": 42, "label": "Khasab / Ormuz" }, "source": { "name": "JMIC Update 093 / UKMTO 124-26", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } }
+        {
+          "id": "ukmto-126-26",
+          "date": "2026-09-02",
+          "region": "Estreito de Ormuz / Jazirat Tawakkul",
+          "level": "critical",
+          "headline": "Ataque ao tanker SIDR causa duas mortes",
+          "summary": "Dois tripulantes morreram após ataque durante trânsito eastbound/outbound em Ormuz; o navio aguardava salvamento fundeado.",
+          "details": "O evento ocorreu em 31 de agosto, 2050 UTC, e foi recebido pelo UKMTO em 2 de setembro. JMIC Update 093 e NAVAREA IX 306/26 confirmam duas fatalidades.",
+          "action": "Revalidar autorização, war-risk, rota, resposta a projéteis/minas, damage control e comunicações UKMTO/CSO antes do trânsito.",
+          "map": {
+            "x": 65,
+            "y": 42,
+            "label": "Ormuz"
+          },
+          "source": {
+            "name": "JMIC Update 093 / UKMTO 126-26",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+          }
+        },
+        {
+          "id": "ukmto-123-26",
+          "date": "2026-08-31",
+          "region": "Golfo de Omã / 57 MN da costa",
+          "level": "high",
+          "headline": "Aeronave militar força tanker a parar",
+          "summary": "O Master relatou contato no VHF 16, ordem para inverter rumo, sobrevoo baixo e disparo que caiu na água ao lado.",
+          "details": "Às 1630 UTC, o tanker parou e permaneceu à deriva em 22°32'N 060°52'E. Às 1915 UTC, o Master confirmou tripulação segura e ausência de novo contato militar.",
+          "action": "Alinhar com CSO as respostas a hailing/interdição, manter VHF 16, AIS conforme orientação oficial e registrar toda interação.",
+          "map": {
+            "x": 67,
+            "y": 43,
+            "label": "Golfo de Omã"
+          },
+          "source": {
+            "name": "JMIC Update 093 / UKMTO 123-26",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+          }
+        },
+        {
+          "id": "ukmto-124-26",
+          "date": "2026-08-30",
+          "region": "Estreito de Ormuz / costa de Omã",
+          "level": "critical",
+          "headline": "Tanker atingido por três projéteis",
+          "summary": "SENEGAL PROSPERITY perdeu comunicações, ficou sem governo e com banda para bombordo; tripulação foi evacuada sem vítimas.",
+          "details": "Segundo o JMIC, três projéteis atingiram o lado de bombordo, na região da praça de máquinas e tanque de lastro. O navio fundeou em 26°19'N 056°33'E e ficou not under command.",
+          "action": "Revalidar autorização, war-risk cover, orientação do CSO, rota, damage control, evacuação e reporte UKMTO antes da aproximação.",
+          "map": {
+            "x": 65,
+            "y": 42,
+            "label": "Khasab / Ormuz"
+          },
+          "source": {
+            "name": "JMIC Update 093 / UKMTO 124-26",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+          }
+        }
       ]
     },
     {
-      "id": "navigation", "title": "Navegação eletrônica e portos", "shortTitle": "Nav/Portos", "icon": "⌁",
+      "id": "navigation",
+      "title": "Navegação eletrônica e portos",
+      "shortTitle": "Nav/Portos",
+      "icon": "⌁",
       "description": "Interferência GNSS e sinais que exigem redundância de posição e conferência das informações portuárias.",
       "items": [
-        { "id": "jmic-gnss-hormuz-093", "date": "2026-09-03", "region": "Ormuz / Golfo de Omã / Golfo Pérsico", "level": "high", "headline": "Interferência GNSS permanece disseminada", "summary": "O JMIC mantém spoofing/jamming e posições AIS anômalas nas aproximações de Ormuz e no sul do Golfo Pérsico.", "details": "A densidade de relatos permanece maior no sul do Golfo Pérsico e corredor do Mar Vermelho. Não houve novo aviso específico UKMTO/NAVAREA em 1–2 de setembro; o risco basal permanece.", "action": "Comparar GNSS com radar, visual, eco-sonda, DR e receptores independentes; investigar discrepâncias antes de alterar o plano.", "map": { "x": 65, "y": 42, "label": "Ormuz / Golfo" }, "source": { "name": "JMIC Update 093", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } },
-        { "id": "jmic-gnss-redsea-093", "date": "2026-09-03", "region": "Hodeidah / Yanbu / Mar Vermelho", "level": "high", "headline": "Spoofing e AIS-off persistem no Mar Vermelho", "summary": "JMIC relata interferência de amplo espectro junto a Hodeidah e operações AIS-off consolidadas em Yanbu.", "details": "A intensidade no Mar Vermelho é descrita como menor e mais intermitente que em Ormuz/Golfo Pérsico, mas continua operacionalmente relevante.", "action": "Validar posição por meios independentes, revisar procedimentos de perda de GNSS e manter logging detalhado de anomalias.", "map": { "x": 63, "y": 38, "label": "Mar Vermelho" }, "source": { "name": "JMIC Update 093", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } },
-        { "id": "gps-la-1002", "date": "2026-08-10", "region": "Los Angeles, EUA", "level": "medium", "headline": "Perda intermitente de satélites GPS reportada", "summary": "Relato descreveu jamming a cada quatro horas, com duração aproximada de quatro minutos.", "details": "O NAVCEN não encontrou anomalia de constelação, clima espacial ou teste autorizado correlacionado ao registro 1002.", "action": "Registrar hora/posição, verificar receptores independentes e reportar degradação ao serviço competente.", "map": { "x": 8, "y": 39, "label": "Los Angeles" }, "source": { "name": "USCG NAVCEN", "url": "https://www.navcen.uscg.gov/guide-tool" } }
+        {
+          "id": "jmic-gnss-hormuz-093",
+          "date": "2026-09-03",
+          "region": "Ormuz / Golfo de Omã / Golfo Pérsico",
+          "level": "high",
+          "headline": "Interferência GNSS permanece disseminada",
+          "summary": "O JMIC mantém spoofing/jamming e posições AIS anômalas nas aproximações de Ormuz e no sul do Golfo Pérsico.",
+          "details": "A densidade de relatos permanece maior no sul do Golfo Pérsico e corredor do Mar Vermelho. Não houve novo aviso específico UKMTO/NAVAREA em 1–2 de setembro; o risco basal permanece.",
+          "action": "Comparar GNSS com radar, visual, eco-sonda, DR e receptores independentes; investigar discrepâncias antes de alterar o plano.",
+          "map": {
+            "x": 65,
+            "y": 42,
+            "label": "Ormuz / Golfo"
+          },
+          "source": {
+            "name": "JMIC Update 093",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+          }
+        },
+        {
+          "id": "jmic-gnss-redsea-093",
+          "date": "2026-09-03",
+          "region": "Hodeidah / Yanbu / Mar Vermelho",
+          "level": "high",
+          "headline": "Spoofing e AIS-off persistem no Mar Vermelho",
+          "summary": "JMIC relata interferência de amplo espectro junto a Hodeidah e operações AIS-off consolidadas em Yanbu.",
+          "details": "A intensidade no Mar Vermelho é descrita como menor e mais intermitente que em Ormuz/Golfo Pérsico, mas continua operacionalmente relevante.",
+          "action": "Validar posição por meios independentes, revisar procedimentos de perda de GNSS e manter logging detalhado de anomalias.",
+          "map": {
+            "x": 63,
+            "y": 38,
+            "label": "Mar Vermelho"
+          },
+          "source": {
+            "name": "JMIC Update 093",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+          }
+        },
+        {
+          "id": "gps-la-1002",
+          "date": "2026-08-10",
+          "region": "Los Angeles, EUA",
+          "level": "medium",
+          "headline": "Perda intermitente de satélites GPS reportada",
+          "summary": "Relato descreveu jamming a cada quatro horas, com duração aproximada de quatro minutos.",
+          "details": "O NAVCEN não encontrou anomalia de constelação, clima espacial ou teste autorizado correlacionado ao registro 1002.",
+          "action": "Registrar hora/posição, verificar receptores independentes e reportar degradação ao serviço competente.",
+          "map": {
+            "x": 8,
+            "y": 39,
+            "label": "Los Angeles"
+          },
+          "source": {
+            "name": "USCG NAVCEN",
+            "url": "https://www.navcen.uscg.gov/guide-tool"
+          }
+        }
       ]
     }
   ],
   "strategicPassages": [
-    { "id": "magellan", "name": "Estreito de Magalhães", "region": "Chile · Atlântico ↔ Pacífico", "risk": "medium", "trafficLabel": "Moderado", "trafficTrend": "estável / rota alternativa", "trafficBasis": "Sem série pública consolidada e comparável de trânsitos mercantes no snapshot. A autoridade publica regras operacionais, não um contador diário equivalente aos canais.", "market": "Alternativa a Panamá e Cabo Horn para navios compatíveis; decisão depende de distância, combustível, calado, pilotagem e weather routing.", "geopolitics": "Baixo risco de guerra; exposição predominante é meteorológica e náutica.", "authority": "DIRECTEMAR / Autoridade Marítima do Chile", "reporting": "CHILREP, pontos de controle e VTS; pilotagem conforme zona e características do navio.", "masterFocus": ["Planejar correntes nas Angosturas e Paso Tortuoso; podem superar 3,5 nós.", "VHF 16/70 permanente, reportes de posição e preferência a VLCC/supernavios conforme controle local.", "Confirmar antecedência de solicitação de prático, calado máximo, zona de transferência e abrigo meteorológico."], "source": { "name": "DIRECTEMAR — Pilotaje Magallanes", "url": "https://www.directemar.cl/directemar/site/edic/base/port/estrechodemagallanes_en.html" } },
-    { "id": "cape-horn", "name": "Cabo Horn", "region": "Chile · Oceano Austral", "risk": "high", "trafficLabel": "Baixo", "trafficTrend": "uso seletivo", "trafficBasis": "Não há série pública consolidada de mercantes no snapshot; fluxo é muito inferior aos canais e ocorre principalmente quando porte, restrições ou estratégia de rota justificam.", "market": "Pode evitar canal/pilotagem, mas aumenta distância e exposição; combustível, ETA e risco de avaria devem ser tratados como custo total.", "geopolitics": "Baixo risco de guerra; risco operacional alto por vento, mar cruzado, swell, gelo e rápida mudança meteorológica.", "authority": "DIRECTEMAR / MRCC Chile", "reporting": "CHILREP quando aplicável às águas chilenas; confirmar limites e plano SAR.", "masterFocus": ["Definir limites de heavy weather, redução de velocidade e heading para esforço estrutural/slamming.", "Proteger convés e manifolds, restringir trabalho externo e revisar condição de lastro.", "Manter margem de combustível e rota de escape para canais/abrigo se operacionalmente disponível."], "source": { "name": "DIRECTEMAR — Rotas austrais", "url": "https://www.directemar.cl/directemar/site/edic/base/port/estrechodemagallanes_en.html" } },
-    { "id": "sunda", "name": "Estreito de Sunda", "region": "Indonésia · Java ↔ Sumatra", "risk": "medium", "trafficLabel": "Moderado", "trafficTrend": "estável", "trafficBasis": "Sem série oficial pública consolidada localizada; intensidade é inferior a Malaca/Singapura e inclui forte tráfego regional.", "market": "Alternativa para alguns fluxos entre Índico e Mar de Java; limitações de profundidade e rota reduzem a atratividade para grandes petroleiros.", "geopolitics": "Baixo risco de guerra; risco relevante de atividade vulcânica, sismos, tsunami e tráfego local.", "authority": "Direktorat Jenderal Perhubungan Laut / VTS Merak", "reporting": "VTS e reportes locais conforme categoria e setor; confirmar ALRS/ENC vigente.", "masterFocus": ["Avaliar UKC, bancos, correntes de maré, pequenos alvos e travessias de ferry.", "Monitorar alertas de Anak Krakatau e avisos sísmicos/tsunami da Indonésia.", "Preparar redundância de posição e radar plotting em chuva intensa e visibilidade reduzida."], "source": { "name": "IMO — VTS", "url": "https://www.imo.org/en/OurWork/Safety/Pages/VesselTrafficServices.aspx" } },
-    { "id": "malacca", "name": "Estreito de Malaca", "region": "Malásia / Indonésia · Índico ↔ Ásia", "risk": "medium", "trafficLabel": "Muito intenso", "trafficTrend": "alta demanda asiática", "trafficBasis": "Cerca de 22,8 milhões b/d de petróleo e líquidos atravessaram o corredor em 2025 segundo a EIA; métrica de energia, não contagem de navios.", "market": "Principal artéria energética da Ásia; congestionamento ou bloqueio pressiona fretes, bunker, estoques e rotas via Sunda/Lombok.", "geopolitics": "Baixo risco de guerra imediato, mas alta criticidade estratégica; roubo armado e incidentes de navegação permanecem no radar.", "authority": "VTS da Malásia, Indonésia e Singapura", "reporting": "STRAITREP obrigatório para categorias prescritas nos setores 1–9.", "masterFocus": ["Reforçar BRM, CPA/TCPA, squat e UKC em TSS estreito e tráfego de pesca/local.", "Executar medidas antipirataria e controle de acessos, sobretudo em baixa velocidade/fundeio.", "Confirmar air draft, calado, pilotagem voluntária e contingência de máquinas/steering."], "source": { "name": "EIA — World Oil Transit Chokepoints", "url": "https://www.eia.gov/international/analysis/special-topics/world_oil_transit_Chokepoints" } },
-    { "id": "singapore", "name": "Estreito de Singapura", "region": "Singapura / Indonésia / Malásia", "risk": "medium", "trafficLabel": "Extremo", "trafficTrend": "crescimento", "trafficBasis": "Singapura recebe em média ~140 mil vessel calls/ano; em 2025 registrou 3,22 bilhões GT de chegadas (+3,5%). Port calls não equivalem a trânsitos do estreito.", "market": "Hub global de bunker, transbordo e refino; atrasos repercutem em fixtures, disponibilidade de combustível e cadeias Ásia–Europa.", "geopolitics": "Baixo risco de guerra; risco dominante é densidade, cruzamentos, embarcações pequenas e falha de propulsão/governo.", "authority": "MPA Singapore / VTIS", "reporting": "STRAITREP obrigatório e requisitos portuários de Singapura quando houver escala.", "masterFocus": ["Briefing específico por setor, reporting point, faixa e frequências VHF.", "Máquinas e steering em prontidão; minimizar distrações e mudanças tardias em TSS.", "Para tanker, alinhar bunker/terminal, HNS/DG declaration, fundeio e limites de manobra."], "source": { "name": "MPA — Global Hub Port", "url": "https://www.mpa.gov.sg/maritime-singapore/what-maritime-singapore-offers/global-hub-port" } },
-    { "id": "suez", "name": "Canal de Suez", "region": "Egito · Mediterrâneo ↔ Mar Vermelho", "risk": "high", "trafficLabel": "Operando normalmente", "trafficTrend": "tankers estáveis; retorno seletivo", "trafficBasis": "O JMIC Update 093 informa operação normal no canal, fluxo tanker estável e retorno seletivo de porta-contêineres; não publica contagem consolidada diária nesse boletim.", "market": "Reduz distância Ásia–Europa; desvios pelo Cabo elevam ton-miles, consumo, fretes, emissões e demanda por navios.", "geopolitics": "O canal funciona sem interrupção sistêmica, mas o trânsito conecta-se ao risco SUBSTANTIAL no sul do Mar Vermelho/Bab-el-Mandeb.", "authority": "Suez Canal Authority (SCA)", "reporting": "ETA, documentos, inspeção, pilotagem e instruções de comboio via agente/SCA.", "masterFocus": ["Não confundir canal operando com rota integralmente segura: revalidar war-risk, CSO e ameaça até Bab-el-Mandeb.", "Confirmar calado, SCNT, rebocadores, luzes, amarração e readiness para falha de máquinas.", "Planejar squat, bank effect, interação e ordens do prático/controle sem retirar o comando do Master."], "source": { "name": "JMIC Update 093 / SCA", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } },
-    { "id": "hormuz", "name": "Estreito de Ormuz", "region": "Omã / Irã · Golfo Pérsico", "risk": "critical", "trafficLabel": "Fluxo severamente reduzido", "trafficTrend": "44 trânsitos facilitados / 48 h; abaixo do basal", "trafficBasis": "O JMIC registrou 44 trânsitos facilitados pelo US NCAGS em 1–2 set. (48 h), ante basal histórico de ~138 navios/dia em 2025. Dados independentes indicaram números de um dígito em ambos os sentidos; as coberturas diferem e não devem ser somadas nem tratadas como fluxo oficial de petróleo.", "market": "Qualquer interrupção afeta crude, produtos, LNG, prêmio de seguro, bunker e fretes em escala global; a restrição de fluxo mantém forte aversão a risco.", "geopolitics": "JMIC mantém nível SEVERE: o novo ataque ao SIDR causou duas mortes; persistem hailing, risco de minas, atividade militar e interferência GNSS.", "authority": "Autoridades costeiras / UKMTO como ponto de contato de segurança", "reporting": "UKMTO VRS voluntário; VTS/port reporting obrigatório conforme porto e águas jurisdicionais.", "masterFocus": ["Alinhar regras de resposta a hailing/interdição, war-risk cover e autoridade de decisão com CSO.", "Usar navegação redundante contra spoofing/jamming e minas; comparar radar, visual, AIS e DR.", "Elevar fire/security readiness, controlar emissões de informação e preservar comunicações 24/7."], "source": { "name": "JMIC Update 093 · 3 set. 2026", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } },
-    { "id": "gibraltar", "name": "Gibraltar e Mediterrâneo", "region": "Espanha / Marrocos · Atlântico ↔ Mediterrâneo", "risk": "medium", "trafficLabel": "Muito intenso", "trafficTrend": "estruturalmente alto", "trafficBasis": "Não há uma única série oficial comparável para toda a região; a EMSA registra ao menos 16 sistemas IMO obrigatórios em águas europeias.", "market": "Corredor de crude/produtos, contêineres e bunker entre Atlântico, Med, Black Sea e Suez; Algeciras/Gibraltar são hubs operacionais.", "geopolitics": "Risco de guerra baixo no estreito; Mediterrâneo oriental e rotas ligadas ao Mar Negro exigem avaliação própria.", "authority": "Tarifa Traffic / Tangier Traffic e VTS costeiros", "reporting": "GIBREP obrigatório para navios prescritos; outros MRS/VTS variam por subárea.", "masterFocus": ["Planejar correntes, tráfego cruzado, pescadores, vento Levante/Poniente e visibilidade.", "Confirmar GIBREP, TSS, zonas de fundeio/bunker e regras de transferência STS quando aplicável.", "Revalidar SAR/migração, emissões ECA Mediterrâneo e requisitos de resíduos/lastro do destino."], "source": { "name": "IMO — MSC.300(87) / GIBREP", "url": "https://www.imo.org/en/knowledgecentre/indexofimoresolutions/pages/msc-2010-13.aspx" } },
-    { "id": "bab-el-mandeb", "name": "Bab-el-Mandeb / Chifre da África", "region": "Iêmen / Djibuti / Eritreia", "risk": "high", "trafficLabel": "Abaixo do basal", "trafficTrend": "66 navios >1.000 dwt / 48 h", "trafficBasis": "No JMIC Update 093, 1–2 set. somaram 66 navios de carga acima de 1.000 dwt, contra basal histórico de ~61 navios/dia em 2023. É contagem de navios, não gross tonnage nem fluxo de petróleo.", "market": "O fluxo reduzido sustenta ton-miles via Cabo; novos ataques podem ampliar desvios, fretes e seguros rapidamente.", "geopolitics": "JMIC mantém nível SUBSTANTIAL por ameaça Houthi, risco de erro de identificação, GNSS degradado e pirataria nas aproximações do Golfo de Áden.", "authority": "UKMTO / MSCIO / forças marítimas e autoridades costeiras", "reporting": "Registro/reporte voluntário UKMTO e MSCIO no VRA; seguir BMP Maritime Security.", "masterFocus": ["Exigir voyage-specific threat assessment, autorização da companhia e medidas BMP antes do trânsito.", "Revisar citadel, SSAS, drills, damage control, lookout, velocidade e comunicações de emergência.", "Monitorar warnings/advisories em tempo real; a contagem de 48 h não descreve o risco do próximo trânsito."], "source": { "name": "JMIC Update 093 · 3 set. 2026", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314" } },
-    { "id": "panama", "name": "Canal do Panamá", "region": "Panamá · Atlântico ↔ Pacífico", "risk": "medium", "trafficLabel": "Intenso", "trafficTrend": "+5,2% no FY26", "trafficBasis": "Média de 35 trânsitos/dia e 10.726 trânsitos acumulados até 30 jun. 2026, aumento de 5,2% segundo a ACP.", "market": "Disponibilidade de slots e calado afeta distâncias, leilões, fretes e escolha entre Suez, Cabo Horn/Magalhães e rotas norte-americanas.", "geopolitics": "Baixo risco de guerra; riscos dominantes são água, El Niño, congestionamento, calado e confiabilidade operacional.", "authority": "Autoridad del Canal de Panamá (ACP)", "reporting": "ETA, booking, pre-arrival, inspeção e tráfego conforme ACP e agente.", "masterFocus": ["Confirmar slot, maximum authorized draft, fresh-water allowance, air draft e restrições de visibilidade.", "Preparar locomotivas/tugs, chocks/bitts, mooring plan e prontidão de máquinas/steering.", "Recalcular alternativa e bunker para atraso, leilão ou mudança de calado/booking."], "source": { "name": "Autoridad del Canal de Panamá", "url": "https://pancanal.com/en/panama-canal-reports-higher-transits-and-tonnage-while-preparing-to-meet-demand-amid-expected-el-nino-conditions/" } }
+    {
+      "id": "magellan",
+      "name": "Estreito de Magalhães",
+      "region": "Chile · Atlântico ↔ Pacífico",
+      "risk": "medium",
+      "trafficLabel": "Moderado",
+      "trafficTrend": "estável / rota alternativa",
+      "trafficBasis": "Sem série pública consolidada e comparável de trânsitos mercantes no snapshot. A autoridade publica regras operacionais, não um contador diário equivalente aos canais.",
+      "market": "Alternativa a Panamá e Cabo Horn para navios compatíveis; decisão depende de distância, combustível, calado, pilotagem e weather routing.",
+      "geopolitics": "Baixo risco de guerra; exposição predominante é meteorológica e náutica.",
+      "authority": "DIRECTEMAR / Autoridade Marítima do Chile",
+      "reporting": "CHILREP, pontos de controle e VTS; pilotagem conforme zona e características do navio.",
+      "masterFocus": [
+        "Planejar correntes nas Angosturas e Paso Tortuoso; podem superar 3,5 nós.",
+        "VHF 16/70 permanente, reportes de posição e preferência a VLCC/supernavios conforme controle local.",
+        "Confirmar antecedência de solicitação de prático, calado máximo, zona de transferência e abrigo meteorológico."
+      ],
+      "source": {
+        "name": "DIRECTEMAR — Pilotaje Magallanes",
+        "url": "https://www.directemar.cl/directemar/site/edic/base/port/estrechodemagallanes_en.html"
+      }
+    },
+    {
+      "id": "cape-horn",
+      "name": "Cabo Horn",
+      "region": "Chile · Oceano Austral",
+      "risk": "high",
+      "trafficLabel": "Baixo",
+      "trafficTrend": "uso seletivo",
+      "trafficBasis": "Não há série pública consolidada de mercantes no snapshot; fluxo é muito inferior aos canais e ocorre principalmente quando porte, restrições ou estratégia de rota justificam.",
+      "market": "Pode evitar canal/pilotagem, mas aumenta distância e exposição; combustível, ETA e risco de avaria devem ser tratados como custo total.",
+      "geopolitics": "Baixo risco de guerra; risco operacional alto por vento, mar cruzado, swell, gelo e rápida mudança meteorológica.",
+      "authority": "DIRECTEMAR / MRCC Chile",
+      "reporting": "CHILREP quando aplicável às águas chilenas; confirmar limites e plano SAR.",
+      "masterFocus": [
+        "Definir limites de heavy weather, redução de velocidade e heading para esforço estrutural/slamming.",
+        "Proteger convés e manifolds, restringir trabalho externo e revisar condição de lastro.",
+        "Manter margem de combustível e rota de escape para canais/abrigo se operacionalmente disponível."
+      ],
+      "source": {
+        "name": "DIRECTEMAR — Rotas austrais",
+        "url": "https://www.directemar.cl/directemar/site/edic/base/port/estrechodemagallanes_en.html"
+      }
+    },
+    {
+      "id": "sunda",
+      "name": "Estreito de Sunda",
+      "region": "Indonésia · Java ↔ Sumatra",
+      "risk": "medium",
+      "trafficLabel": "Moderado",
+      "trafficTrend": "estável",
+      "trafficBasis": "Sem série oficial pública consolidada localizada; intensidade é inferior a Malaca/Singapura e inclui forte tráfego regional.",
+      "market": "Alternativa para alguns fluxos entre Índico e Mar de Java; limitações de profundidade e rota reduzem a atratividade para grandes petroleiros.",
+      "geopolitics": "Baixo risco de guerra; risco relevante de atividade vulcânica, sismos, tsunami e tráfego local.",
+      "authority": "Direktorat Jenderal Perhubungan Laut / VTS Merak",
+      "reporting": "VTS e reportes locais conforme categoria e setor; confirmar ALRS/ENC vigente.",
+      "masterFocus": [
+        "Avaliar UKC, bancos, correntes de maré, pequenos alvos e travessias de ferry.",
+        "Monitorar alertas de Anak Krakatau e avisos sísmicos/tsunami da Indonésia.",
+        "Preparar redundância de posição e radar plotting em chuva intensa e visibilidade reduzida."
+      ],
+      "source": {
+        "name": "IMO — VTS",
+        "url": "https://www.imo.org/en/OurWork/Safety/Pages/VesselTrafficServices.aspx"
+      }
+    },
+    {
+      "id": "malacca",
+      "name": "Estreito de Malaca",
+      "region": "Malásia / Indonésia · Índico ↔ Ásia",
+      "risk": "medium",
+      "trafficLabel": "Muito intenso",
+      "trafficTrend": "alta demanda asiática",
+      "trafficBasis": "Cerca de 22,8 milhões b/d de petróleo e líquidos atravessaram o corredor em 2025 segundo a EIA; métrica de energia, não contagem de navios.",
+      "market": "Principal artéria energética da Ásia; congestionamento ou bloqueio pressiona fretes, bunker, estoques e rotas via Sunda/Lombok.",
+      "geopolitics": "Baixo risco de guerra imediato, mas alta criticidade estratégica; roubo armado e incidentes de navegação permanecem no radar.",
+      "authority": "VTS da Malásia, Indonésia e Singapura",
+      "reporting": "STRAITREP obrigatório para categorias prescritas nos setores 1–9.",
+      "masterFocus": [
+        "Reforçar BRM, CPA/TCPA, squat e UKC em TSS estreito e tráfego de pesca/local.",
+        "Executar medidas antipirataria e controle de acessos, sobretudo em baixa velocidade/fundeio.",
+        "Confirmar air draft, calado, pilotagem voluntária e contingência de máquinas/steering."
+      ],
+      "source": {
+        "name": "EIA — World Oil Transit Chokepoints",
+        "url": "https://www.eia.gov/international/analysis/special-topics/world_oil_transit_Chokepoints"
+      }
+    },
+    {
+      "id": "singapore",
+      "name": "Estreito de Singapura",
+      "region": "Singapura / Indonésia / Malásia",
+      "risk": "medium",
+      "trafficLabel": "Extremo",
+      "trafficTrend": "crescimento",
+      "trafficBasis": "Singapura recebe em média ~140 mil vessel calls/ano; em 2025 registrou 3,22 bilhões GT de chegadas (+3,5%). Port calls não equivalem a trânsitos do estreito.",
+      "market": "Hub global de bunker, transbordo e refino; atrasos repercutem em fixtures, disponibilidade de combustível e cadeias Ásia–Europa.",
+      "geopolitics": "Baixo risco de guerra; risco dominante é densidade, cruzamentos, embarcações pequenas e falha de propulsão/governo.",
+      "authority": "MPA Singapore / VTIS",
+      "reporting": "STRAITREP obrigatório e requisitos portuários de Singapura quando houver escala.",
+      "masterFocus": [
+        "Briefing específico por setor, reporting point, faixa e frequências VHF.",
+        "Máquinas e steering em prontidão; minimizar distrações e mudanças tardias em TSS.",
+        "Para tanker, alinhar bunker/terminal, HNS/DG declaration, fundeio e limites de manobra."
+      ],
+      "source": {
+        "name": "MPA — Global Hub Port",
+        "url": "https://www.mpa.gov.sg/maritime-singapore/what-maritime-singapore-offers/global-hub-port"
+      }
+    },
+    {
+      "id": "suez",
+      "name": "Canal de Suez",
+      "region": "Egito · Mediterrâneo ↔ Mar Vermelho",
+      "risk": "high",
+      "trafficLabel": "Operando normalmente",
+      "trafficTrend": "tankers estáveis; retorno seletivo",
+      "trafficBasis": "O JMIC Update 093 informa operação normal no canal, fluxo tanker estável e retorno seletivo de porta-contêineres; não publica contagem consolidada diária nesse boletim.",
+      "market": "Reduz distância Ásia–Europa; desvios pelo Cabo elevam ton-miles, consumo, fretes, emissões e demanda por navios.",
+      "geopolitics": "O canal funciona sem interrupção sistêmica, mas o trânsito conecta-se ao risco SUBSTANTIAL no sul do Mar Vermelho/Bab-el-Mandeb.",
+      "authority": "Suez Canal Authority (SCA)",
+      "reporting": "ETA, documentos, inspeção, pilotagem e instruções de comboio via agente/SCA.",
+      "masterFocus": [
+        "Não confundir canal operando com rota integralmente segura: revalidar war-risk, CSO e ameaça até Bab-el-Mandeb.",
+        "Confirmar calado, SCNT, rebocadores, luzes, amarração e readiness para falha de máquinas.",
+        "Planejar squat, bank effect, interação e ordens do prático/controle sem retirar o comando do Master."
+      ],
+      "source": {
+        "name": "JMIC Update 093 / SCA",
+        "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+      }
+    },
+    {
+      "id": "hormuz",
+      "name": "Estreito de Ormuz",
+      "region": "Omã / Irã · Golfo Pérsico",
+      "risk": "critical",
+      "trafficLabel": "Fluxo severamente reduzido",
+      "trafficTrend": "44 trânsitos facilitados / 48 h; abaixo do basal",
+      "trafficBasis": "O JMIC registrou 44 trânsitos facilitados pelo US NCAGS em 1–2 set. (48 h), ante basal histórico de ~138 navios/dia em 2025. Dados independentes indicaram números de um dígito em ambos os sentidos; as coberturas diferem e não devem ser somadas nem tratadas como fluxo oficial de petróleo.",
+      "market": "Qualquer interrupção afeta crude, produtos, LNG, prêmio de seguro, bunker e fretes em escala global; a restrição de fluxo mantém forte aversão a risco.",
+      "geopolitics": "JMIC mantém nível SEVERE: o novo ataque ao SIDR causou duas mortes; persistem hailing, risco de minas, atividade militar e interferência GNSS.",
+      "authority": "Autoridades costeiras / UKMTO como ponto de contato de segurança",
+      "reporting": "UKMTO VRS voluntário; VTS/port reporting obrigatório conforme porto e águas jurisdicionais.",
+      "masterFocus": [
+        "Alinhar regras de resposta a hailing/interdição, war-risk cover e autoridade de decisão com CSO.",
+        "Usar navegação redundante contra spoofing/jamming e minas; comparar radar, visual, AIS e DR.",
+        "Elevar fire/security readiness, controlar emissões de informação e preservar comunicações 24/7."
+      ],
+      "source": {
+        "name": "JMIC Update 093 · 3 set. 2026",
+        "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+      }
+    },
+    {
+      "id": "gibraltar",
+      "name": "Gibraltar e Mediterrâneo",
+      "region": "Espanha / Marrocos · Atlântico ↔ Mediterrâneo",
+      "risk": "medium",
+      "trafficLabel": "Muito intenso",
+      "trafficTrend": "estruturalmente alto",
+      "trafficBasis": "Não há uma única série oficial comparável para toda a região; a EMSA registra ao menos 16 sistemas IMO obrigatórios em águas europeias.",
+      "market": "Corredor de crude/produtos, contêineres e bunker entre Atlântico, Med, Black Sea e Suez; Algeciras/Gibraltar são hubs operacionais.",
+      "geopolitics": "Risco de guerra baixo no estreito; Mediterrâneo oriental e rotas ligadas ao Mar Negro exigem avaliação própria.",
+      "authority": "Tarifa Traffic / Tangier Traffic e VTS costeiros",
+      "reporting": "GIBREP obrigatório para navios prescritos; outros MRS/VTS variam por subárea.",
+      "masterFocus": [
+        "Planejar correntes, tráfego cruzado, pescadores, vento Levante/Poniente e visibilidade.",
+        "Confirmar GIBREP, TSS, zonas de fundeio/bunker e regras de transferência STS quando aplicável.",
+        "Revalidar SAR/migração, emissões ECA Mediterrâneo e requisitos de resíduos/lastro do destino."
+      ],
+      "source": {
+        "name": "IMO — MSC.300(87) / GIBREP",
+        "url": "https://www.imo.org/en/knowledgecentre/indexofimoresolutions/pages/msc-2010-13.aspx"
+      }
+    },
+    {
+      "id": "bab-el-mandeb",
+      "name": "Bab-el-Mandeb / Chifre da África",
+      "region": "Iêmen / Djibuti / Eritreia",
+      "risk": "high",
+      "trafficLabel": "Abaixo do basal",
+      "trafficTrend": "66 navios >1.000 dwt / 48 h",
+      "trafficBasis": "No JMIC Update 093, 1–2 set. somaram 66 navios de carga acima de 1.000 dwt, contra basal histórico de ~61 navios/dia em 2023. É contagem de navios, não gross tonnage nem fluxo de petróleo.",
+      "market": "O fluxo reduzido sustenta ton-miles via Cabo; novos ataques podem ampliar desvios, fretes e seguros rapidamente.",
+      "geopolitics": "JMIC mantém nível SUBSTANTIAL por ameaça Houthi, risco de erro de identificação, GNSS degradado e pirataria nas aproximações do Golfo de Áden.",
+      "authority": "UKMTO / MSCIO / forças marítimas e autoridades costeiras",
+      "reporting": "Registro/reporte voluntário UKMTO e MSCIO no VRA; seguir BMP Maritime Security.",
+      "masterFocus": [
+        "Exigir voyage-specific threat assessment, autorização da companhia e medidas BMP antes do trânsito.",
+        "Revisar citadel, SSAS, drills, damage control, lookout, velocidade e comunicações de emergência.",
+        "Monitorar warnings/advisories em tempo real; a contagem de 48 h não descreve o risco do próximo trânsito."
+      ],
+      "source": {
+        "name": "JMIC Update 093 · 3 set. 2026",
+        "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+      }
+    },
+    {
+      "id": "panama",
+      "name": "Canal do Panamá",
+      "region": "Panamá · Atlântico ↔ Pacífico",
+      "risk": "medium",
+      "trafficLabel": "Intenso",
+      "trafficTrend": "+5,2% no FY26",
+      "trafficBasis": "Média de 35 trânsitos/dia e 10.726 trânsitos acumulados até 30 jun. 2026, aumento de 5,2% segundo a ACP.",
+      "market": "Disponibilidade de slots e calado afeta distâncias, leilões, fretes e escolha entre Suez, Cabo Horn/Magalhães e rotas norte-americanas.",
+      "geopolitics": "Baixo risco de guerra; riscos dominantes são água, El Niño, congestionamento, calado e confiabilidade operacional.",
+      "authority": "Autoridad del Canal de Panamá (ACP)",
+      "reporting": "ETA, booking, pre-arrival, inspeção e tráfego conforme ACP e agente.",
+      "masterFocus": [
+        "Confirmar slot, maximum authorized draft, fresh-water allowance, air draft e restrições de visibilidade.",
+        "Preparar locomotivas/tugs, chocks/bitts, mooring plan e prontidão de máquinas/steering.",
+        "Recalcular alternativa e bunker para atraso, leilão ou mudança de calado/booking."
+      ],
+      "source": {
+        "name": "Autoridad del Canal de Panamá",
+        "url": "https://pancanal.com/en/panama-canal-reports-higher-transits-and-tonnage-while-preparing-to-meet-demand-amid-expected-el-nino-conditions/"
+      }
+    }
   ],
   "reportingSystems": [
-    { "id": "ukmto", "name": "UKMTO VRS", "region": "Mar Vermelho, Golfo de Áden, Mar Arábico, Índico e Golfo", "type": "voluntary", "appliesTo": "Mercantes de qualquer bandeira no VRA", "when": "Initial ao entrar; daily 0800 UTC; final ao sair/chegar; incident imediato", "report": "Posição, rumo, velocidade, destino, contatos e situação de segurança", "authority": "UKMTO Operations Centre", "source": { "name": "UKMTO Reporting Formats", "url": "https://www.ukmto.org/reporting-formats" } },
-    { "id": "mscio", "name": "MSCIO / MSCHOA Registration", "region": "Western Indian Ocean VRA", "type": "voluntary", "appliesTo": "Operador/CSO/Master em trânsito na área de risco", "when": "Registrar antes/ao entrar e manter reportes de posição conforme orientação", "report": "Voyage, contatos, tripulação, ETA e posição", "authority": "Maritime Security Centre Indian Ocean", "source": { "name": "MSCIO Reporting", "url": "https://www.mscio.eu/reporting/" } },
-    { "id": "mdat-gog", "name": "MDAT-GoG VRS", "region": "Golfo da Guiné / costa oeste africana", "type": "voluntary", "appliesTo": "Mercantes operando na VRA do Golfo da Guiné", "when": "Initial, position/daily, final e incident conforme BMP West Africa", "report": "Plano, posição, contatos e evento de segurança", "authority": "MDAT-GoG / MICA Centre", "source": { "name": "MSCIO — Global BMP Annex B", "url": "https://mscio.eu/bmp/globals-bmp/globals-bmp-annex-b/" } },
-    { "id": "amver", "name": "AMVER", "region": "Mundial", "type": "voluntary", "appliesTo": "Navios mercantes; especialmente >1.000 GT em viagens >24 h", "when": "Sailing plan, position, deviation e arrival conforme manual AMVER", "report": "Rota e posições para coordenação SAR; dados não são serviço de tráfego", "authority": "U.S. Coast Guard", "source": { "name": "USCG — AMVER", "url": "https://www.dco.uscg.mil/Our-Organization/Assistant-Commandant-for-Response-Policy-CG-5R/Office-of-Incident-Management-Preparedness-CG-5RI/US-Coast-Guard-Office-of-Search-and-Rescue-CG-SAR/CG-SAR-2/" } },
-    { "id": "straitrep", "name": "STRAITREP", "region": "Estreitos de Malaca e Singapura · setores 1–9", "type": "mandatory", "appliesTo": "Categorias prescritas pela IMO, incluindo grandes mercantes e navios com carga perigosa", "when": "Ao cruzar reporting points/entrar nos setores designados", "report": "Nome/call sign, posição, rumo, velocidade, calado, carga perigosa, defeitos e destino", "authority": "VTS Klang / Johor / Singapore VTIS", "source": { "name": "MPA — STRAITREP Format", "url": "https://www.mpa.gov.sg/port-marine-ops/operations/vessel-traffic-information-system/reporting-format" } },
-    { "id": "chilrep", "name": "CHILREP", "region": "Águas jurisdicionais chilenas / zona austral", "type": "conditional", "appliesTo": "Navios sujeitos às regras chilenas e aos setores/pilotagem especificados", "when": "08:00 e 20:00 local; até cada 4 h em trecho de Magalhães sem prático, conforme caso", "report": "Nome/call sign, hora, posição, rumo, velocidade e meteo/observações", "authority": "DIRECTEMAR / estações de controle", "source": { "name": "DIRECTEMAR — CHILREP", "url": "https://www.directemar.cl/directemar/site/edic/base/port/estrechodemagallanes_en.html" } },
-    { "id": "gibrep", "name": "GIBREP", "region": "Estreito de Gibraltar", "type": "mandatory", "appliesTo": "Categorias prescritas na Resolução IMO MSC.300(87)", "when": "Nos meridianos/reporting points para tráfego eastbound ou westbound", "report": "Identidade, posição, rumo, velocidade, carga, defeitos e perigos", "authority": "Tarifa Traffic / Tangier Traffic", "source": { "name": "IMO — MSC.300(87)", "url": "https://www.imo.org/en/knowledgecentre/indexofimoresolutions/pages/msc-2010-13.aspx" } },
-    { "id": "wetrep", "name": "WETREP", "region": "PSSA da Europa Ocidental · Portugal ao norte do Reino Unido", "type": "mandatory", "appliesTo": "Determinadas classes de oil tanker entrando na área", "when": "Antes/ao entrar conforme SN/Circ.242 e estações designadas", "report": "Identidade, rota, carga de óleo, defeitos e informações de segurança", "authority": "Autoridades costeiras participantes", "source": { "name": "UK MCA — SOLAS V / WETREP", "url": "https://www.gov.uk/government/publications/mgn-610-mf-amendment-1-solas-chapter-v-guidance-on-the-merchant-shipping-safety-of-navigation-regulations-2020/mgn-610-mf-amendment-1-navigation-solas-chapter-v-guidance-on-the-merchant-shipping-safety-of-navigation-regulations-2020" } },
-    { "id": "belt-sound", "name": "BELTREP / SOUNDREP", "region": "Great Belt e Øresund · Dinamarca/Suécia", "type": "mandatory", "appliesTo": "Navios de porte/categoria prescritos", "when": "Ao entrar/cruzar reporting lines e pontos dos sistemas", "report": "Identidade, posição, rota, calado, carga perigosa e defeitos", "authority": "VTS Great Belt / VTS Øresund", "source": { "name": "Danish Maritime Authority", "url": "https://www.dma.dk/safety-at-sea/safety-of-navigation/mandatory-ship-reporting-systems-msrs-and-vessel-traffic-services-vts" } },
-    { "id": "reefrep", "name": "REEFREP", "region": "Great Barrier Reef e Torres Strait · Austrália", "type": "mandatory", "appliesTo": "Navios prescritos na Marine Order 63 / resolução IMO", "when": "Pre-entry e nos eventos/pontos determinados pelo REEFVTS", "report": "Plano, posição, calado, carga perigosa, defeitos e pilotagem", "authority": "REEFVTS / AMSA / Maritime Safety Queensland", "source": { "name": "AMSA — Marine Order 63", "url": "https://www.amsa.gov.au/about/regulations-and-standards/marine-order-63-vessel-reporting-systems" } },
-    { "id": "canada-vts", "name": "ECAREG / NORDREG / Canada VTS", "region": "Águas orientais, ocidentais e Ártico canadense", "type": "mandatory", "appliesTo": "SOR/2025-275: navios prescritos de 300 GT ou mais; rebocadores/empurradores com 500 GT ou mais combinados; e navios com carga poluente ou perigosa", "when": "Sailing Plan no CVMS pelo menos 24 h antes de entrar; reportes de posição, desvio relevante e final conforme a zona", "report": "Formulário VTS/CVMS: viagem, posição, carga perigosa/poluente, defeitos, certificados e destino", "authority": "Canadian Coast Guard MCTS", "source": { "name": "CCG — Radio Aids 2026", "url": "https://www.canada.ca/en/canadian-coast-guard/corporate/publications/radio-aids-marine-navigation/vessel-traffic-services.html" } },
-    { "id": "suez-report", "name": "Suez Canal Transit Reporting", "region": "Canal de Suez", "type": "mandatory", "appliesTo": "Todo navio solicitando trânsito", "when": "ETA/pre-arrival, chegada, inspeção e durante comboio conforme SCA", "report": "Particulares, dimensões/calado, carga, certificados, defeitos e trânsito", "authority": "Suez Canal Authority via agente", "source": { "name": "SCA — Navigation", "url": "https://www.suezcanal.gov.eg/English/Navigation/Pages/default.aspx" } },
-    { "id": "panama-report", "name": "Panama Canal Transit Reporting", "region": "Canal do Panamá", "type": "mandatory", "appliesTo": "Todo navio solicitando booking/trânsito", "when": "ETA e pre-arrival nos prazos ACP; atualizações e reportes de chegada/trânsito", "report": "Particulares, calado, carga perigosa, certificados, defeitos e booking", "authority": "Autoridad del Canal de Panamá via agente", "source": { "name": "ACP — Maritime Services", "url": "https://pancanal.com/en/maritime-services/" } }
+    {
+      "id": "ukmto",
+      "name": "UKMTO VRS",
+      "region": "Mar Vermelho, Golfo de Áden, Mar Arábico, Índico e Golfo",
+      "type": "voluntary",
+      "appliesTo": "Mercantes de qualquer bandeira no VRA",
+      "when": "Initial ao entrar; daily 0800 UTC; final ao sair/chegar; incident imediato",
+      "report": "Posição, rumo, velocidade, destino, contatos e situação de segurança",
+      "authority": "UKMTO Operations Centre",
+      "source": {
+        "name": "UKMTO Reporting Formats",
+        "url": "https://www.ukmto.org/reporting-formats"
+      }
+    },
+    {
+      "id": "mscio",
+      "name": "MSCIO / MSCHOA Registration",
+      "region": "Western Indian Ocean VRA",
+      "type": "voluntary",
+      "appliesTo": "Operador/CSO/Master em trânsito na área de risco",
+      "when": "Registrar antes/ao entrar e manter reportes de posição conforme orientação",
+      "report": "Voyage, contatos, tripulação, ETA e posição",
+      "authority": "Maritime Security Centre Indian Ocean",
+      "source": {
+        "name": "MSCIO Reporting",
+        "url": "https://www.mscio.eu/reporting/"
+      }
+    },
+    {
+      "id": "mdat-gog",
+      "name": "MDAT-GoG VRS",
+      "region": "Golfo da Guiné / costa oeste africana",
+      "type": "voluntary",
+      "appliesTo": "Mercantes operando na VRA do Golfo da Guiné",
+      "when": "Initial, position/daily, final e incident conforme BMP West Africa",
+      "report": "Plano, posição, contatos e evento de segurança",
+      "authority": "MDAT-GoG / MICA Centre",
+      "source": {
+        "name": "MSCIO — Global BMP Annex B",
+        "url": "https://mscio.eu/bmp/globals-bmp/globals-bmp-annex-b/"
+      }
+    },
+    {
+      "id": "amver",
+      "name": "AMVER",
+      "region": "Mundial",
+      "type": "voluntary",
+      "appliesTo": "Navios mercantes; especialmente >1.000 GT em viagens >24 h",
+      "when": "Sailing plan, position, deviation e arrival conforme manual AMVER",
+      "report": "Rota e posições para coordenação SAR; dados não são serviço de tráfego",
+      "authority": "U.S. Coast Guard",
+      "source": {
+        "name": "USCG — AMVER",
+        "url": "https://www.dco.uscg.mil/Our-Organization/Assistant-Commandant-for-Response-Policy-CG-5R/Office-of-Incident-Management-Preparedness-CG-5RI/US-Coast-Guard-Office-of-Search-and-Rescue-CG-SAR/CG-SAR-2/"
+      }
+    },
+    {
+      "id": "straitrep",
+      "name": "STRAITREP",
+      "region": "Estreitos de Malaca e Singapura · setores 1–9",
+      "type": "mandatory",
+      "appliesTo": "Categorias prescritas pela IMO, incluindo grandes mercantes e navios com carga perigosa",
+      "when": "Ao cruzar reporting points/entrar nos setores designados",
+      "report": "Nome/call sign, posição, rumo, velocidade, calado, carga perigosa, defeitos e destino",
+      "authority": "VTS Klang / Johor / Singapore VTIS",
+      "source": {
+        "name": "MPA — STRAITREP Format",
+        "url": "https://www.mpa.gov.sg/port-marine-ops/operations/vessel-traffic-information-system/reporting-format"
+      }
+    },
+    {
+      "id": "chilrep",
+      "name": "CHILREP",
+      "region": "Águas jurisdicionais chilenas / zona austral",
+      "type": "conditional",
+      "appliesTo": "Navios sujeitos às regras chilenas e aos setores/pilotagem especificados",
+      "when": "08:00 e 20:00 local; até cada 4 h em trecho de Magalhães sem prático, conforme caso",
+      "report": "Nome/call sign, hora, posição, rumo, velocidade e meteo/observações",
+      "authority": "DIRECTEMAR / estações de controle",
+      "source": {
+        "name": "DIRECTEMAR — CHILREP",
+        "url": "https://www.directemar.cl/directemar/site/edic/base/port/estrechodemagallanes_en.html"
+      }
+    },
+    {
+      "id": "gibrep",
+      "name": "GIBREP",
+      "region": "Estreito de Gibraltar",
+      "type": "mandatory",
+      "appliesTo": "Categorias prescritas na Resolução IMO MSC.300(87)",
+      "when": "Nos meridianos/reporting points para tráfego eastbound ou westbound",
+      "report": "Identidade, posição, rumo, velocidade, carga, defeitos e perigos",
+      "authority": "Tarifa Traffic / Tangier Traffic",
+      "source": {
+        "name": "IMO — MSC.300(87)",
+        "url": "https://www.imo.org/en/knowledgecentre/indexofimoresolutions/pages/msc-2010-13.aspx"
+      }
+    },
+    {
+      "id": "wetrep",
+      "name": "WETREP",
+      "region": "PSSA da Europa Ocidental · Portugal ao norte do Reino Unido",
+      "type": "mandatory",
+      "appliesTo": "Determinadas classes de oil tanker entrando na área",
+      "when": "Antes/ao entrar conforme SN/Circ.242 e estações designadas",
+      "report": "Identidade, rota, carga de óleo, defeitos e informações de segurança",
+      "authority": "Autoridades costeiras participantes",
+      "source": {
+        "name": "UK MCA — SOLAS V / WETREP",
+        "url": "https://www.gov.uk/government/publications/mgn-610-mf-amendment-1-solas-chapter-v-guidance-on-the-merchant-shipping-safety-of-navigation-regulations-2020/mgn-610-mf-amendment-1-navigation-solas-chapter-v-guidance-on-the-merchant-shipping-safety-of-navigation-regulations-2020"
+      }
+    },
+    {
+      "id": "belt-sound",
+      "name": "BELTREP / SOUNDREP",
+      "region": "Great Belt e Øresund · Dinamarca/Suécia",
+      "type": "mandatory",
+      "appliesTo": "Navios de porte/categoria prescritos",
+      "when": "Ao entrar/cruzar reporting lines e pontos dos sistemas",
+      "report": "Identidade, posição, rota, calado, carga perigosa e defeitos",
+      "authority": "VTS Great Belt / VTS Øresund",
+      "source": {
+        "name": "Danish Maritime Authority",
+        "url": "https://www.dma.dk/safety-at-sea/safety-of-navigation/mandatory-ship-reporting-systems-msrs-and-vessel-traffic-services-vts"
+      }
+    },
+    {
+      "id": "reefrep",
+      "name": "REEFREP",
+      "region": "Great Barrier Reef e Torres Strait · Austrália",
+      "type": "mandatory",
+      "appliesTo": "Navios prescritos na Marine Order 63 / resolução IMO",
+      "when": "Pre-entry e nos eventos/pontos determinados pelo REEFVTS",
+      "report": "Plano, posição, calado, carga perigosa, defeitos e pilotagem",
+      "authority": "REEFVTS / AMSA / Maritime Safety Queensland",
+      "source": {
+        "name": "AMSA — Marine Order 63",
+        "url": "https://www.amsa.gov.au/about/regulations-and-standards/marine-order-63-vessel-reporting-systems"
+      }
+    },
+    {
+      "id": "canada-vts",
+      "name": "ECAREG / NORDREG / Canada VTS",
+      "region": "Águas orientais, ocidentais e Ártico canadense",
+      "type": "mandatory",
+      "appliesTo": "SOR/2025-275: navios prescritos de 300 GT ou mais; rebocadores/empurradores com 500 GT ou mais combinados; e navios com carga poluente ou perigosa",
+      "when": "Sailing Plan no CVMS pelo menos 24 h antes de entrar; reportes de posição, desvio relevante e final conforme a zona",
+      "report": "Formulário VTS/CVMS: viagem, posição, carga perigosa/poluente, defeitos, certificados e destino",
+      "authority": "Canadian Coast Guard MCTS",
+      "source": {
+        "name": "CCG — Radio Aids 2026",
+        "url": "https://www.canada.ca/en/canadian-coast-guard/corporate/publications/radio-aids-marine-navigation/vessel-traffic-services.html"
+      }
+    },
+    {
+      "id": "suez-report",
+      "name": "Suez Canal Transit Reporting",
+      "region": "Canal de Suez",
+      "type": "mandatory",
+      "appliesTo": "Todo navio solicitando trânsito",
+      "when": "ETA/pre-arrival, chegada, inspeção e durante comboio conforme SCA",
+      "report": "Particulares, dimensões/calado, carga, certificados, defeitos e trânsito",
+      "authority": "Suez Canal Authority via agente",
+      "source": {
+        "name": "SCA — Navigation",
+        "url": "https://www.suezcanal.gov.eg/English/Navigation/Pages/default.aspx"
+      }
+    },
+    {
+      "id": "panama-report",
+      "name": "Panama Canal Transit Reporting",
+      "region": "Canal do Panamá",
+      "type": "mandatory",
+      "appliesTo": "Todo navio solicitando booking/trânsito",
+      "when": "ETA e pre-arrival nos prazos ACP; atualizações e reportes de chegada/trânsito",
+      "report": "Particulares, calado, carga perigosa, certificados, defeitos e booking",
+      "authority": "Autoridad del Canal de Panamá via agente",
+      "source": {
+        "name": "ACP — Maritime Services",
+        "url": "https://pancanal.com/en/maritime-services/"
+      }
+    }
   ],
   "psc": {
-    "campaign": "Cargo Securing of Cargo Units and Cargo Transport Units", "mous": ["Paris", "Tokyo", "Viña del Mar", "Black Sea"], "start": "2026-09-01", "end": "2026-11-30", "statusLabel": "4 CONFIRMADAS", "pulseLabel": "4 CICs ativas",
-    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea têm publicação oficial localizada; Abuja anunciou o tema, com detalhes públicos ainda incompletos no snapshot.", "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
-    "readiness": ["Preparar matriz PSC específica do próximo porto, regime e histórico do navio.", "Cargo Securing Manual: justificar e evidenciar N/A para petroleiro sem CTUs convencionais.", "Priorizar ISM, fire safety, emergency systems, pollution prevention, MLC e condição estrutural/maquinário.", "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.", "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."],
+    "campaign": "Cargo Securing of Cargo Units and Cargo Transport Units",
+    "mous": [
+      "Paris",
+      "Tokyo",
+      "Viña del Mar",
+      "Black Sea"
+    ],
+    "start": "2026-09-01",
+    "end": "2026-11-30",
+    "statusLabel": "4 CONFIRMADAS",
+    "pulseLabel": "4 CICs ativas",
+    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea têm publicação oficial localizada; Abuja anunciou o tema, com detalhes públicos ainda incompletos no snapshot.",
+    "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
+    "readiness": [
+      "Preparar matriz PSC específica do próximo porto, regime e histórico do navio.",
+      "Cargo Securing Manual: justificar e evidenciar N/A para petroleiro sem CTUs convencionais.",
+      "Priorizar ISM, fire safety, emergency systems, pollution prevention, MLC e condição estrutural/maquinário.",
+      "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
+      "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
+    ],
     "note": "Cobertura mundial não significa uma campanha ativa em todos os regimes. Onde não foi localizada publicação oficial 2026, o portal mostra isso expressamente e mantém o link da autoridade para confirmação pré-chegada.",
     "regimes": [
-      { "name": "Paris MoU", "region": "Europa + Atlântico Norte", "status": "active", "campaign": "Cargo Securing 2026", "window": "01 set. — 30 nov. 2026", "tankerFocus": "Aplicabilidade de CTUs pode ser limitada; documentar N/A e manter forte prontidão SOLAS/ISM/MARPOL.", "source": { "name": "Paris MoU", "url": "https://parismou.org/paris-and-tokyo-mous-launch-2026-concentrated-inspection-campaign-on-cargo-securing/" } },
-      { "name": "Tokyo MoU", "region": "Ásia-Pacífico", "status": "active", "campaign": "Cargo Securing 2026", "window": "01 set. — 30 nov. 2026", "tankerFocus": "Além do questionário, atenção a fire safety, emergency systems, ISM e prevenção de poluição.", "source": { "name": "Tokyo MoU", "url": "https://www.tokyo-mou.org/press-releases/2026/08/03/joint-press-release-on-the-concentrated-inspection-campaign-on-cargo-securing/" } },
-      { "name": "Viña del Mar Agreement", "region": "América Latina", "status": "active", "campaign": "Cargo Securing 2026", "window": "01 set. — 30 nov. 2026", "tankerFocus": "Confirmar implementação local no porto; coerência de registros, equipamentos e justificativas N/A.", "source": { "name": "Acuerdo de Viña del Mar", "url": "https://alvm.prefecturanaval.gob.ar/el-acuerdo-de-vi-a-del-mar-anuncia-el-lanzamiento-de-la-campa-a-concentrada-de-inspecciones-cic-2026-sobre-sujeci-n-de-la-carga-dt64414" } },
-      { "name": "Black Sea MoU", "region": "Mar Negro", "status": "active", "campaign": "Cargo Securing 2026", "window": "Campanha 2026 publicada; confirmar janela local", "tankerFocus": "Somar risco regional/war-risk à prontidão PSC; documentação e condição real devem permanecer acessíveis.", "source": { "name": "Black Sea MoU", "url": "https://bsmou.org/2026/08/press-release-cic-on-cargo-securing/" } },
-      { "name": "Abuja MoU", "region": "África Ocidental e Central", "status": "announced", "campaign": "Tema Cargo Securing endossado", "window": "Detalhes completos não publicados no snapshot", "tankerFocus": "Não aguardar questionário: preparar SOLAS/ISM/MARPOL e security para portos da região.", "source": { "name": "Abuja MoU", "url": "https://abujamou.org/15th-port-state-control-committee-pscc15-and-3rd-bureau-meetings-of-the-abuja-mou/" } },
-      { "name": "Mediterranean MoU", "region": "Sul e leste do Mediterrâneo", "status": "unconfirmed", "campaign": "Sem anúncio oficial 2026 localizado", "window": "Confirmar antes da escala", "tankerFocus": "Aplicar readiness de rotina e verificar instruções da autoridade portuária/Estado do porto.", "source": { "name": "Mediterranean MoU", "url": "https://www.medmou.org/" } },
-      { "name": "Indian Ocean MoU", "region": "Índico", "status": "unconfirmed", "campaign": "Sem confirmação oficial pública localizada", "window": "Confirmar antes da escala", "tankerFocus": "Foco provável inclui safety, MARPOL e condição do navio; não tratar notícia de indústria como campanha confirmada.", "source": { "name": "Indian Ocean MoU", "url": "https://www.iomou.org/" } },
-      { "name": "Caribbean MoU", "region": "Caribe", "status": "unconfirmed", "campaign": "Sem campanha 2026 publicada na página consultada", "window": "Últimas campanhas públicas visíveis: 2025", "tankerFocus": "Revisar MARPOL, sewage, stability, ISM, fire safety e requisitos do terminal/porto.", "source": { "name": "Caribbean MoU", "url": "https://www.caribbeanmou.org/latest-news" } },
-      { "name": "Riyadh MoU", "region": "Golfo Pérsico", "status": "unconfirmed", "campaign": "Sem campanha 2026 pública localizada", "window": "Confirmar antes da escala", "tankerFocus": "Somar PSC regular à exposição de segurança, GNSS e requisitos rigorosos de terminais petrolíferos.", "source": { "name": "Riyadh MoU", "url": "https://riyadhmou.org/" } },
-      { "name": "USCG Port State Control", "region": "Estados Unidos", "status": "national", "campaign": "Regime nacional baseado em risco", "window": "Contínuo; sem CIC nacional 2026 localizada", "tankerFocus": "Priorizar Qualship/E-Zero, exams, OCMI/COTP, VRP, pollution prevention, security e prontidão operacional.", "source": { "name": "USCG Port State Control", "url": "https://www.dco.uscg.mil/Our-Organization/Assistant-Commandant-for-Prevention-Policy-CG-5P/Inspections-Compliance-CG-5PC-/Commercial-Vessel-Compliance/Foreign-Offshore-Compliance-Division/Port-State-Control/" } }
+      {
+        "name": "Paris MoU",
+        "region": "Europa + Atlântico Norte",
+        "status": "active",
+        "campaign": "Cargo Securing 2026",
+        "window": "01 set. — 30 nov. 2026",
+        "tankerFocus": "Aplicabilidade de CTUs pode ser limitada; documentar N/A e manter forte prontidão SOLAS/ISM/MARPOL.",
+        "source": {
+          "name": "Paris MoU",
+          "url": "https://parismou.org/paris-and-tokyo-mous-launch-2026-concentrated-inspection-campaign-on-cargo-securing/"
+        }
+      },
+      {
+        "name": "Tokyo MoU",
+        "region": "Ásia-Pacífico",
+        "status": "active",
+        "campaign": "Cargo Securing 2026",
+        "window": "01 set. — 30 nov. 2026",
+        "tankerFocus": "Além do questionário, atenção a fire safety, emergency systems, ISM e prevenção de poluição.",
+        "source": {
+          "name": "Tokyo MoU",
+          "url": "https://www.tokyo-mou.org/press-releases/2026/08/03/joint-press-release-on-the-concentrated-inspection-campaign-on-cargo-securing/"
+        }
+      },
+      {
+        "name": "Viña del Mar Agreement",
+        "region": "América Latina",
+        "status": "active",
+        "campaign": "Cargo Securing 2026",
+        "window": "01 set. — 30 nov. 2026",
+        "tankerFocus": "Confirmar implementação local no porto; coerência de registros, equipamentos e justificativas N/A.",
+        "source": {
+          "name": "Acuerdo de Viña del Mar",
+          "url": "https://alvm.prefecturanaval.gob.ar/el-acuerdo-de-vi-a-del-mar-anuncia-el-lanzamiento-de-la-campa-a-concentrada-de-inspecciones-cic-2026-sobre-sujeci-n-de-la-carga-dt64414"
+        }
+      },
+      {
+        "name": "Black Sea MoU",
+        "region": "Mar Negro",
+        "status": "active",
+        "campaign": "Cargo Securing 2026",
+        "window": "Campanha 2026 publicada; confirmar janela local",
+        "tankerFocus": "Somar risco regional/war-risk à prontidão PSC; documentação e condição real devem permanecer acessíveis.",
+        "source": {
+          "name": "Black Sea MoU",
+          "url": "https://bsmou.org/2026/08/press-release-cic-on-cargo-securing/"
+        }
+      },
+      {
+        "name": "Abuja MoU",
+        "region": "África Ocidental e Central",
+        "status": "announced",
+        "campaign": "Tema Cargo Securing endossado",
+        "window": "Detalhes completos não publicados no snapshot",
+        "tankerFocus": "Não aguardar questionário: preparar SOLAS/ISM/MARPOL e security para portos da região.",
+        "source": {
+          "name": "Abuja MoU",
+          "url": "https://abujamou.org/15th-port-state-control-committee-pscc15-and-3rd-bureau-meetings-of-the-abuja-mou/"
+        }
+      },
+      {
+        "name": "Mediterranean MoU",
+        "region": "Sul e leste do Mediterrâneo",
+        "status": "unconfirmed",
+        "campaign": "Sem anúncio oficial 2026 localizado",
+        "window": "Confirmar antes da escala",
+        "tankerFocus": "Aplicar readiness de rotina e verificar instruções da autoridade portuária/Estado do porto.",
+        "source": {
+          "name": "Mediterranean MoU",
+          "url": "https://www.medmou.org/"
+        }
+      },
+      {
+        "name": "Indian Ocean MoU",
+        "region": "Índico",
+        "status": "unconfirmed",
+        "campaign": "Sem confirmação oficial pública localizada",
+        "window": "Confirmar antes da escala",
+        "tankerFocus": "Foco provável inclui safety, MARPOL e condição do navio; não tratar notícia de indústria como campanha confirmada.",
+        "source": {
+          "name": "Indian Ocean MoU",
+          "url": "https://www.iomou.org/"
+        }
+      },
+      {
+        "name": "Caribbean MoU",
+        "region": "Caribe",
+        "status": "unconfirmed",
+        "campaign": "Sem campanha 2026 publicada na página consultada",
+        "window": "Últimas campanhas públicas visíveis: 2025",
+        "tankerFocus": "Revisar MARPOL, sewage, stability, ISM, fire safety e requisitos do terminal/porto.",
+        "source": {
+          "name": "Caribbean MoU",
+          "url": "https://www.caribbeanmou.org/latest-news"
+        }
+      },
+      {
+        "name": "Riyadh MoU",
+        "region": "Golfo Pérsico",
+        "status": "unconfirmed",
+        "campaign": "Sem campanha 2026 pública localizada",
+        "window": "Confirmar antes da escala",
+        "tankerFocus": "Somar PSC regular à exposição de segurança, GNSS e requisitos rigorosos de terminais petrolíferos.",
+        "source": {
+          "name": "Riyadh MoU",
+          "url": "https://riyadhmou.org/"
+        }
+      },
+      {
+        "name": "USCG Port State Control",
+        "region": "Estados Unidos",
+        "status": "national",
+        "campaign": "Regime nacional baseado em risco",
+        "window": "Contínuo; sem CIC nacional 2026 localizada",
+        "tankerFocus": "Priorizar Qualship/E-Zero, exams, OCMI/COTP, VRP, pollution prevention, security e prontidão operacional.",
+        "source": {
+          "name": "USCG Port State Control",
+          "url": "https://www.dco.uscg.mil/Our-Organization/Assistant-Commandant-for-Prevention-Policy-CG-5P/Inspections-Compliance-CG-5PC-/Commercial-Vessel-Compliance/Foreign-Offshore-Compliance-Division/Port-State-Control/"
+        }
+      }
     ]
   },
   "petrobras": {
-    "periodLabel": "RESULTADOS CONSOLIDADOS 2T26", "headline": "Produção recorde amplia exportação e atividade marítima", "summary": "A produção própria alcançou 3,34 milhões de boed e as exportações se aproximaram de 1 milhão de barris por dia, reforçando o escoamento de longo curso do pré-sal.",
-    "metrics": [{ "label": "Produção própria", "value": "3,34 mi boed" }, { "label": "Exportações", "value": "~1 mi bpd" }, { "label": "Produção operada", "value": "4,87 mi boed" }],
+    "periodLabel": "RESULTADOS CONSOLIDADOS 2T26",
+    "headline": "Produção recorde amplia exportação e atividade marítima",
+    "summary": "A produção própria alcançou 3,34 milhões de boed e as exportações se aproximaram de 1 milhão de barris por dia, reforçando o escoamento de longo curso do pré-sal.",
+    "metrics": [
+      {
+        "label": "Produção própria",
+        "value": "3,34 mi boed"
+      },
+      {
+        "label": "Exportações",
+        "value": "~1 mi bpd"
+      },
+      {
+        "label": "Produção operada",
+        "value": "4,87 mi boed"
+      }
+    ],
     "markets": [
-      { "ticker": "PETR3", "market": "B3 · ON", "price": 52.58, "currencySymbol": "R$", "changePercent": -1.79, "trend": "Baixa no dia", "capturedAtLabel": "3 set. 2026 · fechamento", "sourceUrl": "https://www.infomoney.com.br/cotacoes/b3/acao/petrobras-petr3/" },
-      { "ticker": "PETR4", "market": "B3 · PN", "price": 47.56, "currencySymbol": "R$", "changePercent": -1.33, "trend": "Baixa no dia", "capturedAtLabel": "3 set. 2026 · fechamento", "sourceUrl": "https://www.infomoney.com.br/cotacoes/b3/acao/petrobras-petr4/" },
-      { "ticker": "PBR", "market": "NYSE · ADR ON", "price": 20.51, "currencySymbol": "US$", "changePercent": -1.68, "trend": "Baixa no dia", "capturedAtLabel": "3 set. 2026 · fechamento", "sourceUrl": "https://www.marketwatch.com/investing/stock/pbr" },
-      { "ticker": "PBR.A", "market": "NYSE · ADR PN", "price": 18.58, "currencySymbol": "US$", "changePercent": -1.22, "trend": "Baixa no dia", "capturedAtLabel": "3 set. 2026 · fechamento", "sourceUrl": "https://www.marketwatch.com/investing/stock/pbr.a" }
+      {
+        "ticker": "PETR3",
+        "market": "B3 · ON",
+        "price": 52.58,
+        "currencySymbol": "R$",
+        "changePercent": -1.79,
+        "trend": "Baixa no dia",
+        "capturedAtLabel": "3 set. 2026 · fechamento",
+        "sourceUrl": "https://www.infomoney.com.br/cotacoes/b3/acao/petrobras-petr3/"
+      },
+      {
+        "ticker": "PETR4",
+        "market": "B3 · PN",
+        "price": 47.56,
+        "currencySymbol": "R$",
+        "changePercent": -1.33,
+        "trend": "Baixa no dia",
+        "capturedAtLabel": "3 set. 2026 · fechamento",
+        "sourceUrl": "https://www.infomoney.com.br/cotacoes/b3/acao/petrobras-petr4/"
+      },
+      {
+        "ticker": "PBR",
+        "market": "NYSE · ADR ON",
+        "price": 20.51,
+        "currencySymbol": "US$",
+        "changePercent": -1.68,
+        "trend": "Baixa no dia",
+        "capturedAtLabel": "3 set. 2026 · fechamento",
+        "sourceUrl": "https://www.marketwatch.com/investing/stock/pbr"
+      },
+      {
+        "ticker": "PBR.A",
+        "market": "NYSE · ADR PN",
+        "price": 18.58,
+        "currencySymbol": "US$",
+        "changePercent": -1.22,
+        "trend": "Baixa no dia",
+        "capturedAtLabel": "3 set. 2026 · fechamento",
+        "sourceUrl": "https://www.marketwatch.com/investing/stock/pbr.a"
+      }
     ],
     "operations": [
-      { "label": "Petróleo próprio no Brasil", "value": "2,70 mi bpd", "comparison": "+15% versus 2T25" }, { "label": "Óleo e gás próprios", "value": "3,34 mi boed", "comparison": "+14% em 12 meses" },
-      { "label": "Pré-sal próprio", "value": "2,78 mi boed", "comparison": "83% da produção própria" }, { "label": "Produção operada", "value": "4,87 mi boed", "comparison": "total dos ativos operados" },
-      { "label": "Exportação de petróleo", "value": "~1,00 mi bpd", "comparison": "recorde no 2T26" }, { "label": "Importação de petróleo", "value": "89 mil bpd", "comparison": "último consolidado 2T26" },
-      { "label": "Importação de derivados", "value": "67 mil bpd", "comparison": "queda de 40% ante 1T26" }, { "label": "Produção de derivados", "value": "1,90 mi bpd", "comparison": "inclui 509 mil bpd de S10" }
+      {
+        "label": "Petróleo próprio no Brasil",
+        "value": "2,70 mi bpd",
+        "comparison": "+15% versus 2T25"
+      },
+      {
+        "label": "Óleo e gás próprios",
+        "value": "3,34 mi boed",
+        "comparison": "+14% em 12 meses"
+      },
+      {
+        "label": "Pré-sal próprio",
+        "value": "2,78 mi boed",
+        "comparison": "83% da produção própria"
+      },
+      {
+        "label": "Produção operada",
+        "value": "4,87 mi boed",
+        "comparison": "total dos ativos operados"
+      },
+      {
+        "label": "Exportação de petróleo",
+        "value": "~1,00 mi bpd",
+        "comparison": "recorde no 2T26"
+      },
+      {
+        "label": "Importação de petróleo",
+        "value": "89 mil bpd",
+        "comparison": "último consolidado 2T26"
+      },
+      {
+        "label": "Importação de derivados",
+        "value": "67 mil bpd",
+        "comparison": "queda de 40% ante 1T26"
+      },
+      {
+        "label": "Produção de derivados",
+        "value": "1,90 mi bpd",
+        "comparison": "inclui 509 mil bpd de S10"
+      }
     ],
     "routes": [
-      { "origin": "Santos / pré-sal", "destination": "Ásia", "cargo": "Petróleo cru", "summary": "Corredor de longo curso associado ao crescimento das exportações e à demanda asiática.", "operationalNote": "Monitorar VLCC, disponibilidade de berço/STS, Cabo da Boa Esperança e riscos no Índico." },
-      { "origin": "Campos e Santos", "destination": "Europa", "cargo": "Petróleo cru", "summary": "Fluxo atlântico relevante para diversificação de destinos do óleo brasileiro.", "operationalNote": "Acompanhar clima no Atlântico Norte, restrições de terminais e vetting." },
-      { "origin": "Costa brasileira", "destination": "Refinarias nacionais", "cargo": "Cru / derivados", "summary": "Cabotagem conecta plataformas, terminais e refinarias e sustenta o abastecimento doméstico.", "operationalNote": "Priorizar janelas costeiras, praticagem, calado, tábua de marés e disponibilidade da frota Transpetro." },
-      { "origin": "Hubs internacionais", "destination": "Brasil", "cargo": "Cru / derivados", "summary": "Importações complementares atendem mistura, qualidade e equilíbrio de oferta do sistema de refino.", "operationalNote": "Validar origem contratual a cada período; o portal indica corredores, não fixtures individuais." }
+      {
+        "origin": "Santos / pré-sal",
+        "destination": "Ásia",
+        "cargo": "Petróleo cru",
+        "summary": "Corredor de longo curso associado ao crescimento das exportações e à demanda asiática.",
+        "operationalNote": "Monitorar VLCC, disponibilidade de berço/STS, Cabo da Boa Esperança e riscos no Índico."
+      },
+      {
+        "origin": "Campos e Santos",
+        "destination": "Europa",
+        "cargo": "Petróleo cru",
+        "summary": "Fluxo atlântico relevante para diversificação de destinos do óleo brasileiro.",
+        "operationalNote": "Acompanhar clima no Atlântico Norte, restrições de terminais e vetting."
+      },
+      {
+        "origin": "Costa brasileira",
+        "destination": "Refinarias nacionais",
+        "cargo": "Cru / derivados",
+        "summary": "Cabotagem conecta plataformas, terminais e refinarias e sustenta o abastecimento doméstico.",
+        "operationalNote": "Priorizar janelas costeiras, praticagem, calado, tábua de marés e disponibilidade da frota Transpetro."
+      },
+      {
+        "origin": "Hubs internacionais",
+        "destination": "Brasil",
+        "cargo": "Cru / derivados",
+        "summary": "Importações complementares atendem mistura, qualidade e equilíbrio de oferta do sistema de refino.",
+        "operationalNote": "Validar origem contratual a cada período; o portal indica corredores, não fixtures individuais."
+      }
     ],
     "basins": [
-      { "name": "Bacia de Santos", "status": "Produção / expansão", "summary": "Búzios tem capacidade instalada próxima de 1,33 milhão bpd; Mero produziu cerca de 740 mil bpd no 2T26.", "maritimeImpact": "Grande concentração de FPSOs, aliviadores e exportações de longo curso." },
-      { "name": "Bacia de Campos", "status": "Produção / revitalização", "summary": "A produção de petróleo atingiu 559 mil bpd no 2T26, com ativos maduros e novos projetos.", "maritimeImpact": "Mantém demanda por shuttle tankers, apoio offshore e logística entre RJ/ES." },
-      { "name": "Foz do Amazonas", "status": "Nova fronteira", "summary": "Petrobras adquiriu participação em 10 blocos na 5ª Oferta Permanente da ANP, em parceria com a ExxonMobil.", "maritimeImpact": "Se avançar, exigirá planejamento ambiental, bases logísticas, apoio offshore e resposta a emergência no Amapá/Pará." },
-      { "name": "Bacia de Pelotas", "status": "Exploração", "summary": "Três blocos foram adquiridos com Petrobras operadora (70%) e Petrogal (30%).", "maritimeImpact": "Pode criar nova frente logística no extremo sul, sujeita a mar severo e longa distância de apoio." }
+      {
+        "name": "Bacia de Santos",
+        "status": "Produção / expansão",
+        "summary": "Búzios tem capacidade instalada próxima de 1,33 milhão bpd; Mero produziu cerca de 740 mil bpd no 2T26.",
+        "maritimeImpact": "Grande concentração de FPSOs, aliviadores e exportações de longo curso."
+      },
+      {
+        "name": "Bacia de Campos",
+        "status": "Produção / revitalização",
+        "summary": "A produção de petróleo atingiu 559 mil bpd no 2T26, com ativos maduros e novos projetos.",
+        "maritimeImpact": "Mantém demanda por shuttle tankers, apoio offshore e logística entre RJ/ES."
+      },
+      {
+        "name": "Foz do Amazonas",
+        "status": "Nova fronteira",
+        "summary": "Petrobras adquiriu participação em 10 blocos na 5ª Oferta Permanente da ANP, em parceria com a ExxonMobil.",
+        "maritimeImpact": "Se avançar, exigirá planejamento ambiental, bases logísticas, apoio offshore e resposta a emergência no Amapá/Pará."
+      },
+      {
+        "name": "Bacia de Pelotas",
+        "status": "Exploração",
+        "summary": "Três blocos foram adquiridos com Petrobras operadora (70%) e Petrogal (30%).",
+        "maritimeImpact": "Pode criar nova frente logística no extremo sul, sujeita a mar severo e longa distância de apoio."
+      }
     ],
     "developments": [
-      { "date": "2026-09-02", "title": "Oferta de tonelagem curta em consulta Brasil–China", "summary": "Fearnleys reportou que uma consulta da Petrobras recebeu apenas uma oferta no prazo, de navio saindo de docagem que não se mostrou viável; não é contrato confirmado.", "maritimeImpact": "Sinal de lista VLCC apertada no Atlântico e possível sustentação de frete; validar qualquer fixture em fonte comercial ou contratual.", "source": { "name": "Fearnleys W36 · fonte de indústria", "url": "https://www.hellenicshippingnews.com/wp-content/uploads/2026/09/Fearnleys-Weekly-Report-_-Fearnpulse_.pdf" } },
-      { "date": "2026-08-06", "title": "Lucro líquido de R$ 52,4 bilhões no 2T26", "summary": "O desempenho financeiro acompanhou recordes operacionais, crescimento das exportações e maior produção de derivados.", "maritimeImpact": "Sustenta capacidade de investimento em produção, escoamento, terminais e frota.", "source": { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-lucra-r-52-4-bilh%C3%B5es-no-segundo-trimestre-de-2026" } },
-      { "date": "2026-07-28", "title": "P-79 inicia produção em Búzios", "summary": "A unidade possui capacidade para produzir até 180 mil barris de petróleo por dia.", "maritimeImpact": "Aumenta o potencial de offloading e movimentação por navios aliviadores na Bacia de Santos.", "source": { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/w/negocio/produ%C3%A7%C3%A3o-pr%C3%B3pria-de-petr%C3%B3leo-e-g%C3%A1s-da-petrobras-cresce-14-em-12-meses-e-atinge-3-34-milh%C3%B5es-de-barris-de-%C3%B3leo-equivalente-por-dia-no-2%C2%BA-trimestre-de-2026" } },
-      { "date": "2025-06-17", "title": "Blocos na Foz do Amazonas e em Pelotas", "summary": "A companhia arrematou 13 blocos exploratórios, incorporando cerca de 9,6 mil km².", "maritimeImpact": "Novas campanhas podem ampliar demanda futura por sísmica, perfuração, OSVs, bases e suporte ambiental.", "source": { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/en/w/petrobras-informa-sobre-resultado-de-leilao-da-anp-1" } }
+      {
+        "date": "2026-09-02",
+        "title": "Oferta de tonelagem curta em consulta Brasil–China",
+        "summary": "Fearnleys reportou que uma consulta da Petrobras recebeu apenas uma oferta no prazo, de navio saindo de docagem que não se mostrou viável; não é contrato confirmado.",
+        "maritimeImpact": "Sinal de lista VLCC apertada no Atlântico e possível sustentação de frete; validar qualquer fixture em fonte comercial ou contratual.",
+        "source": {
+          "name": "Fearnleys W36 · fonte de indústria",
+          "url": "https://www.hellenicshippingnews.com/wp-content/uploads/2026/09/Fearnleys-Weekly-Report-_-Fearnpulse_.pdf"
+        }
+      },
+      {
+        "date": "2026-08-06",
+        "title": "Lucro líquido de R$ 52,4 bilhões no 2T26",
+        "summary": "O desempenho financeiro acompanhou recordes operacionais, crescimento das exportações e maior produção de derivados.",
+        "maritimeImpact": "Sustenta capacidade de investimento em produção, escoamento, terminais e frota.",
+        "source": {
+          "name": "Agência Petrobras",
+          "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-lucra-r-52-4-bilh%C3%B5es-no-segundo-trimestre-de-2026"
+        }
+      },
+      {
+        "date": "2026-07-28",
+        "title": "P-79 inicia produção em Búzios",
+        "summary": "A unidade possui capacidade para produzir até 180 mil barris de petróleo por dia.",
+        "maritimeImpact": "Aumenta o potencial de offloading e movimentação por navios aliviadores na Bacia de Santos.",
+        "source": {
+          "name": "Agência Petrobras",
+          "url": "https://agencia.petrobras.com.br/w/negocio/produ%C3%A7%C3%A3o-pr%C3%B3pria-de-petr%C3%B3leo-e-g%C3%A1s-da-petrobras-cresce-14-em-12-meses-e-atinge-3-34-milh%C3%B5es-de-barris-de-%C3%B3leo-equivalente-por-dia-no-2%C2%BA-trimestre-de-2026"
+        }
+      },
+      {
+        "date": "2025-06-17",
+        "title": "Blocos na Foz do Amazonas e em Pelotas",
+        "summary": "A companhia arrematou 13 blocos exploratórios, incorporando cerca de 9,6 mil km².",
+        "maritimeImpact": "Novas campanhas podem ampliar demanda futura por sísmica, perfuração, OSVs, bases e suporte ambiental.",
+        "source": {
+          "name": "Agência Petrobras",
+          "url": "https://agencia.petrobras.com.br/en/w/petrobras-informa-sobre-resultado-de-leilao-da-anp-1"
+        }
+      }
     ],
-    "fleetPlan": { "title": "⚓ Plano Transpetro 2026–2030", "metrics": [{ "label": "navios de cabotagem", "value": "20" }, { "label": "barcaças", "value": "18" }, { "label": "investimento previsto", "value": "US$ 2 bi" }, { "label": "apoios offshore", "value": "40" }], "summary": "O plano amplia a capacidade logística própria e pode elevar demanda por tripulação, docagem, treinamento, estaleiros e suporte operacional." }
+    "fleetPlan": {
+      "title": "⚓ Plano Transpetro 2026–2030",
+      "metrics": [
+        {
+          "label": "navios de cabotagem",
+          "value": "20"
+        },
+        {
+          "label": "barcaças",
+          "value": "18"
+        },
+        {
+          "label": "investimento previsto",
+          "value": "US$ 2 bi"
+        },
+        {
+          "label": "apoios offshore",
+          "value": "40"
+        }
+      ],
+      "summary": "O plano amplia a capacidade logística própria e pode elevar demanda por tripulação, docagem, treinamento, estaleiros e suporte operacional."
+    }
   },
-  "bunker": [{ "port": "Singapore", "code": "SGSIN", "vlsfo": 833.0, "change": 48.5 }, { "port": "Rotterdam", "code": "NLRTM", "vlsfo": 677.5, "change": 14.5 }, { "port": "Fujairah", "code": "AEFJR", "vlsfo": 825.0, "change": 30.0 }, { "port": "Houston", "code": "USHOU", "vlsfo": 708.5, "change": 13.0 }],
-  "briefing": { "date": "2026-09-04", "readingTime": "Leitura sugerida: 90 segundos", "items": [
-    { "category": "POSIÇÃO", "title": "MarineTraffic é a fonte mais recente", "summary": "O evento válido de 3 de setembro, 2211Z, é posterior ao último ponto SPOT; o portal prioriza automaticamente essa fonte." },
-    { "category": "SEGURANÇA", "title": "Ataque fatal eleva atenção em Ormuz", "summary": "O tanker SIDR foi atacado e houve duas mortes; revalide trânsito, minas, GNSS, war-risk e orientação do CSO." },
-    { "category": "METEO", "title": "Três furacões ativos no Pacífico", "summary": "Lowell permanece categoria 4; Karina e Marie são categoria 2. Confirmar advisories antes de alterar rota." },
-    { "category": "COSTA BR", "title": "Vento forte e mar grosso no Sul", "summary": "CHM mantém os avisos 641, 640 e 638, com força 7–9 e mar de 4–6 m até 5 de setembro." },
-    { "category": "PSC", "title": "Quatro CICs de cargo securing confirmadas", "summary": "Paris, Tokyo, Viña del Mar e Black Sea estão ativos; Abuja permanece apenas como tema anunciado." }
-  ], "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes." },
-  "sources": [
-    { "name": "NautoShark", "url": "https://www.nautoshark.com/", "scope": "Mapa público NAVAREA e METAREA", "typeLabel": "Complementar" }, { "name": "IMO — ECAs", "url": "https://www.imo.org/en/OurWork/Environment/Pages/Emission-Control-Areas-%28ECAs%29-designated-under-regulation-13-of-MARPOL-Annex-VI-%28NOx-emission-control%29.aspx", "scope": "Áreas de controle de emissões", "typeLabel": "Oficial" }, { "name": "Copernicus Marine", "url": "https://data.marine.copernicus.eu/", "scope": "Ondas, swell e correntes oceânicas", "typeLabel": "Oficial / aberto" },
-    { "name": "IMB Piracy Reporting Centre", "url": "https://icc-ccs.org/map/", "scope": "Pirataria e roubo armado", "typeLabel": "Oficial" }, { "name": "UKMTO / JMIC", "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314", "scope": "Ameaças, tráfego e interferência GNSS", "typeLabel": "Oficial" },
-    { "name": "CHM / Marinha do Brasil", "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo", "scope": "Meteorologia e costa brasileira", "typeLabel": "Oficial" }, { "name": "NHC / NOAA", "url": "https://www.nhc.noaa.gov/", "scope": "Meteorologia tropical", "typeLabel": "Oficial" },
-    { "name": "USCG NAVCEN", "url": "https://www.navcen.uscg.gov/guide-tool", "scope": "Relatos de interferência GNSS", "typeLabel": "Oficial" }, { "name": "Baltic Exchange", "url": "https://www.balticexchange.com/en/data-services/market-information0/tankers-services.html", "scope": "Rotas e metodologia tanker", "typeLabel": "Oficial" },
-    { "name": "Fearnleys / Fearnpulse", "url": "https://www.hellenicshippingnews.com/wp-content/uploads/2026/09/Fearnleys-Weekly-Report-_-Fearnpulse_.pdf", "scope": "Time-charter e narrativa tanker W36", "typeLabel": "Indústria" }, { "name": "Compass Maritime", "url": "https://compassmar.com/market-report-download/", "scope": "BDTI/BCTI e VLSFO — último dado público W35", "typeLabel": "Indústria" },
-    { "name": "Ship & Bunker", "url": "https://shipandbunker.com/prices", "scope": "Preços indicativos VLSFO", "typeLabel": "Indústria" }, { "name": "Paris MoU", "url": "https://parismou.org/paris-and-tokyo-mous-launch-2026-concentrated-inspection-campaign-on-cargo-securing/", "scope": "CIC 2026", "typeLabel": "Oficial" },
-    { "name": "Petrobras RI", "url": "https://www.petrobras.com.br/ri/", "scope": "Ações e informações ao mercado", "typeLabel": "Oficial" }, { "name": "Agência Petrobras", "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-lucra-r-52-4-bilh%C3%B5es-no-segundo-trimestre-de-2026", "scope": "Produção, comércio e resultados 2T26", "typeLabel": "Oficial" },
-    { "name": "Transpetro", "url": "https://transpetro.com.br/transpetro-institucional/quem-somos/plano-estrategico.htm", "scope": "Plano 2026–2030", "typeLabel": "Oficial" },
-    { "name": "IMO — Port State Control", "url": "https://www.imo.org/en/ourwork/msas/pages/portstatecontrol.aspx", "scope": "Nove acordos regionais + USCG", "typeLabel": "Oficial" },
-    { "name": "EIA — Chokepoints", "url": "https://www.eia.gov/international/analysis/special-topics/world_oil_transit_Chokepoints", "scope": "Fluxos energéticos em passagens estratégicas", "typeLabel": "Oficial / aberto" },
-    { "name": "Suez Canal Authority", "url": "https://www.suezcanal.gov.eg/English/Navigation/Pages/NavigationStatistics.aspx", "scope": "Tráfego, navegação e regras do canal", "typeLabel": "Oficial" },
-    { "name": "Panama Canal Authority", "url": "https://pancanal.com/en/maritime-services/annual-report/", "scope": "Trânsitos, capacidade e serviços marítimos", "typeLabel": "Oficial" },
-    { "name": "IMO Compendium — Reporting", "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm", "scope": "Sistemas obrigatórios de reporte de navios", "typeLabel": "Oficial" },
-    { "name": "UKMTO / MSCIO", "url": "https://www.ukmto.org/reporting-formats", "scope": "VRA, formulários e segurança marítima", "typeLabel": "Oficial" }
+  "bunker": [
+    {
+      "port": "Singapore",
+      "code": "SGSIN",
+      "vlsfo": 833,
+      "change": 48.5
+    },
+    {
+      "port": "Rotterdam",
+      "code": "NLRTM",
+      "vlsfo": 677.5,
+      "change": 14.5
+    },
+    {
+      "port": "Fujairah",
+      "code": "AEFJR",
+      "vlsfo": 825,
+      "change": 30
+    },
+    {
+      "port": "Houston",
+      "code": "USHOU",
+      "vlsfo": 708.5,
+      "change": 13
+    }
   ],
-  "updatePolicy": "Atualização programada às segundas, quartas e sextas, 07:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. PSC, Petrobras, Transpetro e regras ambientais também mudam quando houver publicação oficial relevante. NautoShark, Windy e MarineTraffic permanecem acessos externos; dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes."
+  "briefing": {
+    "date": "2026-09-04",
+    "readingTime": "Leitura sugerida: 90 segundos",
+    "items": [
+      {
+        "category": "POSIÇÃO",
+        "title": "MarineTraffic é a fonte mais recente",
+        "summary": "O evento válido de 3 de setembro, 2211Z, é posterior ao último ponto SPOT; o portal prioriza automaticamente essa fonte."
+      },
+      {
+        "category": "SEGURANÇA",
+        "title": "Ataque fatal eleva atenção em Ormuz",
+        "summary": "O tanker SIDR foi atacado e houve duas mortes; revalide trânsito, minas, GNSS, war-risk e orientação do CSO."
+      },
+      {
+        "category": "METEO",
+        "title": "Três furacões ativos no Pacífico",
+        "summary": "Lowell permanece categoria 4; Karina e Marie são categoria 2. Confirmar advisories antes de alterar rota."
+      },
+      {
+        "category": "COSTA BR",
+        "title": "Vento forte e mar grosso no Sul",
+        "summary": "CHM mantém os avisos 641, 640 e 638, com força 7–9 e mar de 4–6 m até 5 de setembro."
+      },
+      {
+        "category": "PSC",
+        "title": "Quatro CICs de cargo securing confirmadas",
+        "summary": "Paris, Tokyo, Viña del Mar e Black Sea estão ativos; Abuja permanece apenas como tema anunciado."
+      }
+    ],
+    "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
+  },
+  "sources": [
+    {
+      "name": "NautoShark",
+      "url": "https://www.nautoshark.com/",
+      "scope": "Mapa público NAVAREA e METAREA",
+      "typeLabel": "Complementar"
+    },
+    {
+      "name": "IMO — ECAs",
+      "url": "https://www.imo.org/en/OurWork/Environment/Pages/Emission-Control-Areas-%28ECAs%29-designated-under-regulation-13-of-MARPOL-Annex-VI-%28NOx-emission-control%29.aspx",
+      "scope": "Áreas de controle de emissões",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "Copernicus Marine",
+      "url": "https://data.marine.copernicus.eu/",
+      "scope": "Ondas, swell e correntes oceânicas",
+      "typeLabel": "Oficial / aberto"
+    },
+    {
+      "name": "IMB Piracy Reporting Centre",
+      "url": "https://icc-ccs.org/map/",
+      "scope": "Pirataria e roubo armado",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "UKMTO / JMIC",
+      "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314",
+      "scope": "Ameaças, tráfego e interferência GNSS",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "CHM / Marinha do Brasil",
+      "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
+      "scope": "Meteorologia e costa brasileira",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "NHC / NOAA",
+      "url": "https://www.nhc.noaa.gov/",
+      "scope": "Meteorologia tropical",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "USCG NAVCEN",
+      "url": "https://www.navcen.uscg.gov/guide-tool",
+      "scope": "Relatos de interferência GNSS",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "Baltic Exchange",
+      "url": "https://www.balticexchange.com/en/data-services/market-information0/tankers-services.html",
+      "scope": "Rotas e metodologia tanker",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "Fearnleys / Fearnpulse",
+      "url": "https://www.hellenicshippingnews.com/wp-content/uploads/2026/09/Fearnleys-Weekly-Report-_-Fearnpulse_.pdf",
+      "scope": "Time-charter e narrativa tanker W36",
+      "typeLabel": "Indústria"
+    },
+    {
+      "name": "Compass Maritime",
+      "url": "https://compassmar.com/market-report-download/",
+      "scope": "BDTI/BCTI e VLSFO — último dado público W35",
+      "typeLabel": "Indústria"
+    },
+    {
+      "name": "Ship & Bunker",
+      "url": "https://shipandbunker.com/prices",
+      "scope": "Preços indicativos VLSFO",
+      "typeLabel": "Indústria"
+    },
+    {
+      "name": "Paris MoU",
+      "url": "https://parismou.org/paris-and-tokyo-mous-launch-2026-concentrated-inspection-campaign-on-cargo-securing/",
+      "scope": "CIC 2026",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "Petrobras RI",
+      "url": "https://www.petrobras.com.br/ri/",
+      "scope": "Ações e informações ao mercado",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "Agência Petrobras",
+      "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-lucra-r-52-4-bilh%C3%B5es-no-segundo-trimestre-de-2026",
+      "scope": "Produção, comércio e resultados 2T26",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "Transpetro",
+      "url": "https://transpetro.com.br/transpetro-institucional/quem-somos/plano-estrategico.htm",
+      "scope": "Plano 2026–2030",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "IMO — Port State Control",
+      "url": "https://www.imo.org/en/ourwork/msas/pages/portstatecontrol.aspx",
+      "scope": "Nove acordos regionais + USCG",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "EIA — Chokepoints",
+      "url": "https://www.eia.gov/international/analysis/special-topics/world_oil_transit_Chokepoints",
+      "scope": "Fluxos energéticos em passagens estratégicas",
+      "typeLabel": "Oficial / aberto"
+    },
+    {
+      "name": "Suez Canal Authority",
+      "url": "https://www.suezcanal.gov.eg/English/Navigation/Pages/NavigationStatistics.aspx",
+      "scope": "Tráfego, navegação e regras do canal",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "Panama Canal Authority",
+      "url": "https://pancanal.com/en/maritime-services/annual-report/",
+      "scope": "Trânsitos, capacidade e serviços marítimos",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "IMO Compendium — Reporting",
+      "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
+      "scope": "Sistemas obrigatórios de reporte de navios",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "UKMTO / MSCIO",
+      "url": "https://www.ukmto.org/reporting-formats",
+      "scope": "VRA, formulários e segurança marítima",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "SCOPE / GlobalScope",
+      "url": "https://globalscope.io",
+      "scope": "Simulações de interrupção em rotas mundiais de petróleo",
+      "typeLabel": "Modelo acadêmico / aberto"
+    }
+  ],
+  "updatePolicy": "Atualização programada às segundas, quartas e sextas, 07:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. PSC, Petrobras, Transpetro e regras ambientais também mudam quando houver publicação oficial relevante. NautoShark, Windy e MarineTraffic permanecem acessos externos; dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. Os cenários SCOPE são comparados ao cenário-base do próprio modelo e permanecem identificados como simulação, sem substituir cotações reais.",
+  "scopeAnalysis": {
+    "updatedAt": "2026-09-04T11:39:35.298Z",
+    "status": "current",
+    "sourceUrl": "https://globalscope.io",
+    "methodologyUrl": "https://globalscope.io/methodology",
+    "scenarioWindow": "60 dias · fechamento no dia 10 · reabertura no dia 40",
+    "modelNote": "Simulação de equilíbrio espacial. Não é cotação, previsão nem recomendação de rota.",
+    "baselineLabel": "Cenário-base SCOPE sem choque",
+    "failures": [],
+    "scenarios": [
+      {
+        "id": "bab_el_mandeb",
+        "passageId": "bab-el-mandeb",
+        "name": "Bab-el-Mandeb",
+        "latitude": 12.6,
+        "longitude": 43.4,
+        "modelRisk": "critical",
+        "peakDay": 15,
+        "peakPriceChangePercent": 99,
+        "minimumSupplyChangePercent": -11.7,
+        "minimumThroughputChangePercent": -11.6,
+        "recoveryLabel": "Sem retorno a ±1% em 60 dias"
+      },
+      {
+        "id": "bosporus",
+        "passageId": "bosporus",
+        "name": "Estreito de Bósforo",
+        "latitude": 41,
+        "longitude": 29,
+        "modelRisk": "low",
+        "peakDay": 36,
+        "peakPriceChangePercent": -2.8,
+        "minimumSupplyChangePercent": -0.2,
+        "minimumThroughputChangePercent": 0,
+        "recoveryLabel": "Retorno a ±1% no dia 41"
+      },
+      {
+        "id": "english_channel",
+        "passageId": "english-channel",
+        "name": "Canal da Mancha",
+        "latitude": 50.8,
+        "longitude": 0.2,
+        "modelRisk": "medium",
+        "peakDay": 29,
+        "peakPriceChangePercent": -8,
+        "minimumSupplyChangePercent": -0.4,
+        "minimumThroughputChangePercent": -0.4,
+        "recoveryLabel": "Retorno a ±1% no dia 46"
+      },
+      {
+        "id": "gibraltar",
+        "passageId": "gibraltar",
+        "name": "Estreito de Gibraltar",
+        "latitude": 35.9,
+        "longitude": -5.6,
+        "modelRisk": "critical",
+        "peakDay": 18,
+        "peakPriceChangePercent": 47.5,
+        "minimumSupplyChangePercent": -5.1,
+        "minimumThroughputChangePercent": -5,
+        "recoveryLabel": "Sem retorno a ±1% em 60 dias"
+      },
+      {
+        "id": "hormuz",
+        "passageId": "hormuz",
+        "name": "Estreito de Ormuz",
+        "latitude": 26.6,
+        "longitude": 56.3,
+        "modelRisk": "critical",
+        "peakDay": 37,
+        "peakPriceChangePercent": 124.4,
+        "minimumSupplyChangePercent": -15.2,
+        "minimumThroughputChangePercent": -15.2,
+        "recoveryLabel": "Sem retorno a ±1% em 60 dias"
+      },
+      {
+        "id": "kattegat",
+        "passageId": "kattegat",
+        "name": "Kattegat",
+        "latitude": 56.5,
+        "longitude": 11,
+        "modelRisk": "medium",
+        "peakDay": 36,
+        "peakPriceChangePercent": -6.2,
+        "minimumSupplyChangePercent": -0.3,
+        "minimumThroughputChangePercent": -0.3,
+        "recoveryLabel": "Retorno a ±1% no dia 46"
+      },
+      {
+        "id": "lombok",
+        "passageId": "lombok",
+        "name": "Estreito de Lombok",
+        "latitude": -8.7,
+        "longitude": 115.7,
+        "modelRisk": "low",
+        "peakDay": 13,
+        "peakPriceChangePercent": -2.1,
+        "minimumSupplyChangePercent": -0.1,
+        "minimumThroughputChangePercent": 0,
+        "recoveryLabel": "Retorno a ±1% no dia 41"
+      },
+      {
+        "id": "malacca",
+        "passageId": "malacca",
+        "name": "Estreito de Malaca",
+        "latitude": 4,
+        "longitude": 99.5,
+        "modelRisk": "high",
+        "peakDay": 11,
+        "peakPriceChangePercent": -15.2,
+        "minimumSupplyChangePercent": -1,
+        "minimumThroughputChangePercent": -1.1,
+        "recoveryLabel": "Retorno a ±1% no dia 46"
+      },
+      {
+        "id": "panama",
+        "passageId": "panama",
+        "name": "Canal do Panamá",
+        "latitude": 9.1,
+        "longitude": -79.7,
+        "modelRisk": "low",
+        "peakDay": 10,
+        "peakPriceChangePercent": -2.2,
+        "minimumSupplyChangePercent": -0.1,
+        "minimumThroughputChangePercent": 0,
+        "recoveryLabel": "Retorno a ±1% no dia 41"
+      },
+      {
+        "id": "suez",
+        "passageId": "suez",
+        "name": "Canal de Suez",
+        "latitude": 30.3,
+        "longitude": 32.5,
+        "modelRisk": "critical",
+        "peakDay": 18,
+        "peakPriceChangePercent": 165,
+        "minimumSupplyChangePercent": -20.2,
+        "minimumThroughputChangePercent": -20.2,
+        "recoveryLabel": "Sem retorno a ±1% em 60 dias"
+      },
+      {
+        "id": "sunda",
+        "passageId": "sunda",
+        "name": "Estreito de Sunda",
+        "latitude": -5.9,
+        "longitude": 105.9,
+        "modelRisk": "low",
+        "peakDay": 36,
+        "peakPriceChangePercent": -2.9,
+        "minimumSupplyChangePercent": -0.2,
+        "minimumThroughputChangePercent": -0.1,
+        "recoveryLabel": "Retorno a ±1% no dia 48"
+      },
+      {
+        "id": "taiwan",
+        "passageId": "taiwan",
+        "name": "Estreito de Taiwan",
+        "latitude": 23.7,
+        "longitude": 120.3,
+        "modelRisk": "high",
+        "peakDay": 29,
+        "peakPriceChangePercent": -10.1,
+        "minimumSupplyChangePercent": -0.3,
+        "minimumThroughputChangePercent": -0.3,
+        "recoveryLabel": "Retorno a ±1% no dia 48"
+      }
+    ]
+  }
 }

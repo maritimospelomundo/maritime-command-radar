@@ -10,7 +10,7 @@
   <meta property="og:image" content="og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260903-2">
+  <link rel="stylesheet" href="styles.css?v=20260904-scope1">
 </head>
 <body>
 <main id="portal" aria-busy="true">
@@ -20,7 +20,7 @@
       <span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span>
     </a>
     <nav aria-label="Navegação principal">
-      <a href="#overview">Comando</a><a href="#passages-detail">Passagens</a><a href="#reporting-detail">Reportes</a><a href="#psc-detail">PSC</a><a href="#market-detail">Mercado</a><a href="#sources-detail">Fontes</a>
+      <a href="#overview">Comando</a><a href="#passages-detail">Passagens</a><a href="#scope-analysis">SCOPE</a><a href="#reporting-detail">Reportes</a><a href="#psc-detail">PSC</a><a href="#market-detail">Mercado</a><a href="#sources-detail">Fontes</a>
     </nav>
     <div class="header-status"><span class="live-dot"></span><span><b id="snapshot-status">Carregando radar</b><small id="snapshot-time">Consultando dados públicos…</small></span></div>
     <button class="menu-button" type="button" aria-label="Abrir menu">☰</button>
@@ -119,6 +119,12 @@
   <section class="deep-dive" id="passages-detail">
     <div class="section-heading"><p>GLOBAL PASSAGES</p><div><h2>Passagens estratégicas para o Comandante</h2><span>Tráfego, tendência, risco, mercado, reporte e cuidados de navegação — com a base de cada indicador declarada.</span></div></div>
     <div class="passage-legend"><span><i class="dot-red"></i> Guerra / ameaça crítica</span><span><i class="dot-orange"></i> Exposição alta</span><span><i class="dot-amber"></i> Atenção reforçada</span><small>“Sem série consolidada” evita comparar estimativas incompatíveis de AIS.</small></div>
+    <section class="scope-analysis" id="scope-analysis" aria-labelledby="scope-title">
+      <header class="scope-head"><div><small>OIL ROUTE STRESS TEST</small><h3 id="scope-title">Impacto de interrupções nas rotas do petróleo</h3></div><a id="scope-source-link" href="https://globalscope.io" target="_blank" rel="noreferrer">Abrir SCOPE ↗</a></header>
+      <div class="scope-spotlight" id="scope-spotlight"></div>
+      <div class="scope-scenario-grid" id="scope-scenario-grid"></div>
+      <footer class="scope-disclaimer"><span id="scope-updated">—</span><p id="scope-model-note">Simulação; não substitui dados reais de mercado.</p></footer>
+    </section>
     <div class="passage-grid" id="passage-grid"></div>
   </section>
 
@@ -161,6 +167,6 @@
 
   <footer class="site-footer"><div class="brand"><span class="brand-mark">⌁</span><span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p></footer>
 </main>
-<script src="script.js?v=20260903-1"></script>
+<script src="script.js?v=20260904-scope1"></script>
 </body>
 </html>
