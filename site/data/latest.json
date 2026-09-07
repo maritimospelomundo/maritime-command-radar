@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-04T10:10:37Z",
+  "generatedAt": "2026-09-07T10:12:24Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -45,14 +45,14 @@
       {
         "label": "AÇÃO AGORA",
         "level": "critical",
-        "value": "4 críticos",
-        "summary": "Novo ataque fatal ao tanker SIDR em Ormuz soma-se ao risco de projéteis, ao sequestro no Golfo de Áden e ao furacão Lowell."
+        "value": "Ormuz severo",
+        "summary": "Três tankers listados/associados ao Irã foram neutralizados por forças dos EUA em 5 de setembro; o JMIC não registrou novo ataque contra navio mercante neutro."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
         "value": "Meteo severa",
-        "summary": "Lowell mantém intensidade categoria 4; Karina e Marie são categoria 2, enquanto vento força 7–9 e mar de 4–6 m afetam áreas do Atlântico Sul."
+        "summary": "Lowell é categoria 3 com Hurricane Warning para Kauai; Marie é tempestade tropical e Karina tornou-se pós-tropical, ainda com ventos de gale."
       },
       {
         "label": "PREPARAR",
@@ -95,7 +95,7 @@
         "summary": "JMIC mantém EMI/GNSS em Ormuz, Golfo de Omã, Golfo Pérsico e corredor do Mar Vermelho; validar posição por meios independentes.",
         "source": {
           "name": "JMIC / UKMTO",
-          "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+          "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
         }
       },
       {
@@ -116,10 +116,10 @@
         "label": "CHOKEPOINTS",
         "value": "Ormuz severo · fluxo reduzido",
         "status": "high",
-        "summary": "O ataque ao SIDR causou duas mortes; os trânsitos facilitados seguem muito abaixo do basal de 2025.",
+        "summary": "Forças dos EUA neutralizaram três tankers listados em 5 de setembro; os trânsitos facilitados seguem muito abaixo do basal de 2025.",
         "source": {
-          "name": "JMIC Update 093",
-          "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+          "name": "JMIC Update 094",
+          "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
         }
       },
       {
@@ -337,60 +337,60 @@
       "description": "Eventos com potencial de gerar vento, mar e swell perigosos para operações oceânicas.",
       "items": [
         {
-          "id": "nhc-lowell-2026-09-04",
-          "date": "2026-09-04",
+          "id": "nhc-lowell-2026-09-07",
+          "date": "2026-09-07",
           "region": "Pacífico Central",
           "level": "critical",
-          "headline": "Lowell permanece categoria 4",
-          "summary": "O furacão mantém ventos máximos de 115 kt e gera swell perigoso no Pacífico Central.",
-          "details": "No Forecast Advisory 32, às 0900 UTC, o centro estava próximo de 13,4°N 159,6°W. Não havia avisos costeiros, mas o swell produz surf e correntes de retorno potencialmente fatais.",
+          "headline": "Lowell categoria 3 aproxima-se do Havaí",
+          "summary": "Hurricane Warning está em vigor para Kauai County; Lowell mantém ventos máximos de 100 kt.",
+          "details": "No Advisory 45, às 0900 UTC, o centro estava em 16,5°N 163,2°W, deslocando-se para NNE a 9 kt, com pressão mínima de 950 hPa.",
           "action": "Recalcular rota/ETA, evitar o campo de vento e swell e acompanhar NHC/CPHC e weather routing.",
           "map": {
-            "x": 6,
-            "y": 44,
+            "x": 4,
+            "y": 42,
             "label": "Lowell"
           },
           "source": {
-            "name": "NHC / CPHC Advisory 32",
-            "url": "https://www.nhc.noaa.gov/text/refresh/HFOTCPCP4%2Bshtml/040244.shtml?text="
+            "name": "NHC / CPHC Advisory 45",
+            "url": "https://www.nhc.noaa.gov/text/refresh/HFOTCPCP4+shtml/070917.shtml"
           }
         },
         {
-          "id": "nhc-karina-2026-09-04",
-          "date": "2026-09-04",
+          "id": "nhc-marie-2026-09-07",
+          "date": "2026-09-07",
           "region": "Pacífico Nordeste",
           "level": "high",
-          "headline": "Karina é furacão categoria 2",
-          "summary": "Karina tinha ventos máximos de 90 kt e seguia para oeste-noroeste em mar aberto.",
-          "details": "Às 0300 UTC, o centro estava próximo de 20,1°N 138,4°W, com deslocamento de 8 kt. O NHC previa enfraquecimento, sem ameaça costeira imediata.",
-          "action": "Manter margem do cone e do swell, revisar weather routing e confirmar o advisory mais recente.",
-          "map": {
-            "x": 10,
-            "y": 40,
-            "label": "Karina"
-          },
-          "source": {
-            "name": "NHC / NOAA",
-            "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPEP1%2Bshtml/040245.shtml?text="
-          }
-        },
-        {
-          "id": "nhc-marie-2026-09-04",
-          "date": "2026-09-04",
-          "region": "Pacífico Nordeste",
-          "level": "high",
-          "headline": "Marie alcança categoria 2",
-          "summary": "Marie tinha ventos máximos de 85 kt, com rajadas de 105 kt, e seguia para oeste-noroeste.",
-          "details": "No Advisory 12, às 0300 UTC, o centro estava próximo de 19,6°N 116,3°W, deslocando-se a 8 kt, sem avisos costeiros.",
+          "headline": "Marie enfraquece para tempestade tropical",
+          "summary": "Marie mantém ventos máximos de 55 kt e produz swell perigoso para Baja California e sul da Califórnia.",
+          "details": "No Advisory 25, às 0900 UTC, o centro estava em 24,4°N 123,7°W, deslocando-se para NW a 7 kt, com pressão mínima de 986 hPa.",
           "action": "Evitar campo de vento e swell, revisar ETA e acompanhar boletins NHC e weather routing.",
           "map": {
-            "x": 17,
-            "y": 41,
+            "x": 15,
+            "y": 38,
             "label": "Marie"
           },
           "source": {
-            "name": "NHC / NOAA Advisory 12",
-            "url": "https://www.nhc.noaa.gov/mobile/text/refresh/MIATCMEP3%2Bhtml/040255.shtml"
+            "name": "NHC / NOAA Advisory 25",
+            "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPEP3+shtml/070848.shtml"
+          }
+        },
+        {
+          "id": "nhc-karina-2026-09-07",
+          "date": "2026-09-07",
+          "region": "Pacífico Nordeste",
+          "level": "medium",
+          "headline": "Karina torna-se ciclone pós-tropical",
+          "summary": "Karina perdeu características tropicais, mas ainda mantém ventos de gale de 40 kt em mar aberto.",
+          "details": "No Advisory 43 final, às 0300 UTC, o centro estava em 23,1°N 146,2°W, deslocando-se para WNW a 5 kt, com pressão mínima de 998 hPa.",
+          "action": "Manter margem do campo de vento e swell e acompanhar produtos de alto-mar após o encerramento dos advisories tropicais.",
+          "map": {
+            "x": 9,
+            "y": 38,
+            "label": "Karina"
+          },
+          "source": {
+            "name": "NHC / NOAA Advisory 43 final",
+            "url": "https://www.nhc.noaa.gov/text/refresh/HFOTCPCP5+shtml/070245.shtml"
           }
         }
       ]
@@ -403,18 +403,37 @@
       "description": "Avisos costeiros e alterações hidrográficas com efeito potencial em praticagem, aproximação e operações.",
       "items": [
         {
-          "id": "chm-641-2026",
-          "date": "2026-09-03",
-          "region": "Torres/RS a Peruíbe/SP",
+          "id": "chm-655-2026",
+          "date": "2026-09-06",
+          "region": "Atlântico Sul oceânico",
+          "level": "high",
+          "headline": "Mar grosso de 4 a 5 metros",
+          "summary": "Aviso 655 válido de 7 de setembro, 0000Z, até 8 de setembro, 1200Z, em área oceânica ao sul do Brasil.",
+          "details": "Ondas de W/SW entre 4 e 5 m podem elevar esforços, slamming e riscos de trabalho no convés em rota oceânica.",
+          "action": "Revalidar weather routing, velocidade segura, heading, estabilidade e critérios de heavy weather.",
+          "map": {
+            "x": 43,
+            "y": 78,
+            "label": "Mar 4–5 m"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
+        {
+          "id": "chm-654-2026",
+          "date": "2026-09-06",
+          "region": "Touros/RN a Parnaíba/PI",
           "level": "high",
           "headline": "Vento força 7 com rajadas força 8",
-          "summary": "Aviso 641 válido de 4 de setembro, 0300Z, até 5 de setembro, 0000Z, dentro de 80 MN da costa.",
-          "details": "Vento de SW/S pode afetar aproximações, fundeio, praticagem, transferência de pessoal e limites operacionais de terminais.",
+          "summary": "Aviso 654 válido de 8 de setembro, 1800Z, até 10 de setembro, 0000Z, até 100 MN da costa.",
+          "details": "Vento de SE/NE pode afetar aproximações, fundeio, praticagem e operações nos trechos do Rio Grande do Norte ao Piauí.",
           "action": "Confirmar janela com agente, praticagem e terminal; reavaliar fundeio, condição de lastro e trabalho no convés.",
           "map": {
             "x": 36,
-            "y": 71,
-            "label": "Torres–Peruíbe"
+            "y": 52,
+            "label": "Touros–Parnaíba"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -422,37 +441,18 @@
           }
         },
         {
-          "id": "chm-640-2026",
-          "date": "2026-09-02",
-          "region": "Atlântico Sul oceânico",
+          "id": "chm-653-2026",
+          "date": "2026-09-06",
+          "region": "Área Delta / offshore Sudeste",
           "level": "high",
-          "headline": "Mar grosso de 4 a 6 metros",
-          "summary": "Aviso 640 permanece válido até 5 de setembro, 0600Z, em área oceânica ao sul de 32°S.",
-          "details": "Mar de N/NW entre 32°S–36°S e 30°W–44°W pode elevar esforços, slamming e riscos de trabalho no convés.",
-          "action": "Revalidar weather routing, velocidade segura, heading, estabilidade e critérios de heavy weather.",
-          "map": {
-            "x": 40,
-            "y": 76,
-            "label": "Mar 4–6 m"
-          },
-          "source": {
-            "name": "CHM / Marinha do Brasil",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
-        },
-        {
-          "id": "chm-638-2026",
-          "date": "2026-09-02",
-          "region": "Atlântico Sul oceânico",
-          "level": "high",
-          "headline": "Vento força 8/9 em área oceânica",
-          "summary": "Aviso 638 válido de 4 de setembro, 1200Z, até 5 de setembro, 1200Z.",
-          "details": "Vento NE/NW entre 30°S–36°S e 20°W–30°W exige planejamento de rota e controle de esforços estruturais.",
+          "headline": "Vento força 7 com rajadas força 8",
+          "summary": "Aviso 653 válido de 8 de setembro, 2100Z, até 10 de setembro, 0000Z, em setor offshore da Área Delta.",
+          "details": "Vento de NE/N entre aproximadamente 22°S–26°S e 36°W–41°W exige planejamento de rota e controle de esforços.",
           "action": "Revisar rota, ETA, condição de lastro, velocidade e restrições para operações externas.",
           "map": {
-            "x": 43,
-            "y": 75,
-            "label": "F8/9"
+            "x": 39,
+            "y": 70,
+            "label": "Área Delta"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -469,60 +469,60 @@
       "description": "Mudanças no ambiente de ameaça, interferência estatal e ataques contra navegação comercial.",
       "items": [
         {
-          "id": "ukmto-126-26",
-          "date": "2026-09-02",
-          "region": "Estreito de Ormuz / Jazirat Tawakkul",
+          "id": "ukmto-127-26c",
+          "date": "2026-09-05",
+          "region": "Golfo de Omã",
           "level": "critical",
-          "headline": "Ataque ao tanker SIDR causa duas mortes",
-          "summary": "Dois tripulantes morreram após ataque durante trânsito eastbound/outbound em Ormuz; o navio aguardava salvamento fundeado.",
-          "details": "O evento ocorreu em 31 de agosto, 2050 UTC, e foi recebido pelo UKMTO em 2 de setembro. JMIC Update 093 e NAVAREA IX 306/26 confirmam duas fatalidades.",
-          "action": "Revalidar autorização, war-risk, rota, resposta a projéteis/minas, damage control e comunicações UKMTO/CSO antes do trânsito.",
-          "map": {
-            "x": 65,
-            "y": 42,
-            "label": "Ormuz"
-          },
-          "source": {
-            "name": "JMIC Update 093 / UKMTO 126-26",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
-          }
-        },
-        {
-          "id": "ukmto-123-26",
-          "date": "2026-08-31",
-          "region": "Golfo de Omã / 57 MN da costa",
-          "level": "high",
-          "headline": "Aeronave militar força tanker a parar",
-          "summary": "O Master relatou contato no VHF 16, ordem para inverter rumo, sobrevoo baixo e disparo que caiu na água ao lado.",
-          "details": "Às 1630 UTC, o tanker parou e permaneceu à deriva em 22°32'N 060°52'E. Às 1915 UTC, o Master confirmou tripulação segura e ausência de novo contato militar.",
-          "action": "Alinhar com CSO as respostas a hailing/interdição, manter VHF 16, AIS conforme orientação oficial e registrar toda interação.",
+          "headline": "Tanker listado é neutralizado e afunda",
+          "summary": "Forças dos EUA neutralizaram e afundaram o tanker KYLO, também identificado como NOXEN, no Golfo de Omã.",
+          "details": "O JMIC registra o evento UKMTO 127-26C às 1338 UTC. A ação ocorreu contra navio listado/associado ao Irã; não foi reportada como ataque contra terceiro navio mercante neutro.",
+          "action": "Manter distância de forças militares, monitorar VHF 16, alinhar resposta a hailing com o CSO e confirmar o status do trânsito antes da aproximação.",
           "map": {
             "x": 67,
             "y": 43,
             "label": "Golfo de Omã"
           },
           "source": {
-            "name": "JMIC Update 093 / UKMTO 123-26",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+            "name": "JMIC Update 094 / UKMTO 127-26C",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
           }
         },
         {
-          "id": "ukmto-124-26",
-          "date": "2026-08-30",
-          "region": "Estreito de Ormuz / costa de Omã",
-          "level": "critical",
-          "headline": "Tanker atingido por três projéteis",
-          "summary": "SENEGAL PROSPERITY perdeu comunicações, ficou sem governo e com banda para bombordo; tripulação foi evacuada sem vítimas.",
-          "details": "Segundo o JMIC, três projéteis atingiram o lado de bombordo, na região da praça de máquinas e tanque de lastro. O navio fundeou em 26°19'N 056°33'E e ficou not under command.",
-          "action": "Revalidar autorização, war-risk cover, orientação do CSO, rota, damage control, evacuação e reporte UKMTO antes da aproximação.",
+          "id": "ukmto-127-26a",
+          "date": "2026-09-05",
+          "region": "Próximo a Jask / Golfo de Omã",
+          "level": "high",
+          "headline": "Tanker listado fica permanentemente inoperante",
+          "summary": "Forças dos EUA neutralizaram o tanker STARK 1 próximo a Jask, deixando-o permanentemente inoperante.",
+          "details": "O JMIC registra o evento UKMTO 127-26A às 1338 UTC, no contexto de resposta militar a disparos de mísseis do IRGC contra navios de guerra dos EUA.",
+          "action": "Evitar unidades militares, manter VHF 16, registrar interações e revalidar com CSO/UKMTO as medidas para trânsito de navio neutro.",
           "map": {
-            "x": 65,
-            "y": 42,
-            "label": "Khasab / Ormuz"
+            "x": 67,
+            "y": 43,
+            "label": "Jask"
           },
           "source": {
-            "name": "JMIC Update 093 / UKMTO 124-26",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+            "name": "JMIC Update 094 / UKMTO 127-26A",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
+          }
+        },
+        {
+          "id": "ukmto-127-26b",
+          "date": "2026-09-05",
+          "region": "Ilha Kharg / Golfo Pérsico",
+          "level": "high",
+          "headline": "Tanker listado fica permanentemente inoperante",
+          "summary": "Forças dos EUA neutralizaram o tanker DOWNY ao largo da Ilha Kharg, deixando-o permanentemente inoperante.",
+          "details": "O JMIC registra o evento UKMTO 127-26B às 1338 UTC. O boletim mantém o nível SEVERE em Ormuz, mas não registra novo ataque contra terceiro navio mercante neutro.",
+          "action": "Manter separação segura de forças militares, monitorar VHF 16 e confirmar com CSO/UKMTO as condições e autorizações do trânsito.",
+          "map": {
+            "x": 64,
+            "y": 40,
+            "label": "Ilha Kharg"
+          },
+          "source": {
+            "name": "JMIC Update 094 / UKMTO 127-26B",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
           }
         }
       ]
@@ -535,13 +535,13 @@
       "description": "Interferência GNSS e sinais que exigem redundância de posição e conferência das informações portuárias.",
       "items": [
         {
-          "id": "jmic-gnss-hormuz-093",
-          "date": "2026-09-03",
+          "id": "jmic-gnss-hormuz-094",
+          "date": "2026-09-06",
           "region": "Ormuz / Golfo de Omã / Golfo Pérsico",
           "level": "high",
           "headline": "Interferência GNSS permanece disseminada",
           "summary": "O JMIC mantém spoofing/jamming e posições AIS anômalas nas aproximações de Ormuz e no sul do Golfo Pérsico.",
-          "details": "A densidade de relatos permanece maior no sul do Golfo Pérsico e corredor do Mar Vermelho. Não houve novo aviso específico UKMTO/NAVAREA em 1–2 de setembro; o risco basal permanece.",
+          "details": "A densidade de relatos permanece maior no sul do Golfo Pérsico. O JMIC não registrou novo aviso específico UKMTO/NAVAREA em 3–5 de setembro; o risco basal permanece.",
           "action": "Comparar GNSS com radar, visual, eco-sonda, DR e receptores independentes; investigar discrepâncias antes de alterar o plano.",
           "map": {
             "x": 65,
@@ -549,13 +549,13 @@
             "label": "Ormuz / Golfo"
           },
           "source": {
-            "name": "JMIC Update 093",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+            "name": "JMIC Update 094",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
           }
         },
         {
-          "id": "jmic-gnss-redsea-093",
-          "date": "2026-09-03",
+          "id": "jmic-gnss-redsea-094",
+          "date": "2026-09-06",
           "region": "Hodeidah / Yanbu / Mar Vermelho",
           "level": "high",
           "headline": "Spoofing e AIS-off persistem no Mar Vermelho",
@@ -568,8 +568,8 @@
             "label": "Mar Vermelho"
           },
           "source": {
-            "name": "JMIC Update 093",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+            "name": "JMIC Update 094",
+            "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
           }
         },
         {
@@ -712,7 +712,7 @@
       "risk": "high",
       "trafficLabel": "Operando normalmente",
       "trafficTrend": "tankers estáveis; retorno seletivo",
-      "trafficBasis": "O JMIC Update 093 informa operação normal no canal, fluxo tanker estável e retorno seletivo de porta-contêineres; não publica contagem consolidada diária nesse boletim.",
+      "trafficBasis": "O JMIC Update 094 informa operação normal no canal, fluxo tanker estável e retorno seletivo de porta-contêineres; não publica contagem consolidada diária nesse boletim.",
       "market": "Reduz distância Ásia–Europa; desvios pelo Cabo elevam ton-miles, consumo, fretes, emissões e demanda por navios.",
       "geopolitics": "O canal funciona sem interrupção sistêmica, mas o trânsito conecta-se ao risco SUBSTANTIAL no sul do Mar Vermelho/Bab-el-Mandeb.",
       "authority": "Suez Canal Authority (SCA)",
@@ -723,8 +723,8 @@
         "Planejar squat, bank effect, interação e ordens do prático/controle sem retirar o comando do Master."
       ],
       "source": {
-        "name": "JMIC Update 093 / SCA",
-        "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+        "name": "JMIC Update 094 / SCA",
+        "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
       }
     },
     {
@@ -733,10 +733,10 @@
       "region": "Omã / Irã · Golfo Pérsico",
       "risk": "critical",
       "trafficLabel": "Fluxo severamente reduzido",
-      "trafficTrend": "44 trânsitos facilitados / 48 h; abaixo do basal",
-      "trafficBasis": "O JMIC registrou 44 trânsitos facilitados pelo US NCAGS em 1–2 set. (48 h), ante basal histórico de ~138 navios/dia em 2025. Dados independentes indicaram números de um dígito em ambos os sentidos; as coberturas diferem e não devem ser somadas nem tratadas como fluxo oficial de petróleo.",
+      "trafficTrend": "59 trânsitos facilitados / 48 h; abaixo do basal",
+      "trafficBasis": "O JMIC registrou 59 trânsitos facilitados pelo US NCAGS no período de 48 h de 3–5 set., ante basal histórico de ~138 navios/dia em 2025. A série independente contou 0, 5 e 1 navios de carga >1.000 dwt por dia; as coberturas diferem e não devem ser somadas nem tratadas como fluxo oficial de petróleo.",
       "market": "Qualquer interrupção afeta crude, produtos, LNG, prêmio de seguro, bunker e fretes em escala global; a restrição de fluxo mantém forte aversão a risco.",
-      "geopolitics": "JMIC mantém nível SEVERE: o novo ataque ao SIDR causou duas mortes; persistem hailing, risco de minas, atividade militar e interferência GNSS.",
+      "geopolitics": "JMIC mantém nível SEVERE. Em 5 de setembro, forças dos EUA neutralizaram três tankers listados/associados ao Irã; não houve novo ataque reportado contra terceiro navio mercante neutro. Persistem hailing, risco de minas, atividade militar e interferência GNSS.",
       "authority": "Autoridades costeiras / UKMTO como ponto de contato de segurança",
       "reporting": "UKMTO VRS voluntário; VTS/port reporting obrigatório conforme porto e águas jurisdicionais.",
       "masterFocus": [
@@ -745,8 +745,8 @@
         "Elevar fire/security readiness, controlar emissões de informação e preservar comunicações 24/7."
       ],
       "source": {
-        "name": "JMIC Update 093 · 3 set. 2026",
-        "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+        "name": "JMIC Update 094 · 6 set. 2026",
+        "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
       }
     },
     {
@@ -777,8 +777,8 @@
       "region": "Iêmen / Djibuti / Eritreia",
       "risk": "high",
       "trafficLabel": "Abaixo do basal",
-      "trafficTrend": "66 navios >1.000 dwt / 48 h",
-      "trafficBasis": "No JMIC Update 093, 1–2 set. somaram 66 navios de carga acima de 1.000 dwt, contra basal histórico de ~61 navios/dia em 2023. É contagem de navios, não gross tonnage nem fluxo de petróleo.",
+      "trafficTrend": "117 navios >1.000 dwt / 72 h",
+      "trafficBasis": "No JMIC Update 094, 3–5 set. somaram 117 navios de carga acima de 1.000 dwt, contra basal histórico de ~61 navios/dia em 2023. É contagem de navios, não gross tonnage nem fluxo de petróleo.",
       "market": "O fluxo reduzido sustenta ton-miles via Cabo; novos ataques podem ampliar desvios, fretes e seguros rapidamente.",
       "geopolitics": "JMIC mantém nível SUBSTANTIAL por ameaça Houthi, risco de erro de identificação, GNSS degradado e pirataria nas aproximações do Golfo de Áden.",
       "authority": "UKMTO / MSCIO / forças marítimas e autoridades costeiras",
@@ -789,8 +789,8 @@
         "Monitorar warnings/advisories em tempo real; a contagem de 48 h não descreve o risco do próximo trânsito."
       ],
       "source": {
-        "name": "JMIC Update 093 · 3 set. 2026",
-        "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314"
+        "name": "JMIC Update 094 · 6 set. 2026",
+        "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
       }
     },
     {
@@ -1167,41 +1167,41 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 52.58,
+        "price": 52.01,
         "currencySymbol": "R$",
-        "changePercent": -1.79,
+        "changePercent": -1.08,
         "trend": "Baixa no dia",
-        "capturedAtLabel": "3 set. 2026 · fechamento",
-        "sourceUrl": "https://www.infomoney.com.br/cotacoes/b3/acao/petrobras-petr3/"
+        "capturedAtLabel": "4 set. 2026 · fechamento",
+        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 47.56,
+        "price": 46.97,
         "currencySymbol": "R$",
-        "changePercent": -1.33,
+        "changePercent": -1.24,
         "trend": "Baixa no dia",
-        "capturedAtLabel": "3 set. 2026 · fechamento",
-        "sourceUrl": "https://www.infomoney.com.br/cotacoes/b3/acao/petrobras-petr4/"
+        "capturedAtLabel": "4 set. 2026 · fechamento",
+        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 20.51,
+        "price": 20.12,
         "currencySymbol": "US$",
-        "changePercent": -1.68,
+        "changePercent": -1.9,
         "trend": "Baixa no dia",
-        "capturedAtLabel": "3 set. 2026 · fechamento",
+        "capturedAtLabel": "4 set. 2026 · fechamento",
         "sourceUrl": "https://www.marketwatch.com/investing/stock/pbr"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-        "price": 18.58,
+        "price": 18.25,
         "currencySymbol": "US$",
-        "changePercent": -1.22,
+        "changePercent": -1.72,
         "trend": "Baixa no dia",
-        "capturedAtLabel": "3 set. 2026 · fechamento",
+        "capturedAtLabel": "4 set. 2026 · fechamento",
         "sourceUrl": "https://www.marketwatch.com/investing/stock/pbr.a"
       }
     ],
@@ -1395,28 +1395,28 @@
     }
   ],
   "briefing": {
-    "date": "2026-09-04",
+    "date": "2026-09-07",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
         "title": "MarineTraffic é a fonte mais recente",
-        "summary": "O evento válido de 3 de setembro, 2211Z, é posterior ao último ponto SPOT; o portal prioriza automaticamente essa fonte."
+        "summary": "O evento válido de 5 de setembro, 2125Z, é posterior ao último ponto SPOT; o portal prioriza automaticamente essa fonte."
       },
       {
         "category": "SEGURANÇA",
-        "title": "Ataque fatal eleva atenção em Ormuz",
-        "summary": "O tanker SIDR foi atacado e houve duas mortes; revalide trânsito, minas, GNSS, war-risk e orientação do CSO."
+        "title": "Ormuz segue severo após ações militares",
+        "summary": "Três tankers listados foram neutralizados em 5 de setembro; não houve novo ataque reportado contra navio mercante neutro. Revalidar war-risk, GNSS e orientação do CSO."
       },
       {
         "category": "METEO",
-        "title": "Três furacões ativos no Pacífico",
-        "summary": "Lowell permanece categoria 4; Karina e Marie são categoria 2. Confirmar advisories antes de alterar rota."
+        "title": "Lowell ameaça Kauai",
+        "summary": "Lowell é categoria 3 com Hurricane Warning; Marie é tempestade tropical e Karina pós-tropical. Confirmar advisories antes de alterar rota."
       },
       {
         "category": "COSTA BR",
-        "title": "Vento forte e mar grosso no Sul",
-        "summary": "CHM mantém os avisos 641, 640 e 638, com força 7–9 e mar de 4–6 m até 5 de setembro."
+        "title": "Novos avisos CHM 655, 654 e 653",
+        "summary": "Mar de 4–5 m no Atlântico Sul e vento força 7/rajadas 8 no Nordeste e offshore Sudeste exigem revisão de rota e janela operacional."
       },
       {
         "category": "PSC",
@@ -1453,7 +1453,7 @@
     },
     {
       "name": "UKMTO / JMIC",
-      "url": "https://www.ukmto.org/-/media/ukmto/products/update-093-jmic-advisory-note-03-september.pdf?rev=c64bb2c69e7740b991b391971b48d314",
+      "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3",
       "scope": "Ameaças, tráfego e interferência GNSS",
       "typeLabel": "Oficial"
     },
@@ -1568,7 +1568,7 @@
   ],
   "updatePolicy": "Atualização programada às segundas, quartas e sextas, 07:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. PSC, Petrobras, Transpetro e regras ambientais também mudam quando houver publicação oficial relevante. NautoShark, Windy e MarineTraffic permanecem acessos externos; dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. Os cenários SCOPE são comparados ao cenário-base do próprio modelo e permanecem identificados como simulação, sem substituir cotações reais.",
   "scopeAnalysis": {
-    "updatedAt": "2026-09-04T11:39:35.298Z",
+    "updatedAt": "2026-09-07T10:01:29.970Z",
     "status": "current",
     "sourceUrl": "https://globalscope.io",
     "methodologyUrl": "https://globalscope.io/methodology",
