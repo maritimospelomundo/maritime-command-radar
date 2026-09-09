@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-07T10:12:24Z",
+  "generatedAt": "2026-09-09T10:24:00Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -52,13 +52,13 @@
         "label": "PRÓXIMAS 72 H",
         "level": "high",
         "value": "Meteo severa",
-        "summary": "Lowell é categoria 3 com Hurricane Warning para Kauai; Marie é tempestade tropical e Karina tornou-se pós-tropical, ainda com ventos de gale."
+        "summary": "Lowell enfraqueceu para tempestade tropical ao norte-noroeste de Kauai, mas ainda gera swell perigoso; avisos CHM 658–660 indicam vento forte no offshore brasileiro."
       },
       {
         "label": "PREPARAR",
         "level": "medium",
         "value": "PSC mundial",
-        "summary": "Quatro CICs de cargo securing confirmadas; verificar o regime do próximo porto e a evidência para itens N/A."
+        "summary": "Quatro CICs de cargo securing estão ativas; Mediterranean e Abuja têm participação/tema endossados, mas sem lançamento operacional completo localizado."
       }
     ],
     "modules": [
@@ -271,6 +271,25 @@
       "description": "Últimos registros públicos localizados no mapa do IMB Piracy Reporting Centre.",
       "items": [
         {
+          "id": "imb-050-26",
+          "date": "2026-09-07",
+          "region": "Fundeadouro de Jacarta, Indonésia",
+          "level": "medium",
+          "headline": "Pequena embarcação observada junto a bulk carrier",
+          "summary": "A tripulação de serviço de um graneleiro fundeado observou uma pequena embarcação nas proximidades; o registro mais recente foi incluído com classificação prudente.",
+          "details": "O IMB publicou o incidente 050-26 às 1905 UTC, na posição 05°58.6'S 106°55.0'E. O resumo público indexado confirma navio fundeado e pequena embarcação, sem sustentar classificação mais grave no snapshot.",
+          "action": "Reforçar vigia, iluminação, controle de acessos e monitoramento do bordo e do ferro; comunicar aproximação suspeita à autoridade local.",
+          "map": {
+            "x": 80,
+            "y": 55,
+            "label": "Jacarta"
+          },
+          "source": {
+            "name": "IMB PRC",
+            "url": "https://icc-ccs.org/map/"
+          }
+        },
+        {
           "id": "imb-049-26",
           "date": "2026-08-22",
           "region": "Vung Tau, Vietnã",
@@ -307,25 +326,6 @@
             "name": "IMB PRC",
             "url": "https://icc-ccs.org/map/"
           }
-        },
-        {
-          "id": "imb-047-26",
-          "date": "2026-08-20",
-          "region": "Golfo de Áden",
-          "level": "critical",
-          "headline": "Tanker abordado e sequestrado",
-          "summary": "Seis piratas armados abordaram e desviaram um petroleiro a cerca de 136 MN a leste de Mukalla.",
-          "details": "O IMB classifica o caso 047-26 como hijacking. A distância da costa confirma capacidade de ação contra navio em navegação no corredor regional.",
-          "action": "Aplicar BMP Maritime Security, reforçar lookout, testar citadel/SSAS e manter registro/reporte UKMTO e MSCIO.",
-          "map": {
-            "x": 67,
-            "y": 48,
-            "label": "Golfo de Áden"
-          },
-          "source": {
-            "name": "IMB PRC",
-            "url": "https://icc-ccs.org/map/"
-          }
         }
       ]
     },
@@ -337,22 +337,22 @@
       "description": "Eventos com potencial de gerar vento, mar e swell perigosos para operações oceânicas.",
       "items": [
         {
-          "id": "nhc-lowell-2026-09-07",
-          "date": "2026-09-07",
+          "id": "nhc-lowell-2026-09-09",
+          "date": "2026-09-09",
           "region": "Pacífico Central",
-          "level": "critical",
-          "headline": "Lowell categoria 3 aproxima-se do Havaí",
-          "summary": "Hurricane Warning está em vigor para Kauai County; Lowell mantém ventos máximos de 100 kt.",
-          "details": "No Advisory 45, às 0900 UTC, o centro estava em 16,5°N 163,2°W, deslocando-se para NNE a 9 kt, com pressão mínima de 950 hPa.",
-          "action": "Recalcular rota/ETA, evitar o campo de vento e swell e acompanhar NHC/CPHC e weather routing.",
+          "level": "high",
+          "headline": "Lowell enfraquece para tempestade tropical",
+          "summary": "Lowell mantém ventos máximos de 55 kt a cerca de 390 MN ao NNW de Lihue e continua gerando surf e correntes de retorno perigosos.",
+          "details": "No Advisory 53, às 0900 UTC, o centro estava em 27,3°N 161,5°W, deslocando-se para norte a 14 kt, com pressão mínima de 981 hPa.",
+          "action": "Manter margem do campo de vento e swell, revisar ETA e acompanhar NHC/CPHC e weather routing.",
           "map": {
             "x": 4,
             "y": 42,
             "label": "Lowell"
           },
           "source": {
-            "name": "NHC / CPHC Advisory 45",
-            "url": "https://www.nhc.noaa.gov/text/refresh/HFOTCPCP4+shtml/070917.shtml"
+            "name": "NHC / CPHC Advisory 53",
+            "url": "https://www.nhc.noaa.gov/text/HFOTCPCP4.shtml"
           }
         },
         {
@@ -362,7 +362,7 @@
           "level": "high",
           "headline": "Marie enfraquece para tempestade tropical",
           "summary": "Marie mantém ventos máximos de 55 kt e produz swell perigoso para Baja California e sul da Califórnia.",
-          "details": "No Advisory 25, às 0900 UTC, o centro estava em 24,4°N 123,7°W, deslocando-se para NW a 7 kt, com pressão mínima de 986 hPa.",
+          "details": "No Advisory 26, às 1500 UTC, o centro estava em 24,7°N 124,4°W, deslocando-se para WNW a 6 kt, com ventos máximos de 55 kt e pressão mínima de 988 hPa.",
           "action": "Evitar campo de vento e swell, revisar ETA e acompanhar boletins NHC e weather routing.",
           "map": {
             "x": 15,
@@ -370,8 +370,8 @@
             "label": "Marie"
           },
           "source": {
-            "name": "NHC / NOAA Advisory 25",
-            "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPEP3+shtml/070848.shtml"
+            "name": "NHC / NOAA Advisory 26",
+            "url": "https://www.nhc.noaa.gov/archive/2026/ep13/ep132026.public.026.shtml"
           }
         },
         {
@@ -390,7 +390,7 @@
           },
           "source": {
             "name": "NHC / NOAA Advisory 43 final",
-            "url": "https://www.nhc.noaa.gov/text/refresh/HFOTCPCP5+shtml/070245.shtml"
+            "url": "https://www.nhc.noaa.gov/archive/2026/ep11/ep112026.public.043.shtml"
           }
         }
       ]
@@ -403,18 +403,18 @@
       "description": "Avisos costeiros e alterações hidrográficas com efeito potencial em praticagem, aproximação e operações.",
       "items": [
         {
-          "id": "chm-655-2026",
-          "date": "2026-09-06",
-          "region": "Atlântico Sul oceânico",
+          "id": "chm-660-2026",
+          "date": "2026-09-08",
+          "region": "Área oceânica ao sul do Brasil",
           "level": "high",
-          "headline": "Mar grosso de 4 a 5 metros",
-          "summary": "Aviso 655 válido de 7 de setembro, 0000Z, até 8 de setembro, 1200Z, em área oceânica ao sul do Brasil.",
-          "details": "Ondas de W/SW entre 4 e 5 m podem elevar esforços, slamming e riscos de trabalho no convés em rota oceânica.",
-          "action": "Revalidar weather routing, velocidade segura, heading, estabilidade e critérios de heavy weather.",
+          "headline": "Vento força 8 com rajadas",
+          "summary": "Aviso 660 válido de 10 de setembro, 1200Z, até 11 de setembro, 1800Z, entre aproximadamente 25°S–36°S e 30°W–40°W.",
+          "details": "Vento de NE/NW força 8 com rajadas pode elevar esforços, slamming e risco de trabalho no convés em rota oceânica.",
+          "action": "Revalidar weather routing, velocidade segura, heading, estabilidade e critérios de heavy weather antes da entrada na área.",
           "map": {
             "x": 43,
             "y": 78,
-            "label": "Mar 4–5 m"
+            "label": "Vento F8"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -422,37 +422,37 @@
           }
         },
         {
-          "id": "chm-654-2026",
-          "date": "2026-09-06",
-          "region": "Touros/RN a Parnaíba/PI",
-          "level": "high",
-          "headline": "Vento força 7 com rajadas força 8",
-          "summary": "Aviso 654 válido de 8 de setembro, 1800Z, até 10 de setembro, 0000Z, até 100 MN da costa.",
-          "details": "Vento de SE/NE pode afetar aproximações, fundeio, praticagem e operações nos trechos do Rio Grande do Norte ao Piauí.",
-          "action": "Confirmar janela com agente, praticagem e terminal; reavaliar fundeio, condição de lastro e trabalho no convés.",
-          "map": {
-            "x": 36,
-            "y": 52,
-            "label": "Touros–Parnaíba"
-          },
-          "source": {
-            "name": "CHM / Marinha do Brasil",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
-        },
-        {
-          "id": "chm-653-2026",
-          "date": "2026-09-06",
+          "id": "chm-659-2026",
+          "date": "2026-09-08",
           "region": "Área Delta / offshore Sudeste",
           "level": "high",
           "headline": "Vento força 7 com rajadas força 8",
-          "summary": "Aviso 653 válido de 8 de setembro, 2100Z, até 10 de setembro, 0000Z, em setor offshore da Área Delta.",
-          "details": "Vento de NE/N entre aproximadamente 22°S–26°S e 36°W–41°W exige planejamento de rota e controle de esforços.",
-          "action": "Revisar rota, ETA, condição de lastro, velocidade e restrições para operações externas.",
+          "summary": "Aviso 659 válido de 10 de setembro, 0000Z, até 11 de setembro, 1200Z, em setor offshore entre aproximadamente 22°S–26°S e 36°W–41°W.",
+          "details": "Vento de NE/N força 7 com rajadas força 8 substitui o aviso 653 e pode afetar rota, ETA e operações externas.",
+          "action": "Confirmar janela com agente, praticagem e terminal; reavaliar lastro, velocidade e trabalho no convés.",
           "map": {
             "x": 39,
             "y": 70,
             "label": "Área Delta"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
+        {
+          "id": "chm-658-2026",
+          "date": "2026-09-08",
+          "region": "Área Bravo / offshore Sul-Sudeste",
+          "level": "high",
+          "headline": "Vento força 7 com rajadas força 8",
+          "summary": "Aviso 658 válido de 8 de setembro, 1200Z, até 11 de setembro, 0000Z, em setor offshore entre aproximadamente 23°S–30°S e 38°W–43°W.",
+          "details": "Vento de NE/N força 7 com rajadas força 8 substitui o aviso 652 e exige planejamento de rota e controle de esforços.",
+          "action": "Revisar rota, ETA, condição de lastro, velocidade e restrições para operações externas.",
+          "map": {
+            "x": 38,
+            "y": 74,
+            "label": "Área Bravo"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -733,8 +733,8 @@
       "region": "Omã / Irã · Golfo Pérsico",
       "risk": "critical",
       "trafficLabel": "Fluxo severamente reduzido",
-      "trafficTrend": "59 trânsitos facilitados / 48 h; abaixo do basal",
-      "trafficBasis": "O JMIC registrou 59 trânsitos facilitados pelo US NCAGS no período de 48 h de 3–5 set., ante basal histórico de ~138 navios/dia em 2025. A série independente contou 0, 5 e 1 navios de carga >1.000 dwt por dia; as coberturas diferem e não devem ser somadas nem tratadas como fluxo oficial de petróleo.",
+      "trafficTrend": "6 navios de commodities em 8 set.; abaixo da média recente",
+      "trafficBasis": "A Reuters informou contagem preliminar Kpler de 6 navios de commodities em 8 set., ante média de 10 dias de 12. É dado comercial complementar, não série oficial, gross tonnage nem fluxo de petróleo. O último JMIC oficial localizado registrou 59 trânsitos facilitados pelo US NCAGS em 48 h de 3–5 set.; coberturas não devem ser somadas.",
       "market": "Qualquer interrupção afeta crude, produtos, LNG, prêmio de seguro, bunker e fretes em escala global; a restrição de fluxo mantém forte aversão a risco.",
       "geopolitics": "JMIC mantém nível SEVERE. Em 5 de setembro, forças dos EUA neutralizaram três tankers listados/associados ao Irã; não houve novo ataque reportado contra terceiro navio mercante neutro. Persistem hailing, risco de minas, atividade militar e interferência GNSS.",
       "authority": "Autoridades costeiras / UKMTO como ponto de contato de segurança",
@@ -745,8 +745,8 @@
         "Elevar fire/security readiness, controlar emissões de informação e preservar comunicações 24/7."
       ],
       "source": {
-        "name": "JMIC Update 094 · 6 set. 2026",
-        "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
+        "name": "Reuters / Kpler (complementar) · 9 set. 2026",
+        "url": "https://www.reuters.com/world/middle-east/shipping-traffic-via-strait-hormuz-stays-below-10-day-average-data-shows-2026-09-09/"
       }
     },
     {
@@ -776,9 +776,9 @@
       "name": "Bab-el-Mandeb / Chifre da África",
       "region": "Iêmen / Djibuti / Eritreia",
       "risk": "high",
-      "trafficLabel": "Abaixo do basal",
-      "trafficTrend": "117 navios >1.000 dwt / 72 h",
-      "trafficBasis": "No JMIC Update 094, 3–5 set. somaram 117 navios de carga acima de 1.000 dwt, contra basal histórico de ~61 navios/dia em 2023. É contagem de navios, não gross tonnage nem fluxo de petróleo.",
+      "trafficLabel": "Abaixo da média recente",
+      "trafficTrend": "25 navios em 8 set.; média de 10 dias: 27",
+      "trafficBasis": "A Reuters informou contagem preliminar Kpler de 25 navios em 8 set., ligeiramente abaixo da média de 10 dias de 27. É dado comercial complementar, não série oficial, gross tonnage nem fluxo de petróleo. O último JMIC oficial localizado contou 117 cargueiros >1.000 dwt em 72 h de 3–5 set.; as bases não devem ser somadas.",
       "market": "O fluxo reduzido sustenta ton-miles via Cabo; novos ataques podem ampliar desvios, fretes e seguros rapidamente.",
       "geopolitics": "JMIC mantém nível SUBSTANTIAL por ameaça Houthi, risco de erro de identificação, GNSS degradado e pirataria nas aproximações do Golfo de Áden.",
       "authority": "UKMTO / MSCIO / forças marítimas e autoridades costeiras",
@@ -789,8 +789,8 @@
         "Monitorar warnings/advisories em tempo real; a contagem de 48 h não descreve o risco do próximo trânsito."
       ],
       "source": {
-        "name": "JMIC Update 094 · 6 set. 2026",
-        "url": "https://www.ukmto.org/-/media/ukmto/products/update-094-jmic-advisory-note-06-september.pdf?rev=4c643be4b8a14a09be663669c5822cd3"
+        "name": "Reuters / Kpler (complementar) · 9 set. 2026",
+        "url": "https://www.reuters.com/world/middle-east/shipping-traffic-via-strait-hormuz-stays-below-10-day-average-data-shows-2026-09-09/"
       }
     },
     {
@@ -1010,9 +1010,9 @@
     ],
     "start": "2026-09-01",
     "end": "2026-11-30",
-    "statusLabel": "4 CONFIRMADAS",
+    "statusLabel": "4 ATIVAS · 2 ANUNCIADAS",
     "pulseLabel": "4 CICs ativas",
-    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea têm publicação oficial localizada; Abuja anunciou o tema, com detalhes públicos ainda incompletos no snapshot.",
+    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea têm publicação oficial de campanha ativa; Mediterranean e Abuja endossaram participação/tema, mas sem lançamento operacional completo localizado no snapshot.",
     "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
     "readiness": [
       "Preparar matriz PSC específica do próximo porto, regime e histórico do navio.",
@@ -1086,13 +1086,13 @@
       {
         "name": "Mediterranean MoU",
         "region": "Sul e leste do Mediterrâneo",
-        "status": "unconfirmed",
-        "campaign": "Sem anúncio oficial 2026 localizado",
-        "window": "Confirmar antes da escala",
-        "tankerFocus": "Aplicar readiness de rotina e verificar instruções da autoridade portuária/Estado do porto.",
+        "status": "announced",
+        "campaign": "Participação na CIC Cargo Securing 2026 endossada",
+        "window": "Janela operacional própria não publicada no documento localizado",
+        "tankerFocus": "Preparar evidência SOLAS/ISM/MARPOL e justificar N/A para CTUs; confirmar implementação local antes da escala.",
         "source": {
           "name": "Mediterranean MoU",
-          "url": "https://www.medmou.org/"
+          "url": "https://www.medmou.org/Documents/2025-PR4.pdf"
         }
       },
       {
@@ -1167,42 +1167,42 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 52.01,
+        "price": 53.24,
         "currencySymbol": "R$",
-        "changePercent": -1.08,
-        "trend": "Baixa no dia",
-        "capturedAtLabel": "4 set. 2026 · fechamento",
-        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
+        "changePercent": 2.36,
+        "trend": "Alta no dia",
+        "capturedAtLabel": "8 set. 2026 · fechamento público",
+        "sourceUrl": "https://www.clubefii.com.br/ativos/acao/PETR3/petrobras"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 46.97,
+        "price": 48.09,
         "currencySymbol": "R$",
-        "changePercent": -1.24,
-        "trend": "Baixa no dia",
-        "capturedAtLabel": "4 set. 2026 · fechamento",
-        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
+        "changePercent": 2.08,
+        "trend": "Alta no dia",
+        "capturedAtLabel": "8 set. 2026 · fechamento público",
+        "sourceUrl": "https://www.clubefii.com.br/ativos/acao/PETR4/petrobras"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 20.12,
+        "price": 20.83,
         "currencySymbol": "US$",
-        "changePercent": -1.9,
-        "trend": "Baixa no dia",
-        "capturedAtLabel": "4 set. 2026 · fechamento",
-        "sourceUrl": "https://www.marketwatch.com/investing/stock/pbr"
+        "changePercent": 3.58,
+        "trend": "Alta no dia",
+        "capturedAtLabel": "8 set. 2026 · fechamento público",
+        "sourceUrl": "https://www.google.com/finance/quote/PBR:NYSE"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-        "price": 18.25,
+        "price": 18.86,
         "currencySymbol": "US$",
-        "changePercent": -1.72,
-        "trend": "Baixa no dia",
-        "capturedAtLabel": "4 set. 2026 · fechamento",
-        "sourceUrl": "https://www.marketwatch.com/investing/stock/pbr.a"
+        "changePercent": 3.4,
+        "trend": "Alta no dia",
+        "capturedAtLabel": "8 set. 2026 · fechamento público",
+        "sourceUrl": "https://finance.yahoo.com/quote/PBR-A/history/"
       }
     ],
     "operations": [
@@ -1315,6 +1315,16 @@
         }
       },
       {
+        "date": "2026-08-27",
+        "title": "P-80 e P-82 preparam travessia Singapura–Brasil",
+        "summary": "As duas plataformas de Búzios estão em integração final em Singapura; a P-80 será a primeira a zarpar e ambas têm início de produção previsto para 2027.",
+        "maritimeImpact": "Movimentação oceânica de unidades de grande porte no corredor Ásia–Brasil e futura capacidade combinada de até 450 mil bpd, com maior demanda de apoio e offloading em Búzios.",
+        "source": {
+          "name": "Agência Petrobras",
+          "url": "https://agencia.petrobras.com.br/w/negocio/plataformas-da-petrobras-p-80-e-p-82-que-v%C3%A3o-operar-em-b%C3%BAzios-s%C3%A3o-batizadas-em-estaleiro-em-singapura"
+        }
+      },
+      {
         "date": "2026-08-06",
         "title": "Lucro líquido de R$ 52,4 bilhões no 2T26",
         "summary": "O desempenho financeiro acompanhou recordes operacionais, crescimento das exportações e maior produção de derivados.",
@@ -1332,16 +1342,6 @@
         "source": {
           "name": "Agência Petrobras",
           "url": "https://agencia.petrobras.com.br/w/negocio/produ%C3%A7%C3%A3o-pr%C3%B3pria-de-petr%C3%B3leo-e-g%C3%A1s-da-petrobras-cresce-14-em-12-meses-e-atinge-3-34-milh%C3%B5es-de-barris-de-%C3%B3leo-equivalente-por-dia-no-2%C2%BA-trimestre-de-2026"
-        }
-      },
-      {
-        "date": "2025-06-17",
-        "title": "Blocos na Foz do Amazonas e em Pelotas",
-        "summary": "A companhia arrematou 13 blocos exploratórios, incorporando cerca de 9,6 mil km².",
-        "maritimeImpact": "Novas campanhas podem ampliar demanda futura por sísmica, perfuração, OSVs, bases e suporte ambiental.",
-        "source": {
-          "name": "Agência Petrobras",
-          "url": "https://agencia.petrobras.com.br/en/w/petrobras-informa-sobre-resultado-de-leilao-da-anp-1"
         }
       }
     ],
@@ -1395,7 +1395,7 @@
     }
   ],
   "briefing": {
-    "date": "2026-09-07",
+    "date": "2026-09-09",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
@@ -1410,18 +1410,18 @@
       },
       {
         "category": "METEO",
-        "title": "Lowell ameaça Kauai",
-        "summary": "Lowell é categoria 3 com Hurricane Warning; Marie é tempestade tropical e Karina pós-tropical. Confirmar advisories antes de alterar rota."
+        "title": "Lowell enfraquece, swell ainda exige atenção",
+        "summary": "Lowell é tempestade tropical com 55 kt ao NNW de Kauai; Marie e Karina permanecem apenas como últimos registros recentes. Confirmar advisories antes de alterar rota."
       },
       {
         "category": "COSTA BR",
-        "title": "Novos avisos CHM 655, 654 e 653",
-        "summary": "Mar de 4–5 m no Atlântico Sul e vento força 7/rajadas 8 no Nordeste e offshore Sudeste exigem revisão de rota e janela operacional."
+        "title": "Novos avisos CHM 660, 659 e 658",
+        "summary": "Vento força 7–8 com rajadas em áreas oceânicas do Sul/Sudeste exige revisão de rota, lastro, velocidade e janela operacional até 11 de setembro."
       },
       {
         "category": "PSC",
         "title": "Quatro CICs de cargo securing confirmadas",
-        "summary": "Paris, Tokyo, Viña del Mar e Black Sea estão ativos; Abuja permanece apenas como tema anunciado."
+        "summary": "Paris, Tokyo, Viña del Mar e Black Sea estão ativos; Mediterranean e Abuja permanecem anunciados/endossados sem lançamento operacional completo localizado."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -1568,7 +1568,7 @@
   ],
   "updatePolicy": "Atualização programada às segundas, quartas e sextas, 07:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. PSC, Petrobras, Transpetro e regras ambientais também mudam quando houver publicação oficial relevante. NautoShark, Windy e MarineTraffic permanecem acessos externos; dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. Os cenários SCOPE são comparados ao cenário-base do próprio modelo e permanecem identificados como simulação, sem substituir cotações reais.",
   "scopeAnalysis": {
-    "updatedAt": "2026-09-07T10:01:29.970Z",
+    "updatedAt": "2026-09-09T10:18:44.943Z",
     "status": "current",
     "sourceUrl": "https://globalscope.io",
     "methodologyUrl": "https://globalscope.io/methodology",
