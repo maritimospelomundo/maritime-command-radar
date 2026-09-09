@@ -21,6 +21,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate public data
         run: node scripts/validate-data.mjs
+      - name: Test command summary
+        run: node --test scripts/command-summary.test.mjs
+      - name: Build reusable command summary
+        run: node scripts/build-command-summary.mjs
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - uses: actions/configure-pages@v5

@@ -86,13 +86,6 @@ main { min-height: 100vh; padding: 6px; }
 .local-priority-card.risk-critical { border-top-color: var(--red); }.local-priority-card.risk-high { border-top-color: var(--orange); }.local-priority-card.risk-medium { border-top-color: var(--yellow); }.local-priority-card.risk-low { border-top-color: var(--green); }
 .local-rank { color: #57778a; font-size: 12px; font-weight: 800; }.local-priority-card div { min-width: 0; }.local-priority-card small, .local-priority-card span { display: block; overflow: hidden; color: var(--muted); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }.local-priority-card b { display: block; overflow: hidden; margin: 2px 0; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }.local-priority-card em { grid-column: 2; color: var(--cyan); font-size: 9px; font-style: normal; font-weight: 700; }
 .distance-label { color: var(--cyan) !important; font-weight: 700; }
-.scope-local-summary { margin-top: 5px; padding: 6px 9px; display: grid; grid-template-columns: minmax(230px, 1fr) minmax(260px, 1fr) auto; align-items: center; gap: 12px; color: #d9e7eb; background: rgba(50, 212, 196, .055); border: 1px dashed rgba(50, 212, 196, .3); border-radius: 6px; }
-.scope-local-summary > span { min-width: 0; }
-.scope-local-summary small { display: block; color: var(--cyan); font-size: 9px; font-weight: 800; letter-spacing: .07em; }
-.scope-local-summary b { display: block; overflow: hidden; margin-top: 1px; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
-.scope-local-summary > span:nth-child(2) { overflow: hidden; color: var(--muted); font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
-.scope-local-summary em { color: var(--cyan); font-size: 10px; font-style: normal; font-weight: 700; white-space: nowrap; }
-
 body.command-mode .command-screen { min-height: 0; grid-template-rows: 42px auto auto 82px; }
 body.command-mode .command-grid { min-height: 380px; }
 body.command-mode .subhead,
@@ -395,3 +388,33 @@ details[open] > summary .expand-mark { transform: rotate(45deg); }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Command summary: readable actions, with reference material in Complete mode. */
+body.command-mode .complete-only { display: none !important; }
+body.complete-mode .command-only { display: none !important; }
+body.command-mode .subhead { display: flex; }
+body.command-mode .context-energy { display: block; }
+body.command-mode .command-screen { grid-template-rows: auto auto auto auto; }
+body.command-mode .command-grid { min-height: 0; }
+body.command-mode .priority-panel, body.command-mode .global-panel, body.command-mode .watch-panel { display: flex; flex-direction: column; gap: 8px; }
+body.command-mode .context-deck { grid-template-columns: 1fr 1.3fr 1fr; height: auto; }
+body.command-mode .context-freshness { grid-column: 1 / -1; }
+.summary-list { display: grid; gap: 8px; }
+.summary-item { display: block; padding: 8px; border-bottom: 1px solid var(--line-soft); min-width: 0; }
+.summary-item small { display: block; color: var(--cyan); font-size: 10px; }
+.summary-item b { display: block; margin-top: 3px; font-size: 13px; }
+.summary-item p { margin: 5px 0 0; color: #c4d2dc; font-size: 12px; line-height: 1.5; }
+a.summary-item:hover { background: var(--panel-2); }
+.market-provenance { grid-column: 1 / -1; color: var(--muted); font-size: 10px; }
+body.command-mode .market-compact { grid-template-columns: repeat(3, 1fr); }
+body.command-mode .market-compact > article:last-of-type { grid-column: 1 / -1; }
+body.command-mode .context-market, body.command-mode .context-energy, .context-fuel { min-width: 0; padding: 10px; }
+.simulator-link { color: var(--muted); font-size: 11px; }
+body.command-mode .local-priority-card b { white-space: normal; }
+@media (max-width: 1100px) {
+  body.command-mode .command-grid, body.command-mode .context-deck { grid-template-columns: 1fr; }
+}
+
+body.command-mode .market-compact .market-provenance { white-space: normal; }
+body.command-mode .command-grid { align-items: start; }
+body.command-mode .command-strip b { white-space: normal; overflow: visible; }

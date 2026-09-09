@@ -49,3 +49,21 @@ O bloco `spotPosition` mantém a posição do rastreador e a condição da bater
 ## Aviso
 
 Este painel organiza fontes públicas e não substitui sistemas oficiais, NAVAREA, avisos aos navegantes, serviços meteorológicos contratados, instruções do armador/afretador, autoridades, seguradores ou o julgamento profissional do comandante.
+
+## Visão Comando e integração com o Gabinete
+
+O modo Comando exibe posição/fonte/idade, três prioridades locais, alertas altos/críticos com ação e acesso aos restantes, até quatro passagens de maior risco, CICs ativas, três itens do Commander Brief, VLCC/Suezmax/Aframax, bunker indicativo e impacto operacional Petrobras/Transpetro. Cotação de petróleo ausente do snapshot é indicada como indisponível.
+
+SCOPE permanece apenas como link discreto ao simulador na home. Resultados e cenários continuam no modo Completo, usando `scopeAnalysis` sem alteração. Horizontes repetidos, catálogo de módulos/checklists, demais alertas, reportes, regimes PSC, gráficos, ações, produção, rotas, bacias e fontes ficam na versão completa.
+
+O adaptador independente `site/command-summary.js` expõe `buildCommandSummary(data, resolvedPosition?)`. A home disponibiliza `window.maritimeCommandSummary` e o evento `maritime-command-summary-ready`. O objeto tem `summaryVersion: 1`, mantém `schemaVersion: 5`, `generatedAt`, posição com fonte e horário, alertas com ações/fontes, mercado, bunker, PSC ativo, passagens, energia, Transpetro e Commander Brief; não contém resultados SCOPE.
+
+O deploy gera **`data/command-summary.json`** a partir de `latest.json` para consumo estático pelo Gabinete, evitando duplicação editorial e mantendo a mesma seleção da home. Essa posição é a do snapshot; a home pode usar uma posição mais nova quando um endpoint configurado responder. Use `dateTime` e `generatedAt` para mostrar a idade. Sem destino/viagem configurados, PSC e passagens representam cobertura mundial, não uma recomendação de rota.
+
+```bash
+node scripts/validate-data.mjs
+node --test scripts/command-summary.test.mjs
+node scripts/build-command-summary.mjs
+```
+
+O JSON resumido é gerado pelo workflow a cada publicação; não edite esse arquivo manualmente.

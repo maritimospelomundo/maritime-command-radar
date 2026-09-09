@@ -32,10 +32,15 @@ const element = (tag, className, text) => {
 
 byId('command-mode-button')?.addEventListener('click', () => setViewMode('command'));
 byId('complete-mode-button')?.addEventListener('click', () => setViewMode('complete'));
-document.querySelectorAll('a[href^="#"]').forEach((link) => link.addEventListener('click', () => {
-  const target = document.querySelector(link.getAttribute('href'));
-  if (target?.classList.contains('deep-dive') || target?.closest('.deep-dive')) setViewMode('complete');
-}));
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || link.getAttribute('href') === '#') return;
+  const target = document.getElementById(link.getAttribute('href').slice(1));
+  if (target?.classList.contains('deep-dive') || target?.closest('.deep-dive')) {
+    setViewMode('complete');
+    if (target.tagName === 'DETAILS') target.open = true;
+  }
+});
 
 let initialViewMode = 'command';
 try { initialViewMode = localStorage.getItem(viewModeKey) || 'command'; } catch { /* usa o padrão */ }
@@ -794,9 +799,6 @@ function renderPositionPriority(data) {
     setText('position-priority-title', 'Posição indisponível');
     setText('local-priority-note', 'O panorama global permanece disponível');
     setText('position-source-summary', 'Nenhuma posição válida recebida');
-    setText('scope-local-title', 'Cenários disponíveis no Modo Completo');
-    setText('scope-local-impact', 'Sem posição válida para calcular proximidade');
-    setText('scope-local-distance', 'Ver SCOPE ↓');
     return;
   }
   const { current, course, speed, projected, sourceStates } = positionContext;
@@ -835,12 +837,6 @@ function renderPositionPriority(data) {
     href: `#alert-${item.id}`,
     ...relevanceFor(item.geo || mapToCoordinates(item.map), item.level)
   })));
-  const scopeCandidates = (data.scopeAnalysis?.scenarios || []).map((item) => ({
-    type: 'SCOPE · SIMULAÇÃO', icon: '◈', id: `scope-${item.id}`, title: `Interrupção simulada: ${item.name}`,
-    region: `Preço ${signedPercent(item.peakPriceChangePercent)} · oferta ${signedPercent(item.minimumSupplyChangePercent)}`,
-    level: item.modelRisk, href: '#scope-analysis',
-    ...relevanceFor({ latitude: item.latitude, longitude: item.longitude }, item.modelRisk)
-  }));
   const candidates = alertCandidates.sort((a, b) => b.score - a.score).slice(0, 5);
   candidates.forEach((item, index) => {
     const card = element('a', `local-priority-card risk-${item.level}`);
@@ -852,12 +848,7 @@ function renderPositionPriority(data) {
     grid.append(card);
   });
 
-  const scopePrimary = scopeCandidates.sort((a, b) => b.score - a.score)[0];
-  if (scopePrimary) {
-    setText('scope-local-title', scopePrimary.title.replace('Interrupção simulada: ', 'Interrupção de '));
-    setText('scope-local-impact', `${scopePrimary.region} · simulação, não ocorrência real`);
-    setText('scope-local-distance', distanceBand(scopePrimary.distance));
-  }
+
 }
 
 async function loadRadar() {
@@ -870,6 +861,9 @@ async function loadRadar() {
     positionContext = await resolvePosition(data.spotPosition, data.marineTrafficPosition);
     renderPositionPriority(data);
     render(data);
+    window.maritimeCommandSummary = window.buildCommandSummary(data, positionContext?.current);
+    renderCommandSummary(window.maritimeCommandSummary);
+    window.dispatchEvent(new CustomEvent('maritime-command-summary-ready', { detail: window.maritimeCommandSummary }));
     message.hidden = true;
     portal.setAttribute('aria-busy', 'false');
   } catch (error) {
@@ -882,3 +876,30 @@ async function loadRadar() {
 }
 
 loadRadar();
+
+function renderCommandSummary(summary) {
+  const add = (id, label, title, text, href) => {
+    const card = element(href ? 'a' : 'article', 'summary-item');
+    if (href) card.href = href;
+    card.append(element('small', '', label), element('b', '', title), element('p', '', text));
+    byId(id).append(card);
+  };
+  ['commander-summary', 'critical-summary', 'passage-summary', 'psc-active-summary', 'energy-operational-summary', 'fuel-summary'].forEach(id => clear(byId(id)));
+  summary.commanderBrief.items.forEach(i => add('commander-summary', i.category, i.title, i.summary));
+  summary.criticalAlerts.slice(0,3).forEach(i => add('critical-summary', `${i.level === 'critical' ? 'CRÍTICO' : 'ALTO'} · ${i.date}`, i.headline, i.action, `#alert-${i.id}`));
+  if (!summary.criticalAlerts.length) add('critical-summary', 'SNAPSHOT', 'Sem alertas altos ou críticos', 'Consulte todos os alertas no modo Completo.', '#alerts-detail');
+  if (summary.criticalAlerts.length > 3) add('critical-summary', 'COBERTURA GLOBAL', `Mais ${summary.criticalAlerts.length - 3} alertas altos / críticos`, 'Abrir a lista completa com ações e fontes.', '#alerts-detail');
+  summary.passageRisks.slice(0,4).forEach(i => add('passage-summary', i.risk === 'critical' ? 'CRÍTICO' : 'ALTO', `${i.name} · tráfego: ${i.trafficLabel}`, i.action, `#passage-${i.id}`));
+  if (!summary.passageRisks.length) add('passage-summary', 'PASSAGENS', 'Sem riscos altos ou críticos no snapshot', 'Verificar condições da viagem.', '#passages-detail');
+  if (summary.passageRisks.length > 4) add('passage-summary', 'PASSAGENS', `Mais ${summary.passageRisks.length - 4} riscos altos / críticos`, 'Ver todas as passagens.', '#passages-detail');
+  const campaigns = new Map();
+  summary.activePsc.forEach(i => { const key = `${i.campaign} · ${i.window}`; if (!campaigns.has(key)) campaigns.set(key, []); campaigns.get(key).push(i); });
+  campaigns.forEach((items, key) => add('psc-active-summary', 'PSC · CAMPANHA ATIVA', key, `${items.map(i => i.name).join(' · ')}. ${items[0].tankerFocus}`, '#psc-detail'));
+  if (!campaigns.size) add('psc-active-summary', 'PSC', 'Nenhuma campanha ativa confirmada', 'Consultar regimes e anúncios.', '#psc-detail');
+  summary.energyOperations.forEach(i => add('energy-operational-summary', i.date, i.title, i.action, '#petrobras-detail'));
+  add('energy-operational-summary', 'TRANSPETRO', summary.transpetro.title, summary.transpetro.operationalImpact, '#petrobras-detail');
+  add('fuel-summary', 'PETRÓLEO', 'Sem cotação publicada', summary.oil.note);
+  add('fuel-summary', 'VLSFO · US$/t · INDICATIVO', summary.bunker.items.map(i => `${i.code} $${number.format(i.vlsfo)}`).join(' · '), `${summary.bunker.sourceLabel}. ${summary.bunker.note}`, '#bunker-detail');
+  const market = byId('market-compact');
+  market.append(element('small', 'market-provenance', `${summary.tankerMarket.sourceLabel} · referências, não fixtures`));
+}

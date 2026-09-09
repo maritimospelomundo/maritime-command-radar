@@ -10,7 +10,7 @@
   <meta property="og:image" content="og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260904-command1">
+  <link rel="stylesheet" href="styles.css?v=20260909-summary1">
 </head>
 <body class="command-mode">
 <main id="portal" aria-busy="true">
@@ -20,7 +20,7 @@
       <span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span>
     </a>
     <nav aria-label="Navegação principal">
-      <a href="#overview">Comando</a><a href="#passages-detail">Passagens</a><a href="#scope-analysis">SCOPE</a><a href="#reporting-detail">Reportes</a><a href="#psc-detail">PSC</a><a href="#market-detail">Mercado</a><a href="#sources-detail">Fontes</a>
+      <a href="#overview">Comando</a><a href="#passages-detail">Passagens</a><a href="#reporting-detail">Reportes</a><a href="#psc-detail">PSC</a><a href="#market-detail">Mercado</a><a href="#sources-detail">Fontes</a>
     </nav>
     <div class="header-status"><span class="live-dot"></span><span><b id="snapshot-status">Carregando radar</b><small id="snapshot-time">Consultando dados públicos…</small></span></div>
     <button class="menu-button" type="button" aria-label="Abrir menu">☰</button>
@@ -73,26 +73,24 @@
       </details>
       <div class="local-priority-head"><div><small>RADAR OPERACIONAL · FATOS REAIS</small><b>O que mais pode afetar o navio nesta posição</b></div><span id="local-priority-note">Distância, severidade e atualidade</span></div>
       <div class="local-priority-grid" id="local-priority-grid"></div>
-      <a class="scope-local-summary" href="#scope-analysis">
-        <span><small>SCOPE · CENÁRIO SIMULADO</small><b id="scope-local-title">Carregando cenário de estresse…</b></span>
-        <span id="scope-local-impact">Não representa uma ocorrência real</span>
-        <em id="scope-local-distance">Ver SCOPE ↓</em>
-      </a>
+
     </section>
 
     <div class="command-grid">
       <aside class="command-panel priority-panel" aria-labelledby="priority-title">
         <div class="panel-title"><div><span>01</span><h1 id="priority-title">Prioridade do Comandante</h1></div><a href="#alerts-detail">Todos os alertas ↓</a></div>
-        <div class="horizon-grid" id="horizon-grid"></div>
+        <div class="horizon-grid complete-only" id="horizon-grid"></div>
         <div class="subhead"><span>COMMANDER'S BRIEF</span><small id="brief-date">—</small></div>
-        <div class="brief-compact" id="brief-compact"></div>
+        <div id="commander-summary" class="command-only summary-list"></div>
+        <div class="brief-compact complete-only" id="brief-compact"></div>
         <div class="command-caution" id="brief-caution">—</div>
       </aside>
 
       <section class="command-panel global-panel" aria-labelledby="global-title">
-        <div class="panel-title"><div><span>02</span><h2 id="global-title">Panorama mundial</h2></div><a href="#alerts-detail">Todos os alertas ↓</a></div>
-        <div class="risk-rail" id="risk-rail" aria-label="Resumo mundial dos alertas"></div>
-        <div class="global-situation" id="global-situation" aria-label="Alertas prioritários por domínio"></div>
+        <div class="panel-title"><div><span>02</span><h2 id="global-title">Alertas críticos</h2></div><a href="#alerts-detail">Todos os alertas ↓</a></div>
+        <div id="critical-summary" class="command-only summary-list"></div>
+        <div class="risk-rail complete-only" id="risk-rail" aria-label="Resumo mundial dos alertas"></div>
+        <div class="global-situation complete-only" id="global-situation" aria-label="Alertas prioritários por domínio"></div>
         <div class="service-zone">
           <div class="service-zone-head"><span>ACESSO OPERACIONAL</span><small>Abre em nova guia · use sua conta quando aplicável</small></div>
           <div class="service-links">
@@ -105,9 +103,11 @@
       </section>
 
       <aside class="command-panel watch-panel" aria-labelledby="watch-title">
-        <div class="panel-title"><div><span>03</span><h2 id="watch-title">Daily operational watch</h2></div><a href="#operations-detail">Detalhar ↓</a></div>
-        <div class="watch-modules" id="watch-modules"></div>
-        <div class="ops-split">
+        <div class="panel-title"><div><span>03</span><h2 id="watch-title">Passagens e PSC</h2></div><a href="#passages-detail">Detalhar ↓</a></div>
+        <div id="passage-summary" class="command-only summary-list"></div>
+        <div class="watch-modules complete-only" id="watch-modules"></div>
+        <div id="psc-active-summary" class="command-only summary-list"></div>
+        <div class="ops-split complete-only">
           <article class="mini-module psc-mini"><header><span>PSC</span><b id="psc-status">—</b></header><strong id="psc-campaign">—</strong><p id="psc-window">—</p></article>
           <article class="mini-module bunker-mini"><header><span>BUNKER</span><b>VLSFO US$/t</b></header><div id="bunker-compact"></div></article>
         </div>
@@ -116,7 +116,8 @@
 
     <footer class="context-deck">
       <section class="context-market"><div class="context-title"><span>MARKET</span><small>USD/dia · 12m TC</small></div><div id="market-compact" class="market-compact"></div></section>
-      <section class="context-energy"><div class="context-title"><span>PETROBRAS & TRANSPETRO</span><small id="energy-period">—</small></div><div id="energy-compact" class="energy-compact"></div></section>
+      <section class="context-energy"><div class="context-title"><span>PETROBRAS & TRANSPETRO</span><small id="energy-period">—</small></div><div id="energy-operational-summary" class="command-only summary-list"></div><div id="energy-compact" class="energy-compact complete-only"></div></section>
+      <section class="context-fuel command-only"><div class="context-title"><span>PETRÓLEO / BUNKER</span><a href="#bunker-detail">Detalhes ↗</a></div><div id="fuel-summary" class="summary-list"></div></section>
       <section class="context-freshness"><small>SNAPSHOT</small><b id="footer-snapshot">—</b><span>Dados observados, proxies e estimativas identificados nos detalhes.</span></section>
     </footer>
   </section>
@@ -182,8 +183,9 @@
     <div class="section-heading"><p>DATA PROVENANCE</p><div><h2>Fontes e transparência</h2><span>Fontes oficiais e gratuitas priorizadas; indústria quando não existe alternativa pública equivalente.</span></div></div><div class="source-table" id="source-table"><div class="source-head"><span>Fonte</span><span>Escopo</span><span>Tipo</span><span>Acesso</span></div></div><div class="method-note"><div><b>Política de atualização</b><p id="update-policy">—</p></div></div>
   </section>
 
-  <footer class="site-footer"><div class="brand"><span class="brand-mark">⌁</span><span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p></footer>
+  <footer class="site-footer"><a class="simulator-link" href="https://globalscope.io" target="_blank" rel="noreferrer">Abrir simulador GlobalScope ↗</a><div class="brand"><span class="brand-mark">⌁</span><span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p></footer>
 </main>
-<script src="script.js?v=20260904-command1"></script>
+<script src="command-summary.js?v=20260909-summary1"></script>
+<script src="script.js?v=20260909-summary1"></script>
 </body>
 </html>
