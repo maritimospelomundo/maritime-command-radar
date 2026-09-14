@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-14T10:09:35Z",
+  "generatedAt": "2026-09-14T10:16:29Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -342,7 +342,7 @@
           "region": "Pacífico Central",
           "level": "medium",
           "headline": "Norbert enfraquece em mar aberto",
-          "summary": "Norbert mantinha 35 kt, cerca de 1.215 MN a leste de Hilo, e seguia para oeste a 11 kt; o NHC prevê enfraquecimento gradual.",
+          "summary": "Norbert mantinha 35 kt, cerca de 1.215 milhas a leste de Hilo, e seguia para oeste a 11 kt; o NHC prevê enfraquecimento gradual.",
           "details": "Às 0900 UTC de 14 de setembro, o centro estava em 19,1°N 133,9°W, com pressão mínima de 1005 hPa e sem avisos costeiros em vigor.",
           "action": "Acompanhar os próximos advisories e High Seas Forecasts; manter margem do campo de vento e swell no planejamento oceânico.",
           "map": {
