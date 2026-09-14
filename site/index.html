@@ -10,7 +10,7 @@
   <meta property="og:image" content="og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=20260909-summary1">
+  <link rel="stylesheet" href="styles.css?v=20260914-proximity2">
 </head>
 <body class="command-mode">
 <main id="portal" aria-busy="true">
@@ -28,7 +28,6 @@
 
   <div id="data-message" class="data-message" role="status">Carregando a atualização mais recente…</div>
 
-  <a class="data-message" style="display:block" href="https://abdias-vessel-control.gps-seafarer.chatgpt.site" target="_blank" rel="noreferrer"><strong>ABDIAS NASCIMENTO · CONTROLE DO NAVIO</strong> — Certificados, revisões e pendências · Acesso protegido ↗</a>
 
   <section class="command-screen" id="overview">
     <header class="command-strip">
@@ -51,9 +50,10 @@
         <div class="position-vessel"><span class="live-dot"></span><div><small id="position-source-label">POSIÇÃO MAIS RECENTE</small><h2 id="position-priority-title">Carregando posição do navio…</h2></div></div>
         <div><small>ÚLTIMO SINAL</small><b id="spot-position-time">—</b></div>
         <div><small>COORDENADAS</small><b id="spot-position-coordinates">—</b></div>
-        <div><small>PROJEÇÃO</small><b id="spot-position-projection">—</b></div>
+        <div><small>BASE DO RADAR</small><b id="spot-position-projection">—</b></div>
         <a id="spot-map-link" href="https://maps.findmespot.com/s/VCV3" target="_blank" rel="noreferrer">Abrir rastreamento ↗</a>
       </header>
+      <p id="position-age-warning" class="position-age-warning" role="status" hidden></p>
       <details class="position-source-details" id="position-source-details">
         <summary><span>Comparar SPOT e MarineTraffic</span><small id="position-source-summary">Fonte ativa: —</small><i aria-hidden="true">+</i></summary>
         <div class="position-sources" aria-label="Comparação das fontes de posição">
@@ -78,16 +78,16 @@
 
     <div class="command-grid">
       <aside class="command-panel priority-panel" aria-labelledby="priority-title">
-        <div class="panel-title"><div><span>01</span><h1 id="priority-title">Prioridade do Comandante</h1></div><a href="#alerts-detail">Todos os alertas ↓</a></div>
+        <div class="panel-title"><div><span>01</span><h1 id="priority-title">Briefing da edição</h1></div><a href="#alerts-detail">Todos os alertas ↓</a></div>
         <div class="horizon-grid complete-only" id="horizon-grid"></div>
-        <div class="subhead"><span>COMMANDER'S BRIEF</span><small id="brief-date">—</small></div>
+        <div class="subhead"><span>CONTEXTO OPERACIONAL</span><small id="brief-date">—</small></div>
         <div id="commander-summary" class="command-only summary-list"></div>
         <div class="brief-compact complete-only" id="brief-compact"></div>
         <div class="command-caution" id="brief-caution">—</div>
       </aside>
 
       <section class="command-panel global-panel" aria-labelledby="global-title">
-        <div class="panel-title"><div><span>02</span><h2 id="global-title">Alertas críticos</h2></div><a href="#alerts-detail">Todos os alertas ↓</a></div>
+        <div class="panel-title"><div><span>02</span><h2 id="global-title">Outros alertas relevantes</h2></div><a href="#alerts-detail">Todos os alertas ↓</a></div>
         <div id="critical-summary" class="command-only summary-list"></div>
         <div class="risk-rail complete-only" id="risk-rail" aria-label="Resumo mundial dos alertas"></div>
         <div class="global-situation complete-only" id="global-situation" aria-label="Alertas prioritários por domínio"></div>
@@ -114,12 +114,14 @@
       </aside>
     </div>
 
+    <details class="context-details"><summary>Mercado, bunker e Petrobras / Transpetro</summary>
     <footer class="context-deck">
       <section class="context-market"><div class="context-title"><span>MARKET</span><small>USD/dia · 12m TC</small></div><div id="market-compact" class="market-compact"></div></section>
       <section class="context-energy"><div class="context-title"><span>PETROBRAS & TRANSPETRO</span><small id="energy-period">—</small></div><div id="energy-operational-summary" class="command-only summary-list"></div><div id="energy-compact" class="energy-compact complete-only"></div></section>
       <section class="context-fuel command-only"><div class="context-title"><span>PETRÓLEO / BUNKER</span><a href="#bunker-detail">Detalhes ↗</a></div><div id="fuel-summary" class="summary-list"></div></section>
       <section class="context-freshness"><small>SNAPSHOT</small><b id="footer-snapshot">—</b><span>Dados observados, proxies e estimativas identificados nos detalhes.</span></section>
     </footer>
+    </details>
   </section>
 
   <section class="deep-dive" id="operations-detail">
@@ -185,7 +187,8 @@
 
   <footer class="site-footer"><a class="simulator-link" href="https://globalscope.io" target="_blank" rel="noreferrer">Abrir simulador GlobalScope ↗</a><div class="brand"><span class="brand-mark">⌁</span><span class="brand-copy"><strong>MARITIME MASTER RADAR</strong><small>By Captain Ponzi</small></span></div><p>Inteligência pública para apoiar — nunca substituir — o julgamento profissional.</p></footer>
 </main>
-<script src="command-summary.js?v=20260909-summary1"></script>
-<script src="script.js?v=20260909-summary1"></script>
+<script src="command-summary.js?v=20260914-proximity2"></script>
+<script src="script.js?v=20260914-proximity2"></script>
 </body>
 </html>
+

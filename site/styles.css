@@ -418,3 +418,17 @@ body.command-mode .local-priority-card b { white-space: normal; }
 body.command-mode .market-compact .market-provenance { white-space: normal; }
 body.command-mode .command-grid { align-items: start; }
 body.command-mode .command-strip b { white-space: normal; overflow: visible; }
+
+
+/* Operational review: readable priorities with secondary context on demand. */
+.position-age-warning {padding:10px 14px;color:#ffd483;background:#40331c;border-radius:6px;font-size:14px;}
+.position-age-warning[hidden] {display:none;}
+.context-details > summary {cursor:pointer;padding:14px;font-size:16px;color:var(--text);}
+.summary-item small,.market-provenance {font-size:12px;}
+.summary-item b,.local-priority-card b {font-size:16px!important;line-height:1.4;}
+.summary-item p,.local-action {font-size:14px;line-height:1.5;}
+.local-action {margin:8px 0 0;color:#c4d2dc;}
+body.command-mode .local-priority-card {align-items:start;}
+body.command-mode .command-screen {height:auto;max-height:none;}
+body.command-mode .command-panel {max-height:none;overflow:visible;}
+body.command-mode .context-freshness {display:none;}

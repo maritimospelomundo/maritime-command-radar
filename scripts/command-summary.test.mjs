@@ -18,9 +18,9 @@ test('summary preserves schema and source data without mutation', () => {
 });
 test('newest valid source wins, including history and invalid points', () => {
   const d = structuredClone(data);
-  d.spotPosition.history = [{latitude: 1, longitude: 2, dateTime:'2099-01-01T00:00:00Z'}, {latitude:91,longitude:2,dateTime:'2100-01-01T00:00:00Z'}];
+  d.spotPosition.history = [{latitude: 1, longitude: 2, dateTime:new Date(Date.now()-7200000).toISOString()}, {latitude:91,longitude:2,dateTime:'2100-01-01T00:00:00Z'}];
   assert.equal(buildCommandSummary(d).position.sourceLabel, 'SPOT');
-  d.marineTrafficPosition.lastKnown = {latitude:3,longitude:4,dateTime:'2099-02-01T00:00:00Z'};
+  d.marineTrafficPosition.lastKnown = {latitude:3,longitude:4,dateTime:new Date(Date.now()-3600000).toISOString()};
   assert.equal(buildCommandSummary(d).position.sourceLabel, 'MarineTraffic');
 });
 test('missing position does not remove critical operational information', () => {
@@ -29,7 +29,7 @@ test('missing position does not remove critical operational information', () => 
   assert.ok(s.criticalAlerts.length && s.passageRisks.length && s.commanderBrief.items.length);
 });
 test('resolved live position can override the static snapshot', () => {
-  const p = {latitude:1,longitude:2,dateTime:'2099-01-01T00:00:00Z',sourceKey:'spot',sourceLabel:'SPOT'};
+  const p = {latitude:1,longitude:2,dateTime:new Date(Date.now()-7200000).toISOString(),sourceKey:'spot',sourceLabel:'SPOT'};
   assert.equal(buildCommandSummary(data, p).position.dateTime, p.dateTime);
 });
 test('SCOPE results never enter summary, even if added to briefing or alerts', () => {
@@ -43,4 +43,25 @@ test('SCOPE results never enter summary, even if added to briefing or alerts', (
 });
 test('oil quotes are explicitly unavailable, not fabricated', () => {
   assert.equal(buildCommandSummary(data).oil.available, false);
+});
+
+
+test('nearby medium event outranks distant critical event after position moves', () => {
+ const d=structuredClone(data); const base=d.alertGroups[0].items[0];
+ d.alertGroups=[{items:[{...base,id:'west',level:'medium',geo:{latitude:0,longitude:0}},{...base,id:'east',level:'critical',geo:{latitude:0,longitude:90}}]}];
+ const pos=longitude=>({latitude:0,longitude,dateTime:new Date(Date.now()-1000).toISOString(),sourceKey:'spot',sourceLabel:'SPOT'});
+ assert.equal(buildCommandSummary(d,pos(0)).nearbyAlerts[0].id,'west');
+ assert.equal(buildCommandSummary(d,pos(90)).nearbyAlerts[0].id,'east');
+ assert.equal(buildCommandSummary(d,pos(0)).criticalAlerts[0].id,'east');
+});
+test('future and invalid positions cannot override valid lastKnown', () => {
+ const d=structuredClone(data);
+ const original=buildCommandSummary(d).position;
+ d.spotPosition.history=[{latitude:0,longitude:0,dateTime:'2099-01-01T00:00:00Z'},{latitude:null,longitude:0,dateTime:new Date().toISOString()}];
+ assert.deepEqual(buildCommandSummary(d).position,original);
+});
+test('missing event coordinates remain unknown, never zero distance', () => {
+ const d=structuredClone(data); delete d.alertGroups[0].items[0].map; delete d.alertGroups[0].items[0].geo;
+ const item=buildCommandSummary(d).nearbyAlerts.find(a=>a.id===d.alertGroups[0].items[0].id);
+ assert.equal(item.distanceNm,null);
 });

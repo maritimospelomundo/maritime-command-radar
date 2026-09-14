@@ -10,6 +10,8 @@ function setViewMode(mode, persist = true) {
   document.body.classList.toggle('complete-mode', selected === 'complete');
   byId('command-mode-button')?.setAttribute('aria-pressed', String(selected === 'command'));
   byId('complete-mode-button')?.setAttribute('aria-pressed', String(selected === 'complete'));
+  const contextDetails = document.querySelector('.context-details');
+  if (contextDetails) contextDetails.open = selected === 'complete';
   const sourceDetails = byId('position-source-details');
   if (sourceDetails) sourceDetails.open = selected === 'complete';
   if (persist) {
@@ -61,7 +63,7 @@ let positionContext = null;
 const toRadians = (value) => value * Math.PI / 180;
 const toDegrees = (value) => value * 180 / Math.PI;
 const validCoordinate = (latitude, longitude) => Number.isFinite(latitude) && latitude >= -90 && latitude <= 90 && Number.isFinite(longitude) && longitude >= -180 && longitude <= 180;
-const mapToCoordinates = (map) => ({ latitude: 90 - (map.y * 1.8), longitude: (map.x * 3.6) - 180 });
+const mapToCoordinates = (map) => window.radarPriority.eventGeo({map});
 
 function distanceNm(a, b) {
   const radiusNm = 3440.065;
@@ -110,6 +112,8 @@ function coordinatesLabel(point) {
 }
 
 function pointTimestamp(point) {
+  const iso = Date.parse(point?.dateTime);
+  if (Number.isFinite(iso)) return iso;
   const unix = Number(point?.unixTime);
   if (Number.isFinite(unix)) return unix > 1e12 ? unix : unix * 1000;
   return Date.parse(point?.dateTime);
@@ -119,23 +123,16 @@ function batteryLabel(state) {
   return ({ GOOD: 'Boa', OK: 'Boa', LOW: 'Baixa', CRITICAL: 'Crítica' }[String(state || '').toUpperCase()] || 'Não informada');
 }
 
-function relevanceFor(point, level = 'low') {
-  if (!positionContext || !point) return { distance: Infinity, projectedDistance: Infinity, score: 0 };
-  const distance = distanceNm(positionContext.current, point);
-  const projectedDistance = positionContext.projected ? distanceNm(positionContext.projected, point) : distance;
-  const effectiveDistance = Math.min(distance, projectedDistance);
-  const levelWeight = { critical: 5200, high: 3600, medium: 2100, low: 900 }[level] || 900;
-  const proximity = Math.max(0, 6500 - effectiveDistance);
-  const routeBonus = projectedDistance + 40 < distance ? 900 : 0;
-  return { distance, projectedDistance, score: levelWeight + proximity + routeBonus };
+function relevanceFor(point, level = 'low', date) {
+  return window.radarPriority.proximity(positionContext?.current, point, level, date);
 }
 
 function distanceBand(distance) {
-  if (!Number.isFinite(distance)) return 'Posição indisponível';
-  if (distance <= 250) return `Imediato · ${number.format(distance)} MN`;
-  if (distance <= 750) return `Próximo · ${number.format(distance)} MN`;
-  if (distance <= 1500) return `Regional · ${number.format(distance)} MN`;
-  return `Global · ${number.format(distance)} MN`;
+  if (!Number.isFinite(distance)) return 'Distância indisponível';
+  if (distance <= 250) return `Até 250 MN · ≈ ${number.format(distance)} MN`;
+  if (distance <= 750) return `Próximo · ≈ ${number.format(distance)} MN`;
+  if (distance <= 1500) return `Regional · ≈ ${number.format(distance)} MN`;
+  return `Global · ≈ ${number.format(distance)} MN`;
 }
 
 async function resolveSourcePosition(config, sourceKey, sourceLabel) {
@@ -146,11 +143,10 @@ async function resolveSourcePosition(config, sourceKey, sourceLabel) {
       if (response.ok) points = (await response.json()).points || [];
     } catch { /* usa o último snapshot publicado */ }
   }
-  if (!points.length && Array.isArray(config?.history)) points = config.history;
-  if (!points.length && config?.lastKnown) points = [config.lastKnown];
-  points = points.filter((point) => validCoordinate(Number(point.latitude), Number(point.longitude)))
+  points = [...points, ...(config?.history || []), config?.lastKnown].filter(Boolean);
+  points = points.filter(window.radarPriority.validPosition)
     .map((point) => ({ ...point, latitude: Number(point.latitude), longitude: Number(point.longitude), sourceKey, sourceLabel }))
-    .filter((point) => Number.isFinite(pointTimestamp(point)))
+    .filter((point) => Number.isFinite(pointTimestamp(point)) && pointTimestamp(point) <= Date.now())
     .sort((a, b) => pointTimestamp(a) - pointTimestamp(b));
   return { current: points.at(-1) || null, points, isLive: Boolean(config?.endpoint && points.length > 1), mapUrl: config?.mapUrl };
 }
@@ -169,14 +165,7 @@ async function resolvePosition(spotConfig, marineTrafficConfig) {
   let course = null;
   let speed = null;
   let projected = null;
-  if (previous) {
-    const hours = (pointTimestamp(current) - pointTimestamp(previous)) / 3600000;
-    if (hours > 0) {
-      speed = distanceNm(previous, current) / hours;
-      course = bearingDegrees(previous, current);
-      if (speed <= 30) projected = projectPoint(current, course, speed * 24);
-    }
-  }
+
   return { current, previous, course, speed, projected, sourceStates: { spot, marineTraffic } };
 }
 
@@ -358,8 +347,8 @@ function renderAlerts(groups) {
   const orderedGroups = groups.map((group) => ({ ...group, items: [...group.items].sort((a, b) => {
     const aGeo = a.geo || mapToCoordinates(a.map);
     const bGeo = b.geo || mapToCoordinates(b.map);
-    return relevanceFor(bGeo, b.level).score - relevanceFor(aGeo, a.level).score;
-  }) })).sort((a, b) => relevanceFor(b.items[0]?.geo || mapToCoordinates(b.items[0]?.map), b.items[0]?.level).score - relevanceFor(a.items[0]?.geo || mapToCoordinates(a.items[0]?.map), a.items[0]?.level).score);
+    return relevanceFor(bGeo, b.level, b.date).score - relevanceFor(aGeo, a.level, a.date).score;
+  }) })).sort((a, b) => relevanceFor(b.items[0]?.geo || mapToCoordinates(b.items[0]?.map), b.items[0]?.level, b.items[0]?.date).score - relevanceFor(a.items[0]?.geo || mapToCoordinates(a.items[0]?.map), a.items[0]?.level, a.items[0]?.date).score);
   orderedGroups.forEach((group) => {
     const button = element('button', '', `${group.icon} ${group.shortTitle}`);
     button.dataset.alertGroup = group.id;
@@ -806,12 +795,16 @@ function renderPositionPriority(data) {
   setText('position-source-label', `POSIÇÃO MAIS RECENTE · ${current.sourceLabel.toUpperCase()}`);
   setText('spot-position-time', `${dateTime.format(new Date(pointTimestamp(current)))} UTC · ${positionAgeLabel(current.dateTime)}`);
   setText('spot-position-coordinates', coordinatesLabel(current));
-  setText('spot-position-projection', projected ? `24 h · ${String(Math.round(course)).padStart(3, '0')}° · ${money.format(speed)} kn` : 'Aguardando 2 posições');
+  setText('spot-position-projection', 'Última posição observada');
+  const stale = Date.now() - pointTimestamp(current) > 86400000;
+  const warning = byId('position-age-warning');
+  warning.hidden = !stale;
+  warning.textContent = stale ? 'Posição com mais de 24 h. Prioridades calculadas a partir do último ponto disponível.' : '';
   setText('position-source-summary', `Fonte ativa: ${current.sourceLabel} · ${positionAgeLabel(current.dateTime)}`);
   const mapLink = byId('spot-map-link');
   mapLink.href = safeUrl(sourceStates[current.sourceKey]?.mapUrl || data.spotPosition?.mapUrl || mapLink.href);
   mapLink.textContent = current.sourceKey === 'spot' ? 'Abrir SPOT ↗' : 'Abrir MarineTraffic ↗';
-  setText('local-priority-note', `Base: ${current.sourceLabel} · distância, severidade${projected ? ' e derrota estimada' : ''} · 3 principais no Modo Comando`);
+  setText('local-priority-note', `Base: ${current.sourceLabel} · faixa de distância → gravidade → atualidade. Distâncias aproximadas às áreas dos eventos.`);
 
   const renderSource = (key, state) => {
     const prefix = key === 'spot' ? 'spot' : 'marine';
@@ -833,9 +826,11 @@ function renderPositionPriority(data) {
     id: item.id,
     title: item.headline,
     region: item.region,
+    date: item.date,
+    action: item.action,
     level: item.level,
     href: `#alert-${item.id}`,
-    ...relevanceFor(item.geo || mapToCoordinates(item.map), item.level)
+    ...relevanceFor(item.geo || mapToCoordinates(item.map), item.level, item.date)
   })));
   const candidates = alertCandidates.sort((a, b) => b.score - a.score).slice(0, 5);
   candidates.forEach((item, index) => {
@@ -843,7 +838,7 @@ function renderPositionPriority(data) {
     card.href = item.href;
     card.append(element('span', 'local-rank', String(index + 1).padStart(2, '0')));
     const copy = element('div');
-    copy.append(element('small', '', `${item.icon} ${item.type}`), element('b', '', item.title), element('span', '', item.region));
+    copy.append(element('small', '', `${item.icon} ${item.type}`), element('b', '', item.title), element('span', '', `${item.region} · ${item.date}`), element('p', 'local-action', item.action));
     card.append(copy, element('em', '', distanceBand(item.distance)));
     grid.append(card);
   });
@@ -876,6 +871,7 @@ async function loadRadar() {
 }
 
 loadRadar();
+setInterval(loadRadar, 5 * 60 * 1000);
 
 function renderCommandSummary(summary) {
   const add = (id, label, title, text, href) => {
@@ -886,20 +882,21 @@ function renderCommandSummary(summary) {
   };
   ['commander-summary', 'critical-summary', 'passage-summary', 'psc-active-summary', 'energy-operational-summary', 'fuel-summary'].forEach(id => clear(byId(id)));
   summary.commanderBrief.items.forEach(i => add('commander-summary', i.category, i.title, i.summary));
-  summary.criticalAlerts.slice(0,3).forEach(i => add('critical-summary', `${i.level === 'critical' ? 'CRÍTICO' : 'ALTO'} · ${i.date}`, i.headline, i.action, `#alert-${i.id}`));
+  summary.criticalAlerts.filter(i => !summary.nearbyAlerts.slice(0,3).some(n => n.id === i.id)).slice(0,2).forEach(i => add('critical-summary', `${i.level === 'critical' ? 'CRÍTICO' : 'ALTO'} · ${i.date} · ${distanceBand(i.distanceNm ?? Infinity)}`, i.headline, i.action, `#alert-${i.id}`));
   if (!summary.criticalAlerts.length) add('critical-summary', 'SNAPSHOT', 'Sem alertas altos ou críticos', 'Consulte todos os alertas no modo Completo.', '#alerts-detail');
-  if (summary.criticalAlerts.length > 3) add('critical-summary', 'COBERTURA GLOBAL', `Mais ${summary.criticalAlerts.length - 3} alertas altos / críticos`, 'Abrir a lista completa com ações e fontes.', '#alerts-detail');
-  summary.passageRisks.slice(0,4).forEach(i => add('passage-summary', i.risk === 'critical' ? 'CRÍTICO' : 'ALTO', `${i.name} · tráfego: ${i.trafficLabel}`, i.action, `#passage-${i.id}`));
+  if (summary.criticalAlerts.length) add('critical-summary', 'COBERTURA GLOBAL', `${summary.criticalAlerts.length} alertas altos / críticos no radar`, 'Abrir a lista completa com ações e fontes.', '#alerts-detail');
+  summary.passageRisks.slice(0,2).forEach(i => add('passage-summary', `${i.risk === 'critical' ? 'CRÍTICO' : 'ALTO'} · ${distanceBand(i.distanceNm ?? Infinity)}`, `${i.name} · tráfego: ${i.trafficLabel}`, i.action, `#passage-${i.id}`));
   if (!summary.passageRisks.length) add('passage-summary', 'PASSAGENS', 'Sem riscos altos ou críticos no snapshot', 'Verificar condições da viagem.', '#passages-detail');
-  if (summary.passageRisks.length > 4) add('passage-summary', 'PASSAGENS', `Mais ${summary.passageRisks.length - 4} riscos altos / críticos`, 'Ver todas as passagens.', '#passages-detail');
+  if (summary.passageRisks.length > 2) add('passage-summary', 'PASSAGENS', `Mais ${summary.passageRisks.length - 2} riscos altos / críticos`, 'Ver todas as passagens.', '#passages-detail');
   const campaigns = new Map();
   summary.activePsc.forEach(i => { const key = `${i.campaign} · ${i.window}`; if (!campaigns.has(key)) campaigns.set(key, []); campaigns.get(key).push(i); });
   campaigns.forEach((items, key) => add('psc-active-summary', 'PSC · CAMPANHA ATIVA', key, `${items.map(i => i.name).join(' · ')}. ${items[0].tankerFocus}`, '#psc-detail'));
   if (!campaigns.size) add('psc-active-summary', 'PSC', 'Nenhuma campanha ativa confirmada', 'Consultar regimes e anúncios.', '#psc-detail');
   summary.energyOperations.forEach(i => add('energy-operational-summary', i.date, i.title, i.action, '#petrobras-detail'));
   add('energy-operational-summary', 'TRANSPETRO', summary.transpetro.title, summary.transpetro.operationalImpact, '#petrobras-detail');
-  add('fuel-summary', 'PETRÓLEO', 'Sem cotação publicada', summary.oil.note);
+
   add('fuel-summary', 'VLSFO · US$/t · INDICATIVO', summary.bunker.items.map(i => `${i.code} $${number.format(i.vlsfo)}`).join(' · '), `${summary.bunker.sourceLabel}. ${summary.bunker.note}`, '#bunker-detail');
   const market = byId('market-compact');
   market.append(element('small', 'market-provenance', `${summary.tankerMarket.sourceLabel} · referências, não fixtures`));
 }
+
