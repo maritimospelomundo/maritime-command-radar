@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-14T10:16:29Z",
+  "generatedAt": "2026-09-16T10:03:00Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -37,7 +37,7 @@
       "unixTime": 1789474380,
       "latitude": 27.510833333333334,
       "longitude": -15.298,
-      "eventType": "Position Report"
+      "eventType": "Noon Position"
     }
   },
   "dailyWatch": {
@@ -52,7 +52,7 @@
         "label": "PRÓXIMAS 72 H",
         "level": "high",
         "value": "Costa BR · F8 e 3–5 m",
-        "summary": "Avisos CHM 673–675 cobrem vento força 7–8 e ondas de 3–5 m entre 14 e 17 de setembro; revisar rota, lastro e trabalhos externos."
+        "summary": "Avisos CHM 675–677 cobrem vento força 7–9 e ondas de 3–5 m até 18 de setembro; revisar rota, lastro e trabalhos externos."
       },
       {
         "label": "PREPARAR",
@@ -162,7 +162,7 @@
   },
   "market": {
     "week": "W37",
-    "sourceLabel": "Time-charter Fearnleys W36 · último público; Baltic tanker W37; BDTI/BCTI e VLSFO em 11 set.",
+    "sourceLabel": "Time-charter Fearnleys W36 · último público; Baltic tanker W37; BDTI/BCTI em 11 set.; VLSFO em 15 set.",
     "benchmarks": [
       {
         "segment": "VLCC",
@@ -268,7 +268,7 @@
       "title": "Pirataria e roubo armado",
       "shortTitle": "Pirataria",
       "icon": "☠",
-      "description": "Últimos registros públicos localizados no mapa do IMB Piracy Reporting Centre.",
+      "description": "Últimos registros públicos localizados. O ReCAAP informou zero incidente na Ásia entre 8 e 14 de setembro; por isso os registros anteriores foram preservados com suas datas originais.",
       "items": [
         {
           "id": "imb-050-26",
@@ -334,63 +334,63 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-      "description": "Eventos com potencial de gerar vento, mar e swell perigosos para operações oceânicas.",
+      "description": "Três condições de alto-mar mais recentes comprovadas nos boletins NOAA/NWS de 16 de setembro; não havia ciclone tropical ativo no Atlântico no momento da consulta.",
       "items": [
         {
-          "id": "nhc-norbert-2026-09-14",
-          "date": "2026-09-14",
-          "region": "Pacífico Central",
-          "level": "medium",
-          "headline": "Norbert enfraquece em mar aberto",
-          "summary": "Norbert mantinha 35 kt, cerca de 1.215 milhas a leste de Hilo, e seguia para oeste a 11 kt; o NHC prevê enfraquecimento gradual.",
-          "details": "Às 0900 UTC de 14 de setembro, o centro estava em 19,1°N 133,9°W, com pressão mínima de 1005 hPa e sem avisos costeiros em vigor.",
-          "action": "Acompanhar os próximos advisories e High Seas Forecasts; manter margem do campo de vento e swell no planejamento oceânico.",
+          "id": "noaa-atlantic-gale-2026-09-16",
+          "date": "2026-09-16",
+          "region": "Atlântico Norte · sul da Groenlândia",
+          "level": "high",
+          "headline": "Gale de 35–50 kt e mar de 3,5–5,5 m",
+          "summary": "O High Seas Forecast da METAREA IV indica vento de 35 a 50 kt próximo de 60°N 38°W, com mar de 3,5 a 5,5 m.",
+          "details": "O sistema se desloca para nordeste; a previsão mantém áreas de 25 a 35 kt e mar elevado no Atlântico Norte nas próximas 48 horas.",
+          "action": "Revalidar weather routing, velocidade, heading, estabilidade e limites de trabalho externo antes de operar no Atlântico Norte.",
           "map": {
-            "x": 15,
-            "y": 45,
-            "label": "Norbert"
+            "x": 39,
+            "y": 17,
+            "label": "Atlântico Norte"
           },
           "source": {
-            "name": "NHC Advisory · 14 set.",
-            "url": "https://www.nhc.noaa.gov/"
+            "name": "NOAA Ocean Prediction Center",
+            "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
           }
         },
         {
-          "id": "nhc-ep15-2026-09-14",
-          "date": "2026-09-14",
-          "region": "Pacífico Nordeste",
-          "level": "medium",
-          "headline": "Depressão Tropical Quinze-E pode intensificar",
-          "summary": "O sistema tinha 30 kt em 16,5°N 118,9°W e pode tornar-se tempestade tropical ainda em 14 de setembro; não há avisos costeiros.",
-          "details": "No Advisory 3, às 0900 UTC, a depressão deslocava-se para WSW a 8 kt, com pressão mínima de 1006 hPa.",
-          "action": "Monitorar track, intensidade e swell nos próximos advisories NHC antes de ajustar rota no Pacífico Nordeste.",
+          "id": "noaa-bering-gale-2026-09-16",
+          "date": "2026-09-16",
+          "region": "Mar de Bering",
+          "level": "high",
+          "headline": "Gale de 30–40 kt e mar de até 5,5 m",
+          "summary": "O boletim de alto-mar do Pacífico indica baixa de 982 hPa próximo de 63°N 167°W, com vento de 30 a 40 kt e mar de 3 a 5,5 m.",
+          "details": "As condições mais severas concentram-se no semicírculo sul; a baixa deve avançar para nordeste e perder força em 24 horas.",
+          "action": "Manter ampla margem do centro da baixa e confirmar atualizações antes de qualquer trânsito no Bering.",
           "map": {
-            "x": 17,
-            "y": 45,
-            "label": "Quinze-E"
+            "x": 4,
+            "y": 15,
+            "label": "Mar de Bering"
           },
           "source": {
-            "name": "NHC Advisory 3",
-            "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPEP5+shtml/140837.shtml"
+            "name": "NOAA Ocean Prediction Center",
+            "url": "https://ocean.weather.gov/shtml/NFDHSFEPI.php"
           }
         },
         {
-          "id": "nhc-atlantic-outlook-2026-09-14",
-          "date": "2026-09-14",
-          "region": "Atlântico subtropical central",
-          "level": "low",
-          "headline": "Distúrbio com 30% em sete dias",
-          "summary": "Um cavado a mais de 1.000 MN a ESE das Bermudas tem baixa chance de desenvolvimento gradual no meio ou fim da semana.",
-          "details": "O Tropical Weather Outlook das 0600 UTC indicava 0% em 48 horas e 30% em sete dias; não há ciclone tropical organizado neste momento.",
-          "action": "Manter acompanhamento do outlook e dos High Seas Forecasts para travessias no Atlântico central.",
+          "id": "nhc-tehuantepec-gale-2026-09-16",
+          "date": "2026-09-16",
+          "region": "Golfo de Tehuantepec",
+          "level": "high",
+          "headline": "Gale prevista de 25–35 kt",
+          "summary": "O NHC prevê vento norte de 25 a 35 kt no Golfo de Tehuantepec em 24 horas, com mar de 2,5 a 3,0 m.",
+          "details": "O corredor de vento deve estender mar e vento forte para sudoeste da saída do golfo durante a janela prevista.",
+          "action": "Planejar afastamento do jato de Tehuantepec, revisar velocidade/heading e acompanhar o próximo High Seas Forecast.",
           "map": {
-            "x": 35,
-            "y": 35,
-            "label": "Atlântico central"
+            "x": 24,
+            "y": 42,
+            "label": "Tehuantepec"
           },
           "source": {
-            "name": "NHC Atlantic Outlook · 14 set.",
-            "url": "https://www.nhc.noaa.gov/text/refresh/MIATWOAT+shtml/140519.shtml"
+            "name": "NHC / NOAA High Seas Forecast",
+            "url": "https://ocean.weather.gov/shtml/NFDHSFEPI.php"
           }
         }
       ]
@@ -403,14 +403,33 @@
       "description": "Avisos costeiros e alterações hidrográficas com efeito potencial em praticagem, aproximação e operações.",
       "items": [
         {
+          "id": "chm-677-2026",
+          "date": "2026-09-14",
+          "region": "Área oceânica sul · 30°S–36°S / 20°W–30°W",
+          "level": "high",
+          "headline": "Vento força 8 com rajadas força 9",
+          "summary": "Aviso CHM 677 válido de 16 de setembro, 0000Z, até 18 de setembro, 0000Z, na área oceânica ao sul do Brasil.",
+          "details": "Vento NW/SW força 8 com rajadas força 9 exige preparação de heavy weather e restrição de trabalhos externos.",
+          "action": "Revalidar weather routing, velocidade segura, heading, estabilidade e segurança do convés antes da entrada na área.",
+          "map": {
+            "x": 47,
+            "y": 78,
+            "label": "Vento F8–9"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
+        {
           "id": "chm-675-2026",
           "date": "2026-09-13",
           "region": "Área oceânica ao sul do Brasil",
           "level": "high",
-          "headline": "Vento força 8 na área oceânica sul",
-          "summary": "Aviso 675 válido de 15 de setembro, 1800Z, até 17 de setembro, 1200Z, entre 30°S–36°S e 30°W–48°W.",
-          "details": "Vento NW/SW força 8 com rajadas exige preparação de heavy weather e restrição de trabalhos externos.",
-          "action": "Revalidar weather routing, velocidade segura, heading, estabilidade e segurança do convés antes da entrada na área.",
+          "headline": "Vento força 8 até 17 set. 1200Z",
+          "summary": "Aviso CHM 675 cobre 30°S–36°S e 30°W–48°W, com vento NW/SW força 8 entre 15 de setembro, 1800Z, e 17 de setembro, 1200Z.",
+          "details": "O campo de vento severo pode elevar esforços, alterar ETA e impedir trabalhos externos seguros.",
+          "action": "Reavaliar rota, lastro, velocidade, heading e critérios de heavy weather antes de alcançar a área.",
           "map": {
             "x": 43,
             "y": 78,
@@ -422,37 +441,18 @@
           }
         },
         {
-          "id": "chm-674-2026",
+          "id": "chm-676-2026",
           "date": "2026-09-13",
           "region": "Área Alpha / sul do Brasil",
           "level": "high",
-          "headline": "Ondas de 3–5 m na área Alpha",
-          "summary": "Aviso 674 válido de 15 de setembro, 1800Z, até 17 de setembro, 0300Z, entre aproximadamente 29°S–36°S e 43°W–52°W.",
-          "details": "Ondas de SW/S entre 3,0 e 5,0 m podem elevar esforços, slamming e risco em trabalhos no convés.",
-          "action": "Reavaliar lastro, velocidade, heading, esforços e critérios de heavy weather antes de alcançar a área.",
+          "headline": "Ondas de 3–5 m até 17 set. 0300Z",
+          "summary": "Aviso CHM 676 cobre a área entre 29°S–36°S e 43°W–52°W, com ondas de SW/S de 3,0 a 5,0 m.",
+          "details": "Mar grosso a muito grosso pode elevar esforços, slamming e risco em trabalhos no convés.",
+          "action": "Confirmar weather routing; revisar rota, lastro, velocidade, heading e segurança do convés.",
           "map": {
             "x": 39,
             "y": 76,
             "label": "Ondas 3–5 m"
-          },
-          "source": {
-            "name": "CHM / Marinha do Brasil",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
-        },
-        {
-          "id": "chm-673-2026",
-          "date": "2026-09-13",
-          "region": "Área Bravo / costa Sudeste",
-          "level": "high",
-          "headline": "Vento força 7 com rajadas na área Bravo",
-          "summary": "Aviso 673 válido de 14 de setembro, 0900Z, até 15 de setembro, 1500Z, entre aproximadamente 24°S–31°S e 38°W–46°W.",
-          "details": "Vento SE/NE rondando para NW/SW, força 7 com rajadas, pode afetar rota, ETA e operações externas.",
-          "action": "Confirmar janela com agente, praticagem e terminal; revisar rota, lastro, velocidade e segurança do convés.",
-          "map": {
-            "x": 40,
-            "y": 72,
-            "label": "Área Bravo"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -1372,36 +1372,36 @@
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 878.5,
-      "change": 21
+      "vlsfo": 908,
+      "change": 13
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 730,
-      "change": 27.5
+      "vlsfo": 731,
+      "change": 0.5
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 959,
-      "change": 34.5
+      "vlsfo": 1005,
+      "change": 17.5
     },
     {
       "port": "Houston",
       "code": "USHOU",
-      "vlsfo": 797.5,
-      "change": 29
+      "vlsfo": 804,
+      "change": -0.5
     }
   ],
   "briefing": {
-    "date": "2026-09-14",
+    "date": "2026-09-16",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
         "title": "MarineTraffic é a fonte mais recente",
-        "summary": "O evento válido de 12 de setembro, 2313Z, é posterior ao último ponto SPOT; o portal prioriza automaticamente essa fonte."
+        "summary": "O Noon Position válido de 15 de setembro, 1213Z, é posterior ao último ponto SPOT; o portal prioriza automaticamente essa fonte."
       },
       {
         "category": "SEGURANÇA",
@@ -1410,13 +1410,13 @@
       },
       {
         "category": "METEO",
-        "title": "Norbert enfraquece; nova depressão no Pacífico",
-        "summary": "Norbert mantinha 35 kt no Pacífico Central; a Depressão Quinze-E pode tornar-se tempestade tropical. Confirmar advisories antes de alterar rota."
+        "title": "Sem ciclone no Atlântico; três áreas de gale",
+        "summary": "Não havia ciclone tropical ativo no Atlântico, mas os boletins de alto-mar indicam gales no Atlântico Norte, Mar de Bering e Golfo de Tehuantepec."
       },
       {
         "category": "COSTA BR",
-        "title": "Novos avisos CHM 675, 674 e 673",
-        "summary": "Vento força 7–8 e ondas de 3–5 m exigem revisão de rota, lastro, velocidade e janela operacional entre 14 e 17 de setembro."
+        "title": "Avisos CHM 675–677 permanecem vigentes",
+        "summary": "Vento força 8 com rajadas força 9 e ondas de 3–5 m exigem revisão de rota, lastro, velocidade e trabalhos externos até 18 de setembro."
       },
       {
         "category": "PSC",
@@ -1425,8 +1425,8 @@
       },
       {
         "category": "MERCADO",
-        "title": "VLCC spot atinge WS450 no Golfo de Omã–China",
-        "summary": "A referência pública de 11 de setembro é recorde; BDTI fechou em 4.015 e BCTI em 1.808. Tratar spot, índices e time-charter como métricas distintas."
+        "title": "VLSFO sobe nos principais hubs",
+        "summary": "Em 15 de setembro: Singapura US$ 908/t, Rotterdam US$ 731/t, Fujairah US$ 1.005/t e Houston US$ 804/t. Fretes e índices permanecem no último dado público W37/11 set."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -1457,6 +1457,12 @@
       "typeLabel": "Oficial"
     },
     {
+      "name": "ReCAAP ISC",
+      "url": "https://www.recaap.org/resources/ck/files/reports/weekly/2026/ReCAAP%20ISC%20Weekly%20Report%20(8-14%20Sep)%202026.pdf",
+      "scope": "Boletim semanal de pirataria e roubo armado na Ásia",
+      "typeLabel": "Oficial"
+    },
+    {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be",
       "scope": "Ameaças, tráfego e interferência GNSS",
@@ -1472,6 +1478,12 @@
       "name": "NHC / NOAA",
       "url": "https://www.nhc.noaa.gov/",
       "scope": "Meteorologia tropical",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "NOAA Ocean Prediction Center",
+      "url": "https://ocean.weather.gov/",
+      "scope": "Previsões de alto-mar e avisos de gale",
       "typeLabel": "Oficial"
     },
     {
