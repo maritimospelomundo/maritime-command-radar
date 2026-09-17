@@ -33,11 +33,11 @@
       "Position Report"
     ],
     "lastKnown": {
-      "dateTime": "2026-09-15T12:13:00Z",
-      "unixTime": 1789474380,
-      "latitude": 27.510833333333334,
-      "longitude": -15.298,
-      "eventType": "Noon Position"
+      "dateTime": "2026-09-16T13:14:00Z",
+      "unixTime": 1789564440,
+      "latitude": 23.375333333333334,
+      "longitude": -18.539,
+      "eventType": "Position Report"
     }
   },
   "dailyWatch": {
