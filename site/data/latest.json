@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-16T10:03:00Z",
+  "generatedAt": "2026-09-18T10:08:00Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -45,14 +45,14 @@
       {
         "label": "AÇÃO AGORA",
         "level": "critical",
-        "value": "Ormuz · ameaça SEVERE",
-        "summary": "Três navios foram atingidos em Ormuz entre 10 e 13 de setembro; o último tanker sofreu incêndio grave. Revalidar trânsito com CSO/companhia e UKMTO."
+        "value": "Ormuz · novo incidente",
+        "summary": "O UKMTO recebeu em 17 de setembro relato de incidente 16 MN a nordeste de Khasab; fontes abertas associam o evento a tanker atingido e incêndio. Revalidar trânsito com CSO/companhia e UKMTO."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
-        "value": "Costa BR · F8 e 3–5 m",
-        "summary": "Avisos CHM 675–677 cobrem vento força 7–9 e ondas de 3–5 m até 18 de setembro; revisar rota, lastro e trabalhos externos."
+        "value": "Atlântico Norte · 45–60 kt",
+        "summary": "A METAREA IV prevê baixa de 981 hPa, vento de 45–60 kt e mar de 5–8 m em 48 horas; revisar weather routing antes de operar ao norte de 37°N."
       },
       {
         "label": "PREPARAR",
@@ -114,12 +114,12 @@
         "id": "chokepoints",
         "icon": "▲",
         "label": "CHOKEPOINTS",
-        "value": "Ormuz crítico; Bab territorial",
+        "value": "Ormuz crítico; fluxo reduzido",
         "status": "high",
-        "summary": "Ormuz permanece SEVERE após novos ataques; em Bab-el-Mandeb, o controle territorial Houthi aproxima a ameaça dos dois canais.",
+        "summary": "Novo incidente foi reportado em Ormuz em 17 de setembro; contagem civil preliminar caiu a quatro navios de commodities, enquanto Bab-el-Mandeb registrou 23.",
         "source": {
-          "name": "JMIC Update 096 · 13 set. 2026",
-          "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be"
+          "name": "UKMTO / Reuters · 17–18 set. 2026",
+          "url": "https://www.reuters.com/world/middle-east/shipping-traffic-via-strait-hormuz-stays-below-10-day-average-data-shows-2026-09-18/"
         }
       },
       {
@@ -161,90 +161,90 @@
     ]
   },
   "market": {
-    "week": "W37",
-    "sourceLabel": "Time-charter Fearnleys W36 · último público; Baltic tanker W37; BDTI/BCTI em 11 set.; VLSFO em 15 set.",
+    "week": "W38",
+    "sourceLabel": "Time-charter e narrativa Fearnleys W38; BDTI/BCTI permanecem no último dado público de 11 set.; VLSFO consultado em 18 set.",
     "benchmarks": [
       {
         "segment": "VLCC",
         "route": "1 ano TC · eco/scrubber",
-        "value": 130000,
+        "value": 160000,
         "unit": "USD/day",
         "confidence": "medium",
-        "trendWidth": 80
+        "trendWidth": 100
       },
       {
         "segment": "Suezmax",
         "route": "1 ano TC · eco/scrubber",
-        "value": 82500,
+        "value": 125000,
         "unit": "USD/day",
         "confidence": "medium",
-        "trendWidth": 72
+        "trendWidth": 88
       },
       {
         "segment": "Aframax",
         "route": "1 ano TC · eco/scrubber",
-        "value": 58500,
+        "value": 69000,
         "unit": "USD/day",
         "confidence": "medium",
-        "trendWidth": 66
+        "trendWidth": 70
       }
     ],
     "spotSignal": {
       "segment": "VLCC",
-      "label": "spot · 11 set.",
-      "valueLabel": "WS450 Golfo de Omã–China",
-      "summary": "Referência pública recorde para a rota; West Africa–Ásia também marcou máxima. Não confundir spot Worldscale com os benchmarks de time-charter.",
+      "label": "spot · 18 set.",
+      "valueLabel": "até WS800 Fujairah–Ásia",
+      "summary": "Referência pública para cargas de outubro; Fearnleys W38 também descreve mercado excepcionalmente firme e lista VLCC muito curta. Não confundir Worldscale spot com time-charter ou índice Baltic oficial.",
       "confidenceLabel": "Dado público complementar",
-      "sourceLabel": "Baltic Exchange / Reuters"
+      "sourceLabel": "Reuters / Fearnleys W38"
     },
     "history": {
       "weeks": [
-        "W30",
         "W31",
         "W32",
         "W33",
         "W34",
         "W35",
-        "W36"
+        "W36",
+        "W38"
       ],
       "series": [
         {
           "name": "VLCC",
           "className": "vlcc",
           "values": [
-            94,
             96,
             98,
             98.5,
             99,
             99.25,
-            130
+            130,
+            160
           ]
         },
         {
           "name": "Suezmax",
           "className": "suez",
           "values": [
-            65,
             66,
             68,
             68.5,
             69,
             68.5,
-            82.5
+            82.5,
+            125
           ]
         },
         {
           "name": "Aframax",
           "className": "afra",
           "values": [
-            51,
             52,
             52.5,
             53,
             54,
             53.75,
-            58.5
+            58.5,
+            69
           ]
         }
       ]
@@ -334,21 +334,21 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-      "description": "Três condições de alto-mar mais recentes comprovadas nos boletins NOAA/NWS de 16 de setembro; não havia ciclone tropical ativo no Atlântico no momento da consulta.",
+      "description": "Três condições de alto-mar comprovadas nos boletins NOAA/NWS de 18 de setembro. Não havia ciclone tropical ativo no Atlântico, Pacífico Leste ou Pacífico Central no momento da consulta.",
       "items": [
         {
-          "id": "noaa-atlantic-gale-2026-09-16",
-          "date": "2026-09-16",
-          "region": "Atlântico Norte · sul da Groenlândia",
+          "id": "noaa-atlantic-storm-2026-09-18",
+          "date": "2026-09-18",
+          "region": "Atlântico Norte · 37°N–58°N / leste de 62°W",
           "level": "high",
-          "headline": "Gale de 35–50 kt e mar de 3,5–5,5 m",
-          "summary": "O High Seas Forecast da METAREA IV indica vento de 35 a 50 kt próximo de 60°N 38°W, com mar de 3,5 a 5,5 m.",
-          "details": "O sistema se desloca para nordeste; a previsão mantém áreas de 25 a 35 kt e mar elevado no Atlântico Norte nas próximas 48 horas.",
-          "action": "Revalidar weather routing, velocidade, heading, estabilidade e limites de trabalho externo antes de operar no Atlântico Norte.",
+          "headline": "Storm warning: 45–60 kt e mar de 5–8 m",
+          "summary": "A METAREA IV prevê em 48 horas baixa complexa de 981 hPa perto de 51°N 49°W, com vento de 45–60 kt e mar significativo de 5–8 m nos quadrantes sul e oeste.",
+          "details": "A área mais ampla entre 37°N e 58°N, a leste de 62°W, mantém vento de 20–30 kt; o boletim é válido até 0000Z de 20 de setembro.",
+          "action": "Revalidar weather routing, velocidade, heading, estabilidade, cargas de convés e limites de trabalho externo antes de operar no Atlântico Norte.",
           "map": {
-            "x": 39,
-            "y": 17,
-            "label": "Atlântico Norte"
+            "x": 36.4,
+            "y": 21.7,
+            "label": "Atlântico N · storm"
           },
           "source": {
             "name": "NOAA Ocean Prediction Center",
@@ -356,18 +356,18 @@
           }
         },
         {
-          "id": "noaa-bering-gale-2026-09-16",
-          "date": "2026-09-16",
-          "region": "Mar de Bering",
+          "id": "noaa-gulf-alaska-gale-2026-09-18",
+          "date": "2026-09-18",
+          "region": "Golfo do Alasca",
           "level": "high",
-          "headline": "Gale de 30–40 kt e mar de até 5,5 m",
-          "summary": "O boletim de alto-mar do Pacífico indica baixa de 982 hPa próximo de 63°N 167°W, com vento de 30 a 40 kt e mar de 3 a 5,5 m.",
-          "details": "As condições mais severas concentram-se no semicírculo sul; a baixa deve avançar para nordeste e perder força em 24 horas.",
-          "action": "Manter ampla margem do centro da baixa e confirmar atualizações antes de qualquer trânsito no Bering.",
+          "headline": "Gale de 25–40 kt e mar de 3–5 m",
+          "summary": "A METAREA XII prevê baixa de 992 hPa perto de 59°N 146°W em 24 horas, com vento de 25–40 kt e mar significativo de 3–5 m.",
+          "details": "A baixa avança para o Alasca e se dissipa sobre terra em 48 horas; a previsão cobre o período até 0000Z de 20 de setembro.",
+          "action": "Manter margem da baixa, considerar gelo/nevoeiro quando aplicável e confirmar o próximo boletim antes de qualquer trânsito no Golfo do Alasca.",
           "map": {
-            "x": 4,
-            "y": 15,
-            "label": "Mar de Bering"
+            "x": 9.4,
+            "y": 17.2,
+            "label": "Golfo do Alasca"
           },
           "source": {
             "name": "NOAA Ocean Prediction Center",
@@ -375,21 +375,21 @@
           }
         },
         {
-          "id": "nhc-tehuantepec-gale-2026-09-16",
-          "date": "2026-09-16",
-          "region": "Golfo de Tehuantepec",
+          "id": "noaa-north-pacific-gale-2026-09-18",
+          "date": "2026-09-18",
+          "region": "Pacífico Norte · 41°N–60°N / 130°W–171°W",
           "level": "high",
-          "headline": "Gale prevista de 25–35 kt",
-          "summary": "O NHC prevê vento norte de 25 a 35 kt no Golfo de Tehuantepec em 24 horas, com mar de 2,5 a 3,0 m.",
-          "details": "O corredor de vento deve estender mar e vento forte para sudoeste da saída do golfo durante a janela prevista.",
-          "action": "Planejar afastamento do jato de Tehuantepec, revisar velocidade/heading e acompanhar o próximo High Seas Forecast.",
+          "headline": "Segunda baixa com 25–40 kt e mar de até 6 m",
+          "summary": "A METAREA XII prevê baixa de 980 hPa perto de 53°N 151°W em 48 horas, com vento de 25–40 kt e mar de 3,5–6 m.",
+          "details": "A circulação cobre grande área do Pacífico Norte; nevoeiro denso também é previsto em setores ao norte de 55°N.",
+          "action": "Revisar rota oceânica, margem do centro, heading e critérios de heavy weather; manter atenção a visibilidade inferior a 1 MN.",
           "map": {
-            "x": 24,
-            "y": 42,
-            "label": "Tehuantepec"
+            "x": 8.1,
+            "y": 20.6,
+            "label": "Pacífico Norte"
           },
           "source": {
-            "name": "NHC / NOAA High Seas Forecast",
+            "name": "NOAA Ocean Prediction Center",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEPI.php"
           }
         }
@@ -400,21 +400,21 @@
       "title": "Costa do Brasil",
       "shortTitle": "Costa BR",
       "icon": "◆",
-      "description": "Avisos costeiros e alterações hidrográficas com efeito potencial em praticagem, aproximação e operações.",
+      "description": "A página da METAREA V, atualizada em 17 de setembro às 11:01, mostrava somente o aviso 678, já encerrado às 1500Z. Sem novo aviso ativo localizado; os dois registros anteriores permanecem com datas e vigências originais.",
       "items": [
         {
-          "id": "chm-677-2026",
-          "date": "2026-09-14",
+          "id": "chm-678-2026",
+          "date": "2026-09-15",
           "region": "Área oceânica sul · 30°S–36°S / 20°W–30°W",
-          "level": "high",
-          "headline": "Vento força 8 com rajadas força 9",
-          "summary": "Aviso CHM 677 válido de 16 de setembro, 0000Z, até 18 de setembro, 0000Z, na área oceânica ao sul do Brasil.",
-          "details": "Vento NW/SW força 8 com rajadas força 9 exige preparação de heavy weather e restrição de trabalhos externos.",
-          "action": "Revalidar weather routing, velocidade segura, heading, estabilidade e segurança do convés antes da entrada na área.",
+          "level": "low",
+          "headline": "Aviso 678 encerrado em 17 set. 1500Z",
+          "summary": "O CHM publicou vento NE/NW rondando para NW/SW força 8, com rajadas força 9, de 16 set. 0000Z até 17 set. 1500Z.",
+          "details": "O aviso 678 substituiu o 677. Na consulta de 18 de setembro, a página pública não apresentava aviso METAREA V com vigência posterior.",
+          "action": "Tratar o aviso como encerrado e confirmar EGC/NAVTEX, previsão local e nova emissão do CHM antes de decidir rota ou trabalho externo.",
           "map": {
-            "x": 47,
-            "y": 78,
-            "label": "Vento F8–9"
+            "x": 43.1,
+            "y": 68.3,
+            "label": "Aviso 678 · encerrado"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -425,15 +425,15 @@
           "id": "chm-675-2026",
           "date": "2026-09-13",
           "region": "Área oceânica ao sul do Brasil",
-          "level": "high",
-          "headline": "Vento força 8 até 17 set. 1200Z",
+          "level": "low",
+          "headline": "Aviso 675 encerrado em 17 set. 1200Z",
           "summary": "Aviso CHM 675 cobre 30°S–36°S e 30°W–48°W, com vento NW/SW força 8 entre 15 de setembro, 1800Z, e 17 de setembro, 1200Z.",
-          "details": "O campo de vento severo pode elevar esforços, alterar ETA e impedir trabalhos externos seguros.",
-          "action": "Reavaliar rota, lastro, velocidade, heading e critérios de heavy weather antes de alcançar a área.",
+          "details": "Registro histórico preservado porque não foram localizados três avisos novos. Sua vigência terminou antes deste snapshot.",
+          "action": "Não tratar como aviso ativo; confirmar EGC/NAVTEX, previsão local e página do CHM.",
           "map": {
-            "x": 43,
-            "y": 78,
-            "label": "Vento F8"
+            "x": 39.2,
+            "y": 68.3,
+            "label": "Aviso 675 · encerrado"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -444,15 +444,15 @@
           "id": "chm-676-2026",
           "date": "2026-09-13",
           "region": "Área Alpha / sul do Brasil",
-          "level": "high",
-          "headline": "Ondas de 3–5 m até 17 set. 0300Z",
+          "level": "low",
+          "headline": "Aviso 676 encerrado em 17 set. 0300Z",
           "summary": "Aviso CHM 676 cobre a área entre 29°S–36°S e 43°W–52°W, com ondas de SW/S de 3,0 a 5,0 m.",
-          "details": "Mar grosso a muito grosso pode elevar esforços, slamming e risco em trabalhos no convés.",
-          "action": "Confirmar weather routing; revisar rota, lastro, velocidade, heading e segurança do convés.",
+          "details": "Registro histórico preservado porque não foram localizados três avisos novos. Sua vigência terminou antes deste snapshot.",
+          "action": "Não tratar como aviso ativo; confirmar EGC/NAVTEX, previsão local e página do CHM.",
           "map": {
-            "x": 39,
-            "y": 76,
-            "label": "Ondas 3–5 m"
+            "x": 37.1,
+            "y": 68.1,
+            "label": "Aviso 676 · encerrado"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -469,6 +469,44 @@
       "description": "Mudanças no ambiente de ameaça, controle territorial e ações militares que afetam a navegação comercial.",
       "items": [
         {
+          "id": "ukmto-hormuz-2026-09-17",
+          "date": "2026-09-17",
+          "region": "Estreito de Ormuz · 16 MN a nordeste de Khasab",
+          "level": "critical",
+          "headline": "Novo incidente de segurança junto a Khasab",
+          "summary": "O UKMTO recebeu em 17 de setembro relato de incidente 16 MN a nordeste de Khasab. Fontes abertas associam o caso a tanker atingido e incêndio.",
+          "details": "O aviso inicial do UKMTO não publicou identidade nem causa. A atribuição e os detalhes do ataque permanecem separados da confirmação oficial do incidente.",
+          "action": "Revalidar threat assessment, war-risk, regras de resposta a hailing/interdição, prontidão de incêndio e autorização da companhia/CSO; reportar ao UKMTO.",
+          "map": {
+            "x": 65.6,
+            "y": 35.4,
+            "label": "Ormuz"
+          },
+          "source": {
+            "name": "UKMTO via AP · 18 set. 2026",
+            "url": "https://apnews.com/article/024350a0820dfc5dd433b4e13445fab5"
+          }
+        },
+        {
+          "id": "italy-bab-security-2026-09-17",
+          "date": "2026-09-17",
+          "region": "Bab-el-Mandeb / Mar Vermelho",
+          "level": "high",
+          "headline": "Itália prepara proteção naval de sua navegação",
+          "summary": "O governo italiano informou que prepara medidas navais para proteger seus navios mercantes diante da escalada de risco em Bab-el-Mandeb.",
+          "details": "A forma da missão ainda não foi detalhada e não equivale a corredor seguro ou escolta disponível para outros pavilhões. O risco territorial perto dos dois canais permanece.",
+          "action": "Não presumir proteção externa; manter avaliação específica da viagem, autorização do CSO, medidas BMP e registro UKMTO/MSCIO.",
+          "map": {
+            "x": 62.1,
+            "y": 43,
+            "label": "Bab-el-Mandeb"
+          },
+          "source": {
+            "name": "Reuters · 17 set. 2026",
+            "url": "https://www.reuters.com/world/italy-readies-navy-protect-its-shipping-amid-bab-el-mandeb-tensions-2026-09-17/"
+          }
+        },
+        {
           "id": "jmic-134-26",
           "date": "2026-09-13",
           "region": "Estreito de Ormuz",
@@ -478,50 +516,12 @@
           "details": "O incidente UKMTO 134-26 integra o nível regional SEVERE. O boletim público omite a identidade do navio e não confirma fechamento formal do estreito.",
           "action": "Revalidar threat assessment, war-risk, prontidão de incêndio e autorização da companhia/CSO; manter contato e reporting com UKMTO.",
           "map": {
-            "x": 67,
-            "y": 43,
+            "x": 65.6,
+            "y": 35.4,
             "label": "Ormuz"
           },
           "source": {
             "name": "JMIC Update 096 / UKMTO 134-26",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be"
-          }
-        },
-        {
-          "id": "jmic-133-26",
-          "date": "2026-09-10",
-          "region": "Estreito de Ormuz",
-          "level": "critical",
-          "headline": "Dois navios atingidos a oeste de Khasab",
-          "summary": "Dois navios não identificados foram atingidos por dois projéteis cada na rota omanita, cerca de 4 MN a oeste de Khasab; um foi observado em chamas.",
-          "details": "O JMIC consolidou os eventos como UKMTO 133-26. O nível regional permanece SEVERE, com ação hostil considerada altamente provável.",
-          "action": "Confirmar war-risk, hailing, janela e medidas defensivas com CSO/UKMTO; manter vigilância e prontidão de damage control.",
-          "map": {
-            "x": 67,
-            "y": 43,
-            "label": "Ormuz"
-          },
-          "source": {
-            "name": "JMIC Update 096 / UKMTO 133-26",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be"
-          }
-        },
-        {
-          "id": "jmic-bab-territorial-096",
-          "date": "2026-09-10",
-          "region": "Bab-el-Mandeb / costa oeste do Iêmen",
-          "level": "critical",
-          "headline": "Controle Houthi alcança os dois canais do estreito",
-          "summary": "O JMIC informa controle de Perim, Dhubab, Mocha e Hanish, aproximando a ameaça territorial dos canais oriental e ocidental.",
-          "details": "O nível oficial para o sul do Mar Vermelho/Bab-el-Mandeb é SUBSTANTIAL; o portal mantém avaliação operacional crítica pelo novo controle territorial.",
-          "action": "Exigir avaliação específica da viagem, autorização do CSO, medidas BMP e monitoramento UKMTO/MSCIO em tempo real.",
-          "map": {
-            "x": 61,
-            "y": 42,
-            "label": "Bab-el-Mandeb"
-          },
-          "source": {
-            "name": "JMIC Update 096",
             "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be"
           }
         }
@@ -532,44 +532,44 @@
       "title": "Navegação eletrônica e portos",
       "shortTitle": "Nav/Portos",
       "icon": "⌁",
-      "description": "Interferência GNSS e sinais que exigem redundância de posição e conferência das informações portuárias.",
+      "description": "Tráfego observado e interferência GNSS que exigem redundância de posição. Contagens civis preliminares podem omitir AIS-off e não medem gross tonnage nem fluxo de petróleo.",
       "items": [
         {
-          "id": "jmic-hormuz-transits-096",
-          "date": "2026-09-13",
+          "id": "hormuz-transits-2026-09-17",
+          "date": "2026-09-17",
           "region": "Estreito de Ormuz",
           "level": "high",
-          "headline": "Duas métricas confirmam tráfego restrito",
-          "summary": "O JMIC registrou 70 trânsitos facilitados em 72 horas; rastreamento civil separado contou apenas 3, 10 e 4 cargueiros por dia entre 10 e 12 de setembro.",
-          "details": "As séries têm metodologia e cobertura diferentes, podem omitir AIS-off e medem navios, não gross tonnage ou volume de petróleo; não devem ser somadas.",
+          "headline": "Quatro navios de commodities em 17 set.",
+          "summary": "Rastreamento civil preliminar contou quatro navios de commodities em Ormuz na quinta-feira, contra seis no dia anterior e média de dez dias de 16.",
+          "details": "Foram dois Panamax tankers, um Supramax e um Kamsarmax. A métrica é contagem de navios observados, pode omitir AIS-off e não representa gross tonnage ou fluxo de petróleo.",
           "action": "Manter vigilância radar/visual reforçada, ARPA manualmente conferido e navegação redundante; não usar baixa densidade AIS para relaxar BRM.",
           "map": {
-            "x": 65,
-            "y": 42,
+            "x": 65.6,
+            "y": 35.4,
             "label": "Ormuz / Golfo"
           },
           "source": {
-            "name": "JMIC Update 096",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be"
+            "name": "Reuters / Kpler · 18 set. 2026",
+            "url": "https://www.reuters.com/world/middle-east/shipping-traffic-via-strait-hormuz-stays-below-10-day-average-data-shows-2026-09-18/"
           }
         },
         {
-          "id": "jmic-bab-transits-096",
-          "date": "2026-09-13",
+          "id": "bab-transits-2026-09-17",
+          "date": "2026-09-17",
           "region": "Bab-el-Mandeb",
-          "level": "critical",
-          "headline": "73 cargueiros em 72 h sob risco territorial",
-          "summary": "O JMIC contou 73 cargueiros acima de 1.000 dwt entre 10 e 12 de setembro, abaixo da linha de base de 61 por dia em 2023.",
-          "details": "É rastreamento S&P/SeaVision de navios, não gross tonnage nem fluxo de petróleo. A tabela tanker separada mostrou 8, 9 e 7 trânsitos nos três dias.",
+          "level": "high",
+          "headline": "23 navios de commodities em 17 set.",
+          "summary": "Rastreamento civil preliminar contou 23 navios de commodities em Bab-el-Mandeb na quinta-feira, ligeiramente abaixo da média de dez dias de 26.",
+          "details": "É contagem observada de navios, não gross tonnage nem fluxo de petróleo. O dado não reduz o risco territorial junto aos dois canais do estreito.",
           "action": "Separar intensidade de tráfego de segurança da rota; confirmar warnings UKMTO/MSCIO, VHF, BMP e autorização da companhia.",
           "map": {
-            "x": 63,
-            "y": 38,
+            "x": 62.1,
+            "y": 43,
             "label": "Bab-el-Mandeb"
           },
           "source": {
-            "name": "JMIC Update 096",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be"
+            "name": "Reuters / Kpler · 18 set. 2026",
+            "url": "https://www.reuters.com/world/middle-east/shipping-traffic-via-strait-hormuz-stays-below-10-day-average-data-shows-2026-09-18/"
           }
         },
         {
@@ -582,8 +582,8 @@
           "details": "A densidade de relatos permanece maior no sul do Golfo Pérsico. O Update 096 não registrou mudança material no risco basal de interferência.",
           "action": "Comparar GNSS com radar, visual, eco-sonda, DR e receptores independentes; investigar discrepâncias antes de alterar o plano.",
           "map": {
-            "x": 65,
-            "y": 42,
+            "x": 65.6,
+            "y": 35.4,
             "label": "Ormuz / Golfo"
           },
           "source": {
@@ -732,21 +732,21 @@
       "name": "Estreito de Ormuz",
       "region": "Omã / Irã · Golfo Pérsico",
       "risk": "critical",
-      "trafficLabel": "70 facilitados / 72 h",
-      "trafficTrend": "muito abaixo da linha de base",
-      "trafficBasis": "O JMIC registrou 70 trânsitos facilitados entre 10 e 12 set. Em série separada, rastreamento S&P/SeaVision contou 3, 10 e 4 cargueiros por dia. As métricas não devem ser somadas, podem omitir AIS-off e não representam gross tonnage nem fluxo de petróleo.",
-      "market": "Qualquer interrupção afeta crude, produtos, LNG, prêmio de seguro, bunker e fretes em escala global; a restrição de fluxo mantém forte aversão a risco.",
-      "geopolitics": "O JMIC Update 096 mantém nível SEVERE após três navios atingidos entre 10 e 13 de setembro. Persistem atividade militar, hailing, risco de minas e interferência GNSS.",
+      "trafficLabel": "4 navios de commodities · 17 set.",
+      "trafficTrend": "single digits; abaixo da média de 10 dias",
+      "trafficBasis": "Rastreamento civil preliminar contou quatro navios de commodities em 17 set., seis no dia anterior e média de dez dias de 16. É contagem de navios observados, pode omitir AIS-off e não representa gross tonnage nem fluxo oficial de petróleo.",
+      "market": "Fretes Fujairah–Ásia chegaram a WS800 para cargas de outubro segundo fonte pública; Fearnleys W38 também descreve disponibilidade VLCC severamente limitada. São referências de mercado, não índice Baltic oficial.",
+      "geopolitics": "O UKMTO recebeu novo relato de incidente 16 MN a nordeste de Khasab em 17 de setembro. Persistem atividade militar, hailing/interdição, risco de minas e interferência GNSS.",
       "authority": "Autoridades costeiras / UKMTO como ponto de contato de segurança",
       "reporting": "UKMTO VRS voluntário; VTS/port reporting obrigatório conforme porto e águas jurisdicionais.",
       "masterFocus": [
-        "Alinhar regras de resposta a hailing/interdição, war-risk cover e autoridade de decisão com CSO.",
+        "Alinhar regras de resposta a hailing/interdição, war-risk cover e autoridade de decisão com CSO; revalidar após o incidente de 17 de setembro.",
         "Usar navegação redundante contra spoofing/jamming e minas; comparar radar, visual, AIS e DR.",
         "Elevar fire/security readiness, controlar emissões de informação e preservar comunicações 24/7."
       ],
       "source": {
-        "name": "JMIC Update 096 · 13 set. 2026",
-        "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be"
+        "name": "Reuters / UKMTO · 18 set. 2026",
+        "url": "https://www.reuters.com/world/middle-east/shipping-traffic-via-strait-hormuz-stays-below-10-day-average-data-shows-2026-09-18/"
       }
     },
     {
@@ -776,21 +776,21 @@
       "name": "Bab-el-Mandeb / Chifre da África",
       "region": "Iêmen / Djibuti / Eritreia",
       "risk": "critical",
-      "trafficLabel": "73 cargueiros / 72 h",
-      "trafficTrend": "reduzido; risco territorial elevado",
-      "trafficBasis": "O JMIC contou 73 cargueiros acima de 1.000 dwt entre 10 e 12 set., ante linha de base de 61/dia em 2023. É rastreamento de navios, não gross tonnage nem fluxo de petróleo; a tabela tanker separada registra 8, 9 e 7 trânsitos.",
-      "market": "O avanço Houthi junto ao estreito eleva a possibilidade de novos desvios pelo Cabo, com efeito potencial sobre ton-miles, fretes e seguros.",
-      "geopolitics": "O JMIC confirma controle Houthi de Perim, Dhubab, Mocha e Hanish, junto aos dois canais. O nível oficial é SUBSTANTIAL; a mudança territorial sustenta avaliação operacional crítica e imediata.",
+      "trafficLabel": "23 navios de commodities · 17 set.",
+      "trafficTrend": "abaixo da média de 10 dias; risco territorial elevado",
+      "trafficBasis": "Rastreamento civil preliminar contou 23 navios de commodities em 17 set., ante média de dez dias de 26. É contagem de navios observados, não gross tonnage nem fluxo de petróleo.",
+      "market": "A ameaça próxima aos canais sustenta desvios pelo Cabo, com efeito sobre ton-miles, fretes e seguros; a contagem de tráfego não demonstra normalização da rota.",
+      "geopolitics": "A Itália anunciou preparação de medidas navais para sua navegação, mas sem corredor seguro detalhado. O controle Houthi próximo aos dois canais mantém avaliação operacional crítica.",
       "authority": "UKMTO / MSCIO / forças marítimas e autoridades costeiras",
       "reporting": "Registro/reporte voluntário UKMTO e MSCIO no VRA; seguir BMP Maritime Security.",
       "masterFocus": [
         "Exigir voyage-specific threat assessment, autorização da companhia e medidas BMP antes do trânsito.",
         "Revisar citadel, SSAS, drills, damage control, lookout, velocidade e comunicações de emergência.",
-        "Monitorar warnings/advisories em tempo real; não inferir segurança a partir da contagem de tráfego."
+        "Monitorar warnings/advisories em tempo real; não inferir segurança a partir da contagem de tráfego ou da possível presença naval."
       ],
       "source": {
-        "name": "JMIC Update 096 · 13 set. 2026",
-        "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be"
+        "name": "Reuters · 17–18 set. 2026",
+        "url": "https://www.reuters.com/world/italy-readies-navy-protect-its-shipping-amid-bab-el-mandeb-tensions-2026-09-17/"
       }
     },
     {
@@ -1167,41 +1167,41 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 54.52,
+        "price": 54,
         "currencySymbol": "R$",
-        "changePercent": -0.22,
-        "trend": "Baixa no dia",
-        "capturedAtLabel": "11 set. 2026 · fechamento público",
+        "changePercent": 0.32,
+        "trend": "Alta no dia",
+        "capturedAtLabel": "17 set. 2026 · fechamento público",
         "sourceUrl": "https://www.google.com/finance/quote/PETR3:BVMF"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 49,
+        "price": 48.61,
         "currencySymbol": "R$",
-        "changePercent": -0.24,
-        "trend": "Baixa no dia",
-        "capturedAtLabel": "11 set. 2026 · fechamento público",
+        "changePercent": 0,
+        "trend": "Estável no dia",
+        "capturedAtLabel": "17 set. 2026 · fechamento público",
         "sourceUrl": "https://www.google.com/finance/quote/PETR4:BVMF"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 21.2,
+        "price": 20.94,
         "currencySymbol": "US$",
-        "changePercent": -0.84,
-        "trend": "Baixa no dia",
-        "capturedAtLabel": "11 set. 2026 · fechamento público",
+        "changePercent": 0.19,
+        "trend": "Alta indicativa",
+        "capturedAtLabel": "18 set. 2026 · 0935Z · cotação pública",
         "sourceUrl": "https://www.google.com/finance/quote/PBR:NYSE"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-        "price": 19.11,
+        "price": 18.94,
         "currencySymbol": "US$",
-        "changePercent": -0.57,
-        "trend": "Baixa no dia",
-        "capturedAtLabel": "11 set. 2026 · fechamento público",
+        "changePercent": 0.32,
+        "trend": "Alta indicativa",
+        "capturedAtLabel": "18 set. 2026 · 0851Z · cotação pública",
         "sourceUrl": "https://finance.yahoo.com/quote/PBR-A/history/"
       }
     ],
@@ -1305,6 +1305,16 @@
     ],
     "developments": [
       {
+        "date": "2026-09-17",
+        "title": "Petrobras assina contratos para oito blocos offshore na Costa do Marfim",
+        "summary": "A companhia firmou contratos de partilha de produção com o governo marfinense e a Petroci para oito blocos exploratórios offshore; a notícia pública indica Petrobras como operadora com 90%.",
+        "maritimeImpact": "Amplia a frente exploratória no Atlântico africano e pode gerar demanda futura de sísmica, apoio offshore e logística; não representa produção, rota ou fixture confirmada neste momento.",
+        "source": {
+          "name": "Reuters · complementar",
+          "url": "https://www.reuters.com/business/energy/petrobras-signs-production-sharing-deals-ivory-coast-exploratory-blocks-2026-09-17/"
+        }
+      },
+      {
         "date": "2026-09-10",
         "title": "Petrobras reduz preço da gasolina A às distribuidoras",
         "summary": "A companhia informou preço médio de R$ 3,05 por litro, com redução líquida estimada de R$ 0,19 por litro às distribuidoras após os efeitos tributários.",
@@ -1372,51 +1382,51 @@
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 908,
-      "change": 13
+      "vlsfo": 913.5,
+      "change": -3
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 731,
-      "change": 0.5
+      "vlsfo": 716.5,
+      "change": -15
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 1005,
-      "change": 17.5
+      "vlsfo": 1022,
+      "change": -6
     },
     {
       "port": "Houston",
       "code": "USHOU",
-      "vlsfo": 804,
-      "change": -0.5
+      "vlsfo": 795,
+      "change": -13
     }
   ],
   "briefing": {
-    "date": "2026-09-16",
+    "date": "2026-09-18",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
         "title": "MarineTraffic é a fonte mais recente",
-        "summary": "O Noon Position válido de 15 de setembro, 1213Z, é posterior ao último ponto SPOT; o portal prioriza automaticamente essa fonte."
+        "summary": "O Noon Position válido de 17 de setembro, 1313Z, é posterior ao último ponto SPOT; o portal prioriza automaticamente essa fonte."
       },
       {
         "category": "SEGURANÇA",
-        "title": "Novos ataques elevam a prontidão em Ormuz",
-        "summary": "Três navios foram atingidos entre 10 e 13 de setembro; o JMIC mantém ameaça SEVERE. Revalidar war-risk, incêndio, GNSS e orientação do CSO."
+        "title": "Novo incidente foi reportado junto a Khasab",
+        "summary": "O UKMTO recebeu em 17 de setembro relato de incidente 16 MN a nordeste de Khasab; fontes abertas associam o caso a tanker atingido e incêndio. Revalidar war-risk, hailing e orientação do CSO."
       },
       {
         "category": "METEO",
-        "title": "Sem ciclone no Atlântico; três áreas de gale",
-        "summary": "Não havia ciclone tropical ativo no Atlântico, mas os boletins de alto-mar indicam gales no Atlântico Norte, Mar de Bering e Golfo de Tehuantepec."
+        "title": "Storm warning no Atlântico Norte",
+        "summary": "Não havia ciclone tropical ativo nas três bacias do NHC, mas a METAREA IV prevê 45–60 kt e mar de 5–8 m no Atlântico Norte em 48 horas."
       },
       {
         "category": "COSTA BR",
-        "title": "Avisos CHM 675–677 permanecem vigentes",
-        "summary": "Vento força 8 com rajadas força 9 e ondas de 3–5 m exigem revisão de rota, lastro, velocidade e trabalhos externos até 18 de setembro."
+        "title": "Nenhum aviso CHM ativo localizado",
+        "summary": "A página atualizada em 17 de setembro mostrava somente o aviso 678, encerrado às 1500Z. Confirmar EGC/NAVTEX e nova emissão antes de decidir."
       },
       {
         "category": "PSC",
@@ -1425,8 +1435,8 @@
       },
       {
         "category": "MERCADO",
-        "title": "VLSFO sobe nos principais hubs",
-        "summary": "Em 15 de setembro: Singapura US$ 908/t, Rotterdam US$ 731/t, Fujairah US$ 1.005/t e Houston US$ 804/t. Fretes e índices permanecem no último dado público W37/11 set."
+        "title": "Fretes W38 firmes; VLSFO misto",
+        "summary": "Fearnleys publica TC de 1 ano a US$160 mil/d VLCC, US$125 mil/d Suezmax e US$69 mil/d Aframax. VLSFO: Singapura US$913,50/t, Rotterdam US$716,50/t, Fujairah US$1.022/t e Houston US$795/t."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -1500,14 +1510,20 @@
     },
     {
       "name": "Fearnleys / Fearnpulse",
-      "url": "https://www.hellenicshippingnews.com/wp-content/uploads/2026/09/Fearnleys-Weekly-Report-_-Fearnpulse_.pdf",
-      "scope": "Time-charter e narrativa tanker W36",
+      "url": "https://www.hellenicshippingnews.com/wp-content/uploads/2026/09/Fearnleys-Weekly-Report-_-Fearnpulse_-1.pdf",
+      "scope": "Time-charter e narrativa tanker W38",
       "typeLabel": "Indústria"
     },
     {
-      "name": "Reuters — Tanker rates",
-      "url": "https://www.reuters.com/business/energy/oil-tanker-rates-hit-record-highs-following-iran-us-shipping-attacks-2026-09-11/",
-      "scope": "VLCC spot e contexto público de 11 set.",
+      "name": "Reuters — Ormuz, Bab e fretes",
+      "url": "https://www.reuters.com/world/middle-east/shipping-traffic-via-strait-hormuz-stays-below-10-day-average-data-shows-2026-09-18/",
+      "scope": "Contagens civis preliminares e contexto de mercado de 18 set.",
+      "typeLabel": "Imprensa / complementar"
+    },
+    {
+      "name": "Associated Press — incidente em Ormuz",
+      "url": "https://apnews.com/article/024350a0820dfc5dd433b4e13445fab5",
+      "scope": "Confirmação pública do relato UKMTO e separação de atribuições",
       "typeLabel": "Imprensa / complementar"
     },
     {
@@ -1583,7 +1599,7 @@
       "typeLabel": "Link externo"
     }
   ],
-  "updatePolicy": "Atualização programada às segundas, quartas e sextas, 07:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. PSC, Petrobras, Transpetro e regras ambientais também mudam quando houver publicação oficial relevante. NautoShark, Windy e MarineTraffic permanecem acessos externos; dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. SCOPE permanece somente como link externo; dados legados exigidos pelo schema não alimentam a interface nem o briefing atual.",
+  "updatePolicy": "Atualização programada às segundas, quartas e sextas, 07:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. PSC, Petrobras, Transpetro e regras ambientais também mudam quando houver publicação oficial relevante. NautoShark, Windy e MarineTraffic permanecem acessos externos; dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. SCOPE permanece somente como link externo; dados legados exigidos pelo schema não alimentam a interface nem o briefing atual. Contagens AIS públicas são identificadas como observações preliminares, não como série oficial de fluxo energético.",
   "scopeAnalysis": {
     "updatedAt": "2026-09-11T10:15:17.637Z",
     "status": "current",
