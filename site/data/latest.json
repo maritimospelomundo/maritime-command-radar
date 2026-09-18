@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-18T10:08:00Z",
+  "generatedAt": "2026-09-18T10:11:00Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -510,8 +510,8 @@
           "id": "jmic-134-26",
           "date": "2026-09-13",
           "region": "Estreito de Ormuz",
-          "level": "critical",
-          "headline": "Tanker atingido e em incêndio grave",
+          "level": "high",
+          "headline": "Incidente grave de 13 set. permanece como referência",
           "summary": "O JMIC registrou tanker carregado atingido por projétil desconhecido no estreito em 13 de setembro, com incêndio grave.",
           "details": "O incidente UKMTO 134-26 integra o nível regional SEVERE. O boletim público omite a identidade do navio e não confirma fechamento formal do estreito.",
           "action": "Revalidar threat assessment, war-risk, prontidão de incêndio e autorização da companhia/CSO; manter contato e reporting com UKMTO.",
