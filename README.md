@@ -67,3 +67,61 @@ node scripts/build-command-summary.mjs
 ```
 
 O JSON resumido é gerado pelo workflow a cada publicação; não edite esse arquivo manualmente.
+
+## Posição horária do Abdias · Kpler AIS v2
+
+O workflow de publicação consulta `https://api.kpler.com/v2/maritime/ais-latest`
+uma vez por hora, no minuto 17 UTC, exclusivamente para o IMO **9453896**
+(Abdias Nascimento). GitHub Actions pode atrasar execuções; não é serviço de
+localização em tempo real nem garantia de execução no minuto exato.
+
+### Ativação
+
+1. Em Settings → Secrets and variables → Actions, cadastre o segredo
+   `KPLER_API_KEY` com a chave Kpler, sem o prefixo `Basic`.
+2. A chave deve ter permissão para AIS Latest v2 e cobertura contratada adequada.
+3. Em Actions → Deploy Maritime Master Radar → Run workflow, execute o primeiro
+   teste. Confirme as etapas de consulta e publicação antes de considerar ativo.
+
+Nunca coloque a chave no código, JSON público, log ou navegador do portal.
+A chave compartilhada em uma captura de tela deve ser substituída antes da ativação.
+Sem chave ou permissão, a consulta falha e o último site publicado é preservado.
+
+### Compatibilidade entre portais
+
+O resultado é salvo em `site/data/latest.json`, preservando schemaVersion 5 e
+`marineTrafficPosition.lastKnown` (`latitude`, `longitude`, `dateTime`, `unixTime`,
+`eventType`). Essa fonte já é consumida pelo Portal Geral, Acompanhamento e pelo
+novo portal Colaboração/Apoio em Terra. Nenhum desses clientes recebe a chave Kpler
+ou precisa fazer sua própria consulta paga. A atualização chega na próxima leitura
+que cada portal faz dessa fonte. O antigo Apoio em Terra permanece desativado.
+
+A consulta horária funciona na nuvem, mesmo com os portais fechados e computador
+desligado. São aproximadamente 720 chamadas em 30 dias, mais testes manuais.
+Os históricos existentes em outros portais mantêm seu comportamento: este recurso
+não garante guardar todos os pontos horários quando aqueles portais estão fechados.
+
+Campos adicionais: `checkedAt`, `refreshIntervalMinutes`, `provider`, telemetria em
+`lastKnown` e `voyage` (destino, ETA AIS, calado e `staticDt`). Esses dados de viagem
+ficam disponíveis na fonte; os controles manuais e relatórios de viagem dos portais
+não são sobrescritos. O ETA AIS é informado pelo navio, não um ETA preditivo.
+
+`dateTime` é o horário da mensagem AIS; `checkedAt` é o horário da consulta.
+`generatedAt` continua indicando a publicação editorial do radar. Uma consulta nova
+não rejuvenesce a posição nem as notícias. Registros inválidos, futuros, fora de sete
+dias ou de outro IMO são rejeitados. Posições anteriores não substituem as mais novas.
+Falhas 401/403/429, JSON inválido e timeout preservam o último arquivo publicado.
+
+Validação local sem consumo de API:
+
+```sh
+node --test scripts/update-ais.test.mjs scripts/command-summary.test.mjs
+node scripts/validate-data.mjs
+node scripts/build-command-summary.mjs
+```
+
+O agendamento compartilha o workflow de Pages: salva o dado validado e publica o
+site na mesma execução. Isso evita depender de outro workflow disparado por um
+commit feito com `GITHUB_TOKEN`. Alterações concorrentes são conciliadas por rebase;
+em caso de conflito, a execução para sem forçar a branch. Se o GitHub desativar
+agendamentos por inatividade do repositório, reative o workflow em Actions.

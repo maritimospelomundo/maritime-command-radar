@@ -4,27 +4,52 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test AIS integration
+        run: node --test scripts/update-ais.test.mjs
+      - name: Fetch hourly Abdias AIS position
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          KPLER_API_KEY: ${{ secrets.KPLER_API_KEY }}
+        run: node scripts/update-ais.mjs
       - name: Validate public data
         run: node scripts/validate-data.mjs
       - name: Test command summary
         run: node --test scripts/command-summary.test.mjs
       - name: Build reusable command summary
         run: node scripts/build-command-summary.mjs
+      - name: Persist hourly position for every portal
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add site/data/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update Abdias AIS position'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          node scripts/validate-data.mjs
+          node scripts/build-command-summary.mjs
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - uses: actions/configure-pages@v5
