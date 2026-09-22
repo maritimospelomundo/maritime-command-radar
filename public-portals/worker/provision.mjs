@@ -16,5 +16,5 @@ for(let page=1;page<=100;page++){
 if(!db)db=await api('/d1/database',{name});
 const hashes=JSON.parse(await readFile(new URL('./access-hashes.json',import.meta.url),'utf8'));
 for(const key of ['TRACK_HASH','SHORE_HASH','SYNC_HASH'])if(!/^[a-f0-9]{64}$/.test(hashes[key]))throw Error(`Invalid ${key}`);
-await writeFile(new URL('./wrangler.json',import.meta.url),JSON.stringify({name,main:'index.ts',compatibility_date:'2026-09-01',workers_dev:true,triggers:{crons:['17 * * * *']},vars:{PAGES_ORIGIN:'https://maritimospelomundo.github.io',...hashes},d1_databases:[{binding:'DB',database_name:name,database_id:db.uuid,migrations_dir:'migrations'}]},null,2));
+await writeFile(new URL('./wrangler.json',import.meta.url),JSON.stringify({name,main:'index.ts',compatibility_date:'2026-09-01',workers_dev:true,services:[{binding:'SPOT_WORKER',service:'spot-vessel-position'}],triggers:{crons:['17 * * * *']},vars:{PAGES_ORIGIN:'https://maritimospelomundo.github.io',...hashes},d1_databases:[{binding:'DB',database_name:name,database_id:db.uuid,migrations_dir:'migrations'}]},null,2));
 console.log('Cloudflare database and deployment configuration ready.');
