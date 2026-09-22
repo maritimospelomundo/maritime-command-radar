@@ -144,7 +144,7 @@ async function resolveSourcePosition(config, sourceKey, sourceLabel) {
     } catch { /* usa o último snapshot publicado */ }
   }
   points = [...points, ...(config?.history || []), config?.lastKnown].filter(Boolean);
-  points = points.filter(window.radarPriority.validPosition)
+  points = points.filter(p => sourceKey !== 'spot' || ![1788355502000,1788382076000,1788385534000].includes(pointTimestamp(p))).filter(window.radarPriority.validPosition)
     .map((point) => ({ ...point, latitude: Number(point.latitude), longitude: Number(point.longitude), sourceKey, sourceLabel }))
     .filter((point) => Number.isFinite(pointTimestamp(point)) && pointTimestamp(point) <= Date.now())
     .sort((a, b) => pointTimestamp(a) - pointTimestamp(b));

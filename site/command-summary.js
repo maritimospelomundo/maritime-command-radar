@@ -26,7 +26,7 @@
   const sourcePoints = (config, sourceKey, sourceLabel, sourceRank) => [
     ...(Array.isArray(config?.history) ? config.history : []),
     config?.lastKnown
-  ].filter(Boolean).map(p => ({ ...p, sourceKey, sourceLabel, sourceRank }));
+  ].filter(Boolean).filter(p => sourceKey !== 'spot' || ![1788355502000,1788382076000,1788385534000].includes(Date.parse(p.dateTime))).map(p => ({ ...p, sourceKey, sourceLabel, sourceRank }));
   const accuracyRank = p => {
     const value = Number(p.accuracyMeters ?? p.accuracy);
     return Number.isFinite(value) && value >= 0 ? 1000000 - value : 0;
