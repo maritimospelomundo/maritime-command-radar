@@ -48,20 +48,25 @@ jobs:
       - name: Verify native Windy preflight and authentication
         run: |
           python3 - <<'PYTEST'
-          import urllib.request, urllib.error
+          import subprocess, tempfile, re
+          from pathlib import Path
+          from types import SimpleNamespace
           base = 'https://abdias-public-portals.maritimospelomundo.workers.dev'
           def request(path, method, origin):
-            req = urllib.request.Request(base+path, method=method, headers={'Origin':origin,'Access-Control-Request-Method':'GET','Access-Control-Request-Headers':'Authorization'})
-            try: return urllib.request.urlopen(req, timeout=20)
-            except urllib.error.HTTPError as e: return e
+            # Use the same HTTP client as the existing deployment checks.
+            with tempfile.TemporaryDirectory() as tmp:
+              headers_file = Path(tmp)/'headers.txt'
+              result = subprocess.run(['curl','--silent','--show-error','--max-time','20','--dump-header',str(headers_file),'--output','/dev/null','--write-out','%{http_code}','-X',method,'-H','Origin: '+origin,'-H','Access-Control-Request-Method: GET','-H','Access-Control-Request-Headers: Authorization',base+path], capture_output=True, text=True, check=True)
+              headers = {name.lower():value.strip() for name,value in re.findall(r'^([^:\r\n]+):[ \t]*(.*)$',headers_file.read_text(),re.M)}
+              return SimpleNamespace(status=int(result.stdout),headers=headers)
           for origin in ['https://www.windy.com', 'null', 'capacitor://localhost']:
             pre = request('/api/position', 'OPTIONS', origin)
             assert pre.status == 204, (origin, pre.status)
-            assert pre.headers.get('Access-Control-Allow-Origin') == '*'
-            assert pre.headers.get('Access-Control-Allow-Credentials') is None
+            assert pre.headers.get('access-control-allow-origin') == '*'
+            assert pre.headers.get('access-control-allow-credentials') is None
             get = request('/api/position', 'GET', origin)
             assert get.status == 401, (origin, get.status)
-            assert get.headers.get('Access-Control-Allow-Origin') == '*'
+            assert get.headers.get('access-control-allow-origin') == '*'
             assert request('/api/shore', 'GET', origin).status == 403
             assert request('/api/import', 'POST', origin).status == 403
             print('PASS native preflight, authentication and restricted routes:', origin)
