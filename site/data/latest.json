@@ -12,14 +12,17 @@
     "vesselName": "Meu navio",
     "endpoint": "",
     "mapUrl": "https://maps.findmespot.com/s/VCV3",
-    "lastKnown": {
-      "dateTime": "2026-09-02T21:45:34Z",
-      "unixTime": 1788385534,
-      "latitude": -7.1226,
-      "longitude": -34.82864,
-      "messageType": "UNLIMITED-TRACK",
-      "batteryState": "GOOD"
-    }
+    "lastKnown": null,
+    "excludedTestMessageIds": [
+      "2493309049",
+      "2493489592",
+      "2493511950"
+    ],
+    "excludedTestTimes": [
+      "2026-09-02T13:25:02Z",
+      "2026-09-02T20:47:56Z",
+      "2026-09-02T21:45:34Z"
+    ]
   },
   "marineTrafficPosition": {
     "label": "MarineTraffic",
