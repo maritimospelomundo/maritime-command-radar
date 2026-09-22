@@ -106,3 +106,5 @@ node scripts/build-command-summary.mjs
 
 O workflow salva a nova posição somente quando recebe um ponto válido. Falhas de
 credencial, limite, timeout ou resposta inválida preservam a última versão publicada.
+O agendamento e a gravação rodam somente na branch `main`; pull requests executam
+os testes sem consultar a API nem publicar posições.
