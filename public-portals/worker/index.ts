@@ -26,10 +26,11 @@ export default {
  async fetch(request:Request,env:any){
  const path=new URL(request.url).pathname;
  const origin=request.headers.get('Origin');
- const windyRead=path==='/api/position'&&['GET','OPTIONS'].includes(request.method)&&['https://www.windy.com','https://windy.com'].includes(origin||'');
+ // This cookie-free read route accepts native WebViews; bearer auth remains mandatory.
+ const windyRead=path==='/api/position'&&['GET','OPTIONS'].includes(request.method);
  const allowed=origin===env.PAGES_ORIGIN||windyRead;
  const headers:Record<string,string>={'Cache-Control':'private, no-store','X-Robots-Tag':'noindex, nofollow','Referrer-Policy':'no-referrer','Vary':'Origin'};
- if(allowed){headers['Access-Control-Allow-Origin']=origin!;headers['Access-Control-Allow-Headers']='Authorization, Content-Type';headers['Access-Control-Allow-Methods']=windyRead?'GET, OPTIONS':'GET, POST, OPTIONS';}
+ if(allowed){headers['Access-Control-Allow-Origin']=windyRead?'*':origin!;headers['Access-Control-Max-Age']='600';headers['Access-Control-Allow-Headers']='Authorization, Content-Type';headers['Access-Control-Allow-Methods']=windyRead?'GET, OPTIONS':'GET, POST, OPTIONS';}
  const json=(data:any,status=200)=>Response.json(data,{status,headers});
  if(origin&&!allowed)return json({error:'Origem não autorizada.'},403);
  if(request.method==='OPTIONS')return new Response(null,{status:204,headers});

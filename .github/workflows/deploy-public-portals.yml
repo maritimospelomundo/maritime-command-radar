@@ -44,3 +44,25 @@ jobs:
             done
             test "$status" = 401 || exit 1
           done
+
+      - name: Verify native Windy preflight and authentication
+        run: |
+          python3 - <<'PYTEST'
+          import urllib.request, urllib.error
+          base = 'https://abdias-public-portals.maritimospelomundo.workers.dev'
+          def request(path, method, origin):
+            req = urllib.request.Request(base+path, method=method, headers={'Origin':origin,'Access-Control-Request-Method':'GET','Access-Control-Request-Headers':'Authorization'})
+            try: return urllib.request.urlopen(req, timeout=20)
+            except urllib.error.HTTPError as e: return e
+          for origin in ['https://www.windy.com', 'null', 'capacitor://localhost']:
+            pre = request('/api/position', 'OPTIONS', origin)
+            assert pre.status == 204, (origin, pre.status)
+            assert pre.headers.get('Access-Control-Allow-Origin') == '*'
+            assert pre.headers.get('Access-Control-Allow-Credentials') is None
+            get = request('/api/position', 'GET', origin)
+            assert get.status == 401, (origin, get.status)
+            assert get.headers.get('Access-Control-Allow-Origin') == '*'
+            assert request('/api/shore', 'GET', origin).status == 403
+            assert request('/api/import', 'POST', origin).status == 403
+            print('PASS native preflight, authentication and restricted routes:', origin)
+          PYTEST
