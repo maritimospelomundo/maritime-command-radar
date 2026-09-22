@@ -24,13 +24,15 @@ async function sync(env:any){
 export default {
  async scheduled(_event:any,env:any,ctx:any){ctx.waitUntil(sync(env))},
  async fetch(request:Request,env:any){
- const origin=request.headers.get('Origin');const allowed=origin===env.PAGES_ORIGIN;
+ const path=new URL(request.url).pathname;
+ const origin=request.headers.get('Origin');
+ const windyRead=path==='/api/position'&&['GET','OPTIONS'].includes(request.method)&&['https://www.windy.com','https://windy.com'].includes(origin||'');
+ const allowed=origin===env.PAGES_ORIGIN||windyRead;
  const headers:Record<string,string>={'Cache-Control':'private, no-store','X-Robots-Tag':'noindex, nofollow','Referrer-Policy':'no-referrer','Vary':'Origin'};
- if(allowed){headers['Access-Control-Allow-Origin']=origin!;headers['Access-Control-Allow-Headers']='Authorization, Content-Type';headers['Access-Control-Allow-Methods']='GET, POST, OPTIONS';}
+ if(allowed){headers['Access-Control-Allow-Origin']=origin!;headers['Access-Control-Allow-Headers']='Authorization, Content-Type';headers['Access-Control-Allow-Methods']=windyRead?'GET, OPTIONS':'GET, POST, OPTIONS';}
  const json=(data:any,status=200)=>Response.json(data,{status,headers});
  if(origin&&!allowed)return json({error:'Origem não autorizada.'},403);
  if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
- const path=new URL(request.url).pathname;
  const scope=path==='/api/position'?'TRACK_HASH':path==='/api/shore'?'SHORE_HASH':path==='/api/import'?'SYNC_HASH':null;
  if(!scope)return json({error:'Não encontrado.'},404);
  if(!await authorized(request,env[scope]))return json({error:'Link inválido ou incompleto.'},401);
@@ -47,10 +49,11 @@ export default {
  const history=await positions(env),position=[...history].sort(prefer)[0]||null;
  const state=await env.DB.prepare('SELECT checked_at,unavailable FROM sync_state WHERE id=1').first();
  const unavailable=!state||!!state.unavailable||Date.now()-Date.parse(state.checked_at)>2*3600000;
- if(path==='/api/position')return json({history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),retentionDays:90,unavailable,storageUnavailable:false,checkedAt:new Date().toISOString()});
+ if(path==='/api/position')return json({history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),retentionDays:90,unavailable,storageUnavailable:false,lastSyncAt:state?.checked_at||null,checkedAt:new Date().toISOString()});
  const pub=await env.DB.prepare("SELECT data FROM publications WHERE id='shore'").first();
  if(!pub)return json({error:'Aguardando a primeira publicação do Comandante.'},503);
  return json({data:JSON.parse(pub.data),positions:history.filter(p=>Date.parse(p.dateTime)>=Date.now()-15*86400000),position,positionUnavailable:unavailable,checkedAt:new Date().toISOString()});
  }catch{return json({error:'Consulta ou atualização indisponível.'},503)}
  }
 };
+
