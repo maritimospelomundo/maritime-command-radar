@@ -36,6 +36,11 @@ jobs:
       - name: Verify access protection
         run: |
           for path in position shore import; do
-            status=$(curl --retry 3 --silent --output /dev/null --write-out '%{http_code}' "https://abdias-public-portals.maritimospelomundo.workers.dev/api/$path")
+            for attempt in 1 2 3 4 5 6; do
+              status=$(curl --max-time 15 --silent --output /dev/null --write-out '%{http_code}' "https://abdias-public-portals.maritimospelomundo.workers.dev/api/$path")
+              test "$status" = 401 && break
+              echo "Waiting for endpoint $path (HTTP $status)"
+              sleep 5
+            done
             test "$status" = 401 || exit 1
           done

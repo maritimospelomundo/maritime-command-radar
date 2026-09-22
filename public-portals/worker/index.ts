@@ -40,7 +40,7 @@ export default {
   const data=JSON.parse(raw);
   if(data.shore){const shore=shoreSchema.parse(data.shore);await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at WHERE excluded.captured_at > publications.captured_at').bind('shore',JSON.stringify(shore),shore.capturedAt).run();}
   if(data.positions&&!Array.isArray(data.positions))return json({error:'Posições inválidas.'},400);
-  const accepted=await save(env,(data.positions||[]).slice(0,5000));return json({ok:true,accepted});
+  const accepted=await save(env,(data.positions||[]).slice(0,5000));if(data.refresh===true)await sync(env);return json({ok:true,accepted});
  }
  if(request.method!=='GET')return json({error:'Método não permitido.'},405);
  const history=await positions(env),position=[...history].sort(prefer)[0]||null;
