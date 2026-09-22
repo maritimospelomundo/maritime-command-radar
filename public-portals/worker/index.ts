@@ -8,6 +8,16 @@ async function authorized(request:Request,expected:string){
  const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value.slice(7)));
  return Array.from(new Uint8Array(hash),x=>x.toString(16).padStart(2,'0')).join('')===expected;
 }
+async function shortcutId(code:string){
+ const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(code));
+ return 'shortcut:'+Array.from(new Uint8Array(digest),x=>x.toString(16).padStart(2,'0')).join('');
+}
+async function shortcutTarget(data:any,env:any){
+ if(!data||!['tracking','shore'].includes(data.portal)||typeof data.key!=='string')return null;
+ const scope=data.portal==='tracking'?'TRACK_HASH':'SHORE_HASH';
+ if(!await authorized(new Request('https://internal.invalid',{headers:{Authorization:'Bearer '+data.key}}),env[scope]))return null;
+ return 'https://maritimospelomundo.github.io/maritime-command-radar/abdias/'+data.portal+'/#'+(data.portal==='tracking'?'chave':'acesso')+'='+encodeURIComponent(data.key);
+}
 async function save(env:any,points:any[]){
  const accepted=consolidate(points);const statements=accepted.map((p:any)=>env.DB.prepare('INSERT INTO vessel_positions(id,data,recorded_ms) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data').bind([p.source,p.dateTime,p.latitude,p.longitude].join('|'),JSON.stringify(p),Date.parse(p.dateTime)));
  for(let i=0;i<statements.length;i+=50)await env.DB.batch(statements.slice(i,i+50));
@@ -34,6 +44,15 @@ export default {
  const json=(data:any,status=200)=>Response.json(data,{status,headers});
  if(origin&&!allowed)return json({error:'Origem não autorizada.'},403);
  if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
+ if(path.startsWith('/r/')){
+  if(!['GET','HEAD'].includes(request.method))return json({error:'Método não permitido.'},405);
+  const code=path.slice(3);if(!/^[A-Za-z0-9_-]{22}$/.test(code))return json({error:'Atalho inválido.'},404);
+  try{const row=await env.DB.prepare('SELECT data FROM publications WHERE id=?').bind(await shortcutId(code)).first();
+   const target=row?await shortcutTarget(JSON.parse(row.data),env):null;
+   if(!target)return json({error:'Atalho indisponível.'},404);
+   return new Response(null,{status:302,headers:{...headers,Location:target}});
+  }catch{return json({error:'Atalho temporariamente indisponível.'},503)}
+ }
  const scope=path==='/api/position'?'TRACK_HASH':path==='/api/shore'?'SHORE_HASH':path==='/api/import'?'SYNC_HASH':null;
  if(!scope)return json({error:'Não encontrado.'},404);
  if(!await authorized(request,env[scope]))return json({error:'Link inválido ou incompleto.'},401);
@@ -42,6 +61,12 @@ export default {
   if(request.method!=='POST')return json({error:'Método não permitido.'},405);
   const raw=await request.text();if(raw.length>3500000)return json({error:'Limite excedido.'},413);
   const data=JSON.parse(raw);
+  if(data.shortcut){
+   const entry=data.shortcut;
+   if(typeof entry.code!=='string'||!/^[A-Za-z0-9_-]{22}$/.test(entry.code)||!await shortcutTarget(entry,env))return json({error:'Atalho inválido.'},400);
+   await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at').bind(await shortcutId(entry.code),JSON.stringify({portal:entry.portal,key:entry.key}),new Date().toISOString()).run();
+   return json({ok:true});
+  }
   if(data.shore){const shore=shoreSchema.parse(data.shore);await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at WHERE excluded.captured_at > publications.captured_at').bind('shore',JSON.stringify(shore),shore.capturedAt).run();}
   if(data.positions&&!Array.isArray(data.positions))return json({error:'Posições inválidas.'},400);
   const accepted=await save(env,(data.positions||[]).slice(0,5000));const sourceStatus=data.refresh===true?await sync(env):undefined;return json({ok:true,accepted,sourceStatus});
