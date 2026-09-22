@@ -52,6 +52,16 @@ jobs:
           fi
           node scripts/validate-data.mjs
           node scripts/build-command-summary.mjs
+      - name: Build public portals
+        working-directory: public-portals
+        env:
+          VITE_PORTALS_API: https://abdias-public-portals.maritimospelomundo.workers.dev
+        run: |
+          npm ci
+          npm test
+          npm run build
+          mkdir -p ../site/abdias
+          cp -R dist/. ../site/abdias/
       - name: Disable Jekyll
         run: touch site/.nojekyll
       - uses: actions/configure-pages@v5

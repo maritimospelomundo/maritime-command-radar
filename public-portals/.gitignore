@@ -4,3 +4,4 @@ dist/
 .env*
 
 worker/wrangler.toml
+worker/wrangler.json

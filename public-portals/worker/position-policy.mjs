@@ -1,7 +1,7 @@
 const excluded = new Set(['2493309049','2493489592','2493511950']);
 const excludedTimes = new Set([1788355502000,1788382076000,1788385534000]);
 export function normalize(raw,source,now=Date.now()){
- if(!raw||!['SPOT','MarineTraffic','VesselAPI'].includes(source))return null;
+ if(!raw||raw.suspected_glitch||!['SPOT','MarineTraffic','VesselAPI'].includes(source))return null;
  const time=Date.parse(raw.dateTime),{latitude,longitude}=raw;
  if(!Number.isFinite(time)||time>now+300000||!Number.isFinite(latitude)||!Number.isFinite(longitude)||Math.abs(latitude)>90||Math.abs(longitude)>180)return null;
  if(source==='SPOT'&&(excluded.has(String(raw.id))||excludedTimes.has(time)))return null;
