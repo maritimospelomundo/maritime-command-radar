@@ -66,3 +66,23 @@ test('missing event coordinates remain unknown, never zero distance', () => {
  const item=buildCommandSummary(d).nearbyAlerts.find(a=>a.id===d.alertGroups[0].items[0].id);
  assert.equal(item.distanceNm,null);
 });
+
+test('VesselAPI participates as a separate source and original UTC wins', () => {
+  const d = structuredClone(data);
+  d.vesselApiPosition = {lastKnown: {latitude:5, longitude:6, dateTime:new Date(Date.now()-1800000).toISOString()}};
+  d.marineTrafficPosition.lastKnown = {latitude:3, longitude:4, dateTime:new Date(Date.now()-3600000).toISOString()};
+  assert.equal(buildCommandSummary(d).position.sourceLabel, 'VesselAPI');
+  d.spotPosition.lastKnown = {latitude:1, longitude:2, dateTime:new Date(Date.now()-600000).toISOString()};
+  assert.equal(buildCommandSummary(d).position.sourceLabel, 'SPOT');
+});
+test('equal original timestamps use accuracy then source order only as tie-breakers', () => {
+  const d = structuredClone(data);
+  const dateTime = new Date(Date.now()-1000).toISOString();
+  d.vesselApiPosition = {lastKnown: {latitude:5, longitude:6, dateTime, accuracyMeters:500}};
+  d.marineTrafficPosition.lastKnown = {latitude:3, longitude:4, dateTime, accuracyMeters:25};
+  d.spotPosition.lastKnown = {latitude:1, longitude:2, dateTime};
+  assert.equal(buildCommandSummary(d).position.sourceLabel, 'MarineTraffic');
+  delete d.marineTrafficPosition.lastKnown.accuracyMeters;
+  delete d.vesselApiPosition.lastKnown.accuracyMeters;
+  assert.equal(buildCommandSummary(d).position.sourceLabel, 'VesselAPI');
+});
