@@ -10,6 +10,8 @@ if (data.schemaVersion !== 5) errors.push('schemaVersion deve ser 5');
 if (Number.isNaN(Date.parse(data.generatedAt))) errors.push('generatedAt deve ser uma data ISO válida');
 if (!Number.isFinite(data.spotPosition?.lastKnown?.latitude) || !Number.isFinite(data.spotPosition?.lastKnown?.longitude) || Number.isNaN(Date.parse(data.spotPosition?.lastKnown?.dateTime))) errors.push('spotPosition.lastKnown deve conter posição e data válidas');
 if (data.marineTrafficPosition?.lastKnown !== null && (!Number.isFinite(data.marineTrafficPosition?.lastKnown?.latitude) || !Number.isFinite(data.marineTrafficPosition?.lastKnown?.longitude) || Number.isNaN(Date.parse(data.marineTrafficPosition?.lastKnown?.dateTime)))) errors.push('marineTrafficPosition.lastKnown deve ser nulo ou conter posição e data válidas');
+if (data.vesselApiPosition !== undefined && data.vesselApiPosition?.lastKnown !== null && (!Number.isFinite(data.vesselApiPosition?.lastKnown?.latitude) || !Number.isFinite(data.vesselApiPosition?.lastKnown?.longitude) || Number.isNaN(Date.parse(data.vesselApiPosition?.lastKnown?.dateTime)))) errors.push('vesselApiPosition.lastKnown deve ser nulo ou conter posição e data válidas');
+if (data.vesselApiPosition?.history !== undefined && !Array.isArray(data.vesselApiPosition.history)) errors.push('vesselApiPosition.history deve ser uma lista');
 
 const lists = [
   ['dailyWatch.horizons', data.dailyWatch?.horizons],

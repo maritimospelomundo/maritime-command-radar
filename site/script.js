@@ -151,14 +151,20 @@ async function resolveSourcePosition(config, sourceKey, sourceLabel) {
   return { current: points.at(-1) || null, points, isLive: Boolean(config?.endpoint && points.length > 1), mapUrl: config?.mapUrl };
 }
 
-async function resolvePosition(spotConfig, marineTrafficConfig) {
-  const [spot, marineTraffic] = await Promise.all([
-    resolveSourcePosition(spotConfig, 'spot', 'SPOT'),
-    resolveSourcePosition(marineTrafficConfig, 'marineTraffic', 'MarineTraffic')
+async function resolvePosition(spotConfig, marineTrafficConfig, vesselApiConfig) {
+  const [vesselApi, marineTraffic, spot] = await Promise.all([
+    resolveSourcePosition(vesselApiConfig, 'vesselApi', 'VesselAPI'),
+    resolveSourcePosition(marineTrafficConfig, 'marineTraffic', 'MarineTraffic'),
+    resolveSourcePosition(spotConfig, 'spot', 'SPOT')
   ]);
-  const points = [...spot.points, ...marineTraffic.points]
-    .sort((a, b) => pointTimestamp(a) - pointTimestamp(b))
-    .filter((point, index, list) => index === 0 || pointTimestamp(point) !== pointTimestamp(list[index - 1]) || point.latitude !== list[index - 1].latitude || point.longitude !== list[index - 1].longitude);
+  const sourceRank = {spot: 1, marineTraffic: 2, vesselApi: 3};
+  const accuracyRank = point => {
+    const value = Number(point.accuracyMeters ?? point.accuracy);
+    return Number.isFinite(value) && value >= 0 ? 1000000 - value : 0;
+  };
+  const points = [...vesselApi.points, ...marineTraffic.points, ...spot.points]
+    .sort((a, b) => pointTimestamp(a) - pointTimestamp(b) || accuracyRank(a) - accuracyRank(b) || sourceRank[a.sourceKey] - sourceRank[b.sourceKey])
+    .filter((point, index, list) => index === 0 || pointTimestamp(point) !== pointTimestamp(list[index - 1]) || point.latitude !== list[index - 1].latitude || point.longitude !== list[index - 1].longitude || point.sourceKey !== list[index - 1].sourceKey);
   if (!points.length) return null;
   const current = points.at(-1);
   const previous = points.at(-2);
@@ -166,7 +172,7 @@ async function resolvePosition(spotConfig, marineTrafficConfig) {
   let speed = null;
   let projected = null;
 
-  return { current, previous, course, speed, projected, sourceStates: { spot, marineTraffic } };
+  return { current, previous, course, speed, projected, sourceStates: { vesselApi, marineTraffic, spot } };
 }
 
 function assertData(data) {
@@ -738,11 +744,11 @@ function renderPositionPriority(data) {
   setText('position-source-summary', `Fonte ativa: ${current.sourceLabel} · ${positionAgeLabel(current.dateTime)}`);
   const mapLink = byId('spot-map-link');
   mapLink.href = safeUrl(sourceStates[current.sourceKey]?.mapUrl || data.spotPosition?.mapUrl || mapLink.href);
-  mapLink.textContent = current.sourceKey === 'spot' ? 'Abrir SPOT ↗' : 'Abrir MarineTraffic ↗';
+  mapLink.textContent = current.sourceKey === 'spot' ? 'Abrir SPOT ↗' : current.sourceKey === 'vesselApi' ? 'Abrir VesselAPI ↗' : 'Abrir MarineTraffic ↗';
   setText('local-priority-note', `Base: ${current.sourceLabel} · faixa de distância → gravidade → atualidade. Distâncias aproximadas às áreas dos eventos.`);
 
   const renderSource = (key, state) => {
-    const prefix = key === 'spot' ? 'spot' : 'marine';
+    const prefix = key === 'spot' ? 'spot' : key === 'vesselApi' ? 'vesselapi' : 'marine';
     const card = byId(`${prefix}-source-card`);
     const isCurrent = current.sourceKey === key;
     card?.classList.toggle('is-current', isCurrent);
@@ -750,8 +756,9 @@ function renderPositionPriority(data) {
     setText(`${prefix}-source-coordinates`, state.current ? coordinatesLabel(state.current) : 'Nenhuma posição recebida');
     setText(`${prefix}-source-time`, state.current ? `${dateTime.format(new Date(pointTimestamp(state.current)))} UTC · ${positionAgeLabel(state.current.dateTime)}` : 'Aguardando o primeiro registro válido');
   };
-  renderSource('spot', sourceStates.spot);
+  renderSource('vesselApi', sourceStates.vesselApi);
   renderSource('marineTraffic', sourceStates.marineTraffic);
+  renderSource('spot', sourceStates.spot);
   setText('spot-source-battery', `Bateria: ${batteryLabel(sourceStates.spot.current?.batteryState)}`);
   setText('marine-source-event', sourceStates.marineTraffic.current?.eventType || sourceStates.marineTraffic.current?.messageType || 'Posição / chegada / saída');
 
@@ -788,7 +795,7 @@ async function loadRadar() {
     if (!response.ok) throw new Error(`Falha HTTP ${response.status}`);
     const data = await response.json();
     assertData(data);
-    positionContext = await resolvePosition(data.spotPosition, data.marineTrafficPosition);
+    positionContext = await resolvePosition(data.spotPosition, data.marineTrafficPosition, data.vesselApiPosition);
     renderPositionPriority(data);
     render(data);
     window.maritimeCommandSummary = window.buildCommandSummary(data, positionContext?.current);

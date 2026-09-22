@@ -23,11 +23,20 @@
     const freshness = Number.isFinite(days) && days>=0 ? Math.max(0,300-days*10) : 0;
     return {distance, score:band*100000+(rank[level]||1)*1000+freshness-(Number.isFinite(distance)?distance/100:0)};
   }
+  const sourcePoints = (config, sourceKey, sourceLabel, sourceRank) => [
+    ...(Array.isArray(config?.history) ? config.history : []),
+    config?.lastKnown
+  ].filter(Boolean).map(p => ({ ...p, sourceKey, sourceLabel, sourceRank }));
+  const accuracyRank = p => {
+    const value = Number(p.accuracyMeters ?? p.accuracy);
+    return Number.isFinite(value) && value >= 0 ? 1000000 - value : 0;
+  };
   const selectPosition = (data) => [
-    ...[...(data.spotPosition.history || []), data.spotPosition.lastKnown].filter(Boolean).map(p => ({ ...p, sourceKey: 'spot', sourceLabel: 'SPOT' })),
-    ...[...(data.marineTrafficPosition.history || []), data.marineTrafficPosition.lastKnown].filter(Boolean).map(p => ({ ...p, sourceKey: 'marineTraffic', sourceLabel: 'MarineTraffic' }))
+    ...sourcePoints(data.vesselApiPosition, 'vesselApi', 'VesselAPI', 3),
+    ...sourcePoints(data.marineTrafficPosition, 'marineTraffic', 'MarineTraffic', 2),
+    ...sourcePoints(data.spotPosition, 'spot', 'SPOT', 1)
   ].filter(validPosition)
-    .sort((a, b) => Date.parse(b.dateTime) - Date.parse(a.dateTime))[0] || null;
+    .sort((a, b) => Date.parse(b.dateTime) - Date.parse(a.dateTime) || accuracyRank(b) - accuracyRank(a) || b.sourceRank - a.sourceRank)[0] || null;
   function buildCommandSummary(data, resolvedPosition) {
     const current = resolvedPosition === undefined ? selectPosition(data) : (validPosition(resolvedPosition) ? resolvedPosition : null);
     const alerts = data.alertGroups.flatMap(g => g.items).filter(realOnly)

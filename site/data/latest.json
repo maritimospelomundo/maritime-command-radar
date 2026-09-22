@@ -40,6 +40,14 @@
       "eventType": "Position Report"
     }
   },
+  "vesselApiPosition": {
+    "label": "VesselAPI",
+    "provider": "VesselAPI terrestrial AIS",
+    "refreshIntervalMinutes": 360,
+    "history": [],
+    "lastKnown": null,
+    "mapUrl": "https://vesselapi.com/"
+  },
   "dailyWatch": {
     "horizons": [
       {

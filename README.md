@@ -12,7 +12,7 @@ Painel público de inteligência marítima operacional criado por Captain Ponzi 
 - PSC Intelligence e campanhas CIC;
 - Petrobras e Transpetro na seção final, com ações, produção, comércio exterior, rotas, bacias e novas fronteiras;
 - Commander’s Brief;
-- comparação da última posição recebida pelo SPOT e pelo MarineTraffic, usando automaticamente o registro mais recente para priorizar o radar local;
+- comparação das posições VesselAPI, Gmail/MarineTraffic e SPOT, usando o timestamp UTC original mais recente para priorizar o radar local;
 - fontes, horário e nível de confiança.
 - stress tests SCOPE para interrupções em passagens do petróleo, sempre identificados como simulação e comparados ao cenário-base do próprio modelo.
 
@@ -67,3 +67,42 @@ node scripts/build-command-summary.mjs
 ```
 
 O JSON resumido é gerado pelo workflow a cada publicação; não edite esse arquivo manualmente.
+
+## Posição do Abdias · três fontes autorizadas
+
+A posição consolidada usa somente VesselAPI, Gmail/MarineTraffic e SPOT. A ordem
+operacional de consulta é VesselAPI → Gmail/MarineTraffic → SPOT; a posição
+publicada, porém, é sempre a válida com o timestamp UTC original mais recente.
+Horários de consulta, importação ou publicação nunca rejuvenescem um ponto antigo.
+
+A VesselAPI é consultada pelo GitHub Actions quatro vezes ao dia, aproximadamente
+a cada seis horas, usando exclusivamente o segredo `VESSELAPI_API_KEY`. O endpoint
+é terrestre e não solicita `filter.sat=true`. Uma resposta 404 significa apenas que
+não há posição costeira nas últimas 80 horas e preserva todos os dados existentes.
+O plano de 150 chamadas mensais comporta 120 consultas programadas em 30 dias.
+
+Cada fonte possui campo próprio em `site/data/latest.json`:
+`vesselApiPosition`, `marineTrafficPosition` e `spotPosition`. O histórico
+mantém até 90 dias, usa a data original da posição, elimina duplicatas exatas e
+nunca substitui um ponto mais novo por outro mais antigo. Em timestamps iguais,
+vence a melhor precisão declarada; persistindo o empate, VesselAPI,
+Gmail/MarineTraffic e SPOT são usados apenas como desempate.
+
+A Kpler, HiFleet, AISStream e outras fontes regionais/comerciais não fazem parte
+desta integração. Chaves e identificadores do navio não são enviados ao frontend.
+No portal público, o navio continua identificado somente como “Meu navio”.
+
+### Ativação e validação
+
+1. Cadastre `VESSELAPI_API_KEY` em Settings → Secrets and variables → Actions.
+2. Execute Deploy Maritime Master Radar manualmente uma vez.
+3. Confirme os testes, a validação do JSON e a publicação de Pages.
+
+```sh
+node --test scripts/update-ais.test.mjs scripts/command-summary.test.mjs
+node scripts/validate-data.mjs
+node scripts/build-command-summary.mjs
+```
+
+O workflow salva a nova posição somente quando recebe um ponto válido. Falhas de
+credencial, limite, timeout ou resposta inválida preservam a última versão publicada.
