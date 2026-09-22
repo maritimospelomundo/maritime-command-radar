@@ -45,7 +45,8 @@
     "provider": "VesselAPI terrestrial AIS",
     "refreshIntervalMinutes": 360,
     "history": [],
-    "lastKnown": null
+    "lastKnown": null,
+    "mapUrl": "https://vesselapi.com/"
   },
   "dailyWatch": {
     "horizons": [
