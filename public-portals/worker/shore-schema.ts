@@ -1,0 +1,10 @@
+import {z} from 'zod';
+const text=z.string().max(5000),small=z.string().max(200),id=z.string().min(1).max(500),date=z.string().max(60);
+const notice=z.object({note:text,level:z.enum(['green','yellow','red']),source:small,date});
+const item=z.object({id,name:small,group:small,level:z.enum(['green','yellow','red']),notices:z.array(notice).max(500),due:date.optional(),certificate:z.object({dueRaw:small,pending:z.boolean(),issues:z.array(small),action:text,endorsement:text,owner:small,stage:small}).optional()});
+const demand=z.object({id,equipment:z.string().max(5000),group:z.string().max(5000),number:small,note:text,company:small,plannedDate:date,quantity:small,createdAt:date});
+const field=z.object({value:small,source:z.enum(['auto','manual']).optional(),updatedAt:date.optional()});
+export const shoreSchema=z.object({schemaVersion:z.literal(2),capturedAt:z.string().datetime(),equipment:z.array(item).max(3000),certificates:z.array(item).max(2000),srs:z.array(demand).max(5000),reqs:z.array(demand).max(5000),schedule:z.object({port:field,eta:field,berthing:field,stay:field,nextPort:field}),crew:z.object({total:z.number().int().nonnegative(),overdue:z.number().int().nonnegative(),within:z.number().int().nonnegative(),unknown:z.number().int().nonnegative(),roles:z.array(z.object({role:small,count:z.number().int().nonnegative()})).max(500),updatedAt:date}),voyage:z.object({destination:small,reportedEta:date,calculatedEta:date,dateTime:date,latitude:z.number(),longitude:z.number()})});
+export const recordSchema=z.object({id,kind:z.enum(['red','yellow','ok','wo','obs']),note:text,author:small,createdAt:date,resolvedAt:date.nullable()});
+export const catalogSchema=z.array(z.object({id,name:small,group:small,detail:z.string().max(10000).optional(),records:z.array(recordSchema).max(500)})).max(4000);
+export const entrySchema=z.object({id:z.string().uuid(),createdAt:z.string().datetime().optional(),equipmentId:id,role:z.string().trim().min(2).max(40),name:z.string().trim().min(2).max(80),kind:z.enum(['red','yellow','ok','wo','obs']),note:z.string().trim().min(1).max(5000),date:z.string().regex(/^\d{4}-\d{2}-\d{2}$/),baseIds:z.array(id).max(200)});

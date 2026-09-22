@@ -1,0 +1,14 @@
+name = "abdias-public-portals"
+main = "index.ts"
+compatibility_date = "2026-09-01"
+[triggers]
+crons = ["17 * * * *"]
+[vars]
+PAGES_ORIGIN = "https://maritimospelomundo.github.io"
+[[d1_databases]]
+binding = "DB"
+database_name = "abdias-public-portals"
+database_id = "REPLACE_WITH_CREATED_D1_ID"
+migrations_dir = "migrations"
+# Secrets: TRACK_HASH, SHORE_HASH, SYNC_HASH (SHA-256 of separate strong tokens).
+# Never put the original access tokens or deployment credentials in this file.

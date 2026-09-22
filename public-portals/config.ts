@@ -1,0 +1,1 @@
+export function apiUrl(path:string){const base=import.meta.env.VITE_PORTALS_API;if(!base||!base.startsWith('https://'))throw Error('Serviço de consulta ainda não configurado.');return base.replace(/\/$/,'')+path;}
