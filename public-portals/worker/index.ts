@@ -16,9 +16,10 @@ async function save(env:any,points:any[]){
 }
 async function positions(env:any){const rows=await env.DB.prepare('SELECT data FROM vessel_positions WHERE recorded_ms >= ? ORDER BY recorded_ms ASC').bind(Date.now()-90*86400000).all();return consolidate(rows.results.map((r:any)=>JSON.parse(r.data)));}
 async function sync(env:any){
- const sources=await Promise.allSettled([fetch(RADAR,{signal:AbortSignal.timeout(15000)}).then(async r=>{if(!r.ok)throw Error('radar');const d:any=await r.json();return [['vesselApiPosition','VesselAPI'],['marineTrafficPosition','MarineTraffic'],['spotPosition','SPOT']].flatMap(([key,source])=>[...(Array.isArray(d[key]?.history)?d[key].history:[]),d[key]?.lastKnown].map(p=>normalize(p,source)).filter(Boolean))}),fetch(SPOT,{signal:AbortSignal.timeout(15000)}).then(async r=>{if(!r.ok)throw Error('spot');const d:any=await r.json();if(!Array.isArray(d.points))throw Error('spot');return d.points.map((p:any)=>normalize(p,'SPOT')).filter(Boolean)})]);
+ const sources=await Promise.allSettled([fetch(RADAR,{signal:AbortSignal.timeout(15000)}).then(async r=>{if(!r.ok)throw Error('radar HTTP '+r.status);const d:any=await r.json();return [['vesselApiPosition','VesselAPI'],['marineTrafficPosition','MarineTraffic'],['spotPosition','SPOT']].flatMap(([key,source])=>[...(Array.isArray(d[key]?.history)?d[key].history:[]),d[key]?.lastKnown].map(p=>normalize(p,source)).filter(Boolean))}),fetch(SPOT,{signal:AbortSignal.timeout(15000)}).then(async r=>{if(!r.ok)throw Error('spot HTTP '+r.status);const d:any=await r.json();if(!Array.isArray(d.points))throw Error('spot');return d.points.map((p:any)=>normalize(p,'SPOT')).filter(Boolean)})]);
  for(const result of sources)if(result.status==='fulfilled')await save(env,result.value);
  await env.DB.prepare('INSERT INTO sync_state(id,checked_at,unavailable) VALUES(1,?,?) ON CONFLICT(id) DO UPDATE SET checked_at=excluded.checked_at,unavailable=excluded.unavailable').bind(new Date().toISOString(),Number(sources.some(s=>s.status==='rejected'))).run();
+ return sources.map((s,i)=>({source:i===0?'radar':'spot',ok:s.status==='fulfilled',...(s.status==='rejected'?{error:String(s.reason?.message||'unavailable')}:{points:s.value.length})}));
 }
 export default {
  async scheduled(_event:any,env:any,ctx:any){ctx.waitUntil(sync(env))},
@@ -40,7 +41,7 @@ export default {
   const data=JSON.parse(raw);
   if(data.shore){const shore=shoreSchema.parse(data.shore);await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at WHERE excluded.captured_at > publications.captured_at').bind('shore',JSON.stringify(shore),shore.capturedAt).run();}
   if(data.positions&&!Array.isArray(data.positions))return json({error:'Posições inválidas.'},400);
-  const accepted=await save(env,(data.positions||[]).slice(0,5000));if(data.refresh===true)await sync(env);return json({ok:true,accepted});
+  const accepted=await save(env,(data.positions||[]).slice(0,5000));const sourceStatus=data.refresh===true?await sync(env):undefined;return json({ok:true,accepted,sourceStatus});
  }
  if(request.method!=='GET')return json({error:'Método não permitido.'},405);
  const history=await positions(env),position=[...history].sort(prefer)[0]||null;
