@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-23T10:32:15Z",
+  "generatedAt": "2026-09-23T10:39:12Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -1739,8 +1739,8 @@
     },
     {
       "name": "Baltic Exchange",
-      "url": "https://www.balticexchange.com/en/data-services/WeeklyRoundup/tanker/news/2026/tanker-report-week-37.html",
-      "scope": "Rotas, metodologia e relatório tanker W37",
+      "url": "https://www.balticexchange.com/en/data-services/WeeklyRoundup/tanker/news/2026/tanker-report-week-38.html",
+      "scope": "Rotas, metodologia e relatório tanker W38",
       "typeLabel": "Oficial"
     },
     {
