@@ -28,26 +28,21 @@
     "label": "MarineTraffic",
     "mapUrl": "https://www.marinetraffic.com/",
     "acceptedEvents": [
-      "Noon Position",
-      "Midnight Position",
-      "Arrival",
-      "Departure",
-      "AIS Destination Changed",
-      "Position Report"
+      "Any validated MarineTraffic notification with observed UTC time and position"
     ],
     "lastKnown": {
-      "dateTime": "2026-09-23T02:02:00Z",
-      "unixTime": 1790128920,
-      "latitude": -4.0545,
-      "longitude": -32.654666666666664,
+      "dateTime": "2026-09-24T01:58:00Z",
+      "latitude": -8.466666666666667,
+      "longitude": -34.278,
       "eventType": "Position Report",
       "sourceType": "satellite",
       "positionSource": "SAT-AIS",
-      "importedAt": "2026-09-23T10:06:39Z",
-      "sog": 11.8,
-      "cog": 198
+      "sog": 11.1,
+      "cog": 199.0,
+      "unixTime": 1790215080,
+      "importedAt": "2026-09-24T02:52:33.185918Z"
     },
-    "checkedAt": "2026-09-23T10:06:39Z",
+    "checkedAt": "2026-09-24T02:52:33.186085Z",
     "history": [
       {
         "dateTime": "2026-09-10T22:54:00Z",
@@ -84,6 +79,18 @@
         "importedAt": "2026-09-22T14:46:34Z",
         "sog": 11.6,
         "cog": 263
+      },
+      {
+        "dateTime": "2026-09-13T10:31:00Z",
+        "latitude": 34.929833333333335,
+        "longitude": -7.4928333333333335,
+        "eventType": "ETA Changed",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 12.0,
+        "cog": 221.0,
+        "unixTime": 1789295460,
+        "importedAt": "2026-09-24T02:52:33.185883Z"
       },
       {
         "dateTime": "2026-09-13T12:13:00Z",
@@ -158,6 +165,18 @@
         "cog": 215
       },
       {
+        "dateTime": "2026-09-17T12:32:00Z",
+        "latitude": 19.603833333333334,
+        "longitude": -21.412666666666667,
+        "eventType": "ETA Changed",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 12.1,
+        "cog": 211.0,
+        "unixTime": 1789648320,
+        "importedAt": "2026-09-24T02:52:33.185901Z"
+      },
+      {
         "dateTime": "2026-09-17T13:13:00Z",
         "unixTime": 1789650780,
         "latitude": 19.503333333333334,
@@ -180,6 +199,18 @@
         "importedAt": "2026-09-22T14:46:34Z",
         "sog": 12.1,
         "cog": 216
+      },
+      {
+        "dateTime": "2026-09-19T13:43:00Z",
+        "latitude": 10.855666666666666,
+        "longitude": -25.946666666666665,
+        "eventType": "ETA Changed",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 10.8,
+        "cog": 202.0,
+        "unixTime": 1789825380,
+        "importedAt": "2026-09-24T02:52:33.185907Z"
       },
       {
         "dateTime": "2026-09-19T13:58:00Z",
@@ -264,6 +295,30 @@
         "importedAt": "2026-09-23T10:06:39Z",
         "sog": 11.8,
         "cog": 198
+      },
+      {
+        "dateTime": "2026-09-23T15:25:00Z",
+        "latitude": -6.476666666666667,
+        "longitude": -33.5445,
+        "eventType": "ETA Changed",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 11.8,
+        "cog": 198.0,
+        "unixTime": 1790177100,
+        "importedAt": "2026-09-24T02:52:33.185915Z"
+      },
+      {
+        "dateTime": "2026-09-24T01:58:00Z",
+        "latitude": -8.466666666666667,
+        "longitude": -34.278,
+        "eventType": "Position Report",
+        "sourceType": "satellite",
+        "positionSource": "SAT-AIS",
+        "sog": 11.1,
+        "cog": 199.0,
+        "unixTime": 1790215080,
+        "importedAt": "2026-09-24T02:52:33.185918Z"
       }
     ]
   },
