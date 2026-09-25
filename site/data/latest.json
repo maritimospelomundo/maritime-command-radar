@@ -31,17 +31,17 @@
       "Any validated MarineTraffic notification with observed UTC time and position"
     ],
     "lastKnown": {
-      "dateTime": "2026-09-24T14:11:00Z",
-      "unixTime": 1790259060,
-      "latitude": -10.632,
-      "longitude": -35.08233333333333,
-      "eventType": "Noon Position Report",
-      "sourceType": "terrestrial",
-      "positionSource": "TERR-AIS",
-      "sog": 11.8,
-      "cog": 199
+      "dateTime": "2026-09-25T02:03:00Z",
+      "unixTime": 1790301780,
+      "latitude": -12.843333333333334,
+      "longitude": -35.907,
+      "eventType": "Position Report",
+      "sourceType": "satellite",
+      "positionSource": "SAT-AIS",
+      "sog": 11.6,
+      "cog": 197
     },
-    "checkedAt": "2026-09-24T15:46:36Z",
+    "checkedAt": "2026-09-25T14:38:42Z",
     "history": [
       {
         "dateTime": "2026-09-10T22:54:00Z",
@@ -86,8 +86,8 @@
         "eventType": "ETA Changed",
         "sourceType": "terrestrial",
         "positionSource": "TERR-AIS",
-        "sog": 12.0,
-        "cog": 221.0,
+        "sog": 12,
+        "cog": 221,
         "unixTime": 1789295460,
         "importedAt": "2026-09-24T02:52:33.185883Z"
       },
@@ -171,7 +171,7 @@
         "sourceType": "terrestrial",
         "positionSource": "TERR-AIS",
         "sog": 12.1,
-        "cog": 211.0,
+        "cog": 211,
         "unixTime": 1789648320,
         "importedAt": "2026-09-24T02:52:33.185901Z"
       },
@@ -207,7 +207,7 @@
         "sourceType": "terrestrial",
         "positionSource": "TERR-AIS",
         "sog": 10.8,
-        "cog": 202.0,
+        "cog": 202,
         "unixTime": 1789825380,
         "importedAt": "2026-09-24T02:52:33.185907Z"
       },
@@ -303,7 +303,7 @@
         "sourceType": "terrestrial",
         "positionSource": "TERR-AIS",
         "sog": 11.8,
-        "cog": 198.0,
+        "cog": 198,
         "unixTime": 1790177100,
         "importedAt": "2026-09-24T02:52:33.185915Z"
       },
@@ -315,7 +315,7 @@
         "sourceType": "satellite",
         "positionSource": "SAT-AIS",
         "sog": 11.1,
-        "cog": 199.0,
+        "cog": 199,
         "unixTime": 1790215080,
         "importedAt": "2026-09-24T02:52:33.185918Z"
       },
@@ -329,6 +329,17 @@
         "positionSource": "TERR-AIS",
         "sog": 11.8,
         "cog": 199
+      },
+      {
+        "dateTime": "2026-09-25T02:03:00Z",
+        "unixTime": 1790301780,
+        "latitude": -12.843333333333334,
+        "longitude": -35.907,
+        "eventType": "Position Report",
+        "sourceType": "satellite",
+        "positionSource": "SAT-AIS",
+        "sog": 11.6,
+        "cog": 197
       }
     ]
   },
