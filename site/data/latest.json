@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-23T10:39:12Z",
+  "generatedAt": "2026-09-25T10:18:00Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -345,20 +345,20 @@
       {
         "label": "AÇÃO AGORA",
         "level": "high",
-        "value": "Costa Sudeste BR · CHM 701–703",
-        "summary": "Mar de 3–4 m, vento força 7 com rajadas força 8 e ressaca de 2,5–3 m têm vigência entre 23 e 25 de setembro; confirmar EGC/NAVTEX."
+        "value": "Posição observada há ~20 h",
+        "summary": "MarineTraffic segue como única fonte válida. Não projetar derrota; confirmar posição de bordo e novos MSI por EGC/NAVTEX."
       },
       {
         "label": "PRÓXIMAS 72 H",
-        "level": "critical",
-        "value": "Atlântico Norte · 60–75 kt e 7–9,5 m",
-        "summary": "Baixa em rápida intensificação produz vento de força de furacão; Polo e Odalys também permanecem sob hurricane warning no Pacífico Leste."
+        "level": "high",
+        "value": "CHM · sem aviso novo vigente localizado",
+        "summary": "A página oficial atualizada em 25 set. ainda exibia 701/703, ambos válidos somente até 0600Z; confirmar emissão posterior pelos canais de bordo."
       },
       {
         "label": "PREPARAR",
         "level": "critical",
-        "value": "Ormuz e Bab · risco sem redução confirmada",
-        "summary": "Iniciativas diplomáticas de 22 de setembro ainda não criaram corredor seguro; manter avaliação específica da viagem, war-risk e autorização do CSO."
+        "value": "Ormuz · ataque UKMTO 142-26",
+        "summary": "Navio atingido, incendiado e à deriva em 23 set.; todos os tripulantes abandonaram com segurança. Manter avaliação específica, war-risk e autorização do CSO."
       }
     ],
     "modules": [
@@ -461,12 +461,12 @@
     ]
   },
   "market": {
-    "week": "W38",
-    "sourceLabel": "Time-charter Fearnleys W38; spot Baltic Exchange W38; BDTI/BCTI permanecem no último dado público de 11 set.; VLSFO consultado em 23 set.",
+    "week": "W39",
+    "sourceLabel": "Narrativa tanker Fearnleys W39; time-charter numérico e spot Baltic permanecem no último consolidado público W38; BDTI/BCTI no último dado público de 11 set.; VLSFO consultado em 25 set. com fechamento de 24 set.",
     "benchmarks": [
       {
         "segment": "VLCC",
-        "route": "1 ano TC · eco/scrubber",
+        "route": "1 ano TC · eco/scrubber · último valor W38",
         "value": 160000,
         "unit": "USD/day",
         "confidence": "medium",
@@ -474,7 +474,7 @@
       },
       {
         "segment": "Suezmax",
-        "route": "1 ano TC · eco/scrubber",
+        "route": "1 ano TC · eco/scrubber · último valor W38",
         "value": 125000,
         "unit": "USD/day",
         "confidence": "medium",
@@ -482,7 +482,7 @@
       },
       {
         "segment": "Aframax",
-        "route": "1 ano TC · eco/scrubber",
+        "route": "1 ano TC · eco/scrubber · último valor W38",
         "value": 69000,
         "unit": "USD/day",
         "confidence": "medium",
@@ -491,11 +491,11 @@
     ],
     "spotSignal": {
       "segment": "VLCC",
-      "label": "spot · Baltic W38",
-      "valueLabel": "TD3C em WS1.140",
-      "summary": "No último relatório público consolidado, TD3C MEG–China chegou a WS1.140 e TD34 Golfo de Omã–China a WS806,43. São índices de rota, distintos dos time-charters de um ano.",
-      "confidenceLabel": "Relatório público Baltic Exchange",
-      "sourceLabel": "Baltic Exchange · 18 set."
+      "label": "spot · Fearnleys W39",
+      "valueLabel": "Correção após pico extremo",
+      "summary": "O relatório público W39 descreve acomodação após a rodada anterior, quando Fujairah–Golfo de Omã alcançou a faixa de WS800. Sem tabela pública consolidada equivalente recuperada, o portal não renova um valor spot exato.",
+      "confidenceLabel": "Leitura qualitativa de fonte de indústria",
+      "sourceLabel": "Fearnleys / Fearnpulse · 23 set."
     },
     "history": {
       "weeks": [
@@ -568,7 +568,7 @@
       "title": "Pirataria e roubo armado",
       "shortTitle": "Pirataria",
       "icon": "☠",
-      "description": "Últimos registros públicos localizados. A busca de 21 de setembro não encontrou boletim semanal ReCAAP posterior ao período 8–14 set.; os três registros anteriores foram preservados com suas datas originais.",
+      "description": "A consulta pública de 25 de setembro não localizou boletim semanal ReCAAP posterior ao período 8–14 set.; os três registros anteriores foram preservados com suas datas originais, sem criar ocorrência para completar a lista.",
       "items": [
         {
           "id": "imb-050-26",
@@ -634,39 +634,39 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-      "description": "Três condições de alto-mar comprovadas nos boletins NOAA/NWS de 23 de setembro: baixa com vento de força de furacão no Atlântico Norte e os furacões Polo e Odalys no Pacífico Leste.",
+      "description": "Três condições relevantes comprovadas nos boletins NOAA/NWS de 25 de setembro: storm warning no Atlântico Norte e os furacões Polo e Odalys no Pacífico Leste.",
       "items": [
         {
-          "id": "noaa-atlantic-hurricane-force-2026-09-23",
-          "date": "2026-09-23",
-          "region": "Atlântico Norte · baixa próxima de 50°N 39°W",
+          "id": "noaa-atlantic-storm-2026-09-25",
+          "date": "2026-09-25",
+          "region": "Atlântico Norte oeste · baixa próxima de 35°N 71°W",
           "level": "critical",
-          "headline": "Baixa em rápida intensificação: 60–75 kt e mar de 7–9,5 m",
-          "summary": "O NOAA prevê intensificação explosiva da baixa, com vento de força de furacão entre 60 e 75 kt e ondas significativas de 7 a 9,5 m.",
-          "details": "O boletim de 1030Z prevê o máximo nas primeiras seis horas, próximo de 51°N 36°W; ondas individuais podem superar duas vezes a altura significativa.",
-          "action": "Revalidar weather routing, limites de heavy weather, estabilidade, velocidade/heading, cargas de convés e restrições de trabalho externo antes de aproximar o setor.",
+          "headline": "Storm warning: 40–55 kt e mar de até 8 m",
+          "summary": "O NOAA prevê intensificação da baixa junto à costa leste dos EUA, com 40–55 kt nas próximas 24 horas e ondas significativas de 5,5–8 m.",
+          "details": "Boletim de 0430Z: centro em 35°N 71°W às 0000Z; previsão em 38°N 71°W às 0000Z de 26 set. Ondas individuais podem superar duas vezes a altura significativa.",
+          "action": "Revalidar weather routing, limites de heavy weather, estabilidade, velocidade/heading, amarrações e restrições de trabalho externo antes de aproximar o setor.",
           "map": {
-            "x": 38.06,
-            "y": 22.78,
-            "label": "Atlântico N · furacão"
+            "x": 30.3,
+            "y": 28.9,
+            "label": "Atlântico N · storm"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · 23 set.",
+            "name": "NOAA Ocean Prediction Center · 25 set.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
           }
         },
         {
-          "id": "noaa-polo-2026-09-23",
-          "date": "2026-09-23",
-          "region": "Pacífico Leste · 15,0°N 101,4°W",
+          "id": "noaa-polo-2026-09-25",
+          "date": "2026-09-25",
+          "region": "Pacífico Leste · 17,2°N 107,5°W",
           "level": "critical",
-          "headline": "Polo: 135 kt, rajadas de 165 kt e mar de até 14 m",
-          "summary": "Às 0900Z, Polo tinha vento sustentado de 135 kt e rajadas de 165 kt; ondas significativas chegavam a 14 m no entorno do sistema.",
-          "details": "O sistema movia-se lentamente para norte. A previsão de 24 horas mantinha 135 kt e mar de até 14,5 m, com ampla área de swell misto.",
+          "headline": "Polo: 140 kt, rajadas de 170 kt e mar de 13,5 m",
+          "summary": "Às 0900Z, Polo tinha vento sustentado de 140 kt e rajadas de 170 kt; ondas significativas chegavam a 13,5 m.",
+          "details": "Movimento para oeste a 10 kt. A previsão de 24 horas ainda indicava 130 kt e mar de até 13 m; há swell misto amplo nas aproximações.",
           "action": "Manter ampla evasão, acompanhar cada aviso NHC e não basear decisão em uma trajetória única; revisar portos de refúgio e restrições costeiras mexicanas.",
           "map": {
-            "x": 21.83,
-            "y": 41.67,
+            "x": 20.1,
+            "y": 40.4,
             "label": "Polo"
           },
           "source": {
@@ -675,17 +675,17 @@
           }
         },
         {
-          "id": "noaa-odalys-2026-09-23",
-          "date": "2026-09-23",
-          "region": "Pacífico Leste · 15,9°N 128,4°W",
-          "level": "high",
-          "headline": "Odalys: furacão de 65 kt e mar de até 7 m",
-          "summary": "Às 0900Z, Odalys tinha vento sustentado de 65 kt, rajadas de 80 kt e ondas significativas de até 7 m.",
-          "details": "A previsão indica 75 kt em 24 e 48 horas, com mar de até 8,5 m e extensa área de swell no Pacífico Leste.",
-          "action": "Acompanhar a evolução e manter margem do quadrante de maior mar; revisar amarrações, estabilidade e plano de desvio antes de entrar na área de influência.",
+          "id": "noaa-odalys-2026-09-25",
+          "date": "2026-09-25",
+          "region": "Pacífico Leste · 17,6°N 124,0°W",
+          "level": "critical",
+          "headline": "Odalys: 100 kt, rajadas de 120 kt e mar de 11,5 m",
+          "summary": "Às 0900Z, Odalys tinha vento sustentado de 100 kt, rajadas de 120 kt e ondas significativas de até 11,5 m.",
+          "details": "O sistema movia-se lentamente para nordeste. A previsão indicava enfraquecimento gradual, mas ainda 90 kt em 24 horas e extensa área de swell.",
+          "action": "Manter margem ampla do quadrante de maior mar; revisar amarrações, estabilidade e plano de desvio antes de entrar na área de influência.",
           "map": {
-            "x": 14.33,
-            "y": 41.17,
+            "x": 15.6,
+            "y": 40.2,
             "label": "Odalys"
           },
           "source": {
@@ -700,17 +700,17 @@
       "title": "Costa do Brasil",
       "shortTitle": "Costa BR",
       "icon": "◆",
-      "description": "Três avisos CHM emitidos em 22 de setembro permanecem relevantes para o Sudeste. Confirmar sempre por EGC/NAVTEX e pela emissão mais recente.",
+      "description": "Na consulta de 25 de setembro, a página CHM atualizada às 06:01 ainda exibia os avisos 701 e 703, ambos válidos somente até 0600Z. Sem terceiro aviso vigente localizado, os três registros anteriores foram preservados com as datas originais; confirmar sempre por EGC/NAVTEX.",
       "items": [
         {
           "id": "chm-703-2026",
           "date": "2026-09-22",
           "region": "Costa do Rio de Janeiro · Rio de Janeiro a Arraial do Cabo",
-          "level": "high",
-          "headline": "Aviso 703: ressaca de 2,5–3,0 m",
-          "summary": "Ressaca com ondas de S/SE entre 2,5 e 3,0 m prevista a partir de 232100Z.",
+          "level": "medium",
+          "headline": "Vigência encerrada — Aviso 703: ressaca de 2,5–3,0 m",
+          "summary": "Ressaca com ondas de S/SE entre 2,5 e 3,0 m prevista a partir de 232100Z; a vigência terminou às 0600Z de 25 set.",
           "details": "Aviso emitido às 2100Z de 22 de setembro e válido até 250600Z de 25 de setembro.",
-          "action": "Revisar aproximação, praticagem, fundeio, operações de convés e limites de terminal; confirmar condições locais antes da chegada.",
+          "action": "Não tratar este registro como aviso vigente; confirmar nova emissão por EGC/NAVTEX e condições locais antes da chegada.",
           "map": {
             "x": 38.2,
             "y": 62.8,
@@ -725,11 +725,11 @@
           "id": "chm-702-2026",
           "date": "2026-09-22",
           "region": "Área oceânica ao largo do Sudeste · 22°S–24°S / 36°W–40°W",
-          "level": "high",
-          "headline": "Aviso 702: vento força 7, rajadas força 8",
-          "summary": "Vento S/SE força 7 com rajadas força 8 previsto a partir de 231200Z.",
+          "level": "medium",
+          "headline": "Vigência encerrada — Aviso 702: vento força 7, rajadas força 8",
+          "summary": "Vento S/SE força 7 com rajadas força 8 previsto a partir de 231200Z; a vigência terminou às 0000Z de 24 set.",
           "details": "Aviso emitido às 1300Z de 22 de setembro e válido até 240000Z de 24 de setembro.",
-          "action": "Ajustar rota/velocidade e restrições de trabalho externo; revisar prontidão de heavy weather e confirmar o próximo boletim.",
+          "action": "Não tratar este registro como aviso vigente; confirmar o boletim atual antes de ajustar rota, velocidade ou trabalho externo.",
           "map": {
             "x": 39.4,
             "y": 62.8,
@@ -744,11 +744,11 @@
           "id": "chm-701-2026",
           "date": "2026-09-22",
           "region": "Área Delta · 22°S–26°S / 35°W–40°W",
-          "level": "high",
-          "headline": "Aviso 701: mar grosso de 3–4 m",
-          "summary": "Ondas de W/SW entre 3,0 e 4,0 m previstas a partir de 241500Z.",
+          "level": "medium",
+          "headline": "Vigência encerrada — Aviso 701: mar grosso de 3–4 m",
+          "summary": "Ondas de W/SW entre 3,0 e 4,0 m previstas a partir de 241500Z; a vigência terminou às 0600Z de 25 set.",
           "details": "Aviso emitido às 1300Z de 22 de setembro e válido até 250600Z de 25 de setembro.",
-          "action": "Revisar slamming, embarque de água, amarrações, condição de carga/lastro e janela operacional antes de entrar no setor.",
+          "action": "Não tratar este registro como aviso vigente; confirmar nova emissão antes de decisões sobre slamming, amarrações ou janela operacional.",
           "map": {
             "x": 39.2,
             "y": 63.6,
@@ -766,63 +766,63 @@
       "title": "Conflito e segurança de rota",
       "shortTitle": "Segurança",
       "icon": "▲",
-      "description": "Os três registros públicos mais recentes localizados em 22 de setembro mostram conflito ainda afetando navegação e custos, apesar de iniciativas diplomáticas. Nenhuma proposta equivale a corredor seguro já implementado.",
+      "description": "Os três ataques públicos mais recentes confirmados pelo UKMTO ocorreram em Ormuz em 21 e 23 de setembro. São incidentes distintos e permanecem classificados com prudência conforme danos e situação da tripulação.",
       "items": [
         {
-          "id": "hormuz-shipping-costs-2026-09-22",
-          "date": "2026-09-22",
-          "region": "Estreito de Ormuz / Golfo Pérsico",
-          "level": "high",
-          "headline": "Conflito mantém custos de transporte em níveis excepcionais",
-          "summary": "O Ministério de Energia saudita atribuiu a elevação dos custos regionais ao conflito e à interrupção da navegação por Ormuz, rejeitando alegação de compra de 25 tankers.",
-          "details": "A Reuters registrou que o tráfego continua muito abaixo do nível pré-conflito e que navios ainda enfrentam ataques na área; a alegação iraquiana sobre a compra dos tankers foi negada.",
-          "action": "Tratar frete e disponibilidade como voláteis; revalidar war-risk, security assessment, instruções do CSO e custos antes de qualquer compromisso operacional.",
-          "map": {
-            "x": 65.6,
-            "y": 35.4,
-            "label": "Ormuz"
-          },
-          "source": {
-            "name": "Reuters · 22 set. 2026",
-            "url": "https://www.reuters.com/business/energy/saudi-arabia-denies-buying-oil-tankers-after-iraq-blames-it-higher-shipping-2026-09-22/"
-          }
-        },
-        {
-          "id": "un-hormuz-mission-draft-2026-09-22",
-          "date": "2026-09-22",
+          "id": "ukmto-142-26",
+          "date": "2026-09-23",
           "region": "Estreito de Ormuz",
-          "level": "medium",
-          "headline": "França prepara proposta de missão internacional para Ormuz",
-          "summary": "França iniciou a redação de proposta ao Conselho de Segurança da ONU para restaurar a circulação e proteger a navegação comercial por Ormuz.",
-          "details": "A proposta ainda não foi circulada nem aprovada. Tentativas anteriores não obtiveram consenso; portanto, não existe garantia operacional, escolta ou corredor seguro decorrente dessa iniciativa.",
-          "action": "Não antecipar redução de risco; manter voyage-specific threat assessment, war-risk e autorização do CSO até haver medida oficial implementada.",
+          "level": "critical",
+          "headline": "Carga atingida, em chamas e à deriva",
+          "summary": "O CSO informou ao UKMTO que um cargueiro foi atingido por projétil desconhecido; o navio ficou em chamas e à deriva.",
+          "details": "UKMTO Warning 142-26, relato às 0630Z. A atualização pública informou que todos os tripulantes abandonaram a embarcação com segurança; autoridades investigam.",
+          "action": "Manter voyage-specific threat assessment, war-risk, prontidão de abandono/damage control, comunicação UKMTO e autorização do CSO antes de qualquer trânsito.",
           "map": {
             "x": 65.6,
             "y": 35.4,
-            "label": "Ormuz"
+            "label": "Ormuz · 142-26"
           },
           "source": {
-            "name": "Reuters · 22 set. 2026",
-            "url": "https://www.reuters.com/world/france-mulls-new-un-security-council-resolution-hormuz-diplomats-say-2026-09-22/"
+            "name": "UKMTO Warning 142-26",
+            "url": "https://www.ukmto.org/"
           }
         },
         {
-          "id": "safe-passage-call-2026-09-22",
-          "date": "2026-09-22",
-          "region": "Ormuz e Bab-el-Mandeb",
-          "level": "medium",
-          "headline": "Rússia e Arábia Saudita pedem passagem segura nos dois estreitos",
-          "summary": "Putin e Mohammed bin Salman destacaram a necessidade de passagem segura e desimpedida em Ormuz e Bab-el-Mandeb e de cessação das hostilidades no Iêmen.",
-          "details": "O posicionamento é diplomático e não altera, por si só, o controle territorial, os avisos de segurança ou a disponibilidade de proteção a navios mercantes.",
-          "action": "Manter BMP, registro UKMTO/MSCIO, citadel, comunicações e autorização específica da companhia; não inferir segurança a partir do anúncio.",
+          "id": "ukmto-141-26",
+          "date": "2026-09-21",
+          "region": "Estreito de Ormuz · trânsito de saída",
+          "level": "high",
+          "headline": "LPG tanker atingido por fragmentos",
+          "summary": "Relato tardio confirmou LPG tanker atingido por fragmentos de projéteis durante trânsito outbound; tripulação segura.",
+          "details": "UKMTO Warning 141-26. Não houve impacto ambiental informado e o navio seguiu para o próximo porto.",
+          "action": "Não inferir redução do risco porque o navio manteve viagem; revisar fire plan, gas hazards, contingência de propulsão e reporte imediato.",
           "map": {
-            "x": 62.1,
-            "y": 43,
-            "label": "Bab / Ormuz"
+            "x": 65.6,
+            "y": 35.4,
+            "label": "Ormuz · 141-26"
           },
           "source": {
-            "name": "Reuters · 22 set. 2026",
-            "url": "https://www.reuters.com/world/middle-east/putin-saudi-crown-prince-call-safe-passage-via-hormuz-bab-el-mandeb-2026-09-22/"
+            "name": "UKMTO Warning 141-26",
+            "url": "https://www.ukmto.org/"
+          }
+        },
+        {
+          "id": "ukmto-140-26",
+          "date": "2026-09-21",
+          "region": "Estreito de Ormuz · trânsito de entrada",
+          "level": "high",
+          "headline": "Tanker atingido; dois feridos leves",
+          "summary": "Autoridades militares informaram ao UKMTO que um tanker inbound foi atingido por projétil desconhecido; dois tripulantes tiveram ferimentos leves.",
+          "details": "UKMTO Warning 140-26. O navio continuou por meios próprios e não havia impacto ambiental reportado na publicação consultada.",
+          "action": "Reforçar proteção da tripulação, medical readiness, bridge/engine-room manning e plano de resposta a perda de governo ou incêndio.",
+          "map": {
+            "x": 65.6,
+            "y": 35.4,
+            "label": "Ormuz · 140-26"
+          },
+          "source": {
+            "name": "UKMTO Warning 140-26",
+            "url": "https://www.ukmto.org/"
           }
         }
       ]
@@ -832,8 +832,27 @@
       "title": "Navegação eletrônica e portos",
       "shortTitle": "Nav/Portos",
       "icon": "⌁",
-      "description": "Tráfego observado e interferência GNSS que exigem redundância de posição. As contagens de fim de semana são preliminares, podem omitir AIS desligado e não medem gross tonnage nem fluxo oficial de petróleo.",
+      "description": "Padrões de STS e interferência GNSS que exigem due diligence e redundância de posição. A análise Windward é proprietária e atribuída; quatro transferências foram corroboradas, enquanto outras onze reuniões permaneceram apenas indícios.",
       "items": [
+        {
+          "id": "windward-hormuz-sts-relay-2026-09-24",
+          "date": "2026-09-24",
+          "region": "Ormuz · Basrah/Kuwait ↔ Fujairah/Shinas",
+          "level": "medium",
+          "headline": "Análise aponta relé de carga em duas etapas",
+          "summary": "A Windward descreveu padrão repetido de recebimento de carga dentro do Golfo e entrega fora dele por tankers intermediários.",
+          "details": "Em janela de 90 dias, um tanker encontrou 15 contrapartes. Quatro transferências foram corroboradas pelo modelo de carga; onze encontros não confirmam transferência e exigem investigação adicional.",
+          "action": "Em STS/fixture, examinar histórico de encontros, contrapartes dos dois lados do estreito e cadeia documental; separar confirmação de inferência.",
+          "map": {
+            "x": 65.6,
+            "y": 35.4,
+            "label": "Ormuz · STS"
+          },
+          "source": {
+            "name": "Windward · 24 set. 2026 · análise atribuída",
+            "url": "https://windward.ai/blog/ship-to-ship-relays-are-moving-cargo-across-hormuz-in-two-stages/"
+          }
+        },
         {
           "id": "hormuz-transits-2026-09-20",
           "date": "2026-09-20",
@@ -847,25 +866,6 @@
             "x": 65.6,
             "y": 35.4,
             "label": "Ormuz / Golfo"
-          },
-          "source": {
-            "name": "Reuters / Kpler · 21 set. 2026",
-            "url": "https://www.reuters.com/world/middle-east/vessels-trickle-through-strait-hormuz-mideast-tension-persists-2026-09-21/"
-          }
-        },
-        {
-          "id": "bab-transits-2026-09-20",
-          "date": "2026-09-20",
-          "region": "Bab-el-Mandeb",
-          "level": "high",
-          "headline": "51 navios observados no fim de semana",
-          "summary": "Foram observados 51 cruzamentos, contra 57 no fim de semana anterior; 33 saíram do estreito.",
-          "details": "A métrica é contagem de navios, não gross tonnage nem fluxo de petróleo. Incluiu um Aframax com cerca de 700 mil barris de cru saudita.",
-          "action": "Separar volume de tráfego do risco da rota; confirmar warnings UKMTO/MSCIO, BMP, VHF e autorização da companhia.",
-          "map": {
-            "x": 62.1,
-            "y": 43,
-            "label": "Bab-el-Mandeb"
           },
           "source": {
             "name": "Reuters / Kpler · 21 set. 2026",
@@ -1035,18 +1035,18 @@
       "trafficLabel": "17 navios de commodities · fim de semana 19–20 set.",
       "trafficTrend": "queda frente a 37 no fim de semana anterior; muito abaixo do basal",
       "trafficBasis": "Rastreamento civil preliminar contou 17 navios de commodities no fim de semana. Pode omitir AIS-off e não representa gross tonnage nem fluxo oficial de petróleo; o basal citado pela fonte é cerca de 125 grandes navios comerciais/dia antes da guerra.",
-      "market": "Vinte e dois tankers, majoritariamente VLCCs, saíram na semana de 13 set. com 42 milhões de barris; fluxo saudita via Ormuz atingiu 2,9 milhões bpd em seis dias. São fluxos de petróleo, distintos da contagem total de navios.",
-      "geopolitics": "França prepara proposta no Conselho de Segurança para restaurar a circulação, mas não há resolução, missão ou corredor seguro implementado. Conflito e ataques seguem afetando navegação e custos.",
+      "market": "O relatório público Fearnleys W39 mantém o mercado VLCC em patamar excepcional após a escalada anterior. A Windward descreve relés STS em duas etapas, mas distingue quatro transferências corroboradas de onze encontros apenas inferidos.",
+      "geopolitics": "O UKMTO confirmou três ataques distintos em 21 e 23 de setembro; no 142-26, um cargueiro ficou em chamas e à deriva, embora a tripulação tenha abandonado com segurança. Não há redução operacional confirmada do risco.",
       "authority": "Autoridades costeiras / UKMTO como ponto de contato de segurança",
       "reporting": "UKMTO VRS voluntário; VTS/port reporting obrigatório conforme porto e águas jurisdicionais.",
       "masterFocus": [
-        "Não antecipar redução do war-risk: alinhar regras de resposta a hailing/interdição e autoridade de decisão com o CSO até existir medida oficial implementada.",
-        "Usar navegação redundante contra spoofing/jamming e minas; comparar radar, visual, AIS e DR.",
-        "Elevar fire/security readiness, controlar emissões de informação e preservar comunicações 24/7."
+        "Manter voyage-specific threat assessment, war-risk e autoridade de decisão alinhada ao CSO; ataque recente confirma risco residual crítico.",
+        "Usar navegação redundante contra spoofing/jamming e comparar GNSS, radar, visual, AIS, eco-sonda e DR.",
+        "Em STS e vetting, examinar contrapartes e histórico completo de encontros; associação ou geometria não provam transferência de carga."
       ],
       "source": {
-        "name": "Reuters / Kpler · 21 set. 2026",
-        "url": "https://www.reuters.com/world/middle-east/vessels-trickle-through-strait-hormuz-mideast-tension-persists-2026-09-21/"
+        "name": "UKMTO · 23 set.; Windward · 24 set. (complementar)",
+        "url": "https://www.ukmto.org/"
       }
     },
     {
@@ -1079,18 +1079,18 @@
       "trafficLabel": "51 navios · fim de semana 19–20 set.",
       "trafficTrend": "abaixo dos 57 do fim de semana anterior; risco territorial elevado",
       "trafficBasis": "Rastreamento civil preliminar contou 51 cruzamentos, com 33 saídas. É contagem de navios observados, não gross tonnage nem fluxo de petróleo.",
-      "market": "Um Aframax com cerca de 700 mil barris de cru saudita integrou os trânsitos; não havia carregamento visível em Yanbu desde 16 set. Contagem de navios e volume de petróleo são métricas distintas.",
-      "geopolitics": "Rússia e Arábia Saudita pediram passagem segura e cessação das hostilidades, mas o anúncio não altera o risco territorial nem garante proteção a mercantes.",
+      "market": "A Dryad informa, como análise atribuída, que o East–West Pipeline reiniciou em baixa vazão em 22 set.; isso ainda não comprova programa sustentável de carregamentos em Yanbu. Fluxo de oleoduto, loadings e contagem de navios são métricas distintas.",
+      "geopolitics": "A retomada parcial do oleoduto saudita não reduz automaticamente a exposição da rota pelo Mar Vermelho/Bab-el-Mandeb; confiabilidade depende de reparos, carregamentos repetidos e ambiente de ameaça.",
       "authority": "UKMTO / MSCIO / forças marítimas e autoridades costeiras",
       "reporting": "Registro/reporte voluntário UKMTO e MSCIO no VRA; seguir BMP Maritime Security.",
       "masterFocus": [
-        "Exigir voyage-specific threat assessment, autorização da companhia e medidas BMP; pedidos diplomáticos de passagem segura não constituem corredor protegido.",
-        "Revisar citadel, SSAS, drills, damage control, lookout, velocidade e comunicações de emergência.",
-        "Monitorar warnings/advisories em tempo real; não inferir segurança a partir da contagem de tráfego ou da possível presença naval."
+        "Exigir voyage-specific threat assessment, autorização da companhia e medidas BMP; recuperação parcial de Yanbu não constitui corredor protegido.",
+        "Diferenciar reinício técnico do oleoduto, throughput sustentado e carregamentos confirmados antes de assumir normalização comercial.",
+        "Revisar citadel, SSAS, drills, damage control, lookout, velocidade e comunicações UKMTO/MSCIO."
       ],
       "source": {
-        "name": "Reuters / Kpler · 21 set. 2026",
-        "url": "https://www.reuters.com/world/middle-east/vessels-trickle-through-strait-hormuz-mideast-tension-persists-2026-09-21/"
+        "name": "Dryad Global · 24 set. 2026 · análise atribuída",
+        "url": "https://channel16.dryadglobal.com/saudi-arabias-east-west-pipeline-is-restarting.-when-will-yanbu-be-a-reliable-export-route"
       }
     },
     {
@@ -1467,41 +1467,41 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 54,
+        "price": 54.12,
         "currencySymbol": "R$",
-        "changePercent": 0.32,
-        "trend": "Alta no dia",
-        "capturedAtLabel": "17 set. 2026 · fechamento público",
+        "changePercent": 0,
+        "trend": "Estável no fechamento",
+        "capturedAtLabel": "24 set. 2026 · 17:05 BRT · fechamento público",
         "sourceUrl": "https://www.google.com/finance/quote/PETR3:BVMF"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 48.61,
+        "price": 49.26,
         "currencySymbol": "R$",
         "changePercent": 0,
-        "trend": "Estável no dia",
-        "capturedAtLabel": "17 set. 2026 · fechamento público",
+        "trend": "Estável no fechamento",
+        "capturedAtLabel": "24 set. 2026 · 17:05 BRT · fechamento público",
         "sourceUrl": "https://www.google.com/finance/quote/PETR4:BVMF"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 20.8,
+        "price": 20.84,
         "currencySymbol": "US$",
-        "changePercent": -0.62,
+        "changePercent": -1.37,
         "trend": "Baixa indicativa",
-        "capturedAtLabel": "21 set. 2026 · 0919Z · cotação pública",
+        "capturedAtLabel": "25 set. 2026 · 0800Z · cotação pública",
         "sourceUrl": "https://www.google.com/finance/quote/PBR:NYSE"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-        "price": 18.82,
+        "price": 18.99,
         "currencySymbol": "US$",
-        "changePercent": -0.69,
+        "changePercent": -1.27,
         "trend": "Baixa indicativa",
-        "capturedAtLabel": "21 set. 2026 · 0916Z · cotação pública",
+        "capturedAtLabel": "25 set. 2026 · 0800Z · cotação pública",
         "sourceUrl": "https://finance.yahoo.com/quote/PBR-A/history/"
       }
     ],
@@ -1682,61 +1682,61 @@
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 858.5,
-      "change": 1.5
+      "vlsfo": 874,
+      "change": 14.5
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 697,
-      "change": -3.5
+      "vlsfo": 690,
+      "change": -1
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 994,
-      "change": 8
+      "vlsfo": 996,
+      "change": 14
     },
     {
       "port": "Houston",
       "code": "USHOU",
-      "vlsfo": 749.5,
-      "change": -15.5
+      "vlsfo": 760.5,
+      "change": 14.5
     }
   ],
   "briefing": {
-    "date": "2026-09-23",
+    "date": "2026-09-25",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
-        "title": "MarineTraffic permanece como única fonte válida e mais recente",
-        "summary": "Evento validado de 23 de setembro, 0202Z. O bridge SPOT sincronizou às 0921Z, mas não retornou ponto válido; nenhuma coordenada foi estimada."
+        "title": "MarineTraffic é a única fonte válida e mais recente",
+        "summary": "Evento consolidado de 24 setembro, 1411Z. SPOT e VesselAPI seguem sem ponto válido; nenhuma coordenada ou derrota foi estimada."
       },
       {
         "category": "METEO",
-        "title": "Furacões e baixa explosiva exigem margem ampla",
-        "summary": "Polo tinha 135 kt e mar de 14 m; Odalys, 65 kt e mar de 7 m. No Atlântico Norte, baixa em rápida intensificação prevê 60–75 kt e 7–9,5 m."
+        "title": "Storm warning no Atlântico e dois furacões no Pacífico",
+        "summary": "Atlântico Norte prevê 40–55 kt e mar de até 8 m. Polo tinha 140 kt/13,5 m; Odalys, 100 kt/11,5 m no boletim NOAA de 25 set."
       },
       {
         "category": "COSTA BR",
-        "title": "Novos avisos CHM 701–703 no Sudeste",
-        "summary": "Há previsão de mar de 3–4 m, vento força 7 com rajadas força 8 e ressaca de 2,5–3 m, com vigência até 24–25 de setembro."
+        "title": "Sem aviso CHM novo vigente localizado",
+        "summary": "A página oficial consultada ainda exibia 701/703, ambos válidos somente até 0600Z de 25 set.; confirmar novas emissões por EGC/NAVTEX."
       },
       {
         "category": "SEGURANÇA",
-        "title": "Diplomacia avança, sem garantia operacional em Ormuz ou Bab",
-        "summary": "França prepara proposta no Conselho de Segurança e Rússia/Arábia Saudita pediram passagem segura; navegação e custos seguem afetados pelo conflito."
-      },
-      {
-        "category": "PSC",
-        "title": "Quatro CICs de cargo securing confirmadas",
-        "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativos; Abuja e Mediterranean permanecem anunciados; três regimes sem confirmação oficial."
+        "title": "UKMTO confirma novo ataque grave em Ormuz",
+        "summary": "No 142-26, um cargueiro foi atingido, incendiou e ficou à deriva; a tripulação abandonou com segurança. Outros dois ataques ocorreram em 21 set."
       },
       {
         "category": "MERCADO",
-        "title": "Spot tanker segue excepcional; VLSFO diverge entre hubs",
-        "summary": "Baltic W38 permanece como último consolidado: TD3C em WS1.140. VLSFO em 23 set.: Singapura US$858,50/t, Rotterdam US$697/t, Fujairah US$994/t e Houston US$749,50/t."
+        "title": "W39 indica correção, mas mercado tanker segue excepcional",
+        "summary": "A narrativa Fearnleys W39 aponta acomodação após picos anteriores. Valores numéricos consolidados de TC/spot continuam identificados como W38; VLSFO foi atualizado nos quatro hubs."
+      },
+      {
+        "category": "PSC",
+        "title": "Quatro CICs Cargo Securing seguem ativas",
+        "summary": "Paris, Tokyo, Viña del Mar e Black Sea continuam ativos; Abuja e Mediterranean anunciados; três regimes sem confirmação oficial e USCG nacional contínuo."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -1781,19 +1781,19 @@
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Avisos 701–703 emitidos em 22 set. para a costa e área oceânica do Sudeste",
+      "scope": "Consulta em 25 set.; avisos 701/703 exibidos com validade encerrada às 0600Z",
       "typeLabel": "Oficial"
     },
     {
       "name": "NHC / NOAA",
       "url": "https://www.nhc.noaa.gov/",
-      "scope": "Furacões Polo e Odalys em 23 set.",
+      "scope": "Furacões Polo e Odalys em 25 set.",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Baixa com vento de força de furacão no Atlântico Norte em 23 set.",
+      "scope": "Storm warning no Atlântico Norte em 25 set.",
       "typeLabel": "Oficial"
     },
     {
@@ -1810,8 +1810,8 @@
     },
     {
       "name": "Fearnleys / Fearnpulse",
-      "url": "https://www.hellenicshippingnews.com/wp-content/uploads/2026/09/Fearnleys-Weekly-Report-_-Fearnpulse_-1.pdf",
-      "scope": "Time-charter e narrativa tanker W38",
+      "url": "https://new.fearnpulse.com/fearnleys-weekly-report",
+      "scope": "Narrativa tanker W39; números TC anteriores mantidos como W38",
       "typeLabel": "Indústria"
     },
     {
@@ -1829,7 +1829,7 @@
     {
       "name": "Ship & Bunker",
       "url": "https://shipandbunker.com/prices",
-      "scope": "Preços indicativos VLSFO consultados em 23 set.",
+      "scope": "Preços indicativos VLSFO do fechamento de 24 set., consultados em 25 set.",
       "typeLabel": "Indústria"
     },
     {
@@ -1897,6 +1897,24 @@
       "url": "https://globalscope.io",
       "scope": "Acesso externo ao simulador; não usado no radar",
       "typeLabel": "Link externo"
+    },
+    {
+      "name": "UKMTO — incidentes recentes",
+      "url": "https://www.ukmto.org/",
+      "scope": "Warnings 140-26, 141-26 e 142-26 em Ormuz",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "Windward — análise pública",
+      "url": "https://windward.ai/blog/ship-to-ship-relays-are-moving-cargo-across-hormuz-in-two-stages/",
+      "scope": "Padrão STS em duas etapas; análise atribuída e distinção entre corroborado e inferido",
+      "typeLabel": "Indústria / complementar"
+    },
+    {
+      "name": "Dryad Global — análise pública",
+      "url": "https://channel16.dryadglobal.com/saudi-arabias-east-west-pipeline-is-restarting.-when-will-yanbu-be-a-reliable-export-route",
+      "scope": "Reinício parcial do East–West Pipeline e confiabilidade ainda não comprovada de Yanbu",
+      "typeLabel": "Indústria / complementar"
     }
   ],
   "updatePolicy": "Atualização programada às segundas, quartas e sextas, 07:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. PSC, Petrobras, Transpetro e regras ambientais também mudam quando houver publicação oficial relevante. NautoShark, Windy e MarineTraffic permanecem acessos externos; dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. SCOPE permanece somente como link externo; dados legados exigidos pelo schema não alimentam a interface nem o briefing atual. Contagens AIS públicas são identificadas como observações preliminares, não como série oficial de fluxo energético.",
