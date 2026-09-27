@@ -92,7 +92,8 @@ async function main() {
   const temp = new URL('../site/data/latest.json.tmp', import.meta.url);
   await writeFile(temp, JSON.stringify(next, null, 2) + '\n');
   await rename(temp, file);
-  console.log(`VesselAPI atualizada; cota restante: ${result.remaining ?? 'não informada'}.`);
+  const p = next.vesselApiPosition.lastKnown;
+  console.log(`VesselAPI validada: UTC=${p.dateTime}; lat=${p.latitude}; lon=${p.longitude}; histórico=${next.vesselApiPosition.history.length}; cota restante=${result.remaining ?? 'não informada'}.`);
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main().catch(error => {
   console.error(error.message);

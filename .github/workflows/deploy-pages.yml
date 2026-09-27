@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: ["main"]
   workflow_dispatch:
+    inputs:
+      fetch_vesselapi:
+        description: 'Consume one extra terrestrial AIS request (explicit authorization required)'
+        type: boolean
+        default: false
+        required: false
   schedule:
     - cron: "21 3,9,15,21 * * *"
 
@@ -28,11 +34,11 @@ jobs:
           node-version: '22'
       - name: Test VesselAPI integration
         run: node --test scripts/update-ais.test.mjs
-      # Only this scheduled job calls VesselAPI: four cron slots per day.
-      # Email updates, manual deploys and reruns never consume API credits.
+      # Four scheduled slots. Manual collection is opt-in; reruns never consume credits.
+      # The exact push message below enables the one-off test authorized on 2026-09-27.
       - name: Fetch Abdias terrestrial AIS position
         continue-on-error: true
-        if: github.event_name == 'schedule' && github.run_attempt == 1 && github.ref == 'refs/heads/main'
+        if: github.run_attempt == 1 && github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch_vesselapi) || (github.event_name == 'push' && github.event.head_commit.message == 'Validate authorized VesselAPI collection 2026-09-27'))
         env:
           VESSELAPI_API_KEY: ${{ secrets.VESSELAPI_API_KEY }}
         run: node scripts/update-ais.mjs
@@ -43,7 +49,7 @@ jobs:
       - name: Build reusable command summary
         run: node scripts/build-command-summary.mjs
       - name: Persist VesselAPI position for every portal
-        if: github.event_name == 'schedule' && github.run_attempt == 1 && github.ref == 'refs/heads/main'
+        if: github.run_attempt == 1 && github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch_vesselapi) || (github.event_name == 'push' && github.event.head_commit.message == 'Validate authorized VesselAPI collection 2026-09-27'))
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
