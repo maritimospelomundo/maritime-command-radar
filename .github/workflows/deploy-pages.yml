@@ -35,10 +35,9 @@ jobs:
       - name: Test VesselAPI integration
         run: node --test scripts/update-ais.test.mjs
       # Four scheduled slots. Manual collection is opt-in; reruns never consume credits.
-      # The exact push message below enables the one-off test authorized on 2026-09-27.
       - name: Fetch Abdias terrestrial AIS position
         continue-on-error: true
-        if: github.run_attempt == 1 && github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch_vesselapi) || (github.event_name == 'push' && github.event.head_commit.message == 'Validate authorized VesselAPI collection 2026-09-27'))
+        if: github.run_attempt == 1 && github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch_vesselapi))
         env:
           VESSELAPI_API_KEY: ${{ secrets.VESSELAPI_API_KEY }}
         run: node scripts/update-ais.mjs
@@ -49,7 +48,7 @@ jobs:
       - name: Build reusable command summary
         run: node scripts/build-command-summary.mjs
       - name: Persist VesselAPI position for every portal
-        if: github.run_attempt == 1 && github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch_vesselapi) || (github.event_name == 'push' && github.event.head_commit.message == 'Validate authorized VesselAPI collection 2026-09-27'))
+        if: github.run_attempt == 1 && github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch_vesselapi))
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
