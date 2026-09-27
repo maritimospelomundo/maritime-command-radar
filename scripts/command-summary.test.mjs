@@ -21,6 +21,7 @@ test('newest valid source wins, including history and invalid points', () => {
   d.marineTrafficPosition.history = [];
   d.spotPosition.history = [];
   d.vesselApiPosition.history = [];
+  d.vesselApiPosition.lastKnown = null;
   d.marineTrafficPosition.lastKnown = {latitude:3,longitude:4,dateTime:new Date(Date.now()-10800000).toISOString()};
   d.spotPosition.history = [{latitude: 1, longitude: 2, dateTime:new Date(Date.now()-7200000).toISOString()}, {latitude:91,longitude:2,dateTime:'2100-01-01T00:00:00Z'}];
   assert.equal(buildCommandSummary(d).position.sourceLabel, 'SPOT');
