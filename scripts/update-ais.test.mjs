@@ -59,3 +59,16 @@ test('fails safely without leaking response bodies', async () => {
     await assert.rejects(fetchAis('secret', async () => ({ok: false, status, headers: {get: () => null}})));
   }
 });
+
+test('accepts the official vesselPosition envelope and preserves original AIS time', async () => {
+  const official = {vesselPosition: payload().data.position};
+  const fetched = await fetchAis('secret', async () => ({
+    ok: true, status: 200, headers: {get: () => '149'}, json: async () => official
+  }));
+  const result = applyAis(seed, fetched.payload, now);
+  assert.deepEqual(result, applyAis(seed, payload(), now));
+  assert.equal(result.vesselApiPosition.lastKnown.dateTime, '2026-09-22T11:00:00.000Z');
+  for (const extra of [{imo: 1}, {suspected_glitch: true}, {timestamp: '2026-09-23T00:00:00Z'}, {latitude: 91}]) {
+    assert.throws(() => applyAis(seed, {vesselPosition: payload(extra).data.position}, now));
+  }
+});

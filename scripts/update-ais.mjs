@@ -10,7 +10,7 @@ const timeValid = (t, now) => typeof t === 'string' && Number.isFinite(Date.pars
 const optionalNumber = (v, low, high) => Number.isFinite(Number(v)) && Number(v) >= low && Number(v) <= high ? Number(v) : null;
 const optionalText = v => typeof v === 'string' && v.trim() ? v.trim().slice(0, 100) : null;
 const sourcePosition = response => {
-  const value = response?.position ?? response?.data?.position ?? response?.data ?? response;
+  const value = response?.vesselPosition ?? response?.position ?? response?.data?.position ?? response?.data ?? response;
   return Array.isArray(value) ? value[0] : value;
 };
 const keyOf = p => [p.dateTime, p.latitude, p.longitude].join('|');
