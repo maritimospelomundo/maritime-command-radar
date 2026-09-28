@@ -1,3 +1,4 @@
+import {syncMembers,trackingLogin,trackingSession,trackingStats} from './tracking-access';
 import {shoreSchema} from './shore-schema';
 import {normalize,consolidate,prefer} from './position-policy.mjs';
 const RADAR='https://maritimospelomundo.github.io/maritime-command-radar/data/latest.json';
@@ -40,7 +41,7 @@ export default {
  const windyRead=path==='/api/position'&&['GET','OPTIONS'].includes(request.method);
  const allowed=origin===env.PAGES_ORIGIN||windyRead;
  const headers:Record<string,string>={'Cache-Control':'private, no-store','X-Robots-Tag':'noindex, nofollow','Referrer-Policy':'no-referrer','Vary':'Origin'};
- if(allowed){headers['Access-Control-Allow-Origin']=windyRead?'*':origin!;headers['Access-Control-Max-Age']='600';headers['Access-Control-Allow-Headers']='Authorization, Content-Type';headers['Access-Control-Allow-Methods']=windyRead?'GET, OPTIONS':'GET, POST, OPTIONS';}
+ if(allowed){headers['Access-Control-Allow-Origin']=windyRead?'*':origin!;headers['Access-Control-Max-Age']='600';headers['Access-Control-Allow-Headers']='Authorization, Content-Type, X-Tracking-Session';headers['Access-Control-Allow-Methods']=windyRead?'GET, OPTIONS':'GET, POST, OPTIONS';}
  const json=(data:any,status=200)=>Response.json(data,{status,headers});
  if(origin&&!allowed)return json({error:'Origem não autorizada.'},403);
  if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
@@ -53,10 +54,13 @@ export default {
    return new Response(null,{status:302,headers:{...headers,Location:target}});
   }catch{return json({error:'Atalho temporariamente indisponível.'},503)}
  }
- const scope=path==='/api/position'?'TRACK_HASH':path==='/api/shore'?'SHORE_HASH':path==='/api/import'?'SYNC_HASH':null;
+ const scope=['/api/tracking','/api/tracking/login','/api/position'].includes(path)?'TRACK_HASH':path==='/api/tracking/stats'?'SYNC_HASH':path==='/api/shore'?'SHORE_HASH':path==='/api/import'?'SYNC_HASH':null;
  if(!scope)return json({error:'Não encontrado.'},404);
  if(!await authorized(request,env[scope]))return json({error:'Link inválido ou incompleto.'},401);
  try{
+ if(path==='/api/tracking/login')return await trackingLogin(request,env,json);
+ if(path==='/api/tracking/stats'){if(request.method!=='GET')return json({error:'Método não permitido.'},405);return json(await trackingStats(env));}
+ if(path==='/api/tracking'&&!await trackingSession(request,env))return json({error:'Informe sua matrícula para acessar.'},403);
  if(path==='/api/import'){
   if(request.method!=='POST')return json({error:'Método não permitido.'},405);
   const raw=await request.text();if(raw.length>3500000)return json({error:'Limite excedido.'},413);
@@ -67,6 +71,7 @@ export default {
    await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at').bind(await shortcutId(entry.code),JSON.stringify({portal:entry.portal,key:entry.key}),new Date().toISOString()).run();
    return json({ok:true});
   }
+  if(data.trackingMembers)await syncMembers(env,data.trackingMembers,data.membersCapturedAt);
   if(data.shore){const shore=shoreSchema.parse(data.shore);await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at WHERE excluded.captured_at > publications.captured_at').bind('shore',JSON.stringify(shore),shore.capturedAt).run();}
   if(data.positions&&!Array.isArray(data.positions))return json({error:'Posições inválidas.'},400);
   const accepted=await save(env,(data.positions||[]).slice(0,5000));const sourceStatus=data.refresh===true?await sync(env):undefined;return json({ok:true,accepted,sourceStatus});
@@ -75,6 +80,7 @@ export default {
  const history=await positions(env),position=[...history].sort(prefer)[0]||null;
  const state=await env.DB.prepare('SELECT checked_at,unavailable FROM sync_state WHERE id=1').first();
  const unavailable=!state||!!state.unavailable||Date.now()-Date.parse(state.checked_at)>2*3600000;
+ if(path==='/api/tracking'){const pub=await env.DB.prepare("SELECT data FROM publications WHERE id='shore'").first();const schedule=pub?JSON.parse(pub.data).schedule:null;return json({history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),schedule:schedule?{port:schedule.port,eta:schedule.eta,nextPort:schedule.nextPort}:null,unavailable,storageUnavailable:false,checkedAt:new Date().toISOString()});}
  if(path==='/api/position')return json({history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),retentionDays:90,unavailable,storageUnavailable:false,lastSyncAt:state?.checked_at||null,checkedAt:new Date().toISOString()});
  const pub=await env.DB.prepare("SELECT data FROM publications WHERE id='shore'").first();
  if(!pub)return json({error:'Aguardando a primeira publicação do Comandante.'},503);
