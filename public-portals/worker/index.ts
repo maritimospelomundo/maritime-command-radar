@@ -33,7 +33,7 @@ async function sync(env:any){
  return sources.map((s,i)=>({source:i===0?'radar':'spot',ok:s.status==='fulfilled',...(s.status==='rejected'?{error:String(s.reason?.message||'unavailable')}:{points:s.value.length})}));
 }
 export default {
- async scheduled(_event:any,env:any,ctx:any){ctx.waitUntil(sync(env))},
+ async scheduled(_event:any,env:any,ctx:any){ctx.waitUntil(Promise.all([sync(env),env.DB.batch([env.DB.prepare('DELETE FROM tracking_visits WHERE visited_ms<?').bind(Date.now()-90*86400000),env.DB.prepare('DELETE FROM tracking_sessions WHERE expires_ms<?').bind(Date.now()),env.DB.prepare('DELETE FROM tracking_attempts WHERE expires_ms<?').bind(Date.now())])]))},
  async fetch(request:Request,env:any){
  const path=new URL(request.url).pathname;
  const origin=request.headers.get('Origin');

@@ -23,7 +23,7 @@ export async function trackingLogin(request:Request,env:any,json:any){
  const token=Array.from(crypto.getRandomValues(new Uint8Array(32)),b=>b.toString(16).padStart(2,'0')).join('');
  await env.DB.batch([
  env.DB.prepare('INSERT INTO tracking_sessions(token_hash,member_id,expires_ms) VALUES(?,?,?)').bind(await digest(token),member.id,now+12*3600000),
- env.DB.prepare('INSERT INTO tracking_visits(id,member_id,visited_ms) VALUES(?,?,?)').bind(crypto.randomUUID(),member.id,now),
+ env.DB.prepare('INSERT INTO tracking_visits(id,member_id,visited_ms,registration) VALUES(?,?,?,?)').bind(crypto.randomUUID(),member.id,now,registration),
  env.DB.prepare('DELETE FROM tracking_sessions WHERE expires_ms<?').bind(now),
  env.DB.prepare('DELETE FROM tracking_attempts WHERE expires_ms<?').bind(now),
  env.DB.prepare('DELETE FROM tracking_visits WHERE visited_ms<?').bind(now-90*86400000)]);
@@ -34,6 +34,6 @@ export async function trackingSession(request:Request,env:any){
  return !!await env.DB.prepare('SELECT s.member_id FROM tracking_sessions s JOIN tracking_members m ON m.id=s.member_id WHERE s.token_hash=? AND s.expires_ms>?').bind(await digest(token),Date.now()).first();
 }
 export async function trackingStats(env:any){
- const now=Date.now();const rows=await env.DB.prepare('SELECT member_id,COUNT(*) AS visits,MIN(visited_ms) AS first_ms,MAX(visited_ms) AS last_ms,SUM(CASE WHEN visited_ms>=? THEN 1 ELSE 0 END) AS visits_7d,SUM(CASE WHEN visited_ms>=? THEN 1 ELSE 0 END) AS visits_24h FROM tracking_visits WHERE visited_ms>=? GROUP BY member_id ORDER BY last_ms DESC').bind(now-7*86400000,now-86400000,now-90*86400000).all();
+ const now=Date.now();const rows=await env.DB.prepare('SELECT member_id,registration,COUNT(*) AS visits,MIN(visited_ms) AS first_ms,MAX(visited_ms) AS last_ms,SUM(CASE WHEN visited_ms>=? THEN 1 ELSE 0 END) AS visits_7d,SUM(CASE WHEN visited_ms>=? THEN 1 ELSE 0 END) AS visits_24h FROM tracking_visits WHERE visited_ms>=? GROUP BY member_id,registration ORDER BY last_ms DESC').bind(now-7*86400000,now-86400000,now-90*86400000).all();
  return {members:rows.results,retentionDays:90,checkedAt:new Date(now).toISOString()};
 }
