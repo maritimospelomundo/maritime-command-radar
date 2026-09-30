@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-30T10:17:00.000Z",
+  "generatedAt": "2026-09-30T10:40:21.000Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -569,7 +569,7 @@
         "label": "PREPARAR",
         "level": "critical",
         "value": "Ormuz · Warning 143-26 sob investigação",
-        "summary": "Relato tardio de navio atingido por provável projétil em 27 set., com fogo extinto e tripulação segura; manter avaliação específica, war-risk e autorização do CSO."
+        "summary": "Relato tardio de navio atingido por provável projétil na noite de 28 set., com fogo extinto e tripulação segura; manter avaliação específica, war-risk e autorização do CSO."
       }
     ],
     "modules": [
@@ -977,16 +977,16 @@
       "title": "Conflito e segurança de rota",
       "shortTitle": "Segurança",
       "icon": "▲",
-      "description": "O UKMTO publicou o Warning 143-26 em 29 de setembro, com relato tardio de evento de 27 set. classificado como atividade suspeita. Os Warnings 142-26 e 141-26 foram preservados como os dois registros anteriores.",
+      "description": "O UKMTO publicou o Warning 143-26 em 29 de setembro, com relato tardio de evento ocorrido na noite de 28 set. e classificado como atividade suspeita. Os Warnings 142-26 e 141-26 foram preservados como os dois registros anteriores.",
       "items": [
         {
           "id": "ukmto-143-26",
-          "date": "2026-09-27",
+          "date": "2026-09-28",
           "region": "Estreito de Ormuz",
           "level": "critical",
           "headline": "Relato tardio de provável projétil sob investigação",
           "summary": "O UKMTO recebeu relato de terceiro de que um navio foi atingido por provável projétil durante o trânsito; o fogo foi extinto, o navio permaneceu em viagem e a tripulação estava segura.",
-          "details": "Warning 143-26, publicado em 29 setembro sobre evento de 27 setembro. O UKMTO classificou o caso como atividade suspeita; causa e atribuição permanecem sob investigação.",
+          "details": "Warning 143-26, publicado em 29 setembro sobre evento ocorrido na noite de 28 setembro. O UKMTO classificou o caso como atividade suspeita; causa e atribuição permanecem sob investigação.",
           "action": "Manter voyage-specific threat assessment, war-risk, prontidão de damage control, comunicação UKMTO e autorização do CSO antes de qualquer trânsito.",
           "map": {
             "x": 65.6,
@@ -1247,7 +1247,7 @@
       "trafficTrend": "abaixo da média móvel de 18 trânsitos/dia; crude segue fluindo por menos navios",
       "trafficBasis": "Kpler/Reuters: nove trânsitos visíveis de commodities em 24 set.; em série distinta, 19 tankers exportaram 33,7 milhões de barris desde 20 set. AIS desligado pode omitir movimentos; não é gross tonnage nem estatística oficial da autoridade.",
       "market": "Baltic W39 ainda mostra prêmio extremo: TD3C em WS1.157,5 e TD34 em WS797,86. Volume exportado, contagem de navios, Worldscale e TCE são métricas distintas.",
-      "geopolitics": "O Warning 143-26 acrescenta relato tardio de provável projétil em 27 setembro, com fogo extinto e tripulação segura; o UKMTO classificou o caso como atividade suspeita sob investigação. Não há redução operacional confirmada do risco.",
+      "geopolitics": "O Warning 143-26 acrescenta relato tardio de provável projétil na noite de 28 setembro, com fogo extinto e tripulação segura; o UKMTO classificou o caso como atividade suspeita sob investigação. Não há redução operacional confirmada do risco.",
       "authority": "Autoridades costeiras / UKMTO como ponto de contato de segurança",
       "reporting": "UKMTO VRS voluntário; VTS/port reporting obrigatório conforme porto e águas jurisdicionais.",
       "masterFocus": [
@@ -1937,7 +1937,7 @@
       {
         "category": "SEGURANÇA",
         "title": "Ormuz: Warning 143-26 mantém risco crítico",
-        "summary": "Relato tardio de provável projétil em 27 set., com fogo extinto e tripulação segura. O UKMTO classificou o caso como atividade suspeita sob investigação."
+        "summary": "Relato tardio de provável projétil na noite de 28 set., com fogo extinto e tripulação segura. O UKMTO classificou o caso como atividade suspeita sob investigação."
       },
       {
         "category": "MERCADO",
