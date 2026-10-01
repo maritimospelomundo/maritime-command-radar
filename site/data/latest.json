@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-30T10:40:21.000Z",
+  "generatedAt": "2026-10-01T12:36:27.873Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -1013,8 +1013,27 @@
       "title": "Conflito e segurança de rota",
       "shortTitle": "Segurança",
       "icon": "▲",
-      "description": "O UKMTO publicou o Warning 143-26 em 29 de setembro, com relato tardio de evento ocorrido na noite de 28 set. e classificado como atividade suspeita. Os Warnings 142-26 e 141-26 foram preservados como os dois registros anteriores.",
+      "description": "Análise ISC de 30/09/2026 fornecida pelo Comandante, seguida dos avisos UKMTO existentes. Datas originais e atribuição preservadas; o relatório não constitui nova verificação independente dos eventos.",
       "items": [
+        {
+          "id": "isc-oriente-medio-2026-09-30",
+          "date": "2026-09-30",
+          "region": "Ormuz / Bab el-Mandeb · Petrobras e Transpetro",
+          "level": "high",
+          "headline": "ISC: risco elevado e exceções distintas para Transpetro",
+          "summary": "Relatório de 30/09 fornecido pelo Comandante avalia pressão simultânea em Ormuz e Bab el-Mandeb, com tendência de agravamento moderado. Incorporação documental, sem nova confirmação independente.",
+          "details": "Para VCP/TCP e Transpetro: Sidi Kerir, Port Saïd e Ain Sukhna via Suez na entrada e saída; Aliağa e Sikka. Apenas VCP/TCP, excluída Transpetro: Yanbu via Suez na entrada e saída; Ras Markaz, Duqm, Sohar e Fujairah. Estagnação é o cenário geral mais provável; a janela de 48 h refere-se a 30/09–02/10, não à data de consulta. Ver análise vinculada para áreas, cenários e impactos.",
+          "action": "Aplicar a distinção de frota do relatório; confirmar vigência e autorização com companhia/ISC antes de escala ou trânsito. Exceção não equivale a autorização automática.",
+          "map": {
+            "x": 65.6,
+            "y": 35.4,
+            "label": "ISC · 30/09"
+          },
+          "source": {
+            "name": "Petrobras ISC · relatório fornecido · 30/09/2026",
+            "url": "https://maritimospelomundo.github.io/maritime-command-radar/analises/oriente-medio-2026-09-30.html"
+          }
+        },
         {
           "id": "ukmto-143-26",
           "date": "2026-09-28",
@@ -1267,7 +1286,8 @@
       "masterFocus": [
         "Não confundir canal operando com rota integralmente segura: revalidar war-risk, CSO e ameaça até Bab-el-Mandeb.",
         "Confirmar calado, SCNT, rebocadores, luzes, amarração e readiness para falha de máquinas.",
-        "Planejar squat, bank effect, interação e ordens do prático/controle sem retirar o comando do Master."
+        "Planejar squat, bank effect, interação e ordens do prático/controle sem retirar o comando do Master.",
+        "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
         "name": "JMIC Update 096 / SCA",
@@ -1289,7 +1309,8 @@
       "masterFocus": [
         "Manter voyage-specific threat assessment, war-risk e autoridade de decisão alinhada ao CSO; o Warning 143-26 confirma risco residual crítico sem atribuição conclusiva.",
         "Usar navegação redundante contra spoofing/jamming e comparar GNSS, radar, visual, AIS, eco-sonda e DR.",
-        "Em STS e vetting, examinar contrapartes e histórico completo de encontros; associação ou geometria não provam transferência de carga."
+        "Em STS e vetting, examinar contrapartes e histórico completo de encontros; associação ou geometria não provam transferência de carga.",
+        "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
         "name": "UKMTO Warning 143-26 · 29 set. 2026",
@@ -1333,7 +1354,8 @@
       "masterFocus": [
         "Exigir voyage-specific threat assessment, autorização da companhia e medidas BMP; retomada de loadings em Yanbu não constitui corredor protegido.",
         "Diferenciar reinício técnico do oleoduto, throughput sustentado e carregamentos confirmados antes de assumir normalização comercial.",
-        "Revisar citadel, SSAS, drills, damage control, lookout, velocidade e comunicações UKMTO/MSCIO."
+        "Revisar citadel, SSAS, drills, damage control, lookout, velocidade e comunicações UKMTO/MSCIO.",
+        "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
         "name": "Reuters · Yanbu · 29 set. 2026",
@@ -1852,6 +1874,16 @@
     ],
     "developments": [
       {
+        "date": "2026-09-30",
+        "title": "ISC: restrições de escala e pressão sobre fretes e seguros",
+        "summary": "Análise fornecida prevê atrasos, alterações de rota/espera e restrições temporárias de terminais. Estagnação é o cenário geral mais provável; escalada e distensão permanecem cenários, não fatos confirmados.",
+        "maritimeImpact": "Transpetro: Yanbu, Ras Markaz, Duqm, Sohar e Fujairah não integram as exceções do relatório de 30/09. Conferir tabela completa e instrução vigente da companhia.",
+        "source": {
+          "name": "Petrobras ISC · relatório fornecido · 30/09/2026",
+          "url": "https://maritimospelomundo.github.io/maritime-command-radar/analises/oriente-medio-2026-09-30.html"
+        }
+      },
+      {
         "date": "2026-09-29",
         "title": "Petrobras fecha contrato de 22 anos para 0,8 Mtpa de GNL",
         "summary": "A Cheniere informou acordo para vender à Petrobras cerca de 0,8 milhão de toneladas por ano de GNL, em base FOB, por 22 anos.",
@@ -1952,13 +1984,18 @@
     }
   ],
   "briefing": {
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
         "title": "VesselAPI é a fonte válida mais recente",
         "summary": "Ponto consolidado de 30 setembro, 0927Z: 23º07,91' S · 044º28,79' W. MarineTraffic é de 28 set., 0313Z; SPOT segue sem ponto válido."
+      },
+      {
+        "category": "SEGURANÇA",
+        "title": "ISC 30/09: exceções Transpetro são mais restritas",
+        "summary": "Relatório fornecido recomenda evitar portos do Oriente Médio, com exceções específicas. Yanbu, Ras Markaz, Duqm, Sohar e Fujairah não são exceções para Transpetro. Detalhes no alerta ISC e na fonte vinculada; confirmar instrução vigente."
       },
       {
         "category": "COSTA BR",
@@ -2168,6 +2205,12 @@
       "url": "https://www.reuters.com/business/energy/cheniere-signs-22-year-lng-supply-deal-with-petrobras-2026-09-29/",
       "scope": "Contrato de 22 anos para cerca de 0,8 Mtpa de GNL",
       "typeLabel": "Imprensa / complementar"
+    },
+    {
+      "name": "Petrobras ISC · relatório fornecido · 30/09/2026",
+      "url": "https://maritimospelomundo.github.io/maritime-command-radar/analises/oriente-medio-2026-09-30.html",
+      "scope": "Relatório Especial ISC/INTL/MAS de 30/09/2026, 3 páginas; síntese documental e exceções por frota.",
+      "typeLabel": "Documento fornecido"
     }
   ],
   "updatePolicy": "Atualização programada às segundas, quartas e sextas, 07:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. PSC, Petrobras, Transpetro e regras ambientais também mudam quando houver publicação oficial relevante. NautoShark, Windy e MarineTraffic permanecem acessos externos; dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. SCOPE permanece somente como link externo; dados legados exigidos pelo schema não alimentam a interface nem o briefing atual. Contagens AIS públicas são identificadas como observações preliminares, não como série oficial de fluxo energético.",
