@@ -402,7 +402,7 @@
   "vesselApiPosition": {
     "label": "VesselAPI",
     "provider": "VesselAPI terrestrial AIS",
-    "checkedAt": "2026-10-02T05:46:07.235Z",
+    "checkedAt": "2026-10-02T12:44:00.665Z",
     "refreshIntervalMinutes": 360,
     "history": [
       {
@@ -605,7 +605,7 @@
       "longitude": -44.481,
       "eventType": "Position Report",
       "sourceType": "terrestrial",
-      "importedAt": "2026-10-02T05:46:07.235Z",
+      "importedAt": "2026-10-02T12:44:00.665Z",
       "sog": 0.1,
       "cog": 220.1,
       "heading": 146
@@ -1276,8 +1276,8 @@
         "url": "https://www.mpa.gov.sg/maritime-singapore/what-maritime-singapore-offers/global-hub-port"
       }
     },
-  {
-    "id": "suez",
+    {
+      "id": "suez",
       "name": "Canal de Suez",
       "region": "Egito · Mediterrâneo ↔ Mar Vermelho",
       "risk": "high",
@@ -1299,8 +1299,8 @@
         "url": "https://www.ukmto.org/-/media/ukmto/products/update-101-jmic-advisory-note-01-october.pdf?rev=806c994dad3f40068dca1cc93f081c07"
       }
     },
-  {
-    "id": "hormuz",
+    {
+      "id": "hormuz",
       "name": "Estreito de Ormuz",
       "region": "Omã / Irã · Golfo Pérsico",
       "risk": "critical",
@@ -1344,8 +1344,8 @@
         "url": "https://www.imo.org/en/knowledgecentre/indexofimoresolutions/pages/msc-2010-13.aspx"
       }
     },
-  {
-    "id": "bab-el-mandeb",
+    {
+      "id": "bab-el-mandeb",
       "name": "Bab-el-Mandeb / Chifre da África",
       "region": "Iêmen / Djibuti / Eritreia",
       "risk": "high",
