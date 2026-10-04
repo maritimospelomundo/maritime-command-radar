@@ -31,15 +31,15 @@
       "Any validated MarineTraffic notification with observed UTC time and position"
     ],
     "lastKnown": {
-      "dateTime": "2026-10-02T03:09:00Z",
-      "unixTime": 1790910540,
-      "latitude": -23.13233333333333,
-      "longitude": -44.48133333333333,
+      "dateTime": "2026-10-04T03:10:00Z",
+      "unixTime": 1791083400,
+      "latitude": -23.0615,
+      "longitude": -44.22933333333333,
       "eventType": "Position Report",
       "sourceType": "terrestrial",
       "positionSource": "TERR-AIS",
       "sog": 0,
-      "cog": 283,
+      "cog": 309,
       "source": "MarineTraffic"
     },
     "checkedAt": "2026-09-28T10:35:18.763Z",
@@ -407,6 +407,17 @@
         "positionSource": "TERR-AIS",
         "sog": 0,
         "cog": 283
+      },
+      {
+        "dateTime": "2026-10-04T03:10:00Z",
+        "unixTime": 1791083400,
+        "latitude": -23.0615,
+        "longitude": -44.22933333333333,
+        "eventType": "Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0,
+        "cog": 309
       }
     ]
   },
