@@ -1,35 +1,6 @@
 {
   "entries": [
     {
-      "day": "2026-10-01",
-      "slot": 0,
-      "at": "2026-10-01T23:47:02.000Z",
-      "reason": "Conservative rollout-day reservation"
-    },
-    {
-      "day": "2026-10-01",
-      "slot": 1,
-      "at": "2026-10-01T23:47:02.000Z",
-      "reason": "Conservative rollout-day reservation"
-    },
-    {
-      "day": "2026-10-01",
-      "slot": 2,
-      "at": "2026-10-01T23:47:02.000Z",
-      "reason": "Conservative rollout-day reservation"
-    },
-    {
-      "day": "2026-10-01",
-      "slot": 3,
-      "at": "2026-10-01T23:47:02.000Z",
-      "reason": "Conservative rollout-day reservation"
-    },
-    {
-      "day": "2026-10-02",
-      "slot": 0,
-      "at": "2026-10-02T05:46:05.659Z"
-    },
-    {
       "day": "2026-10-02",
       "slot": 1,
       "at": "2026-10-02T12:43:58.890Z"
@@ -148,6 +119,11 @@
       "day": "2026-10-08",
       "slot": 3,
       "at": "2026-10-08T22:08:14.628Z"
+    },
+    {
+      "day": "2026-10-09",
+      "slot": 1,
+      "at": "2026-10-09T09:10:56.520Z"
     }
   ]
 }
