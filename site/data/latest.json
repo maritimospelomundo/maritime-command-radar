@@ -441,6 +441,17 @@
         "cog": 157
       },
       {
+        "dateTime": "2026-10-09T03:13:00Z",
+        "latitude": -23.106833333333334,
+        "longitude": -44.420833333333334,
+        "eventType": "Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0,
+        "cog": 217,
+        "unixTime": 1791515580
+      },
+      {
         "dateTime": "2026-10-10T15:13:00Z",
         "latitude": -23.106333333333332,
         "longitude": -44.42,
