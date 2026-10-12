@@ -3,12 +3,13 @@ import {useEffect,useRef,useState} from 'react';
 import type {Position} from './positions';
 import {coordinate} from './positions';
 import {trackDirection} from './track-view';
-// Leaflet is served locally; only map tiles come from OpenStreetMap.
+// Leaflet is served locally; the light basemap is supplied by Mapbox.
+import {mapboxTiles,mapboxOptions} from '../mapbox';
 import tanker from './tanker.png';
 function loadLeaflet(){return import('leaflet').then(m=>m.default||m)}
-export default function TrackMap({position,history,allHistory,days}:{position:Position;history:Position[];allHistory:Position[];days:number}){
+export default function TrackMap({position,history,allHistory,days,mapboxToken}:{mapboxToken?:string;position:Position;history:Position[];allHistory:Position[];days:number}){
  const host=useRef<HTMLDivElement>(null),map=useRef<any>(null),layer=useRef<any>(null),library=useRef<any>(null),fitted=useRef<number|null>(null),bounds=useRef<any>(null);const [error,setError]=useState(false),[ready,setReady]=useState(false);
- useEffect(()=>{let active=true;loadLeaflet().then(L=>{if(!active||!host.current)return;library.current=L;map.current=L.map(host.current,{worldCopyJump:true}).setView([position.latitude,position.longitude],5);L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map.current);layer.current=L.layerGroup().addTo(map.current);setReady(true);}).catch(()=>setError(true));return()=>{active=false;map.current?.remove();map.current=null;};},[]);
+ useEffect(()=>{setReady(false);fitted.current=null;let active=true;loadLeaflet().then(L=>{if(!active||!host.current)return;library.current=L;map.current=L.map(host.current,{worldCopyJump:true}).setView([position.latitude,position.longitude],5);mapboxToken?.startsWith('pk.')?L.tileLayer(mapboxTiles(mapboxToken),mapboxOptions).on('tileerror',()=>{if(active)setError(true)}).on('tileload',()=>{if(active)setError(false)}).addTo(map.current):setError(true);layer.current=L.layerGroup().addTo(map.current);setReady(true);}).catch(()=>setError(true));return()=>{active=false;map.current?.remove();map.current=null;};},[mapboxToken]);
  useEffect(()=>{if(!ready)return;const L=library.current,group=layer.current;group.clearLayers();const unique=new Map<string,Position>();for(const p of history)unique.set(`${p.dateTime}:${p.latitude}:${p.longitude}`,p);const points=[...unique.values()].sort((a,b)=>Date.parse(a.dateTime)-Date.parse(b.dateTime));const coords:number[][]=[];
  for(let i=0;i<points.length;i++){const p=points[i];let lon=p.longitude;if(i){while(lon-coords[i-1][1]>180)lon-=360;while(lon-coords[i-1][1]<-180)lon+=360;}coords.push([p.latitude,lon]);}
  function popup(p:Position){const el=document.createElement('div');el.textContent=`${p.source} · ${new Date(p.dateTime).toLocaleString('pt-BR',{timeZone:'UTC'})} UTC · ${coordinate(p.latitude,true)} / ${coordinate(p.longitude,false)}`;return el;}
@@ -22,5 +23,5 @@ export default function TrackMap({position,history,allHistory,days}:{position:Po
 
  bounds.current=L.latLngBounds([...coords,last]);if(fitted.current!==days){map.current.fitBounds(bounds.current,{padding:[45,45],maxZoom:7});fitted.current=days;}
  },[ready,position,history,allHistory,days]);
- return <><div ref={host} className="track-map" aria-label={`Mapa interativo da rota dos últimos ${days} dias`}/>{error&&<p className="notice">Mapa indisponível. As coordenadas continuam disponíveis abaixo.</p>}{ready&&<button className="fit-route" onClick={()=>map.current.fitBounds(bounds.current,{padding:[45,45],maxZoom:7})}>Enquadrar rota</button>}</>;
+ return <><div ref={host} className="track-map" aria-label={`Mapa interativo da rota dos últimos ${days} dias`}/>{error&&<p className="notice">Base Mapbox indisponível. As coordenadas continuam disponíveis abaixo.</p>}{ready&&<button className="fit-route" onClick={()=>map.current.fitBounds(bounds.current,{padding:[45,45],maxZoom:7})}>Enquadrar rota</button>}</>;
 }

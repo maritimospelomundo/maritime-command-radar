@@ -71,6 +71,10 @@ export default {
    await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at').bind(await shortcutId(entry.code),JSON.stringify({portal:entry.portal,key:entry.key}),new Date().toISOString()).run();
    return json({ok:true});
   }
+  if(data.mapConfig){
+   if(typeof data.mapConfig.token!=='string'||!/^pk\.[A-Za-z0-9_.-]{20,500}$/.test(data.mapConfig.token))return json({error:'Configuração de mapa inválida.'},400);
+   await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at').bind('map-config',JSON.stringify({token:data.mapConfig.token}),new Date().toISOString()).run();
+  }
   if(data.trackingMembers)await syncMembers(env,data.trackingMembers,data.membersCapturedAt);
   if(data.shore){const shore=shoreSchema.parse(data.shore);await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at WHERE excluded.captured_at > publications.captured_at').bind('shore',JSON.stringify(shore),shore.capturedAt).run();}
   if(data.positions&&!Array.isArray(data.positions))return json({error:'Posições inválidas.'},400);
@@ -80,11 +84,13 @@ export default {
  const history=await positions(env),position=[...history].sort(prefer)[0]||null;
  const state=await env.DB.prepare('SELECT checked_at,unavailable FROM sync_state WHERE id=1').first();
  const unavailable=!state||!!state.unavailable||Date.now()-Date.parse(state.checked_at)>2*3600000;
- if(path==='/api/tracking'){const pub=await env.DB.prepare("SELECT data FROM publications WHERE id='shore'").first();const schedule=pub?JSON.parse(pub.data).schedule:null;return json({history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),schedule:schedule?{port:schedule.port,eta:schedule.eta,nextPort:schedule.nextPort}:null,unavailable,storageUnavailable:false,checkedAt:new Date().toISOString()});}
+ const mapConfig=path==='/api/tracking'||path==='/api/shore'?await env.DB.prepare("SELECT data FROM publications WHERE id='map-config'").first():null;
+ const mapboxToken=mapConfig?JSON.parse(mapConfig.data).token:null;
+ if(path==='/api/tracking'){const pub=await env.DB.prepare("SELECT data FROM publications WHERE id='shore'").first();const schedule=pub?JSON.parse(pub.data).schedule:null;return json({mapboxToken,history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),schedule:schedule?{port:schedule.port,eta:schedule.eta,nextPort:schedule.nextPort}:null,unavailable,storageUnavailable:false,checkedAt:new Date().toISOString()});}
  if(path==='/api/position')return json({history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),retentionDays:90,unavailable,storageUnavailable:false,lastSyncAt:state?.checked_at||null,checkedAt:new Date().toISOString()});
  const pub=await env.DB.prepare("SELECT data FROM publications WHERE id='shore'").first();
  if(!pub)return json({error:'Aguardando a primeira publicação do Comandante.'},503);
- return json({data:JSON.parse(pub.data),positions:history.filter(p=>Date.parse(p.dateTime)>=Date.now()-15*86400000),position,positionUnavailable:unavailable,checkedAt:new Date().toISOString()});
+ return json({mapboxToken,data:JSON.parse(pub.data),positions:history.filter(p=>Date.parse(p.dateTime)>=Date.now()-15*86400000),position,positionUnavailable:unavailable,checkedAt:new Date().toISOString()});
  }catch{return json({error:'Consulta ou atualização indisponível.'},503)}
  }
 };
