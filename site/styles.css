@@ -434,3 +434,28 @@ body.command-mode .command-panel {max-height:none;overflow:visible;}
 body.command-mode .context-freshness {display:none;}
 
 .navarea-panel{background:var(--panel-2);border:1px solid var(--line-soft);padding:16px;margin:14px 0;border-radius:10px;color:var(--text)}.navarea-panel h2{font-size:16px;margin:0 0 10px}.navarea-panel p{color:var(--muted);font-size:12px;line-height:1.5}.navarea-panel details{padding:10px 0;border-top:1px solid var(--line-soft)}.navarea-panel summary{cursor:pointer;font-size:13px}.navarea-panel a{font-size:13px}.navarea-panel pre{font-size:12px;overflow-wrap:anywhere}
+
+/* NAVAREA compact summary; metadata and full texts remain expandable. */
+#overview.command-screen{grid-template-rows:auto auto auto auto auto;align-content:start}
+#navarea-proximity.navarea-panel{height:auto;min-height:0;align-self:start;padding:10px 12px;margin:6px 0}
+.navarea-header{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.navarea-panel .navarea-header h2{font-size:14px;margin:0}
+.navarea-panel .navarea-route-link{font-size:12px;color:var(--cyan);white-space:nowrap}
+.navarea-panel .navarea-meta{margin:5px 0 8px;font-size:11px;line-height:1.35}
+.navarea-priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.navarea-panel .navarea-item{min-width:0;padding:0;border:1px solid var(--line-soft);border-radius:6px;background:var(--panel)}
+.navarea-panel .navarea-item>summary{display:flex;align-items:center;gap:8px;padding:8px;list-style:none;font-size:12px;min-width:0}
+.navarea-item>summary::-webkit-details-marker{display:none}
+.navarea-code{flex-shrink:0;font-weight:600}
+.navarea-category{min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
+.navarea-distance{flex-shrink:0;color:var(--cyan);font-size:11px}
+.navarea-item>summary::after{content:'+';color:var(--muted)}
+.navarea-item[open]>summary::after{content:'−'}
+.navarea-panel .navarea-item>p,.navarea-panel .navarea-item>details{margin:8px;padding:0}
+.navarea-panel .navarea-item>a{display:inline-block;margin:0 8px 8px;color:var(--cyan)}
+.navarea-panel pre{white-space:pre-wrap;overflow-wrap:anywhere}
+.navarea-panel .navarea-more{margin-top:6px;padding:6px 0 0}
+.navarea-panel .navarea-more>summary{font-size:11px;color:var(--muted)}
+.navarea-panel .navarea-more>.navarea-item{margin:6px 0}
+.navarea-panel .navarea-status{margin:6px 0;color:var(--yellow)}
+@media(max-width:760px){.navarea-priority-grid{grid-template-columns:1fr}.navarea-panel .navarea-item>summary{padding:7px 8px}.navarea-panel .navarea-header h2{font-size:13px}}
