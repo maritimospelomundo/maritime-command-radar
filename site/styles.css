@@ -432,3 +432,5 @@ body.command-mode .local-priority-card {align-items:start;}
 body.command-mode .command-screen {height:auto;max-height:none;}
 body.command-mode .command-panel {max-height:none;overflow:visible;}
 body.command-mode .context-freshness {display:none;}
+
+.navarea-panel{background:var(--panel-2);border:1px solid var(--line-soft);padding:16px;margin:14px 0;border-radius:10px;color:var(--text)}.navarea-panel h2{font-size:16px;margin:0 0 10px}.navarea-panel p{color:var(--muted);font-size:12px;line-height:1.5}.navarea-panel details{padding:10px 0;border-top:1px solid var(--line-soft)}.navarea-panel summary{cursor:pointer;font-size:13px}.navarea-panel a{font-size:13px}.navarea-panel pre{font-size:12px;overflow-wrap:anywhere}

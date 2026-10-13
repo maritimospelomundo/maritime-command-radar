@@ -1,0 +1,2635 @@
+{
+  "records": [
+    {
+      "key": "V:0639:2026",
+      "navarea": "V",
+      "number": "0639",
+      "year": 2026,
+      "original": "TOW\r\nTUG C TORMENTA  TOWING EQUIPEMORIM 30 \r\nBETWEEN 26-51.79S 048-42.12W\r\n19-51.98S 040-04.19W\r\nLENGTH OF TOW 118 METERS\r\nSPEED 3 KNOTS\r\nCANCEL THIS WARNING 191000 UTC OCT 26.",
+      "summaryPt": "REBOQUE · REBOCADOR C TORMENTA  REBOCANDO EQUIPEMORIM 30 · ENTRE 26-51.79S 048-42.12W · 19-51.98S 040-04.19W",
+      "region": "TOW",
+      "category": "Reboque",
+      "vessels": "TUG C TORMENTA  TOWING EQUIPEMORIM 30",
+      "coordinates": [
+        {
+          "lat": -26.863166666666668,
+          "lon": -48.702
+        },
+        {
+          "lat": -19.866333333333333,
+          "lon": -40.069833333333335
+        }
+      ],
+      "geometry": null,
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-10-19T10:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Extremos de reboque; posição atual e derrota não confirmadas",
+        "Geometria exige conferência"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "REBOQUE\r\nREBOCADOR C TORMENTA  REBOCANDO EQUIPEMORIM 30\r\nENTRE 26-51.79S 048-42.12W\r\n19-51.98S 040-04.19W\r\nCOMPRIMENTO DO REBOQUE 118 METROS\r\nVELOC 3 NOS\r\nCANCELAR ESTE AVISO 191000 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0638:2026",
+      "navarea": "V",
+      "number": "0638",
+      "year": 2026,
+      "original": "SOUTH OF SANTOS\r\nCHART 21070 (INT 2008)\r\nSHIP TO SHIP OPERATION\r\n120900 UTC OCT 26 TO 150900 UTC OCT 26\r\nHEDDA KNUTSEN, EAGLE VALENCE AND SAVEIROS GAIVOTA \r\nSHIP TO SHIP AREA OF SANTOS OIL FIELD \r\nCANCEL THIS WARNING 161000 UTC OCT 26.",
+      "summaryPt": "SUL DE SANTOS · CARTA 21070 (INT 2008) · OPERACAO SHIP TO SHIP · 120900 UTC OUT 26 A 150900 UTC OUT 26",
+      "region": "SOUTH OF SANTOS",
+      "category": "Operação STS",
+      "vessels": "HEDDA KNUTSEN, EAGLE VALENCE AND SAVEIROS GAIVOTA",
+      "coordinates": [],
+      "geometry": null,
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-12T09:00:00.000Z",
+        "endUtc": "2026-10-15T09:00:00.000Z",
+        "dateText": "120900 UTC OCT 26 TO 150900 UTC OCT 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-10-16T10:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Sem coordenadas; conferir região e texto"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUL DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nOPERACAO SHIP TO SHIP\r\n120900 UTC OUT 26 A 150900 UTC OUT 26\r\nHEDDA KNUTSEN, EAGLE VALENCE E SAVEIROS GAIVOTA\r\nAREA SHIP TO SHIP DA BACIA DE SANTOS \r\nCANCELAR ESTE AVISO 161000 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0637:2026",
+      "navarea": "V",
+      "number": "0637",
+      "year": 2026,
+      "original": "SOUTH OF SANTOS\r\nCHART 21070 (INT 2008)\r\nSHIP TO SHIP OPERATION\r\n110900 UTC OCT 26 TO 140900 UTC OCT 26\r\nEAGLE PETROLINA, EAGLE VALENCE AND SAVEIROS GAIVOTA \r\nSHIP TO SHIP AREA OF SANTOS OIL FIELD \r\nCANCEL THIS WARNING 150900 UTC OCT 26.",
+      "summaryPt": "SUL DE SANTOS · CARTA 21070 (INT 2008) · OPERACAO SHIP TO SHIP · 110900 UTC OUT 26 A 140900 UTC OUT 26",
+      "region": "SOUTH OF SANTOS",
+      "category": "Operação STS",
+      "vessels": "EAGLE PETROLINA, EAGLE VALENCE AND SAVEIROS GAIVOTA",
+      "coordinates": [],
+      "geometry": null,
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-11T09:00:00.000Z",
+        "endUtc": "2026-10-14T09:00:00.000Z",
+        "dateText": "110900 UTC OCT 26 TO 140900 UTC OCT 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-10-15T09:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Sem coordenadas; conferir região e texto"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUL DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nOPERACAO SHIP TO SHIP\r\n110900 UTC OUT 26 A 140900 UTC OUT 26\r\nEAGLE PETROLINA, EAGLE VALENCE E SAVEIROS GAIVOTA\r\nAREA SHIP TO SHIP DA BACIA DE SANTOS \r\nCANCELAR ESTE AVISO 150900 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0636:2026",
+      "navarea": "V",
+      "number": "0636",
+      "year": 2026,
+      "original": "SOUTHEAST OF CABO FRIO\r\nCHART 21070 (INT 2008)\r\nHAZARDOUS OPERATIONS - AREA DANGEROUS TO NAVIGATION\r\n14 OCT 26 TO 16 OCT 26\r\n08:00 TO 21:00\r\nWITHIN 10.0 MILES OF 25-06.00S 041-13.00W\r\nCANCEL THIS WARNING 162200 UTC OCT 26.",
+      "summaryPt": "SUDESTE DE CABO FRIO · CARTA 21070 (INT 2008) · MANOBRAS MILITARES - ATIVACAO DE AREA PERIGOSA · 14 OUT 26 A 16 OUT 26",
+      "region": "SOUTHEAST OF CABO FRIO",
+      "category": "Operação perigosa",
+      "vessels": "",
+      "coordinates": [
+        {
+          "lat": -25.1,
+          "lon": -41.21666666666667
+        }
+      ],
+      "geometry": {
+        "type": "Circle",
+        "points": [
+          {
+            "lat": -25.1,
+            "lon": -41.21666666666667
+          }
+        ],
+        "radiusNm": 10
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "14 OCT 26 TO 16 OCT 26",
+        "daily": {
+          "start": "08:00",
+          "end": "21:00",
+          "timezone": null,
+          "original": "08:00 TO 21:00"
+        },
+        "openEnded": false,
+        "timingConfirmed": false
+      },
+      "cancellationScheduledAt": "2026-10-16T22:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Horário diário sem fuso explícito; confirmar",
+        "Datas/horários da operação exigem interpretação e confirmação"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUDESTE DE CABO FRIO\r\nCARTA 21070 (INT 2008)\r\nMANOBRAS MILITARES - ATIVACAO DE AREA PERIGOSA\r\n14 OUT 26 A 16 OUT 26\r\n08:00 A 21:00\r\nRAIO DE 10.0 MILHAS 25-06.00S 041-13.00W\r\nCANCELAR ESTE AVISO 162200 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0635:2026",
+      "navarea": "V",
+      "number": "0635",
+      "year": 2026,
+      "original": "SOUTHWEST OF CABO FRIO\r\nCHART 23000 (INT 2123)\r\nHAZARDOUS OPERATIONS - AREA DANGEROUS TO NAVIGATION\r\n140000 UTC OCT 26 TO 160000 UTC OCT 26\r\nIN AREA BOUND BY\r\n23-44.50S 042-45.00W\r\n23-44.50S 042-28.00W\r\n24-00.00S 042-28.00W\r\n24-00.00S 042-45.00W\r\nCANCEL THIS WARNING 160100 UTC OCT 26.",
+      "summaryPt": "SUDOESTE DE CABO FRIO · CARTA 23000 (INT 2123) · MANOBRAS MILITARES - ATIVACAO DE AREA PERIGOSA · 140000 UTC OUT 26 A 160000 UTC OUT 26",
+      "region": "SOUTHWEST OF CABO FRIO",
+      "category": "Operação perigosa",
+      "vessels": "",
+      "coordinates": [
+        {
+          "lat": -23.741666666666667,
+          "lon": -42.75
+        },
+        {
+          "lat": -23.741666666666667,
+          "lon": -42.46666666666667
+        },
+        {
+          "lat": -24,
+          "lon": -42.46666666666667
+        },
+        {
+          "lat": -24,
+          "lon": -42.75
+        }
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "points": [
+          {
+            "lat": -23.741666666666667,
+            "lon": -42.75
+          },
+          {
+            "lat": -23.741666666666667,
+            "lon": -42.46666666666667
+          },
+          {
+            "lat": -24,
+            "lon": -42.46666666666667
+          },
+          {
+            "lat": -24,
+            "lon": -42.75
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-14T00:00:00.000Z",
+        "endUtc": "2026-10-16T00:00:00.000Z",
+        "dateText": "140000 UTC OCT 26 TO 160000 UTC OCT 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-10-16T01:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUDOESTE DE CABO FRIO\r\nCARTA 23000 (INT 2123)\r\nMANOBRAS MILITARES - ATIVACAO DE AREA PERIGOSA\r\n140000 UTC OUT 26 A 160000 UTC OUT 26\r\nNA AREA LIMITADA POR\r\n23-44.50S 042-45.00W\r\n23-44.50S 042-28.00W\r\n24-00.00S 042-28.00W\r\n24-00.00S 042-45.00W\r\nCANCELAR ESTE AVISO 160100 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0634:2026",
+      "navarea": "V",
+      "number": "0634",
+      "year": 2026,
+      "original": "SOUTH OF SANTOS\r\nCHART 21070 (INT 2008)\r\nSHIP TO SHIP OPERATION\r\n110900 UTC OCT 26 TO 140900 UTC OCT 26\r\nRAQUEL KNUTSEN, FRONT FRASER AND SAVEIROS GAIVOTA \r\nSHIP TO SHIP AREA OF SANTOS OIL FIELD \r\nCANCEL NAVAREA 0631/26\r\nCANCEL THIS WARNING 151000 UTC OCT 26.",
+      "summaryPt": "SUL DE SANTOS · CARTA 21070 (INT 2008) · OPERACAO SHIP TO SHIP · 110900 UTC OUT 26 A 140900 UTC OUT 26",
+      "region": "SOUTH OF SANTOS",
+      "category": "Operação STS",
+      "vessels": "RAQUEL KNUTSEN, FRONT FRASER AND SAVEIROS GAIVOTA",
+      "coordinates": [],
+      "geometry": null,
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-11T09:00:00.000Z",
+        "endUtc": "2026-10-14T09:00:00.000Z",
+        "dateText": "110900 UTC OCT 26 TO 140900 UTC OCT 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-10-15T10:00:00.000Z",
+      "cancels": [
+        "V:0631:2026"
+      ],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Sem coordenadas; conferir região e texto"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUL DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nOPERACAO SHIP TO SHIP\r\n110900 UTC OUT 26 A 140900 UTC OUT 26\r\nRAQUEL KNUTSEN, FRONT FRASER E SAVEIROS GAIVOTA\r\nAREA SHIP TO SHIP DA BACIA DE SANTOS \r\nCANCELAR NAVAREA 0631/26\r\nCANCELAR ESTE AVISO 151000 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": [
+        {
+          "key": "V:0631:2026",
+          "relation": "cancelled_by_this_notice"
+        }
+      ]
+    },
+    {
+      "key": "V:0632:2026",
+      "navarea": "V",
+      "number": "0632",
+      "year": 2026,
+      "original": "CAMPOS OIL FIELD\r\nCHART 1550\r\nUNDERWATER OPERATIONS\r\n050000 UTC OCT 26 TO 080300 UTC MAY 28\r\nBY KIRT CHOUEST\r\nIN AREA BOUND BY\r\n22-22.26S 040-26.40W\r\n22-22.28S 040-24.56W\r\n22-26.45S 040-26.43W\r\n22-26.46S 040-24.61W\r\nCANCEL THIS WARNING 080400 UTC MAY 28.",
+      "summaryPt": "BACIA DE CAMPOS · CARTA 1550 · OPERACOES SUBAQUATICAS · 050000 UTC OUT 26 A 080300 UTC MAI 28",
+      "region": "CAMPOS OIL FIELD",
+      "category": "Operação submarina",
+      "vessels": "BY KIRT CHOUEST",
+      "coordinates": [
+        {
+          "lat": -22.371,
+          "lon": -40.44
+        },
+        {
+          "lat": -22.371333333333332,
+          "lon": -40.409333333333336
+        },
+        {
+          "lat": -22.440833333333334,
+          "lon": -40.4405
+        },
+        {
+          "lat": -22.441,
+          "lon": -40.41016666666667
+        }
+      ],
+      "geometry": null,
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-05T00:00:00.000Z",
+        "endUtc": "2028-05-08T03:00:00.000Z",
+        "dateText": "050000 UTC OCT 26 TO 080300 UTC MAY 28",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2028-05-08T04:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Polígono com cruzamento de arestas; validar ordem dos vértices",
+        "Geometria exige conferência"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "BACIA DE CAMPOS\r\nCARTA 1550\r\nOPERACOES SUBAQUATICAS\r\n050000 UTC OUT 26 A 080300 UTC MAI 28\r\nPOR KIRT CHOUEST\r\nNA AREA LIMITADA POR\r\n22-22.26S 040-26.40W\r\n22-22.28S 040-24.56W\r\n22-26.45S 040-26.43W\r\n22-26.46S 040-24.61W\r\nCANCELAR ESTE AVISO 080400 UTC MAI 28.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0630:2026",
+      "navarea": "V",
+      "number": "0630",
+      "year": 2026,
+      "original": "SOUTH OF SANTOS\r\nCHART 21070 (INT 2008)\r\nSHIP TO SHIP OPERATION\r\n090300 UTC OCT 26 TO 170301 UTC OCT 26\r\nPARIS 24, AUSTRALIS, AMY CHOUEST AND GEONISIO BARROSO \r\nSHIP TO SHIP AREA OF SANTOS OIL FIELD \r\nCANCEL THIS WARNING 180400 UTC OCT 26.",
+      "summaryPt": "SUL DE SANTOS · CARTA 21070 (INT 2008) · OPERACAO SHIP TO SHIP · 090300 UTC OUT 26 A 170301 UTC OUT 26",
+      "region": "SOUTH OF SANTOS",
+      "category": "Operação STS",
+      "vessels": "PARIS 24, AUSTRALIS, AMY CHOUEST AND GEONISIO BARROSO",
+      "coordinates": [],
+      "geometry": null,
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-09T03:00:00.000Z",
+        "endUtc": "2026-10-17T03:01:00.000Z",
+        "dateText": "090300 UTC OCT 26 TO 170301 UTC OCT 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-10-18T04:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Sem coordenadas; conferir região e texto"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUL DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nOPERACAO SHIP TO SHIP\r\n090300 UTC OUT 26 A 170301 UTC OUT 26\r\nPARIS 24, AUSTRALIS, AMY CHOUEST E GEONISIO BARROSO\r\nAREA SHIP TO SHIP DA BACIA DE SANTOS \r\nCANCELAR ESTE AVISO 180400 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0628:2026",
+      "navarea": "V",
+      "number": "0628",
+      "year": 2026,
+      "original": "SOUTH OF SANTOS\r\nCHART 21070 (INT 2008)\r\nSHIP TO SHIP OPERATION\r\n080300 UTC OCT 26 TO 160301 UTC OCT 26\r\nNS PIONEER, UNIVERSAL VICTOR AND AMY CHOUEST \r\nSHIP TO SHIP AREA OF SANTOS OIL FIELD \r\nCANCEL THIS WARNING 170400 UTC OCT 26.",
+      "summaryPt": "SUL DE SANTOS · CARTA 21070 (INT 2008) · OPERACAO SHIP TO SHIP · 080300 UTC OUT 26 A 160301 UTC OUT 26",
+      "region": "SOUTH OF SANTOS",
+      "category": "Operação STS",
+      "vessels": "NS PIONEER, UNIVERSAL VICTOR AND AMY CHOUEST",
+      "coordinates": [],
+      "geometry": null,
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-08T03:00:00.000Z",
+        "endUtc": "2026-10-16T03:01:00.000Z",
+        "dateText": "080300 UTC OCT 26 TO 160301 UTC OCT 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-10-17T04:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Sem coordenadas; conferir região e texto"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUL DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nOPERACAO SHIP TO SHIP\r\n080300 UTC OUT 26 A 160301 UTC OUT 26\r\nNS PIONEER, UNIVERSAL VICTOR E AMY CHOUEST\r\nAREA SHIP TO SHIP DA BACIA DE SANTOS \r\nCANCELAR ESTE AVISO 170400 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0627:2026",
+      "navarea": "V",
+      "number": "0627",
+      "year": 2026,
+      "original": "SOUTH OF SANTOS\r\nCHART 21070 (INT 2008)\r\nSHIP TO SHIP OPERATION\r\n080300 UTC OCT 26 TO 160301 UTC OCT 26\r\nBOSSA NOVA SPIRIT, AUSTRALIS, AMY CHOUEST AND GEONISIO BARROSO \r\nSHIP TO SHIP AREA OF SANTOS OIL FIELD \r\nCANCEL THIS WARNING 170400 UTC OCT 26.",
+      "summaryPt": "SUL DE SANTOS · CARTA 21070 (INT 2008) · OPERACAO SHIP TO SHIP · 080300 UTC OUT 26 A 160301 UTC OUT 26",
+      "region": "SOUTH OF SANTOS",
+      "category": "Operação STS",
+      "vessels": "BOSSA NOVA SPIRIT, AUSTRALIS, AMY CHOUEST AND GEONISIO BARROSO",
+      "coordinates": [],
+      "geometry": null,
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-08T03:00:00.000Z",
+        "endUtc": "2026-10-16T03:01:00.000Z",
+        "dateText": "080300 UTC OCT 26 TO 160301 UTC OCT 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-10-17T04:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Sem coordenadas; conferir região e texto"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUL DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nOPERACAO SHIP TO SHIP\r\n080300 UTC OUT 26 A 160301 UTC OUT 26\r\nBOSSA NOVA SPIRIT, AUSTRALIS, AMY CHOUEST E GEONISIO BARROSO\r\nAREA SHIP TO SHIP DA BACIA DE SANTOS \r\nCANCELAR ESTE AVISO 170400 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0623:2026",
+      "navarea": "V",
+      "number": "0623",
+      "year": 2026,
+      "original": "SOUTH OF SANTOS\r\nCHART 21070 (INT 2008)\r\nSHIP TO SHIP OPERATION\r\n070301 UTC OCT 26 TO 150301 UTC OCT 26\r\nSERTANEJO SPIRIT, SEAWAYS GIBBS HILL AND AMY CHOUEST \r\nSHIP TO SHIP AREA OF SANTOS OIL FIELD \r\nCANCEL THIS WARNING 160301 UTC OCT 26.",
+      "summaryPt": "SUL DE SANTOS · CARTA 21070 (INT 2008) · OPERACAO SHIP TO SHIP · 070301 UTC OUT 26 A 150301 UTC OUT 26",
+      "region": "SOUTH OF SANTOS",
+      "category": "Operação STS",
+      "vessels": "SERTANEJO SPIRIT, SEAWAYS GIBBS HILL AND AMY CHOUEST",
+      "coordinates": [],
+      "geometry": null,
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-07T03:01:00.000Z",
+        "endUtc": "2026-10-15T03:01:00.000Z",
+        "dateText": "070301 UTC OCT 26 TO 150301 UTC OCT 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-10-16T03:01:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Sem coordenadas; conferir região e texto"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUL DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nOPERACAO SHIP TO SHIP\r\n070301 UTC OUT 26 A 150301 UTC OUT 26\r\nSERTANEJO SPIRIT, SEAWAYS GIBBS HILL E AMY CHOUEST\r\nAREA SHIP TO SHIP DA BACIA DE SANTOS \r\nCANCELAR ESTE AVISO 160301 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0622:2026",
+      "navarea": "V",
+      "number": "0622",
+      "year": 2026,
+      "original": "BETWEEN CABO ORANGE AND CABO GURUPI\r\nCHART 21010 (INT 4071)\r\nSEISMIC SURVEY\r\n27 SEP 26 TO 17 OCT 26\r\nBY AMAZON WARRIOR, VENTURE G, BIG JOHN VII\r\nTOWING 12 CABLES WITH 1500 METERS\r\nIN THE AREA BOUNDED BY\n04-33.71N 050-01.26W\n05-42.36N 048-58.13W\n03-02.99N 046-18.20W\n01-59.67N 047-14.09W\n02-02.36N 047-18.50W\n02-05.99N 047-20.75W\n02-07.44N 047-21.64W\n02-33.17N 047-37.51W\n02-41.94N 047-47.84W\n02-54.27N 047-55.54W\n03-10.64N 048-13.68W\n03-17.80N 048-17.87W\n03-34.64N 048-37.52W\n03-48.19N 048-54.43W\n03-56.43N 049-06.33W\n04-07.01N 049-23.23W\n04-15.75N 049-43.94W\n04-33.71N 050-01.26W\r\nCANCEL NAVAREA 0613/26\r\nCANCEL THIS WARNING 180000 UTC OCT 26.",
+      "summaryPt": "ENTRE CABO ORANGE E CABO GURUPI · CARTA 21010 (INT 4071) · LEVANTAMENTO SISMICO · 27 SET 26 A 17 OUT 26",
+      "region": "BETWEEN CABO ORANGE AND CABO GURUPI",
+      "category": "Levantamento sísmico",
+      "vessels": "BY AMAZON WARRIOR, VENTURE G, BIG JOHN VII",
+      "coordinates": [
+        {
+          "lat": 4.561833333333333,
+          "lon": -50.021
+        },
+        {
+          "lat": 5.7059999999999995,
+          "lon": -48.968833333333336
+        },
+        {
+          "lat": 3.0498333333333334,
+          "lon": -46.303333333333335
+        },
+        {
+          "lat": 1.9945,
+          "lon": -47.234833333333334
+        },
+        {
+          "lat": 2.0393333333333334,
+          "lon": -47.30833333333333
+        },
+        {
+          "lat": 2.099833333333333,
+          "lon": -47.34583333333333
+        },
+        {
+          "lat": 2.124,
+          "lon": -47.36066666666667
+        },
+        {
+          "lat": 2.5528333333333335,
+          "lon": -47.625166666666665
+        },
+        {
+          "lat": 2.699,
+          "lon": -47.797333333333334
+        },
+        {
+          "lat": 2.9045,
+          "lon": -47.925666666666665
+        },
+        {
+          "lat": 3.1773333333333333,
+          "lon": -48.228
+        },
+        {
+          "lat": 3.296666666666667,
+          "lon": -48.29783333333334
+        },
+        {
+          "lat": 3.5773333333333333,
+          "lon": -48.62533333333333
+        },
+        {
+          "lat": 3.803166666666667,
+          "lon": -48.90716666666667
+        },
+        {
+          "lat": 3.9405,
+          "lon": -49.1055
+        },
+        {
+          "lat": 4.116833333333333,
+          "lon": -49.387166666666666
+        },
+        {
+          "lat": 4.2625,
+          "lon": -49.73233333333334
+        },
+        {
+          "lat": 4.561833333333333,
+          "lon": -50.021
+        }
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "points": [
+          {
+            "lat": 4.561833333333333,
+            "lon": -50.021
+          },
+          {
+            "lat": 5.7059999999999995,
+            "lon": -48.968833333333336
+          },
+          {
+            "lat": 3.0498333333333334,
+            "lon": -46.303333333333335
+          },
+          {
+            "lat": 1.9945,
+            "lon": -47.234833333333334
+          },
+          {
+            "lat": 2.0393333333333334,
+            "lon": -47.30833333333333
+          },
+          {
+            "lat": 2.099833333333333,
+            "lon": -47.34583333333333
+          },
+          {
+            "lat": 2.124,
+            "lon": -47.36066666666667
+          },
+          {
+            "lat": 2.5528333333333335,
+            "lon": -47.625166666666665
+          },
+          {
+            "lat": 2.699,
+            "lon": -47.797333333333334
+          },
+          {
+            "lat": 2.9045,
+            "lon": -47.925666666666665
+          },
+          {
+            "lat": 3.1773333333333333,
+            "lon": -48.228
+          },
+          {
+            "lat": 3.296666666666667,
+            "lon": -48.29783333333334
+          },
+          {
+            "lat": 3.5773333333333333,
+            "lon": -48.62533333333333
+          },
+          {
+            "lat": 3.803166666666667,
+            "lon": -48.90716666666667
+          },
+          {
+            "lat": 3.9405,
+            "lon": -49.1055
+          },
+          {
+            "lat": 4.116833333333333,
+            "lon": -49.387166666666666
+          },
+          {
+            "lat": 4.2625,
+            "lon": -49.73233333333334
+          },
+          {
+            "lat": 4.561833333333333,
+            "lon": -50.021
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "27 SEP 26 TO 17 OCT 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": false
+      },
+      "cancellationScheduledAt": "2026-10-18T00:00:00.000Z",
+      "cancels": [
+        "V:0613:2026"
+      ],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Datas/horários da operação exigem interpretação e confirmação"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "ENTRE CABO ORANGE E CABO GURUPI\r\nCARTA 21010 (INT 4071)\r\nLEVANTAMENTO SISMICO\r\n27 SET 26 A 17 OUT 26\r\nPOR AMAZON WARRIOR, VENTURE G, BIG JOHN VII\r\nREBOCANDO 12 CABOS COM 1500 METROS\r\nNA AREA LIMITADA POR\n04-33.71N 050-01.26W\n05-42.36N 048-58.13W\n03-02.99N 046-18.20W\n01-59.67N 047-14.09W\n02-02.36N 047-18.50W\n02-05.99N 047-20.75W\n02-07.44N 047-21.64W\n02-33.17N 047-37.51W\n02-41.94N 047-47.84W\n02-54.27N 047-55.54W\n03-10.64N 048-13.68W\n03-17.80N 048-17.87W\n03-34.64N 048-37.52W\n03-48.19N 048-54.43W\n03-56.43N 049-06.33W\n04-07.01N 049-23.23W\n04-15.75N 049-43.94W\n04-33.71N 050-01.26W\r\nCANCELAR NAVAREA 0613/26\r\nCANCELAR ESTE AVISO 180000 UTC OUT 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": [
+        {
+          "key": "V:0613:2026",
+          "relation": "cancelled_by_this_notice"
+        }
+      ]
+    },
+    {
+      "key": "V:0617:2026",
+      "navarea": "V",
+      "number": "0617",
+      "year": 2026,
+      "original": "SANTOS OIL FIELD\r\nCHART 21070 (INT 2008)\r\nPRE-ANCHORING OF THE P-83 PLATFORM\n010300 UTC OCT 26 A 310300 UTC MAY 27\nVESSELS INVOLVED: BRAM TITAN, BRAM ATLAS, SKANDI ANGRA, SKANDI URCA, SKANDI IGUACU, SKANDI LOGGER AND SKANDI PARATY\nIN\n24-46.32S 042-23.95W\n24-46.30S 042-23.93W\n24-46.27S 042-23.92W\n24-46.15S 042-23.82W\n24-46.13S 042-23.80W\n24-46.10S 042-23.78W\n24-46.07S 042-23.77W\n24-45.17S 042-23.15W\n24-45.12S 042-23.17W\n24-45.07S 042-23.19W\n24-45.02S 042-23.21W\n24-44.98S 042-23.23W\n24-44.93S 042-23.25W\n24-44.88S 042-23.28W \n24-44.33S 042-25.32W\n24-44.35S 042-25.35W\n24-44.37S 042-25.38W\n24-44.40S 042-25.43W\n24-44.42S 042-25.47W\n24-44.45S 042-25.50W\n24-46.58S 042-25.82W\n24-46.62S 042-25.78W\n24-46.65S 042-25.75W\n24-46.68S 042-25.72W\n24-46.72S 042-25.70W\n24-46.73S 042-25.67W\r\nCANCEL NAVAREA 0615/26\r\nCANCEL THIS WARNING 310400 UTC MAY 27.",
+      "summaryPt": "BACIA PETROLIFERA DE SANTOS · CARTA 21070 (INT 2008) · PRE-ANCORAGEM DA PLATAFORMA P-83 · 010300 UTC OUT 26 A 310300 UTC MAI 27",
+      "region": "SANTOS OIL FIELD",
+      "category": "Aviso à navegação",
+      "vessels": "VESSELS INVOLVED: BRAM TITAN, BRAM ATLAS, SKANDI ANGRA, SKANDI URCA, SKANDI IGUACU, SKANDI LOGGER AND SKANDI PARATY",
+      "coordinates": [
+        {
+          "lat": -24.772,
+          "lon": -42.399166666666666
+        },
+        {
+          "lat": -24.77166666666667,
+          "lon": -42.398833333333336
+        },
+        {
+          "lat": -24.771166666666666,
+          "lon": -42.398666666666664
+        },
+        {
+          "lat": -24.769166666666667,
+          "lon": -42.397
+        },
+        {
+          "lat": -24.768833333333333,
+          "lon": -42.39666666666667
+        },
+        {
+          "lat": -24.768333333333334,
+          "lon": -42.39633333333333
+        },
+        {
+          "lat": -24.767833333333332,
+          "lon": -42.396166666666666
+        },
+        {
+          "lat": -24.752833333333335,
+          "lon": -42.38583333333333
+        },
+        {
+          "lat": -24.752,
+          "lon": -42.38616666666667
+        },
+        {
+          "lat": -24.751166666666666,
+          "lon": -42.3865
+        },
+        {
+          "lat": -24.750333333333334,
+          "lon": -42.386833333333335
+        },
+        {
+          "lat": -24.749666666666666,
+          "lon": -42.387166666666666
+        },
+        {
+          "lat": -24.748833333333334,
+          "lon": -42.3875
+        },
+        {
+          "lat": -24.748,
+          "lon": -42.388
+        },
+        {
+          "lat": -24.738833333333332,
+          "lon": -42.422
+        },
+        {
+          "lat": -24.739166666666666,
+          "lon": -42.4225
+        },
+        {
+          "lat": -24.7395,
+          "lon": -42.423
+        },
+        {
+          "lat": -24.74,
+          "lon": -42.423833333333334
+        },
+        {
+          "lat": -24.740333333333332,
+          "lon": -42.4245
+        },
+        {
+          "lat": -24.740833333333335,
+          "lon": -42.425
+        },
+        {
+          "lat": -24.776333333333334,
+          "lon": -42.43033333333333
+        },
+        {
+          "lat": -24.777,
+          "lon": -42.42966666666667
+        },
+        {
+          "lat": -24.7775,
+          "lon": -42.42916666666667
+        },
+        {
+          "lat": -24.778,
+          "lon": -42.428666666666665
+        },
+        {
+          "lat": -24.778666666666666,
+          "lon": -42.428333333333335
+        },
+        {
+          "lat": -24.778833333333335,
+          "lon": -42.42783333333333
+        }
+      ],
+      "geometry": {
+        "type": "MultiPoint",
+        "points": [
+          {
+            "lat": -24.772,
+            "lon": -42.399166666666666
+          },
+          {
+            "lat": -24.77166666666667,
+            "lon": -42.398833333333336
+          },
+          {
+            "lat": -24.771166666666666,
+            "lon": -42.398666666666664
+          },
+          {
+            "lat": -24.769166666666667,
+            "lon": -42.397
+          },
+          {
+            "lat": -24.768833333333333,
+            "lon": -42.39666666666667
+          },
+          {
+            "lat": -24.768333333333334,
+            "lon": -42.39633333333333
+          },
+          {
+            "lat": -24.767833333333332,
+            "lon": -42.396166666666666
+          },
+          {
+            "lat": -24.752833333333335,
+            "lon": -42.38583333333333
+          },
+          {
+            "lat": -24.752,
+            "lon": -42.38616666666667
+          },
+          {
+            "lat": -24.751166666666666,
+            "lon": -42.3865
+          },
+          {
+            "lat": -24.750333333333334,
+            "lon": -42.386833333333335
+          },
+          {
+            "lat": -24.749666666666666,
+            "lon": -42.387166666666666
+          },
+          {
+            "lat": -24.748833333333334,
+            "lon": -42.3875
+          },
+          {
+            "lat": -24.748,
+            "lon": -42.388
+          },
+          {
+            "lat": -24.738833333333332,
+            "lon": -42.422
+          },
+          {
+            "lat": -24.739166666666666,
+            "lon": -42.4225
+          },
+          {
+            "lat": -24.7395,
+            "lon": -42.423
+          },
+          {
+            "lat": -24.74,
+            "lon": -42.423833333333334
+          },
+          {
+            "lat": -24.740333333333332,
+            "lon": -42.4245
+          },
+          {
+            "lat": -24.740833333333335,
+            "lon": -42.425
+          },
+          {
+            "lat": -24.776333333333334,
+            "lon": -42.43033333333333
+          },
+          {
+            "lat": -24.777,
+            "lon": -42.42966666666667
+          },
+          {
+            "lat": -24.7775,
+            "lon": -42.42916666666667
+          },
+          {
+            "lat": -24.778,
+            "lon": -42.428666666666665
+          },
+          {
+            "lat": -24.778666666666666,
+            "lon": -42.428333333333335
+          },
+          {
+            "lat": -24.778833333333335,
+            "lon": -42.42783333333333
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-10-01T03:00:00.000Z",
+        "endUtc": "2027-05-31T03:00:00.000Z",
+        "dateText": "010300 UTC OCT 26 A 310300 UTC MAY 27",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2027-05-31T04:00:00.000Z",
+      "cancels": [
+        "V:0615:2026"
+      ],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "BACIA PETROLIFERA DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nPRE-ANCORAGEM DA PLATAFORMA P-83\n010300 UTC OUT 26 A 310300 UTC MAI 27\nEMBARCACOES ENVOLVIDAS: BRAM TITAN, BRAM ATLAS, SKANDI ANGRA, SKANDI URCA, SKANDI IGUACU, SKANDI LOGGER E SKANDI PARATY\nEM\n24-46.32S 042-23.95W\n24-46.30S 042-23.93W\n24-46.27S 042-23.92W\n24-46.15S 042-23.82W\n24-46.13S 042-23.80W\n24-46.10S 042-23.78W\n24-46.07S 042-23.77W\n24-45.17S 042-23.15W\n24-45.12S 042-23.17W\n24-45.07S 042-23.19W\n24-45.02S 042-23.21W\n24-44.98S 042-23.23W\n24-44.93S 042-23.25W\n24-44.88S 042-23.28W \n24-44.33S 042-25.32W\n24-44.35S 042-25.35W\n24-44.37S 042-25.38W\n24-44.40S 042-25.43W\n24-44.42S 042-25.47W\n24-44.45S 042-25.50W\n24-46.58S 042-25.82W\n24-46.62S 042-25.78W\n24-46.65S 042-25.75W\n24-46.68S 042-25.72W\n24-46.72S 042-25.70W\n24-46.73S 042-25.67W\r\nCANCELAR NAVAREA 0615/26\r\nCANCELAR ESTE AVISO 310400 UTC MAI 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": [
+        {
+          "key": "V:0615:2026",
+          "relation": "cancelled_by_this_notice"
+        }
+      ]
+    },
+    {
+      "key": "V:0573:2026",
+      "navarea": "V",
+      "number": "0573",
+      "year": 2026,
+      "original": "BETWEEN BAIA DE GUANABARA AND CAMPOS OIL FIELD\r\nCHART 23000 (INT 2123)\r\nSURVEY SERVICE, SUBSEA INSPECTION, UNMANNED SURFACE VESSEL\n120300 UTC SEP 26 TO 030300 UTC NOV 26\nBY USV FUGRO VAQUITA\r\nDEPARTURE AND RETURN OF THE VESSEL 22-56.50S 043-08.40W\r\nCENTRAL POINT OF OPERATION 22-32.79S 040-04.53W\r\nCANCEL THIS WARNING 030400 UTC NOV 26.",
+      "summaryPt": "ENTRE BAIA DE GUANABARA E BACIA PETROLIFERA DE CAMPOS · CARTA 23000 (INT 2123) · SERVICO DE SONDAGEM, INSPECAO SUBMARINA, EMBARCACAO AUTONOMA · 120300 UTC SET 26 A 030300 UTC NOV 26",
+      "region": "BETWEEN BAIA DE GUANABARA AND CAMPOS OIL FIELD",
+      "category": "Operação submarina",
+      "vessels": "BY USV FUGRO VAQUITA",
+      "coordinates": [
+        {
+          "lat": -22.941666666666666,
+          "lon": -43.14
+        },
+        {
+          "lat": -22.5465,
+          "lon": -40.0755
+        }
+      ],
+      "geometry": {
+        "type": "MultiPoint",
+        "points": [
+          {
+            "lat": -22.941666666666666,
+            "lon": -43.14
+          },
+          {
+            "lat": -22.5465,
+            "lon": -40.0755
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": "2026-09-12T03:00:00.000Z",
+        "endUtc": "2026-11-03T03:00:00.000Z",
+        "dateText": "120300 UTC SEP 26 TO 030300 UTC NOV 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-11-03T04:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "ENTRE BAIA DE GUANABARA E BACIA PETROLIFERA DE CAMPOS\r\nCARTA 23000 (INT 2123)\r\nSERVICO DE SONDAGEM, INSPECAO SUBMARINA, EMBARCACAO AUTONOMA\n120300 UTC SET 26 A 030300 UTC NOV 26\nPOR USV FUGRO VAQUITA\r\nSAIDA E RETORNO DA EMBARCACAO 22-56.50S 043-08.40W\r\nPONTO CENTRAL DA OPERACAO 22-32.79S 040-04.53W\r\nCANCELAR ESTE AVISO 030400 UTC NOV 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0566:2026",
+      "navarea": "V",
+      "number": "0566",
+      "year": 2026,
+      "original": "CAMPOS OILFIELD VICINITY\r\nCHART 1550\r\nSEISMIC SURVEY\r\n28 AUG 26 TO 10 NOV 27\r\nBY EMB REM SALTIRE\r\n \r\nIN AREA BOUND BY\r\n21-39.40S 039-49.11W\r\n22-07.28S 039-21.27W\r\n22-51.59S 039-53.36W\r\n22-28.48S 040-32.07W\r\n22-20.25S 040-26.11W\r\nCANCEL THIS WARNING 102200 UTC NOV 27.",
+      "summaryPt": "PROXIMIDADES DA BACIA PETROLIFERA DE CAMPOS · CARTA 1550 · LEVANTAMENTO SISMICO · 28 AGO 26 A 10 NOV 27",
+      "region": "CAMPOS OILFIELD VICINITY",
+      "category": "Levantamento sísmico",
+      "vessels": "BY EMB REM SALTIRE",
+      "coordinates": [
+        {
+          "lat": -21.656666666666666,
+          "lon": -39.8185
+        },
+        {
+          "lat": -22.121333333333332,
+          "lon": -39.3545
+        },
+        {
+          "lat": -22.859833333333334,
+          "lon": -39.88933333333333
+        },
+        {
+          "lat": -22.474666666666668,
+          "lon": -40.5345
+        },
+        {
+          "lat": -22.3375,
+          "lon": -40.43516666666667
+        }
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "points": [
+          {
+            "lat": -21.656666666666666,
+            "lon": -39.8185
+          },
+          {
+            "lat": -22.121333333333332,
+            "lon": -39.3545
+          },
+          {
+            "lat": -22.859833333333334,
+            "lon": -39.88933333333333
+          },
+          {
+            "lat": -22.474666666666668,
+            "lon": -40.5345
+          },
+          {
+            "lat": -22.3375,
+            "lon": -40.43516666666667
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "28 AUG 26 TO 10 NOV 27",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": false
+      },
+      "cancellationScheduledAt": "2027-11-10T22:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Datas/horários da operação exigem interpretação e confirmação"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "PROXIMIDADES DA BACIA PETROLIFERA DE CAMPOS\r\nCARTA 1550\r\nLEVANTAMENTO SISMICO\r\n28 AGO 26 A 10 NOV 27\r\nPOR EMB REM SALTIRE\r\n \r\nNA AREA LIMITADA POR\r\n21-39.40S 039-49.11W\r\n22-07.28S 039-21.27W\r\n22-51.59S 039-53.36W\r\n22-28.48S 040-32.07W\r\n22-20.25S 040-26.11W\r\nCANCELAR ESTE AVISO 102200 UTC NOV 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0514:2026",
+      "navarea": "V",
+      "number": "0514",
+      "year": 2026,
+      "original": "EAST OF PRAIA DE MATINHOS\r\nCHART 23300 (INT 2126)\r\nOCEANOGRAPHIC DATA COLLECTION BUOY, YELLOW, TRIAXYS.\r\nIN 25-45.96S 046-55.12W\r\nCANCEL THIS WARNING 152000 UTC FEB 27.",
+      "summaryPt": "LESTE DA PRAIA DE MATINHOS · CARTA 23300 (INT 2126) · BOIA DE COLETA DE DADOS OCEANOGRAFICOS, AMARELA, TRIAXYS. · EM 25-45.96S 046-55.12W",
+      "region": "EAST OF PRAIA DE MATINHOS",
+      "category": "Auxílio à navegação",
+      "vessels": "",
+      "coordinates": [
+        {
+          "lat": -25.766,
+          "lon": -46.91866666666667
+        }
+      ],
+      "geometry": {
+        "type": "Point",
+        "points": [
+          {
+            "lat": -25.766,
+            "lon": -46.91866666666667
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2027-02-15T20:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "LESTE DA PRAIA DE MATINHOS\r\nCARTA 23300 (INT 2126)\r\nBOIA DE COLETA DE DADOS OCEANOGRAFICOS, AMARELA, TRIAXYS.\r\nEM 25-45.96S 046-55.12W\r\nCANCELAR ESTE AVISO 152000 UTC FEV 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0504:2026",
+      "navarea": "V",
+      "number": "0504",
+      "year": 2026,
+      "original": "SANTOS OIL FIELD VICINITY\r\nCHART 21070 (INT 2008)\r\nANCHORING AND POSITIONING OPERATION FOR THE P-80 PLATFORM\n130300 UTC AGO 26 A 090300 UTC JAN 27\nVESSEL INVOLVED SKANDI ANGRA, BRAN TITAN, BRAN ATLAS, SKANDI URCA, SKANDI IGUACU AND SKANDI SALVADOR\nIN\n24-33.91S 042-29.00W\n24-33.95S 042-28.97W\n24-33.98S 042-28.95W\n24-34.02S 042-28.92W\n24-34.06S 042-28.90W\n24-34.10S 042-28.88W\n24-35.81S 042-29.42W\n24-35.84S 042-29.46W\n24-35.86S 042-29.50W\n24-35.88S 042-29.54W\n24-35.90S 042-29.58W\n24-35.92S 042-29.63W\n24-35.39S 042-31.03W\n24-35.36S 042-31.05W\n24-35.33S 042-31.08W\n24-35.30S 042-31.10W\n24-35.27S 042-31.12W\n24-35.23S 042-31.14W\n24-35.20S 042-31.15W\n24-33.94S 042-30.87W\n24-33.92S 042-30.84W\n24-33.89S 042-30.81W\n24-33.87S 042-30.78W\n24-33.85S 042-30.75W\n24-33.83S 042-30.72W\n24-33.81S 042-30.69W\r\n0.6 MILES RADIUS RECOMMENDED DISTANCE\r\nCANCEL THIS WARNING 090400 UTC JAN 27.",
+      "summaryPt": "PROXIMIDADES DA BACIA PETROLIFERA DE SANTOS · CARTA 21070 (INT 2008) · OPERACAO DE POSICIONAMENTO DE ANCORAGEM DA PLATAFORMA P-82 · 130300 UTC AGO 26 A 090300 UTC JAN 27",
+      "region": "SANTOS OIL FIELD VICINITY",
+      "category": "Aviso à navegação",
+      "vessels": "VESSEL INVOLVED SKANDI ANGRA, BRAN TITAN, BRAN ATLAS, SKANDI URCA, SKANDI IGUACU AND SKANDI SALVADOR",
+      "coordinates": [
+        {
+          "lat": -24.565166666666666,
+          "lon": -42.483333333333334
+        },
+        {
+          "lat": -24.565833333333334,
+          "lon": -42.48283333333333
+        },
+        {
+          "lat": -24.566333333333333,
+          "lon": -42.4825
+        },
+        {
+          "lat": -24.567,
+          "lon": -42.482
+        },
+        {
+          "lat": -24.567666666666668,
+          "lon": -42.48166666666667
+        },
+        {
+          "lat": -24.568333333333335,
+          "lon": -42.48133333333333
+        },
+        {
+          "lat": -24.596833333333333,
+          "lon": -42.49033333333333
+        },
+        {
+          "lat": -24.597333333333335,
+          "lon": -42.491
+        },
+        {
+          "lat": -24.597666666666665,
+          "lon": -42.49166666666667
+        },
+        {
+          "lat": -24.598,
+          "lon": -42.492333333333335
+        },
+        {
+          "lat": -24.598333333333333,
+          "lon": -42.493
+        },
+        {
+          "lat": -24.598666666666666,
+          "lon": -42.493833333333335
+        },
+        {
+          "lat": -24.589833333333335,
+          "lon": -42.51716666666667
+        },
+        {
+          "lat": -24.589333333333332,
+          "lon": -42.5175
+        },
+        {
+          "lat": -24.588833333333334,
+          "lon": -42.518
+        },
+        {
+          "lat": -24.588333333333335,
+          "lon": -42.51833333333333
+        },
+        {
+          "lat": -24.587833333333332,
+          "lon": -42.51866666666667
+        },
+        {
+          "lat": -24.58716666666667,
+          "lon": -42.519
+        },
+        {
+          "lat": -24.586666666666666,
+          "lon": -42.51916666666666
+        },
+        {
+          "lat": -24.565666666666665,
+          "lon": -42.5145
+        },
+        {
+          "lat": -24.565333333333335,
+          "lon": -42.514
+        },
+        {
+          "lat": -24.564833333333333,
+          "lon": -42.5135
+        },
+        {
+          "lat": -24.5645,
+          "lon": -42.513
+        },
+        {
+          "lat": -24.564166666666665,
+          "lon": -42.5125
+        },
+        {
+          "lat": -24.563833333333335,
+          "lon": -42.512
+        },
+        {
+          "lat": -24.5635,
+          "lon": -42.5115
+        }
+      ],
+      "geometry": {
+        "type": "MultiPoint",
+        "points": [
+          {
+            "lat": -24.565166666666666,
+            "lon": -42.483333333333334
+          },
+          {
+            "lat": -24.565833333333334,
+            "lon": -42.48283333333333
+          },
+          {
+            "lat": -24.566333333333333,
+            "lon": -42.4825
+          },
+          {
+            "lat": -24.567,
+            "lon": -42.482
+          },
+          {
+            "lat": -24.567666666666668,
+            "lon": -42.48166666666667
+          },
+          {
+            "lat": -24.568333333333335,
+            "lon": -42.48133333333333
+          },
+          {
+            "lat": -24.596833333333333,
+            "lon": -42.49033333333333
+          },
+          {
+            "lat": -24.597333333333335,
+            "lon": -42.491
+          },
+          {
+            "lat": -24.597666666666665,
+            "lon": -42.49166666666667
+          },
+          {
+            "lat": -24.598,
+            "lon": -42.492333333333335
+          },
+          {
+            "lat": -24.598333333333333,
+            "lon": -42.493
+          },
+          {
+            "lat": -24.598666666666666,
+            "lon": -42.493833333333335
+          },
+          {
+            "lat": -24.589833333333335,
+            "lon": -42.51716666666667
+          },
+          {
+            "lat": -24.589333333333332,
+            "lon": -42.5175
+          },
+          {
+            "lat": -24.588833333333334,
+            "lon": -42.518
+          },
+          {
+            "lat": -24.588333333333335,
+            "lon": -42.51833333333333
+          },
+          {
+            "lat": -24.587833333333332,
+            "lon": -42.51866666666667
+          },
+          {
+            "lat": -24.58716666666667,
+            "lon": -42.519
+          },
+          {
+            "lat": -24.586666666666666,
+            "lon": -42.51916666666666
+          },
+          {
+            "lat": -24.565666666666665,
+            "lon": -42.5145
+          },
+          {
+            "lat": -24.565333333333335,
+            "lon": -42.514
+          },
+          {
+            "lat": -24.564833333333333,
+            "lon": -42.5135
+          },
+          {
+            "lat": -24.5645,
+            "lon": -42.513
+          },
+          {
+            "lat": -24.564166666666665,
+            "lon": -42.5125
+          },
+          {
+            "lat": -24.563833333333335,
+            "lon": -42.512
+          },
+          {
+            "lat": -24.5635,
+            "lon": -42.5115
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0.6,
+      "clearanceOriginal": "0.6 MILES RADIUS RECOMMENDED DISTANCE",
+      "operation": {
+        "startUtc": "2026-08-13T03:00:00.000Z",
+        "endUtc": "2027-01-09T03:00:00.000Z",
+        "dateText": "130300 UTC AGO 26 A 090300 UTC JAN 27",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2027-01-09T04:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "PROXIMIDADES DA BACIA PETROLIFERA DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nOPERACAO DE POSICIONAMENTO DE ANCORAGEM DA PLATAFORMA P-82\n130300 UTC AGO 26 A 090300 UTC JAN 27\nEMBARCACOES ENVOLVIDAS SKANDI ANGRA, BRAN TITAN, BRAN ATLAS, SKANDI URCA, SKANDI IGUACU E SKANDI SALVADOR\nNOS PONTOS\n24-33.91S 042-29.00W\n24-33.95S 042-28.97W\n24-33.98S 042-28.95W\n24-34.02S 042-28.92W\n24-34.06S 042-28.90W\n24-34.10S 042-28.88W\n24-35.81S 042-29.42W\n24-35.84S 042-29.46W\n24-35.86S 042-29.50W\n24-35.88S 042-29.54W\n24-35.90S 042-29.58W\n24-35.92S 042-29.63W\n24-35.39S 042-31.03W\n24-35.36S 042-31.05W\n24-35.33S 042-31.08W\n24-35.30S 042-31.10W\n24-35.27S 042-31.12W\n24-35.23S 042-31.14W\n24-35.20S 042-31.15W\n24-33.94S 042-30.87W\n24-33.92S 042-30.84W\n24-33.89S 042-30.81W\n24-33.87S 042-30.78W\n24-33.85S 042-30.75W\n24-33.83S 042-30.72W\n24-33.81S 042-30.69W\r\nRECOMENDA-SE RAIO DE 0.6 MILHAS DE DISTANCIA\r\nCANCELAR ESTE AVISO 090400 UTC JAN 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0495:2026",
+      "navarea": "V",
+      "number": "0495",
+      "year": 2026,
+      "original": "CAMPOS OILFIELD VICINITY\r\nCHART 1550\r\nWORKS UNDER AND ON WATER\r\nLAUNCHING SUBMARINE CABLES\r\n10 AUG 26 A 08 MAR 27\r\nBY MCE NAVEGACAO I\r\nIN AREA BOUND BY\r\n22-48.38S 041-08.21W\r\n22-48.38S 041-01.70W\r\n22-51.38S 041-01.70W\r\n22-51.38S 041-08.21W\r\nCANCEL THIS WARNING 090000 UTC MAR 27.",
+      "summaryPt": "PROXIMIDADES DA BACIA PETROLIFERA DE CAMPOS · CARTA 1550 · OBRAS SOB E SOBRE AGUAS · LANCAMENTO DE CABOS SUBMARINOS",
+      "region": "CAMPOS OILFIELD VICINITY",
+      "category": "Operação com cabos",
+      "vessels": "BY MCE NAVEGACAO I",
+      "coordinates": [
+        {
+          "lat": -22.806333333333335,
+          "lon": -41.136833333333335
+        },
+        {
+          "lat": -22.806333333333335,
+          "lon": -41.028333333333336
+        },
+        {
+          "lat": -22.856333333333332,
+          "lon": -41.028333333333336
+        },
+        {
+          "lat": -22.856333333333332,
+          "lon": -41.136833333333335
+        }
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "points": [
+          {
+            "lat": -22.806333333333335,
+            "lon": -41.136833333333335
+          },
+          {
+            "lat": -22.806333333333335,
+            "lon": -41.028333333333336
+          },
+          {
+            "lat": -22.856333333333332,
+            "lon": -41.028333333333336
+          },
+          {
+            "lat": -22.856333333333332,
+            "lon": -41.136833333333335
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "10 AUG 26 A 08 MAR 27",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": false
+      },
+      "cancellationScheduledAt": "2027-03-09T00:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Datas/horários da operação exigem interpretação e confirmação"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "PROXIMIDADES DA BACIA PETROLIFERA DE CAMPOS\r\nCARTA 1550\r\nOBRAS SOB E SOBRE AGUAS\r\nLANCAMENTO DE CABOS SUBMARINOS\r\n10 AGO 26 A 08 MAR 27\r\nPOR MCE NAVEGACAO I\r\nNA AREA LIMITADA POR\r\n22-48.38S 041-08.21W\r\n22-48.38S 041-01.70W\r\n22-51.38S 041-01.70W\r\n22-51.38S 041-08.21W\r\nCANCELAR ESTE AVISO 090000 UTC MAR 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0492:2026",
+      "navarea": "V",
+      "number": "0492",
+      "year": 2026,
+      "original": "CAMPOS OILFIELD\r\nCHART 1550\r\nSEISMIC SURVEY\r\n03 AUG 26 TO 09 JUL 27\r\nBY BGP DRAGON\r\n \r\nIN THE AREA BOUNDED BY\n22-32.79S 040-09.79W\n22-30.18S 040-14.02W\n22-22.20S 040-14.72W\n22-18.56S 040-12.13W\n22-14.72S 040-10.95W\n22-08.19S 040-06.66W\n22-04.65S 040-06.28W\n22-01.32S 040-03.91W\n22-00.21S 040-01.41W\n21-58.95S 039-59.82W\n21-57.94S 039-56.98W\n21-59.51S 039-51.99W\n22-02.26S 039-47.32W\n22-06.87S 039-46.80W\n22-12.18S 039-50.95W\n22-12.92S 039-51.99W\n22-21.80S 039-57.86W\n22-25.83S 039-56.22W\n22-28.41S 039-55.62W\n22-34.61S 040-00.11W\n22-35.52S 040-05.16W\r\nTOWING 210 METER SEISMIC EQUIPMENT WITH A 250 METER CABLE\r\nCANCEL NAVAREA 0491/26\r\nCANCEL THIS WARNING 092200 UTC JUL 27.",
+      "summaryPt": "BACIA PETROLIFERA DE CAMPOS · CARTA 1550 · LEVANTAMENTO SISMICO · 03 AGO 26 A 09 JUL 27",
+      "region": "CAMPOS OILFIELD",
+      "category": "Levantamento sísmico",
+      "vessels": "BY BGP DRAGON",
+      "coordinates": [
+        {
+          "lat": -22.5465,
+          "lon": -40.16316666666667
+        },
+        {
+          "lat": -22.503,
+          "lon": -40.233666666666664
+        },
+        {
+          "lat": -22.37,
+          "lon": -40.245333333333335
+        },
+        {
+          "lat": -22.309333333333335,
+          "lon": -40.20216666666666
+        },
+        {
+          "lat": -22.245333333333335,
+          "lon": -40.1825
+        },
+        {
+          "lat": -22.1365,
+          "lon": -40.111
+        },
+        {
+          "lat": -22.0775,
+          "lon": -40.10466666666667
+        },
+        {
+          "lat": -22.022,
+          "lon": -40.06516666666667
+        },
+        {
+          "lat": -22.0035,
+          "lon": -40.0235
+        },
+        {
+          "lat": -21.9825,
+          "lon": -39.997
+        },
+        {
+          "lat": -21.965666666666667,
+          "lon": -39.949666666666666
+        },
+        {
+          "lat": -21.991833333333332,
+          "lon": -39.8665
+        },
+        {
+          "lat": -22.037666666666667,
+          "lon": -39.788666666666664
+        },
+        {
+          "lat": -22.1145,
+          "lon": -39.78
+        },
+        {
+          "lat": -22.203,
+          "lon": -39.84916666666667
+        },
+        {
+          "lat": -22.215333333333334,
+          "lon": -39.8665
+        },
+        {
+          "lat": -22.363333333333333,
+          "lon": -39.964333333333336
+        },
+        {
+          "lat": -22.4305,
+          "lon": -39.937
+        },
+        {
+          "lat": -22.4735,
+          "lon": -39.927
+        },
+        {
+          "lat": -22.576833333333333,
+          "lon": -40.00183333333333
+        },
+        {
+          "lat": -22.592,
+          "lon": -40.086
+        }
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "points": [
+          {
+            "lat": -22.5465,
+            "lon": -40.16316666666667
+          },
+          {
+            "lat": -22.503,
+            "lon": -40.233666666666664
+          },
+          {
+            "lat": -22.37,
+            "lon": -40.245333333333335
+          },
+          {
+            "lat": -22.309333333333335,
+            "lon": -40.20216666666666
+          },
+          {
+            "lat": -22.245333333333335,
+            "lon": -40.1825
+          },
+          {
+            "lat": -22.1365,
+            "lon": -40.111
+          },
+          {
+            "lat": -22.0775,
+            "lon": -40.10466666666667
+          },
+          {
+            "lat": -22.022,
+            "lon": -40.06516666666667
+          },
+          {
+            "lat": -22.0035,
+            "lon": -40.0235
+          },
+          {
+            "lat": -21.9825,
+            "lon": -39.997
+          },
+          {
+            "lat": -21.965666666666667,
+            "lon": -39.949666666666666
+          },
+          {
+            "lat": -21.991833333333332,
+            "lon": -39.8665
+          },
+          {
+            "lat": -22.037666666666667,
+            "lon": -39.788666666666664
+          },
+          {
+            "lat": -22.1145,
+            "lon": -39.78
+          },
+          {
+            "lat": -22.203,
+            "lon": -39.84916666666667
+          },
+          {
+            "lat": -22.215333333333334,
+            "lon": -39.8665
+          },
+          {
+            "lat": -22.363333333333333,
+            "lon": -39.964333333333336
+          },
+          {
+            "lat": -22.4305,
+            "lon": -39.937
+          },
+          {
+            "lat": -22.4735,
+            "lon": -39.927
+          },
+          {
+            "lat": -22.576833333333333,
+            "lon": -40.00183333333333
+          },
+          {
+            "lat": -22.592,
+            "lon": -40.086
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "03 AUG 26 TO 09 JUL 27",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": false
+      },
+      "cancellationScheduledAt": "2027-07-09T22:00:00.000Z",
+      "cancels": [
+        "V:0491:2026"
+      ],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Datas/horários da operação exigem interpretação e confirmação"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "BACIA PETROLIFERA DE CAMPOS\r\nCARTA 1550\r\nLEVANTAMENTO SISMICO\r\n03 AGO 26 A 09 JUL 27\r\nPOR BGP DRAGON\r\n \r\nNA AREA LIMITADA POR \n22-32.79S 040-09.79W\n22-30.18S 040-14.02W\n22-22.20S 040-14.72W\n22-18.56S 040-12.13W\n22-14.72S 040-10.95W\n22-08.19S 040-06.66W\n22-04.65S 040-06.28W\n22-01.32S 040-03.91W\n22-00.21S 040-01.41W\n21-58.95S 039-59.82W\n21-57.94S 039-56.98W\n21-59.51S 039-51.99W\n22-02.26S 039-47.32W\n22-06.87S 039-46.80W\n22-12.18S 039-50.95W\n22-12.92S 039-51.99W\n22-21.80S 039-57.86W\n22-25.83S 039-56.22W\n22-28.41S 039-55.62W\n22-34.61S 040-00.11W\n22-35.52S 040-05.16W\r\nREBOCANDO EQUIPAMENTO SISMICO DE 210 METROS COM CABO DE 250 METROS\r\nCANCELAR NAVAREA 0491/26\r\nCANCELAR ESTE AVISO 092200 UTC JUL 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": [
+        {
+          "key": "V:0491:2026",
+          "relation": "cancelled_by_this_notice"
+        }
+      ]
+    },
+    {
+      "key": "V:0470:2026",
+      "navarea": "V",
+      "number": "0470",
+      "year": 2026,
+      "original": "SANTOS OIL FIELD\r\nCHART 21070 (INT 2008)\r\nAREA DANGEROUS TO NAVIGATION\r\n282000 UTC JUL 26 TO 060400 UTC JUN 27\r\nIN AREA BOUND BY\r\n24-39.87S 042-29.30W\r\n24-39.78S 042-31.55W\r\n24-38.97S 042-32.52W\r\n24-38.15S 042-31.55W\r\n24-38.07S 042-29.30W\r\n24-38.97S 042-28.27W\r\nNAVIGATION IS PROHIBITED WITHIN A RADIUS OF 1.5 NAUTICAL MILES.\r\nCANCEL THIS WARNING 060400 UTC JUN 27.",
+      "summaryPt": "BACIA PETROLIFERA DE SANTOS · CARTA 21070 (INT 2008) · ATIVACAO DE AREA PERIGOSA · 282000 UTC JUL 26 A 060400 UTC JUN 27",
+      "region": "SANTOS OIL FIELD",
+      "category": "Operação perigosa",
+      "vessels": "",
+      "coordinates": [
+        {
+          "lat": -24.6645,
+          "lon": -42.48833333333334
+        },
+        {
+          "lat": -24.663,
+          "lon": -42.52583333333333
+        },
+        {
+          "lat": -24.6495,
+          "lon": -42.542
+        },
+        {
+          "lat": -24.635833333333334,
+          "lon": -42.52583333333333
+        },
+        {
+          "lat": -24.6345,
+          "lon": -42.48833333333334
+        },
+        {
+          "lat": -24.6495,
+          "lon": -42.47116666666667
+        }
+      ],
+      "geometry": {
+        "type": "Polygon",
+        "points": [
+          {
+            "lat": -24.6645,
+            "lon": -42.48833333333334
+          },
+          {
+            "lat": -24.663,
+            "lon": -42.52583333333333
+          },
+          {
+            "lat": -24.6495,
+            "lon": -42.542
+          },
+          {
+            "lat": -24.635833333333334,
+            "lon": -42.52583333333333
+          },
+          {
+            "lat": -24.6345,
+            "lon": -42.48833333333334
+          },
+          {
+            "lat": -24.6495,
+            "lon": -42.47116666666667
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "NAVIGATION IS PROHIBITED WITHIN A RADIUS OF 1.5 NAUTICAL MILES.",
+      "operation": {
+        "startUtc": "2026-07-28T20:00:00.000Z",
+        "endUtc": "2027-06-06T04:00:00.000Z",
+        "dateText": "282000 UTC JUL 26 TO 060400 UTC JUN 27",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2027-06-06T04:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "BACIA PETROLIFERA DE SANTOS\r\nCARTA 21070 (INT 2008)\r\nATIVACAO DE AREA PERIGOSA\r\n282000 UTC JUL 26 A 060400 UTC JUN 27\r\nNA AREA LIMITADA POR\r\n24-39.87S 042-29.30W\r\n24-39.78S 042-31.55W\r\n24-38.97S 042-32.52W\r\n24-38.15S 042-31.55W\r\n24-38.07S 042-29.30W\r\n24-38.97S 042-28.27W\r\nSENDO VEDADA A NAVEGACAO, DENTRO DO RAIO DE 1,5 MILHAS NAUTICAS.\r\nCANCELAR ESTE AVISO 060400 UTC JUN 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0454:2026",
+      "navarea": "V",
+      "number": "0454",
+      "year": 2026,
+      "original": "SOUTH OF RIO DE JANEIRO\r\nCHART 21070 (INT 2008)\r\nANCHORING AND POSITIONING OPERATION FOR THE P-80 BUZIOS 9 PLATFORM\n190300 UTC JUL 26 A 190259 UTC DEZ 26\nVESSEL INVOLVED SKANDI ANGRA, BRAN TITAN, BRAN ATLAS, SKANDI URCA, SKANDI IGUACU, SKANDI LIFTER,SEVEN OCEANIC, SAPURA JADE, SKANDI SALVADOR AND SKANDI LOGGER\nMAERSK MARINER\nIN\n24-42.10S 042-26.12W\n24-43.50S 042-20.70W\n24-42.62S 042-25.68W\n24-41.88S 042-26.07W\n24-42.48S 042-25.95W\n24-45.33S 042-20.83W\n24-45.32S 042-20.82W\n24-42.02S 042-25.67W\n24-42.18S 042-22.95W\n24-42.80S 042-24.65W\n24-41.70S 042-27.10W\n24-43.97S 042-21.55W\n24-42.65S 042-24.60W\n24-43.25S 042-24.83W\n24-42.38S 042-27.25W\nIN\n24-42.10S 042-26.02W\n24-43.50S 042-20.70W\n24-42.62S 042-25.68W\n24-41.88S 042-26.07W\n24-42.48S 042-25.97W\n24-45.33S 042-20.83W\n24-45.32S 042-20.82W\n24-42.00S 042-25.67W\n24-42.18S 042-22.97W\n24-42.78S 042-24.65W\n24-41.70S 042-27.08W\n24-43.97S 042-21.53W\n24-42.65S 042-24.60W\n24-43.25S 042-24.83W\n24-42.38S 042-27.27W\nIN\n24-42.97S 036-24.77W\n24-43.52S 036-22.15W\n24-43.30S 036-24.90W\n24-42.85S 036-24.68W\n24-43.37S 036-24.92W\n24-44.17S 036-22.32W\n24-44.03S 036-22.47W\n24-42.92S 036-24.70W\n24-43.20S 036-22.45W\n24-42.90S 036-24.48W\n24-42.85S 036-24.45W\n24-43.88S 036-22.42W\n24-42.82S 036-24.40W\n24-43.28S 036-24.68W\n24-43.53S 036-24.72W\r\n0.6 MILES RADIUS RECOMMENDED DISTANCE\r\nCANCEL NAVAREA 0449/26\r\nCANCEL THIS WARNING 190400 UTC DEC 26.",
+      "summaryPt": "SUL DO RIO DE JANEIRO · CARTA 21070 (INT 2008) · OPERACAO DE POSICIONAMENTO DE ANCORAGEM DA PLATAFORMA P-80 BUZIOS 9 · 190300 UTC JUL 26 A 190259 UTC DEZ 26",
+      "region": "SOUTH OF RIO DE JANEIRO",
+      "category": "Aviso à navegação",
+      "vessels": "VESSEL INVOLVED SKANDI ANGRA, BRAN TITAN, BRAN ATLAS, SKANDI URCA, SKANDI IGUACU, SKANDI LIFTER,SEVEN OCEANIC, SAPURA JADE, SKANDI SALVADOR AND SKANDI LOGGER",
+      "coordinates": [
+        {
+          "lat": -24.701666666666668,
+          "lon": -42.43533333333333
+        },
+        {
+          "lat": -24.725,
+          "lon": -42.345
+        },
+        {
+          "lat": -24.710333333333335,
+          "lon": -42.428
+        },
+        {
+          "lat": -24.698,
+          "lon": -42.4345
+        },
+        {
+          "lat": -24.708,
+          "lon": -42.4325
+        },
+        {
+          "lat": -24.7555,
+          "lon": -42.347166666666666
+        },
+        {
+          "lat": -24.755333333333333,
+          "lon": -42.347
+        },
+        {
+          "lat": -24.700333333333333,
+          "lon": -42.42783333333333
+        },
+        {
+          "lat": -24.703,
+          "lon": -42.3825
+        },
+        {
+          "lat": -24.713333333333335,
+          "lon": -42.410833333333336
+        },
+        {
+          "lat": -24.695,
+          "lon": -42.45166666666667
+        },
+        {
+          "lat": -24.732833333333332,
+          "lon": -42.35916666666667
+        },
+        {
+          "lat": -24.710833333333333,
+          "lon": -42.41
+        },
+        {
+          "lat": -24.720833333333335,
+          "lon": -42.413833333333336
+        },
+        {
+          "lat": -24.706333333333333,
+          "lon": -42.454166666666666
+        },
+        {
+          "lat": -24.701666666666668,
+          "lon": -42.43366666666667
+        },
+        {
+          "lat": -24.725,
+          "lon": -42.345
+        },
+        {
+          "lat": -24.710333333333335,
+          "lon": -42.428
+        },
+        {
+          "lat": -24.698,
+          "lon": -42.4345
+        },
+        {
+          "lat": -24.708,
+          "lon": -42.432833333333335
+        },
+        {
+          "lat": -24.7555,
+          "lon": -42.347166666666666
+        },
+        {
+          "lat": -24.755333333333333,
+          "lon": -42.347
+        },
+        {
+          "lat": -24.7,
+          "lon": -42.42783333333333
+        },
+        {
+          "lat": -24.703,
+          "lon": -42.38283333333333
+        },
+        {
+          "lat": -24.713,
+          "lon": -42.410833333333336
+        },
+        {
+          "lat": -24.695,
+          "lon": -42.45133333333333
+        },
+        {
+          "lat": -24.732833333333332,
+          "lon": -42.35883333333334
+        },
+        {
+          "lat": -24.710833333333333,
+          "lon": -42.41
+        },
+        {
+          "lat": -24.720833333333335,
+          "lon": -42.413833333333336
+        },
+        {
+          "lat": -24.706333333333333,
+          "lon": -42.4545
+        },
+        {
+          "lat": -24.716166666666666,
+          "lon": -36.41283333333333
+        },
+        {
+          "lat": -24.72533333333333,
+          "lon": -36.369166666666665
+        },
+        {
+          "lat": -24.721666666666668,
+          "lon": -36.415
+        },
+        {
+          "lat": -24.714166666666667,
+          "lon": -36.41133333333333
+        },
+        {
+          "lat": -24.722833333333334,
+          "lon": -36.415333333333336
+        },
+        {
+          "lat": -24.736166666666666,
+          "lon": -36.372
+        },
+        {
+          "lat": -24.733833333333333,
+          "lon": -36.3745
+        },
+        {
+          "lat": -24.715333333333334,
+          "lon": -36.41166666666667
+        },
+        {
+          "lat": -24.72,
+          "lon": -36.37416666666667
+        },
+        {
+          "lat": -24.715,
+          "lon": -36.408
+        },
+        {
+          "lat": -24.714166666666667,
+          "lon": -36.4075
+        },
+        {
+          "lat": -24.731333333333332,
+          "lon": -36.373666666666665
+        },
+        {
+          "lat": -24.71366666666667,
+          "lon": -36.406666666666666
+        },
+        {
+          "lat": -24.721333333333334,
+          "lon": -36.41133333333333
+        },
+        {
+          "lat": -24.7255,
+          "lon": -36.412
+        }
+      ],
+      "geometry": null,
+      "clearanceNm": 0.6,
+      "clearanceOriginal": "0.6 MILES RADIUS RECOMMENDED DISTANCE",
+      "operation": {
+        "startUtc": "2026-07-19T03:00:00.000Z",
+        "endUtc": "2026-12-19T02:59:00.000Z",
+        "dateText": "190300 UTC JUL 26 A 190259 UTC DEZ 26",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-12-19T04:00:00.000Z",
+      "cancels": [
+        "V:0449:2026"
+      ],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Longitudes 042°W e 036°W inconsistentes; plotagem bloqueada",
+        "Geometria exige conferência"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUL DO RIO DE JANEIRO\r\nCARTA 21070 (INT 2008)\r\nOPERACAO DE POSICIONAMENTO DE ANCORAGEM DA PLATAFORMA P-80 BUZIOS 9\n190300 UTC JUL 26 A 190259 UTC DEZ 26\nEMBARCACAO ENVOLVIDA SKANDI ANGRA, BRAN TITAN, BRAN ATLAS, SKANDI URCA, SKANDI IGUACU, SKANDI LIFTER,SEVEN OCEANIC, SAPURA JADE, SKANDI SALVADOR E SKANDI LOGGER\nMAERSK MARINER\nEM\n24-42.10S 042-26.12W\n24-43.50S 042-20.70W\n24-42.62S 042-25.68W\n24-41.88S 042-26.07W\n24-42.48S 042-25.95W\n24-45.33S 042-20.83W\n24-45.32S 042-20.82W\n24-42.02S 042-25.67W\n24-42.18S 042-22.95W\n24-42.80S 042-24.65W\n24-41.70S 042-27.10W\n24-43.97S 042-21.55W\n24-42.65S 042-24.60W\n24-43.25S 042-24.83W\n24-42.38S 042-27.25W\nEM\n24-42.10S 042-26.02W\n24-43.50S 042-20.70W\n24-42.62S 042-25.68W\n24-41.88S 042-26.07W\n24-42.48S 042-25.97W\n24-45.33S 042-20.83W\n24-45.32S 042-20.82W\n24-42.00S 042-25.67W\n24-42.18S 042-22.97W\n24-42.78S 042-24.65W\n24-41.70S 042-27.08W\n24-43.97S 042-21.53W\n24-42.65S 042-24.60W\n24-43.25S 042-24.83W\n24-42.38S 042-27.27W\nEM\n24-42.97S 036-24.77W\n24-43.52S 036-22.15W\n24-43.30S 036-24.90W\n24-42.85S 036-24.68W\n24-43.37S 036-24.92W\n24-44.17S 036-22.32W\n24-44.03S 036-22.47W\n24-42.92S 036-24.70W\n24-43.20S 036-22.45W\n24-42.90S 036-24.48W\n24-42.85S 036-24.45W\n24-43.88S 036-22.42W\n24-42.82S 036-24.40W\n24-43.28S 036-24.68W\n24-43.53S 036-24.72W\r\nRECOMENDA-SE RAIO DE 0.6 MILHAS DE DISTANCIA\r\nCANCELAR NAVAREA 0449/26\r\nCANCELAR ESTE AVISO 190400 UTC DEZ 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": [
+        {
+          "key": "V:0449:2026",
+          "relation": "cancelled_by_this_notice"
+        }
+      ]
+    },
+    {
+      "key": "V:0440:2026",
+      "navarea": "V",
+      "number": "0440",
+      "year": 2026,
+      "original": "NORTHEAST OF AMAPA\r\nCHART 21010 (INT 4071)\r\nLAUNCH OF ANCHOR BUOY FOR METEOROLOGICAL DATA COLLECTION WITH RADAR \nYELLOW LIGHT SIGNAL\nCHARACTERISTIC FL(5)Y 20S\nIT IS REQUESTED TO MAINTAIN A MINIMUM DISTANCE OF 500 METERS\r\nIN 04-02.30N 047-43.70W\r\nCANCEL THIS WARNING 122050 UTC JAN 27.",
+      "summaryPt": "NORDESTE DO AMAPA · CARTA 21010 (INT 4071) · LANCAMENTO DE BOIA DE FUNDEIO PARA A COLETA DE DADOS METEOROLOGICOS COM REFLETOR RADAR · SINAL LUMINOSO NA COR AMARELA",
+      "region": "NORTHEAST OF AMAPA",
+      "category": "Auxílio à navegação",
+      "vessels": "",
+      "coordinates": [
+        {
+          "lat": 4.038333333333333,
+          "lon": -47.72833333333333
+        }
+      ],
+      "geometry": {
+        "type": "Point",
+        "points": [
+          {
+            "lat": 4.038333333333333,
+            "lon": -47.72833333333333
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0.2699784017278618,
+      "clearanceOriginal": "IT IS REQUESTED TO MAINTAIN A MINIMUM DISTANCE OF 500 METERS",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2027-01-12T20:50:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "NORDESTE DO AMAPA\r\nCARTA 21010 (INT 4071)\r\nLANCAMENTO DE BOIA DE FUNDEIO PARA A COLETA DE DADOS METEOROLOGICOS COM REFLETOR RADAR\nSINAL LUMINOSO NA COR AMARELA\nCARACTERISTICA LP(5)A 20S\nSOLICITA-SE MANTER DISTANCIA MINIMA DE 500 METROS\r\nEM 04-02.30N 047-43.70W\r\nCANCELAR ESTE AVISO 122050 UTC JAN 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0436:2026",
+      "navarea": "V",
+      "number": "0436",
+      "year": 2026,
+      "original": "SOUTHEAST OF RIO GRANDE\r\nCHART 23600 (INT 2129)\r\nLAUNCH OF ANCHOR BUOY FOR METEOROLOGICAL DATA COLLECTION WITH RADAR REFLECTOR AND AIS NR MMSI 66667777\nYELLOW LIGHT SIGNAL\nCHARACTERISTIC FL(5)Y 20S\nIT IS REQUESTED TO MAINTAIN A MINIMUM DISTANCE OF 500 METERS\r\nIN 32-52.88S 050-50.63W\r\nCANCEL THIS WARNING 082000 UTC JAN 27.",
+      "summaryPt": "SUDESTE DE RIO GRANDE · CARTA 23600 (INT 2129) · LANCAMENTO DE BOIA DE FUNDEIO PARA A COLETA DE DADOS METEOROLOGICOS COM REFLETOR RADAR · SINAL LUMINOSO NA COR AMARELA",
+      "region": "SOUTHEAST OF RIO GRANDE",
+      "category": "Auxílio à navegação",
+      "vessels": "",
+      "coordinates": [
+        {
+          "lat": -32.88133333333333,
+          "lon": -50.843833333333336
+        }
+      ],
+      "geometry": {
+        "type": "Point",
+        "points": [
+          {
+            "lat": -32.88133333333333,
+            "lon": -50.843833333333336
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0.2699784017278618,
+      "clearanceOriginal": "IT IS REQUESTED TO MAINTAIN A MINIMUM DISTANCE OF 500 METERS",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2027-01-08T20:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUDESTE DE RIO GRANDE\r\nCARTA 23600 (INT 2129)\r\nLANCAMENTO DE BOIA DE FUNDEIO PARA A COLETA DE DADOS METEOROLOGICOS COM REFLETOR RADAR\nSINAL LUMINOSO NA COR AMARELA\nCARACTERISTICA LP(5)A 20S\nSOLICITA-SE MANTER DISTANCIA MINIMA DE 500 METROS\r\nEM 32-52.88S 050-50.63W\r\nCANCELAR ESTE AVISO 082000 UTC JAN 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0370:2026",
+      "navarea": "V",
+      "number": "0370",
+      "year": 2026,
+      "original": "BETWEEN VITORA AND RIO DE JANEIRO\r\nCHART 30 (INT 201)\r\nUNDERWATER OPERATIONS\r\n14 MAY 26 TO 14 NOV 26\r\n10:00 TO 20:00\r\nBY USV FUGRO VAQUITA\r\nIN POSITIONS\n22-03.00S 037-06.48W\n20-27.24S 040-20.52W\n22-59.46S 042-00.84W\n25-55.32S 040-11.58W\r\nCANCEL THIS WARNING 142100 UTC NOV 26.",
+      "summaryPt": "ENTRE VITORIA E RIO DE JANEIRO · CARTA 30 (INT 201) · OPERACOES SUBAQUATICAS · 14 MAI 26 A 14 NOV 26",
+      "region": "BETWEEN VITORA AND RIO DE JANEIRO",
+      "category": "Operação submarina",
+      "vessels": "BY USV FUGRO VAQUITA",
+      "coordinates": [
+        {
+          "lat": -22.05,
+          "lon": -37.108
+        },
+        {
+          "lat": -20.454,
+          "lon": -40.342
+        },
+        {
+          "lat": -22.991,
+          "lon": -42.014
+        },
+        {
+          "lat": -25.922,
+          "lon": -40.193
+        }
+      ],
+      "geometry": {
+        "type": "MultiPoint",
+        "points": [
+          {
+            "lat": -22.05,
+            "lon": -37.108
+          },
+          {
+            "lat": -20.454,
+            "lon": -40.342
+          },
+          {
+            "lat": -22.991,
+            "lon": -42.014
+          },
+          {
+            "lat": -25.922,
+            "lon": -40.193
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "14 MAY 26 TO 14 NOV 26",
+        "daily": {
+          "start": "10:00",
+          "end": "20:00",
+          "timezone": null,
+          "original": "10:00 TO 20:00"
+        },
+        "openEnded": false,
+        "timingConfirmed": false
+      },
+      "cancellationScheduledAt": "2026-11-14T21:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Horário diário sem fuso explícito; confirmar",
+        "Datas/horários da operação exigem interpretação e confirmação"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "ENTRE VITORIA E RIO DE JANEIRO\r\nCARTA 30 (INT 201)\r\nOPERACOES SUBAQUATICAS\r\n14 MAI 26 A 14 NOV 26\r\n10:00 A 20:00\r\nPOR USV FUGRO VAQUITA\r\nNAS POSICOES\n22-03.00S 037-06.48W\n20-27.24S 040-20.52W\n22-59.46S 042-00.84W\n25-55.32S 040-11.58W\r\nCANCELAR ESTE AVISO 142100 UTC NOV 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0336:2026",
+      "navarea": "V",
+      "number": "0336",
+      "year": 2026,
+      "original": "SOUTH OF MARICA\r\nCHART 23000 (INT 2123)\r\nFISHING BOAT RIO AMAZONAS I WRECKED IN 23-49.29S 042-49.94W\r\nCANCEL THIS WARNING 232000 UTC NOV 26.",
+      "summaryPt": "SUL DE MARICA · CARTA 23000 (INT 2123) · BARCO DE PESCA RIO AMAZONAS I NAUFRAGADA EM 23-49.29S 042-49.94W          · CANCELAR ESTE AVISO 232000 UTC NOV 26.",
+      "region": "SOUTH OF MARICA",
+      "category": "Perigo / naufrágio",
+      "vessels": "",
+      "coordinates": [
+        {
+          "lat": -23.8215,
+          "lon": -42.83233333333333
+        }
+      ],
+      "geometry": {
+        "type": "Point",
+        "points": [
+          {
+            "lat": -23.8215,
+            "lon": -42.83233333333333
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2026-11-23T20:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "SUL DE MARICA\r\nCARTA 23000 (INT 2123)\r\nBARCO DE PESCA RIO AMAZONAS I NAUFRAGADA EM 23-49.29S 042-49.94W         \r\nCANCELAR ESTE AVISO 232000 UTC NOV 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0710:2025",
+      "navarea": "V",
+      "number": "0710",
+      "year": 2025,
+      "original": "CAMPOS OIL FIELD\r\nCHART 1550\r\nUNDERWATER OPERATIONS\r\n26 NOV 25 TO 02 NOV 26\r\n10:00 TO 20:00\r\nBY USV FUGRO VAQUITA\r\nIN 22-26.32S 040-25.47W\r\nIN 22-27.05S 040-24.71W\r\nCANCEL THIS WARNING 022100 UTC NOV 26.",
+      "summaryPt": "BACIA PETROLIFERA DE CAMPOS · CARTA 1550 · OPERACOES SUBAQUATICAS · 26 NOV 25 A 02 NOV 26",
+      "region": "CAMPOS OIL FIELD",
+      "category": "Operação submarina",
+      "vessels": "BY USV FUGRO VAQUITA",
+      "coordinates": [
+        {
+          "lat": -22.438666666666666,
+          "lon": -40.4245
+        },
+        {
+          "lat": -22.450833333333332,
+          "lon": -40.411833333333334
+        }
+      ],
+      "geometry": {
+        "type": "MultiPoint",
+        "points": [
+          {
+            "lat": -22.438666666666666,
+            "lon": -40.4245
+          },
+          {
+            "lat": -22.450833333333332,
+            "lon": -40.411833333333334
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "26 NOV 25 TO 02 NOV 26",
+        "daily": {
+          "start": "10:00",
+          "end": "20:00",
+          "timezone": null,
+          "original": "10:00 TO 20:00"
+        },
+        "openEnded": false,
+        "timingConfirmed": false
+      },
+      "cancellationScheduledAt": "2026-11-02T21:00:00.000Z",
+      "cancels": [],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [
+        "Horário diário sem fuso explícito; confirmar",
+        "Datas/horários da operação exigem interpretação e confirmação"
+      ],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "BACIA PETROLIFERA DE CAMPOS\r\nCARTA 1550\r\nOPERACOES SUBAQUATICAS\r\n26 NOV 25 A 02 NOV 26\r\n10:00 A 20:00\r\nPOR USV FUGRO VAQUITA\r\nEM 22-26.32S 040-25.47W\r\nEM 22-27.05S 040-24.71W\r\nCANCELAR ESTE AVISO 022100 UTC NOV 26.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": []
+    },
+    {
+      "key": "V:0310:2025",
+      "navarea": "V",
+      "number": "0310",
+      "year": 2025,
+      "original": "EAST OF VITORIA\r\nCHART 21060 (INT 2007)\r\nINSERT\r\n  DEPHT IN 20-35.71S 034-46.07W - 18.3 METERS\r\nREMOVE DEPHT IN 20-34.33S 034-45.32W - 57.0 METERS\r\nCANCEL NAVAREA 0185/25\r\nCANCEL THIS WARNING 302000 UTC MAY 27.",
+      "summaryPt": "LESTE DE VITORIA · CARTA 21060 (INT 2007) · INSERIR ·   PROFUNDIDADES EM 20-35.71S 034-46.07W - 18.3 METROS",
+      "region": "EAST OF VITORIA",
+      "category": "Aviso à navegação",
+      "vessels": "",
+      "coordinates": [
+        {
+          "lat": -20.595166666666668,
+          "lon": -34.767833333333336
+        },
+        {
+          "lat": -20.572166666666668,
+          "lon": -34.75533333333333
+        }
+      ],
+      "geometry": {
+        "type": "MultiPoint",
+        "points": [
+          {
+            "lat": -20.595166666666668,
+            "lon": -34.767833333333336
+          },
+          {
+            "lat": -20.572166666666668,
+            "lon": -34.75533333333333
+          }
+        ],
+        "radiusNm": 0
+      },
+      "clearanceNm": 0,
+      "clearanceOriginal": "",
+      "operation": {
+        "startUtc": null,
+        "endUtc": null,
+        "dateText": "",
+        "daily": null,
+        "openEnded": false,
+        "timingConfirmed": true
+      },
+      "cancellationScheduledAt": "2027-05-30T20:00:00.000Z",
+      "cancels": [
+        "V:0185:2025"
+      ],
+      "status": "reported",
+      "hazardRemoved": false,
+      "issues": [],
+      "source": {
+        "name": "CHM",
+        "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
+      },
+      "receivedAt": "2026-10-13T17:21:06.065Z",
+      "updatedAt": "2026-10-13T17:21:06.065Z",
+      "verification": {
+        "status": "confirmed",
+        "checkedAt": "2026-10-13T17:32:10.839Z",
+        "url": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+        "sourceUpdatedAt": "13/10/2026 02:46"
+      },
+      "officerCheck": null,
+      "officialTextPt": "LESTE DE VITORIA\r\nCARTA 21060 (INT 2007)\r\nINSERIR\r\n  PROFUNDIDADES EM 20-35.71S 034-46.07W - 18.3 METROS\r\nRETIRAR PROFUNDIDADE EM 20-34.33S 034-45.32W - 57.0 METROS\r\nCANCELAR NAVAREA 0185/25\r\nCANCELAR ESTE AVISO 302000 UTC MAI 27.",
+      "lastSeenAt": "2026-10-13T17:32:10.839Z",
+      "replacements": [],
+      "references": [
+        {
+          "key": "V:0185:2025",
+          "relation": "cancelled_by_this_notice"
+        }
+      ]
+    }
+  ],
+  "inserted": 0,
+  "changed": 0,
+  "updatedAt": "2026-10-13T17:32:10.839Z",
+  "engineVersion": "2026-10-13.1",
+  "sourceStatus": "CHM consultado",
+  "sourceUpdatedAt": "13/10/2026 02:46",
+  "sourceUrl": "https://www.marinha.mil.br/chm/sites/www.marinha.mil.br.chm/files/2026-10-%5BDEV%5D/avradio_30.json",
+  "lastCheckedAt": "2026-10-13T17:32:10.839Z",
+  "coverage": "NAVAREA V: fonte oficial CHM. Demais NAVAREA recebidas da NautoShark disponíveis somente no acesso privado; reutilização pública ainda não confirmada.",
+  "nautosharkRedistribution": "unconfirmed"
+}

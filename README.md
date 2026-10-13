@@ -108,3 +108,11 @@ O workflow salva a nova posição somente quando recebe um ponto válido. Falhas
 credencial, limite, timeout ou resposta inválida preservam a última versão publicada.
 O agendamento e a gravação rodam somente na branch `main`; pull requests executam
 os testes sem consultar a API nem publicar posições.
+
+## NAVAREA e Riscos na rota (13/10/2026)
+
+A home lê `site/data/navarea.json`: avisos NAVAREA V obtidos diretamente do CHM, identificados por área/número/ano, com histórico e distância à geometria usando `site/route-risks/core.mjs`. Consulte `site/route-risks/contract.json` para versão/hash compartilhados com o Portal Geral. Registros sem localização, inconsistentes ou de alvos móveis não recebem marcador inventado.
+
+`node scripts/update-navarea.mjs` consulta a página oficial e descobre o JSON corrente; falha preserva dados e grava estado de cobertura incompleta. Publicar `navarea.json` junto à edição do Radar; não incluir boletins Gmail no repositório público. A automação editorial passa a diária 12:00 UTC e incorpora Gmail NautoShark no banco privado. Conteúdo recebido da NautoShark não é redistribuído até confirmação das condições de reutilização.
+
+O botão “Ver detalhes no Radar” abre `/radar-risks` do Portal Geral mantendo autenticação e permissões. Essa tela e a aba Master Radar usam a mesma rota JRC, parâmetros e registros D1; não há segunda importação/cadastro. O público tem cobertura oficial NAVAREA V; o acesso privado contém o lote mundial e a análise de pesca. GFW continua histórico, com preferência por presença AIS agregada filtrada para pesca (~96h), opção de esforço aparente e SAR (~5 dias); não representa pesqueiros em tempo real.

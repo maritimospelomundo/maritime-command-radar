@@ -49,6 +49,8 @@ jobs:
         run: node scripts/update-ais.mjs
       - name: Validate public data
         run: node scripts/validate-data.mjs
+      - name: Test NAVAREA engine and failure preservation
+        run: node --test scripts/navarea.test.mjs
       - name: Test command summary
         run: node --test scripts/command-summary.test.mjs
       - name: Build reusable command summary
