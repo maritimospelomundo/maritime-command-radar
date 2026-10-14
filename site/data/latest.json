@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-12T10:04:47.461Z",
+  "generatedAt": "2026-10-14T12:13:00.195Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -1178,20 +1178,20 @@
       {
         "label": "AÇÃO AGORA",
         "level": "high",
-        "value": "VesselAPI · posição observada há 17 h 29 min",
-        "summary": "Ponto consolidado de 11 out., 1635Z: 23º07,34' S · 044º24,03' W. MarineTraffic tinha ponto de 11 out., 1459Z (19 h 06 min); SPOT segue sem ponto e sem leitura de bateria."
+        "value": "MarineTraffic · posição observada há 9 h 02 min",
+        "summary": "Ponto consolidado de 14 out., 0311Z: 23º07,60' S · 044º24,12' W. VesselAPI tinha 11 h 13 min; SPOT segue sem ponto e sem leitura de bateria."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
-        "value": "CHM · aviso 746 vigente",
-        "summary": "Vento força 7 entre Touros e São Luís até 130000Z. Os avisos 747 e 748, embora mais recentes na emissão, já haviam terminado no corte editorial."
+        "value": "CHM · avisos 750–752",
+        "summary": "O 750 prevê nevoeiros entre Mostardas e Laguna até 142100Z. Os avisos 751 e 752 entram em vigor em 150900Z, com vento força 7/rajadas e mar de 3–4 m."
       },
       {
         "label": "PREPARAR",
         "level": "critical",
-        "value": "Ormuz / Sohar · Warnings 164–165",
-        "summary": "UKMTO confirmou dois ataques a tankers em 11 out.: projétil no trânsito outbound de Ormuz e UAV no fundeadouro de Sohar; danos do segundo e impacto ambiental permaneciam desconhecidos."
+        "value": "Ormuz · Warnings 167–169",
+        "summary": "UKMTO publicou em 12 out. três relatos verificados e tardios: container inbound, product tanker outbound e crude tanker outbound atingidos por projéteis não identificados."
       }
     ],
     "modules": [
@@ -1199,12 +1199,12 @@
         "id": "msi",
         "icon": "⌁",
         "label": "NAVAREA / METAREA",
-        "value": "Mapa mundial ao vivo",
+        "value": "NAVAREA V oficial · 32 avisos",
         "status": "live",
-        "summary": "Avisos georreferenciados no NautoShark; confirmar sempre por EGC/NAVTEX.",
+        "summary": "Base pública atualizada diretamente do CHM em 14 out.; demais NAVAREA permanecem restritas ao acesso autorizado e exigem confirmação pelo coordenador, EGC/NAVTEX.",
         "source": {
-          "name": "NautoShark",
-          "url": "https://www.nautoshark.com/"
+          "name": "CHM / Marinha do Brasil",
+          "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar"
         }
       },
       {
@@ -1247,11 +1247,11 @@
         "id": "chokepoints",
         "icon": "▲",
         "label": "CHOKEPOINTS",
-        "value": "Ormuz e Sohar críticos",
+        "value": "Ormuz crítico · 167–169",
         "status": "high",
-        "summary": "Os Warnings 164–165 confirmam ataques a tankers em 11 out. no trânsito outbound de Ormuz e no fundeadouro de Sohar; manter avaliação específica, war-risk e autorização do CSO.",
+        "summary": "Três novos relatos tardios publicados em 12 out. ampliam a sequência de ataques a navios inbound e outbound; manter avaliação específica, war-risk e autorização do CSO.",
         "source": {
-          "name": "UKMTO · avisos recentes",
+          "name": "UKMTO · incidentes recentes",
           "url": "https://www.ukmto.org/"
         }
       },
@@ -1295,7 +1295,7 @@
   },
   "market": {
     "week": "W41",
-    "sourceLabel": "Fearnleys W41 (7 out.) atualiza time-charter e confirma oferta muito curta; Baltic W40 permanece como último roundup oficial localizado; BDTI/BCTI seguem no último dado público de 11 set.; VLSFO no fechamento de 9 out.",
+    "sourceLabel": "Fearnleys W41 (7 out.) permanece a edição semanal disponível; Baltic W40 é o último roundup oficial localizado; BDTI/BCTI mantêm suas datas originais; VLSFO atualizado no fechamento de 13 out.",
     "benchmarks": [
       {
         "segment": "VLCC",
@@ -1401,7 +1401,7 @@
       "title": "Pirataria e roubo armado",
       "shortTitle": "Pirataria",
       "icon": "☠",
-      "description": "Consulta às páginas oficiais do ReCAAP em 12 de outubro não localizou boletim semanal concluído posterior ao de 29 set.–5 out.; preservam-se o CAT 4 de 1 out. e os dois CAT 3 anteriores com suas datas originais.",
+      "description": "O ReCAAP foi reconsultado em 14 de outubro; o último boletim semanal disponível permanece 29 set.–5 out. Os três registros anteriores são preservados com suas datas originais por não haver boletim posterior comprovado.",
       "items": [
         {
           "id": "recaap-singapore-2026-10-01",
@@ -1467,63 +1467,63 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-      "description": "Três condições mais relevantes comprovadas nos boletins NOAA/NWS emitidos às 1030Z de 12 de outubro: furacão Simon e duas áreas de tempestade no Atlântico Norte.",
+      "description": "Três condições severas comprovadas nos boletins NOAA/NWS válidos em 14 de outubro: tempestade no Pacífico Norte e duas áreas de gale no Atlântico Norte.",
       "items": [
         {
-          "id": "noaa-simon-2026-10-12",
-          "date": "2026-10-12",
-          "region": "Pacífico Leste · 20,0°N 106,3°W",
+          "id": "noaa-north-pacific-storm-2026-10-14",
+          "date": "2026-10-14",
+          "region": "Pacífico Norte · baixa em 51°N 158°W",
           "level": "critical",
-          "headline": "Simon: furacão de 100 kt e rajadas de 120 kt",
-          "summary": "Às 0900Z, Simon tinha 100 kt, rajadas de 120 kt e mar significativo de até 6 m, movendo-se para NW a 4 kt.",
-          "details": "A previsão oficial indicava enfraquecimento gradual para 85 kt em 24 horas e 80 kt em 48 horas. Trajetória e intensidade futuras continuam sendo previsão.",
-          "action": "Manter ampla evasão, acompanhar cada aviso NHC e revalidar weather routing, limites de heavy weather e restrições costeiras mexicanas.",
+          "headline": "Tempestade: 45–60 kt e mar de 6–8,5 m",
+          "summary": "A baixa de 973 hPa apresentava vento de 45–60 kt e mar significativo de 6–8,5 m no semicírculo oeste e quadrante sudeste.",
+          "details": "Boletim NOAA de 1030Z, com previsão válida a partir de 0600Z. Ondas individuais podem superar duas vezes a altura significativa.",
+          "action": "Evitar o núcleo, revalidar weather routing e limites de heavy weather, proteger convés/manifolds e manter margem de combustível e abrigo.",
           "map": {
-            "x": 20.47,
-            "y": 38.89,
-            "label": "Simon"
+            "x": 6.11,
+            "y": 21.67,
+            "label": "Pacífico Norte"
           },
           "source": {
-            "name": "NOAA / NHC · High Seas EP1 · 12 out.",
+            "name": "NOAA Ocean Prediction Center · EP1 · 14 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         },
         {
-          "id": "noaa-north-atlantic-hurricane-force-2026-10-12",
-          "date": "2026-10-12",
-          "region": "Atlântico Norte · 60–63°N / 34–38°W",
-          "level": "critical",
-          "headline": "Baixa complexa: 50–65 kt e mar de até 9,5 m",
-          "summary": "A NOAA registrava centros de 960 e 957 hPa perto da Groenlândia; no semicírculo noroeste do segundo centro, vento de 50–65 kt e mar de 6–9,5 m.",
-          "details": "Em áreas adjacentes, o boletim indicava 35–50 kt e mar de 5–8 m. Ondas individuais podem superar duas vezes a altura significativa.",
-          "action": "Evitar o núcleo, revalidar weather routing e limites de heavy weather, proteger convés/manifolds e manter margem de combustível e abrigo.",
+          "id": "noaa-north-atlantic-gale-east-2026-10-14",
+          "date": "2026-10-14",
+          "region": "Atlântico Norte · baixa a leste em 52°N 32°W",
+          "level": "high",
+          "headline": "Gale: 25–40 kt e mar de 5–8 m",
+          "summary": "A baixa de 973 hPa, a leste da área, gerava 25–40 kt e mar de 5–8 m no quadrante sudoeste.",
+          "details": "Boletim NOAA de 2230Z de 13 out., válido em 14 out.; o sistema movia-se para NE e intensificava rapidamente.",
+          "action": "Revalidar derrota e ETA, limitar trabalho externo, conferir peação e acompanhar a atualização de seis em seis horas.",
           "map": {
-            "x": 39.44,
-            "y": 15,
+            "x": 41.11,
+            "y": 21.11,
             "label": "Atlântico Norte"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · AT1 · 12 out.",
-            "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
+            "name": "NOAA Ocean Prediction Center · AT1 · 13/14 out.",
+            "url": "https://forecast.weather.gov/product.php?issuedby=AT1&product=HSF&site=NWS"
           }
         },
         {
-          "id": "noaa-north-atlantic-storm-2026-10-12",
-          "date": "2026-10-12",
-          "region": "Atlântico Norte · baixa em 61°N 46°W",
-          "level": "critical",
-          "headline": "Tempestade: 40–55 kt e mar de 5–8 m",
-          "summary": "A baixa de 970 hPa apresentava 40–55 kt e mar significativo de 5–8 m numa faixa entre 58°N 46°W e 65°N 56°W.",
-          "details": "O sistema deveria ser absorvido em 24 horas pela baixa com vento de força de furacão. A posição no mapa representa o centro informado, não uma área navegável precisa.",
-          "action": "Revalidar derrota, velocidade/heading, estabilidade, peação e trabalho externo; manter acompanhamento dos boletins de seis em seis horas.",
+          "id": "noaa-north-atlantic-gale-greenland-2026-10-14",
+          "date": "2026-10-14",
+          "region": "Atlântico Norte · baixa em 61°N 47°W",
+          "level": "high",
+          "headline": "Gale: 25–40 kt e mar de 3,5–7 m",
+          "summary": "A baixa de 981 hPa apresentava 25–40 kt e mar significativo de 3,5–7 m no semicírculo oeste e quadrante noroeste.",
+          "details": "A previsão oficial indicava deslocamento para SE e manutenção de 25–40 kt em 24 horas; tratar posição como centro sinótico, não área precisa.",
+          "action": "Acompanhar o boletim seguinte, ajustar velocidade/heading para esforço estrutural e manter margem para gelo, nevoeiro e desvio.",
           "map": {
-            "x": 37.22,
+            "x": 36.94,
             "y": 16.11,
             "label": "Atlântico Norte"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · AT1 · 12 out.",
-            "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
+            "name": "NOAA Ocean Prediction Center · AT1 · 13/14 out.",
+            "url": "https://forecast.weather.gov/product.php?issuedby=AT1&product=HSF&site=NWS"
           }
         }
       ]
@@ -1533,21 +1533,21 @@
       "title": "Costa do Brasil",
       "shortTitle": "Costa BR",
       "icon": "◆",
-      "description": "A página oficial do CHM, atualizada em 10 de outubro, lista 748, 747 e 746 como os três avisos de emissão mais recente. Somente o 746 permanecia vigente no snapshot; confirmar sempre por EGC/NAVTEX.",
+      "description": "O CHM lista 752, 751 e 750 como os três avisos mais recentes em 14 de outubro. O 750 está vigente; 751–752 iniciam em 150900Z. Confirmar sempre por EGC/NAVTEX.",
       "items": [
         {
-          "id": "chm-748-2026",
-          "date": "2026-10-10",
-          "region": "Atlântico Sul · 32,3–35,5°S / 47,5–51,7°W",
+          "id": "chm-752-2026",
+          "date": "2026-10-13",
+          "region": "Atlântico Sul · 34,8–36°S / 39–51°W",
           "level": "high",
-          "headline": "Aviso 748: vento SW/S força 7 · encerrado",
-          "summary": "O aviso previa vento SW/S força 7 no polígono oceânico entre 110300Z e 111800Z; sua janela já terminou.",
-          "details": "Aviso emitido às 2100Z de 10 de outubro. A geometria do mapa é referência aproximada da área oficial e a data do snapshot não prolonga sua validade.",
-          "action": "Tratar como registro encerrado e confirmar os avisos vigentes por EGC/NAVTEX antes de usar a área no planejamento.",
+          "headline": "Aviso 752: mar de 3–4 m a partir de 150900Z",
+          "summary": "Ondas de E/NE de 3–4 m previstas no polígono oceânico a partir de 150900Z, válidas até 161800Z.",
+          "details": "Aviso emitido às 1232Z de 13 de outubro. A geometria do mapa é referência aproximada da área oficial.",
+          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e trabalho externo antes da entrada em vigor.",
           "map": {
-            "x": 36.24,
-            "y": 68.89,
-            "label": "CHM 748 · encerrado"
+            "x": 37.22,
+            "y": 68.06,
+            "label": "CHM 752"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -1555,37 +1555,37 @@
           }
         },
         {
-          "id": "chm-747-2026",
-          "date": "2026-10-10",
-          "region": "Garopaba/SC a Mangaratiba/RJ · até 20 MN da costa",
+          "id": "chm-751-2026",
+          "date": "2026-10-13",
+          "region": "Atlântico Sul · 34,8–36°S / 38–51°W",
+          "level": "high",
+          "headline": "Aviso 751: vento E/NE força 7 com rajadas",
+          "summary": "Vento E/NE força 7 com rajadas previsto no polígono oceânico a partir de 150900Z, válido até 161200Z.",
+          "details": "Aviso emitido às 1234Z de 13 de outubro. Confirmar atualização ou cancelamento por EGC/NAVTEX.",
+          "action": "Revalidar limites de vento, estabilidade, heading, peação e restrição de trabalho externo antes da entrada em vigor.",
+          "map": {
+            "x": 37.36,
+            "y": 68.11,
+            "label": "CHM 751"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
+        {
+          "id": "chm-750-2026",
+          "date": "2026-10-13",
+          "region": "Mostardas/RS a Laguna/SC · até 70 MN da costa",
           "level": "medium",
-          "headline": "Aviso 747: nevoeiros esparsos · encerrado",
-          "summary": "O aviso previa nevoeiros e visibilidade muito baixa entre 110000Z e 111200Z; sua janela já terminou.",
-          "details": "Aviso emitido em 10 de outubro. A posição do mapa representa aproximadamente o trecho costeiro, não a extensão exata de cada banco de nevoeiro.",
-          "action": "Tratar como registro encerrado; manter radar/ARPA e sinalização prontos e confirmar novos avisos por EGC/NAVTEX.",
+          "headline": "Aviso 750: nevoeiros esparsos até 142100Z",
+          "summary": "Baixa visibilidade por nevoeiros esparsos prevista entre 140900Z e 142100Z no trecho costeiro.",
+          "details": "Aviso emitido às 1228Z de 13 de outubro. A posição do mapa representa aproximadamente o trecho costeiro.",
+          "action": "Manter radar/ARPA, sinais de cerração, vigia reforçada e velocidade segura; confirmar atualização por EGC/NAVTEX.",
           "map": {
-            "x": 37.31,
-            "y": 63.72,
-            "label": "CHM 747 · encerrado"
-          },
-          "source": {
-            "name": "CHM / Marinha do Brasil",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
-        },
-        {
-          "id": "chm-746-2026",
-          "date": "2026-10-10",
-          "region": "Área Golf · Touros/RN a São Luís/MA · até 80 MN da costa",
-          "level": "high",
-          "headline": "Aviso 746: vento SE/NE força 7 até 130000Z",
-          "summary": "Vento SE/NE força 7 previsto entre 110000Z e 130000Z no setor costeiro de Touros a São Luís, até 80 MN da costa.",
-          "details": "Aviso emitido às 1500Z de 10 de outubro e vigente no corte editorial. Confirmar atualização ou cancelamento por EGC/NAVTEX.",
-          "action": "Revalidar derrota, estabilidade, velocidade/heading, peação e trabalho externo; confirmar atualização por EGC/NAVTEX.",
-          "map": {
-            "x": 39.7,
-            "y": 52.8,
-            "label": "CHM 746"
+            "x": 36.15,
+            "y": 66.56,
+            "label": "CHM 750"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -1599,63 +1599,63 @@
       "title": "Conflito e segurança de rota",
       "shortTitle": "Segurança",
       "icon": "▲",
-      "description": "Warnings 164 e 165 registram dois ataques a petroleiros em 11 de outubro, em Ormuz e Sohar; o Advisory 163, de 10 de outubro, permanece como terceiro registro público mais recente. Autoria não foi estabelecida nos produtos consultados.",
+      "description": "Warnings 167–169, publicados em 12 de outubro, são os três registros oficiais mais recentes localizados: container inbound, product tanker outbound e crude tanker outbound atingidos por projéteis não identificados em Ormuz. Autoria não estabelecida.",
       "items": [
         {
-          "id": "ukmto-165-26",
-          "date": "2026-10-11",
-          "region": "Sohar Anchorage · Omã",
-          "level": "critical",
-          "headline": "Tanker atingido por UAV no fundeadouro de Sohar",
-          "summary": "O UKMTO reclassificou o incidente como ataque após confirmar que um tanker foi atingido por veículo aéreo não tripulado; autoridades locais auxiliavam a evacuação.",
-          "details": "Warning 165-26, Update 001. Avaliação de danos e eventual impacto ambiental permaneciam desconhecidos no produto oficial consultado.",
-          "action": "Reavaliar fundeio e aproximação a Sohar, reduzir previsibilidade de permanência, manter prontidão de evacuação/damage control e reportar atividade suspeita ao UKMTO.",
-          "map": {
-            "x": 65.75,
-            "y": 36.45,
-            "label": "Sohar · 165-26"
-          },
-          "source": {
-            "name": "UKMTO Warning 165-26 · 11 out. 2026",
-            "url": "https://www.ukmto.org/recent-incidents"
-          }
-        },
-        {
-          "id": "ukmto-164-26",
-          "date": "2026-10-11",
+          "id": "ukmto-169-26",
+          "date": "2026-10-12",
           "region": "Estreito de Ormuz · trânsito outbound",
           "level": "critical",
-          "headline": "Tanker outbound sofre dano por projétil em Ormuz",
-          "summary": "Às 1200Z, um tanker outbound foi atingido no costado de bombordo por projétil não identificado, com dano à embarcação.",
-          "details": "Warning 164-26. Toda a tripulação foi reportada segura e não havia impacto ambiental no momento do aviso; autoridades investigavam.",
-          "action": "Manter voyage-specific threat assessment, war-risk, autorização do CSO, navegação redundante e prontidão de damage control antes do trânsito.",
+          "headline": "Crude tanker outbound atingido por projétil",
+          "summary": "Fonte verificada reportou tardiamente que um crude oil tanker foi atingido por projétil não identificado durante trânsito outbound.",
+          "details": "Warning 169-26. O produto público informa investigação pelas autoridades, sem detalhes adicionais sobre danos, tripulação ou impacto ambiental.",
+          "action": "Manter voyage-specific threat assessment, war-risk, autorização do CSO, navegação redundante e prontidão de damage control.",
           "map": {
             "x": 65.6,
             "y": 35.4,
-            "label": "Ormuz · 164-26"
+            "label": "Ormuz · 169-26"
           },
           "source": {
-            "name": "UKMTO Warning 164-26 · 11 out. 2026",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/20261011-ukmto_warning_164-26.pdf?rev=438f8055b40046ae998e91015f731a24"
+            "name": "UKMTO Warning 169-26 · publicado 12 out. 2026",
+            "url": "https://www.ukmto.org/"
           }
         },
         {
-          "id": "ukmto-163-26",
-          "date": "2026-10-10",
-          "region": "Golfo de Omã",
-          "level": "high",
-          "headline": "Advisory: incidente entre tanker e forças militares",
-          "summary": "O UKMTO recebeu relato de incidente envolvendo um tanker e forças militares no Golfo de Omã; o aviso público não detalhou posição, danos ou tripulação.",
-          "details": "Advisory 163-26. O registro apoia consciência situacional e não deve ser extrapolado além das informações publicadas; investigações continuavam.",
-          "action": "Considerar o ambiente operacional em evolução, responder prontamente a comunicações militares legítimas e manter contato UKMTO/CSO conforme o plano da companhia.",
+          "id": "ukmto-168-26",
+          "date": "2026-10-12",
+          "region": "Estreito de Ormuz · trânsito outbound",
+          "level": "critical",
+          "headline": "Product tanker outbound atingido por projétil",
+          "summary": "Fonte verificada reportou tardiamente que um product tanker foi atingido por projétil não identificado durante trânsito outbound.",
+          "details": "Warning 168-26. Autoridades investigavam; o resumo público não acrescentou confirmação de autoria ou condição operacional do navio.",
+          "action": "Revalidar janela e corredor, manter comunicações UKMTO/CSO, redundância de posição e prontidão de emergência.",
           "map": {
-            "x": 66.1,
-            "y": 37.2,
-            "label": "Golfo de Omã · 163-26"
+            "x": 65.6,
+            "y": 35.4,
+            "label": "Ormuz · 168-26"
           },
           "source": {
-            "name": "UKMTO Advisory 163-26 · 11 out. 2026",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/20261011-ukmto_advisory_163-26.pdf?rev=de988b100dc144678a92327c7b112ae7"
+            "name": "UKMTO Warning 168-26 · publicado 12 out. 2026",
+            "url": "https://www.ukmto.org/"
+          }
+        },
+        {
+          "id": "ukmto-167-26",
+          "date": "2026-10-12",
+          "region": "Estreito de Ormuz · trânsito inbound",
+          "level": "critical",
+          "headline": "Container vessel inbound atingido por projétil",
+          "summary": "Fonte verificada reportou tardiamente que um container vessel foi atingido por projétil não identificado durante trânsito inbound.",
+          "details": "Warning 167-26. Autoridades investigavam; o produto público não trazia avaliação conclusiva de danos ou autoria.",
+          "action": "Não tratar corredor inbound como protegido; manter assessment específico, war-risk, CSO e redundância de navegação.",
+          "map": {
+            "x": 65.6,
+            "y": 35.4,
+            "label": "Ormuz · 167-26"
+          },
+          "source": {
+            "name": "UKMTO Warning 167-26 · publicado 12 out. 2026",
+            "url": "https://www.ukmto.org/"
           }
         }
       ]
@@ -1665,7 +1665,7 @@
       "title": "Navegação eletrônica e portos",
       "shortTitle": "Nav/Portos",
       "icon": "⌁",
-      "description": "Fretes recordes, relés STS e interferência GNSS exigem planejamento logístico, due diligence e redundância de posição. Fixtures, estimativas AIS, relatos voluntários e contagens oficiais são métricas distintas.",
+      "description": "Contexto operacional complementar reconsultado em 14 de outubro. Nenhum registro mais novo e comprovado substituiu os três existentes; análises comerciais continuam atribuídas e não viram dado oficial.",
       "items": [
         {
           "id": "usg-asia-freight-2026-10-09",
@@ -1867,21 +1867,21 @@
       "region": "Omã / Irã · Golfo Pérsico",
       "risk": "critical",
       "trafficLabel": "18,3 mi bpd · média móvel de 7 dias em 30 set. · Kpler",
-      "trafficTrend": "fluxo recuperado em setembro; ameaça cinética ampliada em outubro",
+      "trafficTrend": "fluxo comercial recuperado em setembro; sequência de ataques ampliada em outubro",
       "trafficBasis": "Kpler, via Reuters, estimou 18,3 milhões bpd de crude na média móvel de sete dias em 30 set.; Vortexa estimou 18,6 milhões bpd em 14 dias. São estimativas comerciais regionais, sujeitas a revisão e não equivalem a contagem de navios ou gross tonnage oficial.",
       "market": "Fretes atingiram níveis recordes: fontes de corretagem citadas pela Reuters indicaram cerca de US$ 80 milhões para VLCC US Gulf–China. Fearnleys W41 relata oferta curta em VLCC, Suezmax e Aframax.",
-      "geopolitics": "Ameaça crítica: os Warnings 164–165 registram dois ataques a tankers em 11 out., em Ormuz e no fundeadouro de Sohar; o Advisory 163 envolve tanker e forças militares no Golfo de Omã. Autoria não foi estabelecida nos produtos consultados.",
+      "geopolitics": "Ameaça crítica: os Warnings 167–169 acrescentam três navios atingidos em trânsitos inbound/outbound, além da sequência 164–166 e do ataque em Sohar. Autoria não foi estabelecida nos produtos oficiais consultados.",
       "authority": "Autoridades costeiras / UKMTO como ponto de contato de segurança",
       "reporting": "UKMTO VRS voluntário; VTS/port reporting obrigatório conforme porto e águas jurisdicionais.",
       "masterFocus": [
-        "Manter voyage-specific threat assessment, war-risk e autoridade de decisão alinhada ao CSO; os Warnings 164–165 ampliam a área de risco entre o estreito e Sohar.",
+        "Manter voyage-specific threat assessment, war-risk e autoridade de decisão alinhada ao CSO; a sequência 167–169 confirma exposição em ambos os sentidos do trânsito.",
         "Usar navegação redundante contra spoofing/jamming e comparar GNSS, radar, visual, AIS, eco-sonda e DR.",
         "Em STS e vetting, examinar contrapartes e histórico completo de encontros; associação ou geometria não provam transferência de carga.",
         "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
-        "name": "UKMTO · Warnings 164–165 / Advisory 163 · 10–11 out. 2026",
-        "url": "https://www.ukmto.org/recent-incidents"
+        "name": "UKMTO · Warnings 167–169 · publicados em 12 out. 2026",
+        "url": "https://www.ukmto.org/"
       }
     },
     {
@@ -2157,7 +2157,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-    "note": "Cobertura mundial não significa campanha ativa em todos os regimes. Sites oficiais reconsultados em 12 out.; onde não foi localizada publicação oficial 2026, o portal mantém status unconfirmed e o link da autoridade para confirmação pré-chegada.",
+    "note": "Campanhas oficiais reconsultadas em 14 out. 2026. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada; USCG mantém programa nacional contínuo.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -2303,41 +2303,41 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 63.06,
+        "price": 63.78,
         "currencySymbol": "R$",
-        "changePercent": 1.82,
+        "changePercent": 1.14,
         "trend": "Alta no fechamento",
-        "capturedAtLabel": "9 out. 2026 · fechamento público",
+        "capturedAtLabel": "13 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/quote/bvmf/PETR3/history/"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 56,
+        "price": 56.85,
         "currencySymbol": "R$",
-        "changePercent": 0.94,
+        "changePercent": 1.52,
         "trend": "Alta no fechamento",
-        "capturedAtLabel": "9 out. 2026 · fechamento público",
+        "capturedAtLabel": "13 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/quote/bvmf/PETR4/history/"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 25.3,
+        "price": 25.5,
         "currencySymbol": "US$",
-        "changePercent": 2.47,
+        "changePercent": 0.32,
         "trend": "Alta no fechamento",
-        "capturedAtLabel": "9 out. 2026 · fechamento público",
+        "capturedAtLabel": "13 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/stocks/pbr/history/"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-        "price": 22.47,
+        "price": 22.61,
         "currencySymbol": "US$",
-        "changePercent": 1.49,
-        "trend": "Alta no fechamento",
-        "capturedAtLabel": "9 out. 2026 · fechamento público",
+        "changePercent": -0.04,
+        "trend": "Leve baixa no fechamento",
+        "capturedAtLabel": "13 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/stocks/pbr.a/history/"
       }
     ],
@@ -2528,61 +2528,61 @@
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 889.5,
-      "change": 18.5
+      "vlsfo": 907,
+      "change": 14.5
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 715,
-      "change": 13
+      "vlsfo": 736.5,
+      "change": 1.5
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 967.5,
-      "change": -20.5
+      "vlsfo": 987.5,
+      "change": 14.5
     },
     {
       "port": "Houston",
       "code": "USHOU",
       "vlsfo": 763,
-      "change": 3
+      "change": 5.5
     }
   ],
   "briefing": {
-    "date": "2026-10-12",
+    "date": "2026-10-14",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
-        "title": "VesselAPI é a fonte válida mais recente",
-        "summary": "Ponto consolidado de 11 outubro, 1635Z: 23º07,34' S · 044º24,03' W, com 17 h 29 min no snapshot. MarineTraffic tinha 19 h 06 min; SPOT segue sem ponto e sem leitura de bateria."
+        "title": "MarineTraffic é a fonte válida mais recente",
+        "summary": "MarineTraffic · 23º07,60' S · 044º24,12' W · 9 h 02 min. VesselAPI: 11 h 13 min; SPOT sem ponto válido e sem leitura de bateria."
       },
       {
         "category": "SEGURANÇA",
-        "title": "Dois novos ataques confirmados em Ormuz e Sohar",
-        "summary": "Warnings 164–165, de 11 out.: tanker outbound sofreu dano por projétil em Ormuz e outro foi atingido por UAV no fundeadouro de Sohar. O Advisory 163 mantém alerta sobre interação entre tanker e forças militares no Golfo de Omã."
+        "title": "Três novos relatos tardios em Ormuz",
+        "summary": "Warnings 167–169: container inbound, product tanker outbound e crude tanker outbound atingidos por projéteis não identificados. Autoridades investigam; autoria não estabelecida."
       },
       {
         "category": "COSTA BR",
-        "title": "CHM 746 vigente até 130000Z",
-        "summary": "Vento SE/NE força 7 entre Touros e São Luís, até 80 MN da costa. Os avisos 747 (nevoeiro) e 748 (força 7 oceânico) são os outros dois mais recentes, mas suas janelas já terminaram."
+        "title": "CHM 750 vigente; 751–752 começam em 15 out.",
+        "summary": "Nevoeiros entre Mostardas e Laguna até 142100Z. Para 15 out., vento E/NE força 7 com rajadas e mar de 3–4 m no setor oceânico ao sul."
       },
       {
         "category": "METEO",
-        "title": "Simon e duas baixas severas no Atlântico Norte",
-        "summary": "Simon tinha 100 kt no Pacífico Leste. No Atlântico Norte, a NOAA registrava vento de força de furacão até 65 kt e outra tempestade de 55 kt, com mar significativo de até 9,5 m."
+        "title": "Tempestade de 60 kt no Pacífico Norte",
+        "summary": "Baixa de 973 hPa com 45–60 kt e mar de 6–8,5 m; no Atlântico Norte, duas áreas de gale mantêm 25–40 kt e mar de até 8 m."
       },
       {
         "category": "MERCADO",
-        "title": "Fretes seguem apertados; VLSFO fecha misto",
-        "summary": "1 ano TC: VLCC US$ 230 mil/dia, Suezmax US$ 165 mil e Aframax US$ 94 mil. Em 9 out., VLSFO subiu em Singapura, Rotterdam e Houston e recuou em Fujairah; referências indicativas."
+        "title": "W41 permanece; VLSFO sobe nos quatro hubs",
+        "summary": "Referências TC de 1 ano permanecem VLCC US$ 230 mil/dia, Suezmax US$ 165 mil e Aframax US$ 94 mil. VLSFO de 13 out. subiu em Singapura, Rotterdam, Fujairah e Houston."
       },
       {
         "category": "PASSAGENS",
-        "title": "Ormuz crítico; Panamá aumenta capacidade em 15 out.",
-        "summary": "Ataques de 11 out. ampliam o risco entre Ormuz e Sohar. A ACP mantém 32 slots/dia até 14 out. e anuncia 33 desde 15 out.; capacidade anunciada não é trânsito realizado."
+        "title": "Ormuz crítico; Panamá passa a 33 slots em 15 out.",
+        "summary": "Warnings 167–169 ampliam a sequência de ataques em ambos os sentidos. A capacidade anunciada do Panamá não equivale a trânsitos realizados."
       },
       {
         "category": "PSC",
@@ -2594,10 +2594,10 @@
   },
   "sources": [
     {
-      "name": "NautoShark",
-      "url": "https://www.nautoshark.com/",
-      "scope": "Mapa público NAVAREA e METAREA",
-      "typeLabel": "Complementar"
+      "name": "CHM — NAVAREA V",
+      "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar",
+      "scope": "Base pública oficial consultada em 14 out.; 32 avisos NAVAREA V reconhecidos no arquivo atualizado às 03:21",
+      "typeLabel": "Oficial"
     },
     {
       "name": "IMO — ECAs",
@@ -2620,7 +2620,7 @@
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-      "scope": "Consulta em 12 out.; boletim mais recente concluído permanece 29 set.–5 out. (um CAT 4), com dois CAT 3 anteriores preservados",
+      "scope": "Consulta em 14 out.; boletim mais recente permanece 29 set.–5 out.; registros anteriores preservados com datas originais",
       "typeLabel": "Oficial"
     },
     {
@@ -2632,19 +2632,19 @@
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Consulta em 12 out.; avisos 746–748 emitidos em 10 out.; somente o 746 permanecia vigente no snapshot",
+      "scope": "Consulta em 14 out.; avisos de mau tempo 750–752 emitidos em 13 out.; NAVAREA V oficial atualizado às 03:21",
       "typeLabel": "Oficial"
     },
     {
       "name": "NHC / NOAA",
       "url": "https://www.nhc.noaa.gov/",
-      "scope": "Furacão Simon no boletim de alto-mar de 12 out.",
+      "scope": "Boletins de alto-mar válidos em 14 out.; sem alerta tropical no Atlântico consultado",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Baixa com vento de força de furacão e tempestade no Atlântico Norte em 12 out.",
+      "scope": "Tempestade no Pacífico Norte e gales no Atlântico Norte válidos em 14 out.",
       "typeLabel": "Oficial"
     },
     {
@@ -2686,7 +2686,7 @@
     {
       "name": "Ship & Bunker",
       "url": "https://shipandbunker.com/prices",
-      "scope": "Preços indicativos VLSFO do fechamento de 9 out., consultados em 12 out.",
+      "scope": "Preços indicativos VLSFO do fechamento de 13 out., consultados em 14 out.",
       "typeLabel": "Indústria"
     },
     {
@@ -2698,7 +2698,7 @@
     {
       "name": "StockAnalysis / S&P Global Market Intelligence",
       "url": "https://stockanalysis.com/quote/bvmf/PETR4/history/",
-      "scope": "Fechamentos públicos de PETR3, PETR4, PBR e PBR.A em 9 out.; complemento de mercado",
+      "scope": "Fechamentos públicos de PETR3, PETR4, PBR e PBR.A em 13 out.; complemento de mercado",
       "typeLabel": "Mercado público / complementar"
     },
     {
@@ -2746,7 +2746,7 @@
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-      "scope": "Sistemas obrigatórios e páginas das autoridades reconsultados em 12 out.; não foi localizada mudança documental de limite, formato, frequência ou autoridade nos 13 sistemas",
+      "scope": "Treze sistemas e páginas das autoridades reconsultados em 14 out.; nenhuma mudança documental de limite, formato, frequência ou autoridade localizada",
       "typeLabel": "Oficial"
     },
     {
@@ -2764,19 +2764,19 @@
     {
       "name": "UKMTO — incidentes recentes",
       "url": "https://www.ukmto.org/",
-      "scope": "Warnings 164–165 e Advisory 163, relativos a incidentes de 10–11 out.; sem atribuição conclusiva",
+      "scope": "Warnings 167–169 publicados em 12 out.; três relatos tardios em trânsitos inbound/outbound de Ormuz, sem atribuição conclusiva",
       "typeLabel": "Oficial"
     },
     {
       "name": "Windward — análise pública",
       "url": "https://windward.ai/blog/tanker-attacks-spread-beyond-the-strait-of-hormuz-as-gulf-freight-costs-soar/",
-      "scope": "Consulta ao blog público em 12 out.; última análise nova relevante permanece a de 8 out. sobre ataques e fretes no Golfo, corroborada por UKMTO/Reuters",
+      "scope": "Blog público reconsultado em 14 out.; contexto sobre ataques/fretes permanece análise atribuída, corroborada por UKMTO onde aplicável",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
       "url": "https://channel16.dryadglobal.com/",
-      "scope": "Consulta em 12 out.; lista pública sinalizou incidentes de 11 out. em Ormuz/Sohar, deduplicados e corroborados nos Warnings 164–165 do UKMTO",
+      "scope": "Canal público reconsultado em 14 out.; nenhum achado novo não duplicado foi incorporado sem confirmação primária",
       "typeLabel": "Indústria / complementar"
     },
     {
