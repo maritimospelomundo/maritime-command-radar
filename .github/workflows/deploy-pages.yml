@@ -6,17 +6,14 @@ on:
   pull_request:
     branches: ["main"]
   workflow_dispatch:
-    inputs:
-      fetch_vesselapi:
-        description: 'Request collection within the four-per-day budget'
-        type: boolean
-        default: false
-        required: false
-  schedule:
-    - cron: "21 * * * *"
+  workflow_run:
+    workflows: ['Collect VesselAPI']
+    types: [completed]
+    branches: [main]
 
 permissions:
-  contents: write
+  actions: read
+  contents: read
   pages: write
   id-token: write
 
@@ -25,28 +22,32 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      publish: ${{ steps.check.outputs.result }}
+    steps:
+      - uses: actions/github-script@v7
+        id: check
+        with:
+          script: |
+            if (context.eventName !== 'workflow_run') return true;
+            const result = await github.rest.actions.listWorkflowRunArtifacts({owner: context.repo.owner, repo: context.repo.repo, run_id: context.payload.workflow_run.id});
+            return result.data.artifacts.some(a => a.name === 'ais-collected' && !a.expired);
   build:
+    needs: gate
+    if: needs.gate.outputs.publish == 'true' && ( github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Test VesselAPI integration
         run: node --test scripts/update-ais.test.mjs scripts/reserve-ais.test.mjs
-      # Hourly recovery; one durable reservation per six-hour Brasilia slot.
-      - name: Reserve VesselAPI request budget
-        id: budget
-        if: github.run_attempt == 1 && github.ref == 'refs/heads/main' && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.fetch_vesselapi))
-        run: node scripts/reserve-ais.mjs
-      - name: Fetch Abdias terrestrial AIS position
-        continue-on-error: true
-        if: steps.budget.outputs.allowed == 'true'
-        env:
-          VESSELAPI_API_KEY: ${{ secrets.VESSELAPI_API_KEY }}
-        run: node scripts/update-ais.mjs
       - name: Validate public data
         run: node scripts/validate-data.mjs
       - name: Test NAVAREA engine and failure preservation
@@ -55,19 +56,6 @@ jobs:
         run: node --test scripts/command-summary.test.mjs
       - name: Build reusable command summary
         run: node scripts/build-command-summary.mjs
-      - name: Persist VesselAPI position for every portal
-        if: steps.budget.outputs.allowed == 'true'
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add site/data/latest.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Update Abdias VesselAPI position'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-          node scripts/validate-data.mjs
-          node scripts/build-command-summary.mjs
       - name: Build public portals
         working-directory: public-portals
         env:

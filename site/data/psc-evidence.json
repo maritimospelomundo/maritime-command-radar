@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": null,
+  "coverage": "Base inicial do snapshot editorial; aguarda primeira pesquisa independente registrada.",
+  "changes": [],
+  "baseline": {
+    "snapshotAt": "2026-10-14T12:13:00.195Z",
+    "regimes": [
+      {
+        "name": "Paris MoU",
+        "region": "Europa + Atlântico Norte",
+        "status": "active",
+        "campaign": "Cargo Securing 2026",
+        "window": "01 set. — 30 nov. 2026",
+        "tankerFocus": "Aplicabilidade de CTUs pode ser limitada; documentar N/A e manter forte prontidão SOLAS/ISM/MARPOL.",
+        "source": {
+          "name": "Paris MoU",
+          "url": "https://parismou.org/paris-and-tokyo-mous-launch-2026-concentrated-inspection-campaign-on-cargo-securing/"
+        }
+      },
+      {
+        "name": "Tokyo MoU",
+        "region": "Ásia-Pacífico",
+        "status": "active",
+        "campaign": "Cargo Securing 2026",
+        "window": "01 set. — 30 nov. 2026",
+        "tankerFocus": "Além do questionário, atenção a fire safety, emergency systems, ISM e prevenção de poluição.",
+        "source": {
+          "name": "Tokyo MoU",
+          "url": "https://www.tokyo-mou.org/press-releases/2026/08/03/joint-press-release-on-the-concentrated-inspection-campaign-on-cargo-securing/"
+        }
+      },
+      {
+        "name": "Viña del Mar Agreement",
+        "region": "América Latina",
+        "status": "active",
+        "campaign": "Cargo Securing 2026",
+        "window": "01 set. — 30 nov. 2026",
+        "tankerFocus": "Confirmar implementação local no porto; coerência de registros, equipamentos e justificativas N/A.",
+        "source": {
+          "name": "Acuerdo de Viña del Mar",
+          "url": "https://alvm.prefecturanaval.gob.ar/el-acuerdo-de-vi-a-del-mar-anuncia-el-lanzamiento-de-la-campa-a-concentrada-de-inspecciones-cic-2026-sobre-sujeci-n-de-la-carga-dt64414"
+        }
+      },
+      {
+        "name": "Black Sea MoU",
+        "region": "Mar Negro",
+        "status": "active",
+        "campaign": "Cargo Securing 2026",
+        "window": "Campanha 2026 publicada; confirmar janela local",
+        "tankerFocus": "Somar risco regional/war-risk à prontidão PSC; documentação e condição real devem permanecer acessíveis.",
+        "source": {
+          "name": "Black Sea MoU",
+          "url": "https://bsmou.org/2026/08/press-release-cic-on-cargo-securing/"
+        }
+      },
+      {
+        "name": "Abuja MoU",
+        "region": "África Ocidental e Central",
+        "status": "announced",
+        "campaign": "Tema Cargo Securing endossado",
+        "window": "Detalhes completos não publicados no snapshot",
+        "tankerFocus": "Não aguardar questionário: preparar SOLAS/ISM/MARPOL e security para portos da região.",
+        "source": {
+          "name": "Abuja MoU",
+          "url": "https://abujamou.org/15th-port-state-control-committee-pscc15-and-3rd-bureau-meetings-of-the-abuja-mou/"
+        }
+      },
+      {
+        "name": "Mediterranean MoU",
+        "region": "Sul e leste do Mediterrâneo",
+        "status": "announced",
+        "campaign": "Participação na CIC Cargo Securing 2026 endossada",
+        "window": "Janela operacional própria não publicada no documento localizado",
+        "tankerFocus": "Preparar evidência SOLAS/ISM/MARPOL e justificar N/A para CTUs; confirmar implementação local antes da escala.",
+        "source": {
+          "name": "Mediterranean MoU",
+          "url": "https://www.medmou.org/Documents/2025-PR4.pdf"
+        }
+      },
+      {
+        "name": "Indian Ocean MoU",
+        "region": "Índico",
+        "status": "unconfirmed",
+        "campaign": "Sem confirmação oficial pública localizada",
+        "window": "Confirmar antes da escala",
+        "tankerFocus": "Foco provável inclui safety, MARPOL e condição do navio; não tratar notícia de indústria como campanha confirmada.",
+        "source": {
+          "name": "Indian Ocean MoU",
+          "url": "https://www.iomou.org/"
+        }
+      },
+      {
+        "name": "Caribbean MoU",
+        "region": "Caribe",
+        "status": "unconfirmed",
+        "campaign": "Sem campanha 2026 publicada na página consultada",
+        "window": "Últimas campanhas públicas visíveis: 2025",
+        "tankerFocus": "Revisar MARPOL, sewage, stability, ISM, fire safety e requisitos do terminal/porto.",
+        "source": {
+          "name": "Caribbean MoU",
+          "url": "https://www.caribbeanmou.org/latest-news"
+        }
+      },
+      {
+        "name": "Riyadh MoU",
+        "region": "Golfo Pérsico",
+        "status": "unconfirmed",
+        "campaign": "Sem campanha 2026 pública localizada",
+        "window": "Confirmar antes da escala",
+        "tankerFocus": "Somar PSC regular à exposição de segurança, GNSS e requisitos rigorosos de terminais petrolíferos.",
+        "source": {
+          "name": "Riyadh MoU",
+          "url": "https://riyadhmou.org/"
+        }
+      },
+      {
+        "name": "USCG Port State Control",
+        "region": "Estados Unidos",
+        "status": "national",
+        "campaign": "Regime nacional baseado em risco",
+        "window": "Contínuo; sem CIC nacional 2026 localizada",
+        "tankerFocus": "Priorizar Qualship/E-Zero, exams, OCMI/COTP, VRP, pollution prevention, security e prontidão operacional.",
+        "source": {
+          "name": "USCG Port State Control",
+          "url": "https://www.dco.uscg.mil/Our-Organization/Assistant-Commandant-for-Prevention-Policy-CG-5P/Inspections-Compliance-CG-5PC-/Commercial-Vessel-Compliance/Foreign-Offshore-Compliance-Division/Port-State-Control/"
+        }
+      }
+    ]
+  }
+}

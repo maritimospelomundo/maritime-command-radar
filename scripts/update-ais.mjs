@@ -82,18 +82,20 @@ export async function fetchAis(key, fetcher = fetch) {
 
 async function main() {
   const file = new URL('../site/data/latest.json', import.meta.url);
-  const data = JSON.parse(await readFile(file, 'utf8'));
-  const result = await fetchAis(process.env.VESSELAPI_API_KEY);
-  if (result.notFound) {
-    console.log('VesselAPI: nenhuma posição AIS terrestre nas últimas 80 horas; dados preservados.');
-    return;
+  const healthFile = new URL('../site/data/ais-health.json', import.meta.url);
+  let previous={};try{previous=JSON.parse(await readFile(healthFile,'utf8'));}catch{}
+  const attemptedAt=new Date().toISOString();
+  try {
+    const data=JSON.parse(await readFile(file,'utf8'));
+    const result=await fetchAis(process.env.VESSELAPI_API_KEY);
+    let next=data;
+    if(!result.notFound){next=applyAis(data,result.payload);const temp=new URL('../site/data/latest.json.tmp',import.meta.url);await writeFile(temp,JSON.stringify(next,null,2)+'\n');await rename(temp,file);}
+    const status=result.notFound?'no_data':data.vesselApiPosition?.lastKnown?.dateTime===next.vesselApiPosition?.lastKnown?.dateTime?'unchanged':'ok';
+    await writeFile(healthFile,JSON.stringify({...previous,status,lastAttemptAt:attemptedAt,lastSuccessAt:new Date().toISOString(),dataAt:next.vesselApiPosition?.lastKnown?.dateTime||null,error:null},null,2)+'\n');
+    console.log(JSON.stringify({status,dataAt:next.vesselApiPosition?.lastKnown?.dateTime||null}));
+  } catch(error){
+    await writeFile(healthFile,JSON.stringify({...previous,status:'failed',lastAttemptAt:attemptedAt,error:error.message},null,2)+'\n');throw error;
   }
-  const next = applyAis(data, result.payload);
-  const temp = new URL('../site/data/latest.json.tmp', import.meta.url);
-  await writeFile(temp, JSON.stringify(next, null, 2) + '\n');
-  await rename(temp, file);
-  const p = next.vesselApiPosition.lastKnown;
-  console.log(`VesselAPI validada: UTC=${p.dateTime}; lat=${p.latitude}; lon=${p.longitude}; histórico=${next.vesselApiPosition.history.length}; cota restante=${result.remaining ?? 'não informada'}.`);
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main().catch(error => {
   console.error(error.message);

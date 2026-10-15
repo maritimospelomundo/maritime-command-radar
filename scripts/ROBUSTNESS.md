@@ -1,0 +1,9 @@
+# Rotinas 15/10/2026
+
+- collect-ais.yml: único coletor VesselAPI, tentativa horária :21 UTC. Reserva durável em data/ais-request-ledger.json, uma por faixa de seis horas de Brasília, máximo quatro por dia incluindo falhas. Reexecuções não coletam. O artefato ais-collected só existe após persistência de dados/estado; deploy-pages.yml só compila após esse artefato, push real ou execução manual.
+- ais-health.json: tentativa, sucesso e horário real do último ponto separados. Falha preserva observação anterior. Workflow verde de publicação não comprova coleta.
+- Editorial diário 09h Brasília: consome posições e NAVAREA, não coleta. Reutiliza site/data/psc-evidence.json recente; não assume cobertura oficial sem evidência. generatedAt é compilação editorial.
+- NAVAREA independente pela manhã (referência 06h15 Brasília): Gmail incremental + CHM, banco privado único, exportação whitelist por scripts/export-navarea.mjs, publicação CAS. Autoriza-se divulgação dos avisos NautoShark conforme solicitação do proprietário em 15/10/2026. Sem dados de conta, assinatura ou notas privadas. Falha da fonte mantém última base com idade/erro real.
+- MarineTraffic horário: checkpoint privado de IDs já processados, janela de sobreposição de 48h, recuperação inicial 14dias; não repetir coleta AIS. checkedAt/lastImportedAt públicos somente quando uma importação foi efetivamente publicada. Consultas sem novidades ficam no estado privado, sem deploy vazio.
+- Estado privado por GET/POST /api/integrations do Portal Geral, credenciais restritas por rotina. Contrato completo no código privado lib/INTEGRATIONS.md. Dados do resumo por API/D1, sem reconstrução do Site.
+- Painel Saúde das fontes do Radar usa apenas dados públicos. Painel privado inclui entrega e checkpoints saneados. Ausência de execução registrada é sem confirmação, nunca sucesso presumido.
