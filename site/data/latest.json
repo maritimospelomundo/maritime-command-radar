@@ -41,7 +41,7 @@
       "cog": 221,
       "unixTime": 1792033200
     },
-    "checkedAt": "2026-09-28T10:35:18.763Z",
+    "checkedAt": "2026-10-15T11:12:56.379Z",
     "history": [
       {
         "dateTime": "2026-09-10T22:54:00Z",
@@ -561,7 +561,8 @@
         "cog": 221,
         "unixTime": 1792033200
       }
-    ]
+    ],
+    "lastImportedAt": "2026-10-15T11:12:56.379Z"
   },
   "vesselApiPosition": {
     "label": "VesselAPI",
