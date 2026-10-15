@@ -137,9 +137,12 @@ function distanceBand(distance) {
 
 async function resolveSourcePosition(config, sourceKey, sourceLabel) {
   let points = [];
-  if (config?.endpoint) {
+  const endpoint = config?.endpoint || (sourceKey === 'spot'
+    ? 'https://spot-vessel-position.maritimospelomundo.workers.dev/api/positions?days=90&limit=2000'
+    : null);
+  if (endpoint) {
     try {
-      const response = await fetch(config.endpoint, { cache: 'no-store' });
+      const response = await fetch(endpoint, { cache: 'no-store', signal: AbortSignal.timeout(10000) });
       if (response.ok) points = (await response.json()).points || [];
     } catch { /* usa o último snapshot publicado */ }
   }
@@ -148,7 +151,7 @@ async function resolveSourcePosition(config, sourceKey, sourceLabel) {
     .map((point) => ({ ...point, latitude: Number(point.latitude), longitude: Number(point.longitude), sourceKey, sourceLabel }))
     .filter((point) => Number.isFinite(pointTimestamp(point)) && pointTimestamp(point) <= Date.now())
     .sort((a, b) => pointTimestamp(a) - pointTimestamp(b));
-  return { current: points.at(-1) || null, points, isLive: Boolean(config?.endpoint && points.length > 1), mapUrl: config?.mapUrl };
+  return { current: points.at(-1) || null, points, isLive: Boolean(endpoint && points.length > 1), mapUrl: config?.mapUrl };
 }
 
 async function resolvePosition(spotConfig, marineTrafficConfig, vesselApiConfig) {
