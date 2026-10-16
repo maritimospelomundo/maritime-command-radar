@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-15T12:09:28.091Z",
+  "generatedAt": "2026-10-16T12:13:36.542Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -1307,20 +1307,20 @@
       {
         "label": "AÇÃO AGORA",
         "level": "high",
-        "value": "MarineTraffic · posição observada há 9 h 02 min",
-        "summary": "Ponto consolidado de 14 out., 0311Z: 23º07,60' S · 044º24,12' W. VesselAPI tinha 11 h 13 min; SPOT segue sem ponto e sem leitura de bateria."
+        "value": "VesselAPI · posição observada há 8 h 23 min",
+        "summary": "Ponto consolidado de 16 out., 0350Z: 23º07,57′ S · 044º24,16′ W. MarineTraffic tinha 9 h 02 min; SPOT segue sem ponto e sem leitura de bateria."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
-        "value": "CHM · avisos 750–752",
-        "summary": "O 750 prevê nevoeiros entre Mostardas e Laguna até 142100Z. Os avisos 751 e 752 entram em vigor em 150900Z, com vento força 7/rajadas e mar de 3–4 m."
+        "value": "CHM · avisos 753, 756 e 758",
+        "summary": "Avisos emitidos em 15 out. preveem vento W/SW força 7 com rajadas 8 e ondas de SW/S de 3–5 m no Atlântico Sul até 19 out.; confirmar por EGC/NAVTEX."
       },
       {
         "label": "PREPARAR",
         "level": "critical",
-        "value": "Ormuz · Warnings 167–169",
-        "summary": "UKMTO publicou em 12 out. três relatos verificados e tardios: container inbound, product tanker outbound e crude tanker outbound atingidos por projéteis não identificados."
+        "value": "Ormuz · 113 incidentes confirmados",
+        "summary": "A IMO mantém 113 incidentes e 24 mortes confirmadas até 14 out.; os três registros mais recentes, de 13 out., incluem um afundamento e dois navios danificados."
       }
     ],
     "modules": [
@@ -1376,12 +1376,12 @@
         "id": "chokepoints",
         "icon": "▲",
         "label": "CHOKEPOINTS",
-        "value": "Ormuz crítico · 167–169",
+        "value": "Ormuz crítico · 113 confirmados",
         "status": "high",
-        "summary": "Três novos relatos tardios publicados em 12 out. ampliam a sequência de ataques a navios inbound e outbound; manter avaliação específica, war-risk e autorização do CSO.",
+        "summary": "A IMO registra 113 incidentes confirmados e 24 mortes até 14 out.; manter avaliação específica, war-risk, redundância de navegação e autorização do CSO.",
         "source": {
-          "name": "UKMTO · incidentes recentes",
-          "url": "https://www.ukmto.org/"
+          "name": "IMO · incidentes confirmados",
+          "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
         }
       },
       {
@@ -1424,7 +1424,7 @@
   },
   "market": {
     "week": "W42",
-    "sourceLabel": "Fearnleys W42 (14 out.) para mercado e TC; Baltic W41 é o último roundup oficial localizado; Aframax TC mantém W41; VLSFO atualizado no fechamento de 14 out.",
+    "sourceLabel": "Fearnleys W42 (14 out.) para mercado e TC; Baltic W41 é o último roundup oficial localizado; Aframax TC mantém W41; VLSFO atualizado no fechamento de 15 out.",
     "benchmarks": [
       {
         "segment": "VLCC",
@@ -1530,7 +1530,7 @@
       "title": "Pirataria e roubo armado",
       "shortTitle": "Pirataria",
       "icon": "☠",
-      "description": "O ReCAAP publicou o boletim de 6–12 de outubro com um novo CAT 4 ocorrido em 3 de outubro, em Vung Tau. Os três registros ficam ordenados pela data do evento; não foram criados casos para completar a lista.",
+      "description": "ReCAAP reconsultado em 16 de outubro: o boletim de 6–12 de outubro permanece o mais recente e trouxe um CAT 4 ocorrido em 3 de outubro, em Vung Tau. Os três registros ficam ordenados pela data do evento; não foram criados casos para completar a lista.",
       "items": [
         {
           "id": "recaap-vung-tau-2026-10-03",
@@ -1596,16 +1596,16 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-      "description": "Boletins NOAA/NWS de 15 de outubro priorizam o furacão Trudy, a tempestade em rápida intensificação no Atlântico Norte e a tempestade no Pacífico Norte. Valores futuros são previsões oficiais, não observações.",
+      "description": "Boletins NOAA/NWS de 16 de outubro priorizam o furacão Trudy, a tempestade no Atlântico Norte e três áreas de gale no Pacífico Norte. Valores futuros são previsões oficiais, não observações.",
       "items": [
         {
-          "id": "nhc-hurricane-trudy-2026-10-15",
-          "date": "2026-10-15",
-          "region": "Pacífico Leste · 12,9°N 101,6°W",
+          "id": "nhc-hurricane-trudy-2026-10-16",
+          "date": "2026-10-16",
+          "region": "Pacífico Leste · 14,2°N 102,4°W",
           "level": "critical",
-          "headline": "Trudy: furacão de 65 kt com rápida intensificação prevista",
-          "summary": "Às 0900Z, Trudy tinha vento sustentado de 65 kt, rajadas de 80 kt e mar até 7,5 m; a previsão oficial indica 100 kt em 24 h e 115 kt em 48 h.",
-          "details": "O sistema movia-se para noroeste a 8 kt. A previsão indica mar até 8,5 m em 24 h e 10,5 m em 48 h; trajetórias e intensidade podem mudar.",
+          "headline": "Trudy: furacão de 105 kt com nova intensificação prevista",
+          "summary": "Às 0900Z, Trudy tinha vento sustentado de 105 kt, rajadas de 130 kt e mar até 9 m; a previsão oficial indica 125 kt e rajadas de 150 kt em 24 h.",
+          "details": "O sistema movia-se para noroeste a 5 kt. A previsão indica mar até 11,5 m em 24 h; trajetória e intensidade podem mudar.",
           "action": "Manter ampla margem do sistema, revalidar weather routing e ETA a cada boletim e suspender trabalho externo antes de entrar na área de influência.",
           "map": {
             "x": 21.78,
@@ -1613,18 +1613,18 @@
             "label": "Trudy"
           },
           "source": {
-            "name": "NHC / NOAA · High Seas Forecast · 15 out.",
+            "name": "NHC / NOAA · High Seas Forecast · 16 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         },
         {
-          "id": "noaa-north-atlantic-storm-2026-10-15",
-          "date": "2026-10-15",
-          "region": "Atlântico Norte · baixa em 47°N 59°W",
+          "id": "noaa-north-atlantic-storm-2026-10-16",
+          "date": "2026-10-16",
+          "region": "Atlântico Norte · baixa em 49°N 50°W",
           "level": "critical",
-          "headline": "Tempestade: 35–50 kt e mar até 9 m previstos",
-          "summary": "A baixa de 993 hPa gerava 25–40 kt e mar de 2,5–5 m; a previsão indica 35–50 kt em 24 h e mar de 4,5–9 m em 48 h.",
-          "details": "Síntese válida a partir de 0600Z. O centro é referência sinótica; a área perigosa cobre amplo setor do Atlântico Norte.",
+          "headline": "Tempestade: 40–55 kt em 6 h; mar até 11 m em 48 h",
+          "summary": "A baixa complexa de 977 hPa gerava 35–45 kt e mar de 3–6,5 m; a previsão indica 40–55 kt em 6 h e mar de 6–11 m no setor norte em 48 h.",
+          "details": "Síntese válida a partir de 0600Z de 16 de outubro. O centro é referência sinótica; a área perigosa cobre amplo setor do Atlântico Norte.",
           "action": "Revalidar derrota, ETA, peação e limites de heavy weather; evitar o quadrante de maior mar e manter margem de combustível para desvio.",
           "map": {
             "x": 33.61,
@@ -1632,26 +1632,26 @@
             "label": "Atlântico Norte"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · AT1 · 15 out.",
+            "name": "NOAA Ocean Prediction Center · AT1 · 16 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
           }
         },
         {
-          "id": "noaa-north-pacific-storm-2026-10-15",
-          "date": "2026-10-15",
-          "region": "Pacífico Norte · baixa em 55°N 142°W",
+          "id": "noaa-north-pacific-gales-2026-10-16",
+          "date": "2026-10-16",
+          "region": "Pacífico Norte · baixas em 56°N 152°W, 55°N 135°W e 44°N 178°W",
           "level": "high",
-          "headline": "Tempestade: 35–50 kt e mar de 4–6 m",
-          "summary": "A baixa de 991 hPa apresentava 35–50 kt no quadrante nordeste e mar significativo de 4–6 m.",
-          "details": "Boletim válido a partir de 0600Z; a previsão indica dissipação em terra em 24 horas, mas mantém 25–35 kt e mar de 3–5 m no setor costeiro.",
-          "action": "Evitar o núcleo, acompanhar a evolução junto à costa e ajustar velocidade/heading para reduzir esforços estruturais e embarque de água.",
+          "headline": "Três áreas de gale: até 40 kt e mar de 5,5 m",
+          "summary": "O boletim mantém três avisos de gale, com ventos de 25–40 kt e mar significativo de até 5,5 m no Pacífico Norte.",
+          "details": "Síntese válida a partir de 0600Z de 16 de outubro. As baixas deslocam-se em ritmos distintos; uma dissipa em terra e outra cruza para leste.",
+          "action": "Revalidar derrota em relação às três áreas, acompanhar a evolução e ajustar velocidade/heading para reduzir esforços estruturais e embarque de água.",
           "map": {
             "x": 10.56,
             "y": 19.44,
             "label": "Pacífico Norte"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · EP1 · 15 out.",
+            "name": "NOAA Ocean Prediction Center · EP1 · 16 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         }
@@ -1662,21 +1662,40 @@
       "title": "Costa do Brasil",
       "shortTitle": "Costa BR",
       "icon": "◆",
-      "description": "O CHM mantém dois avisos emitidos em 14 de outubro, com início em 161200Z, e o aviso de mar grosso emitido em 13 de outubro. Os horários abaixo permanecem em UTC; confirmar sempre por EGC/NAVTEX.",
+      "description": "O CHM publicou em 15 de outubro os avisos 753, 756 e 758 para o Atlântico Sul. Os horários permanecem em UTC; os polígonos no mapa são referências aproximadas e devem ser confirmados por EGC/NAVTEX.",
       "items": [
         {
-          "id": "chm-754-2026",
-          "date": "2026-10-14",
-          "region": "Chuí/RS a Laguna/SC · até 300 MN da costa",
+          "id": "chm-758-2026",
+          "date": "2026-10-15",
+          "region": "Atlântico Sul · 28,8–36°S / 43,1–52,9°W",
           "level": "high",
-          "headline": "Aviso 754: W/SW força 7 com rajadas 8",
-          "summary": "Vento W/SW força 7 com rajadas força 8 previsto a partir de 161200Z, válido até 180000Z.",
-          "details": "Aviso costeiro emitido às 1230Z de 14 de outubro. A posição do mapa representa aproximadamente o trecho oficial.",
-          "action": "Revalidar janela costeira, estabilidade, velocidade/heading, peação e trabalho externo antes da entrada em vigor.",
+          "headline": "Aviso 758: mar grosso/muito grosso de 3–5 m",
+          "summary": "Ondas de SW/S de 3–5 m previstas a partir de 161800Z, válidas até 191500Z.",
+          "details": "Aviso oceânico emitido às 1400Z de 15 de outubro. A geometria do mapa é referência aproximada da área oficial.",
+          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e trabalho externo; considerar ondas individuais acima da altura significativa.",
           "map": {
-            "x": 36.15,
-            "y": 66.56,
-            "label": "CHM 754"
+            "x": 36.64,
+            "y": 68,
+            "label": "CHM 758"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
+        {
+          "id": "chm-756-2026",
+          "date": "2026-10-15",
+          "region": "Atlântico Sul · 25,6–31°S / 39,5–48,6°W",
+          "level": "high",
+          "headline": "Aviso 756: W/SW força 7 com rajadas 8",
+          "summary": "Vento W/SW força 7 com rajadas força 8 previsto a partir de 170300Z, válido até 190600Z.",
+          "details": "Aviso oceânico emitido às 1300Z de 15 de outubro. A geometria do mapa é referência aproximada da área oficial.",
+          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho no convés antes da entrada em vigor.",
+          "map": {
+            "x": 38.02,
+            "y": 65.66,
+            "label": "CHM 756"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -1685,36 +1704,17 @@
         },
         {
           "id": "chm-753-2026",
-          "date": "2026-10-14",
-          "region": "Atlântico Sul · 27–36°S / 30–48°W",
-          "level": "critical",
-          "headline": "Aviso 753: SE/NE força 8/9 com rajadas 9",
-          "summary": "Vento SE/NE força 8/9 com rajadas força 9 previsto no polígono oceânico a partir de 161200Z, válido até 180000Z.",
-          "details": "Aviso oceânico emitido às 1230Z de 14 de outubro. A geometria do mapa é referência aproximada da área oficial.",
-          "action": "Evitar o setor mais severo, revalidar weather routing, peação, esforços estruturais e limites de trabalho no convés.",
-          "map": {
-            "x": 39.17,
-            "y": 67.5,
-            "label": "CHM 753"
-          },
-          "source": {
-            "name": "CHM / Marinha do Brasil",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
-        },
-        {
-          "id": "chm-751-2026",
-          "date": "2026-10-13",
-          "region": "Atlântico Sul · 34,8–36°S / 39–51°W",
+          "date": "2026-10-15",
+          "region": "Área Sul Oceânica · 23,2–31°S / 38–48,5°W",
           "level": "high",
-          "headline": "Aviso 751: mar de 3–4 m até 161800Z",
-          "summary": "Ondas de E/NE de 3–4 m previstas no polígono oceânico desde 150900Z, válidas até 161800Z.",
-          "details": "Aviso emitido às 1232Z de 13 de outubro. Ondas individuais podem superar a altura significativa.",
+          "headline": "Aviso 753: mar grosso/muito grosso de 3–5 m",
+          "summary": "Ondas de SW/S de 3–5 m previstas a partir de 170900Z, válidas até 191800Z.",
+          "details": "Aviso da Área Sul Oceânica emitido às 1400Z de 15 de outubro. A geometria do mapa é referência aproximada da área oficial.",
           "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e trabalho externo; confirmar atualização por EGC/NAVTEX.",
           "map": {
-            "x": 37.22,
-            "y": 68.06,
-            "label": "CHM 751"
+            "x": 38.14,
+            "y": 64.78,
+            "label": "CHM 753"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -1728,7 +1728,7 @@
       "title": "Conflito e segurança de rota",
       "shortTitle": "Segurança",
       "icon": "▲",
-      "description": "A IMO confirmou três incidentes em 13 de outubro: um navio afundou e dois foram danificados, sem poluição reportada. A MPA de Singapura informou que os dois navios de sua bandeira foram atingidos por projéteis desconhecidos; não há autoria confirmada.",
+      "description": "A lista da IMO, reconsultada em 16 de outubro e atualizada até 14 de outubro, mantém como três registros mais recentes os incidentes de 13 de outubro: um navio afundou e dois foram danificados, sem poluição reportada. A MPA de Singapura informou projéteis desconhecidos; não há autoria confirmada.",
       "items": [
         {
           "id": "imo-hormuz-gfs-pride-2026-10-13",
@@ -1794,7 +1794,7 @@
       "title": "Navegação eletrônica e portos",
       "shortTitle": "Nav/Portos",
       "icon": "⌁",
-      "description": "Contexto operacional complementar reconsultado em 15 de outubro. Nenhum registro primário mais novo, não duplicado e diretamente acionável substituiu os três existentes; análises Windward/Dryad permanecem atribuídas.",
+      "description": "Contexto operacional complementar reconsultado em 16 de outubro. A Windward publicou análise geral de customs/intelligence em 15 de outubro, sem novo incidente diretamente acionável; a Dryad não publicou análise aberta mais recente que 8 de outubro. Nenhum registro primário novo e não duplicado substituiu os três existentes.",
       "items": [
         {
           "id": "usg-asia-freight-2026-10-09",
@@ -2277,7 +2277,7 @@
     "end": "2026-11-30",
     "statusLabel": "4 ATIVAS · 2 ANUNCIADAS",
     "pulseLabel": "4 CICs ativas",
-    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea têm publicação oficial de campanha ativa; Mediterranean e Abuja endossaram participação/tema, mas sem lançamento operacional completo localizado no snapshot.",
+    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea têm campanha ativa; Mediterranean mantém anúncio sem lançamento operacional completo. Abuja aprovou para 2027 uma CIC de espaços confinados, ainda sem questionário ou janela publicada.",
     "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
     "readiness": [
       "Preparar matriz PSC específica do próximo porto, regime e histórico do navio.",
@@ -2286,7 +2286,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-    "note": "Campanhas oficiais reconsultadas em 15 out. 2026. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada; USCG mantém programa nacional contínuo.",
+    "note": "Evidência oficial PSC verificada em 16 out. 2026. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. USCG mantém programa nacional contínuo e esclarece que crédito Performance-Driven COC não isenta a taxa do exame anual/intermediário.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -2340,12 +2340,12 @@
         "name": "Abuja MoU",
         "region": "África Ocidental e Central",
         "status": "announced",
-        "campaign": "Tema Cargo Securing endossado",
-        "window": "Detalhes completos não publicados no snapshot",
-        "tankerFocus": "Não aguardar questionário: preparar SOLAS/ISM/MARPOL e security para portos da região.",
+        "campaign": "CIC 2027 — espaços confinados",
+        "window": "Aprovada; datas e questionário ainda não publicados",
+        "tankerFocus": "Manter permissões, avaliação de risco, exercícios, treinamento e equipamentos de entrada/resgate prontos; aguardar questionário oficial antes de criar checklist específico.",
         "source": {
           "name": "Abuja MoU",
-          "url": "https://abujamou.org/15th-port-state-control-committee-pscc15-and-3rd-bureau-meetings-of-the-abuja-mou/"
+          "url": "https://abujamou.org/16th-port-state-control-committee-pscc16-and-6th-ministerial-conference-of-the-abuja-mou/"
         }
       },
       {
@@ -2400,12 +2400,12 @@
         "name": "USCG Port State Control",
         "region": "Estados Unidos",
         "status": "national",
-        "campaign": "Regime nacional baseado em risco",
-        "window": "Contínuo; sem CIC nacional 2026 localizada",
-        "tankerFocus": "Priorizar Qualship/E-Zero, exams, OCMI/COTP, VRP, pollution prevention, security e prontidão operacional.",
+        "campaign": "Regime nacional baseado em risco / Performance-Driven COC",
+        "window": "Contínuo; crédito de exame por carta não isenta taxa de 46 CFR § 2.10",
+        "tankerFocus": "Priorizar COC, OCMI/COTP, VRP, pollution prevention e security; manter carta formal de crédito e comprovante da taxa aplicável disponíveis antes da escala.",
         "source": {
-          "name": "USCG Port State Control",
-          "url": "https://www.dco.uscg.mil/Our-Organization/Assistant-Commandant-for-Prevention-Policy-CG-5P/Inspections-Compliance-CG-5PC-/Commercial-Vessel-Compliance/Foreign-Offshore-Compliance-Division/Port-State-Control/"
+          "name": "USCG Maritime Commons",
+          "url": "https://www.news.uscg.mil/maritime-commons/Article/4591234/coast-guard-clarifies-user-fees-associated-with-performance-driven-certificate/"
         }
       }
     ]
@@ -2432,31 +2432,31 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 63.78,
+        "price": 64.22,
         "currencySymbol": "R$",
-        "changePercent": 1.14,
-        "trend": "Alta no fechamento",
-        "capturedAtLabel": "13 out. 2026 · fechamento público",
+        "changePercent": -1.23,
+        "trend": "Baixa no fechamento",
+        "capturedAtLabel": "15 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/quote/bvmf/PETR3/history/"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 56.85,
+        "price": 57.36,
         "currencySymbol": "R$",
-        "changePercent": 1.52,
-        "trend": "Alta no fechamento",
-        "capturedAtLabel": "13 out. 2026 · fechamento público",
+        "changePercent": -1.29,
+        "trend": "Baixa no fechamento",
+        "capturedAtLabel": "15 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/quote/bvmf/PETR4/history/"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 25.5,
+        "price": 25.3,
         "currencySymbol": "US$",
-        "changePercent": 0.32,
-        "trend": "Alta no fechamento",
-        "capturedAtLabel": "13 out. 2026 · fechamento público",
+        "changePercent": -2.47,
+        "trend": "Baixa no fechamento",
+        "capturedAtLabel": "15 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/stocks/pbr/history/"
       },
       {
@@ -2464,9 +2464,9 @@
         "market": "NYSE · ADR PN",
         "price": 22.61,
         "currencySymbol": "US$",
-        "changePercent": -0.04,
-        "trend": "Leve baixa no fechamento",
-        "capturedAtLabel": "13 out. 2026 · fechamento público",
+        "changePercent": -1.95,
+        "trend": "Baixa no fechamento",
+        "capturedAtLabel": "15 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/stocks/pbr.a/history/"
       }
     ],
@@ -2657,36 +2657,36 @@
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 917,
-      "change": 10
+      "vlsfo": 911.5,
+      "change": -5.5
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 742,
-      "change": 5.5
+      "vlsfo": 735.5,
+      "change": -6.5
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 986,
-      "change": -1.5
+      "vlsfo": 970.5,
+      "change": -15.5
     },
     {
       "port": "Houston",
       "code": "USHOU",
-      "vlsfo": 765,
-      "change": 2
+      "vlsfo": 764,
+      "change": -1
     }
   ],
   "briefing": {
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
         "title": "VesselAPI é a fonte válida mais recente",
-        "summary": "VesselAPI · 23º07,36′ S · 044º24,14′ W · 6 h 16 min. MarineTraffic: 9 h 09 min; SPOT sem ponto válido e sem leitura de bateria."
+        "summary": "VesselAPI · 23º07,57′ S · 044º24,16′ W · 8 h 23 min. MarineTraffic: 9 h 02 min; SPOT sem ponto válido e sem leitura de bateria."
       },
       {
         "category": "SEGURANÇA",
@@ -2695,18 +2695,18 @@
       },
       {
         "category": "COSTA BR",
-        "title": "CHM: força 8/9 e rajadas 9 a partir de 161200Z",
-        "summary": "Avisos 753–754 cobrem o setor oceânico e a costa de Chuí a Laguna; aviso 751 mantém mar de 3–4 m até 161800Z. Confirmar por EGC/NAVTEX."
+        "title": "CHM: novos avisos de vento e mar de 3–5 m",
+        "summary": "Avisos 753, 756 e 758, emitidos em 15 out., cobrem o Atlântico Sul com vento força 7/rajadas 8 e ondas de 3–5 m até 19 out. Confirmar por EGC/NAVTEX."
       },
       {
         "category": "METEO",
-        "title": "Trudy intensifica; Atlântico Norte entra em tempestade",
-        "summary": "Trudy tinha 65 kt às 0900Z, com previsão de 100 kt em 24 h. No Atlântico Norte, a previsão chega a 35–50 kt e mar de 9 m em 48 h."
+        "title": "Trudy chega a 105 kt; Atlântico Norte mantém tempestade",
+        "summary": "Trudy tinha 105 kt às 0900Z de 16 out., com previsão de 125 kt em 24 h. No Atlântico Norte, a previsão chega a 40–55 kt em 6 h e mar de 11 m em 48 h."
       },
       {
         "category": "MERCADO",
-        "title": "W42 corrige VLCC, mas fretes permanecem extremos",
-        "summary": "TC de 1 ano: VLCC US$ 225 mil/dia e Suezmax US$ 165 mil; Aframax mantém último valor público de US$ 94 mil. BDTI/BCTI W41: 7.991/2.440; VLSFO de 14 out. atualizado."
+        "title": "W42 corrige VLCC; bunker fecha 15 out. em baixa",
+        "summary": "TC de 1 ano: VLCC US$ 225 mil/dia e Suezmax US$ 165 mil; Aframax mantém último valor público de US$ 94 mil. BDTI/BCTI W41: 7.991/2.440; VLSFO de 15 out. atualizado."
       },
       {
         "category": "PASSAGENS",
@@ -2715,8 +2715,8 @@
       },
       {
         "category": "PSC",
-        "title": "Quatro CICs Cargo Securing seguem ativas",
-        "summary": "Paris, Tokyo, Viña del Mar e Black Sea ativos; Abuja e Mediterranean anunciados; três regimes sem confirmação oficial e USCG nacional contínuo."
+        "title": "Quatro CICs ativas; Abuja anuncia campanha de 2027",
+        "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativos. Abuja aprovou CIC 2027 de espaços confinados, ainda sem janela/questionário; USCG esclareceu que crédito de exame COC não isenta taxa."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -2749,7 +2749,7 @@
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-      "scope": "Consulta em 15 out.; boletim 6–12 out. publica um CAT 4 ocorrido em 3 out. em Vung Tau",
+      "scope": "Consulta em 16 out.; boletim 6–12 out. permanece o mais recente e publica um CAT 4 ocorrido em 3 out. em Vung Tau",
       "typeLabel": "Oficial"
     },
     {
@@ -2761,19 +2761,19 @@
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Consulta em 15 out.; avisos de mau tempo 753–754 emitidos em 14 out. e 751 ainda vigente",
+      "scope": "Consulta em 16 out.; avisos 753, 756 e 758 emitidos em 15 out. para vento força 7/rajadas 8 e mar de 3–5 m",
       "typeLabel": "Oficial"
     },
     {
       "name": "NHC / NOAA",
       "url": "https://www.nhc.noaa.gov/",
-      "scope": "Furacão Trudy e tempestade tropical Simon às 0900Z de 15 out.; valores futuros identificados como previsão",
+      "scope": "Furacão Trudy com 105 kt às 0900Z de 16 out.; valores futuros identificados como previsão",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Tempestades no Atlântico e Pacífico Norte válidas a partir de 0600Z de 15 out.",
+      "scope": "Tempestade no Atlântico e três áreas de gale no Pacífico Norte válidas a partir de 0600Z de 16 out.",
       "typeLabel": "Oficial"
     },
     {
@@ -2815,7 +2815,7 @@
     {
       "name": "Ship & Bunker",
       "url": "https://shipandbunker.com/prices",
-      "scope": "Preços indicativos VLSFO do fechamento de 14 out., consultados em 15 out.",
+      "scope": "Preços indicativos VLSFO do fechamento de 15 out., consultados em 16 out.",
       "typeLabel": "Indústria"
     },
     {
@@ -2825,9 +2825,21 @@
       "typeLabel": "Oficial"
     },
     {
+      "name": "Abuja MoU",
+      "url": "https://abujamou.org/16th-port-state-control-committee-pscc16-and-6th-ministerial-conference-of-the-abuja-mou/",
+      "scope": "PSCC16: CIC 2027 de espaços confinados aprovada, ainda sem datas ou questionário",
+      "typeLabel": "Oficial"
+    },
+    {
+      "name": "USCG Maritime Commons",
+      "url": "https://www.news.uscg.mil/maritime-commons/Article/4591234/coast-guard-clarifies-user-fees-associated-with-performance-driven-certificate/",
+      "scope": "Clarificação Performance-Driven COC: crédito do exame não isenta a taxa de 46 CFR § 2.10",
+      "typeLabel": "Oficial"
+    },
+    {
       "name": "StockAnalysis / S&P Global Market Intelligence",
       "url": "https://stockanalysis.com/quote/bvmf/PETR4/history/",
-      "scope": "Fechamentos públicos de PETR3, PETR4, PBR e PBR.A em 13 out.; complemento de mercado",
+      "scope": "Fechamentos públicos de PETR3, PETR4, PBR e PBR.A em 15 out.; complemento de mercado",
       "typeLabel": "Mercado público / complementar"
     },
     {
@@ -2875,7 +2887,7 @@
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-      "scope": "Treze sistemas e páginas das autoridades reconsultados em 15 out.; nenhuma mudança documental comprovada de limite, formato, frequência ou autoridade",
+      "scope": "Treze sistemas e páginas das autoridades reconsultados em 16 out.; nenhuma mudança documental comprovada de limite, formato, frequência ou autoridade",
       "typeLabel": "Oficial"
     },
     {
@@ -2893,19 +2905,19 @@
     {
       "name": "IMO / MPA Singapore — incidentes confirmados",
       "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
-      "scope": "Três incidentes de 13 out.: um navio afundado e dois danificados; MPA confirma tripulações seguras nos dois casos de sua bandeira",
+      "scope": "Lista IMO reconsultada em 16 out.; três incidentes de 13 out. permanecem os mais recentes: um navio afundado e dois danificados",
       "typeLabel": "Oficial"
     },
     {
       "name": "Windward — análise pública",
       "url": "https://windward.ai/blog/",
-      "scope": "Blog público reconsultado em 15 out.; análise de 14 out. sobre cabos submarinos não foi convertida em incidente sem confirmação primária",
+      "scope": "Blog público reconsultado em 16 out.; artigo de 15 out. sobre customs/intelligence não foi tratado como incidente operacional",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
       "url": "https://channel16.dryadglobal.com/",
-      "scope": "Canal público reconsultado em 15 out.; nenhum achado novo, não duplicado e corroborado por fonte primária foi incorporado",
+      "scope": "Canal público reconsultado em 16 out.; análise aberta mais recente permanece em 8 out. e nenhum achado novo corroborado foi incorporado",
       "typeLabel": "Indústria / complementar"
     },
     {
