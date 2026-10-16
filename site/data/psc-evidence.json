@@ -1,8 +1,27 @@
 {
   "schemaVersion": 1,
-  "checkedAt": null,
-  "coverage": "Base inicial do snapshot editorial; aguarda primeira pesquisa independente registrada.",
-  "changes": [],
+  "checkedAt": "2026-10-16T10:44:39.066Z",
+  "coverage": "Consultadas com sucesso em 2026-10-16: OCIMF (SIRE 2.0 e newsletter), Paris MoU, Tokyo MoU, Viña del Mar (página oficial de notícias), Caribbean MoU, Abuja MoU (comunicado PSCC16 em HTML), Black Sea MoU, Mediterranean MoU, Indian Ocean MoU, Riyadh MoU e USCG Maritime Commons (conteúdo oficial confirmado por páginas oficiais de categoria/tag). Falhas parciais: acesso direto ao PDF do Abuja MoU e à página individual/landing page da USCG retornou erro; a confirmação foi feita nas páginas HTML oficiais acessíveis. Fonte indisponível não foi tratada como ausência de mudança.",
+  "changes": [
+    {
+      "id": "abujamou-2027-cic-enclosed-spaces-announced-2026-09-29",
+      "title": "Abuja MoU aprova CIC 2027 sobre espaços confinados",
+      "sourceUrl": "https://abujamou.org/16th-port-state-control-committee-pscc16-and-6th-ministerial-conference-of-the-abuja-mou/",
+      "publishedAt": "2026-10-07",
+      "effectiveAt": null,
+      "summary": "Baseline já notificado ao usuário em 12/10/2026: anúncio oficial de aprovação de uma CIC 2027 sobre espaços confinados. O comunicado não publica questionário, datas exatas, critérios de inspeção ou vigência; portanto, ainda não constitui campanha operacional detalhada.",
+      "action": "Exigência publicada: nenhuma nova exigência operacional detalhada foi publicada. Recomendação prática: manter procedimentos, exercícios, permissões, avaliação de risco, registros de treinamento e equipamentos de entrada e resgate em espaços confinados prontos para revisão; aguardar o questionário oficial antes de criar checklist específico."
+    },
+    {
+      "id": "uscg-foreign-tank-vessel-pd-coc-user-fee-clarification-2026-09-04",
+      "title": "USCG mantém taxa do exame anual mesmo quando COC é creditado por carta",
+      "sourceUrl": "https://www.news.uscg.mil/maritime-commons/Article/4591234/coast-guard-clarifies-user-fees-associated-with-performance-driven-certificate/",
+      "publishedAt": "2026-09-04",
+      "effectiveAt": null,
+      "summary": "Baseline material fora da janela de alerta inicial: a USCG esclareceu que a tabela de taxas de 46 CFR § 2.10 continua aplicável a navio-tanque estrangeiro cujo exame anual intermediário seja creditado por carta formal sob o Performance-Driven COC Examination Schedule. A inspeção física pode ser dispensada, mas a taxa não.",
+      "action": "Exigência publicada: não tratar a carta de crédito do exame anual como isenção de user fee. Recomendação prática: confirmar com armador/agente o pagamento aplicável, manter a carta formal de crédito disponível a bordo com a documentação do ciclo COC e alinhar a data do exame e o comprovante de taxa antes da escala nos EUA."
+    }
+  ],
   "baseline": {
     "snapshotAt": "2026-10-14T12:13:00.195Z",
     "regimes": [
