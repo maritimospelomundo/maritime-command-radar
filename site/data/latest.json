@@ -31,17 +31,17 @@
       "Any validated MarineTraffic notification with observed UTC time and position"
     ],
     "lastKnown": {
-      "dateTime": "2026-10-17T03:11:00Z",
-      "latitude": -23.126666666666665,
-      "longitude": -44.4,
-      "eventType": "Position Report",
+      "dateTime": "2026-10-17T15:04:00Z",
+      "latitude": -23.122166666666665,
+      "longitude": -44.400333333333336,
+      "eventType": "Noon Position Report",
       "sourceType": "terrestrial",
       "positionSource": "TERR-AIS",
       "sog": 0,
-      "cog": 78,
-      "unixTime": 1792206660
+      "cog": 331,
+      "unixTime": 1792249440
     },
-    "checkedAt": "2026-10-17T04:07:49.387Z",
+    "checkedAt": "2026-10-17T15:34:11.349Z",
     "history": [
       {
         "dateTime": "2026-09-10T22:54:00Z",
@@ -604,9 +604,20 @@
         "sog": 0,
         "cog": 78,
         "unixTime": 1792206660
+      },
+      {
+        "dateTime": "2026-10-17T15:04:00Z",
+        "latitude": -23.122166666666665,
+        "longitude": -44.400333333333336,
+        "eventType": "Noon Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0,
+        "cog": 331,
+        "unixTime": 1792249440
       }
     ],
-    "lastImportedAt": "2026-10-17T04:07:49.387Z"
+    "lastImportedAt": "2026-10-17T15:34:11.349Z"
   },
   "vesselApiPosition": {
     "label": "VesselAPI",
@@ -1794,7 +1805,7 @@
           "details": "Aviso de ressaca emitido às 1500Z de 16 de outubro. O ponto no mapa é apenas referência aproximada do trecho costeiro oficial.",
           "action": "Reavaliar operações costeiras, fundeio, praticagem e trabalho externo; confirmar atualização por EGC/NAVTEX e autoridade local.",
           "map": {
-            "x": 36.0,
+            "x": 36,
             "y": 67.3,
             "label": "CHM 763"
           },
