@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-17T10:46:14.492Z",
-  "coverage": "Consultadas com sucesso em 2026-10-17 após a verificação anterior: OCIMF (página SIRE 2.0 e newsletter), Paris MoU, Tokyo MoU, Caribbean MoU, Abuja MoU (publicações), Black Sea MoU (press releases) e Mediterranean MoU. Falhas desta rodada: páginas diretas do Viña del Mar, Indian Ocean MoU, Riyadh MoU e USCG retornaram erro; buscas oficiais complementares não localizaram publicação material posterior ao checkedAt anterior, mas essas falhas não foram tratadas como prova de ausência de mudança. Nenhuma mudança material confirmada nas fontes efetivamente acessadas.",
+  "checkedAt": "2026-10-18T11:28:14.677Z",
+  "coverage": "Consultadas com sucesso em 2026-10-18 após a verificação anterior: OCIMF (página SIRE 2.0 e pesquisa oficial), Paris MoU, Tokyo MoU, Caribbean MoU, Black Sea MoU, Mediterranean MoU e Riyadh MoU. Falhas desta rodada: páginas diretas do Viña del Mar, Abuja MoU, Indian Ocean MoU e USCG retornaram erro; buscas oficiais complementares não localizaram publicação material posterior ao checkedAt anterior, mas essas falhas não foram tratadas como prova de ausência de mudança. Nenhuma mudança material confirmada nas fontes efetivamente acessadas.",
   "changes": [
     {
       "id": "abujamou-2027-cic-enclosed-spaces-announced-2026-09-29",
