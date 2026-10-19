@@ -710,7 +710,7 @@
   "vesselApiPosition": {
     "label": "VesselAPI",
     "provider": "VesselAPI terrestrial AIS",
-    "checkedAt": "2026-10-19T13:33:06.351Z",
+    "checkedAt": "2026-10-19T19:58:19.306Z",
     "refreshIntervalMinutes": 360,
     "history": [
       {
@@ -1561,7 +1561,7 @@
       "longitude": -40.88195,
       "eventType": "Position Report",
       "sourceType": "terrestrial",
-      "importedAt": "2026-10-19T13:33:06.351Z",
+      "importedAt": "2026-10-19T19:58:19.306Z",
       "sog": 0.1,
       "cog": 3.4,
       "heading": 115
