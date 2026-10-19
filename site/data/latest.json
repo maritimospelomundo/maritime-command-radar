@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-18T12:08:50.046Z",
+  "generatedAt": "2026-10-19T12:17:36.760Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -1861,62 +1861,62 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-      "description": "Boletins NOAA/NWS de 18 de outubro priorizam o furacão Trudy e tempestades no Atlântico e Pacífico Norte. Valores futuros são previsões oficiais, não observações.",
+      "description": "Boletins NOAA/NWS de 19 de outubro priorizam uma baixa com força de furacão no Pacífico Norte, uma tempestade no Atlântico Norte e Trudy em enfraquecimento. Valores futuros são previsões oficiais, não observações.",
       "items": [
         {
-          "id": "nhc-hurricane-trudy-2026-10-18",
-          "date": "2026-10-18",
-          "region": "Pacífico Leste · 18,6°N 106,3°W",
+          "id": "noaa-north-pacific-hurricane-force-2026-10-19",
+          "date": "2026-10-19",
+          "region": "Pacífico Norte · baixa em 44°N 173°W",
           "level": "critical",
-          "headline": "Trudy: 90 kt, rajadas de 110 kt e mar de 11 m",
-          "summary": "Às 0900Z, Trudy tinha vento sustentado de 90 kt, rajadas de 110 kt e mar até 11 m; a previsão oficial indica enfraquecimento para 70 kt em 24 h.",
-          "details": "O sistema movia-se para noroeste a 9 kt. A previsão indica mar até 7,5 m em 24 h e vento sustentado de 55 kt em 36 h e 40 kt em 48 h; trajetória e intensidade podem mudar.",
+          "headline": "Baixa deve atingir 50–65 kt e mar de 8,5 m",
+          "summary": "A baixa de 1004 hPa deve intensificar rapidamente; a previsão de 30 h indica vento de 50–65 kt e mar de 4,5–8,5 m nos quadrantes sul e sudoeste.",
+          "details": "Síntese NOAA válida às 0600Z de 19 de outubro. O centro deve deslocar-se rapidamente para nordeste; os valores de 30 h são previsão oficial e exigem revalidação a cada boletim.",
           "action": "Manter ampla margem do sistema, revalidar weather routing e ETA a cada boletim e suspender trabalho externo antes de entrar na área de influência.",
           "map": {
-            "x": 20.94,
-            "y": 39.67,
-            "label": "Trudy"
+            "x": 1.94,
+            "y": 25.56,
+            "label": "Pacífico Norte"
           },
           "source": {
-            "name": "NHC / NOAA · High Seas Forecast · 18 out.",
+            "name": "NOAA Ocean Prediction Center · EP1 · 19 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         },
         {
-          "id": "noaa-north-atlantic-storm-2026-10-18",
-          "date": "2026-10-18",
-          "region": "Atlântico Norte · baixa em 65°N 37°W",
+          "id": "noaa-north-atlantic-storm-2026-10-19",
+          "date": "2026-10-19",
+          "region": "Atlântico Norte · baixa em 65°N 36°W",
           "level": "critical",
-          "headline": "Tempestade: 40–55 kt e mar até 9,5 m",
-          "summary": "A baixa complexa de 972 hPa gerava 30–45 kt e mar de 5–9,5 m; a previsão indica 40–55 kt e mar de 5–9 m em 24 h.",
-          "details": "Síntese válida a partir de 0600Z de 18 de outubro. O centro é referência sinótica; a área perigosa cobre amplo setor a leste e sudeste da Groenlândia.",
+          "headline": "Tempestade: 35–50 kt e mar de 4–8 m",
+          "summary": "A baixa de 972 hPa gerava vento de 35–50 kt e mar de 4–8 m entre 58°N e 62°N, a leste de 43°W.",
+          "details": "Síntese NOAA válida às 0600Z de 19 de outubro. Em 48 h, a baixa deve permanecer complexa, com setores de 35–45 kt e mar de 3–6 m; a área perigosa é ampla.",
           "action": "Revalidar derrota, ETA, peação e limites de heavy weather; evitar o quadrante de maior mar e manter margem de combustível para desvio.",
           "map": {
-            "x": 39.72,
+            "x": 40,
             "y": 13.89,
             "label": "Atlântico Norte"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · AT1 · 18 out.",
+            "name": "NOAA Ocean Prediction Center · AT1 · 19 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
           }
         },
         {
-          "id": "noaa-north-pacific-storm-2026-10-18",
-          "date": "2026-10-18",
-          "region": "Pacífico Norte · baixa em 45°N 146°W",
-          "level": "critical",
-          "headline": "Tempestade: 35–50 kt e mar até 7,5 m em 24 h",
-          "summary": "A baixa de 1008 hPa gerava 25–35 kt e mar de 2,5–4,5 m; a previsão de 24 h indica 35–50 kt e mar de 3,5–7,5 m.",
-          "details": "Síntese válida a partir de 0600Z de 18 de outubro. O sistema move-se para nordeste a 25 kt e se intensifica; valores futuros são previsão oficial.",
-          "action": "Revalidar derrota em relação à área prevista, acompanhar a evolução e ajustar velocidade/heading para reduzir esforços estruturais e embarque de água.",
+          "id": "nhc-tropical-storm-trudy-2026-10-19",
+          "date": "2026-10-19",
+          "region": "Pacífico Leste · 19,7°N 108,0°W",
+          "level": "high",
+          "headline": "Trudy enfraquece para 50 kt; mar ainda chega a 6 m",
+          "summary": "Às 0900Z, Trudy tinha vento sustentado de 50 kt, rajadas de 60 kt e mar até 6 m; a previsão indica transição pós-tropical em 24 h.",
+          "details": "O sistema movia-se para oeste a 5 kt. A previsão oficial indica 35 kt em 24 h, mas trajetória, tamanho e intensidade ainda têm incerteza.",
+          "action": "Manter margem do sistema e revalidar weather routing e ETA; não reduzir precauções apenas pela tendência de enfraquecimento.",
           "map": {
-            "x": 9.44,
-            "y": 25,
-            "label": "Pacífico Norte"
+            "x": 20,
+            "y": 39.06,
+            "label": "Trudy"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · EP1 · 18 out.",
+            "name": "NHC / NOAA · High Seas Forecast · 19 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         }
@@ -1927,21 +1927,40 @@
       "title": "Costa do Brasil",
       "shortTitle": "Costa BR",
       "icon": "◆",
-      "description": "O CHM publicou em 17 de outubro o aviso 766 e mantém os avisos 765 e 764 no Atlântico Sul. Os horários permanecem em UTC; os polígonos no mapa são referências aproximadas e devem ser confirmados por EGC/NAVTEX.",
+      "description": "O CHM publicou em 18 de outubro os avisos 767 e 768 e mantém o aviso 765 no Atlântico Sul. Os horários permanecem em UTC; os polígonos no mapa são referências aproximadas e devem ser confirmados por EGC/NAVTEX.",
       "items": [
         {
-          "id": "chm-766-2026",
-          "date": "2026-10-17",
-          "region": "Área Sul Oceânica · 30–36°S / 20–30°W",
+          "id": "chm-768-2026",
+          "date": "2026-10-18",
+          "region": "Área Sul Oceânica · 31–36,1°S / 26,1–34,5°W",
           "level": "high",
-          "headline": "Aviso 766: vento NE/NW força 8, rajadas 9",
-          "summary": "Vento NE/NW força 8, com rajadas força 9, válido de 171800Z até 181800Z.",
-          "details": "Aviso da Área Sul Oceânica emitido às 1300Z de 17 de outubro. A geometria do mapa é referência aproximada da área oficial.",
-          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e trabalho externo; confirmar eventual extensão ou cancelamento por EGC/NAVTEX.",
+          "headline": "Aviso 768: mar muito grosso de 4–4,5 m",
+          "summary": "Ondas de NW/W de 4–4,5 m previstas a partir de 191200Z, válidas até 200000Z.",
+          "details": "Aviso da Área Sul Oceânica emitido às 1600Z de 18 de outubro. A geometria do mapa é referência aproximada da área oficial.",
+          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e trabalho externo; considerar ondas individuais acima da altura significativa.",
           "map": {
-            "x": 44.44,
-            "y": 68.33,
-            "label": "CHM 766"
+            "x": 41.58,
+            "y": 68.67,
+            "label": "CHM 768"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
+        {
+          "id": "chm-767-2026",
+          "date": "2026-10-18",
+          "region": "Área Sul Oceânica · 31,2–35,9°S / 20,1–37,2°W",
+          "level": "high",
+          "headline": "Aviso 767: vento W/SW força 8",
+          "summary": "Vento W/SW força 8 previsto a partir de 192100Z, válido até 210900Z.",
+          "details": "Aviso da Área Sul Oceânica emitido às 1600Z de 18 de outubro. A geometria do mapa é referência aproximada da área oficial.",
+          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho externo antes da entrada em vigor.",
+          "map": {
+            "x": 42.04,
+            "y": 68.64,
+            "label": "CHM 767"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -1956,30 +1975,11 @@
           "headline": "Aviso 765: vento NW/W força 8/9",
           "summary": "Vento NW/W força 8/9 previsto a partir de 180000Z, válido até 192100Z.",
           "details": "Aviso da Área Sul Oceânica emitido às 1500Z de 16 de outubro. A geometria do mapa é referência aproximada da área oficial.",
-          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho externo antes da entrada em vigor.",
+          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho externo; confirmar extensão ou cancelamento por EGC/NAVTEX.",
           "map": {
             "x": 39.1,
             "y": 68.2,
             "label": "CHM 765"
-          },
-          "source": {
-            "name": "CHM / Marinha do Brasil",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
-        },
-        {
-          "id": "chm-764-2026",
-          "date": "2026-10-16",
-          "region": "Área Sul Oceânica · 28–36,1°S / 33,2–47,9°W",
-          "level": "high",
-          "headline": "Aviso 764: mar muito grosso de 4–5 m",
-          "summary": "Ondas de SW/SE, passando a NW/W, de 4–5 m previstas a partir de 180600Z, válidas até 191200Z.",
-          "details": "Aviso da Área Sul Oceânica emitido às 1500Z de 16 de outubro. A geometria do mapa é referência aproximada da área oficial.",
-          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e trabalho externo; considerar ondas individuais acima da altura significativa.",
-          "map": {
-            "x": 39.2,
-            "y": 68.2,
-            "label": "CHM 764"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -2551,7 +2551,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-    "note": "Evidência oficial PSC verificada em 18 out. 2026. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. Páginas diretas de Viña, Abuja, Indian Ocean e USCG tiveram falha de acesso nesta rodada; a evidência recente preserva atribuição e vigência. USCG mantém programa nacional contínuo.",
+    "note": "Evidência oficial PSC verificada em 19 out. 2026. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. Páginas diretas de Viña del Mar, Indian Ocean, Riyadh e USCG tiveram falha de acesso nesta rodada; buscas oficiais complementares não localizaram mudança material e as falhas não foram tratadas como prova de ausência. USCG mantém programa nacional contínuo.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -2945,28 +2945,28 @@
     }
   ],
   "briefing": {
-    "date": "2026-10-18",
+    "date": "2026-10-19",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
-        "title": "VesselAPI é a fonte válida mais recente",
-        "summary": "VesselAPI · 23º07,54′ S · 041º38,83′ W · 3 h 19 min. MarineTraffic: 8 h 58 min; SPOT sem ponto válido e sem leitura de bateria."
+        "title": "MarineTraffic é a fonte válida mais recente",
+        "summary": "MarineTraffic · 21º46,09′ S · 040º52,90′ W · 9 h 06 min. VesselAPI: 11 h 12 min; SPOT sem ponto válido e sem leitura de bateria."
       },
       {
         "category": "SEGURANÇA",
-        "title": "UKMTO registra três ocorrências em 16–18 out.",
-        "summary": "Tanker atingido por RPG, LNG tanker sob disparos de skiff e rebocador atingido por dois projéteis. Um ferido leve foi reportado no último caso; autoria não estabelecida."
+        "title": "Warnings 175–177 permanecem como os três mais recentes",
+        "summary": "A consulta de 19 out. não localizou Warning posterior ao 177. JMIC Update 106 foi publicado em 18 out.; sem conteúdo integral legível, não alterou nível nem fatos do Radar."
       },
       {
         "category": "COSTA BR",
-        "title": "CHM: avisos 764–766 no Atlântico Sul",
-        "summary": "Mar de 4–5 m e ventos força 8/9 permanecem previstos até 19 out.; o aviso 766, emitido em 17 out., vence às 1800Z de 18 out. Confirmar por EGC/NAVTEX."
+        "title": "CHM: avisos 767–768 atualizam o Atlântico Sul",
+        "summary": "Vento W/SW força 8 e mar de 4–4,5 m foram publicados em 18 out. O aviso 765 permanece válido até 192100Z; confirmar extensão ou cancelamento por EGC/NAVTEX."
       },
       {
         "category": "METEO",
-        "title": "Trudy mantém risco; Atlântico e Pacífico com tempestades",
-        "summary": "Trudy tinha 90 kt e mar de 11 m às 0900Z de 18 out. Atlântico Norte indica 40–55 kt e mar até 9,5 m; Pacífico Norte, até 50 kt e 7,5 m."
+        "title": "Pacífico prevê 65 kt; Trudy enfraquece",
+        "summary": "Baixa no Pacífico Norte pode atingir 50–65 kt e mar de 8,5 m. Atlântico Norte mantém 35–50 kt e 8 m; Trudy caiu para 50 kt e mar de 6 m às 0900Z."
       },
       {
         "category": "MERCADO",
@@ -2980,8 +2980,8 @@
       },
       {
         "category": "PSC",
-        "title": "Quatro CICs ativas; Abuja anuncia campanha de 2027",
-        "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativos. Abuja aprovou CIC 2027 de espaços confinados, ainda sem janela/questionário; USCG esclareceu que crédito de exame COC não isenta taxa."
+        "title": "Quatro CICs ativas; sem mudança oficial em 19 out.",
+        "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativos. Abuja e Mediterranean permanecem anunciados; três regimes seguem sem confirmação e USCG permanece nacional."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -3014,31 +3014,31 @@
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-      "scope": "Consulta em 18 out.; boletim 6–12 out. permanece o mais recente e publica um CAT 4 ocorrido em 3 out. em Vung Tau",
+      "scope": "Consulta em 19 out.; boletim 6–12 out. permanece o mais recente localizado e publica um CAT 4 ocorrido em 3 out. em Vung Tau",
       "typeLabel": "Oficial"
     },
     {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/ukmto-products/warnings",
-      "scope": "Warnings 175–177: tanker atingido por RPG, LNG tanker sob disparos de skiff e rebocador atingido por projéteis entre 16 e 18 out.; autoria não confirmada",
+      "scope": "Consulta em 19 out.; Warnings 175–177 permanecem os três mais recentes localizados. JMIC Update 106 foi publicado em 18 out.; sem leitura integral confirmada, não renovou fatos nem nível",
       "typeLabel": "Oficial"
     },
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Consulta em 18 out.; avisos 764–766 para mar de 4–5 m e vento força 8/9 no Atlântico Sul",
+      "scope": "Consulta em 19 out.; avisos 767–768 acrescentam vento W/SW força 8 e mar de 4–4,5 m; aviso 765 permanece válido até 192100Z",
       "typeLabel": "Oficial"
     },
     {
       "name": "NHC / NOAA",
       "url": "https://www.nhc.noaa.gov/",
-      "scope": "Furacão Trudy com 90 kt e mar de 11 m às 0900Z de 18 out.; valores futuros identificados como previsão",
+      "scope": "Trudy com 50 kt, rajadas de 60 kt e mar de 6 m às 0900Z de 19 out.; transição pós-tropical em 24 h é previsão oficial",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Tempestades no Atlântico e Pacífico Norte válidas a partir de 0600Z de 18 out.",
+      "scope": "Previsões de 19 out.: Pacífico Norte com 50–65 kt e mar até 8,5 m em 30 h; Atlântico Norte com 35–50 kt e mar de 4–8 m",
       "typeLabel": "Oficial"
     },
     {
@@ -3080,7 +3080,7 @@
     {
       "name": "Ship & Bunker",
       "url": "https://shipandbunker.com/prices",
-      "scope": "Preços indicativos VLSFO do fechamento de 16 out.; reconsulta em 18 out. sem novo fechamento de fim de semana",
+      "scope": "Preços indicativos VLSFO do fechamento de 16 out.; reconsulta em 19 out. sem novo fechamento de fim de semana",
       "typeLabel": "Indústria"
     },
     {
@@ -3152,7 +3152,7 @@
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-      "scope": "Treze sistemas reconsultados em 18 out.; BELTREP/SOUNDREP acrescentam certificados de seguro em 22 nov. e REEFREP usa Entry report e posição automática por AIS",
+      "scope": "Treze sistemas revistos em 19 out.; sem nova mudança documental. BELTREP/SOUNDREP acrescentam certificados de seguro em 22 nov. e REEFREP usa Entry report e posição automática por AIS",
       "typeLabel": "Oficial"
     },
     {
@@ -3176,13 +3176,13 @@
     {
       "name": "Windward — análise pública",
       "url": "https://windward.ai/blog/",
-      "scope": "Blog e base pública reconsultados em 18 out.; nenhum achado operacional mais recente que 15 out. foi incorporado",
+      "scope": "Blog e base pública reconsultados em 19 out.; nenhum achado operacional novo e corroborado foi incorporado",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
       "url": "https://channel16.dryadglobal.com/",
-      "scope": "Canal público reconsultado em 18 out.; eventos do Golfo foram deduplicados e incorporados uma vez com warnings primários do UKMTO",
+      "scope": "Canal público reconsultado em 19 out.; nenhum achado novo foi incorporado e eventos do Golfo permanecem deduplicados com warnings primários",
       "typeLabel": "Indústria / complementar"
     },
     {
