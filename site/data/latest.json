@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-19T12:17:36.760Z",
+  "generatedAt": "2026-10-20T12:02:37.004Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -1689,7 +1689,7 @@
   },
   "market": {
     "week": "W42",
-    "sourceLabel": "Fearnleys W42 (14 out.) para mercado e TC; Baltic W42 (16 out.) para spot; Aframax TC mantém o último valor público W41; VLSFO no fechamento de 16 out.",
+    "sourceLabel": "Fearnleys W42 (14 out.) para mercado e TC; Baltic W42 (16 out.) para spot; Aframax TC mantém o último valor público W41; Reuters de 20 out. para adaptação logística; VLSFO no fechamento de 19 out.",
     "benchmarks": [
       {
         "segment": "VLCC",
@@ -1719,10 +1719,10 @@
     "spotSignal": {
       "segment": "VLCC / Suezmax / Aframax",
       "label": "spot · Fearnleys W42 / Baltic W42",
-      "valueLabel": "Fretes extremos corrigem de forma desigual",
-      "summary": "Baltic W42 mostra queda em VLCC, Suezmax e Aframax, mas TCEs ainda excepcionais: TD3C US$ 1,37 mi/dia, TD20 US$ 522,6 mil/dia e TD7 US$ 486,4 mil/dia. CPC/Augusta divergiu, subindo a cerca de US$ 888,4 mil/dia.",
-      "confidenceLabel": "Baltic W42 é roundup oficial semanal e não substitui o fechamento diário corrente; Fearnleys permanece leitura complementar de indústria",
-      "sourceLabel": "Baltic Exchange W42 · 16 out.; Fearnleys W42 · 14 out."
+      "valueLabel": "Índices corrigem, mas logística mantém pressão extrema",
+      "summary": "Baltic W42 mostra queda em VLCC, Suezmax e Aframax, mas TCEs ainda excepcionais: TD3C US$ 1,37 mi/dia, TD20 US$ 522,6 mil/dia e TD7 US$ 486,4 mil/dia. Em 20 out., a Reuters relatou uso maior de Aframax e crude entregue; a estimativa de 80 VLCCs ocupados em relés por Ormuz é atribuída à Vitol.",
+      "confidenceLabel": "Baltic W42 é roundup oficial semanal e não substitui o fechamento diário; relatos Reuters/Vitol descrevem logística comercial, não índice nem contagem oficial",
+      "sourceLabel": "Baltic Exchange W42 · 16 out.; Reuters · 20 out.; Fearnleys W42 · 14 out."
     },
     "history": {
       "weeks": [
@@ -1795,7 +1795,7 @@
       "title": "Pirataria e roubo armado",
       "shortTitle": "Pirataria",
       "icon": "☠",
-      "description": "ReCAAP reconsultado em 18 de outubro: o boletim de 6–12 de outubro permanece o mais recente e trouxe um CAT 4 ocorrido em 3 de outubro, em Vung Tau. Os três registros ficam ordenados pela data do evento; não foram criados casos para completar a lista.",
+      "description": "O boletim ReCAAP de 13–19 de outubro, publicado e consultado em 20 de outubro, não registrou incidente novo. Preservam-se os três últimos casos comprovados com suas datas originais; o ReCAAP mantém recomendação de vigilância em Malaca/Singapura.",
       "items": [
         {
           "id": "recaap-vung-tau-2026-10-03",
@@ -1861,62 +1861,62 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-      "description": "Boletins NOAA/NWS de 19 de outubro priorizam uma baixa com força de furacão no Pacífico Norte, uma tempestade no Atlântico Norte e Trudy em enfraquecimento. Valores futuros são previsões oficiais, não observações.",
+      "description": "Boletins NOAA/NWS emitidos às 1030Z de 20 de outubro priorizam duas tempestades no Atlântico Norte e uma baixa com mar de 7 m no Pacífico Norte. Valores de 24 h são previsões oficiais, não observações.",
       "items": [
         {
-          "id": "noaa-north-pacific-hurricane-force-2026-10-19",
-          "date": "2026-10-19",
-          "region": "Pacífico Norte · baixa em 44°N 173°W",
+          "id": "noaa-north-atlantic-storm-64n35w-2026-10-20",
+          "date": "2026-10-20",
+          "region": "Atlântico Norte · baixa em 64°N 35°W",
           "level": "critical",
-          "headline": "Baixa deve atingir 50–65 kt e mar de 8,5 m",
-          "summary": "A baixa de 1004 hPa deve intensificar rapidamente; a previsão de 30 h indica vento de 50–65 kt e mar de 4,5–8,5 m nos quadrantes sul e sudoeste.",
-          "details": "Síntese NOAA válida às 0600Z de 19 de outubro. O centro deve deslocar-se rapidamente para nordeste; os valores de 30 h são previsão oficial e exigem revalidação a cada boletim.",
-          "action": "Manter ampla margem do sistema, revalidar weather routing e ETA a cada boletim e suspender trabalho externo antes de entrar na área de influência.",
+          "headline": "Tempestade: mar de 7 m; 40–50 kt previstos em 24 h",
+          "summary": "A baixa de 983 hPa gerava vento de 30–40 kt e mar de 4–7 m; a previsão de 24 h indica setores de 40–50 kt e mar de 4–6,5 m.",
+          "details": "Síntese NOAA emitida às 1030Z de 20 de outubro, com análise válida às 0600Z. Os valores futuros exigem revalidação a cada boletim.",
+          "action": "Manter ampla margem, revisar weather routing, ETA, peação e limites de heavy weather; evitar o quadrante de maior mar.",
           "map": {
-            "x": 1.94,
-            "y": 25.56,
-            "label": "Pacífico Norte"
-          },
-          "source": {
-            "name": "NOAA Ocean Prediction Center · EP1 · 19 out.",
-            "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
-          }
-        },
-        {
-          "id": "noaa-north-atlantic-storm-2026-10-19",
-          "date": "2026-10-19",
-          "region": "Atlântico Norte · baixa em 65°N 36°W",
-          "level": "critical",
-          "headline": "Tempestade: 35–50 kt e mar de 4–8 m",
-          "summary": "A baixa de 972 hPa gerava vento de 35–50 kt e mar de 4–8 m entre 58°N e 62°N, a leste de 43°W.",
-          "details": "Síntese NOAA válida às 0600Z de 19 de outubro. Em 48 h, a baixa deve permanecer complexa, com setores de 35–45 kt e mar de 3–6 m; a área perigosa é ampla.",
-          "action": "Revalidar derrota, ETA, peação e limites de heavy weather; evitar o quadrante de maior mar e manter margem de combustível para desvio.",
-          "map": {
-            "x": 40,
-            "y": 13.89,
+            "x": 40.28,
+            "y": 14.44,
             "label": "Atlântico Norte"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · AT1 · 19 out.",
+            "name": "NOAA Ocean Prediction Center · AT1 · 20 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
           }
         },
         {
-          "id": "nhc-tropical-storm-trudy-2026-10-19",
-          "date": "2026-10-19",
-          "region": "Pacífico Leste · 19,7°N 108,0°W",
-          "level": "high",
-          "headline": "Trudy enfraquece para 50 kt; mar ainda chega a 6 m",
-          "summary": "Às 0900Z, Trudy tinha vento sustentado de 50 kt, rajadas de 60 kt e mar até 6 m; a previsão indica transição pós-tropical em 24 h.",
-          "details": "O sistema movia-se para oeste a 5 kt. A previsão oficial indica 35 kt em 24 h, mas trajetória, tamanho e intensidade ainda têm incerteza.",
-          "action": "Manter margem do sistema e revalidar weather routing e ETA; não reduzir precauções apenas pela tendência de enfraquecimento.",
+          "id": "noaa-north-atlantic-storm-35n71w-2026-10-20",
+          "date": "2026-10-20",
+          "region": "Atlântico Norte · baixa em 35°N 71°W",
+          "level": "critical",
+          "headline": "Baixa costeira pode atingir 35–50 kt em 24 h",
+          "summary": "A baixa de 1001 hPa gerava 25–40 kt e mar de 3–6,5 m; em 24 h, a NOAA prevê setores de 35–50 kt e mar de 4–6,5 m.",
+          "details": "Síntese NOAA emitida às 1030Z de 20 de outubro, com análise válida às 0600Z. A área e intensidade previstas devem ser confirmadas no boletim seguinte.",
+          "action": "Revalidar derrota e ETA na costa leste dos EUA, manter margem de combustível para desvio e suspender trabalho externo antes da área de influência.",
           "map": {
-            "x": 20,
-            "y": 39.06,
-            "label": "Trudy"
+            "x": 30.28,
+            "y": 30.56,
+            "label": "Atlântico Norte oeste"
           },
           "source": {
-            "name": "NHC / NOAA · High Seas Forecast · 19 out.",
+            "name": "NOAA Ocean Prediction Center · AT1 · 20 out.",
+            "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
+          }
+        },
+        {
+          "id": "noaa-north-pacific-gale-40n131w-2026-10-20",
+          "date": "2026-10-20",
+          "region": "Pacífico Norte · baixa em 40°N 131°W",
+          "level": "high",
+          "headline": "Baixa produz 25–40 kt e mar de 3,5–7 m",
+          "summary": "A baixa de 1007 hPa já gerava vento de 25–40 kt e mar de 3,5–7 m ao largo da costa oeste norte-americana.",
+          "details": "Síntese NOAA emitida às 1030Z de 20 de outubro, com análise válida às 0600Z. Trata-se de condição observada no campo de análise, sujeita à evolução do sistema.",
+          "action": "Revalidar weather routing e ETA, reduzir exposição ao quadrante de maior mar e confirmar peação e limites de trabalho externo.",
+          "map": {
+            "x": 13.61,
+            "y": 27.78,
+            "label": "Pacífico Nordeste"
+          },
+          "source": {
+            "name": "NOAA Ocean Prediction Center · EP1 · 20 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         }
@@ -1927,21 +1927,21 @@
       "title": "Costa do Brasil",
       "shortTitle": "Costa BR",
       "icon": "◆",
-      "description": "O CHM publicou em 18 de outubro os avisos 767 e 768 e mantém o aviso 765 no Atlântico Sul. Os horários permanecem em UTC; os polígonos no mapa são referências aproximadas e devem ser confirmados por EGC/NAVTEX.",
+      "description": "O CHM publicou em 19 de outubro os avisos 770–772. Os horários permanecem em UTC; os polígonos no mapa são referências aproximadas e devem ser confirmados por EGC/NAVTEX.",
       "items": [
         {
-          "id": "chm-768-2026",
-          "date": "2026-10-18",
-          "region": "Área Sul Oceânica · 31–36,1°S / 26,1–34,5°W",
+          "id": "chm-772-2026",
+          "date": "2026-10-19",
+          "region": "Área Sul Oceânica · 30–36°S / 20–30°W",
           "level": "high",
-          "headline": "Aviso 768: mar muito grosso de 4–4,5 m",
-          "summary": "Ondas de NW/W de 4–4,5 m previstas a partir de 191200Z, válidas até 200000Z.",
-          "details": "Aviso da Área Sul Oceânica emitido às 1600Z de 18 de outubro. A geometria do mapa é referência aproximada da área oficial.",
+          "headline": "Aviso 772: mar de 4–5,5 m",
+          "summary": "Ondas de NW/SW de 4–5,5 m previstas a partir de 201200Z, válidas até 221200Z.",
+          "details": "Aviso da Área Sul Oceânica emitido às 1200Z de 19 de outubro. A geometria do mapa é referência aproximada da área oficial.",
           "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e trabalho externo; considerar ondas individuais acima da altura significativa.",
           "map": {
-            "x": 41.58,
-            "y": 68.67,
-            "label": "CHM 768"
+            "x": 43.06,
+            "y": 68.33,
+            "label": "CHM 772"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -1949,18 +1949,18 @@
           }
         },
         {
-          "id": "chm-767-2026",
-          "date": "2026-10-18",
-          "region": "Área Sul Oceânica · 31,2–35,9°S / 20,1–37,2°W",
+          "id": "chm-771-2026",
+          "date": "2026-10-19",
+          "region": "Área Sul Oceânica · 30–36°S / 20–30°W",
           "level": "high",
-          "headline": "Aviso 767: vento W/SW força 8",
-          "summary": "Vento W/SW força 8 previsto a partir de 192100Z, válido até 210900Z.",
-          "details": "Aviso da Área Sul Oceânica emitido às 1600Z de 18 de outubro. A geometria do mapa é referência aproximada da área oficial.",
+          "headline": "Aviso 771: vento NW/SW força 8, rajadas 9",
+          "summary": "Vento NW/SW força 8 com rajadas 9 previsto a partir de 210600Z, válido até 220600Z.",
+          "details": "Aviso da Área Sul Oceânica emitido às 1200Z de 19 de outubro. A geometria do mapa é referência aproximada da área oficial.",
           "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho externo antes da entrada em vigor.",
           "map": {
-            "x": 42.04,
-            "y": 68.64,
-            "label": "CHM 767"
+            "x": 43.06,
+            "y": 68.33,
+            "label": "CHM 771"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -1968,18 +1968,18 @@
           }
         },
         {
-          "id": "chm-765-2026",
-          "date": "2026-10-16",
-          "region": "Área Sul Oceânica · 28,5–36°S / 33,9–47,9°W",
+          "id": "chm-770-2026",
+          "date": "2026-10-19",
+          "region": "Costa Norte/Nordeste · Touros/RN a São Luís/MA · até 120 MN",
           "level": "high",
-          "headline": "Aviso 765: vento NW/W força 8/9",
-          "summary": "Vento NW/W força 8/9 previsto a partir de 180000Z, válido até 192100Z.",
-          "details": "Aviso da Área Sul Oceânica emitido às 1500Z de 16 de outubro. A geometria do mapa é referência aproximada da área oficial.",
-          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho externo; confirmar extensão ou cancelamento por EGC/NAVTEX.",
+          "headline": "Aviso 770: vento SE/NE força 7, rajadas 8",
+          "summary": "Vento SE/NE força 7 com rajadas 8 previsto a partir de 210000Z, válido até 221200Z.",
+          "details": "Aviso costeiro emitido às 1200Z de 19 de outubro. O ponto no mapa representa apenas a área geral entre Touros e São Luís.",
+          "action": "Confirmar EGC/NAVTEX, revisar janela costeira, praticagem, velocidade e limites de trabalho externo antes da entrada em vigor.",
           "map": {
-            "x": 39.1,
-            "y": 68.2,
-            "label": "CHM 765"
+            "x": 39.17,
+            "y": 51.67,
+            "label": "CHM 770"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -1993,7 +1993,7 @@
       "title": "Conflito e segurança de rota",
       "shortTitle": "Segurança",
       "icon": "▲",
-      "description": "Warnings 175–177 do UKMTO registram três ocorrências entre 16 e 18 de outubro no Golfo Pérsico, Golfo de Omã e Mar Arábico. Atribuição e responsabilidade não estão confirmadas; os registros são ordenados pela data do evento e não substituem a investigação oficial.",
+      "description": "Warnings 175–177 permanecem os três mais recentes localizados na consulta de 20 de outubro. A IMO contabiliza 114 incidentes confirmados e 24 mortes até 19 de outubro; autoria e responsabilidade dos casos recentes não estão estabelecidas.",
       "items": [
         {
           "id": "ukmto-khor-fakkan-2026-10-18",
@@ -2059,25 +2059,25 @@
       "title": "Navegação eletrônica e portos",
       "shortTitle": "Nav/Portos",
       "icon": "⌁",
-      "description": "Contexto operacional complementar reconsultado em 18 de outubro. Windward não publicou análise operacional mais recente que 15 de outubro. A Dryad listou ocorrências no Golfo, mas os eventos novos foram deduplicados no grupo Segurança e ancorados nos warnings primários do UKMTO.",
+      "description": "Contexto operacional reconsultado em 20 de outubro. O novo relato público sobre adaptação de refinadores asiáticos substitui o registro anterior do mesmo choque de frete; Windward e Dryad não acrescentaram ocorrência operacional nova corroborada.",
       "items": [
         {
-          "id": "usg-asia-freight-2026-10-09",
-          "date": "2026-10-09",
-          "region": "US Gulf ↔ Ásia · petroleiros",
+          "id": "reuters-asian-refiners-aframax-2026-10-20",
+          "date": "2026-10-20",
+          "region": "Ásia ↔ Golfo/Atlântico · petroleiros",
           "level": "high",
-          "headline": "VLCC US Gulf–China chega a cerca de US$ 80 milhões",
-          "summary": "Fontes de corretagem citadas pela Reuters indicaram esse custo para transportar 2 milhões de barris em novembro, comprimindo a arbitragem do crude norte-americano para a Ásia.",
-          "details": "A reportagem cita frete de aproximadamente US$ 40/barril, contra US$ 8,60 antes da guerra, e tentativa de uso de Aframax. São fixtures/indicações comerciais, não BDTI/BCTI oficial.",
-          "action": "Recalcular voyage economics, bunker, exposição de rota, demurrage e alternativa de origem/tamanho antes de fixar; confirmar cada fixture com o chartering.",
+          "headline": "Frete extremo desloca cargas para Aframax e venda entregue",
+          "summary": "Refinadores asiáticos passaram a usar mais Aframax, navios em time charter e crude entregue; a Vitol atribuiu cerca de 80 VLCCs aos relés por Ormuz.",
+          "details": "A Reuters citou custo US Gulf–Ásia de cerca de US$ 40/barril e seis cargas Aframax compradas pela CPC em uma semana. São relatos comerciais atribuídos, não índice oficial, fixture do navio ou contagem pública consolidada.",
+          "action": "Recalcular voyage economics, bunker, war-risk, STS, disponibilidade por porte e demurrage; confirmar cada contratação com chartering e agente.",
           "map": {
-            "x": 28,
+            "x": 72,
             "y": 42,
-            "label": "US Gulf–Ásia"
+            "label": "Ásia–Golfo"
           },
           "source": {
-            "name": "Reuters · mercado tanker · 9 out. 2026",
-            "url": "https://www.reuters.com/business/energy/soaring-freight-rates-threaten-asias-appetite-us-crude-2026-10-09/"
+            "name": "Reuters · mercado tanker · 20 out. 2026",
+            "url": "https://www.reuters.com/business/energy/asian-refiners-use-smaller-tankers-buy-delivered-crude-freight-rates-soar-2026-10-20/"
           }
         },
         {
@@ -2197,7 +2197,7 @@
       "trafficTrend": "alta demanda asiática",
       "trafficBasis": "Cerca de 22,8 milhões b/d de petróleo e líquidos atravessaram o corredor em 2025 segundo a EIA; métrica de energia, não contagem de navios.",
       "market": "Principal artéria energética da Ásia; congestionamento ou bloqueio pressiona fretes, bunker, estoques e rotas via Sunda/Lombok.",
-      "geopolitics": "Baixo risco de guerra imediato, mas alta criticidade estratégica; roubo armado e incidentes de navegação permanecem no radar.",
+      "geopolitics": "Baixo risco de guerra imediato, mas alta criticidade estratégica; o ReCAAP não registrou incidente novo entre 13–19 out. e mantém recomendação de vigilância em Malaca/Singapura.",
       "authority": "VTS da Malásia, Indonésia e Singapura",
       "reporting": "STRAITREP obrigatório para categorias prescritas nos setores 1–9.",
       "masterFocus": [
@@ -2219,13 +2219,13 @@
       "trafficTrend": "crescimento",
       "trafficBasis": "Singapura recebe em média ~140 mil vessel calls/ano; em 2025 registrou 3,22 bilhões GT de chegadas (+3,5%). Port calls não equivalem a trânsitos do estreito.",
       "market": "Hub global de bunker, transbordo e refino; atrasos repercutem em fixtures, disponibilidade de combustível e cadeias Ásia–Europa.",
-      "geopolitics": "Baixo risco de guerra; densidade, cruzamentos e embarcações pequenas dominam. O ReCAAP registrou novo CAT 4 em 1 out., sem feridos ou furto.",
+      "geopolitics": "Baixo risco de guerra; densidade, cruzamentos e embarcações pequenas dominam. O ReCAAP não registrou incidente novo entre 13–19 out., mas mantém recomendação de vigilância.",
       "authority": "MPA Singapore / VTIS",
       "reporting": "STRAITREP obrigatório e requisitos portuários de Singapura quando houver escala.",
       "masterFocus": [
         "Briefing específico por setor, reporting point, faixa e frequências VHF.",
         "Máquinas e steering em prontidão; minimizar distrações e mudanças tardias em TSS.",
-        "Para tanker, alinhar bunker/terminal, HNS/DG declaration, fundeio e limites de manobra; reforçar acessos à praça de máquinas após o CAT 4 de 1 out."
+        "Para tanker, alinhar bunker/terminal, HNS/DG declaration, fundeio e limites de manobra; manter controle de acessos mesmo sem novo caso no boletim 13–19 out."
       ],
       "source": {
         "name": "MPA — Global Hub Port",
@@ -2264,7 +2264,7 @@
       "trafficTrend": "fluxo comercial elevado sob sequência de incidentes dos dois lados do estreito",
       "trafficBasis": "Kpler, via Reuters, estimou 18,3 milhões bpd de crude na média móvel de sete dias em 30 set.; Vortexa estimou 18,6 milhões bpd em 14 dias. São estimativas comerciais regionais, sujeitas a revisão e não equivalem a contagem de navios ou gross tonnage oficial.",
       "market": "O Baltic W42 ainda mostra TCEs spot excepcionalmente altos, embora em correção: TD3C em US$ 1,37 milhão/dia e TD34 em US$ 837,6 mil/dia. São rotas padronizadas, não frete do navio nem fluxo físico oficial.",
-      "geopolitics": "Ameaça crítica: além dos 113 incidentes confirmados pela IMO até 14 de outubro, os Warnings 175 e 177 do UKMTO registraram em 16–18 de outubro ataque a tanker no Golfo Pérsico e rebocador atingido no Golfo de Omã. Autoria e responsabilidade não foram estabelecidas.",
+      "geopolitics": "Ameaça crítica: a IMO contabiliza 114 incidentes confirmados e 24 mortes até 19 de outubro. Os Warnings 175 e 177 do UKMTO registraram em 16–18 de outubro ataque a tanker no Golfo Pérsico e rebocador atingido no Golfo de Omã; autoria e responsabilidade não foram estabelecidas.",
       "authority": "Autoridades costeiras; UKMTO como ponto de contato de segurança; IMO consolida incidentes confirmados",
       "reporting": "UKMTO VRS voluntário: initial ao entrar no VRA, daily 0800 UTC, final e incident imediato; VTS/porto permanecem obrigatórios conforme jurisdição.",
       "masterFocus": [
@@ -2551,7 +2551,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-    "note": "Evidência oficial PSC verificada em 19 out. 2026. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. Páginas diretas de Viña del Mar, Indian Ocean, Riyadh e USCG tiveram falha de acesso nesta rodada; buscas oficiais complementares não localizaram mudança material e as falhas não foram tratadas como prova de ausência. USCG mantém programa nacional contínuo.",
+    "note": "Evidência oficial PSC verificada em 20 out. 2026. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. A PSCC28 do Mediterranean MoU começou em 20 out., mas a evidência disponível não publicou nova campanha, questionário ou requisito operacional. A página direta de Viña del Mar e a consulta USCG tiveram falha; buscas oficiais complementares não localizaram mudança material e as falhas não foram tratadas como prova de ausência. USCG mantém programa nacional contínuo.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -2697,41 +2697,41 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 66.49,
+        "price": 64.54,
         "currencySymbol": "R$",
-        "changePercent": 3.53,
-        "trend": "Alta no fechamento",
-        "capturedAtLabel": "16 out. 2026 · fechamento público",
+        "changePercent": -2.93,
+        "trend": "Baixa no fechamento",
+        "capturedAtLabel": "19 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/quote/bvmf/PETR3/history/"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 59.68,
+        "price": 58,
         "currencySymbol": "R$",
-        "changePercent": 4.04,
-        "trend": "Alta no fechamento",
-        "capturedAtLabel": "16 out. 2026 · fechamento público",
+        "changePercent": -2.82,
+        "trend": "Baixa no fechamento",
+        "capturedAtLabel": "19 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/quote/bvmf/PETR4/history/"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 26,
+        "price": 25.56,
         "currencySymbol": "US$",
-        "changePercent": 2.77,
-        "trend": "Alta no fechamento",
-        "capturedAtLabel": "16 out. 2026 · fechamento público",
+        "changePercent": -1.69,
+        "trend": "Baixa no fechamento",
+        "capturedAtLabel": "19 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/stocks/pbr/history/"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-        "price": 23.3,
+        "price": 22.96,
         "currencySymbol": "US$",
-        "changePercent": 3.05,
-        "trend": "Alta no fechamento",
-        "capturedAtLabel": "16 out. 2026 · fechamento público",
+        "changePercent": -1.46,
+        "trend": "Baixa no fechamento",
+        "capturedAtLabel": "19 out. 2026 · fechamento público",
         "sourceUrl": "https://stockanalysis.com/stocks/pbr.a/history/"
       }
     ],
@@ -2835,6 +2835,16 @@
     ],
     "developments": [
       {
+        "date": "2026-10-19",
+        "title": "P-82 inicia viagem de Singapura para Búzios",
+        "summary": "A Petrobras informou que a P-82 deixou o estaleiro em 18 de outubro rumo ao campo de Búzios; a unidade tem capacidade nominal de 225 mil bpd e compressão de 12 milhões de m³/dia de gás e deve operar em 2027.",
+        "maritimeImpact": "Trata-se de deslocamento de unidade offshore com tripulação a bordo e destino operacional confirmado; não representa produção iniciada nem nova rota regular de petróleo.",
+        "source": {
+          "name": "Agência Petrobras · 19 out. 2026",
+          "url": "https://agencia.petrobras.com.br/w/negocio/plataforma-da-petrobras-p-82-b%C3%BAzios-10-inicia-viagem-rumo-ao-brasil"
+        }
+      },
+      {
         "date": "2026-10-02",
         "title": "Petrobras anuncia nova descoberta em águas ultraprofundas do Amapá",
         "summary": "A companhia informou novo intervalo portador de petróleo no poço Morpho, bloco FZA-M-59, a 2.886 m de lâmina d'água; a descoberta ainda será avaliada.",
@@ -2883,16 +2893,6 @@
           "name": "Reuters · complementar",
           "url": "https://www.reuters.com/business/energy/petrobras-signs-production-sharing-deals-ivory-coast-exploratory-blocks-2026-09-17/"
         }
-      },
-      {
-        "date": "2026-09-10",
-        "title": "Petrobras reduz preço da gasolina A às distribuidoras",
-        "summary": "A companhia informou preço médio de R$ 3,05 por litro, com redução líquida estimada de R$ 0,19 por litro às distribuidoras após os efeitos tributários.",
-        "maritimeImpact": "Pode ajustar a dinâmica doméstica de suprimento e distribuição de combustíveis; não implica, isoladamente, mudança confirmada de rota ou fixture marítima.",
-        "source": {
-          "name": "Agência Petrobras",
-          "url": "https://agencia.petrobras.com.br/w/negocio/corre%C3%A7%C3%A3o-petrobras-informa-sobre-pre%C3%A7os-de-gasolina-a"
-        }
       }
     ],
     "fleetPlan": {
@@ -2922,65 +2922,65 @@
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 913.5,
-      "change": 2
+      "vlsfo": 934,
+      "change": 20.5
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 740.5,
-      "change": 5
+      "vlsfo": 755.5,
+      "change": 15
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 967,
-      "change": -3.5
+      "vlsfo": 973,
+      "change": 6
     },
     {
       "port": "Houston",
       "code": "USHOU",
-      "vlsfo": 767.5,
-      "change": 3.5
+      "vlsfo": 780.5,
+      "change": 13
     }
   ],
   "briefing": {
-    "date": "2026-10-19",
+    "date": "2026-10-20",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
-        "title": "MarineTraffic é a fonte válida mais recente",
-        "summary": "MarineTraffic · 21º46,09′ S · 040º52,90′ W · 9 h 06 min. VesselAPI: 11 h 12 min; SPOT sem ponto válido e sem leitura de bateria."
+        "title": "MarineTraffic ainda é a fonte válida mais recente (>24 h)",
+        "summary": "MarineTraffic · 21º46,09′ S · 040º52,90′ W · 32 h 50 min. VesselAPI: 34 h 56 min; SPOT sem ponto válido e sem leitura de bateria. Nenhuma data de observação foi renovada."
       },
       {
         "category": "SEGURANÇA",
-        "title": "Warnings 175–177 permanecem como os três mais recentes",
-        "summary": "A consulta de 19 out. não localizou Warning posterior ao 177. JMIC Update 106 foi publicado em 18 out.; sem conteúdo integral legível, não alterou nível nem fatos do Radar."
+        "title": "Warnings 175–177 seguem como os três mais recentes localizados",
+        "summary": "A consulta de 20 out. não localizou warning posterior ao 177. A IMO contabiliza 114 incidentes confirmados e 24 mortes até 19 out.; autoria dos casos recentes permanece não estabelecida."
       },
       {
         "category": "COSTA BR",
-        "title": "CHM: avisos 767–768 atualizam o Atlântico Sul",
-        "summary": "Vento W/SW força 8 e mar de 4–4,5 m foram publicados em 18 out. O aviso 765 permanece válido até 192100Z; confirmar extensão ou cancelamento por EGC/NAVTEX."
+        "title": "CHM: avisos 770–772 substituem ocorrências vencidas",
+        "summary": "O CHM publicou em 19 out. vento força 8 com rajadas 9 e mar de 4–5,5 m no Atlântico Sul, além de força 7/rajadas 8 entre Touros e São Luís. Confirmar por EGC/NAVTEX."
       },
       {
         "category": "METEO",
-        "title": "Pacífico prevê 65 kt; Trudy enfraquece",
-        "summary": "Baixa no Pacífico Norte pode atingir 50–65 kt e mar de 8,5 m. Atlântico Norte mantém 35–50 kt e 8 m; Trudy caiu para 50 kt e mar de 6 m às 0900Z."
+        "title": "NOAA: duas tempestades no Atlântico e mar de 7 m no Pacífico",
+        "summary": "Boletins de 20 out. indicam 40–50 kt em 24 h nas baixas de 64°N 35°W e 35°N 71°W; outra baixa em 40°N 131°W já gerava 25–40 kt e mar de 3,5–7 m."
       },
       {
         "category": "MERCADO",
-        "title": "Baltic W42 confirma correção em níveis ainda extremos",
-        "summary": "TD3C encerrou em TCE de US$ 1,37 mi/dia; TD20, US$ 522,6 mil; TD7, US$ 486,4 mil. Bunker e Petrobras mantêm o último fechamento de 16 out."
+        "title": "Frete extremo muda a contratação; bunker fecha 19 out. em alta",
+        "summary": "Reuters relata uso maior de Aframax e crude entregue na Ásia; a estimativa de 80 VLCCs ocupados em relés por Ormuz é atribuída à Vitol. VLSFO subiu nos quatro hubs acompanhados."
       },
       {
         "category": "PASSAGENS",
-        "title": "Ormuz crítico; Panamá opera capacidade anunciada de 33 slots",
-        "summary": "Warnings 175 e 177 ampliam o quadro crítico para os acessos oeste e leste de Ormuz. No Panamá, 33 slots/dia seguem como capacidade anunciada, não trânsitos realizados."
+        "title": "Ormuz crítico; ReCAAP não registrou novo caso na semana",
+        "summary": "A IMO soma 114 incidentes confirmados até 19 out. Em Malaca/Singapura, o ReCAAP não registrou incidente entre 13–19 out., mas mantém recomendação de vigilância."
       },
       {
         "category": "PSC",
-        "title": "Quatro CICs ativas; sem mudança oficial em 19 out.",
+        "title": "Quatro CICs ativas; sem nova campanha oficial em 20 out.",
         "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativos. Abuja e Mediterranean permanecem anunciados; três regimes seguem sem confirmação e USCG permanece nacional."
       }
     ],
@@ -3014,31 +3014,31 @@
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-      "scope": "Consulta em 19 out.; boletim 6–12 out. permanece o mais recente localizado e publica um CAT 4 ocorrido em 3 out. em Vung Tau",
+      "scope": "Boletim 13–19 out. consultado em 20 out.: nenhum incidente novo; os três últimos casos comprovados permanecem com a data original",
       "typeLabel": "Oficial"
     },
     {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/ukmto-products/warnings",
-      "scope": "Consulta em 19 out.; Warnings 175–177 permanecem os três mais recentes localizados. JMIC Update 106 foi publicado em 18 out.; sem leitura integral confirmada, não renovou fatos nem nível",
+      "scope": "Consulta em 20 out.; Warnings 175–177 permanecem os três mais recentes localizados. Sem warning posterior confirmado",
       "typeLabel": "Oficial"
     },
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Consulta em 19 out.; avisos 767–768 acrescentam vento W/SW força 8 e mar de 4–4,5 m; aviso 765 permanece válido até 192100Z",
+      "scope": "Consulta em 20 out.; avisos 770–772, emitidos em 19 out., cobrem vento força 7–8, rajadas 8–9 e mar de 4–5,5 m",
       "typeLabel": "Oficial"
     },
     {
       "name": "NHC / NOAA",
       "url": "https://www.nhc.noaa.gov/",
-      "scope": "Trudy com 50 kt, rajadas de 60 kt e mar de 6 m às 0900Z de 19 out.; transição pós-tropical em 24 h é previsão oficial",
+      "scope": "Trudy tornou-se pós-tropical em 20 out.; sem manter o sistema entre os três maiores alertas meteorológicos do snapshot",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Previsões de 19 out.: Pacífico Norte com 50–65 kt e mar até 8,5 m em 30 h; Atlântico Norte com 35–50 kt e mar de 4–8 m",
+      "scope": "Boletins de 20 out.: duas tempestades no Atlântico Norte, com 40–50 kt previstos, e baixa no Pacífico Norte com mar de 3,5–7 m",
       "typeLabel": "Oficial"
     },
     {
@@ -3080,7 +3080,7 @@
     {
       "name": "Ship & Bunker",
       "url": "https://shipandbunker.com/prices",
-      "scope": "Preços indicativos VLSFO do fechamento de 16 out.; reconsulta em 19 out. sem novo fechamento de fim de semana",
+      "scope": "Preços indicativos VLSFO do fechamento de 19 out.: Singapura 934; Rotterdam 755,5; Fujairah 973; Houston 780,5 US$/t",
       "typeLabel": "Indústria"
     },
     {
@@ -3104,7 +3104,7 @@
     {
       "name": "StockAnalysis / S&P Global Market Intelligence",
       "url": "https://stockanalysis.com/quote/bvmf/PETR4/history/",
-      "scope": "Fechamentos públicos de PETR3, PETR4, PBR e PBR.A em 16 out.; complemento de mercado",
+      "scope": "Fechamentos públicos de PETR3, PETR4, PBR e PBR.A em 19 out.; complemento de mercado",
       "typeLabel": "Mercado público / complementar"
     },
     {
@@ -3152,7 +3152,7 @@
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-      "scope": "Treze sistemas revistos em 19 out.; sem nova mudança documental. BELTREP/SOUNDREP acrescentam certificados de seguro em 22 nov. e REEFREP usa Entry report e posição automática por AIS",
+      "scope": "Treze sistemas revistos em 20 out.; sem nova mudança documental localizada. BELTREP/SOUNDREP acrescentam certificados de seguro em 22 nov. e REEFREP usa Entry report e posição automática por AIS",
       "typeLabel": "Oficial"
     },
     {
@@ -3170,19 +3170,19 @@
     {
       "name": "IMO / MPA Singapore — incidentes confirmados",
       "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
-      "scope": "Lista IMO reconsultada em 18 out.; mantém 113 incidentes confirmados e 24 mortes na posição publicada em 14 out.",
+      "scope": "Lista IMO reconsultada em 20 out.: 114 incidentes confirmados e 24 mortes na posição publicada em 19 out.",
       "typeLabel": "Oficial"
     },
     {
       "name": "Windward — análise pública",
       "url": "https://windward.ai/blog/",
-      "scope": "Blog e base pública reconsultados em 19 out.; nenhum achado operacional novo e corroborado foi incorporado",
+      "scope": "Blog e base pública reconsultados em 20 out.; publicações novas não acrescentaram alerta operacional corroborado ao Radar",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
       "url": "https://channel16.dryadglobal.com/",
-      "scope": "Canal público reconsultado em 19 out.; nenhum achado novo foi incorporado e eventos do Golfo permanecem deduplicados com warnings primários",
+      "scope": "Canal público reconsultado em 20 out.; nenhum achado novo corroborado foi incorporado e eventos do Golfo permanecem deduplicados com warnings primários",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -3199,9 +3199,15 @@
     },
     {
       "name": "Reuters — fretes tanker",
-      "url": "https://www.reuters.com/business/energy/soaring-freight-rates-threaten-asias-appetite-us-crude-2026-10-09/",
-      "scope": "Fixtures/indicações US Gulf–Ásia e impacto da logística em 9 out.; complemento comercial",
+      "url": "https://www.reuters.com/business/energy/asian-refiners-use-smaller-tankers-buy-delivered-crude-freight-rates-soar-2026-10-20/",
+      "scope": "Adaptação logística de refinadores asiáticos em 20 out.; uso de Aframax, venda entregue e estimativa Vitol de cerca de 80 VLCCs ocupados em relés por Ormuz",
       "typeLabel": "Imprensa / complementar"
+    },
+    {
+      "name": "Agência Petrobras — P-82",
+      "url": "https://agencia.petrobras.com.br/w/negocio/plataforma-da-petrobras-p-82-b%C3%BAzios-10-inicia-viagem-rumo-ao-brasil",
+      "scope": "P-82 deixou Singapura em 18 out. rumo a Búzios; capacidade nominal de 225 mil bpd e entrada em operação prevista para 2027",
+      "typeLabel": "Oficial / primário"
     }
   ],
   "updatePolicy": "Atualização editorial programada diariamente às 09:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. Posições são apenas consumidas dos objetos consolidados; NAVAREA é mantida por tarefa independente. PSC, Petrobras, Transpetro e regras ambientais mudam somente com publicação confiável. Dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. SCOPE permanece somente como link externo; dados legados exigidos pelo schema não alimentam a interface nem o briefing atual. Contagens AIS públicas são identificadas como observações preliminares, não como série oficial de fluxo energético.",
