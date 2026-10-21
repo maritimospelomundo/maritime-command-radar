@@ -31,17 +31,17 @@
       "Any validated MarineTraffic notification with observed UTC time and position"
     ],
     "lastKnown": {
-      "dateTime": "2026-10-19T03:12:00Z",
-      "latitude": -21.768166666666666,
-      "longitude": -40.88166666666667,
-      "eventType": "Position Report",
+      "dateTime": "2026-10-21T15:01:00Z",
+      "latitude": -21.942,
+      "longitude": -40.514833333333335,
+      "eventType": "Noon Position Report",
       "sourceType": "terrestrial",
       "positionSource": "TERR-AIS",
-      "sog": 0,
-      "cog": 221,
-      "unixTime": 1792379520
+      "sog": 10.8,
+      "cog": 223,
+      "unixTime": 1792594860
     },
-    "checkedAt": "2026-10-19T04:29:27Z",
+    "checkedAt": "2026-10-21T17:42:59.823Z",
     "history": [
       {
         "dateTime": "2026-09-10T22:54:00Z",
@@ -703,9 +703,163 @@
         "sog": 0,
         "cog": 221,
         "unixTime": 1792379520
+      },
+      {
+        "dateTime": "2026-10-19T14:50:00Z",
+        "latitude": -21.766666666666666,
+        "longitude": -40.87883333333333,
+        "eventType": "MarineTraffic notification",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0.5,
+        "cog": 115,
+        "unixTime": 1792421400
+      },
+      {
+        "dateTime": "2026-10-19T15:14:00Z",
+        "latitude": -21.772,
+        "longitude": -40.88066666666667,
+        "eventType": "Noon Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 5.1,
+        "cog": 229,
+        "unixTime": 1792422840
+      },
+      {
+        "dateTime": "2026-10-19T16:02:00Z",
+        "latitude": -21.78933333333333,
+        "longitude": -40.97533333333333,
+        "eventType": "MarineTraffic notification",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 4.8,
+        "cog": 239,
+        "unixTime": 1792425720
+      },
+      {
+        "dateTime": "2026-10-19T16:03:00Z",
+        "latitude": -21.789833333333334,
+        "longitude": -40.97666666666667,
+        "eventType": "MarineTraffic notification",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 4.8,
+        "cog": 249,
+        "unixTime": 1792425780
+      },
+      {
+        "dateTime": "2026-10-19T17:08:00Z",
+        "latitude": -21.809,
+        "longitude": -40.979,
+        "eventType": "MarineTraffic notification",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0,
+        "cog": 246,
+        "unixTime": 1792429680
+      },
+      {
+        "dateTime": "2026-10-20T03:11:00Z",
+        "latitude": -21.809,
+        "longitude": -40.979,
+        "eventType": "Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0,
+        "cog": 173,
+        "unixTime": 1792465860
+      },
+      {
+        "dateTime": "2026-10-20T15:11:00Z",
+        "latitude": -21.809,
+        "longitude": -40.979,
+        "eventType": "Noon Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0,
+        "cog": 249,
+        "unixTime": 1792509060
+      },
+      {
+        "dateTime": "2026-10-21T03:11:00Z",
+        "latitude": -21.809,
+        "longitude": -40.979,
+        "eventType": "Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0,
+        "cog": 127,
+        "unixTime": 1792552260
+      },
+      {
+        "dateTime": "2026-10-21T11:32:00Z",
+        "latitude": -21.809,
+        "longitude": -40.98,
+        "eventType": "MarineTraffic notification",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0.6,
+        "cog": 321,
+        "unixTime": 1792582320
+      },
+      {
+        "dateTime": "2026-10-21T12:00:00Z",
+        "latitude": -21.799,
+        "longitude": -40.970333333333336,
+        "eventType": "MarineTraffic notification",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 6.4,
+        "cog": 106,
+        "unixTime": 1792584000
+      },
+      {
+        "dateTime": "2026-10-21T12:01:00Z",
+        "latitude": -21.799333333333333,
+        "longitude": -40.969,
+        "eventType": "MarineTraffic notification",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 6.6,
+        "cog": 106,
+        "unixTime": 1792584060
+      },
+      {
+        "dateTime": "2026-10-21T12:07:00Z",
+        "latitude": -21.802333333333333,
+        "longitude": -40.958,
+        "eventType": "ETA Changed",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 8.1,
+        "cog": 105,
+        "unixTime": 1792584420
+      },
+      {
+        "dateTime": "2026-10-21T13:23:00Z",
+        "latitude": -21.846333333333334,
+        "longitude": -40.730333333333334,
+        "eventType": "MarineTraffic notification",
+        "sourceType": "satellite",
+        "positionSource": "SAT-AIS",
+        "sog": 10.6,
+        "cog": 94,
+        "unixTime": 1792588980
+      },
+      {
+        "dateTime": "2026-10-21T15:01:00Z",
+        "latitude": -21.942,
+        "longitude": -40.514833333333335,
+        "eventType": "Noon Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 10.8,
+        "cog": 223,
+        "unixTime": 1792594860
       }
     ],
-    "lastImportedAt": "2026-10-19T04:29:27Z"
+    "lastImportedAt": "2026-10-21T17:42:59.823Z"
   },
   "vesselApiPosition": {
     "label": "VesselAPI",
