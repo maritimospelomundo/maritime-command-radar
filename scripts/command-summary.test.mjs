@@ -4,6 +4,13 @@ import test from 'node:test';
 import adapter from '../site/command-summary.js';
 const data = JSON.parse(await readFile(new URL('../site/data/latest.json', import.meta.url), 'utf8'));
 const { buildCommandSummary } = adapter;
+function positionFixture() {
+  const fixture = structuredClone(data);
+  for (const key of ['spotPosition', 'marineTrafficPosition', 'vesselApiPosition']) {
+    fixture[key] = {...fixture[key], lastKnown: null, history: []};
+  }
+  return fixture;
+}
 test('summary preserves schema and source data without mutation', () => {
   const original = JSON.stringify(data);
   const s = buildCommandSummary(data);
@@ -17,7 +24,7 @@ test('summary preserves schema and source data without mutation', () => {
   assert.ok(s.transpetro.operationalImpact);
 });
 test('newest valid source wins, including history and invalid points', () => {
-  const d = structuredClone(data);
+  const d = positionFixture();
   d.marineTrafficPosition.history = [];
   d.spotPosition.history = [];
   d.vesselApiPosition.history = [];
@@ -72,7 +79,7 @@ test('missing event coordinates remain unknown, never zero distance', () => {
 });
 
 test('VesselAPI participates as a separate source and original UTC wins', () => {
-  const d = structuredClone(data);
+  const d = positionFixture();
   d.vesselApiPosition = {lastKnown: {latitude:5, longitude:6, dateTime:new Date(Date.now()-1800000).toISOString()}};
   d.marineTrafficPosition.lastKnown = {latitude:3, longitude:4, dateTime:new Date(Date.now()-3600000).toISOString()};
   assert.equal(buildCommandSummary(d).position.sourceLabel, 'VesselAPI');
@@ -80,7 +87,7 @@ test('VesselAPI participates as a separate source and original UTC wins', () => 
   assert.equal(buildCommandSummary(d).position.sourceLabel, 'SPOT');
 });
 test('equal original timestamps use accuracy then source order only as tie-breakers', () => {
-  const d = structuredClone(data);
+  const d = positionFixture();
   const dateTime = new Date(Date.now()-1000).toISOString();
   d.vesselApiPosition = {lastKnown: {latitude:5, longitude:6, dateTime, accuracyMeters:500}};
   d.marineTrafficPosition.lastKnown = {latitude:3, longitude:4, dateTime, accuracyMeters:25};
