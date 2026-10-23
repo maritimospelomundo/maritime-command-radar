@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-22T12:02:29.112Z",
+  "generatedAt": "2026-10-23T12:08:15.453Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -2483,14 +2483,14 @@
       {
         "label": "AÇÃO AGORA",
         "level": "medium",
-        "value": "SPOT · posição observada há 2 h 01 min",
-        "summary": "Ponto consolidado de 22 out., 1001Z: 24º32,43′ S · 043º20,90′ W. MarineTraffic tinha 9 h 03 min e VesselAPI 12 h 23 min; bateria SPOT GOOD."
+        "value": "SPOT · posição observada há 1 h 39 min",
+        "summary": "Ponto consolidado de 23 out., 1028Z: 28º31,81′ S · 046º40,95′ W. MarineTraffic: 9 h 0 min; VesselAPI: 1 d 12 h 28 min. Bateria SPOT GOOD."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
-        "value": "CHM · avisos 773 e 774",
-        "summary": "Mar de 3–3,5 m e vento força 7 entram em vigor em 23 out. na Área Alfa oceânica; o aviso 772 segue publicado até 221200Z. Confirmar por EGC/NAVTEX."
+        "value": "CHM · avisos 775 e 776",
+        "summary": "Mar de 3–3,5 m e vento SW/S força 7 entram em vigor em 24 out. na costa sul/Área Alfa; o aviso 774 permanece válido até 240000Z. Confirmar por EGC/NAVTEX."
       },
       {
         "label": "PREPARAR",
@@ -2600,7 +2600,7 @@
   },
   "market": {
     "week": "W42",
-    "sourceLabel": "Fearnleys W42 (14 out.) para mercado e TC; Baltic W42 (16 out.) para spot; Aframax TC mantém o último valor público W41; Reuters de 20–21 out. para logística; VLSFO no fechamento de 21 out.",
+    "sourceLabel": "Fearnleys W42 (14 out.) para mercado e TC; Baltic W42 (16 out.) para spot; Aframax TC mantém o último valor público W41; Reuters de 20–21 out. para logística; VLSFO público de 23 out. em Singapura, Rotterdam e Fujairah, com Houston no último dado aberto de 21 out.",
     "benchmarks": [
       {
         "segment": "VLCC",
@@ -2706,7 +2706,7 @@
       "title": "Pirataria e roubo armado",
       "shortTitle": "Pirataria",
       "icon": "☠",
-      "description": "O boletim ReCAAP de 13–19 de outubro, reconsultado em 22 de outubro, não registrou incidente novo. Preservam-se os três últimos casos comprovados com suas datas originais; o ReCAAP mantém recomendação de vigilância em Malaca/Singapura.",
+      "description": "O boletim ReCAAP de 13–19 de outubro, reconsultado em 23 de outubro, não registrou incidente novo. Preservam-se os três últimos casos comprovados com suas datas originais; o ReCAAP mantém recomendação de vigilância em Malaca/Singapura.",
       "items": [
         {
           "id": "recaap-vung-tau-2026-10-03",
@@ -2772,63 +2772,63 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-      "description": "Boletins NOAA/NWS emitidos às 1030Z de 22 de outubro priorizam Josephine no Atlântico Norte, Vance no Pacífico Leste e a baixa de 979 hPa no Atlântico Norte. Valores futuros são previsões oficiais, não observações.",
+      "description": "Boletins NOAA/NWS emitidos em 23 de outubro priorizam o furacão Vance no Pacífico Leste, uma baixa com vento de força de furacão no Atlântico Norte e uma baixa com força de tempestade no Pacífico Norte. Valores futuros são previsões oficiais, não observações.",
       "items": [
         {
-          "id": "noaa-josephine-hurricane-warning-2026-10-22",
-          "date": "2026-10-22",
-          "region": "Atlântico Norte oeste · Josephine em 38,7°N 68,3°W",
+          "id": "noaa-vance-hurricane-warning-2026-10-23",
+          "date": "2026-10-23",
+          "region": "Pacífico Leste · Vance em 10,9°N 102,1°W",
           "level": "critical",
-          "headline": "Josephine: 55 kt agora e 65 kt/10 m previstos em 24 h",
-          "summary": "A NOAA posicionou a tempestade subtropical Josephine em 38,7°N 68,3°W, com 55 kt e rajadas de 65 kt; em 24 h, prevê ciclone pós-tropical com 65 kt, rajadas de 80 kt e mar de até 10 m.",
-          "details": "High Seas Forecast AT1 emitido às 1030Z de 22 de outubro, com análise válida às 0600Z. A intensidade e o campo de vento previstos têm incerteza própria de ciclone ativo.",
-          "action": "Manter ampla margem do campo de vento e mar, revalidar weather routing/ETA e peação e restringir trabalho externo antes de cruzar a área afetada.",
+          "headline": "Vance alcança 75 kt, rajadas de 90 kt e mar de 8 m",
+          "summary": "Às 0900Z, o NHC posicionou Vance em 10,9°N 102,1°W, movendo-se para NNW a 5 kt, com vento sustentado de 75 kt, rajadas de 90 kt e mar significativo de até 8 m.",
+          "details": "Previsão do NHC incorporada ao High Seas Forecast EP1 emitido às 1030Z de 23 de outubro, com análise válida às 0600Z. O campo de vento tropical é amplo e o ponto central não delimita o perigo.",
+          "action": "Evitar o envelope previsto, acompanhar os avisos do NHC, recalcular rota/ETA e margem de combustível e restringir trabalho externo antes de qualquer aproximação.",
           "map": {
-            "x": 31.03,
-            "y": 28.5,
-            "label": "Josephine"
-          },
-          "source": {
-            "name": "NOAA Ocean Prediction Center · AT1 · 22 out.",
-            "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
-          }
-        },
-        {
-          "id": "noaa-vance-hurricane-warning-2026-10-22",
-          "date": "2026-10-22",
-          "region": "Pacífico Leste · Vance em 9,7°N 101,5°W",
-          "level": "critical",
-          "headline": "Vance deve atingir força de furacão e mar de 10 m",
-          "summary": "Vance tinha 45 kt e rajadas de 50 kt às 0900Z; o NHC prevê 70 kt/8 m em 24 h e 95 kt, rajadas de 115 kt e mar de até 10 m em 48 h.",
-          "details": "Previsão do NHC incorporada ao boletim EP1 emitido às 1030Z de 22 de outubro. Os valores de 24 e 48 horas são previsão, não observação atual.",
-          "action": "Evitar o envelope previsto, acompanhar avisos do NHC, recalcular rota/ETA e margem de combustível e não usar o ponto central como limite do perigo.",
-          "map": {
-            "x": 21.81,
-            "y": 44.61,
+            "x": 21.64,
+            "y": 43.94,
             "label": "Vance"
           },
           "source": {
-            "name": "NOAA/NHC · EP1 · 22 out.",
+            "name": "NOAA/NHC · EP1 · 23 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         },
         {
-          "id": "noaa-north-atlantic-storm-61n35w-2026-10-22",
-          "date": "2026-10-22",
-          "region": "Atlântico Norte · baixa complexa em 61°N 35°W",
+          "id": "noaa-north-atlantic-hurricane-force-low-2026-10-23",
+          "date": "2026-10-23",
+          "region": "Atlântico Norte oeste · baixa em 41°N 61°W",
           "level": "critical",
-          "headline": "Baixa de 979 hPa produz 35–45 kt e mar de 4–7 m",
-          "summary": "A NOAA informa vento de 35–45 kt e mar significativo de 4–7 m nos setores da baixa complexa, com condições deslocando-se para leste da área em 24 h.",
-          "details": "High Seas Forecast AT1 emitido às 1030Z de 22 de outubro, com análise válida às 0600Z. A área inclui águas a leste da Groenlândia e norte do Atlântico.",
-          "action": "Rever rota no Atlântico Norte, proteger convés/manifolds e restringir trabalho externo; considerar que ondas individuais podem exceder duas vezes a altura significativa.",
+          "headline": "Baixa de 982 hPa: 55–65 kt e mar de 8–10 m",
+          "summary": "A NOAA informa vento de 55–65 kt no semicírculo oeste da baixa e mar significativo de 8–10 m; a baixa move-se para nordeste a 15 kt.",
+          "details": "High Seas Forecast AT1 emitido às 1030Z de 23 de outubro, com análise válida às 0600Z. Em 24 horas, a previsão mantém 40–55 kt e mar de 5–9 m.",
+          "action": "Manter ampla margem do campo de vento e mar, revalidar weather routing/ETA e peação e restringir trabalho externo; ondas individuais podem exceder duas vezes a altura significativa.",
           "map": {
-            "x": 40.28,
-            "y": 16.11,
+            "x": 33.06,
+            "y": 27.22,
             "label": "Atlântico Norte"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · AT1 · 22 out.",
+            "name": "NOAA Ocean Prediction Center · AT1 · 23 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
+          }
+        },
+        {
+          "id": "noaa-north-pacific-storm-57n172e-2026-10-23",
+          "date": "2026-10-23",
+          "region": "Pacífico Norte oeste · baixa a oeste de 57°N 172°E",
+          "level": "high",
+          "headline": "Baixa de 960 hPa: 35–50 kt e mar de 4–8 m",
+          "summary": "A NOAA prevê vento de 35–50 kt no setor sudeste e ao longo da faixa a leste/nordeste da baixa, com mar significativo de 4–8 m.",
+          "details": "High Seas Forecast EP1 emitido às 1030Z de 23 de outubro, com análise válida às 0600Z. A baixa está a oeste da área e desloca-se para nordeste a 20 kt.",
+          "action": "Revalidar a travessia do Pacífico Norte, proteger convés e equipamentos, ajustar velocidade/rumo e limitar trabalho externo conforme o estado do mar.",
+          "map": {
+            "x": 97.78,
+            "y": 18.33,
+            "label": "Pacífico Norte"
+          },
+          "source": {
+            "name": "NOAA Ocean Prediction Center · EP1 · 23 out.",
+            "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         }
       ]
@@ -2838,8 +2838,46 @@
       "title": "Costa do Brasil",
       "shortTitle": "Costa BR",
       "icon": "◆",
-      "description": "O CHM reconsultado em 22 de outubro publicou os avisos 773–774, emitidos em 21 de outubro para a Área Alfa, e ainda apresentava o aviso 772. Os horários permanecem em UTC; os polígonos no mapa são referências aproximadas e devem ser confirmados por EGC/NAVTEX.",
+      "description": "O CHM reconsultado em 23 de outubro apresenta os avisos 775–776, emitidos em 22 de outubro, e o aviso 774, emitido em 21 de outubro. Os horários permanecem em UTC; os polígonos no mapa são referências aproximadas e devem ser confirmados por EGC/NAVTEX.",
       "items": [
+        {
+          "id": "chm-776-2026",
+          "date": "2026-10-22",
+          "region": "Costa Sul · Chuí/RS a Laguna/SC até 300 MN",
+          "level": "high",
+          "headline": "Aviso 776: vento SW/S força 7 em 24–25 out.",
+          "summary": "Vento SW/S força 7 previsto a partir de 241200Z e válido até 250600Z, na faixa costeira entre Chuí e Laguna até 300 MN da costa.",
+          "details": "Aviso emitido às 1300Z de 22 de outubro. A geometria do mapa é apenas referência aproximada da área oficial e o aviso tem vigência futura no snapshot.",
+          "action": "Revalidar weather routing, praticagem/porto, estabilidade, velocidade/heading, peação e limites de trabalho externo; confirmar vigência por EGC/NAVTEX.",
+          "map": {
+            "x": 36.39,
+            "y": 67.5,
+            "label": "CHM 776"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
+        {
+          "id": "chm-775-2026",
+          "date": "2026-10-22",
+          "region": "Área Alfa oceânica · 28,9–36°S / 43,1–52,5°W",
+          "level": "high",
+          "headline": "Aviso 775: mar de 3–3,5 m em 24–25 out.",
+          "summary": "Ondas de SW/SE de 3–3,5 m previstas a partir de 241800Z e válidas até 252100Z.",
+          "details": "Aviso oceânico emitido às 1300Z de 22 de outubro. A geometria do mapa é referência aproximada da área oficial e o aviso tem vigência futura no snapshot.",
+          "action": "Revalidar weather routing, estabilidade, velocidade/heading e trabalho externo; confirmar a vigência por EGC/NAVTEX e considerar ondas individuais maiores.",
+          "map": {
+            "x": 36.67,
+            "y": 68.06,
+            "label": "CHM 775"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
         {
           "id": "chm-774-2026",
           "date": "2026-10-21",
@@ -2847,50 +2885,12 @@
           "level": "high",
           "headline": "Aviso 774: vento NE/N força 7 em 23 out.",
           "summary": "Vento NE/N força 7, com rajadas, previsto a partir de 230000Z e válido até 240000Z.",
-          "details": "Aviso oceânico emitido às 1200Z de 21 de outubro. A geometria do mapa é referência aproximada da área oficial e o aviso tem vigência futura no snapshot.",
-          "action": "Planejar antes da entrada em vigor: revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho externo.",
+          "details": "Aviso oceânico emitido às 1200Z de 21 de outubro. A geometria do mapa é referência aproximada da área oficial.",
+          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho externo; confirmar vigência por EGC/NAVTEX.",
           "map": {
             "x": 36.67,
             "y": 68.06,
             "label": "CHM 774"
-          },
-          "source": {
-            "name": "CHM / Marinha do Brasil",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
-        },
-        {
-          "id": "chm-773-2026",
-          "date": "2026-10-21",
-          "region": "Área Alfa oceânica · 30,2–36°S / 44,2–51,9°W",
-          "level": "high",
-          "headline": "Aviso 773: mar de 3–3,5 m em 23–24 out.",
-          "summary": "Ondas de NE/N de 3–3,5 m previstas a partir de 231200Z, válidas até 240600Z.",
-          "details": "Aviso oceânico emitido às 1200Z de 21 de outubro. A geometria do mapa é referência aproximada da área oficial e o aviso tem vigência futura no snapshot.",
-          "action": "Revalidar weather routing, estabilidade, velocidade/heading e trabalho externo; confirmar a vigência por EGC/NAVTEX e considerar ondas individuais maiores.",
-          "map": {
-            "x": 36.67,
-            "y": 68.06,
-            "label": "CHM 773"
-          },
-          "source": {
-            "name": "CHM / Marinha do Brasil",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
-        },
-        {
-          "id": "chm-772-2026",
-          "date": "2026-10-19",
-          "region": "Área Sul Oceânica · 30–36°S / 20–30°W",
-          "level": "high",
-          "headline": "Aviso 772: mar de 4–5,5 m até 221200Z",
-          "summary": "Ondas de NW/SW de 4–5,5 m previstas a partir de 201200Z, válidas até 221200Z.",
-          "details": "Aviso da Área Sul Oceânica emitido às 1200Z de 19 de outubro. Permanece entre os três registros públicos mais recentes localizados; a geometria é referência aproximada.",
-          "action": "Confirmar encerramento/vigência por EGC/NAVTEX e manter margem para mar residual, peação e restrição de trabalho externo.",
-          "map": {
-            "x": 43.06,
-            "y": 68.33,
-            "label": "CHM 772"
           },
           "source": {
             "name": "CHM / Marinha do Brasil",
@@ -2904,7 +2904,7 @@
       "title": "Conflito e segurança de rota",
       "shortTitle": "Segurança",
       "icon": "▲",
-      "description": "Os Warnings 179–180 e o Advisory 178 são os três incidentes UKMTO mais recentes comprovados na consulta de 22 de outubro. Dois tankers foram atingidos por projéteis; no 179 houve incêndio extinto. Autoria e responsabilidade não estão estabelecidas.",
+      "description": "Os Warnings 179–180 e o Advisory 178 permanecem os três incidentes UKMTO mais recentes comprovados na consulta de 23 de outubro. Dois tankers foram atingidos por projéteis; no 179 houve incêndio extinto. Autoria e responsabilidade não estão estabelecidas.",
       "items": [
         {
           "id": "ukmto-bukha-2026-10-21",
@@ -2970,7 +2970,7 @@
       "title": "Navegação eletrônica e portos",
       "shortTitle": "Nav/Portos",
       "icon": "⌁",
-      "description": "Contexto operacional reconsultado em 22 de outubro. O relato Reuters sobre frete extremo permanece atual; análise pública da Windward de 20 de outubro acrescenta um indicador proprietário de risco de frota, sem substituir vetting, sanções ou verificação oficial.",
+      "description": "Contexto operacional reconsultado em 23 de outubro. O relato Reuters sobre frete extremo permanece atual; a análise pública mais recente da Windward continua sendo a de 20 de outubro e não substitui vetting, sanções ou verificação oficial. A Dryad não publicou achado posterior corroborado que exigisse novo alerta.",
       "items": [
         {
           "id": "reuters-asian-refiners-aframax-2026-10-20",
@@ -3108,7 +3108,7 @@
       "trafficTrend": "alta demanda asiática",
       "trafficBasis": "Cerca de 22,8 milhões b/d de petróleo e líquidos atravessaram o corredor em 2025 segundo a EIA; métrica de energia, não contagem de navios.",
       "market": "Principal artéria energética da Ásia; congestionamento ou bloqueio pressiona fretes, bunker, estoques e rotas via Sunda/Lombok.",
-      "geopolitics": "Baixo risco de guerra imediato, mas alta criticidade estratégica; o ReCAAP, reconsultado em 22 de outubro, não registrou incidente novo entre 13–19 out. e mantém recomendação de vigilância em Malaca/Singapura.",
+      "geopolitics": "Baixo risco de guerra imediato, mas alta criticidade estratégica; o ReCAAP, reconsultado em 23 de outubro, não registrou incidente novo entre 13–19 out. e mantém recomendação de vigilância em Malaca/Singapura.",
       "authority": "VTS da Malásia, Indonésia e Singapura",
       "reporting": "STRAITREP obrigatório para categorias prescritas nos setores 1–9.",
       "masterFocus": [
@@ -3130,7 +3130,7 @@
       "trafficTrend": "crescimento",
       "trafficBasis": "Singapura recebe em média ~140 mil vessel calls/ano; em 2025 registrou 3,22 bilhões GT de chegadas (+3,5%). Port calls não equivalem a trânsitos do estreito.",
       "market": "Hub global de bunker, transbordo e refino; atrasos repercutem em fixtures, disponibilidade de combustível e cadeias Ásia–Europa.",
-      "geopolitics": "Baixo risco de guerra; densidade, cruzamentos e embarcações pequenas dominam. O ReCAAP, reconsultado em 22 de outubro, não registrou incidente novo entre 13–19 out., mas mantém recomendação de vigilância.",
+      "geopolitics": "Baixo risco de guerra; densidade, cruzamentos e embarcações pequenas dominam. O ReCAAP, reconsultado em 23 de outubro, não registrou incidente novo entre 13–19 out., mas mantém recomendação de vigilância.",
       "authority": "MPA Singapore / VTIS",
       "reporting": "STRAITREP obrigatório e requisitos portuários de Singapura quando houver escala.",
       "masterFocus": [
@@ -3462,7 +3462,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-    "note": "Evidência oficial PSC verificada em 22 out. 2026 às 10:36 UTC e reutilizada por estar dentro de 36 h. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. No último dia da PSCC28, a fonte Mediterranean disponível ainda não publicou resultado, nova campanha, questionário ou exigência operacional. Indian Ocean e USCG tiveram bloqueio de acesso direto; buscas oficiais complementares não localizaram mudança material, e as falhas não foram tratadas como prova de ausência. USCG mantém programa nacional contínuo.",
+    "note": "Evidência oficial PSC verificada em 23 out. 2026 às 10:37 UTC e reutilizada por estar dentro de 36 h. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. Mudança material: o Tokyo MoU publicou o Safety Bulletin 05/2026 sobre extensões impróprias de certificados estatutários e possível detenção. Mediterranean ainda não publicou resultado da PSCC28; Indian Ocean e USCG tiveram bloqueio de acesso direto, e as falhas não foram tratadas como prova de ausência. USCG mantém programa nacional contínuo.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -3482,7 +3482,7 @@
         "status": "active",
         "campaign": "Cargo Securing 2026",
         "window": "01 set. — 30 nov. 2026",
-        "tankerFocus": "Além do questionário, atenção a fire safety, emergency systems, ISM e prevenção de poluição.",
+        "tankerFocus": "Além do questionário da CIC, atenção a fire safety, emergency systems, ISM e prevenção de poluição. Safety Bulletin 05/2026: extensão estatutária somente quando prevista no instrumento aplicável, pelo mínimo necessário e sem continuidade de operações comerciais; extensão imprópria pode levar à detenção.",
         "source": {
           "name": "Tokyo MoU",
           "url": "https://www.tokyo-mou.org/press-releases/2026/08/03/joint-press-release-on-the-concentrated-inspection-campaign-on-cargo-securing/"
@@ -3833,20 +3833,20 @@
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 932,
-      "change": -0.5
+      "vlsfo": 952.5,
+      "change": 20.5
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 759,
-      "change": -6
+      "vlsfo": 767,
+      "change": 13.5
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 968,
-      "change": -11.5
+      "vlsfo": 984,
+      "change": 13.5
     },
     {
       "port": "Houston",
@@ -3856,43 +3856,43 @@
     }
   ],
   "briefing": {
-    "date": "2026-10-22",
+    "date": "2026-10-23",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
         "title": "SPOT é a fonte válida mais recente",
-        "summary": "SPOT · 24º32,43′ S · 043º20,90′ W · 2 h 01 min. MarineTraffic: 9 h 03 min; VesselAPI: 12 h 23 min. Bateria SPOT GOOD; datas de observação preservadas."
+        "summary": "SPOT · 28º31,81′ S · 046º40,95′ W · 1 h 39 min. MarineTraffic: 9 h 0 min; VesselAPI: 1 d 12 h 28 min. Bateria SPOT GOOD; datas de observação preservadas."
       },
       {
         "category": "SEGURANÇA",
-        "title": "UKMTO acrescenta ataques 179–180 a dois tankers",
-        "summary": "No 179, um tanker foi atingido perto de Bukha e o incêndio foi extinto; no 180, outro tanker foi atingido a sudeste de Al Faw sem dano reportado. Tripulações seguras; autoria não estabelecida."
+        "title": "UKMTO mantém 178–180 como os três alertas mais recentes",
+        "summary": "Os Warnings 179–180 cobrem dois tankers atingidos por projéteis; no 179 o incêndio foi extinto. O Advisory 178 permanece sob investigação. Tripulações seguras; autoria não estabelecida."
       },
       {
         "category": "COSTA BR",
-        "title": "CHM publica avisos 773–774 para 23–24 out.",
-        "summary": "Na Área Alfa oceânica, o CHM prevê mar de 3–3,5 m e vento NE/N força 7. O aviso 772 permanece publicado até 221200Z; confirmar vigência por EGC/NAVTEX."
+        "title": "CHM acrescenta avisos 775–776 para 24–25 out.",
+        "summary": "O CHM prevê mar de 3–3,5 m na Área Alfa e vento SW/S força 7 entre Chuí e Laguna até 300 MN. Confirmar vigência por EGC/NAVTEX."
       },
       {
         "category": "METEO",
-        "title": "Josephine e Vance concentram avisos de furacão",
-        "summary": "Josephine pode alcançar 65 kt e mar de 10 m em 24 h no Atlântico Norte; Vance pode chegar a 95 kt e mar de 10 m em 48 h no Pacífico Leste."
+        "title": "Vance e baixas extratropicais concentram o risco",
+        "summary": "Vance alcançou 75 kt e mar de 8 m; a baixa de 982 hPa no Atlântico Norte produz 55–65 kt e mar de 8–10 m. Josephine teve o aviso encerrado."
       },
       {
         "category": "MERCADO",
-        "title": "Fretes seguem extremos; VLSFO recua em três hubs",
-        "summary": "A leitura tanker permanece baseada em Baltic/Fearnleys W42. Indicações VLSFO de 21 out.: Singapura US$ 932/t, Rotterdam 759, Fujairah 968 e Houston 791,5."
+        "title": "Fretes seguem extremos; VLSFO sobe em três hubs",
+        "summary": "A leitura tanker permanece baseada em Baltic/Fearnleys W42. Indicações públicas VLSFO de 23 out.: Singapura US$ 952,5/t, Rotterdam 767 e Fujairah 984; Houston mantém o último dado aberto de 21 out."
       },
       {
         "category": "PASSAGENS",
-        "title": "Ormuz chega a 120 incidentes; Suez tem série oficial",
-        "summary": "A IMO soma 120 incidentes confirmados e 24 mortes até 22 out. A SCA informou 166 containerships >130 mil t e 29 milhões de net tonnage entre julho e setembro, contra 16 e 2,4 milhões no mesmo período de 2025."
+        "title": "Ormuz permanece crítico; Suez e Panamá sem nova série",
+        "summary": "A IMO mantém 120 incidentes confirmados e 24 mortes até 22 out. Suez preserva a série oficial de 166 containerships >130 mil t; Panamá mantém capacidade anunciada de 33 slots/dia."
       },
       {
         "category": "PSC",
-        "title": "Quatro CICs ativas; evidência atualizada sem mudança material",
-        "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativos; Abuja e Mediterranean anunciados; três regimes sem confirmação e USCG nacional. A evidência PSC foi verificada em 22 out."
+        "title": "Tokyo MoU alerta para extensões impróprias de certificados",
+        "summary": "Quatro CICs seguem ativas, duas anunciadas, três sem confirmação e USCG nacional. O Bulletin 05/2026 do Tokyo MoU associa extensões estatutárias incompatíveis com as Convenções à possível detenção."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -3925,31 +3925,31 @@
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-      "scope": "Boletim 13–19 out. reconsultado em 22 out.: nenhum incidente novo; os três últimos casos comprovados permanecem com a data original",
+      "scope": "Boletim 13–19 out. reconsultado em 23 out.: nenhum incidente novo; os três últimos casos comprovados permanecem com a data original",
       "typeLabel": "Oficial"
     },
     {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/ukmto-products/warnings",
-      "scope": "Consulta em 22 out.; Warnings 179–180 e Advisory 178 são os três incidentes mais recentes comprovados incorporados",
+      "scope": "Consulta em 23 out.; Warnings 179–180 e Advisory 178 permanecem os três incidentes mais recentes comprovados incorporados",
       "typeLabel": "Oficial"
     },
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Consulta em 22 out.; avisos 773–774 emitidos em 21 out. para a Área Alfa e aviso 772 ainda publicado até 221200Z",
+      "scope": "Consulta em 23 out.; avisos 775–776 emitidos em 22 out. para a costa sul/Área Alfa e aviso 774 ainda publicado",
       "typeLabel": "Oficial"
     },
     {
       "name": "NHC / NOAA",
       "url": "https://www.nhc.noaa.gov/",
-      "scope": "Boletim EP1 de 22 out.: Vance com 45 kt às 0900Z e previsão de furacão com 95 kt e mar de 10 m em 48 h",
+      "scope": "Boletim EP1 de 23 out.: furacão Vance com 75 kt, rajadas de 90 kt e mar de até 8 m às 0900Z",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Boletins AT1/EP1 de 22 out.: Josephine e Vance sob hurricane warning e baixa de 979 hPa no Atlântico Norte",
+      "scope": "Boletins AT1/EP1 de 23 out.: baixa no Atlântico Norte com 55–65 kt e mar de 8–10 m; duas baixas com storm warning no Pacífico Norte",
       "typeLabel": "Oficial"
     },
     {
@@ -3989,10 +3989,10 @@
       "typeLabel": "Imprensa / complementar"
     },
     {
-      "name": "Ship & Bunker",
-      "url": "https://shipandbunker.com/prices",
-      "scope": "Preços indicativos VLSFO do fechamento de 21 out.: Singapura 932; Rotterdam 759; Fujairah 968; Houston 791,5 US$/t",
-      "typeLabel": "Indústria"
+      "name": "Bunker Index",
+      "url": "https://www.bunkerindex.com/",
+      "scope": "Indicações VLSFO de 23 out.: Singapura 952,5; Rotterdam 767; Fujairah 984 US$/t. Houston preserva último dado aberto de 21 out.",
+      "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Paris MoU",
@@ -4063,7 +4063,7 @@
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-      "scope": "Treze sistemas preservados; STRAITREP, VTS Canadá e reportes dos canais foram reconsultados em 22 out. sem mudança de limite, formato ou frequência localizada. BELTREP/SOUNDREP acrescentam certificados de seguro em 22 nov.",
+      "scope": "Treze sistemas preservados; fontes oficiais reconsultadas em 23 out. sem mudança de limite, formato ou frequência localizada. BELTREP/SOUNDREP acrescentam certificados de seguro em 22 nov.",
       "typeLabel": "Oficial"
     },
     {
@@ -4081,19 +4081,19 @@
     {
       "name": "IMO / MPA Singapore — incidentes confirmados",
       "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
-      "scope": "Lista IMO reconsultada em 22 out.: 120 incidentes confirmados e 24 mortes",
+      "scope": "Lista IMO reconsultada em 23 out.; último estado oficial localizado permanece em 120 incidentes confirmados e 24 mortes, atualizado em 22 out.",
       "typeLabel": "Oficial"
     },
     {
       "name": "Windward — análise pública",
       "url": "https://windward.ai/blog/",
-      "scope": "Blog e base pública reconsultados em 22 out.; nenhum artigo posterior ao material já incorporado trouxe achado operacional novo e corroborado",
+      "scope": "Blog e base pública reconsultados em 23 out.; nenhum artigo posterior a 20 out. trouxe achado operacional novo e corroborado",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
       "url": "https://channel16.dryadglobal.com/",
-      "scope": "Canal público reconsultado em 22 out.; nenhum achado novo corroborado foi incorporado e eventos do Golfo permanecem deduplicados com UKMTO/IMO",
+      "scope": "Canal público reconsultado em 23 out.; nenhum achado novo corroborado foi incorporado e eventos do Golfo permanecem deduplicados com UKMTO/IMO",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -4119,6 +4119,12 @@
       "url": "https://agencia.petrobras.com.br/w/negocio/plataforma-da-petrobras-p-82-b%C3%BAzios-10-inicia-viagem-rumo-ao-brasil",
       "scope": "P-82 deixou Singapura em 18 out. rumo a Búzios; capacidade nominal de 225 mil bpd e entrada em operação prevista para 2027",
       "typeLabel": "Oficial / primário"
+    },
+    {
+      "name": "Tokyo MoU — Safety Bulletin 05/2026",
+      "url": "https://www.tokyo-mou.org/safety-bulletin/2026/10/23/safety-bulletin-05-26-improper-extensions-of-statutory-certification/",
+      "scope": "Orientação de 23 out. sobre prorrogação de certificados estatutários e possível detenção por extensão incompatível com Convenções/Códigos",
+      "typeLabel": "Oficial"
     }
   ],
   "updatePolicy": "Atualização editorial programada diariamente às 09:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. Posições são apenas consumidas dos objetos consolidados; NAVAREA é mantida por tarefa independente. PSC, Petrobras, Transpetro e regras ambientais mudam somente com publicação confiável. Dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. SCOPE permanece somente como link externo; dados legados exigidos pelo schema não alimentam a interface nem o briefing atual. Contagens AIS públicas são identificadas como observações preliminares, não como série oficial de fluxo energético.",
