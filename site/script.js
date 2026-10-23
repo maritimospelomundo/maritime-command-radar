@@ -803,6 +803,7 @@ async function loadRadar() {
     render(data);
     window.maritimeCommandSummary = window.buildCommandSummary(data, positionContext?.current);
     renderCommandSummary(window.maritimeCommandSummary);
+    renderIndiaNavigation(data);
     window.dispatchEvent(new CustomEvent('maritime-command-summary-ready', { detail: window.maritimeCommandSummary }));
     message.hidden = true;
     portal.setAttribute('aria-busy', 'false');
@@ -845,3 +846,73 @@ function renderCommandSummary(summary) {
   market.append(element('small', 'market-provenance', `${summary.tankerMarket.sourceLabel} · referências, não fixtures`));
 }
 
+
+/* India regional reference. Public official sources only; no internal email data. */
+const indiaPorts = [
+ ['Vadinar',22.45,69.71],['Sikka',22.43,69.82],['Kandla / Deendayal',23.00,70.22],
+ ['Mundra',22.74,69.70],['Mumbai',18.93,72.84],['JNPT / Nhava Sheva',18.95,72.95],
+ ['Mormugao / Goa',15.41,73.80],['New Mangalore',12.92,74.81],['Kochi / Cochin',9.97,76.26],
+ ['Tuticorin / Thoothukudi',8.75,78.20],['Chennai',13.10,80.30],['Ennore / Kamarajar',13.25,80.33],
+ ['Kattupalli',13.31,80.34],['Krishnapatnam',14.25,80.13],['Visakhapatnam',17.69,83.30],
+ ['Paradip',20.26,86.68],['Dhamra',20.79,86.96],['Haldia',22.02,88.09],
+ ['Kolkata',22.54,88.31],['Port Blair',11.67,92.75]
+];
+function indiaVoyageState(data, current, manual = '', now = Date.now()) {
+ const raw = data.voyage?.destination ?? data.destination ?? data.marineTrafficPosition?.destination ?? data.marineTrafficPosition?.lastKnown?.destination;
+ const text = typeof raw === 'string' ? raw : [raw?.name,raw?.country,raw?.countryCode,raw?.unlocode].filter(Boolean).join(' ');
+ const normalized = text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ const matched = indiaPorts.find(p => p[0].toLowerCase().split(' / ').some(n => normalized.includes(n)));
+ const manualPort = indiaPorts.find(p => p[0] === manual);
+ const confirmed = Boolean(manualPort || matched || /\b(india|in[a-z]{3})\b/i.test(normalized));
+ const port = manualPort || matched;
+ const valid = current && typeof current.latitude === 'number' && typeof current.longitude === 'number' && validCoordinate(current.latitude,current.longitude);
+ const age = current ? now - pointTimestamp(current) : Infinity;
+ const fresh = valid && Number.isFinite(age) && age >= 0 && age <= 86400000;
+ const distance = valid && port ? distanceNm(current,{latitude:port[1],longitude:port[2]}) : Infinity;
+ return { confirmed, port, distance, fresh, active:confirmed && fresh && distance <= 1500, close:confirmed && fresh && distance <= 500 };
+}
+function renderIndiaNavigation(data) {
+ let section = byId('navigation-areas-detail');
+ if (!section) {
+  section = element('section','deep-dive'); section.id='navigation-areas-detail';
+  const heading=element('div','section-heading');
+  heading.append(element('p','','ÁREAS DE NAVEGAÇÃO'),element('h2','','Oceano Índico · Índia'));
+  const details=element('details','passage-card'); details.id='india-navigation';
+  details.append(element('summary','','Índia · navegação, trânsito e preparação para portos'));
+  const body=element('div','passage-body');
+  body.append(element('p','','Referência revista em 23/10/2026. Regras costeiras também podem alcançar trânsito sem escala; não limitar sua aplicação automaticamente a 12 MN.'));
+  const label=element('label','','Viagem para a Índia: ');
+  const select=element('select'); select.id='india-destination'; select.setAttribute('aria-label','Destino da viagem para a Índia');
+  const auto=element('option','','Automático · destino informado ao Radar'); auto.value='';select.append(auto);
+  indiaPorts.forEach(p=>{const option=element('option','',p[0]);option.value=p[0];select.append(option);});
+  try {select.value=localStorage.getItem('radar-india-destination')||'';} catch {}
+  select.addEventListener('change',()=>{try {localStorage.setItem('radar-india-destination',select.value);}catch{} renderIndiaNavigation(window.indiaRadarData);});
+  label.append(select);body.append(label,element('p','coverage-note','A seleção manual fica neste navegador. Automático usa somente o destino explícito da viagem; nunca porto anterior, rumo ou proximidade isolada. Alterar para Automático ao encerrar a viagem.'));
+  const status=element('p');status.id='india-context-status';body.append(status);
+  const groups=[
+   ['Entrada, trânsito e documentos','Confirmar com agente/armador o enquadramento nas Coastal Waters Rules 2026, seguro e segurança financeira aplicáveis, certificado de classe IACS/RO e limiar de idade por tipo de navio. Não aplicar automaticamente o limiar de petroleiro de produtos a um petroleiro de óleo cru. Para escala, confirmar os documentos e prazo de pré-chegada; preparar envio com pelo menos 48 h conforme instruções portuárias.'],
+   ['Salvamento e resposta à poluição','A Circular DGMA 69/2026 prevê transição até 01/04/2027 para requisitos adicionais de classe e contratos de salvamento/resposta à poluição dos navios abrangidos. Confirmar elegibilidade da viagem à transição, prestadores aprovados e contratos com o armador/agente. Após o prazo, exigir nova verificação de cumprimento e de eventuais alterações oficiais.'],
+   ['Comunicações por satélite · declaração e custódia','Aplicar DGS Order 02/2026 e 09/2023: declarar todos os portáteis do navio e da tripulação no PANS, com marca, modelo e IMEI/ESN. Equipamento pessoal fora do GMDSS não pode ser usado nas águas costeiras indianas; recolher sob custódia do Comandante e apresentar para lacração quando aplicável. Thuraya continua proibido. Iridium GMDSS/RMSS aprovado é permitido para socorro e segurança, sob as condições da norma. Não desligar indiscriminadamente equipamentos obrigatórios de segurança; confirmar licenças e autorizações.'],
+   ['Plásticos descartáveis · navio de bandeira estrangeira','Preparar lista específica e plano de implementação a bordo (SIP), verificar itens abrangidos e exceções da Ordem 05/2019, adendo e FAQ revisão 3. Itens proibidos podem permanecer armazenados nos locais identificados, sem uso durante a permanência em local/porto indiano. Preparar segregação antes da entrada e registrar data, hora, posição e local de guarda conforme procedimento e orientação do agente. A FAQ oficial esclarece que instalações portuárias indianas podem receber esses resíduos: confirmar disponibilidade e recibo; não reproduzir a proibição geral de entrega do e-mail antigo.'],
+   ['Evidências para a chegada','Reunir confirmações do agente, seguros, classe e contratos aplicáveis; PANS e protocolo; inventário/custódia dos satcom pessoais; briefing da tripulação; SIP e registros de resíduos. Em Vadinar, confirmar separadamente os requisitos atuais de amarração/pull-back e reduções de manifold na aceitação do terminal.']
+  ];
+  groups.forEach(([title,copy])=>{const group=element('div');group.append(element('h3','',title),element('p','',copy));body.append(group);});
+  const sources=[
+   ['DGMA · Circular 69/2026','https://www.dgma.gov.in/download/1791979885_6acf716d1314e_dgma-circular-no-69-of-2026-coastal-entry-rules-2026-6-mnths-extension-for-compliance.pdf'],
+   ['DGS · Satcom Order 02/2026','https://dgma.gov.in/download/1773294531_69b253c339144_dgs-order-02-of-2026.pdf'],
+   ['DGS · Plásticos FAQ revisão 3','https://dgshipping.gov.in/WriteReadData/News/202006290504475495235FAQ_29062020.pdf']
+  ];
+  sources.forEach(([name,url])=>{const p=element('p');const a=element('a','',name+' ↗');a.href=url;a.target='_blank';a.rel='noreferrer';p.append(a);body.append(p);});
+  body.append(element('p','coverage-note','O limiar de 1.500 MN é critério de apresentação do painel, não limite jurídico. Distância geodésica aproximada ao porto selecionado, não distância navegável/rota. Para trânsito sem destino indiano, consultar este grupo durante o planejamento.'));
+  details.append(body);section.append(heading,details);byId('passages-detail').after(section);
+ }
+ window.indiaRadarData=data;
+ const state=indiaVoyageState(data,positionContext?.current,byId('india-destination').value);
+ setText('india-context-status',!state.confirmed?'Destino indiano não informado ao Radar: referência disponível sem aviso no resumo.':!state.port?'Destino Índia reconhecido; identificar o porto para calcular distância.':!state.fresh?'Posição ausente ou com mais de 24 h: destaque automático suspenso.':state.port[0]+' · aproximadamente '+number.format(state.distance)+' MN · '+(state.active?'preparação regional ativa':'sem destaque; fora de 1.500 MN'));
+ byId('india-voyage-notice')?.remove();
+ if(state.active){
+  const notice=element('a','summary-item');notice.id='india-voyage-notice';notice.href='#india-navigation';
+  notice.append(element('small','','ÍNDIA · '+number.format(state.distance)+' MN'),element('b','',state.close?'Preparação de chegada · revisar evidências':'Próximo destino · requisitos da Índia'),element('p','','Conferir PANS/satcom, plásticos, documentos e contratos aplicáveis. Abrir orientações regionais.'));
+  byId('passage-summary').append(notice);
+ }
+}
