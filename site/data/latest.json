@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 43344)
+Total output lines: 4633
+
 {
   "schemaVersion": 5,
   "generatedAt": "2026-10-24T12:09:09.525Z",
@@ -13,14 +16,14 @@
     "endpoint": "",
     "mapUrl": "https://maps.findmespot.com/s/VCV3",
     "lastKnown": {
-      "id": "2517298250",
-      "unixTime": 1792851724,
-      "dateTime": "2026-10-24T14:22:04+0000",
-      "latitude": -33.39244,
-      "longitude": -50.37759,
+      "id": "2517321137",
+      "unixTime": 1792855323,
+      "dateTime": "2026-10-24T15:22:03+0000",
+      "latitude": -33.56766,
+      "longitude": -50.51529,
       "messageType": "UNLIMITED-TRACK",
       "batteryState": "GOOD",
-      "altitude": 17
+      "altitude": 29
     },
     "excludedTestMessageIds": [
       "2493309049",
@@ -1012,9 +1015,19 @@
         "messageType": "UNLIMITED-TRACK",
         "batteryState": "GOOD",
         "altitude": 17
+      },
+      {
+        "id": "2517321137",
+        "unixTime": 1792855323,
+        "dateTime": "2026-10-24T15:22:03+0000",
+        "latitude": -33.56766,
+        "longitude": -50.51529,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 29
       }
     ],
-    "lastSyncAt": "2026-10-24T15:14:20.236Z"
+    "lastSyncAt": "2026-10-24T16:10:38.499Z"
   },
   "marineTrafficPosition": {
     "label": "MarineTraffic",
@@ -2735,365 +2748,7 @@
         "longitude": -41.64724,
         "eventType": "Position Report",
         "sourceType": "terrestrial",
-        "importedAt": "2026-10-18T11:11:27.932Z",
-        "sog": 12.7,
-        "cog": 49.2,
-        "heading": 48
-      },
-      {
-        "dateTime": "2026-10-18T18:07:47.727Z",
-        "unixTime": 1792346867,
-        "latitude": -21.76833,
-        "longitude": -40.85669,
-        "eventType": "Position Report",
-        "sourceType": "terrestrial",
-        "importedAt": "2026-10-18T18:08:45.744Z",
-        "sog": 7.4,
-        "cog": 296.6,
-        "heading": 297
-      },
-      {
-        "dateTime": "2026-10-18T23:12:07.000Z",
-        "unixTime": 1792365127,
-        "latitude": -21.76854,
-        "longitude": -40.88179,
-        "eventType": "Position Report",
-        "sourceType": "terrestrial",
-        "importedAt": "2026-10-18T23:16:25.638Z",
-        "sog": 0.1,
-        "cog": 213.7,
-        "heading": 120
-      },
-      {
-        "dateTime": "2026-10-19T01:06:05.000Z",
-        "unixTime": 1792371965,
-        "latitude": -21.76848,
-        "longitude": -40.88195,
-        "eventType": "Position Report",
-        "sourceType": "terrestrial",
-        "importedAt": "2026-10-19T06:18:38.647Z",
-        "sog": 0.1,
-        "cog": 3.4,
-        "heading": 115
-      },
-      {
-        "dateTime": "2026-10-21T23:39:52.000Z",
-        "unixTime": 1792625992,
-        "latitude": -23.08944,
-        "longitude": -41.794,
-        "eventType": "Position Report",
-        "sourceType": "terrestrial",
-        "importedAt": "2026-10-22T07:38:10.651Z",
-        "sog": 11.7,
-        "cog": 223.9,
-        "heading": 227
-      }
-    ],
-    "lastKnown": {
-      "dateTime": "2026-10-21T23:39:52.000Z",
-      "unixTime": 1792625992,
-      "latitude": -23.08944,
-      "longitude": -41.794,
-      "eventType": "Position Report",
-      "sourceType": "terrestrial",
-      "importedAt": "2026-10-24T11:06:28.169Z",
-      "sog": 11.7,
-      "cog": 223.9,
-      "heading": 227
-    }
-  },
-  "dailyWatch": {
-    "horizons": [
-      {
-        "label": "AÇÃO AGORA",
-        "level": "medium",
-        "value": "SPOT · posição observada há 46 min",
-        "summary": "Ponto consolidado de 24 out., 1122Z: 32º53,30′ S · 049º59,23′ W. MarineTraffic: 9 h 13 min; VesselAPI: 2 d 12 h 29 min. Bateria SPOT GOOD."
-      },
-      {
-        "label": "PRÓXIMAS 72 H",
-        "level": "high",
-        "value": "CHM · avisos 777–781",
-        "summary": "O CHM mantém avisos emitidos em 23 out. para 25–26 out.: mar de 3–5 m e vento força 7–8, com rajadas força 9. Confirmar vigência por EGC/NAVTEX."
-      },
-      {
-        "label": "PREPARAR",
-        "level": "critical",
-        "value": "Golfo / Ormuz · UKMTO 178–180",
-        "summary": "Na consulta de 24 out., os Warnings 179–180 e o Advisory 178 permanecem os três alertas mais recentes comprovados; a lista IMO segue em 120 incidentes e 24 mortes, atualizada em 22 out."
-      }
-    ],
-    "modules": [
-      {
-        "id": "msi",
-        "icon": "⌁",
-        "label": "NAVAREA / METAREA",
-        "value": "NAVAREA · 544 registros publicados",
-        "status": "live",
-        "summary": "Base pública recebida até 15 out.; NAVAREA V é conferida no CHM quando disponível e as demais áreas exigem confirmação pelo coordenador, EGC/NAVTEX.",
-        "source": {
-          "name": "Base NAVAREA pública do Radar",
-          "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
-        }
-      },
-      {
-        "id": "environment",
-        "icon": "◉",
-        "label": "MARPOL / ECA",
-        "value": "7 ECAs em vigor",
-        "status": "watch",
-        "summary": "Mediterrâneo, Ártico canadense e Mar da Noruega integram as áreas com limites mais estritos.",
-        "source": {
-          "name": "IMO",
-          "url": "https://www.imo.org/en/OurWork/Environment/Pages/Emission-Control-Areas-%28ECAs%29-designated-under-regulation-13-of-MARPOL-Annex-VI-%28NOx-emission-control%29.aspx"
-        }
-      },
-      {
-        "id": "gnss",
-        "icon": "◎",
-        "label": "GNSS",
-        "value": "Interferência persistente",
-        "status": "high",
-        "summary": "JMIC mantém EMI/GNSS em Ormuz, Golfo de Omã, Golfo Pérsico e corredor do Mar Vermelho; validar posição por meios independentes.",
-        "source": {
-          "name": "JMIC / UKMTO",
-          "url": "https://www.ukmto.org/-/media/ukmto/products/update-096-jmic-advisory-note-13-september.pdf?rev=9a32516ecb2f40ce83594fc4166a66be"
-        }
-      },
-      {
-        "id": "ocean",
-        "icon": "◒",
-        "label": "OCEAN / WAVES",
-        "value": "Modelo global · 10 dias",
-        "status": "live",
-        "summary": "Ondas, swell e correntes em dados abertos; usar como apoio e confirmar no weather routing de bordo.",
-        "source": {
-          "name": "Copernicus Marine",
-          "url": "https://data.marine.copernicus.eu/"
-        }
-      },
-      {
-        "id": "chokepoints",
-        "icon": "▲",
-        "label": "CHOKEPOINTS",
-        "value": "Ormuz crítico · 120 confirmados",
-        "status": "high",
-        "summary": "A IMO registra 120 incidentes confirmados e 24 mortes até 22 out.; manter avaliação específica, war-risk, redundância de navegação e autorização do CSO.",
-        "source": {
-          "name": "IMO · incidentes confirmados",
-          "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
-        }
-      },
-      {
-        "id": "bunker-quality",
-        "icon": "◆",
-        "label": "BUNKER QUALITY",
-        "value": "Verificar antes do stem",
-        "status": "watch",
-        "summary": "Preço não substitui confirmação de disponibilidade, origem, ISO 8217, compatibilidade e alertas off-spec.",
-        "source": {
-          "name": "Ship & Bunker",
-          "url": "https://shipandbunker.com/prices"
-        }
-      },
-      {
-        "id": "tanker",
-        "icon": "⚓",
-        "label": "TANKER READINESS",
-        "value": "Carga + terminal",
-        "status": "ready",
-        "summary": "Revalidar H₂S/benzeno, static accumulator, aquecimento, IG/COW, ESD, MAWP e compatibilidade de manifold.",
-        "source": {
-          "name": "IMO Tanker Safety",
-          "url": "https://www.imo.org/en/ourwork/safety/pages/oil-tankers.aspx"
-        }
-      },
-      {
-        "id": "arrival",
-        "icon": "▣",
-        "label": "PRÓXIMO PORTO",
-        "value": "Checklist universal",
-        "status": "ready",
-        "summary": "Confirmar calado/UKC, maré, praticagem, rebocadores, vento limite, berço, manifold e documentação.",
-        "source": {
-          "name": "IMO Port Safety",
-          "url": "https://www.imo.org/en/ourwork/safety/pages/default.aspx"
-        }
-      }
-    ]
-  },
-  "market": {
-    "week": "W42",
-    "sourceLabel": "Fearnleys W42 (14 out.) para mercado e TC; Baltic W42 (16 out.) para spot; Aframax TC mantém o último valor público W41; Reuters de 20–21 out. para logística; VLSFO público consultado em 24 out. nos quatro hubs.",
-    "benchmarks": [
-      {
-        "segment": "VLCC",
-        "route": "1 ano TC · eco/scrubber · Fearnleys W42",
-        "value": 225000,
-        "unit": "USD/day",
-        "confidence": "medium",
-        "trendWidth": 98
-      },
-      {
-        "segment": "Suezmax",
-        "route": "1 ano TC · eco/scrubber · Fearnleys W42",
-        "value": 165000,
-        "unit": "USD/day",
-        "confidence": "medium",
-        "trendWidth": 72
-      },
-      {
-        "segment": "Aframax",
-        "route": "1 ano TC · eco/scrubber · Fearnleys W41 · último valor público",
-        "value": 94000,
-        "unit": "USD/day",
-        "confidence": "medium",
-        "trendWidth": 41
-      }
-    ],
-    "spotSignal": {
-      "segment": "VLCC / Suezmax / Aframax",
-      "label": "spot · Fearnleys W42 / Baltic W42",
-      "valueLabel": "Índices corrigem, mas logística mantém pressão extrema",
-      "summary": "Baltic W42 mostra queda em VLCC, Suezmax e Aframax, mas TCEs ainda excepcionais: TD3C US$ 1,37 mi/dia, TD20 US$ 522,6 mil/dia e TD7 US$ 486,4 mil/dia. Reuters relatou uso maior de Aframax e crude entregue e, em 21 out., destacou que a frota tanker segue apertada; a estimativa de 80 VLCCs ocupados em relés por Ormuz continua atribuída à Vitol.",
-      "confidenceLabel": "Baltic W42 é roundup oficial semanal e não substitui o fechamento diário; relatos Reuters/Vitol descrevem logística comercial, não índice nem contagem oficial",
-      "sourceLabel": "Baltic Exchange W42 · 16 out.; Reuters · 20–21 out.; Fearnleys W42 · 14 out."
-    },
-    "history": {
-      "weeks": [
-        "W32",
-        "W33",
-        "W34",
-        "W35",
-        "W36",
-        "W38",
-        "W41"
-      ],
-      "series": [
-        {
-          "name": "VLCC",
-          "className": "vlcc",
-          "values": [
-            98,
-            98.5,
-            99,
-            99.25,
-            130,
-            160,
-            230
-          ]
-        },
-        {
-          "name": "Suezmax",
-          "className": "suez",
-          "values": [
-            68,
-            68.5,
-            69,
-            68.5,
-            82.5,
-            125,
-            165
-          ]
-        },
-        {
-          "name": "Aframax",
-          "className": "afra",
-          "values": [
-            52.5,
-            53,
-            54,
-            53.75,
-            58.5,
-            69,
-            94
-          ]
-        }
-      ]
-    },
-    "indices": [
-      {
-        "name": "BDTI",
-        "value": 7991,
-        "previous": 4015
-      },
-      {
-        "name": "BCTI",
-        "value": 2440,
-        "previous": 1808
-      }
-    ]
-  },
-  "alertGroups": [
-    {
-      "id": "piracy",
-      "title": "Pirataria e roubo armado",
-      "shortTitle": "Pirataria",
-      "icon": "☠",
-      "description": "O boletim ReCAAP de 13–19 de outubro, reconsultado em 24 de outubro, continua sendo o mais recente publicado e não registrou incidente novo. Preservam-se os três últimos casos comprovados com suas datas originais.",
-      "items": [
-        {
-          "id": "recaap-vung-tau-2026-10-03",
-          "date": "2026-10-03",
-          "region": "Vung Tau · fundeadouro de Phu My, Vietnã",
-          "level": "medium",
-          "headline": "Invasores furtam tambores de tinta de bulk carrier",
-          "summary": "Número não identificado de invasores abordou por bote um graneleiro fundeado e furtou tambores de tinta; não houve feridos.",
-          "details": "Ocorrência às 2330 local de 3 de outubro, publicada no boletim semanal de 6–12 de outubro. O ReCAAP classificou o caso como CAT 4; armas não foram informadas.",
-          "action": "Reforçar vigia no convés e no ferro, iluminação, barreiras físicas, controle de acessos e comunicação imediata com a autoridade do fundeadouro.",
-          "map": {
-            "x": 79.77,
-            "y": 44.26,
-            "label": "Vung Tau"
-          },
-          "source": {
-            "name": "ReCAAP ISC · Weekly Report 6–12 out.",
-            "url": "https://www.recaap.org/resources/ck/files/reports/weekly/2026/ReCAAP%20ISC%20Weekly%20Report%20(06-12%20Oct)%202026.pdf"
-          }
-        },
-        {
-          "id": "recaap-singapore-2026-10-01",
-          "date": "2026-10-01",
-          "region": "Singapore Strait · faixa leste do TSS",
-          "level": "medium",
-          "headline": "Quatro invasores desarmados abordam bulk carrier",
-          "summary": "Quatro homens desarmados foram vistos a bordo de um graneleiro em trânsito; a tripulação não sofreu ferimentos e nada foi furtado.",
-          "details": "O ReCAAP classificou o caso como CAT 4 no boletim de 29 setembro–5 outubro. O navio seguia para leste, 6,6 MN ao largo de Pulau Kecil, Indonésia.",
-          "action": "Manter vigia reforçada, acessos à praça de máquinas controlados, alarmes/iluminação prontos e reporte imediato ao VTIS e autoridades costeiras.",
-          "map": {
-            "x": 81.5,
-            "y": 49.5,
-            "label": "Singapore Strait"
-          },
-          "source": {
-            "name": "ReCAAP ISC · Weekly Report 29 set.–5 out.",
-            "url": "https://www.recaap.org/reports"
-          }
-        },
-        {
-          "id": "recaap-singapore-2026-09-17",
-          "date": "2026-09-17",
-          "region": "Singapore Strait · faixa leste do TSS",
-          "level": "high",
-          "headline": "Quatro invasores armados abordam bulk carrier",
-          "summary": "Quatro homens, alguns com facas e objeto semelhante a arma, foram vistos na praça de máquinas de um graneleiro em trânsito; sobressalentes foram furtados e não houve feridos.",
-          "details": "O ReCAAP classificou o caso como CAT 3 no boletim de 15–21 setembro. O navio seguia para leste no Singapore Strait quando ocorreu a abordagem.",
-          "action": "Manter vigia reforçada, acesso à praça de máquinas controlado, alarmes/iluminação prontos e reporte imediato ao VTIS e autoridades costeiras.",
-          "map": {
-            "x": 81.5,
-            "y": 49.5,
-            "label": "Singapore Strait"
-          },
-          "source": {
-            "name": "ReCAAP ISC · Weekly Report 15–21 set.",
-            "url": "https://www.recaap.org/reports"
-          }
-        }
-      ]
-    },
-    {
-      "id": "weather",
-      "title": "Condições meteorológicas extremas",
+        "…3344 tokens truncated…Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
       "description": "Boletins NOAA/NWS emitidos em 24 de outubro priorizam o furacão Vance no Pacífico Leste e baixas com força de tempestade no Atlântico e Pacífico Norte. Valores futuros são previsões oficiais, não observações.",
