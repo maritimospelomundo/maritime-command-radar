@@ -13,14 +13,14 @@
     "endpoint": "",
     "mapUrl": "https://maps.findmespot.com/s/VCV3",
     "lastKnown": {
-      "id": "2518428229",
-      "unixTime": 1793097422,
-      "dateTime": "2026-10-27T10:37:02+0000",
-      "latitude": -43.98383,
-      "longitude": -60.10034,
+      "id": "2518447223",
+      "unixTime": 1793100949,
+      "dateTime": "2026-10-27T11:35:49+0000",
+      "latitude": -44.16235,
+      "longitude": -60.23593,
       "messageType": "UNLIMITED-TRACK",
       "batteryState": "GOOD",
-      "altitude": 17
+      "altitude": 23
     },
     "excludedTestMessageIds": [
       "2493309049",
@@ -1532,9 +1532,19 @@
         "messageType": "UNLIMITED-TRACK",
         "batteryState": "GOOD",
         "altitude": 17
+      },
+      {
+        "id": "2518447223",
+        "unixTime": 1793100949,
+        "dateTime": "2026-10-27T11:35:49+0000",
+        "latitude": -44.16235,
+        "longitude": -60.23593,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 23
       }
     ],
-    "lastSyncAt": "2026-10-27T11:15:04.344Z"
+    "lastSyncAt": "2026-10-27T12:07:32.603Z"
   },
   "marineTrafficPosition": {
     "label": "MarineTraffic",
@@ -3382,14 +3392,14 @@
       {
         "label": "AÇÃO AGORA",
         "level": "medium",
-      "value": "SPOT · posição observada há 1 h 28 min",
-      "summary": "Ponto consolidado de 27 out., 1037Z: 43º59,03′ S · 060º06,02′ W. MarineTraffic: 7 h 54 min; VesselAPI: 5 d 12 h 25 min. Bateria SPOT GOOD; VesselAPI está acima de 24 h."
+        "value": "SPOT · posição observada há 1 h 28 min",
+        "summary": "Ponto consolidado de 27 out., 1037Z: 43º59,03′ S · 060º06,02′ W. MarineTraffic: 7 h 54 min; VesselAPI: 5 d 12 h 25 min. Bateria SPOT GOOD; VesselAPI está acima de 24 h."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
-      "value": "CHM · avisos 788, 784 e 786",
-      "summary": "Avisos vigentes na consulta de 27 out.: vento força 7–8, rajadas força 9 e mar muito grosso de 4–5,5 m nas áreas Echo e Sul oceânica. Confirmar vigência por EGC/NAVTEX."
+        "value": "CHM · avisos 788, 784 e 786",
+        "summary": "Avisos vigentes na consulta de 27 out.: vento força 7–8, rajadas força 9 e mar muito grosso de 4–5,5 m nas áreas Echo e Sul oceânica. Confirmar vigência por EGC/NAVTEX."
       },
       {
         "label": "PREPARAR",
@@ -3499,7 +3509,7 @@
   },
   "market": {
     "week": "W43",
-  "sourceLabel": "Baltic W43 (23 out.) para spot; Fearnleys W43 (21 out.) para narrativa, enquanto os benchmarks de 1 ano preservam os últimos valores públicos exatos de W42/W41; Reuters de 20–21 out. para logística; VLSFO público reconsultado em 27 out., sem série completa posterior à de 24 out. nos quatro hubs.",
+    "sourceLabel": "Baltic W43 (23 out.) para spot; Fearnleys W43 (21 out.) para narrativa, enquanto os benchmarks de 1 ano preservam os últimos valores públicos exatos de W42/W41; Reuters de 20–21 out. para logística; VLSFO público reconsultado em 27 out., sem série completa posterior à de 24 out. nos quatro hubs.",
     "benchmarks": [
       {
         "segment": "VLCC",
@@ -3605,27 +3615,27 @@
       "title": "Pirataria e roubo armado",
       "shortTitle": "Pirataria",
       "icon": "☠",
-    "description": "O boletim ReCAAP de 20–26 de outubro registrou um CAT 4 ocorrido em 17 de outubro no Estreito de Singapura. O grupo mantém os três casos comprovados mais recentes, com datas originais e sem duplicação.",
+      "description": "O boletim ReCAAP de 20–26 de outubro registrou um CAT 4 ocorrido em 17 de outubro no Estreito de Singapura. O grupo mantém os três casos comprovados mais recentes, com datas originais e sem duplicação.",
       "items": [
-      {
-        "id": "recaap-nongsa-2026-10-17",
-        "date": "2026-10-17",
-        "region": "Singapore Strait · faixa leste do TSS · 4,3 MN de Pulau Nongsa",
-        "level": "medium",
-        "headline": "Seis invasores desarmados furtam sucata de rebocador/barcaça",
-        "summary": "Seis pessoas abordaram um rebocador com barcaça em trânsito e furtaram sucata; a tripulação não sofreu ferimentos.",
-        "details": "Ocorrência às 1523 local de 17 de outubro, publicada no boletim de 20–26 de outubro. O ReCAAP classificou o caso como CAT 4, a categoria de menor gravidade; os invasores não estavam armados.",
-        "action": "Reforçar vigia e iluminação, controlar acessos à barcaça e à praça de máquinas e reportar imediatamente ao VTIS e às autoridades costeiras.",
-        "map": {
-          "x": 81.5,
-          "y": 49.5,
-          "label": "Pulau Nongsa"
+        {
+          "id": "recaap-nongsa-2026-10-17",
+          "date": "2026-10-17",
+          "region": "Singapore Strait · faixa leste do TSS · 4,3 MN de Pulau Nongsa",
+          "level": "medium",
+          "headline": "Seis invasores desarmados furtam sucata de rebocador/barcaça",
+          "summary": "Seis pessoas abordaram um rebocador com barcaça em trânsito e furtaram sucata; a tripulação não sofreu ferimentos.",
+          "details": "Ocorrência às 1523 local de 17 de outubro, publicada no boletim de 20–26 de outubro. O ReCAAP classificou o caso como CAT 4, a categoria de menor gravidade; os invasores não estavam armados.",
+          "action": "Reforçar vigia e iluminação, controlar acessos à barcaça e à praça de máquinas e reportar imediatamente ao VTIS e às autoridades costeiras.",
+          "map": {
+            "x": 81.5,
+            "y": 49.5,
+            "label": "Pulau Nongsa"
+          },
+          "source": {
+            "name": "ReCAAP ISC · Weekly Report 20–26 out.",
+            "url": "https://www.recaap.org/resources/ck/files/reports/weekly/2026/ReCAAP%20ISC%20Weekly%20Report%20(20-26%20Oct)%202026.pdf"
+          }
         },
-        "source": {
-          "name": "ReCAAP ISC · Weekly Report 20–26 out.",
-          "url": "https://www.recaap.org/resources/ck/files/reports/weekly/2026/ReCAAP%20ISC%20Weekly%20Report%20(20-26%20Oct)%202026.pdf"
-        }
-      },
         {
           "id": "recaap-vung-tau-2026-10-03",
           "date": "2026-10-03",
@@ -3671,63 +3681,63 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-    "description": "Boletins NOAA/NWS emitidos às 1030Z de 27 de outubro priorizam baixa com previsão de força de furacão no Atlântico Norte, tempestade no Pacífico Norte e a tempestade tropical Vance. Valores futuros são previsões oficiais, não observações.",
+      "description": "Boletins NOAA/NWS emitidos às 1030Z de 27 de outubro priorizam baixa com previsão de força de furacão no Atlântico Norte, tempestade no Pacífico Norte e a tempestade tropical Vance. Valores futuros são previsões oficiais, não observações.",
       "items": [
         {
-        "id": "noaa-north-atlantic-hurricane-force-2026-10-27",
-  "date": "2026-10-27",
-        "region": "Atlântico Norte · baixa prevista próxima de 60°N 38°W",
+          "id": "noaa-north-atlantic-hurricane-force-2026-10-27",
+          "date": "2026-10-27",
+          "region": "Atlântico Norte · baixa prevista próxima de 60°N 38°W",
           "level": "critical",
-        "headline": "Previsão de força de furacão: 50–65 kt e mar de 5–10 m",
-        "summary": "A NOAA prevê em 48 horas baixa de 938 hPa próxima de 60°N 38°W, com vento de 50–65 kt e mar significativo de 5–10 m perto do centro.",
-        "details": "High Seas Forecast AT1 emitido às 1030Z de 27 de outubro, com análise válida às 0600Z. A baixa analisada em 39°N 52°W tinha 996 hPa, vento de 25–40 kt e mar de 3–5 m; os máximos são previsão, não observação antecipada.",
-        "action": "Revalidar travessia do Atlântico Norte com ampla margem, proteger convés e equipamentos, ajustar velocidade/rumo e restringir trabalho externo antes da deterioração prevista.",
+          "headline": "Previsão de força de furacão: 50–65 kt e mar de 5–10 m",
+          "summary": "A NOAA prevê em 48 horas baixa de 938 hPa próxima de 60°N 38°W, com vento de 50–65 kt e mar significativo de 5–10 m perto do centro.",
+          "details": "High Seas Forecast AT1 emitido às 1030Z de 27 de outubro, com análise válida às 0600Z. A baixa analisada em 39°N 52°W tinha 996 hPa, vento de 25–40 kt e mar de 3–5 m; os máximos são previsão, não observação antecipada.",
+          "action": "Revalidar travessia do Atlântico Norte com ampla margem, proteger convés e equipamentos, ajustar velocidade/rumo e restringir trabalho externo antes da deterioração prevista.",
           "map": {
-          "x": 42.44,
-          "y": 16.67,
-          "label": "Atlântico Norte"
+            "x": 42.44,
+            "y": 16.67,
+            "label": "Atlântico Norte"
           },
           "source": {
-          "name": "NOAA Ocean Prediction Center · AT1 · 27 out.",
-          "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
+            "name": "NOAA Ocean Prediction Center · AT1 · 27 out.",
+            "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
           }
         },
         {
-        "id": "noaa-north-pacific-storm-2026-10-27",
-        "date": "2026-10-27",
-        "region": "Pacífico Norte oeste · baixa prevista próxima de 51°N 167°E",
+          "id": "noaa-north-pacific-storm-2026-10-27",
+          "date": "2026-10-27",
+          "region": "Pacífico Norte oeste · baixa prevista próxima de 51°N 167°E",
           "level": "high",
-        "headline": "Tempestade prevista: 35–50 kt e mar de 4,5–7,5 m",
-        "summary": "A NOAA prevê em 48 horas baixa de 960 hPa a oeste da área, com vento de 35–50 kt e mar significativo de 4,5–7,5 m entre 50°N e 54°N a oeste de 178°W.",
-        "details": "High Seas Forecast EP1 emitido às 1030Z de 27 de outubro. Em 36 horas, o campo de tempestade deve alcançar 35–50 kt e mar de 3–6 m; os valores são previsão oficial.",
-        "action": "Revalidar rota e ETA no Pacífico Norte, manter margem do campo previsto, reforçar peação e limitar trabalho externo antes da deterioração.",
+          "headline": "Tempestade prevista: 35–50 kt e mar de 4,5–7,5 m",
+          "summary": "A NOAA prevê em 48 horas baixa de 960 hPa a oeste da área, com vento de 35–50 kt e mar significativo de 4,5–7,5 m entre 50°N e 54°N a oeste de 178°W.",
+          "details": "High Seas Forecast EP1 emitido às 1030Z de 27 de outubro. Em 36 horas, o campo de tempestade deve alcançar 35–50 kt e mar de 3–6 m; os valores são previsão oficial.",
+          "action": "Revalidar rota e ETA no Pacífico Norte, manter margem do campo previsto, reforçar peação e limitar trabalho externo antes da deterioração.",
           "map": {
-          "x": 96.39,
-          "y": 21.67,
-          "label": "Pacífico Norte"
+            "x": 96.39,
+            "y": 21.67,
+            "label": "Pacífico Norte"
           },
           "source": {
-          "name": "NOAA Ocean Prediction Center · EP1 · 27 out.",
+            "name": "NOAA Ocean Prediction Center · EP1 · 27 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         },
         {
-        "id": "noaa-vance-tropical-storm-2026-10-27",
-        "date": "2026-10-27",
-        "region": "Pacífico Leste · Vance em 15,9°N 106,9°W",
+          "id": "noaa-vance-tropical-storm-2026-10-27",
+          "date": "2026-10-27",
+          "region": "Pacífico Leste · Vance em 15,9°N 106,9°W",
           "level": "high",
-        "headline": "Vance: 40 kt, rajadas de 50 kt e mar de até 5,5 m",
-        "summary": "Às 0900Z, o NHC posicionou Vance em 15,9°N 106,9°W, com pressão de 1002 hPa, vento sustentado de 40 kt, rajadas de 50 kt e mar significativo de até 5,5 m.",
-        "details": "High Seas Forecast EP1 emitido às 1030Z de 27 de outubro. A previsão mantém 40 kt e rajadas de 50 kt em 24 horas, com mar de até 4,5 m; incerteza de trajetória, tamanho e intensidade permanece.",
-        "action": "Evitar o envelope previsto, acompanhar os avisos do NHC, recalcular rota/ETA e margem de combustível e restringir trabalho externo antes de qualquer aproximação.",
+          "headline": "Vance: 40 kt, rajadas de 50 kt e mar de até 5,5 m",
+          "summary": "Às 0900Z, o NHC posicionou Vance em 15,9°N 106,9°W, com pressão de 1002 hPa, vento sustentado de 40 kt, rajadas de 50 kt e mar significativo de até 5,5 m.",
+          "details": "High Seas Forecast EP1 emitido às 1030Z de 27 de outubro. A previsão mantém 40 kt e rajadas de 50 kt em 24 horas, com mar de até 4,5 m; incerteza de trajetória, tamanho e intensidade permanece.",
+          "action": "Evitar o envelope previsto, acompanhar os avisos do NHC, recalcular rota/ETA e margem de combustível e restringir trabalho externo antes de qualquer aproximação.",
           "map": {
-          "x": 20.61,
-          "y": 41.17,
-          "label": "Vance"
+            "x": 20.61,
+            "y": 41.17,
+            "label": "Vance"
           },
           "source": {
-          "name": "NOAA/NHC · EP1 · 27 out.",
-          "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
+            "name": "NOAA/NHC · EP1 · 27 out.",
+            "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         }
       ]
@@ -3737,27 +3747,27 @@
       "title": "Costa do Brasil",
       "shortTitle": "Costa BR",
       "icon": "◆",
-    "description": "O CHM, atualizado em 27 de outubro às 00:10, publicou o aviso 788 e mantém 784/786 vigentes. O grupo apresenta os três registros ativos mais recentes e relevantes; horários em UTC e polígonos aproximados, sujeitos a confirmação por EGC/NAVTEX.",
+      "description": "O CHM, atualizado em 27 de outubro às 00:10, publicou o aviso 788 e mantém 784/786 vigentes. O grupo apresenta os três registros ativos mais recentes e relevantes; horários em UTC e polígonos aproximados, sujeitos a confirmação por EGC/NAVTEX.",
       "items": [
-      {
-        "id": "chm-788-2026",
-        "date": "2026-10-26",
-        "region": "Área Echo oceânica · polígono oficial no Atlântico Sul",
-        "level": "high",
-        "headline": "Aviso 788: vento força 7 com rajadas até 28 out.",
-        "summary": "Vento de S/SE força 7 com rajadas previsto a partir de 270600Z e válido até 280600Z.",
-        "details": "Aviso emitido às 1400Z de 26 de outubro. A geometria no mapa é referência aproximada do polígono oficial entre 17,8°S 39,1°W, 14,1°S 38,4°W, 19,3°S 33°W e 21°S 33,1°W.",
-        "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho externo; confirmar vigência por EGC/NAVTEX.",
-        "map": {
-          "x": 47.22,
-          "y": 56.83,
-          "label": "CHM 788"
+        {
+          "id": "chm-788-2026",
+          "date": "2026-10-26",
+          "region": "Área Echo oceânica · polígono oficial no Atlântico Sul",
+          "level": "high",
+          "headline": "Aviso 788: vento força 7 com rajadas até 28 out.",
+          "summary": "Vento de S/SE força 7 com rajadas previsto a partir de 270600Z e válido até 280600Z.",
+          "details": "Aviso emitido às 1400Z de 26 de outubro. A geometria no mapa é referência aproximada do polígono oficial entre 17,8°S 39,1°W, 14,1°S 38,4°W, 19,3°S 33°W e 21°S 33,1°W.",
+          "action": "Revalidar weather routing, estabilidade, velocidade/heading, peação e limites de trabalho externo; confirmar vigência por EGC/NAVTEX.",
+          "map": {
+            "x": 47.22,
+            "y": 56.83,
+            "label": "CHM 788"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
         },
-        "source": {
-          "name": "CHM / Marinha do Brasil",
-          "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-        }
-      },
         {
           "id": "chm-786-2026",
           "date": "2026-10-24",
@@ -3803,7 +3813,7 @@
       "title": "Conflito e segurança de rota",
       "shortTitle": "Segurança",
       "icon": "▲",
-    "description": "Os Warnings 181, 179 e 180 permanecem os três incidentes UKMTO mais recentes comprovados na consulta de 27 de outubro. A IMO mantém 120 incidentes confirmados e 24 mortes, com atualização de 22 de outubro; autoria e responsabilidade não estão estabelecidas.",
+      "description": "Os Warnings 181, 179 e 180 permanecem os três incidentes UKMTO mais recentes comprovados na consulta de 27 de outubro. A IMO mantém 120 incidentes confirmados e 24 mortes, com atualização de 22 de outubro; autoria e responsabilidade não estão estabelecidas.",
       "items": [
         {
           "id": "ukmto-limah-2026-10-22",
@@ -3869,7 +3879,7 @@
       "title": "Navegação eletrônica e portos",
       "shortTitle": "Nav/Portos",
       "icon": "⌁",
-    "description": "Contexto operacional reconsultado em 27 de outubro. Windward mantém como achado operacional relevante a análise atribuída sobre cabos submarinos em Ormuz; Dryad não trouxe conteúdo novo corroborado e os incidentes do Golfo permanecem deduplicados com UKMTO/IMO. Análises comerciais não substituem confirmação oficial.",
+      "description": "Contexto operacional reconsultado em 27 de outubro. Windward mantém como achado operacional relevante a análise atribuída sobre cabos submarinos em Ormuz; Dryad não trouxe conteúdo novo corroborado e os incidentes do Golfo permanecem deduplicados com UKMTO/IMO. Análises comerciais não substituem confirmação oficial.",
       "items": [
         {
           "id": "windward-hormuz-subsea-cables-2026-10-26",
@@ -4362,7 +4372,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-  "note": "Evidência oficial PSC verificada em 27 out. 2026 às 10:50 UTC. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. O Safety Bulletin 05/2026 do Tokyo MoU segue como a mudança material mais recente. Respostas 403/502 e timeouts de alguns domínios oficiais não foram tratados como prova de ausência. Nenhuma mudança material adicional foi confirmada.",
+    "note": "Evidência oficial PSC verificada em 27 out. 2026 às 10:50 UTC. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. O Safety Bulletin 05/2026 do Tokyo MoU segue como a mudança material mais recente. Respostas 403/502 e timeouts de alguns domínios oficiais não foram tratados como prova de ausência. Nenhuma mudança material adicional foi confirmada.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -4508,41 +4518,41 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-      "price": 60.8,
+        "price": 60.8,
         "currencySymbol": "R$",
-      "changePercent": -6.81,
-      "trend": "Queda no fechamento",
-      "capturedAtLabel": "26 out. 2026 · fechamento B3",
+        "changePercent": -6.81,
+        "trend": "Queda no fechamento",
+        "capturedAtLabel": "26 out. 2026 · fechamento B3",
         "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-      "price": 53.88,
+        "price": 53.88,
         "currencySymbol": "R$",
-      "changePercent": -8.18,
-      "trend": "Queda no fechamento",
-      "capturedAtLabel": "26 out. 2026 · fechamento B3",
+        "changePercent": -8.18,
+        "trend": "Queda no fechamento",
+        "capturedAtLabel": "26 out. 2026 · fechamento B3",
         "sourceUrl": "https://www.dadosdemercado.com.br/b3/ibov"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-      "price": 22.5,
+        "price": 22.5,
         "currencySymbol": "US$",
-      "changePercent": -13.99,
-      "trend": "Queda no fechamento",
-      "capturedAtLabel": "26 out. 2026 · fechamento NYSE",
+        "changePercent": -13.99,
+        "trend": "Queda no fechamento",
+        "capturedAtLabel": "26 out. 2026 · fechamento NYSE",
         "sourceUrl": "https://www.google.com/finance/quote/PBR:NYSE"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-      "price": 19.9,
+        "price": 19.9,
         "currencySymbol": "US$",
-      "changePercent": -15.43,
-      "trend": "Queda no fechamento",
-      "capturedAtLabel": "26 out. 2026 · fechamento NYSE",
+        "changePercent": -15.43,
+        "trend": "Queda no fechamento",
+        "capturedAtLabel": "26 out. 2026 · fechamento NYSE",
         "sourceUrl": "https://stockanalysis.com/stocks/pbr.a/"
       }
     ],
@@ -4756,13 +4766,13 @@
     }
   ],
   "briefing": {
-  "date": "2026-10-27",
+    "date": "2026-10-27",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
         "title": "SPOT é a fonte válida mais recente",
-      "summary": "SPOT · 43º59,03′ S · 060º06,02′ W · 1 h 28 min. MarineTraffic: 7 h 54 min; VesselAPI: 5 d 12 h 25 min. Bateria SPOT GOOD; datas de observação preservadas e VesselAPI sinalizada como antiga."
+        "summary": "SPOT · 43º59,03′ S · 060º06,02′ W · 1 h 28 min. MarineTraffic: 7 h 54 min; VesselAPI: 5 d 12 h 25 min. Bateria SPOT GOOD; datas de observação preservadas e VesselAPI sinalizada como antiga."
       },
       {
         "category": "SEGURANÇA",
@@ -4771,18 +4781,18 @@
       },
       {
         "category": "COSTA BR",
-      "title": "CHM acrescenta o aviso 788 e mantém 784/786",
-      "summary": "O novo 788 prevê vento S/SE força 7 com rajadas na área Echo; 784/786 mantêm força 8, rajadas 9 e mar de 4–5,5 m na área Sul oceânica. Vigências alcançam 28 out."
+        "title": "CHM acrescenta o aviso 788 e mantém 784/786",
+        "summary": "O novo 788 prevê vento S/SE força 7 com rajadas na área Echo; 784/786 mantêm força 8, rajadas 9 e mar de 4–5,5 m na área Sul oceânica. Vigências alcançam 28 out."
       },
       {
         "category": "METEO",
-      "title": "Atlântico Norte pode alcançar 65 kt e mar de 10 m",
-      "summary": "A NOAA prevê baixa de 938 hPa, 50–65 kt e mar de 5–10 m em 48 horas. No Pacífico Norte, outra tempestade pode atingir 50 kt e 7,5 m; Vance tinha 40 kt e mar de 5,5 m às 0900Z."
+        "title": "Atlântico Norte pode alcançar 65 kt e mar de 10 m",
+        "summary": "A NOAA prevê baixa de 938 hPa, 50–65 kt e mar de 5–10 m em 48 horas. No Pacífico Norte, outra tempestade pode atingir 50 kt e 7,5 m; Vance tinha 40 kt e mar de 5,5 m às 0900Z."
       },
       {
         "category": "MERCADO",
-      "title": "Fretes preservam W43; Petrobras corrige no fechamento",
-      "summary": "Sem novo roundup semanal, TD3C/TD20/TD7 mantêm os últimos TCEs públicos. Em 26 out., PETR3 caiu 6,81%, PETR4 8,18%, PBR 13,99% e PBR.A 15,43%; movimento de mercado, não mudança operacional confirmada."
+        "title": "Fretes preservam W43; Petrobras corrige no fechamento",
+        "summary": "Sem novo roundup semanal, TD3C/TD20/TD7 mantêm os últimos TCEs públicos. Em 26 out., PETR3 caiu 6,81%, PETR4 8,18%, PBR 13,99% e PBR.A 15,43%; movimento de mercado, não mudança operacional confirmada."
       },
       {
         "category": "PASSAGENS",
@@ -4791,8 +4801,8 @@
       },
       {
         "category": "PSC",
-      "title": "Quatro CICs ativas; nenhuma mudança adicional em 27 out.",
-      "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativas; Abuja e Mediterranean anunciadas; três regimes sem confirmação e USCG nacional. Evidência oficial verificada às 1050Z mantém o Tokyo Bulletin 05/2026 como última mudança material."
+        "title": "Quatro CICs ativas; nenhuma mudança adicional em 27 out.",
+        "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativas; Abuja e Mediterranean anunciadas; três regimes sem confirmação e USCG nacional. Evidência oficial verificada às 1050Z mantém o Tokyo Bulletin 05/2026 como última mudança material."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -4825,31 +4835,31 @@
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-    "scope": "Boletim 20–26 out. publicado em 27 out.: um CAT 4 ocorrido em 17 out. no Estreito de Singapura, sem feridos; três casos mais recentes preservados",
+      "scope": "Boletim 20–26 out. publicado em 27 out.: um CAT 4 ocorrido em 17 out. no Estreito de Singapura, sem feridos; três casos mais recentes preservados",
       "typeLabel": "Oficial"
     },
     {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/ukmto-products/warnings",
-    "scope": "Consulta em 27 out.; Warnings 181, 179 e 180 permanecem os três incidentes mais recentes comprovados incorporados",
+      "scope": "Consulta em 27 out.; Warnings 181, 179 e 180 permanecem os três incidentes mais recentes comprovados incorporados",
       "typeLabel": "Oficial"
     },
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-    "scope": "Consulta em 27 out.; novo aviso 788 e avisos 784/786 vigentes, com vento força 7–8, rajadas força 9 e mar de 4–5,5 m",
+      "scope": "Consulta em 27 out.; novo aviso 788 e avisos 784/786 vigentes, com vento força 7–8, rajadas força 9 e mar de 4–5,5 m",
       "typeLabel": "Oficial"
     },
     {
       "name": "NHC / NOAA",
       "url": "https://www.nhc.noaa.gov/",
-    "scope": "Boletim EP1 de 27 out.: tempestade tropical Vance com 40 kt, rajadas de 50 kt e mar de até 5,5 m às 0900Z",
+      "scope": "Boletim EP1 de 27 out.: tempestade tropical Vance com 40 kt, rajadas de 50 kt e mar de até 5,5 m às 0900Z",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-    "scope": "Boletins AT1/EP1 de 27 out.: previsão de força de furacão no Atlântico Norte com 50–65 kt e mar até 10 m; tempestade no Pacífico Norte com 35–50 kt e mar até 7,5 m",
+      "scope": "Boletins AT1/EP1 de 27 out.: previsão de força de furacão no Atlântico Norte com 50–65 kt e mar até 10 m; tempestade no Pacífico Norte com 35–50 kt e mar até 7,5 m",
       "typeLabel": "Oficial"
     },
     {
@@ -4891,7 +4901,7 @@
     {
       "name": "Ship & Bunker — preços mundiais",
       "url": "https://shipandbunker.com/prices",
-    "scope": "Página pública reconsultada em 27 out.; sem nova série completa acessível posterior: Singapura 963, Rotterdam 766, Fujairah 981 e Houston 817 US$/t.",
+      "scope": "Página pública reconsultada em 27 out.; sem nova série completa acessível posterior: Singapura 963, Rotterdam 766, Fujairah 981 e Houston 817 US$/t.",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -4915,7 +4925,7 @@
     {
       "name": "Mercados públicos — Petrobras RI / B3 / NYSE",
       "url": "https://www.investidorpetrobras.com.br/acoes/",
-    "scope": "Fechamentos de 26 out.: PETR3 R$ 60,80 (-6,81%), PETR4 R$ 53,88 (-8,18%), PBR US$ 22,50 (-13,99%) e PBR.A US$ 19,90 (-15,43%)",
+      "scope": "Fechamentos de 26 out.: PETR3 R$ 60,80 (-6,81%), PETR4 R$ 53,88 (-8,18%), PBR US$ 22,50 (-13,99%) e PBR.A US$ 19,90 (-15,43%)",
       "typeLabel": "Mercado público / complementar"
     },
     {
@@ -4963,7 +4973,7 @@
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-    "scope": "Treze sistemas preservados; fontes oficiais reconsultadas em 27 out. sem mudança de limite, formato ou frequência localizada. BELTREP/SOUNDREP acrescentam certificados de seguro em 22 nov.",
+      "scope": "Treze sistemas preservados; fontes oficiais reconsultadas em 27 out. sem mudança de limite, formato ou frequência localizada. BELTREP/SOUNDREP acrescentam certificados de seguro em 22 nov.",
       "typeLabel": "Oficial"
     },
     {
@@ -4981,19 +4991,19 @@
     {
       "name": "IMO / MPA Singapore — incidentes confirmados",
       "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
-    "scope": "Lista IMO reconsultada em 27 out.; último estado oficial localizado permanece em 120 incidentes confirmados e 24 mortes, atualizado em 22 out.",
+      "scope": "Lista IMO reconsultada em 27 out.; último estado oficial localizado permanece em 120 incidentes confirmados e 24 mortes, atualizado em 22 out.",
       "typeLabel": "Oficial"
     },
     {
       "name": "Windward — análise pública",
       "url": "https://windward.ai/blog/iran-threatens-the-hormuz-internet-cables/",
-    "scope": "Blog e base pública reconsultados em 27 out.; o artigo de 26 out. sobre exposição de cabos em Ormuz permanece o último achado operacional incorporado, sempre atribuído e sem incidente confirmado",
+      "scope": "Blog e base pública reconsultados em 27 out.; o artigo de 26 out. sobre exposição de cabos em Ormuz permanece o último achado operacional incorporado, sempre atribuído e sem incidente confirmado",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
       "url": "https://channel16.dryadglobal.com/",
-    "scope": "Canal público reconsultado em 27 out.; nenhum achado novo corroborado foi incorporado e eventos do Golfo permanecem deduplicados com UKMTO/IMO",
+      "scope": "Canal público reconsultado em 27 out.; nenhum achado novo corroborado foi incorporado e eventos do Golfo permanecem deduplicados com UKMTO/IMO",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -5197,4 +5207,3 @@
     ]
   }
 }
-
