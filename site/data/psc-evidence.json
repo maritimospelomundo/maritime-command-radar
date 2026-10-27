@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedAt": "2026-10-26T11:18:41.929Z",
-  "coverage": "Consultadas em 2026-10-26 após a verificação de 25/10/2026: OCIMF (página SIRE 2.0 e newsletter), Paris MoU (arquivo 2026), Tokyo MoU, Caribbean MoU, Abuja MoU (publicações), Black Sea MoU, Mediterranean MoU e Riyadh MoU. As publicações mais recentes continuam sendo, respectivamente quando aplicável, o Safety Bulletin 05/2026 do Tokyo MoU já registrado, a CIC vigente de Cargo Securing e o anúncio do Abuja MoU já registrado; o Mediterranean MoU ainda não publicou resultados do PSCC28. Cobertura parcial: o acesso direto ao Viña del Mar retornou 502; o Indian Ocean MoU e o Maritime Commons/USCG retornaram 403; essas falhas não foram tratadas como prova de ausência. Buscas nos domínios oficiais não localizaram publicação posterior a 25/10/2026 que altere exigências, evidências ou preparação a bordo. Nenhuma mudança material adicional confirmada nas fontes efetivamente acessadas.",
+  "checkedAt": "2026-10-27T10:50:52.526Z",
+  "coverage": "Consultadas em 2026-10-27 após a verificação de 26/10/2026: OCIMF (SIRE 2.0 e newsletter), Paris MoU (arquivo 2026), Tokyo MoU, Caribbean MoU, Abuja MoU (publicações), Black Sea MoU e Mediterranean MoU. Cobertura complementar em resultados indexados dos próprios domínios oficiais para Viña del Mar e Riyadh MoU; nenhuma publicação posterior à referência anterior foi localizada. O Mediterranean MoU continua mostrando apenas as datas do PSCC28 (20–22/10/2026), sem comunicado de resultados. Falhas desta rodada: acesso direto ao Viña del Mar retornou 502; Indian Ocean MoU e Maritime Commons/USCG retornaram 403; Riyadh MoU apresentou timeout direto. Essas falhas não foram tratadas como prova de ausência. Nenhuma mudança material adicional confirmada nas fontes efetivamente acessadas.",
   "changes": [
     {
       "id": "tokyo-mou-safety-bulletin-05-26-improper-statutory-certificate-extensions-2026-10-23",
