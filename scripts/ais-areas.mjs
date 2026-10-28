@@ -15,3 +15,12 @@ export function canIntensify(health,now=new Date()){
  const age=+now-Date.parse(health?.quotaAt);const remaining=health?.quotaRemaining;
  return age>=0&&age<=12*3600000&&(remaining==='Unlimited'||(Number.isFinite(remaining)&&remaining>120));
 }
+
+// Observation time, never import/check time: replaying an old fix cannot suppress AIS.
+export function recentAlternative(data,now=new Date()){
+ for(const key of ['spotPosition','marineTrafficPosition']){
+  const records=[data?.[key]?.lastKnown,...(data?.[key]?.history||[])];
+  if(records.some(p=>p&&!p.estimated&&Number.isFinite(p.latitude)&&Math.abs(p.latitude)<=90&&Number.isFinite(p.longitude)&&Math.abs(p.longitude)<=180&&Number.isFinite(Date.parse(p.dateTime))&&+now-Date.parse(p.dateTime)>=0&&+now-Date.parse(p.dateTime)<30*60000))return true;
+ }
+ return false;
+}

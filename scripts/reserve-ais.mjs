@@ -1,11 +1,12 @@
 import {readFileSync,writeFileSync,appendFileSync,existsSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {pathToFileURL} from 'node:url';
-import {areaFor,canIntensify} from './ais-areas.mjs';
+import {areaFor,canIntensify,recentAlternative} from './ais-areas.mjs';
 export function reserve(ledger,now=new Date(),context={}) {
  const local=new Date(now.getTime()-3*3600000), day=local.toISOString().slice(0,10);
  const slot=Math.floor(local.getUTCHours()/6), entries=ledger.entries||[];
  if(ledger.bootstrap)return {entries:Array.from({length:4},(_,slot)=>({day,slot,at:now.toISOString(),reason:'Conservative rollout-day reservation'}))};
+ if(recentAlternative(context.data,now))return null;
  const last=Math.max(0,...entries.map(e=>Date.parse(e.at)||0));
  if(+now-last<30*60000)return null;
  if(Date.parse(context.health?.nextAttemptAt)>+now||context.health?.authBlocked)return null;
@@ -26,7 +27,7 @@ function main(){
  const data=JSON.parse(readFileSync('site/data/latest.json','utf8'));
  const health=existsSync('site/data/ais-health.json')?JSON.parse(readFileSync('site/data/ais-health.json','utf8')):{};
  const next=reserve(previous,new Date(),{data,health});
- if(!next){console.log('VesselAPI slot already reserved; no request.');return;}
+ if(!next){console.log('VesselAPI skipped by freshness, interval or quota policy; no request reserved.');return;}
  writeFileSync(file,JSON.stringify(next,null,2)+'\n');
  git('config','user.name','github-actions[bot]');git('config','user.email','41898282+github-actions[bot]@users.noreply.github.com');
  git('add',file);git('commit','-m','Reserve VesselAPI request slot [skip ci]');
