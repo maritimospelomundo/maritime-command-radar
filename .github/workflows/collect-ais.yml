@@ -1,7 +1,7 @@
 name: Collect VesselAPI
 on:
   schedule:
-    - cron: '21 * * * *'
+    - cron: '21,51 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -19,8 +19,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test scripts/update-ais.test.mjs scripts/reserve-ais.test.mjs
-      - name: Reserve one request per six-hour Brasilia slot
+      - run: node --test scripts/update-ais.test.mjs scripts/reserve-ais.test.mjs scripts/ais-areas.test.mjs
+      - name: Reserve request using area and verified quota
         id: budget
         if: github.run_attempt == 1
         run: node scripts/reserve-ais.mjs
@@ -53,3 +53,4 @@ jobs:
       - name: Surface collection failure
         if: steps.fetch.outcome == 'failure'
         run: exit 1
+

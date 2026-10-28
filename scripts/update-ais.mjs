@@ -72,8 +72,8 @@ export async function fetchAis(key, fetcher = fetch) {
     throw Error('Consulta VesselAPI indisponível ou excedeu 30 segundos.');
   }
   if (response.status === 404) return {notFound: true, remaining: response.headers?.get?.('x-ratelimit-remaining') ?? null};
-  if (response.status === 401 || response.status === 403) throw Error(`VesselAPI recusou a credencial (HTTP ${response.status}). Substitua ou reative o segredo.`);
-  if (response.status === 429) throw Error('VesselAPI atingiu o limite (HTTP 429). Aguarde Retry-After.');
+  if (response.status === 401 || response.status === 403) throw Object.assign(Error(`VesselAPI recusou a credencial (HTTP ${response.status}). Substitua ou reative o segredo.`),{authBlocked:true});
+  if (response.status === 429) {const retry=response.headers?.get?.('retry-after');const seconds=Number(retry);const until=retry&&Number.isFinite(seconds)?Date.now()+seconds*1000:Date.parse(retry);throw Object.assign(Error('VesselAPI atingiu o limite (HTTP 429). Aguarde Retry-After.'),{nextAttemptAt:new Date(Math.max(Date.now()+3600000,Number.isFinite(until)?until:Date.now()+86400000)).toISOString()});}
   if (!response.ok) throw Error(`Consulta VesselAPI recusada (HTTP ${response.status}).`);
   let payload;
   try { payload = await response.json(); } catch { throw Error('Resposta VesselAPI não contém JSON válido.'); }
@@ -91,13 +91,14 @@ async function main() {
     let next=data;
     if(!result.notFound){next=applyAis(data,result.payload);const temp=new URL('../site/data/latest.json.tmp',import.meta.url);await writeFile(temp,JSON.stringify(next,null,2)+'\n');await rename(temp,file);}
     const status=result.notFound?'no_data':data.vesselApiPosition?.lastKnown?.dateTime===next.vesselApiPosition?.lastKnown?.dateTime?'unchanged':'ok';
-    await writeFile(healthFile,JSON.stringify({...previous,status,lastAttemptAt:attemptedAt,lastSuccessAt:new Date().toISOString(),dataAt:next.vesselApiPosition?.lastKnown?.dateTime||null,error:null},null,2)+'\n');
+    await writeFile(healthFile,JSON.stringify({...previous,status,lastAttemptAt:attemptedAt,lastSuccessAt:new Date().toISOString(),dataAt:next.vesselApiPosition?.lastKnown?.dateTime||null,error:null,quotaRemaining:result.remaining==='Unlimited'?'Unlimited':result.remaining!==null&&result.remaining!==''&&Number.isFinite(Number(result.remaining))?Number(result.remaining):null,quotaAt:new Date().toISOString(),nextAttemptAt:null,authBlocked:false},null,2)+'\n');
     console.log(JSON.stringify({status,dataAt:next.vesselApiPosition?.lastKnown?.dateTime||null}));
   } catch(error){
-    await writeFile(healthFile,JSON.stringify({...previous,status:'failed',lastAttemptAt:attemptedAt,error:error.message},null,2)+'\n');throw error;
+    await writeFile(healthFile,JSON.stringify({...previous,status:'failed',lastAttemptAt:attemptedAt,error:error.message,nextAttemptAt:error.nextAttemptAt||new Date(Date.now()+3600000).toISOString(),authBlocked:error.authBlocked||false,quotaRemaining:null},null,2)+'\n');throw error;
   }
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) main().catch(error => {
   console.error(error.message);
   process.exitCode = 1;
 });
+
