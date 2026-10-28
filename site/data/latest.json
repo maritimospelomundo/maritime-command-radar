@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-28T12:13:46.354Z",
+  "generatedAt": "2026-10-28T12:15:59.229Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -3614,8 +3614,8 @@
       {
         "label": "AÇÃO AGORA",
         "level": "medium",
-        "value": "SPOT · posição observada há 3 h 9 min",
-        "summary": "Ponto consolidado de 28 out., 0905Z: 47º58,69′ S · 063º16,07′ W. MarineTraffic: 7 h 60 min; VesselAPI: 6 d 12 h 34 min. Bateria SPOT GOOD; VesselAPI está acima de 24 h."
+        "value": "SPOT · posição observada há 0 h 12 min",
+        "summary": "Ponto consolidado de 28 out., 1204Z: 48º30,87′ S · 63º45,75′ W. MarineTraffic: 8 h 2 min; VesselAPI: 6 d 12 h 36 min. Bateria SPOT GOOD; VesselAPI está acima de 24 h."
       },
       {
         "label": "PRÓXIMAS 72 H",
@@ -4995,7 +4995,7 @@
       {
         "category": "POSIÇÃO",
         "title": "SPOT é a fonte válida mais recente",
-        "summary": "SPOT · 47º58,69′ S · 063º16,07′ W · 3 h 9 min. MarineTraffic: 7 h 60 min; VesselAPI: 6 d 12 h 34 min. Bateria SPOT GOOD; datas de observação preservadas e VesselAPI sinalizada como antiga."
+        "summary": "SPOT · 48º30,87′ S · 63º45,75′ W · 0 h 12 min. MarineTraffic: 8 h 2 min; VesselAPI: 6 d 12 h 36 min. Bateria SPOT GOOD; datas de observação preservadas e VesselAPI sinalizada como antiga."
       },
       {
         "category": "SEGURANÇA",
