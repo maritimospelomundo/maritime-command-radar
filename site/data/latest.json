@@ -5307,7 +5307,7 @@
     {
       "name": "CHM — NAVAREA V",
       "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar",
-      "scope": "Base pública oficial consultada em 14 out.; 32 avisos NAVAREA V reconhecidos no arquivo atualizado às 03:21",
+      "scope": "Base pública independente preservada e consultada em 29 out.; 756 registros recebidos até 28 out. às 06:00 UTC, sem antecipar a ingestão NAVAREA da tarefa responsável",
       "typeLabel": "Oficial"
     },
     {
@@ -5337,13 +5337,13 @@
     {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/ukmto-products/warnings",
-      "scope": "Consulta em 28 out.; Warnings 183, 182 e 181 são os três registros mais recentes incorporados; o 183 permanece atividade suspeita, não ataque",
+      "scope": "Consulta em 29 out.; Warning 185, Advisory 184 e Warning 183 são os três registros públicos mais recentes incorporados, sem inferir causa, ataque ou autoria",
       "typeLabel": "Oficial"
     },
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Consulta em 28 out.; avisos 788, 786 e 784 preservados com datas originais e vigências encerradas; nenhum substituto posterior localizado na página pública",
+      "scope": "Consulta em 29 out.; avisos 788, 786 e 784 preservados com datas originais e vigências encerradas; nenhum substituto posterior localizado na página pública",
       "typeLabel": "Oficial"
     },
     {
@@ -5355,7 +5355,7 @@
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Boletins AT1/EP1 de 28 out.: força de furacão no Atlântico Norte com 50–65 kt e mar de 7–10 m; tempestade no Pacífico Norte com 40–55 kt e mar de 8–13 m",
+      "scope": "Boletins AT1/EP1 de 29 out.: 50–65 kt e mar de 8–10,5 m no Atlântico Norte; previsão de 35–50 kt e mar de 8–13 m no Pacífico Norte",
       "typeLabel": "Oficial"
     },
     {
@@ -5397,7 +5397,7 @@
     {
       "name": "Ship & Bunker — preços mundiais",
       "url": "https://shipandbunker.com/prices",
-      "scope": "Página pública reconsultada em 28 out.; preços de 27 out.: Singapura 990, Rotterdam 764, Fujairah 987 e Houston 835,50 US$/t.",
+      "scope": "Página pública reconsultada em 29 out.; preços de 28 out.: Singapura 1.000,50, Rotterdam 770, Fujairah 989,50 e Houston 842 US$/t.",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -5421,7 +5421,7 @@
     {
       "name": "Mercados públicos — Petrobras RI / B3 / NYSE",
       "url": "https://www.investidorpetrobras.com.br/acoes/",
-      "scope": "Fechamentos de 27 out.: PETR3 R$ 59,64 (-1,91%), PETR4 R$ 52,79 (-2,02%), PBR US$ 22,29 (-0,93%) e PBR.A US$ 19,75 (-0,75%)",
+      "scope": "Fechamentos de 28 out.: PETR3 R$ 59,03 (-1,02%), PETR4 R$ 52,51 (-0,53%), PBR US$ 22,03 (-1,21%) e PBR.A US$ 19,59 (-0,86%)",
       "typeLabel": "Mercado público / complementar"
     },
     {
