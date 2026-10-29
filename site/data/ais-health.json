@@ -1,7 +1,11 @@
 {
   "status": "no_data",
-  "lastAttemptAt": "2026-10-28T08:37:16.082Z",
-  "lastSuccessAt": "2026-10-28T08:37:16.496Z",
+  "lastAttemptAt": "2026-10-29T07:11:12.369Z",
+  "lastSuccessAt": "2026-10-29T07:11:12.678Z",
   "dataAt": "2026-10-21T23:39:52.000Z",
-  "error": null
+  "error": null,
+  "quotaRemaining": 137,
+  "quotaAt": "2026-10-29T07:11:12.678Z",
+  "nextAttemptAt": null,
+  "authBlocked": false
 }
