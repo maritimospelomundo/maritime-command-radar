@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-28T12:15:59.229Z",
+  "generatedAt": "2026-10-29T12:04:58.752Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -3877,20 +3877,20 @@
       {
         "label": "AÇÃO AGORA",
         "level": "medium",
-        "value": "SPOT · posição observada há 0 h 12 min",
-        "summary": "Ponto consolidado de 28 out., 1204Z: 48º30,87′ S · 63º45,75′ W. MarineTraffic: 8 h 2 min; VesselAPI: 6 d 12 h 36 min. Bateria SPOT GOOD; VesselAPI está acima de 24 h."
+        "value": "SPOT · posição observada há 1 h 7 min",
+        "summary": "Ponto consolidado de 29 de out. 10:57Z: 52º26,64′ S · 067º34,71′ W. MarineTraffic: 8 h 4 min; VesselAPI: 7 d 12 h 25 min. Bateria SPOT GOOD; VesselAPI está acima de 24 h."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
-        "value": "Chile austral · avisos oficiais de 27 out.",
-        "summary": "A MeteoArmada lista aviso de temporal entre Faro San Pedro e 60°S e aviso de mau tempo no Golfo de Penas. A página pública não expõe intensidade nem vigência; confirmar o texto integral por broadcasts, agente e autoridade marítima."
+        "value": "Magalhães / Chile austral · confirmação meteo",
+        "summary": "A MeteoArmada mantém na listagem pública os avisos de 27 de outubro entre Faro San Pedro e 60°S e no Golfo de Penas, sem intensidade ou vigência expostas. Confirmar texto integral, correntes, pilotagem e abrigo antes da aproximação."
       },
       {
         "label": "PREPARAR",
         "level": "critical",
-        "value": "Golfo / Ormuz · UKMTO 181–183",
-        "summary": "O Warning 183 classifica como atividade suspeita, não ataque, relatos de incêndio a 63 MN a sudeste de Al-Faw. Os Warnings 182/181 registram ataques a tankers em Ormuz; a IMO contabiliza 121 incidentes e 24 mortes até 27 out."
+        "value": "Ormuz / Golfo de Áden · UKMTO 183–185",
+        "summary": "O 185 relata embarcação em chamas 9 MN ao norte de Khasab, com causa e condição da tripulação não confirmadas; o 184 alerta para pequenas embarcações suspeitas no Golfo de Áden. O 183 permanece atividade suspeita a sudeste de Al-Faw."
       }
     ],
     "modules": [
@@ -3898,9 +3898,9 @@
         "id": "msi",
         "icon": "⌁",
         "label": "NAVAREA / METAREA",
-        "value": "NAVAREA · 544 registros publicados",
+        "value": "NAVAREA · 756 registros publicados",
         "status": "live",
-        "summary": "Base pública recebida até 15 out.; NAVAREA V é conferida no CHM quando disponível e as demais áreas exigem confirmação pelo coordenador, EGC/NAVTEX.",
+        "summary": "Base pública recebida até 28 out.; NAVAREA V é conferida no CHM quando disponível e as demais áreas exigem confirmação pelo coordenador, EGC/NAVTEX. Nenhum aviso posterior foi antecipado nesta revisão.",
         "source": {
           "name": "Base NAVAREA pública do Radar",
           "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
@@ -4166,43 +4166,43 @@
       "title": "Condições meteorológicas extremas",
       "shortTitle": "Meteo",
       "icon": "◒",
-      "description": "Boletins NOAA/NWS emitidos às 1030Z de 28 de outubro priorizam baixas com força de furacão no Atlântico Norte e tempestade no Pacífico Norte. A MeteoArmada lista avisos no Chile austral; valores futuros são previsões oficiais, não observações.",
+      "description": "Boletins NOAA/NWS emitidos às 1030Z de 29 de outubro mantêm força de furacão no Atlântico Norte e tempestade no Pacífico Norte. A MeteoArmada mantém listados os avisos de 27 de outubro no Chile austral; valores futuros são previsões oficiais, não observações.",
       "items": [
         {
-          "id": "noaa-north-atlantic-hurricane-force-2026-10-28",
-          "date": "2026-10-28",
-          "region": "Atlântico Norte · baixa próxima de 60°N 38°W",
+          "id": "noaa-north-atlantic-hurricane-force-2026-10-29",
+          "date": "2026-10-29",
+          "region": "Atlântico Norte · baixa próxima de 60°N 39°W",
           "level": "critical",
-          "headline": "Força de furacão: 50–65 kt e mar de 7–10 m",
-          "summary": "A NOAA prevê baixa de 938 hPa em 21 horas próxima de 60°N 38°W, com vento de 50–65 kt e mar significativo de 7–10 m perto do centro.",
-          "details": "High Seas Forecast AT1 emitido às 1030Z de 28 de outubro, com análise válida às 0600Z. Em 24 horas, a baixa é prevista em 59°N 36°W com 943 hPa, vento de 50–60 kt e mar de 7–10 m; os máximos são previsão, não observação antecipada.",
-          "action": "Revalidar travessia do Atlântico Norte com ampla margem, proteger convés e equipamentos, ajustar velocidade/rumo e restringir trabalho externo antes da deterioração prevista.",
+          "headline": "Força de furacão: 50–65 kt e mar de 8–10,5 m",
+          "summary": "A NOAA analisa baixa de 941 hPa próxima de 60°N 39°W, com vento de 50–65 kt e mar significativo de 8–10,5 m junto à costa leste da Groenlândia.",
+          "details": "High Seas Forecast AT1 emitido às 1030Z de 29 de outubro, com análise válida às 0600Z. Em 24 horas, a baixa é prevista em 62°N 41°W com 973 hPa, vento de 25–35 kt e mar de 5–7 m. Ondas individuais podem superar duas vezes a altura significativa.",
+          "action": "Manter ampla margem do sistema no Atlântico Norte, revalidar weather routing e esforços estruturais, proteger convés/equipamentos e restringir trabalho externo.",
           "map": {
-            "x": 42.44,
+            "x": 39.17,
             "y": 16.67,
             "label": "Atlântico Norte"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · AT1 · 28 out.",
+            "name": "NOAA Ocean Prediction Center · AT1 · 29 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
           }
         },
         {
-          "id": "noaa-north-pacific-storm-2026-10-28",
-          "date": "2026-10-28",
-          "region": "Pacífico Norte · baixa prevista próxima de 57°N 174°W",
+          "id": "noaa-north-pacific-storm-2026-10-29",
+          "date": "2026-10-29",
+          "region": "Pacífico Norte · complexo de baixas a oeste de 170°W",
           "level": "high",
-          "headline": "Tempestade prevista: 40–55 kt e mar de 8–13 m",
-          "summary": "A NOAA prevê em 48 horas baixa de 962 hPa próxima de 57°N 174°W, com vento de 40–55 kt e mar significativo de 8–13 m.",
-          "details": "High Seas Forecast EP1 emitido às 1030Z de 28 de outubro. Em 30 horas, o campo deve alcançar 35–50 kt e mar de 7–11 m; os valores são previsão oficial.",
+          "headline": "Tempestade: 35–50 kt e mar de 8–13 m",
+          "summary": "A NOAA prevê em 24 horas baixa principal de 967 hPa próxima de 56°N 172°W, com vento de 35–50 kt e mar significativo de 8–13 m.",
+          "details": "High Seas Forecast EP1 emitido às 1030Z de 29 de outubro. Em seis horas, o campo já previa 35–50 kt e mar de 7–12 m; em 48 horas, 30–40 kt e 6–10 m. Os valores são previsão oficial.",
           "action": "Revalidar rota e ETA no Pacífico Norte, manter margem do campo previsto, reforçar peação e limitar trabalho externo antes da deterioração.",
           "map": {
-            "x": 96.39,
-            "y": 21.67,
+            "x": 2.22,
+            "y": 18.89,
             "label": "Pacífico Norte"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · EP1 · 28 out.",
+            "name": "NOAA Ocean Prediction Center · EP1 · 29 out.",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
           }
         },
@@ -4232,7 +4232,7 @@
       "title": "Costa do Brasil",
       "shortTitle": "Costa BR",
       "icon": "◆",
-      "description": "A página pública do CHM, consultada em 28 de outubro, não exibiu aviso posterior aos registros 788, 786 e 784. Os três são preservados com datas e vigências originais, já encerradas; confirmar situação corrente por EGC/NAVTEX.",
+      "description": "A página pública do CHM, consultada em 29 de outubro, não exibiu aviso posterior aos registros 788, 786 e 784. Os três são preservados com datas e vigências originais, já encerradas; confirmar situação corrente por EGC/NAVTEX.",
       "items": [
         {
           "id": "chm-788-2026",
@@ -4241,7 +4241,7 @@
           "level": "high",
           "headline": "Aviso 788: vento força 7; vigência encerrada às 0600Z",
           "summary": "Vento de S/SE força 7 com rajadas foi previsto de 270600Z a 280600Z; a vigência publicada encerrou e não foi renovada no Radar.",
-          "details": "Aviso emitido às 1400Z de 26 de outubro. A geometria no mapa é referência aproximada do polígono oficial entre 17,8°S 39,1°W, 14,1°S 38,4°W, 19,3°S 33°W e 21°S 33,1°W. A página pública consultada em 28 de outubro não apresentou substituto posterior.",
+          "details": "Aviso emitido às 1400Z de 26 de outubro. A geometria no mapa é referência aproximada do polígono oficial entre 17,8°S 39,1°W, 14,1°S 38,4°W, 19,3°S 33°W e 21°S 33,1°W. A página pública consultada em 29 de outubro não apresentou substituto posterior.",
           "action": "Não tratar o aviso expirado como condição atual; confirmar o quadro corrente por EGC/NAVTEX e revalidar weather routing, estabilidade, peação e limites de trabalho externo.",
           "map": {
             "x": 47.22,
@@ -4260,7 +4260,7 @@
           "level": "high",
           "headline": "Aviso 786: mar de 4–5,5 m; vigência encerrada às 0000Z",
           "summary": "Ondas de N/NW de 4–5,5 m foram previstas de 261800Z a 280000Z; a vigência publicada encerrou e não foi renovada no Radar.",
-          "details": "Aviso emitido às 1300Z de 24 de outubro. A geometria no mapa é referência aproximada do polígono oficial. A página pública consultada em 28 de outubro não apresentou substituto posterior.",
+          "details": "Aviso emitido às 1300Z de 24 de outubro. A geometria no mapa é referência aproximada do polígono oficial. A página pública consultada em 29 de outubro não apresentou substituto posterior.",
           "action": "Não tratar o aviso expirado como condição atual; confirmar por EGC/NAVTEX e considerar ondas individuais maiores no planejamento.",
           "map": {
             "x": 43.5,
@@ -4279,7 +4279,7 @@
           "level": "high",
           "headline": "Aviso 784: força 8/rajadas 9; vigência encerrada",
           "summary": "Vento de N/NW força 8, com rajadas força 9, foi previsto de 262100Z a 272100Z; a vigência publicada encerrou.",
-          "details": "Aviso emitido às 1300Z de 24 de outubro. A geometria no mapa é referência aproximada do polígono oficial. A página pública consultada em 28 de outubro não apresentou substituto posterior.",
+          "details": "Aviso emitido às 1300Z de 24 de outubro. A geometria no mapa é referência aproximada do polígono oficial. A página pública consultada em 29 de outubro não apresentou substituto posterior.",
           "action": "Não tratar o aviso expirado como condição atual; confirmar o quadro corrente por EGC/NAVTEX antes de agir.",
           "map": {
             "x": 43.64,
@@ -4298,8 +4298,46 @@
       "title": "Conflito e segurança de rota",
       "shortTitle": "Segurança",
       "icon": "▲",
-      "description": "Os Warnings 183, 182 e 181 são os três registros UKMTO mais recentes na consulta de 28 de outubro. O 183 permanece atividade suspeita, não ataque; a IMO contabiliza 121 incidentes confirmados e 24 mortes até 27 de outubro. Autoria e responsabilidade não estão estabelecidas.",
+      "description": "Os registros 185, 184 e 183 são os três produtos UKMTO mais recentes localizados em 29 de outubro. Todos permanecem sob investigação: o Radar não presume causa, autoria, ataque, dano ou condição da tripulação além do publicado.",
       "items": [
+        {
+          "id": "ukmto-khasab-fire-2026-10-29",
+          "date": "2026-10-29",
+          "region": "Estreito de Ormuz · 9 MN ao norte de Khasab, Omã",
+          "level": "high",
+          "headline": "UKMTO 185: embarcação avistada em chamas ao norte de Khasab",
+          "summary": "O UKMTO recebeu de terceiro o relato de embarcação em chamas; condição da tripulação, causa, danos e impacto ambiental não foram confirmados.",
+          "details": "Warning 185-26, publicado em 29 de outubro. Autoridades investigam e o UKMTO recomenda cautela e reporte de atividade suspeita. O marcador representa apenas a área aproximada informada, não posição atual ou identificação da embarcação.",
+          "action": "Transitar com cautela, elevar prontidão de incêndio, resgate e damage control, manter CSO/UKMTO informados e não inferir causa ou autoria sem atualização oficial.",
+          "map": {
+            "x": 65.63,
+            "y": 35.37,
+            "label": "N de Khasab · aprox."
+          },
+          "source": {
+            "name": "UKMTO Warning 185-26 · 29 out.",
+            "url": "https://www.ukmto.org/recent-incidents"
+          }
+        },
+        {
+          "id": "ukmto-gulf-of-aden-advisory-2026-10-28",
+          "date": "2026-10-28",
+          "region": "Golfo de Áden · área de trânsito mercante",
+          "level": "high",
+          "headline": "UKMTO 184: pequenas embarcações suspeitas podem indicar grupo pirata",
+          "summary": "O UKMTO recebeu vários relatos de pequenas embarcações operando perto de mercantes; uma delas foi descrita com nove pessoas, duas escadas e um gancho.",
+          "details": "Advisory 184-26, de 28 de outubro. As autoridades investigam. O produto não confirma ataque, abordagem, sequestro, mothership, identidade de navio ou atribuição. O marcador é apenas referência ampla da área.",
+          "action": "Reforçar vigia, barreiras, iluminação e prontidão de citadel/SSAS; aplicar BMP, manter distância segura e reportar imediatamente abordagens ou atividade suspeita ao UKMTO/MSCIO.",
+          "map": {
+            "x": 63.19,
+            "y": 43,
+            "label": "Golfo de Áden · área"
+          },
+          "source": {
+            "name": "UKMTO Advisory 184-26 · 28 out.",
+            "url": "https://www.ukmto.org/recent-incidents"
+          }
+        },
         {
           "id": "ukmto-al-faw-suspicious-2026-10-26",
           "date": "2026-10-26",
@@ -4318,44 +4356,6 @@
             "name": "UKMTO Warning 183-26 · 26 out.",
             "url": "https://www.ukmto.org/recent-incidents"
           }
-        },
-        {
-          "id": "ukmto-limah-2026-10-23",
-          "date": "2026-10-23",
-          "region": "Estreito de Ormuz · trânsito de saída, proximidades de Limah",
-          "level": "critical",
-          "headline": "Tanker atingido e desabilitado durante trânsito de saída",
-          "summary": "O UKMTO verificou relato tardio de tanker atingido por projétil desconhecido e desabilitado; a tripulação está segura.",
-          "details": "Warning 182-26, evento de 23 de outubro. Dano e impacto ambiental não foram reportados pelo UKMTO. A lista oficial da IMO acrescentou em 27 de outubro incidente a cerca de 6 MN a nordeste de Limah; o marcador é aproximação de área e não posição precisa.",
-          "action": "Elevar prontidão de incêndio, abandono, atendimento médico e damage control; manter CSO/UKMTO informados e confirmar instruções vigentes antes da passagem.",
-          "map": {
-            "x": 65.68,
-            "y": 35.58,
-            "label": "NE de Limah · aprox."
-          },
-          "source": {
-            "name": "UKMTO Warning 182-26 · 23 out.",
-            "url": "https://www.ukmto.org/recent-incidents"
-          }
-        },
-        {
-          "id": "ukmto-limah-2026-10-22",
-          "date": "2026-10-22",
-          "region": "Estreito de Ormuz · 7 MN a nordeste de Limah, Omã",
-          "level": "critical",
-          "headline": "Tanker atingido por projétil durante trânsito de saída",
-          "summary": "O UKMTO recebeu relato tardio de tanker atingido por projétil desconhecido enquanto saía do Estreito de Ormuz; o navio conseguiu prosseguir ao próximo porto.",
-          "details": "Warning 181-26, incidente às 1715Z de 22 de outubro e publicado posteriormente. O produto não informa extensão de dano, feridos, poluição ou autoria. O marcador é referência aproximada da área relativa a Limah.",
-          "action": "Transitar com cautela, manter CSO/UKMTO informados, elevar prontidão de incêndio/damage control e reportar atividade suspeita; não inferir ausência de dano apenas porque o navio prosseguiu.",
-          "map": {
-            "x": 65.68,
-            "y": 35.58,
-            "label": "NE de Limah · aprox."
-          },
-          "source": {
-            "name": "UKMTO Warning 181-26 · evento 22 out.",
-            "url": "https://www.ukmto.org/recent-incidents"
-          }
         }
       ]
     },
@@ -4364,8 +4364,27 @@
       "title": "Navegação eletrônica e portos",
       "shortTitle": "Nav/Portos",
       "icon": "⌁",
-      "description": "Contexto operacional reconsultado em 28 de outubro. A análise pública da Windward sobre o incêndio de 26 de outubro foi incorporada somente como complemento atribuído ao Warning 183; Dryad não trouxe achado novo corroborado. Análises comerciais não substituem confirmação oficial.",
+      "description": "Contexto operacional reconsultado em 29 de outubro. A análise aberta da Windward de 28 de outubro foi incorporada como avaliação comercial atribuída sobre shuttles/STS e capacidade VLCC em Ormuz; Dryad não apresentou achado novo corroborado. Análises comerciais não substituem confirmação oficial.",
       "items": [
+        {
+          "id": "hormuz-tanker-shuttle-analysis-2026-10-28",
+          "date": "2026-10-28",
+          "region": "Estreito de Ormuz / Golfo de Omã · shuttles e STS",
+          "level": "high",
+          "headline": "Análise atribui frota dedicada a shuttles e STS em Ormuz",
+          "summary": "A Windward estima quase 230 petroleiros sob controle de produtores do Golfo, cerca de 80% VLCC, usados em shuttles e transferências STS para manter o fluxo.",
+          "details": "Análise comercial publicada em 28 de outubro. A empresa estima que a operação ocupa 15%–20% da frota global de VLCC em dado momento e, com dados Vortexa, cerca de 11 milhões bpd de crude não iraniano carregado a oeste de Ormuz em outubro. Metodologia, universo e períodos diferem das séries Kpler/EIA; números não são contagem oficial nem acusação contra navio ou operador.",
+          "action": "Planejar capacidade, ETA, STS e contraparte com verificação independente; ausência de AIS em zona de risco não prova ilícito nem dispensa identificação, vetting, sanções e confirmação operacional.",
+          "map": {
+            "x": 65.7,
+            "y": 35.6,
+            "label": "Ormuz / Golfo de Omã"
+          },
+          "source": {
+            "name": "Windward · análise pública · 28 out. 2026",
+            "url": "https://windward.ai/blog/how-a-new-arab-dark-fleet-keeps-hormuz-oil-flowing/"
+          }
+        },
         {
           "id": "windward-hormuz-subsea-cables-2026-10-26",
           "date": "2026-10-26",
@@ -4402,25 +4421,6 @@
           "source": {
             "name": "Reuters · mercado tanker · 20 out. 2026",
             "url": "https://www.reuters.com/business/energy/asian-refiners-use-smaller-tankers-buy-delivered-crude-freight-rates-soar-2026-10-20/"
-          }
-        },
-        {
-          "id": "ukmto-vra-gnss-2026-10-02",
-          "date": "2026-10-02",
-          "region": "Mar Vermelho / Golfo de Omã / Golfo Pérsico",
-          "level": "high",
-          "headline": "Interferência GNSS permanece concentrada em três corredores",
-          "summary": "O overview do UKMTO registrou 36 relatos voluntários em 30 dias e 35.347 posições AIS anômalas em sete dias, concentradas no Mar Vermelho, Golfo de Omã e Golfo Pérsico.",
-          "details": "O UKMTO ressalva que densidade de relatos depende de tráfego, visibilidade AIS e participação dos navios e não mede o nível absoluto de interferência.",
-          "action": "Comparar GNSS com radar, visual, eco-sonda, DR e receptores independentes; investigar discrepâncias antes de alterar o plano.",
-          "map": {
-            "x": 65.6,
-            "y": 35.4,
-            "label": "Golfo / Mar Vermelho"
-          },
-          "source": {
-            "name": "UKMTO VRA Weekly Overview · 2 out. 2026",
-            "url": "https://www.ukmto.org/-/media/ukmto/products/20261002-ukmto_vra_overview_u.pdf?rev=9d75c4f2af3f4f2a915079a75a794654"
           }
         }
       ]
@@ -4568,13 +4568,13 @@
       "risk": "critical",
       "trafficLabel": "18,3 mi bpd · média móvel de 7 dias em 30 set. · Kpler",
       "trafficTrend": "fluxo comercial elevado sob ataques recentes a petroleiros no estreito e no norte do Golfo",
-      "trafficBasis": "Kpler, via Reuters, estimou 18,3 milhões bpd de crude na média móvel de sete dias em 30 set.; Vortexa estimou 18,6 milhões bpd em 14 dias. São estimativas comerciais regionais, sujeitas a revisão e não equivalem a contagem de navios ou gross tonnage oficial.",
-      "market": "O Baltic W43 mantém TCEs spot excepcionalmente altos apesar de nova correção: TD3C em US$ 1,288 milhão/dia e TD34 em US$ 656,6 mil/dia. São rotas padronizadas, não frete do navio nem fluxo físico oficial.",
-      "geopolitics": "Ameaça crítica: a IMO contabiliza 121 incidentes confirmados e 24 mortes até 27 de outubro. Os Warnings 182/181 registram tankers atingidos durante trânsitos de saída; o Warning 183 classifica relatos de incêndio a sudeste de Al-Faw como atividade suspeita, não ataque. Autoria não estabelecida.",
+      "trafficBasis": "Kpler, via Reuters, estimou 18,3 milhões bpd de crude na média móvel de sete dias em 30 set.; Vortexa estimou 18,6 milhões bpd em 14 dias. Separadamente, análise Windward de 28 out., com dados Vortexa e metodologia própria, estimou cerca de 11 milhões bpd de crude não iraniano carregado a oeste de Ormuz ao longo de outubro. Períodos e universos diferem: nenhuma série equivale a contagem oficial de navios ou gross tonnage.",
+      "market": "O Baltic W43 mantém TCEs spot excepcionalmente altos apesar da correção: TD3C em US$ 1,288 milhão/dia e TD34 em US$ 656,6 mil/dia. A Windward atribui a shuttles/STS a ocupação de 15%–20% da frota global de VLCC em dado momento; é avaliação proprietária, não fixture do navio nem dado oficial.",
+      "geopolitics": "Ameaça crítica: a IMO contabiliza 121 incidentes confirmados e 24 mortes até 27 de outubro. O UKMTO 185 relata embarcação em chamas ao norte de Khasab, com causa e condição da tripulação não confirmadas; o 183 segue como atividade suspeita a sudeste de Al-Faw. Autoria não estabelecida.",
       "authority": "Autoridades costeiras; UKMTO como ponto de contato de segurança; IMO consolida incidentes confirmados",
       "reporting": "UKMTO VRS voluntário: initial ao entrar no VRA, daily 0800 UTC, final e incident imediato; VTS/porto permanecem obrigatórios conforme jurisdição.",
       "masterFocus": [
-        "Manter voyage-specific threat assessment, war-risk e autoridade de decisão alinhada ao CSO; os Warnings 181–183 reforçam prontidão de incêndio, abandono, atendimento médico e damage control.",
+        "Manter voyage-specific threat assessment, war-risk e decisão alinhada ao CSO; os produtos 183–185 exigem prontidão de incêndio, resgate, abandono, atendimento médico e damage control sem inferir causa ou autoria.",
         "Usar navegação redundante contra spoofing/jamming e comparar GNSS, radar, visual, AIS, eco-sonda e DR.",
         "Revisar contingência para perda de comunicações externas e canais alternativos; não atribuir falha de cabo sem confirmação técnica e oficial.",
         "Em STS e vetting, examinar contrapartes e histórico completo de encontros; associação ou geometria não provam transferência de carga.",
@@ -4616,18 +4616,18 @@
       "trafficTrend": "fluxo reduzido; retorno seletivo de containerships",
       "trafficBasis": "JMIC/S&P Maritime registrou 128 trânsitos de navios de carga acima de 1.000 dwt entre 27 e 30 set.; a base histórica citada é cerca de 61 navios/dia em 2023. Não é gross tonnage nem fluxo de petróleo.",
       "market": "A Windward atribui cerca de 100 grandes containerships adicionais à volta por Suez; a capacidade depende de Bab permanecer aberto. Isso não confirma retomada regular de crude em Yanbu nem mede fluxo de petróleo.",
-      "geopolitics": "O JMIC mantém ameaça SUBSTANTIAL. O Warning 176-26 registrou em 17 de outubro skiff com sete pessoas disparando duas vezes contra LNG tanker a 140 MN a sudeste de Al Mukalla; o navio e a tripulação foram reportados seguros, sem dano informado.",
+      "geopolitics": "O JMIC mantém ameaça SUBSTANTIAL. O UKMTO Advisory 184-26, de 28 de outubro, relata pequenas embarcações suspeitas no Golfo de Áden, uma delas com nove pessoas, duas escadas e um gancho; autoridades investigam e não há ataque, abordagem ou atribuição confirmados.",
       "authority": "UKMTO / MSCIO / forças marítimas e autoridades costeiras",
       "reporting": "Registro/reporte voluntário UKMTO e MSCIO no VRA; seguir BMP Maritime Security.",
       "masterFocus": [
         "Exigir voyage-specific threat assessment, autorização da companhia e medidas BMP; não assumir corredor protegido ou carregamentos regulares em Yanbu.",
         "Diferenciar reinício técnico do oleoduto, throughput sustentado e carregamentos confirmados antes de assumir normalização comercial.",
-        "Revisar citadel, SSAS, drills, damage control, lookout, velocidade e comunicações UKMTO/MSCIO; a aproximação armada a LNG tanker reforça o risco de pequenas embarcações fora do Bab imediato.",
+        "Revisar citadel, SSAS, drills, damage control, lookout, velocidade e comunicações UKMTO/MSCIO; o Advisory 184 reforça vigilância contra pequenas embarcações no Golfo de Áden sem confirmar ataque.",
         "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
-        "name": "UKMTO Warning 176-26 · 17 out. 2026",
-        "url": "https://www.ukmto.org/-/media/ukmto/products/20261017-ukmto_warning-176-26.pdf?rev=e65332782cde4d80ad74f056bf144189"
+        "name": "UKMTO Advisory 184-26 · 28 out. 2026",
+        "url": "https://www.ukmto.org/recent-incidents"
       }
     },
     {
@@ -4858,7 +4858,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-    "note": "Evidência oficial PSC verificada em 28 out. 2026 às 10:48 UTC. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. O Safety Bulletin 05/2026 do Tokyo MoU segue como a mudança material mais recente. Respostas 403/502 e timeouts de alguns domínios oficiais não foram tratados como prova de ausência. Nenhuma mudança material adicional foi confirmada.",
+    "note": "Evidência oficial PSC verificada em 29 out. 2026 às 10:34 UTC. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas; Caribbean, Indian Ocean e Riyadh sem confirmação oficial localizada. O Safety Bulletin 05/2026 do Tokyo MoU segue como a mudança material mais recente. Respostas 403/502 e timeouts de alguns domínios oficiais não foram tratados como prova de ausência. Nenhuma mudança material adicional foi confirmada.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -5004,42 +5004,42 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 59.64,
+        "price": 59.03,
         "currencySymbol": "R$",
-        "changePercent": -1.91,
+        "changePercent": -1.02,
         "trend": "Queda no fechamento",
-        "capturedAtLabel": "27 out. 2026 · fechamento B3",
+        "capturedAtLabel": "28 out. 2026 · fechamento B3",
         "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 52.79,
+        "price": 52.51,
         "currencySymbol": "R$",
-        "changePercent": -2.02,
+        "changePercent": -0.53,
         "trend": "Queda no fechamento",
-        "capturedAtLabel": "27 out. 2026 · fechamento B3",
+        "capturedAtLabel": "28 out. 2026 · fechamento B3",
         "sourceUrl": "https://www.dadosdemercado.com.br/b3/ibov"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 22.29,
+        "price": 22.03,
         "currencySymbol": "US$",
-        "changePercent": -0.93,
+        "changePercent": -1.21,
         "trend": "Queda no fechamento",
-        "capturedAtLabel": "27 out. 2026 · fechamento NYSE",
-        "sourceUrl": "https://www.google.com/finance/quote/PBR:NYSE"
+        "capturedAtLabel": "28 out. 2026 · fechamento NYSE",
+        "sourceUrl": "https://stockanalysis.com/stocks/pbr/history/"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-        "price": 19.75,
+        "price": 19.59,
         "currencySymbol": "US$",
-        "changePercent": -0.75,
+        "changePercent": -0.86,
         "trend": "Queda no fechamento",
-        "capturedAtLabel": "27 out. 2026 · fechamento NYSE",
-        "sourceUrl": "https://stockanalysis.com/stocks/pbr.a/"
+        "capturedAtLabel": "28 out. 2026 · fechamento NYSE",
+        "sourceUrl": "https://stockanalysis.com/stocks/pbr.a/history/"
       }
     ],
     "operations": [
@@ -5229,66 +5229,66 @@
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 990,
-      "change": 10
+      "vlsfo": 1000.5,
+      "change": 10.5
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 764,
-      "change": -8
+      "vlsfo": 770,
+      "change": 6
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 987,
-      "change": -2.5
+      "vlsfo": 989.5,
+      "change": 2.5
     },
     {
       "port": "Houston",
       "code": "USHOU",
-      "vlsfo": 835.5,
-      "change": -7.5
+      "vlsfo": 842,
+      "change": 6.5
     }
   ],
   "briefing": {
-    "date": "2026-10-28",
+    "date": "2026-10-29",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
         "title": "SPOT é a fonte válida mais recente",
-        "summary": "SPOT · 48º30,87′ S · 63º45,75′ W · 0 h 12 min. MarineTraffic: 8 h 2 min; VesselAPI: 6 d 12 h 36 min. Bateria SPOT GOOD; datas de observação preservadas e VesselAPI sinalizada como antiga."
+        "summary": "SPOT · 52º26,64′ S · 067º34,71′ W · 1 h 7 min. MarineTraffic: 8 h 4 min; VesselAPI: 7 d 12 h 25 min. Bateria SPOT GOOD; datas de observação preservadas e fonte antiga sinalizada."
       },
       {
         "category": "SEGURANÇA",
-        "title": "UKMTO 183/182 atualizam o risco no Golfo e em Ormuz",
-        "summary": "O 183 mantém como atividade suspeita relatos de incêndio a 63 MN a sudeste de Al-Faw; o 182 registra tanker atingido e desabilitado no trânsito de saída de Ormuz, com tripulação segura. Autoria não estabelecida."
+        "title": "UKMTO 185/184 atualizam Ormuz e Golfo de Áden",
+        "summary": "O 185 relata embarcação em chamas ao norte de Khasab, com causa e condição da tripulação não confirmadas; o 184 alerta para pequenas embarcações suspeitas com possível perfil de grupo pirata. Ambos seguem sob investigação."
       },
       {
         "category": "COSTA BR",
-        "title": "Avisos CHM 788/786/784 encerraram a vigência publicada",
-        "summary": "O 788 encerrou às 0600Z de 28 out.; o 786 às 0000Z e o 784 às 2100Z de 27 out. Nenhum substituto posterior foi localizado na página pública; confirmar situação corrente por EGC/NAVTEX."
+        "title": "CHM 788/786/784 seguem expirados, sem substituto público",
+        "summary": "A consulta de 29 out. não exibiu aviso posterior. Os registros permanecem apenas como histórico com vigências originais; confirmar quadro corrente por EGC/NAVTEX."
       },
       {
         "category": "METEO",
-        "title": "Atlântico Norte pode alcançar 65 kt; Chile austral em atenção",
-        "summary": "A NOAA prevê 50–65 kt e mar de 7–10 m no Atlântico Norte; no Pacífico Norte, 40–55 kt e 8–13 m. A MeteoArmada lista avisos para Faro San Pedro–60°S e Golfo de Penas, sem detalhes públicos de intensidade/vigência."
+        "title": "Atlântico Norte mantém 65 kt; Pacífico prevê mar de 13 m",
+        "summary": "A NOAA analisa 50–65 kt e 8–10,5 m no Atlântico Norte e prevê 35–50 kt e 8–13 m no Pacífico Norte. No Chile austral, a listagem oficial mantém avisos de 27 out. sem detalhes públicos de vigência."
       },
       {
         "category": "MERCADO",
-        "title": "Fretes preservam W43; bunker e Petrobras atualizados",
-        "summary": "Sem novo roundup semanal, TD3C/TD20/TD7 mantêm os últimos TCEs públicos. Em 27 out., VLSFO público ficou em US$ 990/t em Singapura, US$ 764 em Rotterdam, US$ 987 em Fujairah e US$ 835,50 em Houston; PETR3/PETR4/PBR/PBR.A recuaram no fechamento."
+        "title": "Bunker e Petrobras atualizados; fretes mantêm W43",
+        "summary": "VLSFO de 28 out.: Singapura US$ 1.000,50/t, Rotterdam US$ 770, Fujairah US$ 989,50 e Houston US$ 842. PETR3/PETR4/PBR/PBR.A recuaram no fechamento; os TCEs mantêm o último roundup W43."
       },
       {
         "category": "PASSAGENS",
-        "title": "Ormuz permanece crítico; Magalhães exige confirmação meteo",
-        "summary": "A IMO contabiliza 121 incidentes e 24 mortes até 27 out. Ormuz incorpora os Warnings 181–183; Magalhães sobe temporariamente para risco alto pela listagem oficial de avisos austrais, cuja vigência precisa ser confirmada a bordo."
+        "title": "Ormuz permanece crítico; Golfo de Áden exige vigia reforçada",
+        "summary": "A IMO mantém 121 incidentes e 24 mortes até 27 out. O UKMTO 185/184 não confirma causa ou ataque; a análise Windward sobre shuttles/STS é complementar e atribuída, com metodologia distinta das séries oficiais."
       },
       {
         "category": "PSC",
-        "title": "Quatro CICs ativas; nenhuma mudança adicional em 28 out.",
-        "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativas; Abuja e Mediterranean anunciadas; três regimes sem confirmação e USCG nacional. Evidência oficial verificada às 1048Z mantém o Tokyo Bulletin 05/2026 como última mudança material."
+        "title": "Quatro CICs ativas; nenhuma mudança adicional em 29 out.",
+        "summary": "Paris, Tokyo, Viña del Mar e Black Sea seguem ativas; Abuja e Mediterranean anunciadas; três regimes sem confirmação e USCG nacional. Evidência oficial de 29 out. não trouxe mudança material."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -5477,19 +5477,19 @@
     {
       "name": "IMO / MPA Singapore — incidentes confirmados",
       "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
-      "scope": "Lista IMO reconsultada em 28 out.; 121 incidentes confirmados e 24 mortes, com atualização de 27 out.",
+      "scope": "Lista IMO reconsultada em 29 out.; 121 incidentes confirmados e 24 mortes, com atualização oficial de 27 out.",
       "typeLabel": "Oficial"
     },
     {
       "name": "Windward — análise pública",
-      "url": "https://insights.windward.ai/",
-      "scope": "Blog e base pública reconsultados em 28 out.; análise de 27 out. sobre o incêndio de 26 out. complementa o Warning 183 apenas como avaliação atribuída, sem determinar causa ou autoria",
+      "url": "https://windward.ai/blog/how-a-new-arab-dark-fleet-keeps-hormuz-oil-flowing/",
+      "scope": "Blog e base pública reconsultados em 29 out.; análise de 28 out. sobre shuttles/STS e capacidade VLCC em Ormuz incorporada apenas como avaliação atribuída, com metodologia distinta de séries oficiais",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
       "url": "https://channel16.dryadglobal.com/",
-      "scope": "Canal público reconsultado em 28 out.; nenhum achado novo corroborado foi incorporado e eventos do Golfo permanecem deduplicados com UKMTO/IMO",
+      "scope": "Canal público reconsultado em 29 out.; nenhum achado novo corroborado foi incorporado e eventos do Golfo permanecem deduplicados com UKMTO/IMO",
       "typeLabel": "Indústria / complementar"
     },
     {
