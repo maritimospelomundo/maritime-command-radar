@@ -48,3 +48,10 @@ test('late import, invalid, future or estimated alternatives do not suppress a d
   assert.ok(reserve({entries:[]},now,{data:d,health:{}}));
  }
 });
+test('retains inside fix beyond three hours, expires at six and never revives an older inside fix after exit',()=>{
+ const d=data(p(-52.494333,-68.623833,'2026-10-29T15:07:00Z'));
+ assert.equal(areaFor(d,new Date('2026-10-29T18:51:00Z')),'Magalhães');
+ assert.equal(areaFor(d,new Date('2026-10-29T21:07:01Z')),null);
+ d.marineTrafficPosition={lastKnown:p(-52,-66,'2026-10-29T17:00:00Z')};
+ assert.equal(areaFor(d,new Date('2026-10-29T18:51:00Z')),null);
+});

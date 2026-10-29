@@ -1,3 +1,4 @@
+import {collectAis,collectorState} from './ais-collector.mjs';
 import {radarPositions} from './radar-sources.mjs';
 import {syncMembers,trackingLogin,trackingSession,trackingStats} from './tracking-access';
 import {shoreSchema} from './shore-schema';
@@ -33,9 +34,17 @@ async function sync(env:any){
  return sources.map((s,i)=>({source:i===0?'radar':'spot',ok:s.status==='fulfilled',...(s.status==='rejected'?{error:String(s.reason?.message||'unavailable')}:{points:s.value.length})}));
 }
 export default {
- async scheduled(_event:any,env:any,ctx:any){ctx.waitUntil(Promise.all([sync(env),env.DB.batch([env.DB.prepare('DELETE FROM tracking_visits WHERE visited_ms<?').bind(Date.now()-90*86400000),env.DB.prepare('DELETE FROM tracking_sessions WHERE expires_ms<?').bind(Date.now()),env.DB.prepare('DELETE FROM tracking_attempts WHERE expires_ms<?').bind(Date.now())])]))},
+ async scheduled(event:any,env:any,ctx:any){ctx.waitUntil((async()=>{await sync(env);if(event.cron==='21,51 * * * *')await collectAis(env,await positions(env),save);await env.DB.batch([env.DB.prepare('DELETE FROM tracking_visits WHERE visited_ms<?').bind(Date.now()-90*86400000),env.DB.prepare('DELETE FROM tracking_sessions WHERE expires_ms<?').bind(Date.now()),env.DB.prepare('DELETE FROM tracking_attempts WHERE expires_ms<?').bind(Date.now())]);})())},
  async fetch(request:Request,env:any){
  const path=new URL(request.url).pathname;
+ // Anonymous read-only data already published by the Radar. Never collects on GET.
+ if(path==='/api/ais'&&['GET','OPTIONS'].includes(request.method)){
+  const headers={'Access-Control-Allow-Origin':'*','Cache-Control':'no-store','X-Robots-Tag':'noindex, nofollow'};
+  if(request.method==='OPTIONS')return new Response(null,{status:204,headers});
+  try{const state=await collectorState(env);const points=(await positions(env)).filter((p:any)=>p.source==='VesselAPI');
+   return Response.json({collector:'cloudflare-cron',schedule:'21,51 * * * *',health:state?.health||null,lastDecision:state?.lastDecision||null,points}, {headers});
+  }catch{return Response.json({error:'Collector status unavailable'}, {status:503,headers});}
+ }
  const origin=request.headers.get('Origin');
  // This cookie-free read route accepts native WebViews; bearer auth remains mandatory.
  const windyRead=path==='/api/position'&&['GET','OPTIONS'].includes(request.method);

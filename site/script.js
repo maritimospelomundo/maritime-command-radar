@@ -139,7 +139,7 @@ async function resolveSourcePosition(config, sourceKey, sourceLabel) {
   let points = [];
   const endpoint = config?.endpoint || (sourceKey === 'spot'
     ? 'https://spot-vessel-position.maritimospelomundo.workers.dev/api/positions?days=90&limit=2000'
-    : null);
+    : sourceKey === 'vesselApi' ? 'https://abdias-public-portals.maritimospelomundo.workers.dev/api/ais' : null);
   if (endpoint) {
     try {
       const response = await fetch(endpoint, { cache: 'no-store', signal: AbortSignal.timeout(10000) });

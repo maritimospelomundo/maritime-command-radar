@@ -6,7 +6,7 @@ export function normalize(raw,source,now=Date.now()){
  if(!Number.isFinite(time)||time>now+300000||!Number.isFinite(latitude)||!Number.isFinite(longitude)||Math.abs(latitude)>90||Math.abs(longitude)>180)return null;
  if(source==='SPOT'&&(excluded.has(String(raw.id))||excludedTimes.has(time)))return null;
  const accuracy=raw.accuracyMeters;
- return {source,dateTime:new Date(time).toISOString(),latitude,longitude,...(Number.isFinite(accuracy)&&accuracy>=0?{accuracyMeters:accuracy}:{})};
+ return {source,dateTime:new Date(time).toISOString(),latitude,longitude,...Object.fromEntries([['sog',102.2],['cog',359.9],['heading',359]].filter(([k,max])=>typeof raw[k]==='number'&&Number.isFinite(raw[k])&&raw[k]>=0&&raw[k]<=max).map(([k])=>[k,raw[k]])),...(Number.isFinite(accuracy)&&accuracy>=0?{accuracyMeters:accuracy}:{})};
 }
 export function prefer(a,b){return Date.parse(b.dateTime)-Date.parse(a.dateTime)||(a.accuracyMeters??Infinity)-(b.accuracyMeters??Infinity)||({VesselAPI:3,MarineTraffic:2,SPOT:1}[b.source]-{VesselAPI:3,MarineTraffic:2,SPOT:1}[a.source]);}
 export function consolidate(points,now=Date.now()){

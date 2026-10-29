@@ -2,7 +2,7 @@ name: Deploy Abdias public portals API
 on:
   push:
     branches: [main]
-    paths: ['public-portals/**', '.github/workflows/deploy-public-portals.yml']
+    paths: ['public-portals/**', 'scripts/ais-areas.mjs', 'scripts/ais-policy.mjs', '.github/workflows/deploy-public-portals.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -32,6 +32,12 @@ jobs:
           PORTALS_WORKER_BUNDLE: /tmp/portals-worker.mjs
       - run: node worker/provision.mjs
       - run: npx wrangler d1 migrations apply abdias-public-portals --remote --config worker/wrangler.json
+      - name: Configure existing VesselAPI key for the sole scheduled collector
+        env:
+          VESSELAPI_API_KEY: ${{ secrets.VESSELAPI_API_KEY }}
+        run: |
+          test -n "$VESSELAPI_API_KEY"
+          printf '%s' "$VESSELAPI_API_KEY" | npx wrangler secret put VESSELAPI_API_KEY --config worker/wrangler.json
       - run: npx wrangler deploy --config worker/wrangler.json
       - name: Verify access protection
         run: |
