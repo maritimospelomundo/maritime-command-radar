@@ -13,14 +13,14 @@
     "endpoint": "",
     "mapUrl": "https://maps.findmespot.com/s/VCV3",
     "lastKnown": {
-      "id": "2519298340",
-      "unixTime": 1793264263,
-      "dateTime": "2026-10-29T08:57:43+0000",
-      "latitude": -52.11315,
-      "longitude": -67.21637,
+      "id": "2519315616",
+      "unixTime": 1793267891,
+      "dateTime": "2026-10-29T09:58:11+0000",
+      "latitude": -52.28005,
+      "longitude": -67.39776,
       "messageType": "UNLIMITED-TRACK",
       "batteryState": "GOOD",
-      "altitude": 17
+      "altitude": 2
     },
     "excludedTestMessageIds": [
       "2493309049",
@@ -1952,9 +1952,19 @@
         "messageType": "UNLIMITED-TRACK",
         "batteryState": "GOOD",
         "altitude": 17
+      },
+      {
+        "id": "2519315616",
+        "unixTime": 1793267891,
+        "dateTime": "2026-10-29T09:58:11+0000",
+        "latitude": -52.28005,
+        "longitude": -67.39776,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 2
       }
     ],
-    "lastSyncAt": "2026-10-29T09:09:09.703Z"
+    "lastSyncAt": "2026-10-29T10:07:16.505Z"
   },
   "marineTrafficPosition": {
     "label": "MarineTraffic",
