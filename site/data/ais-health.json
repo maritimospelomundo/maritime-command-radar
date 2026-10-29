@@ -1,11 +1,17 @@
 {
   "status": "no_data",
-  "lastAttemptAt": "2026-10-29T14:25:27.326Z",
-  "lastSuccessAt": "2026-10-29T14:25:27.866Z",
+  "lastAttemptAt": "2026-10-29T22:51:55.795Z",
+  "lastSuccessAt": "2026-10-29T22:51:55.795Z",
   "dataAt": "2026-10-21T23:39:52.000Z",
   "error": null,
   "quotaRemaining": 137,
-  "quotaAt": "2026-10-29T14:25:27.866Z",
+  "quotaAt": "2026-10-29T22:51:55.795Z",
   "nextAttemptAt": null,
-  "authBlocked": false
+  "authBlocked": false,
+  "collector": "cloudflare-cron",
+  "lastDecision": {
+    "at": "2026-10-29T23:21:55.770Z",
+    "reason": "interval_or_normal_budget",
+    "area": "Magalhães"
+  }
 }
