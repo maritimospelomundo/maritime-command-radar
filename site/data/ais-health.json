@@ -1,17 +1,17 @@
 {
   "status": "no_data",
-  "lastAttemptAt": "2026-10-30T16:51:53.107Z",
-  "lastSuccessAt": "2026-10-30T16:51:53.107Z",
+  "lastAttemptAt": "2026-10-30T19:51:54.110Z",
+  "lastSuccessAt": "2026-10-30T19:51:54.110Z",
   "dataAt": "2026-10-21T23:39:52.000Z",
   "error": null,
   "quotaRemaining": 137,
-  "quotaAt": "2026-10-30T16:51:53.107Z",
+  "quotaAt": "2026-10-30T19:51:54.110Z",
   "nextAttemptAt": null,
   "authBlocked": false,
   "collector": "cloudflare-cron",
   "lastDecision": {
-    "at": "2026-10-30T16:51:53.107Z",
-    "reason": "request_reserved",
-    "area": "Magalhães"
+    "at": "2026-10-30T21:21:53.294Z",
+    "reason": "recent_alternative",
+    "area": null
   }
 }
