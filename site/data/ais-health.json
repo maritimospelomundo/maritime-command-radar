@@ -1,17 +1,17 @@
 {
   "status": "no_data",
-  "lastAttemptAt": "2026-10-30T19:51:54.110Z",
-  "lastSuccessAt": "2026-10-30T19:51:54.110Z",
+  "lastAttemptAt": "2026-10-31T06:21:55.320Z",
+  "lastSuccessAt": "2026-10-31T06:21:55.320Z",
   "dataAt": "2026-10-21T23:39:52.000Z",
   "error": null,
   "quotaRemaining": 137,
-  "quotaAt": "2026-10-30T19:51:54.110Z",
+  "quotaAt": "2026-10-31T06:21:55.320Z",
   "nextAttemptAt": null,
   "authBlocked": false,
   "collector": "cloudflare-cron",
   "lastDecision": {
-    "at": "2026-10-31T00:51:53.035Z",
+    "at": "2026-10-31T06:51:52.847Z",
     "reason": "interval_or_normal_budget",
-    "area": null
+    "area": "Canais patagônicos"
   }
 }
