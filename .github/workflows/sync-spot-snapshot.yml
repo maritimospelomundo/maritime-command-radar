@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['scripts/update-spot.mjs', '.github/workflows/sync-spot-snapshot.yml']
+    paths: ['scripts/update-spot.mjs', 'scripts/update-spot.test.mjs', '.github/workflows/sync-spot-snapshot.yml']
 permissions:
   contents: write
 concurrency:
@@ -23,6 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - run: node scripts/update-spot.test.mjs
       - name: Mirror observations with optimistic concurrency
         id: mirror
         shell: bash
