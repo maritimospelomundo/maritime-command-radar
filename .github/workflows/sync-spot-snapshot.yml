@@ -1,0 +1,53 @@
+name: Sync SPOT snapshot
+on:
+  schedule:
+    - cron: '4,14,24,34,44,54 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/update-spot.mjs', '.github/workflows/sync-spot-snapshot.yml']
+permissions:
+  contents: write
+concurrency:
+  group: spot-snapshot
+  cancel-in-progress: false
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Mirror observations with optimistic concurrency
+        id: mirror
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/update-spot.mjs
+            node scripts/validate-data.mjs
+            if git diff --quiet -- site/data/latest.json; then exit 0; fi
+            git add site/data/latest.json
+            git commit -m 'chore: mirror new SPOT observations'
+            if git push origin HEAD:main; then
+              echo 'changed=true' >> "$GITHUB_OUTPUT"
+              git rev-parse HEAD > /tmp/spot-collected
+              exit 0
+            fi
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        if: steps.mirror.outputs.changed == 'true'
+        with:
+          name: spot-collected
+          path: /tmp/spot-collected
+          retention-days: 1
