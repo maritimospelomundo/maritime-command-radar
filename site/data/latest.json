@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-31T12:03:02.380Z",
+  "generatedAt": "2026-11-02T12:03:26.586Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -4676,20 +4676,20 @@
       {
         "label": "AÇÃO AGORA",
         "level": "medium",
-        "value": "SPOT · posição observada há 2 h 6 min",
-        "summary": "Ponto consolidado de 2026-10-31T09:56:49.000Z: 50º51,82′ S · 074º09,79′ W. MarineTraffic: 7 h 56 min; VesselAPI: 9 d 12 h 23 min. Bateria SPOT GOOD; VesselAPI está acima de 24 h."
+        "value": "SPOT · posição observada há 4 h 52 min",
+        "summary": "Ponto consolidado de 2026-11-02T07:11:06+0000: 43º18,68′ S · 075º09,80′ W. MarineTraffic: 6 h 58 min; VesselAPI: 11 d 12 h 23 min. Bateria SPOT GOOD; VesselAPI está acima de 24 h."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
-        "value": "Chile e Pacífico Sul · novos NAVAREA",
-        "summary": "NAVAREA XV 0149 delimita área de risco por queda de elementos espaciais entre 6 e 12 nov.; NAVAREA V 0684 anuncia operação perigosa ao sul de Cabo Frio de 5 a 7 nov. Plotar os limites oficiais e confirmar broadcasts antes da aproximação."
+        "value": "Pacífico Sul · NAVAREA XV 0147–0149",
+        "summary": "XV 0147 mantém exercício a noroeste da Bahía Concepción até 7 nov.; XV 0148/0149 definem janelas consecutivas de queda de elementos espaciais de 2 a 12 nov. Plotar os limites oficiais e confirmar broadcasts antes da aproximação."
       },
       {
         "label": "PREPARAR",
         "level": "critical",
-        "value": "Ormuz · UKMTO 188–189",
-        "summary": "Dois novos ataques foram publicados em 30 out.: um crude oil tanker foi atingido durante trânsito outbound e outra embarcação foi atingida 40 MN ao sul de Lavan Island, com incêndio; autoridades investigam e não há autoria confirmada."
+        "value": "Ormuz e Golfo · UKMTO 191–192",
+        "summary": "Ataques publicados em 1–2 nov.: uma embarcação foi reportada atingida no Estreito de Ormuz e um tanker foi atingido por dois projéteis 72 MN a leste de Ras Al Khafji. Tripulação segura e sem impacto ambiental reportado no segundo caso; autoria não estabelecida."
       }
     ],
     "modules": [
@@ -4697,9 +4697,9 @@
         "id": "msi",
         "icon": "⌁",
         "label": "NAVAREA / METAREA",
-        "value": "NAVAREA · 809 registros publicados",
+        "value": "NAVAREA · 831 registros publicados",
         "status": "live",
-        "summary": "Base pública recebida até 31 out. 06:00 UTC. Foram incorporados NAVAREA XV 0149 e NAVAREA V 0683/0684 sem antecipar nem alterar a ingestão independente; a tentativa oficial CHM de 31 out. estava indisponível, portanto confirmar por coordenador, EGC/NAVTEX e agente.",
+        "summary": "Base pública recebida até 2 nov. 06:00 UTC. Foram incorporados NAVAREA V 0686 e XV 0147/0148/0149 sem antecipar nem alterar a ingestão independente; a tentativa oficial CHM de 2 nov. permaneceu indisponível, portanto confirmar por coordenador, EGC/NAVTEX e agente.",
         "source": {
           "name": "Base NAVAREA pública do Radar",
           "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
@@ -4745,9 +4745,9 @@
         "id": "chokepoints",
         "icon": "▲",
         "label": "CHOKEPOINTS",
-        "value": "Ormuz crítico · UKMTO 188–189",
+        "value": "Ormuz crítico · UKMTO 191–192",
         "status": "high",
-        "summary": "A IMO contabiliza 122 incidentes confirmados e 24 mortes na atualização de 30 out.; UKMTO publicou os ataques 188 e 189 em 30 out. Manter avaliação específica, war-risk, redundância de navegação e autorização do CSO.",
+        "summary": "A IMO contabiliza 122 incidentes confirmados e 24 mortes na atualização de 30 out.; UKMTO publicou novos ataques em 1 e 2 nov. Manter avaliação específica, war-risk, redundância de navegação e autorização do CSO.",
         "source": {
           "name": "IMO · incidentes confirmados",
           "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
@@ -4793,7 +4793,7 @@
   },
   "market": {
     "week": "W44",
-    "sourceLabel": "Baltic W44 (30 out.) para spot e Fearnleys W43 (21 out.) para narrativa e benchmarks de 1 ano. BDTI/BCTI preservam o último valor público exato já consolidado. VLSFO de 30 out. nos quatro hubs.",
+    "sourceLabel": "Baltic W44 (30 out.) para spot e Fearnleys W43 (21 out.) para narrativa e benchmarks de 1 ano. BDTI/BCTI usam o fechamento público complementar de 30 out.; VLSFO permanece no último fechamento disponível de 30 out.",
     "benchmarks": [
       {
         "segment": "VLCC",
@@ -4883,13 +4883,13 @@
     "indices": [
       {
         "name": "BDTI",
-        "value": 7991,
-        "previous": 4015
+        "value": 7019,
+        "previous": 7067
       },
       {
         "name": "BCTI",
-        "value": 2440,
-        "previous": 1808
+        "value": 2850,
+        "previous": 2833
       }
     ]
   },
@@ -4968,41 +4968,41 @@
       "description": "Boletins NOAA/NWS emitidos em 31 de outubro mantêm força de furacão no Atlântico Norte e tempestades no Pacífico Norte. A MeteoArmada mantém como último alerta público localizado o aviso de 29 de outubro no Chile austral; valores futuros são previsões oficiais, não observações.",
       "items": [
         {
-          "id": "noaa-north-atlantic-storm-2026-10-31",
-          "date": "2026-10-31",
-          "region": "Atlântico Norte · baixa em rápida intensificação",
-          "level": "critical",
-          "headline": "Furacão-force previsto: 50–65 kt e mar de 5–8,5 m",
-          "summary": "A NOAA prevê baixa em rápida intensificação, com 40–55 kt e 5–7,5 m em 24 horas e 50–65 kt e 5–8,5 m em 30 horas.",
-          "details": "High Seas Forecast AT1 emitido às 1030Z de 31 de outubro. O boletim mantém 40–50 kt e mar de até 8,5 m em 48 horas. Ondas individuais podem superar duas vezes a altura significativa.",
-          "action": "Revalidar weather routing e ETA no Atlântico Norte, manter ampla margem do campo previsto, controlar esforços estruturais, proteger o convés e limitar trabalho externo.",
+          "id": "noaa-atlantic-forecast-2026-11-02",
+          "date": "2026-11-02",
+          "region": "Atlântico tropical e Caribe · frente fria",
+          "level": "medium",
+          "headline": "Sem warning; 20–30 kt e mar de 2,5–3,5 m",
+          "summary": "O HSFAT2 da NOAA não tinha warning formal às 1030Z, mas previa vento NE/E de 20–30 kt e mar significativo de 2,5–3,5 m em parte do Atlântico oeste.",
+          "details": "Boletim emitido em 2 de novembro, válido a partir de 0600Z. Altura significativa é a média do terço mais alto das ondas; ondas individuais podem superar duas vezes esse valor.",
+          "action": "Revalidar weather routing e ETA, controlar esforços e peação e confirmar o próximo boletim antes de ingressar na área frontal.",
           "map": {
-            "x": 37.5,
-            "y": 23.9,
-            "label": "Atlântico Norte · área prevista"
+            "x": 39.5,
+            "y": 34,
+            "label": "Atlântico oeste · área prevista"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · AT1 · 31 out.",
-            "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
+            "name": "NOAA/NHC · HSFAT2 · 2 nov.",
+        "url": "https://www.nhc.noaa.gov/text/MIAHSFAT2.shtml"
           }
         },
         {
-          "id": "noaa-north-pacific-storm-2026-10-31",
-          "date": "2026-10-31",
-          "region": "Pacífico Norte · sistemas complexos",
-          "level": "critical",
-          "headline": "Tempestades: até 50 kt e mar de 5–10 m",
-          "summary": "A NOAA analisa um sistema com 35–50 kt e 3–5,5 m e outro com 35–45 kt e mar significativo de 5–10 m.",
-          "details": "METAREA XII High Seas Forecast emitido às 0545Z de 31 de outubro. Para o segundo sistema, o produto prevê 25–40 kt e mar de até 7,5 m em 24 horas. Ondas individuais podem superar duas vezes a altura significativa.",
-          "action": "Manter ampla margem dos sistemas, revalidar rota e ETA, reforçar peação e limitar trabalho externo antes da deterioração.",
+          "id": "noaa-east-pacific-forecast-2026-11-02",
+          "date": "2026-11-02",
+          "region": "Pacífico Nordeste · Tehuantepec, Califórnia e Papagayo",
+          "level": "medium",
+          "headline": "Sem warning; bolsões de 20–30 kt",
+          "summary": "O HSFEP2 não tinha warning formal às 0430Z; previa 25–30 kt no Golfo de Tehuantepec e 20–30 kt no Golfo da Califórnia, com mar até 2,5 m em Tehuantepec.",
+          "details": "Boletim válido a partir de 0000Z de 2 de novembro. Também previa 20–25 kt em Papagayo; condições eram pontuais e não representam todo o Pacífico.",
+          "action": "Confirmar atualização de seis horas, manter margem de acelerações costeiras e ajustar derrota/velocidade sem extrapolar a previsão para o Pacífico Sul.",
           "map": {
-            "x": 0.8,
-            "y": 19.4,
-            "label": "Pacífico Norte · área ampla"
+            "x": 16,
+            "y": 44,
+            "label": "Pacífico Nordeste · áreas previstas"
           },
           "source": {
-            "name": "NOAA Ocean Prediction Center · Pacífico · 31 out.",
-            "url": "https://ocean.weather.gov/shtml/NFDHSFEP1.php"
+            "name": "NOAA/NHC · HSFEP2 · 2 nov.",
+        "url": "https://www.nhc.noaa.gov/text/MIAHSFEP2.shtml"
           }
         },
         {
@@ -5033,6 +5033,25 @@
       "icon": "◆",
       "description": "A página pública do CHM, consultada em 31 de outubro, não exibiu aviso posterior aos registros 788, 786 e 784. Os três são preservados com datas e vigências originais, já encerradas; confirmar situação corrente por EGC/NAVTEX.",
       "items": [
+        {
+          "id": "chm-790-2026",
+          "date": "2026-11-01",
+          "region": "Área Bravo oceânica · 23,1°S–31°S",
+          "level": "high",
+          "headline": "Aviso 790: vento NE/N força 7, rajadas 8",
+          "summary": "O CHM prevê vento NE/N força 7, com rajadas força 8, em polígono oceânico da Área Bravo a partir de 030000Z, válido até 040600Z.",
+          "details": "Aviso emitido às 1300Z de 1º de novembro. O polígono oficial liga 23,1°S 42°W, 26,8°S 46,6°W, 31°S 43°W e 26°S 38°W; o marcador é apenas referência de área.",
+          "action": "Plotar o polígono integral, revalidar weather routing, estabilidade e peação e limitar trabalho externo antes da entrada da janela.",
+          "map": {
+            "x": 46,
+            "y": 59.5,
+            "label": "CHM 790 · área ampla"
+          },
+          "source": {
+            "name": "CHM / Marinha do Brasil · 1 nov.",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
+          }
+        },
         {
           "id": "chm-788-2026",
           "date": "2026-10-26",
@@ -5070,25 +5089,6 @@
             "name": "CHM / Marinha do Brasil",
             "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
           }
-        },
-        {
-          "id": "chm-784-2026",
-          "date": "2026-10-24",
-          "region": "Área Sul oceânica · polígono oficial no Atlântico Sul",
-          "level": "high",
-          "headline": "Aviso 784: força 8/rajadas 9; vigência encerrada",
-          "summary": "Vento de N/NW força 8, com rajadas força 9, foi previsto de 262100Z a 272100Z; a vigência publicada encerrou.",
-          "details": "Aviso emitido às 1300Z de 24 de outubro. A geometria no mapa é referência aproximada do polígono oficial. A página pública consultada em 31 de outubro não apresentou substituto posterior.",
-          "action": "Não tratar o aviso expirado como condição atual; confirmar o quadro corrente por EGC/NAVTEX antes de agir.",
-          "map": {
-            "x": 43.64,
-            "y": 65.61,
-            "label": "CHM 784"
-          },
-          "source": {
-            "name": "CHM / Marinha do Brasil",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
         }
       ]
     },
@@ -5100,60 +5100,60 @@
       "description": "Os produtos UKMTO 189, 188 e 187 são os três registros públicos mais recentes localizados até 31 de outubro. Todos permanecem sob investigação: o Radar não presume causa, autoria, dano ou condição da tripulação além do publicado.",
       "items": [
         {
-          "id": "ukmto-hormuz-attack-189-2026-10-30",
-          "date": "2026-10-30",
-          "region": "Estreito de Ormuz · trânsito outbound",
+          "id": "ukmto-ras-al-khafji-attack-192-2026-11-02",
+          "date": "2026-11-02",
+          "region": "Golfo Pérsico · 72 MN a leste de Ras Al Khafji, Arábia Saudita",
           "level": "critical",
-          "headline": "UKMTO 189: crude oil tanker atingido por projétil",
-          "summary": "Relato tardio informou que um crude oil tanker foi atingido por projétil desconhecido durante trânsito outbound pelo Estreito de Ormuz.",
-          "details": "Attack 189-26, publicado em 30 de outubro. Autoridades investigam. O produto público não estabelece autoria; o marcador indica somente a área ampla do estreito.",
-          "action": "Revisar threat assessment, war-risk e autorização do CSO; reforçar vigia, evasão, incêndio, abandono, atendimento médico e damage control; reportar atividade suspeita.",
+          "headline": "UKMTO 192: tanker atingido por dois projéteis",
+          "summary": "Um tanker em trânsito para sudeste foi atingido por dois projéteis desconhecidos no bordo de bombordo; toda a tripulação está contabilizada e não houve impacto ambiental reportado.",
+          "details": "Attack 192-26, publicado em 2 de novembro. Autoridades investigam; o aviso público não estabelece autoria e o marcador indica apenas a área ampla reportada.",
+          "action": "Revisar threat assessment, war-risk e autorização do CSO; elevar prontidão de incêndio, abandono, atendimento médico e damage control; reportar atividade suspeita ao UKMTO.",
+          "map": {
+            "x": 63.3,
+            "y": 34,
+            "label": "E de Ras Al Khafji · área ampla"
+          },
+          "source": {
+            "name": "UKMTO Attack 192-26 · 2 nov.",
+            "url": "https://www.ukmto.org/"
+          }
+        },
+        {
+          "id": "ukmto-hormuz-attack-191-2026-11-01",
+          "date": "2026-11-01",
+          "region": "Estreito de Ormuz · área não especificada",
+          "level": "critical",
+          "headline": "UKMTO 191: Mayday relata embarcação atingida",
+          "summary": "O Master de um mercante retransmitiu Mayday em VHF 16 informando que outra embarcação fora atingida por projétil desconhecido no Estreito de Ormuz.",
+          "details": "Attack 191-26, publicado em 1º de novembro. Autoridades investigam; condição da tripulação, danos, impacto ambiental e autoria não estavam confirmados no aviso público.",
+          "action": "Transitar com cautela, manter escuta VHF, reforçar vigia e prontidão de emergência e comunicar atividade suspeita ao UKMTO e às autoridades.",
           "map": {
             "x": 65.7,
             "y": 35.6,
             "label": "Ormuz · área ampla"
           },
           "source": {
-            "name": "UKMTO Attack 189-26 · 30 out.",
-            "url": "https://www.ukmto.org/recent-incidents"
+            "name": "UKMTO Attack 191-26 · 1 nov.",
+            "url": "https://www.ukmto.org/"
           }
         },
         {
-          "id": "ukmto-lavan-attack-188-2026-10-30",
-          "date": "2026-10-30",
-          "region": "Golfo Pérsico · 40 MN ao sul de Lavan Island",
-          "level": "critical",
-          "headline": "UKMTO 188: projétil causa incêndio a bordo",
-          "summary": "Embarcação foi atingida no bordo de bombordo por projétil desconhecido, com incêndio; tripulação segura e sem impacto ambiental reportado no aviso.",
-          "details": "Attack 188-26, publicado em 30 de outubro. Autoridades investigam e o UKMTO não atribuiu autoria. O marcador é referência aproximada da área informada.",
-          "action": "Elevar prontidão de incêndio, abandono e atendimento médico; revisar ameaça e war-risk com CSO e manter reporte imediato ao UKMTO/autoridades.",
-          "map": {
-            "x": 64.5,
-            "y": 34.5,
-            "label": "S de Lavan Island · aprox."
-          },
-          "source": {
-            "name": "UKMTO Attack 188-26 · 30 out.",
-            "url": "https://www.ukmto.org/recent-incidents"
-          }
-        },
-        {
-          "id": "ukmto-khasab-fire-187-2026-10-29",
-          "date": "2026-10-29",
-          "region": "Estreito de Ormuz · 25 MN a nordeste de Khasab, Omã",
+          "id": "ukmto-pag-suspicious-190-2026-10-31",
+          "date": "2026-10-31",
+          "region": "UKMTO VRA · localização não divulgada no resumo público",
           "level": "high",
-          "headline": "UKMTO 187: embarcação em chamas no trânsito outbound",
-          "summary": "Terceiro reportou embarcação em trânsito outbound e em chamas; causa, condição da tripulação, danos e impacto ambiental eram desconhecidos no aviso inicial.",
-          "details": "Suspicious Activity 187-26, publicado em 29 de outubro. Autoridades investigam. O marcador indica apenas a área aproximada fornecida, não posição precisa ou identificação da embarcação.",
-          "action": "Transitar com cautela, elevar prontidão de incêndio, resgate e damage control, manter CSO/UKMTO informados e não inferir causa ou autoria sem atualização oficial.",
+          "headline": "UKMTO 190: abordagem pode apoiar grupo de ação pirata",
+          "summary": "Uma grande embarcação de pesca foi abordada por pessoal não autorizado; autoridades avaliaram que a atividade poderia apoiar um Pirate Action Group.",
+          "details": "Suspicious Activity 190-26, publicado em 31 de outubro. Trata-se de avaliação sob investigação, não de confirmação de novo ataque ou de autoria; sem coordenada pública no resumo acessível.",
+          "action": "Aplicar BMP, reforçar vigia e controle de acessos, manter navegação e comunicações redundantes e reportar qualquer atividade suspeita ao UKMTO.",
           "map": {
-            "x": 65.7,
-            "y": 35.3,
-            "label": "NE de Khasab · área aprox."
+            "x": 62,
+            "y": 47,
+            "label": "UKMTO VRA · área não divulgada"
           },
           "source": {
-            "name": "UKMTO Suspicious Activity 187-26 · 29 out.",
-            "url": "https://www.ukmto.org/recent-incidents"
+            "name": "UKMTO Suspicious Activity 190-26 · 31 out.",
+            "url": "https://www.ukmto.org/"
           }
         }
       ]
@@ -5166,59 +5166,59 @@
       "description": "A base NAVAREA pública recebeu em 31 de outubro os avisos XV 0149 e V 0683/0684. A verificação oficial CHM estava indisponível; os registros preservam origem, recebimento e texto público, e exigem confirmação por EGC/NAVTEX, coordenador ou agente.",
       "items": [
         {
+          "id": "navarea-v-0686-2026",
+          "date": "2026-11-02",
+          "region": "Sul de Santos · área STS do campo de Santos",
+          "level": "high",
+          "headline": "NAVAREA V 0686: operação STS de 3 a 11 nov.",
+          "summary": "Aviso informa operação ship-to-ship na área STS do campo de Santos de 030301Z a 110301Z, com cancelamento previsto para 120400Z.",
+          "details": "Registro recebido pela base pública em 2 de novembro, carta 21070. O aviso não fornece coordenadas no texto consolidado; não presumir posição ou perímetro da operação.",
+          "action": "Obter o texto vigente e o perímetro operacional por EGC/NAVTEX, agente ou autoridade, confirmar comunicações e ajustar derrota/CPA antes da aproximação.",
+          "map": {
+            "x": 46.3,
+            "y": 60.5,
+            "label": "Sul de Santos · área STS"
+          },
+          "source": {
+            "name": "NAVAREA V 0686 · recebido 2 nov.",
+            "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
+          }
+        },
+        {
           "id": "navarea-xv-0149-2026",
-          "date": "2026-10-31",
+          "date": "2026-11-02",
           "region": "Pacífico Sul · área oceânica ampla",
           "level": "high",
           "headline": "NAVAREA XV 0149: queda de elementos espaciais de 6 a 12 nov.",
-          "summary": "Aviso delimita área perigosa por queda de elementos espaciais entre 0241Z e 0846Z de 6 a 12 de novembro, com cancelamento previsto às 0946Z do dia 12.",
-          "details": "Registro recebido em 31 de outubro pela base pública independente. A área oficial forma polígono amplo entre aproximadamente 27°S 123°W e 60°S 96°W; o marcador não representa posição precisa.",
-          "action": "Obter e plotar o polígono integral por EGC/NAVTEX ou coordenador NAVAREA, confirmar janela diária e manter afastamento conforme a instrução vigente.",
+          "summary": "Área temporariamente perigosa entre 0241Z e 0846Z de 6 a 12 de novembro, com cancelamento previsto às 0946Z do dia 12.",
+          "details": "Registro relido na base pública em 2 de novembro. O polígono oficial vai aproximadamente de 27°S 123°W a 60°S 96°W; o marcador não representa posição precisa.",
+          "action": "Obter e plotar o polígono integral, confirmar a janela diária por EGC/NAVTEX ou coordenador NAVAREA e manter afastamento conforme a instrução vigente.",
           "map": {
             "x": 18.5,
             "y": 69.5,
             "label": "Pacífico Sul · área ampla"
           },
           "source": {
-            "name": "NAVAREA XV 0149 · recebido 31 out.",
+            "name": "NAVAREA XV 0149 · relido 2 nov.",
             "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
           }
         },
         {
-          "id": "navarea-v-0684-2026",
-          "date": "2026-10-31",
-          "region": "Sul de Cabo Frio · raio de 25 MN de 24°35′S 041°25′W",
+          "id": "navarea-xv-0148-2026",
+          "date": "2026-11-02",
+          "region": "Pacífico Sul · área oceânica ampla",
           "level": "high",
-          "headline": "NAVAREA V 0684: operação perigosa de 5 a 7 nov.",
-          "summary": "Aviso informa operações perigosas à navegação dentro de 25 MN do ponto publicado, de 050800Z a 072100Z, com cancelamento às 072200Z.",
-          "details": "Registro recebido em 31 de outubro pela base pública independente, carta 21070. A tentativa de verificação oficial CHM estava indisponível no snapshot.",
-          "action": "Plotar área e janela, confirmar texto vigente por EGC/NAVTEX e ajustar derrota/CPA antes da aproximação.",
+          "headline": "NAVAREA XV 0148: queda de elementos espaciais de 2 a 8 nov.",
+          "summary": "Área temporariamente perigosa entre 0219Z e 0821Z de 2 a 8 de novembro, com cancelamento previsto às 0921Z do dia 8.",
+          "details": "Registro recebido em 2 de novembro. O polígono é o mesmo corredor oceânico amplo da série XV 0149, mas a janela é distinta; não fundir as vigências.",
+          "action": "Plotar o polígono integral, confirmar a janela diária e verificar a sequência XV 0148/0149 antes de qualquer aproximação.",
           "map": {
-            "x": 46.8,
-            "y": 59.5,
-            "label": "Sul de Cabo Frio · 25 MN"
+            "x": 18.5,
+            "y": 69.5,
+            "label": "Pacífico Sul · área ampla"
           },
           "source": {
-            "name": "NAVAREA V 0684 · recebido 31 out.",
-            "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
-          }
-        },
-        {
-          "id": "navarea-v-0683-2026",
-          "date": "2026-10-31",
-          "region": "Sul do Campo de Campos · área de operações submarinas",
-          "level": "high",
-          "headline": "NAVAREA V 0683: operações submarinas até 31 jul. 2027",
-          "summary": "Aviso informa operações submarinas entre 1º de novembro de 2026 e 31 de julho de 2027, diariamente das 1000 às 2000, em dez posições publicadas.",
-          "details": "Registro recebido em 31 de outubro pela base pública independente, carta 1550. O aviso cita DEEP BLUE e BIGROLL BISCAY; horário não teve fuso presumido pelo Radar.",
-          "action": "Obter o texto integral, plotar as dez posições, confirmar fuso e contato operacional e manter afastamento conforme o aviso vigente.",
-          "map": {
-            "x": 47.8,
-            "y": 58.5,
-            "label": "Sul de Campos · área aprox."
-          },
-          "source": {
-            "name": "NAVAREA V 0683 · recebido 31 out.",
+            "name": "NAVAREA XV 0148 · recebido 2 nov.",
             "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
           }
         }
@@ -5232,17 +5232,17 @@
       "region": "Chile · Atlântico ↔ Pacífico",
       "risk": "high",
       "trafficLabel": "Moderado",
-      "trafficTrend": "estável / rota alternativa; risco meteorológico elevado na aproximação",
+      "trafficTrend": "estável / rota alternativa; XV 0147 ativa na aproximação chilena",
       "trafficBasis": "Sem série pública consolidada e comparável de trânsitos mercantes no snapshot. A autoridade publica regras operacionais, não um contador diário equivalente aos canais.",
       "market": "Alternativa a Panamá e Cabo Horn para navios compatíveis; decisão depende de distância, combustível, calado, pilotagem e weather routing.",
-      "geopolitics": "Baixo risco de guerra; exposição predominante é meteorológica e náutica. A MeteoArmada publicou em 29 de outubro aviso de mau tempo entre Isla Guamblin e Golfo de Penas; a listagem pública não expõe intensidade ou vigência completas.",
+      "geopolitics": "Baixo risco de guerra; exposição predominante é meteorológica e náutica. NAVAREA XV 0147 mantém exercício a noroeste da Bahía Concepción de 2 a 7 nov.; XV 0148/0149 cobrem janelas oceânicas distintas no Pacífico Sul.",
       "authority": "DIRECTEMAR / Autoridade Marítima do Chile",
       "reporting": "CHILREP, pontos de controle e VTS; pilotagem conforme zona e características do navio.",
       "masterFocus": [
         "Planejar correntes nas Angosturas e Paso Tortuoso; podem superar 3,5 nós.",
         "VHF 16/70 permanente, reportes de posição e preferência a VLCC/supernavios conforme controle local.",
         "Confirmar antecedência de solicitação de prático, calado máximo, zona de transferência e abrigo meteorológico.",
-        "Obter o texto integral e a vigência do aviso de 29 out. por broadcasts, agente ou DIRECTEMAR antes de decidir aproximação, abrigo ou trabalho externo."
+        "Plotar XV 0147 e as áreas XV 0148/0149, confirmar broadcasts e combinar com o aviso MeteoArmada de 29 out. antes de decidir aproximação, abrigo ou trabalho externo."
       ],
       "source": {
         "name": "DIRECTEMAR — Pilotaje Magallanes",
@@ -5258,13 +5258,14 @@
       "trafficTrend": "uso seletivo",
       "trafficBasis": "Não há série pública consolidada de mercantes no snapshot; fluxo é muito inferior aos canais e ocorre principalmente quando porte, restrições ou estratégia de rota justificam.",
       "market": "Pode evitar canal/pilotagem, mas aumenta distância e exposição; combustível, ETA e risco de avaria devem ser tratados como custo total.",
-      "geopolitics": "Baixo risco de guerra; risco operacional alto por vento, mar cruzado, swell, gelo e rápida mudança meteorológica. A publicação de 29 out. ao norte reforça a necessidade de confirmação dos avisos austrais, sem projetar a derrota.",
+      "geopolitics": "Baixo risco de guerra; risco operacional alto por vento, mar cruzado, swell, gelo e rápida mudança meteorológica. XV 0148/0149 criam janelas oceânicas de perigo no Pacífico Sul; não projetar a área sobre a derrota sem plotar os vértices oficiais.",
       "authority": "DIRECTEMAR / MRCC Chile",
       "reporting": "CHILREP quando aplicável às águas chilenas; confirmar limites e plano SAR.",
       "masterFocus": [
         "Definir limites de heavy weather, redução de velocidade e heading para esforço estrutural/slamming.",
         "Proteger convés e manifolds, restringir trabalho externo e revisar condição de lastro.",
-        "Manter margem de combustível e rota de escape para canais/abrigo se operacionalmente disponível."
+        "Manter margem de combustível e rota de escape para canais/abrigo se operacionalmente disponível.",
+        "Plotar XV 0148/0149 e confirmar boletins austrais; o relatório NAVAREA VI 0375 de 1 nov. contém gelo/icebergs no Atlântico Sul e exige conferência manual de coordenadas antes de uso."
       ],
       "source": {
         "name": "DIRECTEMAR — Rotas austrais",
@@ -5366,16 +5367,16 @@
       "region": "Omã / Irã · Golfo Pérsico",
       "risk": "critical",
       "trafficLabel": "18,3 mi bpd · média móvel de 7 dias em 30 set. · Kpler",
-      "trafficTrend": "fluxo comercial elevado sob dois novos ataques reportados em 30 out.",
-      "trafficBasis": "Kpler, via Reuters, estimou 18,3 milhões bpd de crude na média móvel de sete dias em 30 set.; Vortexa estimou 18,6 milhões bpd em 14 dias. Separadamente, análise Windward de 28 out., com dados Vortexa e metodologia própria, estimou cerca de 11 milhões bpd de crude não iraniano carregado a oeste de Ormuz ao longo de outubro. Períodos e universos diferem: nenhuma série equivale a contagem oficial de navios ou gross tonnage.",
+      "trafficTrend": "fluxo comercial elevado sob novos ataques em 1–2 nov.",
+      "trafficBasis": "Kpler, via Reuters, estimou 18,3 milhões bpd de crude na média móvel de sete dias em 30 set.; Vortexa estimou 18,6 milhões bpd em 14 dias. Windward informou, em análise pública de 1 nov., cerca de 24 trânsitos visíveis por AIS entre 30 out. e a manhã de 1 nov., contra 18 em janela comparável anterior. São estimativas comerciais com universos diferentes, não contagem oficial de navios, gross tonnage nem fluxo total.",
       "market": "O Baltic W44 mostra reação do VLCC TD3C para cerca de US$ 1,346 milhão/dia, enquanto Suezmax TD20 recuou para pouco mais de US$ 396,1 mil/dia. São TCEs padronizados, não fixtures do navio nem contagem oficial de tráfego.",
-      "geopolitics": "Ameaça crítica: a IMO contabiliza 122 incidentes confirmados e 24 mortes na atualização de 30 de outubro. Os UKMTO 188 e 189 relataram embarcações atingidas por projéteis desconhecidos em 30 out.; uma delas teve incêndio, com tripulação segura. Autoria não estabelecida.",
+      "geopolitics": "Ameaça crítica: UKMTO 191 relatou embarcação atingida no Estreito em 1 nov.; UKMTO 192 relatou tanker atingido por dois projéteis a leste de Ras Al Khafji em 2 nov., com tripulação segura e sem impacto ambiental reportado. Autoridades investigam e autoria não foi estabelecida.",
       "authority": "Autoridades costeiras; UKMTO como ponto de contato de segurança; IMO consolida incidentes confirmados",
       "reporting": "UKMTO VRS voluntário: initial ao entrar no VRA, daily 0800 UTC, final e incident imediato; VTS/porto permanecem obrigatórios conforme jurisdição.",
       "masterFocus": [
-        "Manter voyage-specific threat assessment, war-risk e decisão alinhada ao CSO; os UKMTO 188–189 exigem prontidão de incêndio, resgate, abandono, atendimento médico e damage control sem inferir causa ou autoria.",
+        "Manter voyage-specific threat assessment, war-risk e decisão alinhada ao CSO; UKMTO 191–192 exigem prontidão de incêndio, resgate, abandono, atendimento médico e damage control sem inferir causa ou autoria.",
         "Usar navegação redundante contra spoofing/jamming e comparar GNSS, radar, visual, AIS, eco-sonda e DR.",
-        "Revisar contingência para perda de comunicações externas e canais alternativos; análise Windward de 29 out. sobre manobras próximas a cabos é complementar e não comprova dano ou intenção.",
+        "Revisar contingência para perda de comunicações externas e canais alternativos; a análise Windward de 1 nov. sobre trânsitos e métodos de ataque é complementar e não substitui UKMTO, autoridade costeira ou instrução do CSO.",
         "Em STS e vetting, examinar contrapartes e histórico completo de encontros; associação ou geometria não provam transferência de carga.",
         "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
@@ -5444,7 +5445,7 @@
       "masterFocus": [
         "Confirmar reserva, janela, ETA e fila; a capacidade anunciada é 33 slots/dia desde 15 out., mas chegada sem booking pode aumentar a espera.",
         "Validar calado TFW, restrições de água doce, carga perigosa e documentação com agente/ACP.",
-        "Distinguir slots disponíveis de trânsitos realizados e revisar advisories antes da chegada."
+        "Distinguir slots disponíveis de trânsitos realizados, revisar advisories e considerar NAVAREA XII 0768: estrutura de aquicultura à deriva ao largo do Panamá, posição observada em 31 out. e cancelamento previsto em 3 nov.; não projetar deriva."
       ],
       "source": {
         "name": "ACP · Advisory A-36-2026 · 29 set. 2026",
@@ -5648,7 +5649,7 @@
     "end": "2026-11-30",
     "statusLabel": "4 ATIVAS · 2 ANUNCIADAS",
     "pulseLabel": "4 CICs ativas",
-    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea têm campanha ativa; Mediterranean mantém anúncio sem lançamento operacional completo. Abuja aprovou para 2027 uma CIC de espaços confinados, ainda sem questionário ou janela publicada.",
+    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativos; Mediterranean mantém anúncio sem lançamento operacional completo. Abuja aprovou para 2027 uma CIC de espaços confinados. Verificação oficial própria em 2 nov. não localizou mudança de janela ou classificação.",
     "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
     "readiness": [
       "Preparar matriz PSC específica do próximo porto, regime e histórico do navio.",
@@ -6051,43 +6052,43 @@
     }
   ],
   "briefing": {
-    "date": "2026-10-31",
+    "date": "2026-11-02",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
         "title": "SPOT é a fonte válida mais recente",
-        "summary": "SPOT · 50º51,82′ S · 074º09,79′ W · 2 h 6 min. MarineTraffic: 7 h 56 min; VesselAPI: 9 d 12 h 23 min. Bateria SPOT GOOD; datas de observação preservadas e VesselAPI sinalizada acima de 24 h."
+        "summary": "SPOT · 43º18,68′ S · 075º09,80′ W · 4 h 52 min. MarineTraffic: 6 h 58 min; VesselAPI: 11 d 12 h 23 min. Bateria SPOT GOOD; datas de observação preservadas e VesselAPI sinalizada acima de 24 h."
       },
       {
         "category": "ROTA",
-        "title": "NAVAREA XV 0149 e V 0683/0684 exigem plotagem",
-        "summary": "Queda de elementos espaciais no Pacífico Sul de 6 a 12 nov.; operação perigosa ao sul de Cabo Frio de 5 a 7 nov.; e operações submarinas ao sul de Campos até 31 jul. 2027. Confirmar textos e broadcasts."
+        "title": "XV 0147–0149 e V 0686 exigem plotagem",
+        "summary": "Exercício a noroeste da Bahía Concepción até 7 nov.; duas janelas de queda de elementos espaciais de 2 a 12 nov.; e operação STS ao sul de Santos de 3 a 11 nov. Confirmar textos e broadcasts."
       },
       {
         "category": "SEGURANÇA",
-        "title": "UKMTO 188/189 elevam a ameaça em Ormuz",
-        "summary": "Dois novos ataques com projéteis desconhecidos foram publicados em 30 out.; houve incêndio em um caso, sem feridos ou impacto ambiental reportados. Sem autoria confirmada."
+        "title": "UKMTO 191/192 elevam a ameaça em Ormuz e no Golfo",
+        "summary": "Ataques com projéteis desconhecidos foram publicados em 1–2 nov.; o tanker do caso 192 teve tripulação segura e nenhum impacto ambiental reportado. Sem autoria confirmada."
       },
       {
         "category": "METEO",
-        "title": "NOAA prevê 65 kt/8,5 m no Atlântico e 50 kt/10 m no Pacífico",
-        "summary": "Boletins de 31 out. exigem margem de rota, controle de esforços e peação; a MeteoArmada mantém como último alerta localizado o de 29 out. para Isla Guamblin–Golfo de Penas."
+        "title": "NOAA sem warning formal; CHM 790 exige preparação",
+        "summary": "Boletins NOAA de 2 nov. indicam bolsões de 20–30 kt; o CHM 790 prevê força 7, rajadas 8, na Área Bravo de 3 a 4 nov. Confirmar atualizações antes da janela."
       },
       {
         "category": "COSTA BR",
-        "title": "CHM 788/786/784 seguem expirados, sem substituto público",
-        "summary": "A consulta de 31 out. não exibiu aviso posterior. Os registros permanecem históricos, com vigências originais; confirmar quadro corrente por EGC/NAVTEX."
+        "title": "NAVAREA V 0686 anuncia STS ao sul de Santos",
+        "summary": "Operação publicada de 3 a 11 nov., sem coordenadas no texto consolidado. A base pública recebeu 831 registros até 2 nov. 06:00 UTC; a consulta oficial CHM permaneceu indisponível."
       },
       {
         "category": "MERCADO",
-        "title": "Baltic W44, VLSFO e Petrobras atualizados",
-        "summary": "VLCC TD3C reagiu para cerca de US$ 1,346 mi/dia; Suezmax e Aframax recuaram. VLSFO subiu nos quatro hubs em 30 out.; PETR3, PETR4 e PBR fecharam em alta, PBR.A estável."
+        "title": "BDTI 7.019; BCTI 2.850 no fechamento de 30 out.",
+        "summary": "BDTI recuou 0,68% e BCTI avançou 0,60% no último fechamento público. VLSFO e ações Petrobras permanecem nos fechamentos de 30 out.; não houve pregão no fim de semana."
       },
       {
         "category": "PSC",
-        "title": "Quatro CICs ativas; nenhuma mudança em 31 out.",
-        "summary": "Paris, Tokyo, Viña del Mar e Black Sea ativas; Abuja e Mediterranean anunciadas; três regimes sem confirmação e USCG nacional. Evidência de 31 out. não alterou campanha ou janela."
+        "title": "Quatro CICs ativas; nenhuma mudança em 2 nov.",
+        "summary": "Paris, Tokyo, Viña del Mar e Black Sea ativas; Abuja e Mediterranean anunciadas; três regimes sem confirmação e USCG nacional. Pesquisa oficial própria não alterou campanha ou janela."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -6096,7 +6097,7 @@
     {
       "name": "CHM — NAVAREA V",
       "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar",
-      "scope": "Base pública independente preservada e consultada em 31 out.; 809 registros recebidos até 31 out. às 06:00 UTC. Tentativa oficial CHM indisponível; NAVAREA XV 0149 e V 0683/0684 incorporadas sem antecipar a ingestão da tarefa responsável",
+      "scope": "Base pública independente consultada em 2 nov.; 831 registros recebidos até 06:00 UTC. Tentativa oficial CHM indisponível; NAVAREA V 0686 e XV 0147/0148/0149 incorporadas sem antecipar a ingestão da tarefa responsável.",
       "typeLabel": "Oficial"
     },
     {
@@ -6120,31 +6121,31 @@
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-      "scope": "Consulta em 31 out.; Weekly Report 20–26 out. permanece o mais recente. Um CAT 4 de 17 out. no Estreito de Singapura; três casos preservados com datas originais",
+      "scope": "Consulta em 2 nov.; Weekly Report 20–26 out. permanece o mais recente publicado. Três ocorrências anteriores preservadas com datas originais.",
       "typeLabel": "Oficial"
     },
     {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/recent-incidents",
-      "scope": "Consulta em 31 out.; Attack 189 e Attack 188, de 30 out., e Suspicious Activity 187, de 29 out., são os três registros públicos mais recentes, sem inferir autoria",
+      "scope": "Consulta em 2 nov.; Attack 192 (2 nov.), Attack 191 (1 nov.) e Suspicious Activity 190 (31 out.) são os três registros públicos mais recentes, sem inferir autoria.",
       "typeLabel": "Oficial"
     },
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Consulta em 31 out.; avisos 788, 786 e 784 preservados com vigências encerradas; nenhum substituto posterior localizado na página pública",
+      "scope": "Consulta em 2 nov.; aviso 790 emitido em 1 nov. para força 7/rajadas 8 na Área Bravo; avisos 788 e 786 preservados com vigências encerradas.",
       "typeLabel": "Oficial"
     },
     {
       "name": "MeteoArmada / Armada de Chile",
       "url": "https://meteoarmada.directemar.cl/",
-      "scope": "Listagem oficial consultada em 31 out.; aviso de mau tempo Isla Guamblin–Golfo de Penas publicado em 29 out. permanece o mais recente localizado, sem valores ou vigência detalhados na página",
+      "scope": "Consulta em 2 nov.; aviso Isla Guamblin–Golfo de Penas de 29 out. permanece o mais recente localizado na listagem pública, sem valores ou vigência completos.",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Boletins de 31 out.: Atlântico com 50–65 kt e 5–8,5 m previstos em 30 h; Pacífico com sistemas de 35–50 kt e mar significativo de até 10 m",
+      "scope": "Boletins de 2 nov.: HSFAT2 e HSFEP2 sem warnings formais; bolsões previstos de 20–30 kt e mar até 3,5 m no Atlântico oeste e 2,5 m em Tehuantepec.",
       "typeLabel": "Oficial"
     },
     {
@@ -6258,7 +6259,7 @@
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-      "scope": "Treze sistemas preservados; fontes oficiais reconsultadas em 31 out. sem mudança de limite, formato, frequência ou autoridade localizada",
+      "scope": "Treze sistemas preservados; fontes oficiais reconsultadas em 2 nov. UKMTO mantém daily 0800 UTC; Canadá mantém formulários 2026 e BELTREP/SOUNDREP já registram requisito adicional a partir de 22 nov.",
       "typeLabel": "Oficial"
     },
     {
@@ -6281,14 +6282,14 @@
     },
     {
       "name": "Windward — análise pública",
-      "url": "https://windward.ai/blog/how-a-new-arab-dark-fleet-keeps-hormuz-oil-flowing/",
-      "scope": "Conteúdo público consultado em 31 out.; nenhum achado novo relevante e corroborado substituiu os alertas oficiais mais recentes. Avaliações anteriores permanecem atribuídas e não provam dano ou intenção",
+      "url": "https://windward.ai/blog/limpet-mines-return-to-the-gulf-as-iran-strikes-four-tankers/",
+      "scope": "Análise pública de 1 nov. sobre ataques e trânsitos de Ormuz incorporada apenas como contexto atribuído; estimativas AIS não são contagem oficial nem prova de autoria.",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
       "url": "https://channel16.dryadglobal.com/",
-      "scope": "Canal público consultado em 31 out.; nenhum achado novo corroborado foi incorporado; eventos do Golfo permanecem deduplicados com UKMTO/IMO",
+      "scope": "Canal público consultado em 2 nov.; nenhuma análise nova e corroborada substituiu os alertas oficiais UKMTO/IMO.",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -6320,6 +6321,12 @@
       "url": "https://www.tokyo-mou.org/safety-bulletin/2026/10/23/safety-bulletin-05-26-improper-extensions-of-statutory-certification/",
       "scope": "Orientação de 23 out. sobre prorrogação de certificados estatutários e possível detenção por extensão incompatível com Convenções/Códigos",
       "typeLabel": "Oficial"
+    },
+    {
+      "name": "MacroMicro / Baltic indices",
+      "url": "https://en.macromicro.me/charts/946/world-baltic-dirty-clean-tanker-index",
+      "scope": "Fechamento público complementar de 30 out.: BDTI 7.019 (anterior 7.067) e BCTI 2.850 (anterior 2.833); fonte subjacente atribuída à Baltic Exchange.",
+      "typeLabel": "Mercado público / complementar"
     }
   ],
   "updatePolicy": "Atualização editorial programada diariamente às 09:00 de Brasília. Em cada execução: revisar mercado, bunker, cotações, alertas, Daily Operational Watch, segurança das passagens estratégicas, tendências de tráfego disponíveis, sistemas de reporte e o estado público das campanhas nos 9 MoUs + USCG. Posições são apenas consumidas dos objetos consolidados; NAVAREA é mantida por tarefa independente. PSC, Petrobras, Transpetro e regras ambientais mudam somente com publicação confiável. Dados críticos devem ser confirmados nos sistemas de bordo e autoridades competentes. SCOPE permanece somente como link externo; dados legados exigidos pelo schema não alimentam a interface nem o briefing atual. Contagens AIS públicas são identificadas como observações preliminares, não como série oficial de fluxo energético.",
