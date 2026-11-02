@@ -13,14 +13,14 @@
     "endpoint": "",
     "mapUrl": "https://maps.findmespot.com/s/VCV3",
     "lastKnown": {
-      "id": "2520857078",
-      "unixTime": 1793603466,
-      "dateTime": "2026-11-02T07:11:06+0000",
-      "latitude": -43.31129,
-      "longitude": -75.16336,
+      "id": "2521105946",
+      "unixTime": 1793642930,
+      "dateTime": "2026-11-02T18:08:50+0000",
+      "latitude": -41.15355,
+      "longitude": -74.76477,
       "messageType": "UNLIMITED-TRACK",
       "batteryState": "GOOD",
-      "altitude": -7
+      "altitude": 14
     },
     "excludedTestMessageIds": [
       "2493309049",
@@ -2672,9 +2672,99 @@
         "messageType": "UNLIMITED-TRACK",
         "batteryState": "GOOD",
         "altitude": -7
+      },
+      {
+        "id": "2520893180",
+        "unixTime": 1793606957,
+        "dateTime": "2026-11-02T08:09:17+0000",
+        "latitude": -43.11617,
+        "longitude": -75.12548,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 0
+      },
+      {
+        "id": "2520893150",
+        "unixTime": 1793610557,
+        "dateTime": "2026-11-02T09:09:17+0000",
+        "latitude": -42.92365,
+        "longitude": -75.10025,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 8
+      },
+      {
+        "id": "2520934148",
+        "unixTime": 1793614135,
+        "dateTime": "2026-11-02T10:08:55+0000",
+        "latitude": -42.72887,
+        "longitude": -75.06722,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 0
+      },
+      {
+        "id": "2520934126",
+        "unixTime": 1793617735,
+        "dateTime": "2026-11-02T11:08:55+0000",
+        "latitude": -42.53506,
+        "longitude": -75.02542,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 2
+      },
+      {
+        "id": "2520958742",
+        "unixTime": 1793621311,
+        "dateTime": "2026-11-02T12:08:31+0000",
+        "latitude": -42.34117,
+        "longitude": -74.99481,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 26
+      },
+      {
+        "id": "2521009385",
+        "unixTime": 1793628613,
+        "dateTime": "2026-11-02T14:10:13+0000",
+        "latitude": -41.94304,
+        "longitude": -74.91278,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 8
+      },
+      {
+        "id": "2521033426",
+        "unixTime": 1793632182,
+        "dateTime": "2026-11-02T15:09:42+0000",
+        "latitude": -41.74799,
+        "longitude": -74.87448,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": -103
+      },
+      {
+        "id": "2521058634",
+        "unixTime": 1793635790,
+        "dateTime": "2026-11-02T16:09:50+0000",
+        "latitude": -41.54791,
+        "longitude": -74.8288,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": -25
+      },
+      {
+        "id": "2521105946",
+        "unixTime": 1793642930,
+        "dateTime": "2026-11-02T18:08:50+0000",
+        "latitude": -41.15355,
+        "longitude": -74.76477,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 14
       }
     ],
-    "lastSyncAt": "2026-11-02T08:05:18.996Z"
+    "lastSyncAt": "2026-11-02T18:15:19.583Z"
   },
   "marineTrafficPosition": {
     "label": "MarineTraffic",
@@ -4994,7 +5084,7 @@
           },
           "source": {
             "name": "NOAA/NHC · HSFAT2 · 2 nov.",
-        "url": "https://www.nhc.noaa.gov/text/MIAHSFAT2.shtml"
+            "url": "https://www.nhc.noaa.gov/text/MIAHSFAT2.shtml"
           }
         },
         {
@@ -5013,7 +5103,7 @@
           },
           "source": {
             "name": "NOAA/NHC · HSFEP2 · 2 nov.",
-        "url": "https://www.nhc.noaa.gov/text/MIAHSFEP2.shtml"
+            "url": "https://www.nhc.noaa.gov/text/MIAHSFEP2.shtml"
           }
         },
         {
