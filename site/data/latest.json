@@ -13,14 +13,14 @@
     "endpoint": "",
     "mapUrl": "https://maps.findmespot.com/s/VCV3",
     "lastKnown": {
-      "id": "2521105946",
-      "unixTime": 1793642930,
-      "dateTime": "2026-11-02T18:08:50+0000",
-      "latitude": -41.15355,
-      "longitude": -74.76477,
+      "id": "2521306552",
+      "unixTime": 1793688961,
+      "dateTime": "2026-11-03T06:56:01+0000",
+      "latitude": -38.62445,
+      "longitude": -74.25793,
       "messageType": "UNLIMITED-TRACK",
       "batteryState": "GOOD",
-      "altitude": 14
+      "altitude": -103
     },
     "excludedTestMessageIds": [
       "2493309049",
@@ -2762,9 +2762,79 @@
         "messageType": "UNLIMITED-TRACK",
         "batteryState": "GOOD",
         "altitude": 14
+      },
+      {
+        "id": "2521240130",
+        "unixTime": 1793670800,
+        "dateTime": "2026-11-03T01:53:20+0000",
+        "latitude": -39.62727,
+        "longitude": -74.46496,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 8
+      },
+      {
+        "id": "2521241068",
+        "unixTime": 1793671057,
+        "dateTime": "2026-11-03T01:57:37+0000",
+        "latitude": -39.61281,
+        "longitude": -74.46198,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 17
+      },
+      {
+        "id": "2521253673",
+        "unixTime": 1793674623,
+        "dateTime": "2026-11-03T02:57:03+0000",
+        "latitude": -39.41431,
+        "longitude": -74.41692,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": -103
+      },
+      {
+        "id": "2521278350",
+        "unixTime": 1793678202,
+        "dateTime": "2026-11-03T03:56:42+0000",
+        "latitude": -39.21189,
+        "longitude": -74.38355,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 0
+      },
+      {
+        "id": "2521278310",
+        "unixTime": 1793681802,
+        "dateTime": "2026-11-03T04:56:42+0000",
+        "latitude": -39.01469,
+        "longitude": -74.35068,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 23
+      },
+      {
+        "id": "2521291419",
+        "unixTime": 1793685392,
+        "dateTime": "2026-11-03T05:56:32+0000",
+        "latitude": -38.81827,
+        "longitude": -74.30579,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": -1
+      },
+      {
+        "id": "2521306552",
+        "unixTime": 1793688961,
+        "dateTime": "2026-11-03T06:56:01+0000",
+        "latitude": -38.62445,
+        "longitude": -74.25793,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": -103
       }
     ],
-    "lastSyncAt": "2026-11-02T18:15:19.583Z"
+    "lastSyncAt": "2026-11-03T07:50:20.472Z"
   },
   "marineTrafficPosition": {
     "label": "MarineTraffic",
