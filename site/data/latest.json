@@ -6768,7 +6768,7 @@
       "typeLabel": "Oficial"
     },
     {
-      "name": "MacroMicro / Baltic indices",
+      "name": "StockQ / Baltic indices",
       "url": "https://en.stockq.org/m/index/BDTI.php",
       "scope": "Proxy público de fechamento: BDTI 6.439 e BCTI 2.794 em 3 nov.; não substitui Baltic Exchange licenciado",
       "typeLabel": "Mercado público / complementar"
