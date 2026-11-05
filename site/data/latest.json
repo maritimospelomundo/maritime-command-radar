@@ -13,14 +13,14 @@
     "endpoint": "",
     "mapUrl": "https://maps.findmespot.com/s/VCV3",
     "lastKnown": {
-      "id": "2522092549",
-      "unixTime": 1793826589,
-      "dateTime": "2026-11-04T21:09:49+0000",
-      "latitude": -32.73816,
-      "longitude": -71.5202,
+      "id": "2522168381",
+      "unixTime": 1793840928,
+      "dateTime": "2026-11-05T01:08:48+0000",
+      "latitude": -32.73827,
+      "longitude": -71.52002,
       "messageType": "UNLIMITED-TRACK",
       "batteryState": "LOW",
-      "altitude": 35
+      "altitude": -19
     },
     "excludedTestMessageIds": [
       "2493309049",
@@ -3182,9 +3182,49 @@
         "messageType": "UNLIMITED-TRACK",
         "batteryState": "LOW",
         "altitude": 35
+      },
+      {
+        "id": "2522113890",
+        "unixTime": 1793830182,
+        "dateTime": "2026-11-04T22:09:42+0000",
+        "latitude": -32.73827,
+        "longitude": -71.52005,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "LOW",
+        "altitude": 20
+      },
+      {
+        "id": "2522133394",
+        "unixTime": 1793833765,
+        "dateTime": "2026-11-04T23:09:25+0000",
+        "latitude": -32.73811,
+        "longitude": -71.52011,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "LOW",
+        "altitude": 2
+      },
+      {
+        "id": "2522152069",
+        "unixTime": 1793837352,
+        "dateTime": "2026-11-05T00:09:12+0000",
+        "latitude": -32.73816,
+        "longitude": -71.52014,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "LOW",
+        "altitude": 11
+      },
+      {
+        "id": "2522168381",
+        "unixTime": 1793840928,
+        "dateTime": "2026-11-05T01:08:48+0000",
+        "latitude": -32.73827,
+        "longitude": -71.52002,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "LOW",
+        "altitude": -19
       }
     ],
-    "lastSyncAt": "2026-11-04T21:50:20.544Z"
+    "lastSyncAt": "2026-11-05T01:50:20.300Z"
   },
   "marineTrafficPosition": {
     "label": "MarineTraffic",
