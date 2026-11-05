@@ -3233,17 +3233,17 @@
       "Any validated MarineTraffic notification with observed UTC time and position"
     ],
     "lastKnown": {
-      "dateTime": "2026-11-05T03:11:00Z",
-      "latitude": -32.7385,
-      "longitude": -71.52016666666667,
-      "eventType": "Position Report",
+      "dateTime": "2026-11-05T15:11:00Z",
+      "latitude": -32.73916666666667,
+      "longitude": -71.5205,
+      "eventType": "Noon Position Report",
       "sourceType": "terrestrial",
       "positionSource": "TERR-AIS",
-      "sog": 0.2,
-      "cog": 120,
-      "unixTime": 1793848260
+      "sog": 0.4,
+      "cog": 153,
+      "unixTime": 1793891460
     },
-    "checkedAt": "2026-11-05T03:25:22.253Z",
+    "checkedAt": "2026-11-05T15:24:31.077Z",
     "history": [
       {
         "dateTime": "2026-09-10T22:54:00Z",
@@ -4433,9 +4433,20 @@
         "sog": 0.2,
         "cog": 120,
         "unixTime": 1793848260
+      },
+      {
+        "dateTime": "2026-11-05T15:11:00Z",
+        "latitude": -32.73916666666667,
+        "longitude": -71.5205,
+        "eventType": "Noon Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0.4,
+        "cog": 153,
+        "unixTime": 1793891460
       }
     ],
-    "lastImportedAt": "2026-11-05T03:25:22.253Z"
+    "lastImportedAt": "2026-11-05T15:24:31.077Z"
   },
   "vesselApiPosition": {
     "label": "VesselAPI",
@@ -5335,9 +5346,9 @@
         "id": "msi",
         "icon": "⌁",
         "label": "NAVAREA / METAREA",
-      "value": "NAVAREA · 879 registros publicados",
+        "value": "NAVAREA · 879 registros publicados",
         "status": "live",
-      "summary": "Base pública recebida até 5 nov. 06:00 UTC. V 0690, V 0691 e XV 0151 foram incorporados sem antecipar a ingestão independente; a tentativa oficial CHM permaneceu indisponível, portanto confirmar por coordenador, EGC/NAVTEX e agente.",
+        "summary": "Base pública recebida até 5 nov. 06:00 UTC. V 0690, V 0691 e XV 0151 foram incorporados sem antecipar a ingestão independente; a tentativa oficial CHM permaneceu indisponível, portanto confirmar por coordenador, EGC/NAVTEX e agente.",
         "source": {
           "name": "Base NAVAREA pública do Radar",
           "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
@@ -5383,9 +5394,9 @@
         "id": "chokepoints",
         "icon": "▲",
         "label": "CHOKEPOINTS",
-      "value": "Golfo Pérsico crítico · ataque em 4 nov.",
+        "value": "Golfo Pérsico crítico · ataque em 4 nov.",
         "status": "high",
-      "summary": "A IMO contabiliza 128 incidentes confirmados e 24 mortes até 3 nov.; o UKMTO reportou novo ataque a tanker ao norte do Qatar às 2320 UTC de 4 nov. Manter avaliação específica, war-risk, redundância de navegação e autorização do CSO.",
+        "summary": "A IMO contabiliza 128 incidentes confirmados e 24 mortes até 3 nov.; o UKMTO reportou novo ataque a tanker ao norte do Qatar às 2320 UTC de 4 nov. Manter avaliação específica, war-risk, redundância de navegação e autorização do CSO.",
         "source": {
           "name": "IMO · incidentes confirmados",
           "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
@@ -7143,4 +7154,3 @@
     ]
   }
 }
-
