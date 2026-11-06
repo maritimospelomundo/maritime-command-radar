@@ -13,10 +13,10 @@
     "endpoint": "",
     "mapUrl": "https://maps.findmespot.com/s/VCV3",
     "lastKnown": {
-      "id": "2522582994",
-      "unixTime": 1793913829,
-      "dateTime": "2026-11-05T21:23:49+0000",
-      "latitude": -32.73822,
+      "id": "2522667173",
+      "unixTime": 1793931708,
+      "dateTime": "2026-11-06T02:21:48+0000",
+      "latitude": -32.73836,
       "longitude": -71.52016,
       "messageType": "UNLIMITED-TRACK",
       "batteryState": "LOW",
@@ -3282,9 +3282,59 @@
         "messageType": "UNLIMITED-TRACK",
         "batteryState": "LOW",
         "altitude": -4
+      },
+      {
+        "id": "2522604208",
+        "unixTime": 1793917421,
+        "dateTime": "2026-11-05T22:23:41+0000",
+        "latitude": -32.73822,
+        "longitude": -71.51996,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "LOW",
+        "altitude": 26
+      },
+      {
+        "id": "2522622644",
+        "unixTime": 1793920990,
+        "dateTime": "2026-11-05T23:23:10+0000",
+        "latitude": -32.73811,
+        "longitude": -71.51996,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "LOW",
+        "altitude": 41
+      },
+      {
+        "id": "2522639875",
+        "unixTime": 1793924560,
+        "dateTime": "2026-11-06T00:22:40+0000",
+        "latitude": -32.7384,
+        "longitude": -71.51981,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "LOW",
+        "altitude": 29
+      },
+      {
+        "id": "2522654645",
+        "unixTime": 1793928140,
+        "dateTime": "2026-11-06T01:22:20+0000",
+        "latitude": -32.73839,
+        "longitude": -71.51987,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "LOW",
+        "altitude": -103
+      },
+      {
+        "id": "2522667173",
+        "unixTime": 1793931708,
+        "dateTime": "2026-11-06T02:21:48+0000",
+        "latitude": -32.73836,
+        "longitude": -71.52016,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "LOW",
+        "altitude": -4
       }
     ],
-    "lastSyncAt": "2026-11-05T22:15:20.014Z"
+    "lastSyncAt": "2026-11-06T02:45:19.604Z"
   },
   "marineTrafficPosition": {
     "label": "MarineTraffic",
