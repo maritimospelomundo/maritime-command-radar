@@ -3343,17 +3343,17 @@
       "Any validated MarineTraffic notification with observed UTC time and position"
     ],
     "lastKnown": {
-      "dateTime": "2026-11-06T03:11:00Z",
-      "latitude": -32.7385,
-      "longitude": -71.52016666666667,
-      "eventType": "Position Report",
+      "dateTime": "2026-11-06T15:11:00Z",
+      "latitude": -32.739,
+      "longitude": -71.5195,
+      "eventType": "Noon Position Report",
       "sourceType": "terrestrial",
       "positionSource": "TERR-AIS",
-      "sog": 0.1,
-      "cog": 338,
-      "unixTime": 1793934660
+      "sog": 0,
+      "cog": 44,
+      "unixTime": 1793977860
     },
-    "checkedAt": "2026-11-06T03:20:10.998Z",
+    "checkedAt": "2026-11-06T15:20:21.065Z",
     "history": [
       {
         "dateTime": "2026-09-10T22:54:00Z",
@@ -4565,9 +4565,20 @@
         "sog": 0.1,
         "cog": 338,
         "unixTime": 1793934660
+      },
+      {
+        "dateTime": "2026-11-06T15:11:00Z",
+        "latitude": -32.739,
+        "longitude": -71.5195,
+        "eventType": "Noon Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 0,
+        "cog": 44,
+        "unixTime": 1793977860
       }
     ],
-    "lastImportedAt": "2026-11-06T03:20:10.998Z"
+    "lastImportedAt": "2026-11-06T15:20:21.065Z"
   },
   "vesselApiPosition": {
     "label": "VesselAPI",
@@ -5785,8 +5796,8 @@
           "details": "Aviso oceânico válido de 061200Z a 071200Z; aviso de águas interiores válido de 061500Z a 070700Z. Ambos decorrem de sistema frontal; confirmar atualizações locais.",
           "action": "Reavaliar abrigo, velocidade, esforços, peação e restrições de trabalho externo; confirmar condições no VTS/prático antes de águas restritas.",
           "map": {
-        "x": 30,
-        "y": 80,
+            "x": 30,
+            "y": 80,
             "label": "Magalhães · área ampla dos avisos"
           },
           "source": {
@@ -5945,8 +5956,8 @@
           "details": "Aviso recebido na base pública em 6 de novembro. O marcador representa apenas a área geral de Talcahuano; confirmar a condição atual e os canais alternativos por MSI e agente.",
           "action": "Não depender de Talcahuano Rádio como único enlace; testar EGC/NAVTEX, VHF e canais alternativos e confirmar restauração antes da chegada.",
           "map": {
-        "x": 29.69,
-        "y": 70.4,
+            "x": 29.69,
+            "y": 70.4,
             "label": "Talcahuano · área aproximada"
           },
           "source": {
@@ -5964,8 +5975,8 @@
           "details": "Aviso recebido em 6 de novembro. A geometria completa deve ser plotada do texto oficial; o marcador é apenas referência ampla e não representa a posição da embarcação.",
           "action": "Plotar o polígono, manter afastamento compatível com o arranjo de cabos e coordenar CPA/TCPA cedo, sem cruzar a popa do navio sísmico.",
           "map": {
-        "x": 36.53,
-        "y": 47.89,
+            "x": 36.53,
+            "y": 47.89,
             "label": "Cabo Orange–Cabo Gurupi · área ampla"
           },
           "source": {
@@ -5983,8 +5994,8 @@
           "details": "Aviso recebido em 6 de novembro e com cancelamento previsto para 160401Z. A publicação não fornece um ponto único; confirmar a área operacional no broadcast vigente.",
           "action": "Obter a área STS completa, acompanhar tráfego e rebocadores, manter distância segura e confirmar início/término por EGC/NAVTEX.",
           "map": {
-        "x": 37.22,
-        "y": 64.17,
+            "x": 37.22,
+            "y": 64.17,
             "label": "Campo de Santos · área ampla"
           },
           "source": {
