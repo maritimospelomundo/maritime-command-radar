@@ -5785,8 +5785,8 @@
           "details": "Aviso oceânico válido de 061200Z a 071200Z; aviso de águas interiores válido de 061500Z a 070700Z. Ambos decorrem de sistema frontal; confirmar atualizações locais.",
           "action": "Reavaliar abrigo, velocidade, esforços, peação e restrições de trabalho externo; confirmar condições no VTS/prático antes de águas restritas.",
           "map": {
-            "x": 17,
-            "y": 82,
+        "x": 30,
+        "y": 80,
             "label": "Magalhães · área ampla dos avisos"
           },
           "source": {
@@ -5945,8 +5945,8 @@
           "details": "Aviso recebido na base pública em 6 de novembro. O marcador representa apenas a área geral de Talcahuano; confirmar a condição atual e os canais alternativos por MSI e agente.",
           "action": "Não depender de Talcahuano Rádio como único enlace; testar EGC/NAVTEX, VHF e canais alternativos e confirmar restauração antes da chegada.",
           "map": {
-            "x": 20.5,
-            "y": 70,
+        "x": 29.69,
+        "y": 70.4,
             "label": "Talcahuano · área aproximada"
           },
           "source": {
@@ -5964,8 +5964,8 @@
           "details": "Aviso recebido em 6 de novembro. A geometria completa deve ser plotada do texto oficial; o marcador é apenas referência ampla e não representa a posição da embarcação.",
           "action": "Plotar o polígono, manter afastamento compatível com o arranjo de cabos e coordenar CPA/TCPA cedo, sem cruzar a popa do navio sísmico.",
           "map": {
-            "x": 46,
-            "y": 49,
+        "x": 36.53,
+        "y": 47.89,
             "label": "Cabo Orange–Cabo Gurupi · área ampla"
           },
           "source": {
@@ -5983,8 +5983,8 @@
           "details": "Aviso recebido em 6 de novembro e com cancelamento previsto para 160401Z. A publicação não fornece um ponto único; confirmar a área operacional no broadcast vigente.",
           "action": "Obter a área STS completa, acompanhar tráfego e rebocadores, manter distância segura e confirmar início/término por EGC/NAVTEX.",
           "map": {
-            "x": 44.8,
-            "y": 58.5,
+        "x": 37.22,
+        "y": 64.17,
             "label": "Campo de Santos · área ampla"
           },
           "source": {
