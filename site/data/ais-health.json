@@ -1,16 +1,16 @@
 {
   "status": "no_data",
-  "lastAttemptAt": "2026-11-06T15:52:00.589Z",
-  "lastSuccessAt": "2026-11-06T15:52:00.589Z",
+  "lastAttemptAt": "2026-11-06T21:52:00.451Z",
+  "lastSuccessAt": "2026-11-06T21:52:00.451Z",
   "dataAt": "2026-10-21T23:39:52.000Z",
   "error": null,
   "quotaRemaining": 137,
-  "quotaAt": "2026-11-06T15:52:00.589Z",
+  "quotaAt": "2026-11-06T21:52:00.451Z",
   "nextAttemptAt": null,
   "authBlocked": false,
   "collector": "cloudflare-cron",
   "lastDecision": {
-    "at": "2026-11-06T17:51:58.519Z",
+    "at": "2026-11-06T22:52:00.386Z",
     "reason": "interval_or_normal_budget",
     "area": null
   }
