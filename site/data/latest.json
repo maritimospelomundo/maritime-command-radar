@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-11-05T12:04:12.000Z",
+  "generatedAt": "2026-11-06T12:13:18.733Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -5446,20 +5446,20 @@
       {
         "label": "AÇÃO AGORA",
         "level": "high",
-        "value": "MarineTraffic · posição observada há 8 h 53 min",
-        "summary": "Ponto consolidado de 2026-11-05T03:11:00Z: 32º44,310′ S · 071º31,210′ W. SPOT: 10 h 55 min; VesselAPI: 14 d 12 h 24 min. Bateria SPOT LOW; VesselAPI está acima de 24 h."
+        "value": "MarineTraffic · posição observada há 9 h 2 min",
+        "summary": "Ponto consolidado de 2026-11-06T03:11:00Z: 32º44,310′ S · 071º31,210′ W. SPOT: 9 h 51 min; MarineTraffic: 9 h 2 min; VesselAPI: 15 d 12 h 33 min. Bateria SPOT LOW; VesselAPI permanece acima de 24 h."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
-        "value": "Chile + CHM 794–796 + NAVAREA V 0690–0691",
-        "summary": "DIRECTEMAR publicou convecção e vento forte em 4 nov.; CHM prevê força 7–8/rajadas até 7 nov.; V 0690–0691 criam operações perigosas a sudeste de Cabo Frio em 10–12 nov. Plotar limites e confirmar broadcasts."
+        "value": "Talcahuano Rádio fora do ar + temporal em Magalhães",
+        "summary": "NAVAREA XV 0153 informa Talcahuano Rádio/CBT MMSI 007250170 temporariamente fora do ar, com Playa Ancha assumindo a difusão EGC/NAVTEX. DIRECTEMAR prevê 35–40 kt, rajadas de 50 kt e mar de até 8 m em 6–7 nov."
       },
       {
         "label": "PREPARAR",
         "level": "critical",
-        "value": "Golfo Pérsico · novo ataque ao norte do Qatar",
-        "summary": "Tanker foi atingido por dois projéteis às 2320 UTC de 4 nov.; situação de tripulação, danos e impacto ambiental ainda não constavam da primeira publicação. Autoria não estabelecida; elevar prontidão e revisar autorização do CSO."
+        "value": "Golfo Pérsico · ataque #196 com fatalidade confirmada",
+        "summary": "A IMO identificou o tanker atingido em 4 nov. como VELOS SAPPHIRE: danificado, sem poluição e com um tripulante morto. Total oficial: 129 incidentes e 25 mortes em 6 nov.; autoria não estabelecida."
       }
     ],
     "modules": [
@@ -5467,9 +5467,9 @@
         "id": "msi",
         "icon": "⌁",
         "label": "NAVAREA / METAREA",
-        "value": "NAVAREA · 879 registros publicados",
+        "value": "NAVAREA · 895 registros publicados",
         "status": "live",
-        "summary": "Base pública recebida até 5 nov. 06:00 UTC. V 0690, V 0691 e XV 0151 foram incorporados sem antecipar a ingestão independente; a tentativa oficial CHM permaneceu indisponível, portanto confirmar por coordenador, EGC/NAVTEX e agente.",
+        "summary": "Base pública recebida até 6 nov. 06:00 UTC. XV 0153, V 0693 e V 0692 foram incorporados sem acessar Gmail nem antecipar a ingestão independente; a tentativa oficial CHM de 09:19 UTC permaneceu indisponível.",
         "source": {
           "name": "Base NAVAREA pública do Radar",
           "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
@@ -5515,9 +5515,9 @@
         "id": "chokepoints",
         "icon": "▲",
         "label": "CHOKEPOINTS",
-        "value": "Golfo Pérsico crítico · ataque em 4 nov.",
+        "value": "Golfo Pérsico crítico · 129 incidentes / 25 mortes",
         "status": "high",
-        "summary": "A IMO contabiliza 128 incidentes confirmados e 24 mortes até 3 nov.; o UKMTO reportou novo ataque a tanker ao norte do Qatar às 2320 UTC de 4 nov. Manter avaliação específica, war-risk, redundância de navegação e autorização do CSO.",
+        "summary": "A IMO confirmou em 6 nov. 129 incidentes e 25 fatalidades; o ataque #196 ao VELOS SAPPHIRE em 4 nov. causou danos, sem poluição, e matou um tripulante. Manter avaliação específica, war-risk, redundância de navegação e autorização do CSO.",
         "source": {
           "name": "IMO · incidentes confirmados",
           "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
@@ -5563,7 +5563,7 @@
   },
   "market": {
     "week": "W44",
-    "sourceLabel": "Baltic W44 (30 out.) para spot e Fearnleys W43 (21 out.) para narrativa e benchmarks de 1 ano. BDTI/BCTI usam proxy público do fechamento de 4 nov.; VLSFO usa o fechamento de 4 nov.",
+    "sourceLabel": "Baltic W44 (30 out.) para spot e Fearnleys W43 (21 out.) para narrativa e benchmarks de 1 ano. BDTI/BCTI usam proxy público do fechamento de 5 nov.; VLSFO usa o fechamento de 5 nov.",
     "benchmarks": [
       {
         "segment": "VLCC",
@@ -5653,13 +5653,13 @@
     "indices": [
       {
         "name": "BDTI",
-        "value": 6140,
-        "previous": 6439
+        "value": 5745,
+        "previous": 6140
       },
       {
         "name": "BCTI",
-        "value": 2757,
-        "previous": 2794
+        "value": 2683,
+        "previous": 2757
       }
     ]
   },
@@ -5738,60 +5738,60 @@
       "description": "Os três produtos públicos mais recentes comprovados são HSFAT2 e HSFEP2 emitidos às 1030 UTC de 5 de novembro e o aviso chileno de convecção publicado em 4 de novembro. Valores futuros são previsões oficiais, não observações.",
       "items": [
         {
-          "id": "noaa-atlantic-gale-2026-11-05",
-          "date": "2026-11-05",
+          "id": "noaa-atlantic-gale-2026-11-06",
+          "date": "2026-11-06",
           "region": "Atlântico oeste · setor oceânico",
           "level": "high",
-          "headline": "NOAA: gale warning com mar previsto até 4,0 m",
-          "summary": "O HSFAT2 emitido às 1030 UTC de 5 de novembro mantém gale warning junto a baixa próxima de 27°N 65°W, com 30–35 kt e mar significativo de 3,5–4,0 m.",
-          "details": "Em setores adjacentes, o produto indica 20–30 kt e 2,5–4,0 m. Altura significativa é a média do terço mais alto das ondas; ondas individuais podem ser maiores. Plotar o setor completo no produto oficial.",
-          "action": "Revalidar weather routing, esforço estrutural e peação, limitar trabalho externo e confirmar o próximo boletim antes de ingressar na área.",
+          "headline": "NOAA: duas áreas com gale warning e mar até 4,5 m",
+          "summary": "O HSFAT2 emitido às 1030 UTC de 6 de novembro prevê duas áreas de gale, com 30–35 kt e mar significativo de até 4,5 m.",
+          "details": "Uma baixa próxima de 26°N 66°W intensifica o vento entre 29°N 50°W e 30°N 57°W; outro setor junto a 25°N–27°N e 35°W–42°W alcança 25–35 kt. Altura significativa é a média do terço mais alto.",
+          "action": "Plotar ambos os setores, revalidar weather routing e esforços, limitar trabalho externo e confirmar o próximo boletim antes da aproximação.",
           "map": {
             "x": 39.5,
             "y": 34,
             "label": "Atlântico oeste · área prevista"
           },
           "source": {
-            "name": "NOAA/NHC · HSFAT2 · 5 nov.",
+            "name": "NOAA/NHC · HSFAT2 · 6 nov.",
             "url": "https://www.nhc.noaa.gov/text/MIAHSFAT2.shtml"
           }
         },
         {
-          "id": "noaa-east-pacific-forecast-2026-11-05",
-          "date": "2026-11-05",
-          "region": "Pacífico leste · swell de noroeste",
+          "id": "noaa-east-pacific-forecast-2026-11-06",
+          "date": "2026-11-06",
+          "region": "Pacífico leste · área tropical e subtropical",
           "level": "medium",
-          "headline": "NOAA: sem warning formal; swell chega a 3,5 m",
-          "summary": "O HSFEP2 emitido às 1030 UTC não traz warning formal, mas registra vento NE/E de 20–25 kt e mar significativo de 2,5–3,5 m, com swell de noroeste mais amplo de 2,5–3,0 m.",
-          "details": "O produto prevê setores alcançando 4,0 m e vento de 20–30 kt em Tehuantepec nas 48 horas seguintes. São previsões regionais, não observações na posição do navio.",
-          "action": "Cruzar swell, período e rumo com a derrota; revisar esforços, velocidade e peação e confirmar o próximo boletim.",
+          "headline": "NOAA: sem warning; vento até 25 kt e mar até 3,5 m",
+          "summary": "O HSFEP2 emitido às 0430 UTC de 6 de novembro não traz warning; indica vento NE/E de 20–25 kt e mar significativo de 3,0–3,5 m no extremo oeste do domínio.",
+          "details": "Outros setores apresentam swell misto de 2,5–3,0 m. O produto cobre o Pacífico leste até 30°N e não substitui o boletim costeiro/local do Chile.",
+          "action": "Acompanhar swell e evolução do sistema, cruzando com DIRECTEMAR e weather routing antes de alterar rota ou trabalho externo.",
           "map": {
             "x": 22,
             "y": 45,
             "label": "Pacífico leste · área prevista"
           },
           "source": {
-            "name": "NOAA/NHC · HSFEP2 · 5 nov.",
+            "name": "NOAA/NHC · HSFEP2 · 6 nov.",
             "url": "https://www.nhc.noaa.gov/text/MIAHSFEP2.shtml"
           }
         },
         {
-          "id": "directemar-conveccao-2026-11-04",
-          "date": "2026-11-04",
-          "region": "Chile · Lebu a Los Ríos",
-          "level": "medium",
-          "headline": "MeteoArmada alerta para nuvens convectivas entre Lebu e Los Ríos",
-          "summary": "A Armada do Chile publicou às 17:24 local de 4 de novembro aviso de desenvolvimento de nuvens convectivas no trecho de Lebu a Los Ríos.",
-          "details": "A página pública também listava vento forte em Juan Fernández e marejadas do Golfo de Penas a Arica. A nota regional não substitui previsão de área, aviso portuário nem observação de bordo.",
-          "action": "Confirmar o aviso e a carta vigentes, monitorar rajadas, visibilidade e descargas e ajustar operações de convés e aproximação.",
+          "id": "directemar-magallanes-frontal-2026-11-05",
+          "date": "2026-11-05",
+          "region": "Chile austral · Magalhães e oceano adjacente",
+          "level": "high",
+          "headline": "DIRECTEMAR: temporal com rajadas de 50 kt e mar até 8 m",
+          "summary": "Avisos emitidos em 5 de novembro preveem 35–40 kt, rajadas de 50 kt e mar de 4–8 m de Faro Evangelistas a 60°S; em Paso Tamar, 35–40 kt, rajadas de 50 kt e mar de 3–4 m.",
+          "details": "Aviso oceânico válido de 061200Z a 071200Z; aviso de águas interiores válido de 061500Z a 070700Z. Ambos decorrem de sistema frontal; confirmar atualizações locais.",
+          "action": "Reavaliar abrigo, velocidade, esforços, peação e restrições de trabalho externo; confirmar condições no VTS/prático antes de águas restritas.",
           "map": {
-            "x": 20.5,
-            "y": 72,
-            "label": "Centro-sul do Chile · área ampla"
+            "x": 17,
+            "y": 82,
+            "label": "Magalhães · área ampla dos avisos"
           },
           "source": {
-            "name": "MeteoArmada / DIRECTEMAR · 4 nov.",
-            "url": "https://meteoarmada.directemar.cl/"
+            "name": "MeteoArmada / DIRECTEMAR · 5 nov.",
+            "url": "https://meteoarmada.directemar.cl/meteo/site/docs/20261105/20261105184059/temporal_n_43.pdf"
           }
         }
       ]
@@ -5870,13 +5870,13 @@
       "description": "O novo ataque reportado ao norte do Qatar e os registros UKMTO 195 e 194 são os três eventos públicos mais recentes localizados. Autoridades investigam; o Radar não presume causa, autoria, dano adicional nem situação além do publicado.",
       "items": [
         {
-          "id": "ukmto-qatar-attack-2026-11-04",
-          "date": "2026-11-04",
-          "region": "Golfo Pérsico · cerca de 50 MN ao norte de Madinat ash Shamal, Qatar",
+          "id": "ukmto-qatar-196-2026-11-05",
+          "date": "2026-11-05",
+          "region": "Golfo Pérsico · 50 MN ao norte de Madinat ash Shamal, Qatar",
           "level": "critical",
-          "headline": "UKMTO: tanker atingido por dois projéteis ao norte do Qatar",
-          "summary": "O UKMTO informou que um tanker foi atingido por dois projéteis desconhecidos às 2320 UTC de 4 de novembro; situação da tripulação, danos e impacto ambiental ainda não constavam da primeira publicação.",
-          "details": "Incidente divulgado em 5 de novembro e ainda não incluído na lista IMO, cuja última atualização é de 3 de novembro. O aviso não identifica a embarcação nem estabelece autoria.",
+          "headline": "UKMTO 196 / IMO: ataque a tanker causou uma morte",
+          "summary": "O UKMTO registrou o ataque #196 após dois projéteis atingirem um tanker às 2320 UTC de 4 de novembro. A IMO identificou o VELOS SAPPHIRE: danificado, sem poluição e com um tripulante morto.",
+          "details": "A lista IMO foi atualizada em 6 de novembro para 129 incidentes confirmados e 25 mortes. A natureza dos projéteis e a autoria não foram estabelecidas pelas fontes oficiais.",
           "action": "Elevar prontidão de damage control, incêndio, abandono e atendimento médico; revisar threat assessment, war-risk e autorização do CSO e reportar atividade suspeita ao UKMTO.",
           "map": {
             "x": 64.5,
@@ -5884,8 +5884,8 @@
             "label": "Norte do Qatar · área reportada"
           },
           "source": {
-            "name": "UKMTO via Reuters · 5 nov.",
-            "url": "https://www.reuters.com/world/middle-east/tanker-struck-by-two-projectiles-north-qatar-crew-status-unconfirmed-ukmto-says-2026-11-05/"
+            "name": "UKMTO #196 / IMO · 5–6 nov.",
+            "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
           }
         },
         {
@@ -5936,59 +5936,59 @@
       "description": "A base NAVAREA pública recebeu em 5 de novembro V 0691, V 0690 e XV 0151. A tentativa de consulta oficial CHM permaneceu indisponível; todos exigem confirmação por coordenador, EGC/NAVTEX ou agente e mantêm a data real de recebimento.",
       "items": [
         {
-          "id": "navarea-v-0691-2026",
-          "date": "2026-11-05",
-          "region": "Costa do Brasil · sudeste de Cabo Frio",
+          "id": "navarea-xv-0153-2026",
+          "date": "2026-11-06",
+          "region": "Chile · Bahía Valparaíso / Puerto Talcahuano",
           "level": "high",
-          "headline": "NAVAREA V 0691: operação perigosa em raio de 16 MN",
-          "summary": "O aviso informa operação perigosa em área de 16 MN de raio centrada em 24°08′S 041°13′W, prevista para 10 de novembro entre 0900 e 2300 UTC.",
-          "details": "Recebido na base pública em 5 de novembro, com cancelamento previsto para 122200Z. A área e a janela devem ser confirmadas no broadcast vigente.",
-          "action": "Plotar o círculo de segurança, confirmar início e término por EGC/NAVTEX e manter amplo afastamento durante a operação.",
+          "headline": "NAVAREA XV 0153: Talcahuano Rádio temporariamente fora do ar",
+          "summary": "A estação Talcahuano Rádio/CBT, MMSI 007250170, está temporariamente fora do ar; Valparaíso Playa Ancha Rádio assume a difusão de informações EGC/NAVTEX.",
+          "details": "Aviso recebido na base pública em 6 de novembro. O marcador representa apenas a área geral de Talcahuano; confirmar a condição atual e os canais alternativos por MSI e agente.",
+          "action": "Não depender de Talcahuano Rádio como único enlace; testar EGC/NAVTEX, VHF e canais alternativos e confirmar restauração antes da chegada.",
           "map": {
-            "x": 45.8,
-            "y": 57.2,
-            "label": "V 0691 · área a sudeste de Cabo Frio"
+            "x": 20.5,
+            "y": 70,
+            "label": "Talcahuano · área aproximada"
           },
           "source": {
-            "name": "NAVAREA V 0691 · recebido 5 nov.",
+            "name": "NAVAREA XV 0153 · recebido 6 nov.",
             "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
           }
         },
         {
-          "id": "navarea-v-0690-2026",
-          "date": "2026-11-05",
-          "region": "Costa do Brasil · sudeste de Cabo Frio",
+          "id": "navarea-v-0692-2026",
+          "date": "2026-11-06",
+          "region": "Costa Norte do Brasil · entre Cabo Orange e Cabo Gurupi",
           "level": "high",
-          "headline": "NAVAREA V 0690: polígono perigoso de 10 a 12 nov.",
-          "summary": "O aviso define área temporariamente perigosa a sudeste de Cabo Frio entre 100900Z e 122100Z, com cancelamento previsto para 122200Z.",
-          "details": "Recebido em 5 de novembro. O polígono completo deve ser extraído do texto original e plotado na ordem publicada; o marcador é apenas referência ampla.",
-          "action": "Obter o aviso vigente, plotar todos os vértices e confirmar a janela por EGC/NAVTEX antes da aproximação.",
+          "headline": "NAVAREA V 0692: sísmica com 12 cabos de 10,8 km",
+          "summary": "Levantamento sísmico de 4 a 13 de novembro pelo AMAZON WARRIOR e embarcações de apoio, rebocando 12 cabos de 10.800 m dentro do polígono publicado.",
+          "details": "Aviso recebido em 6 de novembro. A geometria completa deve ser plotada do texto oficial; o marcador é apenas referência ampla e não representa a posição da embarcação.",
+          "action": "Plotar o polígono, manter afastamento compatível com o arranjo de cabos e coordenar CPA/TCPA cedo, sem cruzar a popa do navio sísmico.",
           "map": {
-            "x": 45.5,
-            "y": 57.5,
-            "label": "V 0690 · área a sudeste de Cabo Frio"
+            "x": 46,
+            "y": 49,
+            "label": "Cabo Orange–Cabo Gurupi · área ampla"
           },
           "source": {
-            "name": "NAVAREA V 0690 · recebido 5 nov.",
+            "name": "NAVAREA V 0692 · recebido 6 nov.",
             "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
           }
         },
         {
-          "id": "navarea-xv-0151-2026",
-          "date": "2026-11-05",
-          "region": "Drake / Shetland do Sul · iceberg à deriva",
-          "level": "high",
-          "headline": "NAVAREA XV 0151: iceberg reportado a noroeste das Shetland do Sul",
-          "summary": "O aviso reporta iceberg à deriva na posição 61°48,00′S 061°16,20′W, com cancelamento previsto para 8 de novembro às 2359 UTC.",
-          "details": "Recebido em 5 de novembro. Trata-se de alvo móvel: a posição é somente a observação reportada e não deve ser projetada pelo Radar.",
-          "action": "Confirmar posição mais recente por broadcast e observação, reforçar vigia/radar e manter margem segura sem extrapolar a deriva.",
+          "id": "navarea-v-0693-2026",
+          "date": "2026-11-06",
+          "region": "Costa do Brasil · sul de Santos",
+          "level": "medium",
+          "headline": "NAVAREA V 0693: operação STS no campo de Santos",
+          "summary": "Operação ship-to-ship prevista de 070301Z a 150301Z no campo de Santos, envolvendo EAGLE COLOMBO, TENJUN, AMY CHOUEST e GEONISIO BARROSO.",
+          "details": "Aviso recebido em 6 de novembro e com cancelamento previsto para 160401Z. A publicação não fornece um ponto único; confirmar a área operacional no broadcast vigente.",
+          "action": "Obter a área STS completa, acompanhar tráfego e rebocadores, manter distância segura e confirmar início/término por EGC/NAVTEX.",
           "map": {
-            "x": 32.8,
-            "y": 86.5,
-            "label": "Shetland do Sul · posição reportada"
+            "x": 44.8,
+            "y": 58.5,
+            "label": "Campo de Santos · área ampla"
           },
           "source": {
-            "name": "NAVAREA XV 0151 · recebido 5 nov.",
+            "name": "NAVAREA V 0693 · recebido 6 nov.",
             "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
           }
         }
@@ -6002,17 +6002,17 @@
       "region": "Chile · Atlântico ↔ Pacífico",
       "risk": "high",
       "trafficLabel": "Moderado",
-      "trafficTrend": "estável / rota alternativa; avisos meteorológicos chilenos atualizados em 4 nov.",
+      "trafficTrend": "estável / rota alternativa; temporal e vento forte previstos para 6–7 nov.",
       "trafficBasis": "Sem série pública consolidada e comparável de trânsitos mercantes no snapshot. A autoridade publica regras operacionais, não um contador diário equivalente aos canais.",
       "market": "Alternativa a Panamá e Cabo Horn para navios compatíveis; decisão depende de distância, combustível, calado, pilotagem e weather routing.",
-      "geopolitics": "Baixo risco de guerra; exposição predominante é meteorológica e náutica. DIRECTEMAR publicou convecção entre Lebu e Los Ríos, vento forte em Juan Fernández e marejadas em 4 nov.",
+      "geopolitics": "Baixo risco de guerra; exposição predominante é meteorológica e náutica. DIRECTEMAR prevê 35–40 kt, rajadas de 50 kt e mar de até 8 m no oceano adjacente, além de vento forte e marejadas locais em águas interiores.",
       "authority": "DIRECTEMAR / Autoridade Marítima do Chile",
       "reporting": "CHILREP, pontos de controle e VTS; pilotagem conforme zona e características do navio.",
       "masterFocus": [
         "Planejar correntes nas Angosturas e Paso Tortuoso; podem superar 3,5 nós.",
         "VHF 16/70 permanente, reportes de posição e preferência a VLCC/supernavios conforme controle local.",
         "Confirmar antecedência de solicitação de prático, calado máximo, zona de transferência e abrigo meteorológico.",
-        "Confirmar os avisos MeteoArmada de 4 nov. e broadcasts MSI antes de decidir aproximação, abrigo ou trabalho externo."
+        "Confirmar os avisos DIRECTEMAR emitidos em 5 nov.: 35–40 kt, rajadas de 50 kt e mar de até 8 m; revalidar abrigo, trabalho externo e restrições do prático/VTS."
       ],
       "source": {
         "name": "DIRECTEMAR — Pilotaje Magallanes",
@@ -6028,14 +6028,14 @@
       "trafficTrend": "uso seletivo",
       "trafficBasis": "Não há série pública consolidada de mercantes no snapshot; fluxo é muito inferior aos canais e ocorre principalmente quando porte, restrições ou estratégia de rota justificam.",
       "market": "Pode evitar canal/pilotagem, mas aumenta distância e exposição; combustível, ETA e risco de avaria devem ser tratados como custo total.",
-      "geopolitics": "Baixo risco geopolítico direto; exposição principal é mar severo, gelo e assistência remota. NAVAREA XV 0151 reportou iceberg à deriva a noroeste das Shetland do Sul em 5 nov.",
+      "geopolitics": "Baixo risco geopolítico direto; exposição principal é mar severo, gelo e assistência remota. Boletins austrais de 6 nov. indicam força 8–9 com rajadas em setores ao sul de 60°S e extensa presença de gelo/icebergs.",
       "authority": "DIRECTEMAR / MRCC Chile",
       "reporting": "CHILREP quando aplicável às águas chilenas; confirmar limites e plano SAR.",
       "masterFocus": [
         "Definir limites de heavy weather, redução de velocidade e heading para esforço estrutural/slamming.",
         "Proteger convés e manifolds, restringir trabalho externo e revisar condição de lastro.",
         "Manter margem de combustível e rota de escape para canais/abrigo se operacionalmente disponível.",
-        "Confirmar boletins austrais e posição mais recente do iceberg de XV 0151; não projetar sua deriva a partir do ponto reportado."
+        "Confirmar boletins METAREA VI, limites de gelo e posições de icebergs; não projetar deriva a partir de observação antiga e manter rota de escape meteorológica."
       ],
       "source": {
         "name": "DIRECTEMAR — Rotas austrais",
@@ -6137,22 +6137,22 @@
       "region": "Omã / Irã · Golfo Pérsico",
       "risk": "critical",
       "trafficLabel": "18,3 mi bpd · média móvel de 7 dias em 30 set. · Kpler",
-      "trafficTrend": "fluxo comercial sob ataques; novo incidente reportado ao norte do Qatar em 4 nov.; contagens privadas não são série oficial",
-      "trafficBasis": "EIA: fluxo histórico de petróleo do chokepoint. IMO atualizou para 128 incidentes confirmados e 24 mortes em 3 nov.; contagens privadas AIS-visible não equivalem a contagem oficial.",
+      "trafficTrend": "fluxo comercial sob ataques; incidente #196 confirmado ao norte do Qatar com uma fatalidade; contagens privadas não são série oficial",
+      "trafficBasis": "EIA: fluxo histórico de petróleo do chokepoint. IMO atualizou em 6 nov. para 129 incidentes confirmados e 25 mortes; contagens privadas AIS-visible não equivalem a contagem oficial.",
       "market": "O Baltic W44 mostra reação do VLCC TD3C para cerca de US$ 1,346 milhão/dia, enquanto Suezmax TD20 recuou para pouco mais de US$ 396,1 mil/dia. São TCEs padronizados, não fixtures do navio nem contagem oficial de tráfego.",
-      "geopolitics": "Risco crítico: um tanker foi atingido por dois projéteis ao norte do Qatar às 2320 UTC de 4 nov.; condição da tripulação e danos ainda eram desconhecidos na primeira publicação. Autoria não estabelecida. A lista IMO permanecia em 128 incidentes confirmados e 24 mortes, atualizada em 3 nov.",
+      "geopolitics": "Risco crítico: o VELOS SAPPHIRE foi atingido por dois projéteis ao norte do Qatar em 4 nov.; a IMO confirmou danos, ausência de poluição e uma fatalidade. Autoria não estabelecida. Windward informou, como análise proprietária pública, ampliação de uma lista iraniana de 125 para 240 navios em 2 nov.; não tratar inclusão como prova de ilícito.",
       "authority": "Autoridades costeiras; UKMTO como ponto de contato de segurança; IMO consolida incidentes confirmados",
       "reporting": "UKMTO VRS voluntário: initial ao entrar no VRA, daily 0800 UTC, final e incident imediato; VTS/porto permanecem obrigatórios conforme jurisdição.",
       "masterFocus": [
         "Exigir threat assessment específico, war-risk, autorização do CSO e plano de contingência para ataques, incêndio, rombo no costado e abandono.",
         "Usar navegação redundante contra spoofing/jamming e comparar GNSS, radar, visual, AIS, eco-sonda e DR.",
-        "Revisar contingência para perda de comunicações externas e canais alternativos; o ataque de 4 nov. ainda exigia atualização oficial completa na compilação e não autoriza inferir autoria, dano ou condição da tripulação.",
+        "Revisar contingência para perda de comunicações e atendimento médico; o ataque #196 teve fatalidade confirmada, mas as fontes oficiais não estabeleceram autoria nem natureza dos projéteis.",
         "Em STS e vetting, examinar contrapartes e histórico completo de encontros; associação ou geometria não provam transferência de carga.",
         "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
-        "name": "UKMTO via Reuters · ataque de 4 nov. 2026",
-        "url": "https://www.reuters.com/world/middle-east/tanker-struck-by-two-projectiles-north-qatar-crew-status-unconfirmed-ukmto-says-2026-11-05/"
+        "name": "IMO / UKMTO · incidente #196",
+        "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
       }
     },
     {
@@ -6419,7 +6419,7 @@
     "end": "2026-11-30",
     "statusLabel": "4 ATIVAS · 2 ANUNCIADAS",
     "pulseLabel": "4 CICs ativas",
-    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativos; Mediterranean mantém anúncio sem lançamento operacional completo. Abuja aprovou para 2027 uma CIC de espaços confinados. Pesquisa oficial própria em 5 nov. não localizou mudança de janela ou classificação.",
+    "description": "Tema coordenado de 2026 sobre atendimento SOLAS para carregamento, estivagem e peação. Paris, Tokyo, Viña del Mar e Black Sea permanecem ativos; Mediterranean mantém anúncio sem lançamento operacional completo. Abuja aprovou para 2027 uma CIC de espaços confinados. Pesquisa oficial própria em 6 nov. não localizou mudança de janela ou classificação.",
     "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
     "readiness": [
       "Preparar matriz PSC específica do próximo porto, regime e histórico do navio.",
@@ -6428,7 +6428,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-    "note": "Fontes oficiais reconsultadas em 5 nov.: Paris, Tokyo, Viña del Mar e Black Sea ativas; Abuja e Mediterranean anunciadas; Indian Ocean, Caribbean e Riyadh sem confirmação oficial pública de campanha 2026; USCG nacional.",
+    "note": "Fontes oficiais reconsultadas em 6 nov.: Paris, Tokyo, Viña del Mar e Black Sea ativas; Abuja e Mediterranean anunciadas; Indian Ocean, Caribbean e Riyadh sem confirmação oficial pública de campanha 2026; USCG nacional.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -6574,42 +6574,42 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 53.4,
+        "price": 51.78,
         "currencySymbol": "R$",
-        "changePercent": -7.64,
+        "changePercent": -3.03,
         "trend": "Queda no fechamento",
-        "capturedAtLabel": "4 nov. 2026 · fechamento B3",
+        "capturedAtLabel": "5 nov. 2026 · fechamento B3",
         "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 47.12,
+        "price": 45.95,
         "currencySymbol": "R$",
-        "changePercent": -7.08,
+        "changePercent": -2.48,
         "trend": "Queda no fechamento",
-        "capturedAtLabel": "4 nov. 2026 · fechamento B3",
-        "sourceUrl": "https://www.cotab3.com.br/cotacao/PETR4"
+        "capturedAtLabel": "5 nov. 2026 · fechamento B3",
+        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 19.61,
+        "price": 18.8,
         "currencySymbol": "US$",
-        "changePercent": -6.97,
+        "changePercent": -4.13,
         "trend": "Queda no fechamento",
-        "capturedAtLabel": "4 nov. 2026 · fechamento NYSE",
-        "sourceUrl": "https://stockanalysis.com/stocks/pbr/history/"
+        "capturedAtLabel": "5 nov. 2026 · fechamento NYSE",
+        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-        "price": 17.32,
+        "price": 16.73,
         "currencySymbol": "US$",
-        "changePercent": -5.87,
+        "changePercent": -3.41,
         "trend": "Queda no fechamento",
-        "capturedAtLabel": "4 nov. 2026 · fechamento NYSE",
-        "sourceUrl": "https://stockanalysis.com/stocks/pbr.a/history/"
+        "capturedAtLabel": "5 nov. 2026 · fechamento NYSE",
+        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
       }
     ],
     "operations": [
@@ -6799,66 +6799,66 @@
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 901.5,
-      "change": -40
+      "vlsfo": 849.5,
+      "change": -52
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 747,
-      "change": -8.5
+      "vlsfo": 732,
+      "change": -15
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 907.5,
-      "change": -49
+      "vlsfo": 851.5,
+      "change": -56
     },
     {
       "port": "Houston",
       "code": "USHOU",
-      "vlsfo": 764,
-      "change": -16
+      "vlsfo": 754,
+      "change": -10
     }
   ],
   "briefing": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
-        "title": "MarineTraffic é a fonte válida mais recente; SPOT com bateria baixa",
-        "summary": "MarineTraffic · 32º44,310′ S · 071º31,210′ W · 8 h 53 min. SPOT: 10 h 55 min; VesselAPI: 14 d 12 h 24 min. Bateria SPOT LOW; datas de observação preservadas e VesselAPI sinalizada acima de 24 h."
+        "title": "MarineTraffic é a fonte válida mais recente; SPOT com bateria low",
+        "summary": "MarineTraffic · 32º44,310′ S · 071º31,210′ W · 9 h 2 min. SPOT: 9 h 51 min; MarineTraffic: 9 h 2 min; VesselAPI: 15 d 12 h 33 min. Datas de observação preservadas e VesselAPI sinalizada acima de 24 h."
       },
       {
         "category": "ROTA",
-        "title": "V 0690–0691 criam áreas perigosas a sudeste de Cabo Frio",
-        "summary": "Operações previstas de 10 a 12 nov.; XV 0151 reporta iceberg à deriva a noroeste das Shetland do Sul. Plotar limites, não projetar alvo móvel e confirmar broadcasts."
+        "title": "Talcahuano Rádio temporariamente fora do ar",
+        "summary": "NAVAREA XV 0153 informa que Valparaíso Playa Ancha assume a difusão EGC/NAVTEX. V 0692 alerta para sísmica com 12 cabos de 10,8 km no Norte do Brasil; V 0693 anuncia STS no campo de Santos."
       },
       {
         "category": "SEGURANÇA",
-        "title": "Novo ataque a tanker ao norte do Qatar",
-        "summary": "Dois projéteis atingiram um tanker às 2320 UTC de 4 nov.; tripulação, danos e impacto ambiental ainda não constavam da primeira publicação. A lista IMO permanecia em 128 incidentes confirmados e 24 mortes, atualizada em 3 nov.; autoria não estabelecida."
+        "title": "Ataque #196 teve uma fatalidade confirmada",
+        "summary": "A IMO identificou o VELOS SAPPHIRE, danificado e sem poluição após o ataque de 4 nov.; um tripulante morreu. Total oficial em 6 nov.: 129 incidentes e 25 mortes. Autoria não estabelecida."
       },
       {
         "category": "METEO",
-        "title": "NOAA, DIRECTEMAR e CHM exigem nova plotagem",
-        "summary": "NOAA mantém gale warning no Atlântico com mar até 4,0 m; DIRECTEMAR publicou convecção e vento forte em 4 nov.; CHM 796 prevê força 8 e rajadas 9 até 7 nov."
+        "title": "NOAA e DIRECTEMAR exigem nova plotagem",
+        "summary": "NOAA mantém duas áreas de gale no Atlântico com 30–35 kt e mar até 4,5 m. DIRECTEMAR prevê 35–40 kt, rajadas de 50 kt e mar de até 8 m em Magalhães/oceano adjacente em 6–7 nov."
       },
       {
         "category": "PIRATARIA",
-        "title": "AZINI libertado; 20 tripulantes resgatados",
-        "summary": "O sequestro de 29 out. foi encerrado sem feridos, segundo MSCIO e governo indiano. O ReCAAP não recebeu novo incidente na Ásia de 27 out. a 2 nov.; IMB 056 e 055 permanecem os outros eventos mais recentes do grupo."
+        "title": "Sem incidente mais recente confirmado nas fontes abertas",
+        "summary": "ReCAAP mantém como último semanal 27 out.–2 nov. sem novo incidente na Ásia. AZINI permanece encerrado; IMB 056 e 055 continuam os outros registros mais recentes comprovados."
       },
       {
         "category": "MERCADO",
-        "title": "BDTI 6.140; BCTI 2.757 no fechamento de 4 nov.",
-        "summary": "Os proxies recuaram 4,64% e 1,32%. VLSFO caiu nos quatro portos de referência; PETR3, PETR4, PBR e PBR.A fecharam em forte queda. Leituras públicas não substituem fixture, bunker stem nem economia de viagem."
+        "title": "BDTI 5.745; BCTI 2.683 no fechamento de 5 nov.",
+        "summary": "Os proxies recuaram 6,43% e 2,68%. VLSFO caiu nos quatro portos de referência; PETR3, PETR4, PBR e PBR.A fecharam em nova queda. Leituras públicas não substituem fixture, bunker stem nem economia de viagem."
       },
       {
         "category": "PSC / REPORTE",
         "title": "Quatro CICs ativas; reportes sem mudança oficial",
-        "summary": "Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas. Os 13 sistemas foram rechecados e a revisão IMO de BELTREP/SOUNDREP continua com entrada em vigor em 1º jan. 2028."
+        "summary": "Paris, Tokyo, Viña del Mar e Black Sea permanecem ativas; Abuja e Mediterranean anunciadas. Os 13 sistemas foram rechecados em 6 nov. sem mudança documental nova; BELTREP/SOUNDREP continua previsto para 1º jan. 2028."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -6867,7 +6867,7 @@
     {
       "name": "CHM — NAVAREA V",
       "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar",
-      "scope": "Base pública independente consultada em 5 nov.; 879 registros recebidos até 06:00 UTC. Tentativa oficial CHM indisponível; V 0691, V 0690 e XV 0151 incorporados sem antecipar a ingestão responsável.",
+      "scope": "Base pública independente consultada em 6 nov.; 895 registros recebidos até 06:00 UTC. Tentativa oficial CHM às 09:19 UTC indisponível; XV 0153, V 0693 e V 0692 incorporados sem acessar Gmail.",
       "typeLabel": "Oficial"
     },
     {
@@ -6885,37 +6885,37 @@
     {
       "name": "IMB Piracy Reporting Centre",
       "url": "https://icc-ccs.org/map/",
-      "scope": "Mapa público reconsultado em 5 nov.; incidentes 056-26 e 055-26, ambos de 29 out., permanecem os registros IMB mais recentes localizados.",
+      "scope": "Mapa público reconsultado em 6 nov.; incidentes 056-26 e 055-26, ambos de 29 out., permanecem os registros IMB mais recentes localizados.",
       "typeLabel": "Oficial"
     },
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-      "scope": "Weekly Report 27 out.–2 nov., consultado em 5 nov.: nenhum incidente de pirataria ou roubo armado contra navios na Ásia foi recebido pelo ReCAAP no período.",
+      "scope": "Weekly Report 27 out.–2 nov., reconsultado em 6 nov.: nenhum incidente de pirataria ou roubo armado contra navios na Ásia foi recebido no período.",
       "typeLabel": "Oficial"
     },
     {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/recent-incidents",
-      "scope": "Incidentes 194–195 de 3 nov. e novo ataque a tanker ao norte do Qatar às 2320 UTC de 4 nov.; VRS e orientação operacional.",
+      "scope": "Incidentes #194–196; #196, publicado em 5 nov., corresponde ao ataque de 4 nov. ao norte do Qatar, posteriormente confirmado pela IMO com uma fatalidade e sem poluição.",
       "typeLabel": "Oficial"
     },
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Avisos 794–796 consultados em 5 nov.; força 7–8, rajadas até 9 e janelas alcançando 7 nov.",
+      "scope": "Página oficial atualizada em 6 nov.; Aviso 796 permanece válido até 070000Z. Avisos 794–795 foram preservados com suas datas originais e vigências encerradas.",
       "typeLabel": "Oficial"
     },
     {
       "name": "MeteoArmada / Armada de Chile",
       "url": "https://meteoarmada.directemar.cl/",
-      "scope": "Convecção entre Lebu e Los Ríos, vento forte em Juan Fernández e marejadas publicados em 4 nov.",
+      "scope": "Avisos de 5 nov. para Magalhães/oceano adjacente: 35–40 kt, rajadas de 50 kt e mar de até 8 m entre 6–7 nov.",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "HSFAT2 e HSFEP2 emitidos às 1030 UTC de 5 nov.; gale no Atlântico e swell/vento no Pacífico leste.",
+      "scope": "HSFAT2 e HSFEP2 emitidos em 6 nov.; duas áreas de gale no Atlântico e ausência de warning no Pacífico leste.",
       "typeLabel": "Oficial"
     },
     {
@@ -6957,7 +6957,7 @@
     {
       "name": "Ship & Bunker — preços mundiais",
       "url": "https://shipandbunker.com/prices",
-      "scope": "Preços públicos de 4 nov.: Singapura 901,50, Rotterdam 747,00, Fujairah 907,50 e Houston 764,00 US$/t",
+      "scope": "Preços públicos de 5 nov.: Singapura 849,50, Rotterdam 732,00, Fujairah 851,50 e Houston 754,00 US$/t.",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -6981,7 +6981,7 @@
     {
       "name": "Mercados públicos — Petrobras RI / B3 / NYSE",
       "url": "https://www.investidorpetrobras.com.br/acoes/",
-      "scope": "Fechamentos de 4 nov.: PETR3 R$ 53,40 (-7,64%), PETR4 R$ 47,12 (-7,08%), PBR US$ 19,61 (-6,97%) e PBR.A US$ 17,32 (-5,87%)",
+      "scope": "Fechamentos de 5 nov.: PETR3 R$ 51,78 (-3,03%), PETR4 R$ 45,95 (-2,48%), PBR US$ 18,80 (-4,13%) e PBR.A US$ 16,73 (-3,41%).",
       "typeLabel": "Mercado público / complementar"
     },
     {
@@ -7005,7 +7005,7 @@
     {
       "name": "IMO — Port State Control",
       "url": "https://www.imo.org/en/ourwork/msas/pages/portstatecontrol.aspx",
-      "scope": "Nove acordos regionais + USCG; campanhas e páginas oficiais dos regimes reconsultadas em 5 nov.",
+      "scope": "Nove acordos regionais + USCG; campanhas e páginas oficiais reconsultadas em 6 nov., sem mudança de classificação.",
       "typeLabel": "Oficial"
     },
     {
@@ -7029,7 +7029,7 @@
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-      "scope": "Treze sistemas preservados e fontes oficiais reconsultadas em 5 nov.; nenhuma mudança de limite, formato, frequência ou autoridade localizada. BELTREP/SOUNDREP revisados entram em vigor em 1º jan. 2028.",
+      "scope": "Treze sistemas preservados e fontes oficiais reconsultadas em 6 nov.; nenhuma mudança de limite, formato, frequência ou autoridade localizada. BELTREP/SOUNDREP revisados entram em vigor em 1º jan. 2028.",
       "typeLabel": "Oficial"
     },
     {
@@ -7047,19 +7047,19 @@
     {
       "name": "IMO / MPA Singapore — incidentes confirmados",
       "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx",
-      "scope": "Lista IMO reconsultada em 5 nov.; 128 incidentes confirmados e 24 mortes na atualização oficial de 3 nov.; o ataque de 4 nov. ainda não constava da lista.",
+      "scope": "Lista IMO atualizada em 6 nov.: 129 incidentes confirmados e 25 mortes; VELOS SAPPHIRE danificado, sem poluição e com uma fatalidade.",
       "typeLabel": "Oficial"
     },
     {
       "name": "Windward — análise pública",
       "url": "https://windward.ai/blog/somali-pirates-hijack-an-iranian-dhow-as-attacks-on-vessels-mount/",
-      "scope": "Blog e base pública reconsultados em 5 nov.; análise de 3 nov. sobre o AZINI permanece relevante, com evento e encerramento corroborados por MSCIO e governo indiano; números proprietários são atribuídos.",
+      "scope": "Blog, base e MIOC público reconsultados em 6 nov.; análise de 5 nov. sobre ampliação de lista iraniana de 125 para 240 navios é tratada como avaliação proprietária atribuída, sem concluir ilícito de qualquer embarcação.",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
       "url": "https://channel16.dryadglobal.com/somali-piracy-azini-rescue-highlights-continuing-risks-in-the-gulf-of-aden",
-      "scope": "Análise pública de 4 nov. sobre o AZINI incorporada como complemento atribuído; fato e encerramento permanecem baseados no MSCIO e no governo indiano.",
+      "scope": "Análises abertas reconsultadas em 6 nov.; a análise de 4 nov. sobre AZINI permanece complemento atribuído, sem novo incidente corroborado para inclusão.",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -7095,7 +7095,7 @@
     {
       "name": "StockQ / Baltic indices",
       "url": "https://en.stockq.org/m/index/BDTI.php",
-      "scope": "Proxy público de fechamento: BDTI 6.140 e BCTI 2.757 em 4 nov.; não substitui Baltic Exchange licenciado",
+      "scope": "Proxy público de fechamento: BDTI 5.745 e BCTI 2.683 em 5 nov.; não substitui Baltic Exchange licenciado.",
       "typeLabel": "Mercado público / complementar"
     },
     {
