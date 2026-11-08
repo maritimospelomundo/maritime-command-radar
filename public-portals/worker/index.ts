@@ -27,14 +27,19 @@ async function save(env:any,points:any[]){
  return accepted.length;
 }
 async function positions(env:any){const rows=await env.DB.prepare('SELECT data FROM vessel_positions WHERE recorded_ms >= ? ORDER BY recorded_ms ASC').bind(Date.now()-90*86400000).all();return consolidate(rows.results.map((r:any)=>JSON.parse(r.data)));}
+async function spotControl(env:any){
+ const row=await env.DB.prepare("SELECT data FROM publications WHERE id='spot-control'").first();
+ return row?.data?JSON.parse(row.data):{enabled:true,updatedAt:null};
+}
 async function sync(env:any){
- const sources=await Promise.allSettled([radarPositions(),env.SPOT_WORKER.fetch(new Request(SPOT,{signal:AbortSignal.timeout(15000)})).then(async r=>{if(!r.ok)throw Error('spot HTTP '+r.status);const d:any=await r.json();if(!Array.isArray(d.points))throw Error('spot');return d.points.map((p:any)=>normalize(p,'SPOT')).filter(Boolean)})]);
+ const enabled=(await spotControl(env)).enabled!==false;
+ const sources=await Promise.allSettled([radarPositions(),(enabled?env.SPOT_WORKER.fetch(new Request(SPOT,{signal:AbortSignal.timeout(15000)})).then(async r=>{if(!r.ok)throw Error('spot HTTP '+r.status);const d:any=await r.json();if(!Array.isArray(d.points))throw Error('spot');return d.points.map((p:any)=>normalize(p,'SPOT')).filter(Boolean)}):Promise.resolve([]))]);
  for(const result of sources)if(result.status==='fulfilled')await save(env,result.value);
  await env.DB.prepare('INSERT INTO sync_state(id,checked_at,unavailable) VALUES(1,?,?) ON CONFLICT(id) DO UPDATE SET checked_at=excluded.checked_at,unavailable=excluded.unavailable').bind(new Date().toISOString(),Number(sources.some(s=>s.status==='rejected'))).run();
  return sources.map((s,i)=>({source:i===0?'radar':'spot',ok:s.status==='fulfilled',...(s.status==='rejected'?{error:String(s.reason?.message||'unavailable')}:{points:s.value.length})}));
 }
 export default {
- async scheduled(event:any,env:any,ctx:any){ctx.waitUntil((async()=>{if(event.cron!=='21,51 * * * *'){try{await env.SPOT_COLLECTOR.collect()}catch{console.error('SPOT collector RPC unavailable')}}await sync(env);if(event.cron==='21,51 * * * *')await collectAis(env,await positions(env),save);await env.DB.batch([env.DB.prepare('DELETE FROM tracking_visits WHERE visited_ms<?').bind(Date.now()-90*86400000),env.DB.prepare('DELETE FROM tracking_sessions WHERE expires_ms<?').bind(Date.now()),env.DB.prepare('DELETE FROM tracking_attempts WHERE expires_ms<?').bind(Date.now())]);})())},
+ async scheduled(event:any,env:any,ctx:any){ctx.waitUntil((async()=>{if(event.cron!=='21,51 * * * *'&&(await spotControl(env)).enabled!==false){try{await env.SPOT_COLLECTOR.collect()}catch{console.error('SPOT collector RPC unavailable')}}await sync(env);if(event.cron==='21,51 * * * *')await collectAis(env,await positions(env),save);await env.DB.batch([env.DB.prepare('DELETE FROM tracking_visits WHERE visited_ms<?').bind(Date.now()-90*86400000),env.DB.prepare('DELETE FROM tracking_sessions WHERE expires_ms<?').bind(Date.now()),env.DB.prepare('DELETE FROM tracking_attempts WHERE expires_ms<?').bind(Date.now())]);})())},
  async fetch(request:Request,env:any){
  const path=new URL(request.url).pathname;
  // Anonymous read-only data already published by the Radar. Never collects on GET.
@@ -74,6 +79,12 @@ export default {
   if(request.method!=='POST')return json({error:'Método não permitido.'},405);
   const raw=await request.text();if(raw.length>3500000)return json({error:'Limite excedido.'},413);
   const data=JSON.parse(raw);
+  if(data.spotControl){
+   if(typeof data.spotControl.enabled!=='boolean')return json({error:'Estado SPOT inválido.'},400);
+   const control={enabled:data.spotControl.enabled,updatedAt:new Date().toISOString()};
+   await env.DB.prepare('INSERT INTO publications(id,data,captured_at) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET data=excluded.data,captured_at=excluded.captured_at').bind('spot-control',JSON.stringify(control),control.updatedAt).run();
+   return json({ok:true,spotControl:control});
+  }
   if(data.shortcut){
    const entry=data.shortcut;
    if(typeof entry.code!=='string'||!/^[A-Za-z0-9_-]{22}$/.test(entry.code)||!await shortcutTarget(entry,env))return json({error:'Atalho inválido.'},400);
@@ -96,7 +107,7 @@ export default {
  const mapConfig=path==='/api/tracking'||path==='/api/shore'?await env.DB.prepare("SELECT data FROM publications WHERE id='map-config'").first():null;
  const mapboxToken=mapConfig?JSON.parse(mapConfig.data).token:null;
  if(path==='/api/tracking'){const pub=await env.DB.prepare("SELECT data FROM publications WHERE id='shore'").first();const schedule=pub?JSON.parse(pub.data).schedule:null;return json({mapboxToken,history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),schedule:schedule?{port:schedule.port,eta:schedule.eta,nextPort:schedule.nextPort}:null,unavailable,storageUnavailable:false,checkedAt:new Date().toISOString()});}
- if(path==='/api/position')return json({history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),retentionDays:90,unavailable,storageUnavailable:false,lastSyncAt:state?.checked_at||null,checkedAt:new Date().toISOString()});
+ if(path==='/api/position')return json({spotControl:await spotControl(env),history,position,sources:['VesselAPI','MarineTraffic','SPOT'].map(s=>[...history].filter(p=>p.source===s).sort(prefer)[0]).filter(Boolean),retentionDays:90,unavailable,storageUnavailable:false,lastSyncAt:state?.checked_at||null,checkedAt:new Date().toISOString()});
  const pub=await env.DB.prepare("SELECT data FROM publications WHERE id='shore'").first();
  if(!pub)return json({error:'Aguardando a primeira publicação do Comandante.'},503);
  return json({mapboxToken,data:JSON.parse(pub.data),positions:history.filter(p=>Date.parse(p.dateTime)>=Date.now()-15*86400000),position,positionUnavailable:unavailable,checkedAt:new Date().toISOString()});

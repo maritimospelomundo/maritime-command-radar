@@ -28,3 +28,20 @@ test('Windy can read positions with a valid key but cannot access shore or impor
   assert.equal((await worker.fetch(new Request('https://example.com/api/position',{method:'POST',headers}),env)).status,403);
  }
 });
+
+test('SPOT control requires service authorization and persists without deleting positions',{skip:!process.env.PORTALS_WORKER_BUNDLE},async()=>{
+ const {default:worker}=await import(process.env.PORTALS_WORKER_BUNDLE);let control=null;
+ const key='s'.repeat(43),hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(key))),b=>b.toString(16).padStart(2,'0')).join('');
+ const env={SYNC_HASH:hash,DB:{prepare(sql){assert.ok(!sql.startsWith('DELETE'));return {bind(...v){return {run:async()=>{control=JSON.parse(v[1]);}}}}}}};
+ const request=(body,auth=true)=>new Request('https://example.com/api/import',{method:'POST',headers:auth?{Authorization:'Bearer '+key}:{},body:JSON.stringify(body)});
+ assert.equal((await worker.fetch(request({spotControl:{enabled:false}},false),env)).status,401);
+ assert.equal((await worker.fetch(request({spotControl:{enabled:'false'}}),env)).status,400);
+ for(const enabled of [false,true]){const r=await worker.fetch(request({spotControl:{enabled}}),env);assert.equal(r.status,200);assert.equal((await r.json()).spotControl.enabled,enabled);assert.equal(control.enabled,enabled)}
+});
+test('SPOT disabled prevents both RPC collection and source fetch on scheduled run',{skip:!process.env.PORTALS_WORKER_BUNDLE},async()=>{
+ const {default:worker}=await import(process.env.PORTALS_WORKER_BUNDLE);let rpc=0,source=0,pending;
+ const old=globalThis.fetch;globalThis.fetch=async()=>Response.json({spotPosition:{history:[]}});
+ const stmt={bind(){return this},first:async()=>({data:JSON.stringify({enabled:false})}),all:async()=>({results:[]}),run:async()=>({meta:{changes:1}})};
+ const env={DB:{prepare:()=>stmt,batch:async()=>[]},SPOT_COLLECTOR:{collect:async()=>{rpc++}},SPOT_WORKER:{fetch:async()=>{source++;return Response.json({points:[]})}}};
+ try{await worker.scheduled({cron:'*/5 * * * *'},env,{waitUntil:p=>pending=p});await pending;assert.equal(rpc,0);assert.equal(source,0);}finally{globalThis.fetch=old}
+});
