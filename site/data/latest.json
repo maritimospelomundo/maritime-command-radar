@@ -3413,17 +3413,17 @@
       "Any validated MarineTraffic notification with observed UTC time and position"
     ],
     "lastKnown": {
-      "dateTime": "2026-11-10T05:10:00Z",
-      "latitude": -32.76433333333333,
-      "longitude": -71.516,
-      "eventType": "Navigational Status Changed",
+      "dateTime": "2026-11-10T05:27:00Z",
+      "latitude": -32.754333333333335,
+      "longitude": -71.52366666666667,
+      "eventType": "Port Departure",
       "sourceType": "terrestrial",
       "positionSource": "TERR-AIS",
-      "sog": 0.3,
-      "cog": 245,
-      "unixTime": 1794287400
+      "sog": 6.1,
+      "cog": 307,
+      "unixTime": 1794288420
     },
-    "checkedAt": "2026-11-10T05:18:57.157Z",
+    "checkedAt": "2026-11-10T05:33:36.110Z",
     "history": [
       {
         "dateTime": "2026-09-10T22:54:00Z",
@@ -4745,9 +4745,31 @@
         "sog": 0.3,
         "cog": 245,
         "unixTime": 1794287400
+      },
+      {
+        "dateTime": "2026-11-10T05:19:00Z",
+        "latitude": -32.76166666666667,
+        "longitude": -71.516,
+        "eventType": "ETA Changed",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 2.4,
+        "cog": 350,
+        "unixTime": 1794287940
+      },
+      {
+        "dateTime": "2026-11-10T05:27:00Z",
+        "latitude": -32.754333333333335,
+        "longitude": -71.52366666666667,
+        "eventType": "Port Departure",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 6.1,
+        "cog": 307,
+        "unixTime": 1794288420
       }
     ],
-    "lastImportedAt": "2026-11-10T05:18:57.157Z"
+    "lastImportedAt": "2026-11-10T05:33:36.110Z"
   },
   "vesselApiPosition": {
     "label": "VesselAPI",
