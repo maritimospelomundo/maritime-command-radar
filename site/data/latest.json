@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-11-10T12:09:03.858Z",
+  "generatedAt": "2026-11-10T12:14:00.382Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -7090,7 +7090,7 @@
       {
         "category": "POSIÇÃO",
         "title": "SPOT priorizado; bateria baixa",
-        "summary": "SPOT: 33°23,533′ S · 072°24,986′ W, observado em 2026-11-10T10:48:20+0000, idade 0 d 1 h 20 min, bateria LOW. MarineTraffic: 0 d 6 h 42 min; VesselAPI: 19 d 12 h 29 min. VesselAPI acima de 24 h; nenhuma posição estimada ou coletada nesta revisão."
+        "summary": "SPOT: 33°23,533′ S · 072°24,986′ W, observado em 2026-11-10T10:48:20+0000, idade 0 d 1 h 25 min, bateria LOW. MarineTraffic: 0 d 6 h 47 min; VesselAPI: 19 d 12 h 34 min. VesselAPI acima de 24 h; nenhuma posição estimada ou coletada nesta revisão."
       },
       {
         "category": "ROTA",
@@ -7148,31 +7148,31 @@
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-      "scope": "Consulta 9 nov.: último semanal localizado 27 out.–2 nov., sem incidentes recebidos na Ásia.",
+      "scope": "Consulta 10 nov.: último semanal localizado 27 out.–2 nov., sem incidentes recebidos na Ásia; nenhum registro posterior comprovado foi inventado.",
       "typeLabel": "Oficial"
     },
     {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/",
-      "scope": "Consulta 9 nov.: publicações #200/#199 em 8 nov. e #198 em 7 nov.; hora dos eventos não confirmada no conteúdo acessível.",
+      "scope": "Consulta 10 nov.: publicações #200/#199 em 8 nov. e #198 em 7 nov. permanecem as três mais recentes localizadas.",
       "typeLabel": "Oficial"
     },
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Consulta 9 nov.; avisos 804/803 de 8 nov. e 802 de 7 nov. (vigência encerrada).",
+      "scope": "Consulta 10 nov.: avisos 804/803 de 8 nov. ainda vigentes nos intervalos publicados; 802 encerrado em 9 nov.",
       "typeLabel": "Oficial"
     },
     {
       "name": "MeteoArmada / Armada de Chile",
       "url": "https://meteoarmada.directemar.cl/",
-      "scope": "Avisos de 5 nov. para Magalhães/oceano adjacente: 35–40 kt, rajadas de 50 kt e mar de até 8 m entre 6–7 nov.",
+      "scope": "Índice público DIRECTEMAR atualizado em 9 nov.: aviso oceânico ao sul de Faro San Pedro até 60°S e aviso de vento/mar local em Magalhães; parâmetros exatos não estavam legíveis nesta consulta e devem ser confirmados no boletim vigente.",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Consulta 9 nov.: HSFAT2 1630Z via OPC, HSFAT1 1030Z e HSFEP1 0430Z via NWS. Links NHC retornaram 403.",
+      "scope": "HSFAT2 1030Z, HSFAT1 0430Z e HSFEP2 0430Z de 10 nov. incorporados com horas originais; produtos substituídos periodicamente e sem projeção editorial.",
       "typeLabel": "Oficial"
     },
     {
@@ -7184,7 +7184,7 @@
     {
       "name": "Baltic Exchange",
       "url": "https://www.balticexchange.com/en/data-services/WeeklyRoundup/tanker/news/2026/tanker-report-week-45.html",
-      "scope": "W45 consultada em 9 nov.: queda em VLCC/Suezmax/Aframax; TCEs de rotas padronizadas, não TC de 1 ano.",
+      "scope": "W45 publicada em 6 nov. e revisada em 10 nov.: queda em VLCC/Suezmax/Aframax; TCEs de rotas padronizadas, não fixtures individuais.",
       "typeLabel": "Oficial"
     },
     {
@@ -7214,7 +7214,7 @@
     {
       "name": "Ship & Bunker — preços mundiais",
       "url": "https://shipandbunker.com/prices",
-      "scope": "Consulta 9 nov. retornou 403; valores de 5 nov. preservados como último dado disponível.",
+      "scope": "Fechamentos públicos de 9 nov.: VLSFO Singapura US$864/t, Rotterdam US$733/t, Fujairah US$881/t e Houston US$750/t.",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -7238,13 +7238,13 @@
     {
       "name": "Mercados públicos — Petrobras RI / B3 / NYSE",
       "url": "https://www.investidorpetrobras.com.br/acoes/",
-      "scope": "Consulta RI em 9 nov. sem cotações legíveis; fechamentos de 5 nov. preservados.",
+      "scope": "Fechamentos públicos de 9 nov.: PETR3 R$51,01; PETR4 R$45,19; PBR US$18,35; PBR.A US$16,31. Preços não implicam mudança operacional.",
       "typeLabel": "Mercado público / complementar"
     },
     {
       "name": "Agência Petrobras",
       "url": "https://agencia.petrobras.com.br/w/negocio/produ%C3%A7%C3%A3o-pr%C3%B3pria-de-%C3%B3leo-e-g%C3%A1s-da-petrobras-atinge-novo-recorde-com-crescimento-de-11-7-em-um-ano",
-      "scope": "Produção e vendas 3T26 publicadas em 28 out.; consulta 9 nov.",
+      "scope": "Produção e vendas 3T26 publicadas em 28 out.; consulta 10 nov. sem novo consolidado posterior.",
       "typeLabel": "Oficial"
     },
     {
@@ -7256,13 +7256,13 @@
     {
       "name": "Transpetro",
       "url": "https://transpetro.com.br/transpetro-institucional/quem-somos/plano-estrategico.htm",
-      "scope": "Notícias públicas consultadas em 9 nov.; sem nova alteração operacional de frota confirmada nesta leitura. Plano anterior preservado.",
+      "scope": "Notícias públicas consultadas em 10 nov.; sem nova alteração operacional de frota confirmada. Plano anterior preservado.",
       "typeLabel": "Oficial"
     },
     {
       "name": "IMO — Port State Control",
       "url": "https://www.imo.org/en/ourwork/msas/pages/portstatecontrol.aspx",
-      "scope": "9 nov.: Paris/Tokyo e Black Sea reconfirmados; Viña preservado com notícia oficial de lançamento, mas texto integral incompleto nesta leitura. Abuja 2027 reconfirmado; Mediterranean mantém anúncio de 2025. Caribbean sem campanha 2026 na página; Indian Ocean Current CIC e USCG com 403, Riyadh com timeout e busca oficial sem campanha nova. Falha de acesso não prova ausência.",
+      "scope": "Consulta 10 nov.: Paris/Tokyo, Viña del Mar e Black Sea ativos; Abuja e Mediterranean anunciados; Indian Ocean, Caribbean e Riyadh sem nova campanha oficial comprovada; USCG permanece regime nacional. Falha de acesso não prova ausência.",
       "typeLabel": "Oficial"
     },
     {
@@ -7286,7 +7286,7 @@
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-      "scope": "13 sistemas preservados. Consulta oficial em 9 nov. confirmou detalhes CHILREP e mudanças ACP A-39/A-40. AMVER/REEFREP retornaram 403; revisão parcial não equivale a verificação de todo VTS mundial.",
+      "scope": "13 sistemas preservados. Consulta oficial em 10 nov. não localizou mudança imediata de limite, formato, frequência ou autoridade; ACP A-42 foi incorporada no reporte do Canal do Panamá. Revisão não equivale a cobrir todo VTS mundial.",
       "typeLabel": "Oficial"
     },
     {
