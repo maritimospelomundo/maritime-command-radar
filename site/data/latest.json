@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-11-14T12:07:42.396Z",
+  "generatedAt": "2026-11-14T12:12:34.203Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -6160,8 +6160,8 @@
       {
         "label": "AÇÃO AGORA",
         "level": "high",
-        "value": "SPOT · 0 d 1 h 35 min",
-        "summary": "SPOT: 40°27,958′ S · 075°1,558′ W, observado em 2026-11-14T10:32:01+0000, idade 0 d 1 h 35 min, bateria GOOD. MarineTraffic: 0 d 20 h 4 min; VesselAPI: 3 d 20 h 5 min · >24 h. Prioridade usa apenas posição observada; sem projeção."
+        "value": "SPOT · 0 d 1 h 40 min",
+        "summary": "SPOT: 40°27,958′ S · 075°1,558′ W, observado em 2026-11-14T10:32:01+0000, idade 0 d 1 h 40 min, bateria GOOD. MarineTraffic: 0 d 20 h 9 min; VesselAPI: 3 d 20 h 10 min · >24 h. Prioridade usa apenas posição observada; sem projeção."
       },
       {
         "label": "PRÓXIMAS 72 H",
@@ -6865,7 +6865,7 @@
         "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
-        "name": "IMO + UKMTO · consulta 13 nov. 2026",
+        "name": "IMO + UKMTO · consulta 14 nov. 2026",
         "url": "https://www.imo.org/en/mediacentre/hottopics/pages/middle-east-highlighted-incidents.aspx"
       }
     },
@@ -6910,7 +6910,7 @@
         "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
-        "name": "Windward · dashboard público · dados de 11 nov.",
+        "name": "Windward · painel público · dados de 13 nov.",
         "url": "https://insights.windward.ai/"
       }
     },
@@ -7098,7 +7098,7 @@
       "region": "Canal de Suez",
       "type": "mandatory",
       "appliesTo": "Todo navio solicitando trânsito",
-      "when": "ETA/pre-arrival, chegada, inspeção e durante comboio conforme SCA. Consulta de 12 nov.: circular mais recente localizada permanece 29/2026, de 28 set.",
+      "when": "ETA/pre-arrival, chegada, inspeção e durante comboio conforme SCA. Consulta de 14 nov.: circular mais recente localizada permanece 29/2026, de 28 set.",
       "report": "Particulares, dimensões/calado, carga, certificados, defeitos e trânsito",
       "authority": "Suez Canal Authority via agente",
       "source": {
@@ -7112,7 +7112,7 @@
       "region": "Canal do Panamá",
       "type": "mandatory",
       "appliesTo": "Todo navio solicitando booking/trânsito",
-      "when": "ETA e pre-arrival nos prazos ACP; atualizações, booking e reportes de chegada/trânsito. A-42 está em vigor para datas de booking desde 12 nov.; nenhum aviso posterior foi localizado na consulta de 12 nov.",
+      "when": "ETA e pre-arrival nos prazos ACP; atualizações, booking e reportes de chegada/trânsito. A-42 está em vigor para datas de booking desde 14 nov.; nenhum aviso posterior foi localizado na consulta de 14 nov.",
       "report": "Particulares, calado, carga perigosa, certificados, defeitos e booking. A-42: 34 slots/dia anunciados e calado Neo de 15,24 m TFW; booking continua sendo a única garantia de data.",
       "authority": "Autoridad del Canal de Panamá via agente",
       "source": {
@@ -7133,7 +7133,7 @@
     "end": "2026-11-30",
     "statusLabel": "4 ATIVAS · 2 ANUNCIADAS",
     "pulseLabel": "4 CICs ativas",
-    "description": "Quatro CICs Cargo Securing ativas; duas anunciadas, três sem confirmação e USCG nacional. Pesquisa própria em 13 nov.; evidência auxiliar de 31 out. estava vencida e foi tratada apenas como histórico.",
+    "description": "Quatro CICs Cargo Securing ativas; duas anunciadas, três sem confirmação e USCG nacional. Pesquisa própria em 14 nov.; evidência auxiliar de 31 out. estava vencida e foi tratada apenas como histórico.",
     "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
     "readiness": [
       "Preparar matriz PSC específica do próximo porto, regime e histórico do navio.",
@@ -7142,7 +7142,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-    "note": "13 nov.: Paris/Tokyo reconfirmados; Viña e Black Sea preservados com suas publicações oficiais. Abuja endossou Cargo Securing 2026 e aprovou a CIC 2027 de espaços confinados, mas não publicou janela/questionário regional 2026. Mediterranean permanece anunciada. Caribbean, Indian Ocean e Riyadh seguem sem nova campanha oficial comprovada; USCG permanece nacional. Falha de acesso não prova ausência.",
+    "note": "14 nov.: Paris/Tokyo reconfirmados; Viña e Black Sea preservados com suas publicações oficiais. Abuja endossou Cargo Securing 2026 e aprovou a CIC 2027 de espaços confinados, mas não publicou janela/questionário regional 2026. Mediterranean permanece anunciada. Caribbean, Indian Ocean e Riyadh seguem sem nova campanha oficial comprovada; USCG permanece nacional. Falha de acesso não prova ausência.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -7552,7 +7552,7 @@
       {
         "category": "POSIÇÃO",
         "title": "SPOT priorizado; VesselAPI acima de 24 horas",
-        "summary": "SPOT: 40°27,958′ S · 075°1,558′ W, observado em 2026-11-14T10:32:01+0000, idade 0 d 1 h 35 min, bateria GOOD. MarineTraffic: 0 d 20 h 4 min; VesselAPI: 3 d 20 h 5 min · >24 h. Nenhuma posição foi estimada ou coletada nesta revisão."
+        "summary": "SPOT: 40°27,958′ S · 075°1,558′ W, observado em 2026-11-14T10:32:01+0000, idade 0 d 1 h 40 min, bateria GOOD. MarineTraffic: 0 d 20 h 9 min; VesselAPI: 3 d 20 h 10 min · >24 h. Nenhuma posição foi estimada ou coletada nesta revisão."
       },
       {
         "category": "ROTA",
@@ -7777,7 +7777,7 @@
     },
     {
       "name": "Dryad Global — análise pública",
-      "url": "https://channel16.dryadglobal.com/somali-piracy-resurgence-understanding-the-risk-to-commercial-shipping",
+      "url": "https://channel16.dryadglobal.com/strait-of-hormuz-security-sustained-threats-raise-the-stakes-for-commercial-shipping",
       "scope": "Análise aberta de 13 nov. avalia como mais provável pressão sustentada sobre Ormuz; cenário atribuído, corroborado apenas quando há fonte primária, sem criar novo incidente.",
       "typeLabel": "Indústria / complementar"
     },
