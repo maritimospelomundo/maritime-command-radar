@@ -13,11 +13,11 @@
     "endpoint": "",
     "mapUrl": "https://maps.findmespot.com/s/VCV3",
     "lastKnown": {
-      "id": "2526583212",
-      "unixTime": 1794770643,
-      "dateTime": "2026-11-15T19:24:03+0000",
-      "latitude": -46.92027,
-      "longitude": -76.02283,
+      "id": "2526647817",
+      "unixTime": 1794785006,
+      "dateTime": "2026-11-15T23:23:26+0000",
+      "latitude": -47.74106,
+      "longitude": -76.17194,
       "messageType": "UNLIMITED-TRACK",
       "batteryState": "GOOD",
       "altitude": 26
@@ -4122,9 +4122,49 @@
         "messageType": "UNLIMITED-TRACK",
         "batteryState": "GOOD",
         "altitude": 26
+      },
+      {
+        "id": "2526600520",
+        "unixTime": 1794774257,
+        "dateTime": "2026-11-15T20:24:17+0000",
+        "latitude": -47.13234,
+        "longitude": -76.06887,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 32
+      },
+      {
+        "id": "2526615821",
+        "unixTime": 1794777830,
+        "dateTime": "2026-11-15T21:23:50+0000",
+        "latitude": -47.33374,
+        "longitude": -76.10538,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 38
+      },
+      {
+        "id": "2526647876",
+        "unixTime": 1794781406,
+        "dateTime": "2026-11-15T22:23:26+0000",
+        "latitude": -47.54129,
+        "longitude": -76.13023,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 0
+      },
+      {
+        "id": "2526647817",
+        "unixTime": 1794785006,
+        "dateTime": "2026-11-15T23:23:26+0000",
+        "latitude": -47.74106,
+        "longitude": -76.17194,
+        "messageType": "UNLIMITED-TRACK",
+        "batteryState": "GOOD",
+        "altitude": 26
       }
     ],
-    "lastSyncAt": "2026-11-15T20:15:19.735Z"
+    "lastSyncAt": "2026-11-16T00:00:19.744Z"
   },
   "marineTrafficPosition": {
     "label": "MarineTraffic",
