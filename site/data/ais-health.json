@@ -10,7 +10,7 @@
   "authBlocked": false,
   "collector": "cloudflare-cron",
   "lastDecision": {
-    "at": "2026-11-18T18:22:02.460Z",
+    "at": "2026-11-19T00:51:57.907Z",
     "reason": "interval_or_normal_budget",
     "area": null
   }
