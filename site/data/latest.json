@@ -5443,17 +5443,17 @@
       "Any validated MarineTraffic notification with observed UTC time and position"
     ],
     "lastKnown": {
-      "dateTime": "2026-11-23T03:08:00Z",
-      "latitude": -32.454,
-      "longitude": -49.75233333333333,
-      "eventType": "Position Report",
-      "sourceType": "satellite",
-      "positionSource": "SAT-AIS",
-      "sog": 11.6,
+      "dateTime": "2026-11-23T15:12:00Z",
+      "latitude": -30.345666666666666,
+      "longitude": -48.107,
+      "eventType": "Noon Position Report",
+      "sourceType": "terrestrial",
+      "positionSource": "TERR-AIS",
+      "sog": 12.3,
       "cog": 32,
-      "unixTime": 1795403280
+      "unixTime": 1795446720
     },
-    "checkedAt": "2026-11-23T03:21:34.521Z",
+    "checkedAt": "2026-11-23T15:24:44.071Z",
     "history": [
       {
         "dateTime": "2026-09-10T22:54:00Z",
@@ -7259,9 +7259,20 @@
         "sog": 11.6,
         "cog": 32,
         "unixTime": 1795403280
+      },
+      {
+        "dateTime": "2026-11-23T15:12:00Z",
+        "latitude": -30.345666666666666,
+        "longitude": -48.107,
+        "eventType": "Noon Position Report",
+        "sourceType": "terrestrial",
+        "positionSource": "TERR-AIS",
+        "sog": 12.3,
+        "cog": 32,
+        "unixTime": 1795446720
       }
     ],
-    "lastImportedAt": "2026-11-23T03:21:34.521Z"
+    "lastImportedAt": "2026-11-23T15:24:44.071Z"
   },
   "vesselApiPosition": {
     "label": "VesselAPI",
