@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "generatedAt": "2026-11-23T12:04:08.996Z",
+  "generatedAt": "2026-11-24T12:06:30.373Z",
   "timezone": "UTC",
   "status": {
     "code": "operational",
@@ -8388,20 +8388,20 @@
       {
         "label": "AÇÃO AGORA",
         "level": "live",
-        "value": "SPOT · 0 d 5 h 0 min",
-        "summary": "Fonte priorizada: SPOT, pelo UTC original mais recente. SPOT: 31°47,717′ S · 049°14,603′ W, observado em 2026-11-23T07:03:18+0000, idade 0 d 5 h 0 min, bateria GOOD. MarineTraffic: 32°27,240′ S · 049°45,140′ W, observado em 2026-11-23T03:08:00Z, idade 0 d 8 h 56 min. VesselAPI: 34°27,280′ S · 072°51,251′ W, observado em 2026-11-10T16:01:44.000Z, idade 12 d 20 h 2 min · >24 h. Nenhuma posição foi estimada ou coletada nesta revisão; seleção usa somente lastKnown/history consolidados válidos, sem projeção."
+        "value": "MarineTraffic · 0 d 9 h 3 min",
+        "summary": "Fonte priorizada: MarineTraffic, pelo UTC original mais recente. MarineTraffic: 28°17.330′ S · 046°32.210′ W, observado em 2026-11-24T03:03:00Z, idade 0 d 9 h 3 min. VesselAPI: 28°17.327′ S · 046°32.206′ W, observado em 2026-11-24T03:02:50.000Z, idade 0 d 9 h 3 min. SPOT: 28°18.265′ S · 046°32.913′ W, observado em 2026-11-24T02:57:43+0000, idade 0 d 9 h 8 min, bateria GOOD. Nenhuma posição foi estimada, projetada ou coletada nesta revisão; a seleção usa somente lastKnown/history consolidados válidos."
       },
       {
         "label": "PRÓXIMAS 72 H",
         "level": "high",
-        "value": "NAVAREA V 0730; NOAA/CHM 23 nov.",
-        "summary": "Plotar a área STS do V 0730, o reboque V 0729 e a boia V 0728. NOAA publica hurricane-force/storm/gales; CHM mantém o aviso 809 até 231500Z e o Meteoromarinha de 23 nov. como referência."
+        "value": "NAVAREA V 0734 / 0732 / 0731; NOAA/CHM 24 nov.",
+        "summary": "Plotar o objeto à deriva V 0734, as áreas perigosas V 0732 e o levantamento sísmico V 0731. NOAA mantém hurricane-force/storm/gales; CHM 810 cobre nevoeiro no Sul até 241330Z."
       },
       {
         "label": "PREPARAR",
         "level": "critical",
         "value": "Ormuz / Golfo de Omã · UKMTO 215–217",
-        "summary": "UKMTO 217 acrescenta incidente entre petroleiro e forças militares, após dois petroleiros atingidos por projéteis em 21 nov. Revisar BMP, CSO, incêndio/avaria, citadel, emergência e reportes."
+        "summary": "UKMTO 217 permanece o mais recente, após dois petroleiros atingidos em 21 nov. Revisar BMP, CSO, incêndio/avaria, citadel, emergência e reportes."
       }
     ],
     "modules": [
@@ -8409,9 +8409,9 @@
         "id": "msi",
         "icon": "⌁",
         "label": "NAVAREA / METAREA",
-        "value": "NAVAREA · 1.211 registros publicados",
+        "value": "NAVAREA · 1.234 registros publicados",
         "status": "live",
-        "summary": "Base pública recebida até 23 nov. 0600Z e verificada no CHM às 0957Z. V 0730, V 0729 e V 0728 consumidos da base consolidada, sem nova ingestão, sem alterar navarea.json e sem acessar Gmail.",
+        "summary": "Base pública recebida até 24 nov. 0600Z e verificada no CHM às 0937Z. V 0734, V 0732 e V 0731 consumidos da base consolidada, sem nova ingestão, sem alterar navarea.json e sem acessar Gmail.",
         "source": {
           "name": "Base NAVAREA pública do Radar",
           "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
@@ -8459,9 +8459,9 @@
         "label": "CHOKEPOINTS",
         "value": "Ormuz / Golfo de Omã · UKMTO 215–217",
         "status": "high",
-        "summary": "UKMTO 217 relata incidente entre petroleiro e forças militares em 22 nov.; 215–216 registram petroleiros atingidos por projéteis em 21 nov. Aplicar BMP e revisar contingências.",
+        "summary": "UKMTO 217 permanece o aviso mais recente; Windward de 24 nov. atribui 5 travessias em Ormuz no dia 23, 2 delas dark. Aplicar BMP e revisar contingências.",
         "source": {
-          "name": "UKMTO · consulta 23 nov.",
+          "name": "UKMTO + Windward · consulta 24 nov.",
           "url": "https://www.ukmto.org/recent-incidents"
         }
       },
@@ -8504,8 +8504,8 @@
     ]
   },
   "market": {
-    "week": "W45",
-    "sourceLabel": "Baltic W45 (6 nov.) para rotas spot; BDTI/BCTI e VLSFO com último fechamento público de 20 nov. Benchmarks TC de 1 ano permanecem nas últimas referências públicas W42/W41.",
+    "week": "W47",
+    "sourceLabel": "Baltic W47 (20 nov.) para rotas spot; BDTI/BCTI e VLSFO com último fechamento público de 23 nov. Benchmarks TC de 1 ano permanecem nas últimas referências públicas W42/W41.",
     "benchmarks": [
       {
         "segment": "VLCC",
@@ -8534,11 +8534,11 @@
     ],
     "spotSignal": {
       "segment": "VLCC / Suezmax / Aframax",
-      "label": "spot · Baltic W45",
-      "valueLabel": "Recuo em VLCC, Suezmax e Aframax",
-      "summary": "Baltic W45: TD3C US$ 1.303.616/dia; TD20 cerca de US$ 224.500/dia; TD7 pouco abaixo de US$ 242.600/dia e TD19 cerca de US$ 100.300/dia. O monitor de 10 nov. confirma correção mais forte a oeste de Suez; TCEs de rotas padronizadas não equivalem a TC de 1 ano ou fixture individual.",
-      "confidenceLabel": "Roundup oficial semanal; diferenças de rota, bunker e war-risk impedem comparação direta com economia do navio.",
-      "sourceLabel": "Baltic Exchange · Tanker report W45 · consultado em 12 nov."
+      "label": "spot · Baltic W47",
+      "valueLabel": "Alta em VLCC, Suezmax e Aframax",
+      "summary": "Baltic W47: TD3C cerca de US$ 1,080 milhão/dia; TD20 aproximadamente US$ 165.677/dia; TD7 perto de US$ 183.937/dia e TD19 cerca de US$ 134.100/dia. TCEs de rotas padronizadas não equivalem a TC de 1 ano ou fixture individual.",
+      "confidenceLabel": "Roundup oficial semanal; diferenças de rota, bunker, war-risk e metodologia impedem comparação direta com a economia do navio.",
+      "sourceLabel": "Baltic Exchange · Tanker report W47 · 20 nov."
     },
     "history": {
       "weeks": [
@@ -8595,13 +8595,13 @@
     "indices": [
       {
         "name": "BDTI",
-        "value": 5081,
-        "previous": 4812
+        "value": 5084,
+        "previous": 5081
       },
       {
         "name": "BCTI",
-        "value": 2581,
-        "previous": 2612
+        "value": 2511,
+        "previous": 2581
       }
     ]
   },
@@ -8613,6 +8613,29 @@
       "icon": "☠",
       "description": "Consulta de 22 nov.: o relatório semanal ReCAAP de 10–16 nov. permanece o mais recente localizado e não publica ocorrência posterior ao CAT 3 de 10 nov. Os eventos de 4 e 2 nov. permanecem os seguintes mais recentes comprovados, preservados com as datas originais.",
       "items": [
+        {
+          "id": "recaap-soms-2026-11-20",
+          "date": "2026-11-20",
+          "region": "Estreitos de Malaca e Singapura · faixa eastbound do TSS",
+          "level": "high",
+          "headline": "ReCAAP: CAT 4 em petroleiro no SOMS",
+          "summary": "Três perpetradores foram vistos no poop deck de um petroleiro em trânsito, 8,9 MN de Pulau Iyu Kecil, às 2207 locais. O alarme geral foi acionado; ninguém se feriu e nada foi furtado.",
+          "details": "O relatório semanal de 17–23 nov. classificou o evento como CAT 4, a categoria de menor significância. Armas não foram informadas; o navio seguia na faixa eastbound do TSS.",
+          "action": "Intensificar vigia, iluminação, CCTV e controle de acessos; manter portas externas protegidas e reportar imediatamente ao VTIS, Estado costeiro e bandeira.",
+          "geo": {
+            "latitude": 1.15,
+            "longitude": 103.6
+          },
+          "map": {
+            "x": 78.78,
+            "y": 49.36,
+            "label": "SOMS eastbound · área oficial aproximada"
+          },
+          "source": {
+            "name": "ReCAAP ISC · Weekly Report 17–23 nov. 2026",
+            "url": "https://www.recaap.org/resources/ck/files/reports/weekly/2026/ReCAAP%20ISC%20Weekly%20Report%20(17-23%20Nov)%202026(1).pdf"
+          }
+        },
         {
           "id": "recaap-soms-2026-11-10",
           "date": "2026-11-10",
@@ -8650,25 +8673,6 @@
             "name": "IMB 058-26 + ReCAAP IA 02/2026",
             "url": "https://www.recaap.org/resources/ck/files/alerts/2026/ReCAAP%20ISC%20IA%2002-2026%20Sea%20Robbery%20Incidents%20in%20Straits%20of%20Malacca%20%20Singapore_10%20Nov%2026.pdf"
           }
-        },
-        {
-          "id": "recaap-singapore-2026-11-02",
-          "date": "2026-11-02",
-          "region": "Estreito de Singapura · 9,7 MN de Pulau Cula, Indonésia",
-          "level": "high",
-          "headline": "ReCAAP: roubo CAT 3 com tripulante ferido",
-          "summary": "Três pessoas abordaram um graneleiro em trânsito na faixa eastbound; uma portava objeto semelhante a arma, peças de máquinas foram furtadas e um tripulante sofreu ferimento leve na mão.",
-          "details": "Ocorrência às 2125 local de 2 nov., reconfirmada no IA 02/2026. A posição exibida representa somente a área ampla reportada.",
-          "action": "Intensificar vigia, iluminação e controle de acessos; manter portas externas protegidas, preparar atendimento médico e reportar imediatamente ao VTIS e às autoridades costeiras.",
-          "map": {
-            "x": 78.65,
-            "y": 49.35,
-            "label": "Pulau Cula · área aproximada"
-          },
-          "source": {
-            "name": "ReCAAP ISC · IA 02/2026",
-            "url": "https://www.recaap.org/resources/ck/files/alerts/2026/ReCAAP%20ISC%20IA%2002-2026%20Sea%20Robbery%20Incidents%20in%20Straits%20of%20Malacca%20%20Singapore_10%20Nov%2026.pdf"
-          }
         }
       ]
     },
@@ -8680,59 +8684,59 @@
       "description": "Produtos oficiais substitutos consultados em 22 nov.: HSFEPI 1145Z publica hurricane-force warning de 50–65 kt e mar de 7–14 m; HSFAT1 1030Z publica três gale warnings, com mar de até 8 m; HSFAT2 1030Z não contém warning, mas prevê 20–30 kt e mar de 3–4 m no Atlântico tropical. São previsões substituídas periodicamente.",
       "items": [
         {
-          "id": "noaa-hsfepi-2026-11-23",
-          "date": "2026-11-23",
-          "region": "Pacífico Norte · METAREA XII",
+          "id": "noaa-hsfepi-2026-11-24",
+          "date": "2026-11-24",
+          "region": "Pacífico Norte central e leste",
           "level": "critical",
-          "headline": "NOAA: hurricane-force e storm warnings no Pacífico Norte",
-          "summary": "HSFEPI de 23 nov., 1145 UTC, prevê 50–65 kt e mar significativo de 6–12 m no sistema próximo à Linha de Data; outro sistema tem 35–50 kt e mar de até 14 m.",
-          "details": "O horizonte de 24 horas inclui baixa de 981 hPa perto de 43N171W e complexo de 971 hPa perto de 51N143W/44N142W. São previsões sinóticas; obter o sucessor antes da aproximação.",
+          "headline": "NOAA: hurricane-force e mar até 12 m no Pacífico Norte",
+          "summary": "HSFEPI de 24 nov., 0545 UTC, mantém aviso de hurricane-force de 50–65 kt e mar de 5–10 m perto de 44N175W; outros sistemas têm storm-force e mar significativo de até 12 m.",
+          "details": "A previsão de 24 h leva o primeiro sistema a 42N157W com mar de 6–11 m. Produto substituído a cada seis horas; os limites completos devem ser plotados no boletim vigente.",
           "action": "Plotar as áreas integrais, reavaliar rota, velocidade, esforços e amarrações; restringir convés e obter o boletim sucessor.",
           "map": {
-            "x": 2.2,
-            "y": 26,
-            "label": "Pacífico Norte · área sinótica aproximada"
+            "x": 1.39,
+            "y": 25.56,
+            "label": "Pacífico Norte · sistema próximo à Linha de Data"
           },
           "source": {
-            "name": "NOAA/OPC · HSFEPI · 23 nov. 1145Z",
+            "name": "NOAA/OPC · HSFEPI · 24 nov. 0545Z",
             "url": "https://ocean.weather.gov/shtml/NFDHSFEPI.php"
           }
         },
         {
-          "id": "noaa-hsfat1-2026-11-23",
-          "date": "2026-11-23",
-          "region": "Atlântico Norte · METAREA IV",
+          "id": "noaa-hsfat1-2026-11-24",
+          "date": "2026-11-24",
+          "region": "Atlântico Norte",
           "level": "high",
-          "headline": "NOAA: storm, gales e freezing spray no Atlântico Norte",
-          "summary": "HSFAT1 de 23 nov., 1030 UTC, prevê storm warning de 35–50 kt e mar de 3–6 m, além de quatro áreas de gale e freezing spray moderado a forte.",
-          "details": "Os sistemas abrangem o Atlântico oeste, entorno da Groenlândia e águas de altas latitudes. Conferir polígonos, gelo e o boletim sucessor antes da aproximação.",
+          "headline": "NOAA: storm warnings no Atlântico Norte",
+          "summary": "HSFAT1 de 24 nov., 1030 UTC, prevê 35–50 kt e mar de 4–7,5 m nos sistemas do Atlântico Norte, além de áreas de gale e freezing spray moderado a forte.",
+          "details": "Os centros e quadrantes mudam no horizonte de 48 h; o produto é substituído a cada seis horas.",
           "action": "Revalidar weather routing, velocidade, amarrações e trabalho no convés; obter o produto sucessor.",
           "map": {
-            "x": 37,
-            "y": 17.5,
-            "label": "Atlântico Norte · área ampla aproximada"
+            "x": 39.44,
+            "y": 16.67,
+            "label": "Atlântico Norte · área ampla de storm/gales"
           },
           "source": {
-            "name": "NOAA/OPC · HSFAT1 · 23 nov. 1030Z",
+            "name": "NOAA/OPC · HSFAT1 · 24 nov. 1030Z",
             "url": "https://ocean.weather.gov/shtml/NFDHSFAT1.php"
           }
         },
         {
-          "id": "noaa-hsfat2-2026-11-23",
-          "date": "2026-11-23",
-          "region": "Golfo do México e Atlântico tropical · METAREA IV",
+          "id": "noaa-hsfat2-2026-11-24",
+          "date": "2026-11-24",
+          "region": "Golfo do México / Atlântico tropical",
           "level": "high",
-          "headline": "NOAA: gale warning no Golfo do México",
-          "summary": "HSFAT2 de 23 nov., 1030 UTC, prevê vento NW/N de 30–35 kt e mar de 3,5–4,5 m junto a Veracruz no horizonte de 48 horas.",
-          "details": "O produto também prevê vento E 20–30 kt e mar de 3–4,5 m no Atlântico tropical. É substituído a cada seis horas; obter o sucessor antes da aproximação.",
-          "action": "Plotar as áreas, revalidar weather routing, restrições de convés e aproximações costeiras; obter o boletim sucessor.",
+          "headline": "NOAA: gale junto a Veracruz",
+          "summary": "HSFAT2 de 24 nov., 1030 UTC, prevê vento NW/N de 30–40 kt e mar de 3,5–4,5 m junto a Veracruz no horizonte de 18–24 horas.",
+          "details": "A frente fria avança pelo Golfo; os limites completos e o boletim sucessor devem ser conferidos antes de aproximações costeiras.",
+          "action": "Plotar a área, revalidar weather routing, restrições de convés e aproximações costeiras; obter o boletim sucessor.",
           "map": {
-            "x": 24.8,
-            "y": 39.5,
-            "label": "Golfo do México · área de gale aproximada"
+            "x": 23.33,
+            "y": 37.78,
+            "label": "Golfo do México · costa de Veracruz"
           },
           "source": {
-            "name": "NOAA/NHC · HSFAT2 · 23 nov. 1030Z",
+            "name": "NOAA/NHC · HSFAT2 · 24 nov. 1030Z",
             "url": "https://ocean.weather.gov/shtml/MIAHSFAT2.php"
           }
         }
@@ -8746,22 +8750,41 @@
       "description": "Consulta oficial de 22 nov.: o aviso 808 expirou às 0600Z e nenhum sucessor foi localizado na página de avisos. O Meteoromarinha válido de 221200Z a 231200Z é o registro atual; 808 e 807 permanecem com suas datas originais e marcados como históricos.",
       "items": [
         {
-          "id": "chm-meteoromarinha-2026-11-23",
-          "date": "2026-11-23",
-          "region": "METAREA V · costa e Atlântico Sul",
+          "id": "chm-meteoromarinha-2026-11-24",
+          "date": "2026-11-24",
+          "region": "Costa e áreas oceânicas brasileiras",
           "level": "medium",
-          "headline": "CHM: cavados e frente fria no Atlântico Sul",
-          "summary": "Meteoromarinha de 23 nov. analisa cavados e frente fria de 25S040W a 37S022W, movendo-se para NE a 10 nós; a previsão inclui pancadas fortes e trovoadas isoladas na área Bravo.",
-          "details": "Para 231200–241200Z, Bravo tem vento SE/NE força 3–5, rajadas 6–7 e ondas de 0,5–1,5 m; condições variam por subárea e o texto integral deve ser consultado.",
+          "headline": "Meteoromarinha: frente fria e cavados no Atlântico Sul",
+          "summary": "Meteoromarinha de 24 nov. analisa alta de 1018 hPa em 32S033W, cavados no Atlântico Sul e frente fria de 29S020W a 24S034W movendo-se para E/NE a 5 nós.",
+          "details": "A leitura é sinótica e não substitui a previsão por área, avisos vigentes nem as observações de bordo.",
           "action": "Confrontar o boletim com a rota, radar e observações de bordo; obter o sucessor antes da aproximação costeira.",
           "map": {
-            "x": 42.5,
-            "y": 68,
-            "label": "Atlântico Sul · marcador sinótico aproximado"
+            "x": 40.83,
+            "y": 67.78,
+            "label": "Atlântico Sul · análise sinótica ampla"
           },
           "source": {
-            "name": "CHM · Meteoromarinha · 23 nov. 0000Z",
+            "name": "CHM · Meteoromarinha · 24 nov. 0000Z",
             "url": "https://www.marinha.mil.br/chm/dados-do-smm-meteoromarinha/previsao-24-horas"
+          }
+        },
+        {
+          "id": "chm-810-2026",
+          "date": "2026-11-23",
+          "region": "Chuí a Tramandaí · até 40 MN da costa",
+          "level": "medium",
+          "headline": "CHM 810/2026: nevoeiros esparsos no Sul",
+          "summary": "Aviso de baixa visibilidade por nevoeiros esparsos entre Chuí e Tramandaí, até 40 MN da costa, válido de 240400Z a 241330Z.",
+          "details": "Aviso emitido em 23 nov. às 1200Z; validade termina em 24 nov. às 1330Z, salvo sucessor oficial.",
+          "action": "Aplicar procedimentos de visibilidade restrita, reforçar vigia, radar/ARPA e sinalização sonora; obter o sucessor antes de entrar na área.",
+          "map": {
+            "x": 36.11,
+            "y": 67.5,
+            "label": "Chuí a Tramandaí · até 40 MN"
+          },
+          "source": {
+            "name": "CHM · Aviso 810/2026 · 23 nov.",
+            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
           }
         },
         {
@@ -8780,25 +8803,6 @@
           },
           "source": {
             "name": "CHM · Aviso 809/2026 · 22 nov.",
-            "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
-          }
-        },
-        {
-          "id": "chm-808-2026",
-          "date": "2026-11-19",
-          "region": "Área Delta oceânica · 18,5°S 037,9°W a 24,9°S 036,9°W",
-          "level": "medium",
-          "headline": "CHM 808: vento NE/N força 7, rajadas 8",
-          "summary": "Área oceânica Delta entre 20,4°S 040,1°W, 21,7°S 037,7°W, 25,1°S 039,3°W e 23,3°S 041,6°W; vento NE/N força 7 com rajadas força 8.",
-          "details": "Emitido às 191500Z; vigorou de 201800Z até 220600Z. Expirado antes deste snapshot; o marcador é referência aproximada e não substitui o polígono oficial.",
-          "action": "Não tratar como vigente; consultar o Meteoromarinha e obter eventual aviso sucessor no CHM.",
-          "map": {
-            "x": 39.9,
-            "y": 62,
-            "label": "Delta · polígono aproximado"
-          },
-          "source": {
-            "name": "CHM · Aviso 808/2026",
             "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo"
           }
         }
@@ -8878,59 +8882,63 @@
       "description": "Base pública consolidada recebida até 22 nov. 06:00 UTC, com 1.200 registros, e verificada no CHM às 09:56 UTC. V 0730, V 0729 e V 0728 são os três avisos V mais recentes publicados e confirmados. A origem NautoShark foi preservada na base pública, sem acessar Gmail nem alterar navarea.json.",
       "items": [
         {
-          "id": "navarea-v-0730-2026",
-          "date": "2026-11-22",
-          "region": "Sul de Santos · área STS da Bacia de Santos",
+          "id": "navarea-v-0734-2026",
+          "date": "2026-11-23",
+          "region": "Norte do Piauí",
           "level": "high",
-          "headline": "NAVAREA V 0730: operação STS ao sul de Santos",
-          "summary": "Operação ship-to-ship publicada para a área STS da Bacia de Santos entre 230301Z nov. e 010301Z dez. 2026.",
-          "details": "Recebido às 0600 UTC de 22 nov. e confirmado no CHM às 0957 UTC de 23 nov.; cancelamento previsto para 020301Z dez. O aviso não fornece coordenadas, portanto a área não deve ser inferida como posição precisa.",
-          "action": "Obter o texto/cartas oficiais, confirmar a área STS com a autoridade e manter vigia, distância segura e coordenação antes da aproximação.",
+          "headline": "NAVAREA V 0734: cilindro metálico à deriva",
+          "summary": "Objeto à deriva descrito como cilindro metálico teve última posição publicada em 01°29,05′S 040°03,60′W; navios nas proximidades foram solicitados a procurar, avistar e reportar.",
+          "details": "Aviso confirmado na atualização CHM de 24 nov. 0300; cancelamento programado para 270145Z nov., salvo alteração oficial.",
+          "action": "Plotar a última posição, reforçar vigia visual/radar e reportar avistamento à autoridade indicada no texto oficial; não projetar deriva.",
+          "geo": {
+            "latitude": -1.4841666667,
+            "longitude": -40.06
+          },
           "map": {
-            "x": 37.8,
-            "y": 63.9,
-            "label": "Bacia de Santos · marcador aproximado da região, não posição do evento"
+            "x": 38.87,
+            "y": 50.82,
+            "label": "Norte do Piauí · última posição reportada"
           },
           "source": {
-            "name": "NAVAREA V 0730 · base pública + verificação CHM · 23 nov.",
+            "name": "NAVAREA V 0734 · base pública + CHM · 24 nov.",
             "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
           }
         },
         {
-          "id": "navarea-v-0729-2026",
-          "date": "2026-11-21",
-          "region": "Costa do Rio de Janeiro · 22°49,10′S 043°06,62′W a 21°51,47′S 041°00,83′W",
+          "id": "navarea-v-0732-2026",
+          "date": "2026-11-23",
+          "region": "Nordeste da Ilha de Marajó",
           "level": "high",
-          "headline": "NAVAREA V 0729: reboque com 220 m na costa do RJ",
-          "summary": "Rebocador reboca barcaça entre os pontos publicados, com comprimento total de reboque de 220 m e velocidade informada de 4 nós.",
-          "details": "Recebido às 0600 UTC de 21 nov. e confirmado no CHM em 23 nov.; cancelamento previsto para 231400Z nov. Os pontos indicam o corredor publicado, não posição instantânea.",
-          "action": "Plotar o corredor, manter ampla distância, vigia e contato antecipado; confirmar posição e condição do reboque antes da aproximação.",
+          "headline": "NAVAREA V 0732: áreas perigosas em 27–28 nov.",
+          "summary": "Duas áreas perigosas à navegação foram publicadas a nordeste da Ilha de Marajó para 271100Z–282200Z nov.",
+          "details": "Aviso confirmado na atualização CHM de 24 nov. 0300. A ordem dos vértices exige conferência no texto e nas cartas oficiais.",
+          "action": "Plotar todos os vértices do aviso oficial, manter-se fora durante a ativação e confirmar vigência antes da aproximação.",
           "map": {
-            "x": 39.3,
-            "y": 61.6,
-            "label": "Costa do RJ · corredor aproximado"
+            "x": 36.72,
+            "y": 49.61,
+            "label": "Nordeste da Ilha de Marajó · áreas do aviso"
           },
           "source": {
-            "name": "NAVAREA V 0729 · base pública + verificação CHM · 23 nov.",
+            "name": "NAVAREA V 0732 · base pública + CHM · 24 nov.",
             "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
           }
         },
         {
-          "id": "navarea-v-0728-2026",
-          "date": "2026-11-21",
-          "region": "Campo de Campos · 22°14,59′S 039°32,98′W",
+          "id": "navarea-v-0731-2026",
+          "date": "2026-11-23",
+          "region": "Cabo Orange a Cabo Gurupi",
           "level": "high",
-          "headline": "NAVAREA V 0728: boia meteo-oceanográfica e zona de 500 m",
-          "summary": "Boia AXYS 3M para coleta de dados meteorológicos, com refletor-radar e luz amarela Fl(5)Y 20s, foi publicada na posição informada; manter 500 m de distância.",
-          "details": "Recebido às 0600 UTC de 21 nov. e confirmado no CHM em 23 nov.; cancelamento previsto para 192000Z maio 2027.",
-          "action": "Plotar a posição, manter no mínimo 500 m e confirmar o aviso e sua vigência antes da aproximação.",
+          "headline": "NAVAREA V 0731: levantamento sísmico prolongado",
+          "summary": "Levantamento sísmico com quatro embarcações e reboque de 12 cabos de 10.000 m foi publicado entre Cabo Orange e Cabo Gurupi, de 16 nov. 2026 a 5 dez. 2027.",
+          "details": "Aviso confirmado na atualização CHM de 24 nov. 0300 e substitui/cancela o V 0716/2026.",
+          "action": "Plotar o polígono integral, manter amplo afastamento do conjunto rebocado e coordenar cedo por VHF; confirmar posição operacional atual.",
           "map": {
-            "x": 40.7,
-            "y": 61.7,
-            "label": "Campo de Campos · posição publicada"
+            "x": 36.67,
+            "y": 48.06,
+            "label": "Cabo Orange a Cabo Gurupi · área do levantamento"
           },
           "source": {
-            "name": "NAVAREA V 0728 · base pública + verificação CHM · 23 nov.",
+            "name": "NAVAREA V 0731 · base pública + CHM · 24 nov.",
             "url": "https://maritimospelomundo.github.io/maritime-command-radar/data/navarea.json"
           }
         }
@@ -8945,9 +8953,9 @@
       "risk": "high",
       "trafficLabel": "Moderado",
       "trafficTrend": "Sem série recente confirmada; confirmar condições e controle local",
-      "trafficBasis": "Sem série pública consolidada e comparável de trânsitos mercantes na consulta de 22 nov.. A autoridade publica regras operacionais, não um contador diário equivalente aos canais.",
+      "trafficBasis": "Sem série pública consolidada e comparável de trânsitos mercantes na consulta de 24 nov.. A autoridade publica regras operacionais, não um contador diário equivalente aos canais.",
       "market": "Alternativa a Panamá e Cabo Horn para navios compatíveis; decisão depende de distância, combustível, calado, pilotagem e weather routing.",
-      "geopolitics": "Risco meteorológico e náutico predominante. A consulta pública de 22 nov. não localizou novo aviso específico consolidado para a passagem; obter previsão vigente da DIRECTEMAR e instruções da autoridade/pilotos antes do trânsito.",
+      "geopolitics": "Risco meteorológico e náutico predominante. A consulta pública de 24 nov. não localizou novo aviso específico consolidado para a passagem; obter previsão vigente da DIRECTEMAR e instruções da autoridade/pilotos antes do trânsito.",
       "authority": "DIRECTEMAR / Autoridade Marítima do Chile",
       "reporting": "CHILREP, pontos de controle e VTS; pilotagem conforme zona e características do navio.",
       "masterFocus": [
@@ -8957,7 +8965,7 @@
         "Consultar o boletim e os avisos DIRECTEMAR vigentes; não inferir intensidade, área ou validade além do texto oficial acessível."
       ],
       "source": {
-        "name": "DIRECTEMAR · consulta 22 nov. 2026",
+        "name": "DIRECTEMAR · consulta 24 nov. 2026",
         "url": "https://meteoarmada.directemar.cl/pronostico-canales"
       }
     },
@@ -8968,9 +8976,9 @@
       "risk": "high",
       "trafficLabel": "Baixo",
       "trafficTrend": "uso seletivo",
-      "trafficBasis": "Não há série pública consolidada de mercantes na consulta de 22 nov.; fluxo é muito inferior aos canais e ocorre principalmente quando porte, restrições ou estratégia de rota justificam.",
+      "trafficBasis": "Não há série pública consolidada de mercantes na consulta de 24 nov.; fluxo é muito inferior aos canais e ocorre principalmente quando porte, restrições ou estratégia de rota justificam.",
       "market": "Pode evitar canal/pilotagem, mas aumenta distância e exposição; combustível, ETA e risco de avaria devem ser tratados como custo total.",
-      "geopolitics": "Risco meteorológico e náutico predominante. A consulta pública de 22 nov. não localizou novo aviso específico consolidado para a passagem; obter previsão vigente da DIRECTEMAR e instruções da autoridade/pilotos antes do trânsito.",
+      "geopolitics": "Risco meteorológico e náutico predominante. A consulta pública de 24 nov. não localizou novo aviso específico consolidado para a passagem; obter previsão vigente da DIRECTEMAR e instruções da autoridade/pilotos antes do trânsito.",
       "authority": "DIRECTEMAR / MRCC Chile",
       "reporting": "CHILREP quando aplicável às águas chilenas; confirmar limites e plano SAR.",
       "masterFocus": [
@@ -8980,7 +8988,7 @@
         "Consultar o boletim e os avisos DIRECTEMAR vigentes; não inferir intensidade, área ou validade além do texto oficial acessível."
       ],
       "source": {
-        "name": "DIRECTEMAR · consulta 22 nov. 2026",
+        "name": "DIRECTEMAR · consulta 24 nov. 2026",
         "url": "https://meteoarmada.directemar.cl/pronostico-canales"
       }
     },
@@ -8991,7 +8999,7 @@
       "risk": "medium",
       "trafficLabel": "Moderado",
       "trafficTrend": "Sem série pública recente consolidada localizada",
-      "trafficBasis": "Consulta editorial de 22 nov. não estabeleceu série pública consolidada de trânsitos para esta passagem. Rótulo de intensidade é contexto qualitativo, não medição AIS ou contagem oficial.",
+      "trafficBasis": "Consulta editorial de 24 nov. não estabeleceu série pública consolidada de trânsitos para esta passagem. Rótulo de intensidade é contexto qualitativo, não medição AIS ou contagem oficial.",
       "market": "Alternativa para alguns fluxos entre Índico e Mar de Java; limitações de profundidade e rota reduzem a atratividade para grandes petroleiros.",
       "geopolitics": "Baixo risco de guerra; risco relevante de atividade vulcânica, sismos, tsunami e tráfego local.",
       "authority": "Direktorat Jenderal Perhubungan Laut / VTS Merak",
@@ -9012,20 +9020,20 @@
       "region": "Malásia / Indonésia · Índico ↔ Ásia",
       "risk": "high",
       "trafficLabel": "19,4 mi bpd · 3T26 · fluxo de petróleo EIA",
-      "trafficTrend": "ReCAAP: um CAT 3 entre 10–16 nov.; 28 incidentes no SOMS em 2026",
+      "trafficTrend": "ReCAAP: novo CAT 4 em petroleiro em 20 nov.; vigilância reforçada no SOMS",
       "trafficBasis": "A EIA informa fluxo de 19,4 milhões b/d de petróleo e outros líquidos no 3T26. É métrica oficial de energia, não contagem de navios nem gross tonnage.",
       "market": "Principal artéria energética da Ásia; o fluxo oficial de 19,4 mi bpd no 3T26 reforça a exposição de fretes, bunker, estoques e alternativas via Sunda/Lombok.",
-      "geopolitics": "O relatório semanal ReCAAP de 10–16 nov. confirma um incidente CAT 3 em 10 nov.: seis perpetradores, objeto semelhante a arma e sobressalentes de motor furtados de petroleiro; sem feridos. Total no SOMS em 2026: 28.",
+      "geopolitics": "O relatório semanal ReCAAP de 17–23 nov. confirma um CAT 4 em 20 nov.: três perpetradores no poop deck de um petroleiro, sem feridos e sem furto. O evento não elimina o padrão recente de ocorrências no corredor.",
       "authority": "VTS da Malásia, Indonésia e Singapura",
       "reporting": "STRAITREP obrigatório para categorias prescritas nos setores 1–9.",
       "masterFocus": [
         "Reforçar BRM, CPA/TCPA, squat e UKC em TSS estreito e tráfego de pesca/local.",
         "Executar medidas antipirataria e controle de acessos, sobretudo em baixa velocidade/fundeio.",
-        "IA 02/2026: reforçar vigia noturna, CCTV, iluminação, barreiras e reporte imediato ao VTIS/Estado costeiro; 28 incidentes no SOMS em 2026 até 11 nov."
+        "Relatório ReCAAP 17–23 nov.: reforçar vigia, CCTV, iluminação, barreiras e reporte imediato ao VTIS/Estado costeiro; o evento de 20 nov. ocorreu em petroleiro na faixa eastbound."
       ],
       "source": {
-        "name": "ReCAAP ISC · IA 02/2026 · 11 nov. 2026",
-        "url": "https://www.recaap.org/resources/ck/files/alerts/2026/ReCAAP%20ISC%20IA%2002-2026%20Sea%20Robbery%20Incidents%20in%20Straits%20of%20Malacca%20%20Singapore_10%20Nov%2026.pdf"
+        "name": "ReCAAP ISC · Weekly Report 17–23 nov. 2026",
+        "url": "https://www.recaap.org/resources/ck/files/reports/weekly/2026/ReCAAP%20ISC%20Weekly%20Report%20(17-23%20Nov)%202026(1).pdf"
       }
     },
     {
@@ -9034,20 +9042,20 @@
       "region": "Singapura / Indonésia / Malásia",
       "risk": "high",
       "trafficLabel": "Extremo",
-      "trafficTrend": "ReCAAP: um CAT 3 entre 10–16 nov.; 28 incidentes no SOMS em 2026",
+      "trafficTrend": "ReCAAP: novo CAT 4 em petroleiro em 20 nov.; vigilância reforçada no SOMS",
       "trafficBasis": "Singapura recebe em média ~140 mil vessel calls/ano; em 2025 registrou 3,22 bilhões GT de chegadas (+3,5%). Port calls não equivalem a trânsitos do estreito.",
       "market": "Hub global de bunker, transbordo e refino; atrasos repercutem em fixtures, disponibilidade de combustível e cadeias Ásia–Europa.",
-      "geopolitics": "O relatório semanal ReCAAP de 10–16 nov. confirma um incidente CAT 3 em 10 nov.: seis perpetradores, objeto semelhante a arma e sobressalentes de motor furtados de petroleiro; sem feridos. Total no SOMS em 2026: 28.",
+      "geopolitics": "O relatório semanal ReCAAP de 17–23 nov. confirma um CAT 4 em 20 nov.: três perpetradores no poop deck de um petroleiro, sem feridos e sem furto. O evento não elimina o padrão recente de ocorrências no corredor.",
       "authority": "MPA Singapore / VTIS",
       "reporting": "STRAITREP obrigatório e requisitos portuários de Singapura quando houver escala.",
       "masterFocus": [
         "Briefing específico por setor, reporting point, faixa e frequências VHF.",
         "Máquinas e steering em prontidão; minimizar distrações e mudanças tardias em TSS.",
-        "IA 02/2026: reforçar vigia noturna, CCTV, iluminação, barreiras e reporte imediato ao VTIS/Estado costeiro; 28 incidentes no SOMS em 2026 até 11 nov."
+        "Relatório ReCAAP 17–23 nov.: reforçar vigia, CCTV, iluminação, barreiras e reporte imediato ao VTIS/Estado costeiro; o evento de 20 nov. ocorreu em petroleiro na faixa eastbound."
       ],
       "source": {
-        "name": "ReCAAP ISC · IA 02/2026 · 11 nov. 2026",
-        "url": "https://www.recaap.org/resources/ck/files/alerts/2026/ReCAAP%20ISC%20IA%2002-2026%20Sea%20Robbery%20Incidents%20in%20Straits%20of%20Malacca%20%20Singapore_10%20Nov%2026.pdf"
+        "name": "ReCAAP ISC · Weekly Report 17–23 nov. 2026",
+        "url": "https://www.recaap.org/resources/ck/files/reports/weekly/2026/ReCAAP%20ISC%20Weekly%20Report%20(17-23%20Nov)%202026(1).pdf"
       }
     },
     {
@@ -9055,13 +9063,13 @@
       "name": "Canal de Suez",
       "region": "Egito · Mediterrâneo ↔ Mar Vermelho",
       "risk": "high",
-      "trafficLabel": "48 cruzamentos · Windward · 20 nov. · dado proprietário",
-      "trafficTrend": "30 inbound / 18 outbound; recuperação oficial segue seletiva",
-      "trafficBasis": "A Windward observou 48 cruzamentos em 20 nov. (30 inbound/18 outbound), contagem proprietária diária. Separadamente, a EIA informa 7,1 milhões b/d de petróleo e outros líquidos por Suez + SUMED no 3T26; a SCA informou 166 containerships >130 mil t e 29 milhões de net tonnage entre jul.–set. 2026. Contagem, net tonnage e fluxo energético são métricas distintas.",
-      "market": "O retorno seletivo reduz ton-mile frente ao Cabo, mas não confirma normalização tanker. Os periódicos SCA 36–41, de 15 nov., seguem como os mais recentes localizados na consulta de 23 nov.; elegibilidade e condições comerciais devem ser confirmadas por viagem.",
+      "trafficLabel": "58 cruzamentos · Windward · 20 nov. · dado proprietário",
+      "trafficTrend": "22 inbound / 36 outbound; recuperação oficial segue seletiva",
+      "trafficBasis": "A Windward exibe 58 cruzamentos em 20 nov. (22 inbound/36 outbound), contagem proprietária diária. Separadamente, a EIA informa 7,1 milhões b/d de petróleo e outros líquidos por Suez + SUMED no 3T26; a SCA informou 166 containerships >130 mil t e 29 milhões de net tonnage entre jul.–set. 2026. Contagem, net tonnage e fluxo energético são métricas distintas.",
+      "market": "O retorno seletivo reduz ton-mile frente ao Cabo, mas não confirma normalização tanker. Os periódicos SCA 36–41, de 15 nov., seguem como os mais recentes localizados na consulta de 24 nov.; elegibilidade e condições comerciais devem ser confirmadas por viagem.",
       "geopolitics": "O canal opera, mas o retorno seletivo depende da segurança em Bab-el-Mandeb e pode ser revertido. Os dados oficiais mostram recuperação de containerships grandes, não segurança garantida em todo o corredor.",
       "authority": "Suez Canal Authority (SCA); periódicos 36–41/2026, publicados em 15 nov., permanecem os mais recentes localizados",
-      "reporting": "ETA, documentos, inspeção, pilotagem e instruções de comboio via agente/SCA. A consulta de 23 nov. não comprovou mudança de limite, formato ou frequência.",
+      "reporting": "ETA, documentos, inspeção, pilotagem e instruções de comboio via agente/SCA. A consulta de 24 nov. não comprovou mudança de limite, formato ou frequência.",
       "masterFocus": [
         "Não confundir maior contagem de containerships com rota integralmente segura: revalidar war-risk, CSO e ameaça até Bab-el-Mandeb.",
         "Confirmar calado, SCNT, rebocadores, luzes, amarração e readiness para falha de máquinas.",
@@ -9069,8 +9077,8 @@
         "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
-        "name": "Suez Canal Authority · 13 out. 2026",
-        "url": "https://www.suezcanal.gov.eg/English/MediaCenter/News/Pages/Sca_13-10-2026.aspx"
+        "name": "Suez Canal Authority + Windward · consulta 24 nov. 2026",
+        "url": "https://www.suezcanal.gov.eg/English/Navigation/NavigationCirculars/Pages/default.aspx/"
       }
     },
     {
@@ -9078,10 +9086,10 @@
       "name": "Estreito de Ormuz",
       "region": "Omã / Irã · Golfo Pérsico",
       "risk": "critical",
-      "trafficLabel": "16 travessias · Windward · 20 nov. · dado proprietário",
-      "trafficTrend": "11 inbound / 5 outbound; 7 travessias dark",
-      "trafficBasis": "A Windward observou 16 travessias em 20 nov., 11 inbound e 5 outbound; 7 foram classificadas como dark pelo fornecedor. Separadamente, a EIA informa fluxo de 9,1 milhões b/d de petróleo e outros líquidos no 3T26. Contagem proprietária, comportamento AIS e fluxo energético oficial são métricas distintas.",
-      "market": "A Windward contou 947 cargueiros e tankers no Golfo e 31 tankers sancionados carregados entre Ormuz e a linha de bloqueio em 20 nov.; estimou 4,9 milhões de barris em quatro crude tankers. São análises proprietárias atribuídas, não volume oficial, fixture ou conclusão do Radar.",
+      "trafficLabel": "5 travessias · Windward · 23 nov. · dado proprietário",
+      "trafficTrend": "4 inbound / 1 outbound; 2 travessias dark",
+      "trafficBasis": "A Windward observou 5 travessias em 23 nov., 4 inbound e 1 outbound; 2 foram classificadas como dark. O fornecedor também identificou oito travessias dark entre 20 e 23 nov., como piso e não censo. Separadamente, a EIA informa fluxo de 9,1 milhões b/d de petróleo e outros líquidos no 3T26. Contagem proprietária, comportamento AIS e fluxo energético oficial são métricas distintas.",
+      "market": "A Windward contou 863 cargueiros e tankers no Golfo em 23 nov. e 21 tankers de 180 m ou mais fundeados ao largo de Kharg em imagem de 22 nov. São análises proprietárias atribuídas, não volume oficial, fixture ou conclusão do Radar.",
       "geopolitics": "UKMTO #217, de 22 nov., relata incidente entre petroleiro e forças militares no Golfo de Omã, sem posição ou consequências publicadas; #216 e #215, de 21 nov., registram petroleiros outbound atingidos por projéteis desconhecidos a leste/norte de Khasab. Danos finais, impacto ambiental e autoria permanecem desconhecidos.",
       "authority": "Autoridades costeiras; UKMTO como ponto de contato de segurança; IMO consolida incidentes confirmados",
       "reporting": "UKMTO VRS voluntário: initial ao entrar no VRA, daily 0800 UTC, final e incident imediato; VTS/porto permanecem obrigatórios conforme jurisdição.",
@@ -9093,7 +9101,7 @@
         "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
-        "name": "UKMTO + Windward + EIA · consulta 23 nov. 2026",
+        "name": "UKMTO + Windward + EIA · consulta 24 nov. 2026",
         "url": "https://www.ukmto.org/recent-incidents"
       }
     },
@@ -9104,7 +9112,7 @@
       "risk": "medium",
       "trafficLabel": "Muito intenso",
       "trafficTrend": "Sem série pública recente consolidada localizada",
-      "trafficBasis": "Consulta editorial de 22 nov. não estabeleceu série pública consolidada de trânsitos para esta passagem. Rótulo de intensidade é contexto qualitativo, não medição AIS ou contagem oficial.",
+      "trafficBasis": "Consulta editorial de 24 nov. não estabeleceu série pública consolidada de trânsitos para esta passagem. Rótulo de intensidade é contexto qualitativo, não medição AIS ou contagem oficial.",
       "market": "Corredor de crude/produtos, contêineres e bunker entre Atlântico, Med, Black Sea e Suez; Algeciras/Gibraltar são hubs operacionais.",
       "geopolitics": "Risco de guerra baixo no estreito; Mediterrâneo oriental e rotas ligadas ao Mar Negro exigem avaliação própria.",
       "authority": "Tarifa Traffic / Tangier Traffic e VTS costeiros",
@@ -9124,11 +9132,11 @@
       "name": "Bab-el-Mandeb / Chifre da África",
       "region": "Iêmen / Djibuti / Eritreia",
       "risk": "high",
-      "trafficLabel": "31 travessias · Windward · 20 nov. · dado proprietário",
-      "trafficTrend": "17 inbound / 14 outbound; contagem diária não comprova normalização",
-      "trafficBasis": "A Windward observou 31 travessias em 20 nov., 17 inbound e 14 outbound. Separadamente, a EIA informa fluxo de 6,3 milhões b/d de petróleo e outros líquidos no 3T26. Contagem proprietária e fluxo energético oficial são métricas distintas; nenhuma demonstra segurança ou regularidade comercial.",
+      "trafficLabel": "45 cruzamentos · Windward · 20 nov. · dado proprietário",
+      "trafficTrend": "20 inbound / 25 outbound; contagem diária não comprova normalização",
+      "trafficBasis": "A Windward exibe 45 cruzamentos em 20 nov., 20 inbound e 25 outbound. Separadamente, a EIA informa fluxo de 6,3 milhões b/d de petróleo e outros líquidos no 3T26. Contagem proprietária e fluxo energético oficial são métricas distintas; nenhuma demonstra segurança ou regularidade comercial.",
       "market": "A contagem diária e o fluxo oficial de petróleo não demonstram normalização de risco. Validar war-risk e ameaça para cada viagem e não converter contagem AIS em gross tonnage ou volume de carga.",
-      "geopolitics": "Risco elevado. Os incidentes UKMTO mais recentes concentram-se em Ormuz; a análise aberta Dryad de 17 nov. sobre o Mar Negro não altera a avaliação desta passagem. Manter avaliação própria do corredor e usar alertas oficiais como base operacional.",
+      "geopolitics": "Risco elevado. Os incidentes UKMTO mais recentes concentram-se em Ormuz; a análise Windward de 24 nov. mantém atividade dark e interferência GNSS no corredor regional. Usar alertas oficiais como base operacional e tratar a análise de indústria como complemento atribuído.",
       "authority": "UKMTO / MSCIO / forças marítimas e autoridades costeiras",
       "reporting": "Registro/reporte voluntário UKMTO e MSCIO no VRA; seguir BMP Maritime Security.",
       "masterFocus": [
@@ -9138,7 +9146,7 @@
         "Complemento ISC 30/09/2026: confirmar exceções por frota na análise Oriente Médio; Yanbu, portos citados de Omã e Fujairah não são exceções para Transpetro."
       ],
       "source": {
-        "name": "Windward + EIA · dados de 20 nov. / 3T26",
+        "name": "Windward + EIA · consulta 24 nov. / dados de 20 nov. e 3T26",
         "url": "https://insights.windward.ai/"
       }
     },
@@ -9148,12 +9156,12 @@
       "region": "Panamá · Atlântico ↔ Pacífico",
       "risk": "medium",
       "trafficLabel": "34 slots/dia · desde 12 nov. · capacidade anunciada",
-      "trafficTrend": "A-42 em vigor desde 12 nov.; consulta oficial de 23 nov. sem aviso posterior localizado",
+      "trafficTrend": "A-42 em vigor desde 12 nov.; consulta oficial de 24 nov. sem aviso posterior localizado",
       "trafficBasis": "A ACP publicou capacidade anunciada de 34 slots/dia e calado máximo Neopanamax de 15,24 m TFW. Separadamente, a EIA informa fluxo de 3,0 milhões b/d de petróleo e outros líquidos no 3T26. Capacidade, trânsitos realizados e fluxo energético são métricas distintas.",
       "market": "Maior capacidade anunciada pode reduzir pressão de fila, enquanto o fluxo oficial de petróleo foi 3,0 mi bpd no 3T26; booking permanece o único mecanismo que garante data.",
       "geopolitics": "Baixo risco de conflito; risco operacional concentrado em disponibilidade hídrica, regras de reserva e competição por slots.",
       "authority": "Autoridad del Canal de Panamá (ACP)",
-      "reporting": "ETA/pre-arrival, documentação e reserva via agente/ACP. A-42 segue como o aviso mais recente localizado em 21 nov.; não foi comprovada mudança adicional de formato ou frequência.",
+      "reporting": "ETA/pre-arrival, documentação e reserva via agente/ACP. A-42 segue como o aviso mais recente localizado em 24 nov.; não foi comprovada mudança adicional de formato ou frequência.",
       "masterFocus": [
         "Confirmar reserva e janela: desde 12 nov. a capacidade anunciada é 34 slots/dia, incluindo 19 Super Panamax; chegada sem booking pode ter espera extensa.",
         "Validar calado TFW contra o novo máximo Neopanamax de 15,24 m (50,0 pés), além de carga perigosa, documentação e condição real do lago.",
@@ -9326,7 +9334,7 @@
       "region": "Canal de Suez",
       "type": "mandatory",
       "appliesTo": "Todo navio solicitando trânsito",
-      "when": "ETA/pre-arrival, chegada, inspeção e durante comboio conforme SCA. Consulta de 23 nov.: periódicos 36–41/2026, de 15 nov., permanecem os mais recentes; nenhuma mudança de limite, formato ou frequência de reporte foi comprovada.",
+      "when": "ETA/pre-arrival, chegada, inspeção e durante comboio conforme SCA. Consulta de 24 nov.: periódicos 36–41/2026, de 15 nov., permanecem os mais recentes; nenhuma mudança de limite, formato ou frequência de reporte foi comprovada.",
       "report": "Particulares, dimensões/calado, carga, certificados, defeitos e trânsito",
       "authority": "Suez Canal Authority via agente",
       "source": {
@@ -9340,7 +9348,7 @@
       "region": "Canal do Panamá",
       "type": "mandatory",
       "appliesTo": "Todo navio solicitando booking/trânsito",
-      "when": "ETA e pre-arrival nos prazos ACP; atualizações, booking e reportes de chegada/trânsito. A-42 está em vigor e nenhum aviso posterior foi localizado na consulta de 23 nov.",
+      "when": "ETA e pre-arrival nos prazos ACP; atualizações, booking e reportes de chegada/trânsito. A-42 está em vigor e nenhum aviso posterior foi localizado na consulta de 24 nov.",
       "report": "Particulares, calado, carga perigosa, certificados, defeitos e booking. A-42: 34 slots/dia anunciados e calado Neo de 15,24 m TFW; booking continua sendo a única garantia de data.",
       "authority": "Autoridad del Canal de Panamá via agente",
       "source": {
@@ -9361,7 +9369,7 @@
     "end": "2026-11-30",
     "statusLabel": "4 ATIVAS · 2 ANUNCIADAS",
     "pulseLabel": "4 CICs ativas",
-    "description": "Quatro CICs Cargo Securing ativas; duas anunciadas, três sem confirmação e USCG nacional. Pesquisa própria em 23 nov.; evidência auxiliar de 31 out. estava vencida e foi tratada apenas como histórico.",
+    "description": "Quatro CICs Cargo Securing ativas; duas anunciadas, três sem confirmação oficial e USCG nacional. Pesquisa própria em 24 nov.; evidência auxiliar de 31 out. estava vencida e foi tratada apenas como histórico.",
     "questionnaireUrl": "https://parismou.org/download/press-release-cic-cargo-securing-2026-including-questionnaire/",
     "readiness": [
       "Preparar matriz PSC específica do próximo porto, regime e histórico do navio.",
@@ -9370,7 +9378,7 @@
       "Cruzar deficiências anteriores, overdue items, RO/class, SIRE/vetting e inspeções internas.",
       "Testar familiarização da tripulação: evidência real deve coincidir com procedimentos e registros."
     ],
-    "note": "23 nov.: Paris/Tokyo e Black Sea reconfirmados em publicações oficiais; Viña preservada com sua publicação oficial. Abuja endossou Cargo Securing 2026, mas não publicou janela/questionário regional; Mediterranean permanece anunciada. Caribbean, Indian Ocean e Riyadh seguem sem campanha 2026 oficialmente comprovada; USCG permanece nacional. Falha de acesso não prova ausência.",
+    "note": "24 nov.: Paris/Tokyo e Black Sea reconfirmados em publicações oficiais; Viña preservada com sua publicação oficial. Abuja endossou Cargo Securing 2026, mas não publicou janela/questionário regional; Mediterranean permanece anunciada. Caribbean, Indian Ocean e Riyadh seguem sem campanha 2026 oficialmente comprovada; USCG permanece nacional. Notícias de indústria não foram usadas para elevar status.",
     "regimes": [
       {
         "name": "Paris MoU",
@@ -9516,42 +9524,42 @@
       {
         "ticker": "PETR3",
         "market": "B3 · ON",
-        "price": 49.02,
+        "price": 47.02,
         "currencySymbol": "R$",
-        "changePercent": -0.57,
+        "changePercent": -3.31,
         "trend": "Baixa no fechamento",
-        "capturedAtLabel": "19 nov. 2026 · último dado exibido por Petrobras RI",
-        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
+        "capturedAtLabel": "23 nov. 2026 · último fechamento público",
+        "sourceUrl": "https://www.clubefii.com.br/ativos/acao/PETR3/petroleo-brasileiro-sa-petrobras"
       },
       {
         "ticker": "PETR4",
         "market": "B3 · PN",
-        "price": 42.65,
+        "price": 41.3,
         "currencySymbol": "R$",
-        "changePercent": -1.2,
+        "changePercent": -3.21,
         "trend": "Baixa no fechamento",
-        "capturedAtLabel": "19 nov. 2026 · último dado exibido por Petrobras RI",
-        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
+        "capturedAtLabel": "23 nov. 2026 · último fechamento público",
+        "sourceUrl": "https://www.clubefii.com.br/ativos/acao/PETR4/petroleo-brasileiro-sa-petrobras"
       },
       {
         "ticker": "PBR",
         "market": "NYSE · ADR ON",
-        "price": 16.01,
+        "price": 15.81,
         "currencySymbol": "US$",
-        "changePercent": -1.72,
+        "changePercent": -1.25,
         "trend": "Baixa no fechamento",
-        "capturedAtLabel": "19 nov. 2026 · último dado exibido por Petrobras RI",
-        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
+        "capturedAtLabel": "23 nov. 2026 · último fechamento público",
+        "sourceUrl": "https://stockanalysis.com/stocks/pbr/history/"
       },
       {
         "ticker": "PBR.A",
         "market": "NYSE · ADR PN",
-        "price": 14.06,
+        "price": 13.93,
         "currencySymbol": "US$",
-        "changePercent": -1.82,
+        "changePercent": -0.92,
         "trend": "Baixa no fechamento",
-        "capturedAtLabel": "19 nov. 2026 · último dado exibido por Petrobras RI",
-        "sourceUrl": "https://www.investidorpetrobras.com.br/acoes/"
+        "capturedAtLabel": "23 nov. 2026 · último fechamento público",
+        "sourceUrl": "https://stockanalysis.com/stocks/pbr.a/history/"
       }
     ],
     "operations": [
@@ -9654,6 +9662,16 @@
     ],
     "developments": [
       {
+        "date": "2026-11-23",
+        "title": "Petrobras aprova Plano de Negócios 2027–2031",
+        "summary": "O plano prevê US$ 122 bilhões de capex; no segmento RTC, US$ 23 bilhões na carteira em implantação e US$ 1 bilhão em avaliação, incluindo US$ 7 bilhões em logística e comercialização.",
+        "maritimeImpact": "A carteira prevê 21 navios de cabotagem, conclusão de 18 barcaças e afretamento de 30 novas embarcações de apoio. São metas de investimento, não entregas, disponibilidade de frota, cargas ou fixtures realizadas.",
+        "source": {
+          "name": "Agência Petrobras · 23 nov. 2026",
+          "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-aprova-plano-de-neg%C3%B3cios-2027-2031"
+        }
+      },
+      {
         "date": "2026-11-19",
         "title": "Autorização ANP 642 atualiza outorga aquaviária da Transpetro",
         "summary": "A ANP autorizou a Transpetro a transportar a granel petróleo, derivados, gás natural e biocombustíveis nas navegações de longo curso, cabotagem, apoio portuário e interior, revogando a autorização de 2002.",
@@ -9712,100 +9730,90 @@
           "name": "Petrobras · comunicado à SEC · 2 out. 2026",
           "url": "https://www.sec.gov/Archives/edgar/data/1119639/000129281426004836/pbr20261002_6k.htm"
         }
-      },
-      {
-        "date": "2026-09-30",
-        "title": "ISC: restrições de escala e pressão sobre fretes e seguros",
-        "summary": "Análise fornecida prevê atrasos, alterações de rota/espera e restrições temporárias de terminais. Estagnação é o cenário geral mais provável; escalada e distensão permanecem cenários, não fatos confirmados.",
-        "maritimeImpact": "Transpetro: Yanbu, Ras Markaz, Duqm, Sohar e Fujairah não integram as exceções do relatório de 30/09. Conferir tabela completa e instrução vigente da companhia.",
-        "source": {
-          "name": "Petrobras ISC · relatório fornecido · 30/09/2026",
-          "url": "https://maritimospelomundo.github.io/maritime-command-radar/analises/oriente-medio-2026-09-30.html"
-        }
       }
     ],
     "fleetPlan": {
-      "title": "⚓ Plano Transpetro 2026–2030",
+      "title": "⚓ Plano Petrobras / Transpetro 2027–2031",
       "metrics": [
         {
           "label": "navios de cabotagem",
-          "value": "20"
+          "value": "21"
         },
         {
           "label": "barcaças",
           "value": "18"
         },
         {
-          "label": "investimento previsto",
-          "value": "US$ 2 bi"
+          "label": "logística e comercialização",
+          "value": "US$ 7 bi"
         },
         {
-          "label": "apoios offshore",
-          "value": "40"
+          "label": "apoios offshore a afretar",
+          "value": "30"
         }
       ],
-      "summary": "O plano amplia a capacidade logística própria e pode elevar demanda por tripulação, docagem, treinamento, estaleiros e suporte operacional."
+      "summary": "O PN 2027–2031 prevê ampliar infraestrutura logística e frota. Os números são carteira planejada: não confirmam entrega, navio disponível, carga, fixture, terminal ou janela operacional."
     }
   },
   "bunker": [
     {
       "port": "Singapore",
       "code": "SGSIN",
-      "vlsfo": 842,
-      "change": 8
+      "vlsfo": 855,
+      "change": 13
     },
     {
       "port": "Rotterdam",
       "code": "NLRTM",
-      "vlsfo": 705.5,
-      "change": -9.5
+      "vlsfo": 702,
+      "change": -3.5
     },
     {
       "port": "Fujairah",
       "code": "AEFJR",
-      "vlsfo": 800,
-      "change": -3
+      "vlsfo": 802,
+      "change": 2
     },
     {
       "port": "Houston",
       "code": "USHOU",
-      "vlsfo": 720.5,
-      "change": -2
+      "vlsfo": 720,
+      "change": -0.5
     }
   ],
   "briefing": {
-    "date": "2026-11-23",
+    "date": "2026-11-24",
     "readingTime": "Leitura sugerida: 90 segundos",
     "items": [
       {
         "category": "POSIÇÃO",
-        "title": "SPOT priorizado; VesselAPI acima de 24 horas",
-        "summary": "Fonte priorizada: SPOT, pelo UTC original mais recente. SPOT: 31°47,717′ S · 049°14,603′ W, observado em 2026-11-23T07:03:18+0000, idade 0 d 5 h 0 min, bateria GOOD. MarineTraffic: 32°27,240′ S · 049°45,140′ W, observado em 2026-11-23T03:08:00Z, idade 0 d 8 h 56 min. VesselAPI: 34°27,280′ S · 072°51,251′ W, observado em 2026-11-10T16:01:44.000Z, idade 12 d 20 h 2 min · >24 h. Nenhuma posição foi estimada ou coletada nesta revisão; seleção usa somente lastKnown/history consolidados válidos, sem projeção."
+        "title": "MarineTraffic priorizado por 10 segundos",
+        "summary": "Fonte priorizada: MarineTraffic, pelo UTC original mais recente. MarineTraffic: 28°17.330′ S · 046°32.210′ W, observado em 2026-11-24T03:03:00Z, idade 0 d 9 h 3 min. VesselAPI: 28°17.327′ S · 046°32.206′ W, observado em 2026-11-24T03:02:50.000Z, idade 0 d 9 h 3 min. SPOT: 28°18.265′ S · 046°32.913′ W, observado em 2026-11-24T02:57:43+0000, idade 0 d 9 h 8 min, bateria GOOD. Nenhuma posição foi estimada, projetada ou coletada nesta revisão; a seleção usa somente lastKnown/history consolidados válidos."
       },
       {
         "category": "ROTA",
-        "title": "NAVAREA V 0730 permanece prioritário; base verificada em 23 nov.",
-        "summary": "A base pública contém 1.211 registros e foi verificada no CHM às 0957Z. V 0730 permanece vigente para operação STS ao sul de Santos; V 0729 e V 0728 são os avisos V seguintes mais recentes. Nenhum registro NAVAREA foi ingerido ou alterado nesta revisão."
+        "title": "NAVAREA V 0734, 0732 e 0731 substituem avisos antigos",
+        "summary": "A base pública contém 1.234 registros, recebeu boletim até 0600Z e foi verificada no CHM às 0937Z. V 0734 trata de objeto à deriva; V 0732 ativa áreas perigosas em 27–28 nov.; V 0731 cobre levantamento sísmico prolongado. Nenhum registro NAVAREA foi ingerido ou alterado nesta revisão."
       },
       {
         "category": "SEGURANÇA",
-        "title": "UKMTO 217 amplia alerta para o Golfo de Omã",
-        "summary": "O advisory de 22 nov. relata incidente entre petroleiro e forças militares, sem posição ou consequências publicadas. UKMTO 216 e 215 permanecem os ataques seguintes mais recentes, ambos contra petroleiros outbound em 21 nov."
+        "title": "UKMTO 217 segue como aviso mais recente",
+        "summary": "A consulta de 24 nov. não localizou aviso posterior ao incidente entre petroleiro e forças militares de 22 nov.; UKMTO 216 e 215 permanecem os ataques seguintes, ambos contra petroleiros outbound em 21 nov."
       },
       {
         "category": "PIRATARIA",
-        "title": "ReCAAP preserva 10 nov. como ocorrência mais recente",
-        "summary": "O relatório semanal de 10–16 nov. permanece o mais recente publicado na consulta de 23 nov. e não acrescentou ocorrência posterior ao CAT 3 de 10 nov.; os eventos de 4 e 2 nov. permanecem os seguintes comprovados."
+        "title": "ReCAAP registra CAT 4 em petroleiro em 20 nov.",
+        "summary": "Três perpetradores foram vistos no poop deck no SOMS; alarme acionado, sem feridos e sem furto. O evento é o mais recente do grupo; os registros de 10 e 4 nov. permanecem como os seguintes comprovados."
       },
       {
         "category": "METEO",
-        "title": "Hurricane-force no Pacífico; storm/gales no Atlântico; CHM 809 vigente",
-        "summary": "NOAA de 23 nov. prevê até 65 kt e 12 m no Pacífico Norte, storm/gales no Atlântico Norte e gale no Golfo do México. CHM 809 cobre nevoeiro entre Chuí e Rio Grande até 231500Z; Meteoromarinha de 23 nov. é a referência costeira atual."
+        "title": "Hurricane-force no Pacífico; storms no Atlântico; nevoeiro no Sul",
+        "summary": "NOAA de 24 nov. prevê até 65 kt e mar de até 12 m no Pacífico Norte, storm/gales no Atlântico Norte e gale junto a Veracruz. CHM 810 cobre nevoeiro entre Chuí e Tramandaí até 241330Z."
       },
       {
-        "category": "MERCADO / PSC",
-        "title": "Mercados preservam último fechamento; quatro CICs seguem ativas",
-        "summary": "BDTI, BCTI, VLSFO e cotações mantêm as respectivas datas públicas disponíveis, sem renovação artificial. Paris, Tokyo, Viña e Black Sea seguem ativos até 30 nov.; demais classificações preservam somente confirmação oficial localizada."
+        "category": "MERCADO / PSC / PETROBRAS",
+        "title": "Baltic W47 em alta; quatro CICs ativas; PN 2027–2031 aprovado",
+        "summary": "VLCC, Suezmax e Aframax subiram no W47; BDTI fechou 5.084 e BCTI 2.511 em 23 nov. Paris, Tokyo, Viña e Black Sea seguem ativos até 30 nov. O PN Petrobras prevê 21 navios, 18 barcaças e 30 apoios a afretar; são metas, não entregas ou fixtures."
       }
     ],
     "caution": "Antes de agir: confirme dados críticos em fontes oficiais, sistemas de bordo, agentes, terminal, armador, afretador e autoridades competentes."
@@ -9814,7 +9822,7 @@
     {
       "name": "CHM — NAVAREA V",
       "url": "https://www.marinha.mil.br/chm/dados-do-segnav-aviso-radio-nautico-tela/avisos-radio-nauticos-e-sar",
-      "scope": "Base pública consolidada: 1.211 registros; recebimento até 23 nov. 06:00 UTC e verificação CHM às 09:57 UTC. V 0730, V 0729 e V 0728 confirmados; origem e metadados preservados, sem acesso ao Gmail.",
+      "scope": "Base pública consolidada: 1.234 registros; recebimento até 24 nov. 06:00 UTC e verificação CHM às 09:37 UTC. V 0734, V 0732 e V 0731 confirmados; origem e metadados preservados, sem acesso ao Gmail.",
       "typeLabel": "Oficial"
     },
     {
@@ -9838,31 +9846,31 @@
     {
       "name": "ReCAAP ISC",
       "url": "https://www.recaap.org/reports",
-      "scope": "Relatório semanal de 10–16 nov. permanece o mais recente localizado na consulta de 23 nov.; 10 nov. é a ocorrência mais recente comprovada no SOMS.",
+      "scope": "Relatório semanal de 17–23 nov. publicado em 24 nov.: um CAT 4 em petroleiro no SOMS em 20 nov., sem feridos e sem furto.",
       "typeLabel": "Oficial"
     },
     {
       "name": "UKMTO / JMIC",
       "url": "https://www.ukmto.org/",
-      "scope": "Consulta de 23 nov.: UKMTO 217, de 22 nov., relata incidente entre petroleiro e forças militares no Golfo de Omã; 216 e 215, de 21 nov., são os ataques seguintes mais recentes. Posição/consequências do 217 e autoria dos ataques não foram publicadas.",
+      "scope": "Consulta de 24 nov.: UKMTO 217, de 22 nov., permanece o aviso mais recente; 216 e 215, de 21 nov., são os ataques seguintes. Posição/consequências do 217 e autoria dos ataques não foram publicadas.",
       "typeLabel": "Oficial"
     },
     {
       "name": "CHM / Marinha do Brasil",
       "url": "https://www.marinha.mil.br/chm/dados-do-smm-avisos-de-mau-tempo/avisos-de-mau-tempo",
-      "scope": "Consulta oficial de 23 nov.: aviso 809/2026 válido até 231500Z por baixa visibilidade entre Chuí e Rio Grande; Meteoromarinha 231200–241200Z usado como referência atual. Aviso 808 preservado como histórico.",
+      "scope": "Consulta oficial de 24 nov.: aviso 810/2026 válido até 241330Z por baixa visibilidade entre Chuí e Tramandaí; Meteoromarinha de 24 nov. 0000Z usado como referência atual. Aviso 809 preservado como histórico.",
       "typeLabel": "Oficial"
     },
     {
       "name": "MeteoArmada / Armada de Chile",
       "url": "https://meteoarmada.directemar.cl/",
-      "scope": "Consulta de 22 nov.: sem série pública consolidada de tráfego ou novo aviso específico comprovado para Magalhães/Cabo Horn; CHILREP permanece 08:00/20:00 LT e a cada 4 h sem Channel Pilot no trecho prescrito.",
+      "scope": "Consulta de 24 nov.: sem série pública consolidada de tráfego para Magalhães/Cabo Horn; CHILREP permanece 08:00/20:00 LT e a cada 4 h sem Channel Pilot no trecho prescrito.",
       "typeLabel": "Oficial"
     },
     {
       "name": "NOAA Ocean Prediction Center",
       "url": "https://ocean.weather.gov/",
-      "scope": "Produtos de 23 nov.: hurricane-force de 50–65 kt e mar de 6–12 m no Pacífico Norte; storm/gales e freezing spray no Atlântico Norte; gale no Golfo do México com 30–35 kt e mar de 3,5–4,5 m.",
+      "scope": "Produtos de 24 nov.: hurricane-force de 50–65 kt e mar de até 12 m no Pacífico Norte; storm/gales e freezing spray no Atlântico Norte; gale no Golfo do México com 30–40 kt e mar de 3,5–4,5 m.",
       "typeLabel": "Oficial"
     },
     {
@@ -9873,8 +9881,8 @@
     },
     {
       "name": "Baltic Exchange",
-      "url": "https://www.balticexchange.com/en/data-services/WeeklyRoundup/tanker/news/2026/tanker-report-week-45.html",
-      "scope": "W45 publicada em 6 nov. e revisada em 12 nov.; sem W46 ainda localizada. TCEs de rotas padronizadas, não fixtures individuais.",
+      "url": "https://www.balticexchange.com/en/data-services/WeeklyRoundup/tanker/news/2026/tanker-report-week-47.html",
+      "scope": "W47 publicada em 20 nov.: alta em VLCC, Suezmax e Aframax. TCEs de rotas padronizadas, não fixtures individuais.",
       "typeLabel": "Oficial"
     },
     {
@@ -9904,7 +9912,7 @@
     {
       "name": "Ship & Bunker — preços mundiais",
       "url": "https://shipandbunker.com/prices",
-      "scope": "Último fechamento público disponível, 20 nov.: VLSFO Singapura US$842,00/t, Rotterdam US$705,50/t, Fujairah US$800,00/t e Houston US$720,50/t; série complementar identificada.",
+      "scope": "Último fechamento público disponível, 23 nov.: VLSFO Singapura US$855,00/t, Rotterdam US$702,00/t, Fujairah US$802,00/t e Houston US$720,00/t; série complementar identificada.",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -9928,13 +9936,13 @@
     {
       "name": "Mercados públicos — Petrobras RI / B3 / NYSE",
       "url": "https://www.investidorpetrobras.com.br/acoes/",
-      "scope": "Últimos dados exibidos por Petrobras RI, atualizados em 19 nov.: PETR3 R$49,02; PETR4 R$42,65; PBR US$16,01; PBR.A US$14,06. Preços não implicam mudança operacional.",
+      "scope": "Fechamentos públicos de 23 nov.: PETR3 R$47,02; PETR4 R$41,30; PBR US$15,81; PBR.A US$13,93. Preços não implicam mudança operacional.",
       "typeLabel": "Mercado público / complementar"
     },
     {
       "name": "Agência Petrobras",
-      "url": "https://agencia.petrobras.com.br/w/negocio/produ%C3%A7%C3%A3o-pr%C3%B3pria-de-%C3%B3leo-e-g%C3%A1s-da-petrobras-atinge-novo-recorde-com-crescimento-de-11-7-em-um-ano",
-      "scope": "Resultados consolidados do 3T26 e guidance oficial de 10 nov. preservados; consulta de 23 nov. não localizou nova alteração operacional de carga, fixture ou terminal.",
+      "url": "https://agencia.petrobras.com.br/w/negocio/petrobras-aprova-plano-de-neg%C3%B3cios-2027-2031",
+      "scope": "PN 2027–2031 aprovado em 23 nov.: US$ 122 bi de capex; 21 navios de cabotagem, 18 barcaças e afretamento de 30 apoios previstos. Metas não equivalem a entregas, cargas ou fixtures.",
       "typeLabel": "Oficial"
     },
     {
@@ -9946,13 +9954,13 @@
     {
       "name": "Transpetro",
       "url": "https://transpetro.com.br/transpetro-institucional/quem-somos/plano-estrategico.htm",
-      "scope": "Autorização ANP 642 de 19 nov. preservada como atualização regulatória da outorga. Consulta de 22 nov. não localizou nova carga, fixture, terminal ou expansão realizada.",
+      "scope": "Consulta de 24 nov.: PN Petrobras 2027–2031 prevê expansão logística e de frota; a Autorização ANP 642 de 19 nov. permanece atualização regulatória. Nenhuma carga, fixture ou janela específica foi inferida.",
       "typeLabel": "Oficial"
     },
     {
       "name": "IMO — Port State Control",
       "url": "https://www.imo.org/en/ourwork/msas/pages/portstatecontrol.aspx",
-      "scope": "Pesquisa própria em 23 nov.: Paris/Tokyo, Viña del Mar e Black Sea ativos; Abuja e Mediterranean anunciados; Indian Ocean, Caribbean e Riyadh sem campanha 2026 oficialmente comprovada; USCG permanece nacional.",
+      "scope": "Pesquisa própria em 24 nov.: Paris/Tokyo, Viña del Mar e Black Sea ativos; Abuja e Mediterranean anunciados; Indian Ocean, Caribbean e Riyadh sem campanha 2026 oficialmente comprovada; USCG permanece nacional.",
       "typeLabel": "Oficial"
     },
     {
@@ -9964,19 +9972,19 @@
     {
       "name": "Suez Canal Authority",
       "url": "https://www.suezcanal.gov.eg/English/Navigation/Pages/NavigationStatistics.aspx",
-      "scope": "Série oficial de containerships/net tonnage preservada. Consulta de 23 nov.: periódicos 36–41, de 15 nov., seguem como os mais recentes localizados.",
+      "scope": "Série oficial de containerships/net tonnage preservada. Consulta de 24 nov.: periódicos 36–41, de 15 nov., seguem como os mais recentes localizados.",
       "typeLabel": "Oficial"
     },
     {
       "name": "Panama Canal Authority",
       "url": "https://pancanal.com/en/maritime-services/advisory-to-shipping/",
-      "scope": "A-42 de 9 nov. em vigor: 34 slots/dia e calado máximo Neopanamax de 15,24 m TFW. Consulta de 23 nov. sem aviso posterior localizado; booking segue como única garantia de data.",
+      "scope": "A-42 de 9 nov. em vigor: 34 slots/dia e calado máximo Neopanamax de 15,24 m TFW. Consulta de 24 nov. sem aviso posterior localizado; booking segue como única garantia de data.",
       "typeLabel": "Oficial"
     },
     {
       "name": "IMO Compendium — Reporting",
       "url": "https://imocompendium.imo.org/public/IMO-Compendium/Current/cd1.htm",
-      "scope": "13 sistemas preservados após consulta de 23 nov. Canadá SOR/2025-275, STRAITREP, CHILREP, Suez e Panamá não mostram mudança posterior; SOUNDREP/BELTREP revisados acrescentam informação de seguro/certificados a partir de 1º dez. Não cobre todo VTS/porto local mundial.",
+      "scope": "13 sistemas preservados após consulta de 24 nov. Canadá SOR/2025-275, STRAITREP, CHILREP, Suez e Panamá não mostram mudança posterior; SOUNDREP/BELTREP revisados acrescentam informação de seguro/certificados a partir de 1º dez. Não cobre todo VTS/porto local mundial.",
       "typeLabel": "Oficial"
     },
     {
@@ -10000,13 +10008,13 @@
     {
       "name": "Windward — análise pública",
       "url": "https://insights.windward.ai/",
-      "scope": "Painel público consultado em 23 nov., com dados de 20 nov.: Ormuz 16 travessias, Bab-el-Mandeb 31 e Suez 48; contagens e estimativas proprietárias atribuídas, sem equivalência a dado oficial, gross tonnage ou fluxo de petróleo.",
+      "scope": "Painel público de 24 nov., com dados até 23 nov.: Ormuz 5 travessias no dia 23; Bab-el-Mandeb 45 e Suez 58 no dia 20. Contagens e estimativas proprietárias atribuídas, sem equivalência a dado oficial, gross tonnage ou fluxo de petróleo.",
       "typeLabel": "Indústria / complementar"
     },
     {
       "name": "Dryad Global — análise pública",
-      "url": "https://channel16.dryadglobal.com/strait-of-hormuz-security-sustained-threats-raise-the-stakes-for-commercial-shipping",
-      "scope": "Consulta de 23 nov.; análise aberta de 13 nov. sobre Ormuz permanece complementar e não substitui alertas UKMTO/JMIC nem cria incidente próprio no Radar.",
+      "url": "https://channel16.dryadglobal.com/sulina-drone-attacks-black-sea-shipping-risk",
+      "scope": "Consulta de 24 nov.; análise aberta de 17 nov. sobre riscos no acesso de Sulina permanece complementar e não substitui alertas oficiais nem cria incidente próprio no Radar.",
       "typeLabel": "Indústria / complementar"
     },
     {
@@ -10042,7 +10050,7 @@
     {
       "name": "StockQ / Baltic indices",
       "url": "https://en.stockq.org/m/index/BDTI.php",
-      "scope": "BDTI 5.081 e BCTI 2.581 no último fechamento público, 20 nov.; proxies compostos de frete, não fixtures individuais.",
+      "scope": "BDTI 5.084 e BCTI 2.511 no último fechamento público, 23 nov.; proxies compostos de frete, não fixtures individuais.",
       "typeLabel": "Mercado público / complementar"
     },
     {
