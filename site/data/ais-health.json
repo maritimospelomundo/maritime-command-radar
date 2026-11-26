@@ -1,17 +1,17 @@
 {
   "status": "ok",
-  "lastAttemptAt": "2026-11-26T03:51:56.335Z",
-  "lastSuccessAt": "2026-11-26T03:51:56.335Z",
-  "dataAt": "2026-11-26T03:50:35.000Z",
+  "lastAttemptAt": "2026-11-26T09:21:56.613Z",
+  "lastSuccessAt": "2026-11-26T09:21:56.613Z",
+  "dataAt": "2026-11-26T09:17:35.000Z",
   "error": null,
-  "quotaRemaining": 141,
-  "quotaAt": "2026-11-26T03:51:56.335Z",
+  "quotaRemaining": 140,
+  "quotaAt": "2026-11-26T09:21:56.613Z",
   "nextAttemptAt": null,
   "authBlocked": false,
   "collector": "cloudflare-cron",
   "lastDecision": {
-    "at": "2026-11-26T03:51:56.335Z",
-    "reason": "request_reserved",
+    "at": "2026-11-26T13:21:59.822Z",
+    "reason": "interval_or_normal_budget",
     "area": null
   }
 }
