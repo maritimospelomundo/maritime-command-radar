@@ -7867,7 +7867,7 @@
   "vesselApiPosition": {
     "label": "VesselAPI",
     "provider": "VesselAPI terrestrial AIS",
-    "checkedAt": "2026-11-27T04:42:14.121Z",
+    "checkedAt": "2026-11-27T14:34:27.131Z",
     "refreshIntervalMinutes": 360,
     "history": [
       {
@@ -8865,19 +8865,31 @@
         "sog": 0,
         "cog": 316.9,
         "heading": 21
+      },
+      {
+        "dateTime": "2026-11-27T09:17:35.000Z",
+        "unixTime": 1795771055,
+        "latitude": -22.82642,
+        "longitude": -43.14245,
+        "eventType": "Position Report",
+        "sourceType": "terrestrial",
+        "importedAt": "2026-11-27T14:34:27.131Z",
+        "sog": 0.1,
+        "cog": 276.7,
+        "heading": 2
       }
     ],
     "lastKnown": {
-      "dateTime": "2026-11-27T03:17:35.000Z",
-      "unixTime": 1795749455,
-      "latitude": -22.8259,
-      "longitude": -43.14356,
+      "dateTime": "2026-11-27T09:17:35.000Z",
+      "unixTime": 1795771055,
+      "latitude": -22.82642,
+      "longitude": -43.14245,
       "eventType": "Position Report",
       "sourceType": "terrestrial",
-      "importedAt": "2026-11-27T04:42:14.121Z",
-      "sog": 0,
-      "cog": 316.9,
-      "heading": 21
+      "importedAt": "2026-11-27T14:34:27.131Z",
+      "sog": 0.1,
+      "cog": 276.7,
+      "heading": 2
     }
   },
   "dailyWatch": {
